@@ -320,7 +320,7 @@ they are overly specific and do not allow for any repetition. At the end
 of the day using an ID isn't a whole lot different than
 using !important.
 
-### Reusable Code
+<h4>Reusable Code</h4>
 
 One of the largest performance drawbacks comes with bloated file sizes
 and unnecessary browser rendering. One quick way to help largely cut
@@ -339,7 +339,7 @@ previously mentioned, includes binding styles to one class, then using
 multiple classes on the same element.
 
 ```
- 1  /&ast; Bad &ast;/
+ 1  /* Bad */
  2  .news {                                                              
  3  background: #eee;                                                    
  4  border-radius: 5px;                                                  
@@ -348,47 +348,39 @@ multiple classes on the same element.
  7  .social {
  8  background: #eee;
  9  border-radius: 5px;
- 1  box-shadow: inset 0 1px 2px rgba(0, 0, 0, .25);
+ 10 box-shadow: inset 0 1px 2px rgba(0, 0, 0, .25);
  11 }
  12
- 1  /&ast; Good &ast;/                                                         
-                                                                         
- 1  .news,                                                               
- 2                                                                       
-    .social {                                                            
- 1                                                                       
- 3  background: #eee;                                                    
-                                                                         
- 1  border-radius: 5px;                                                  
- 4                                                                       
-    box-shadow: inset 0 1px 2px rgba(0, 0, 0, .25);                      
- 1                                                                       
- 5  }                                                                    
-                                                                         
- 1  /&ast; Even Better &ast;/                                                  
- 6                                                                       
-    .modal {                                                             
- 1                                                                       
- 7  background: #eee;                                                    
-                                                                         
- 1  border-radius: 5px;                                                  
- 8                                                                       
-    box-shadow: inset 0 1px 2px rgba(0, 0, 0, .25);                      
+ 13 /* Good */
+ 14 .news,
+ 15 .social {
+ 16 background: #eee;
+ 17 border-radius: 5px;
+ 18 box-shadow: inset 0 1px 2px rgba(0, 0, 0, .25);
+ 19 }
+ 20 
+ 21 /* Even Better */
+ 22 .modal {
+ 23 background: #eee;
+ 24 border-radius: 5px;
+ 25 box-shadow: inset 0 1px 2px rgba(0, 0, 0, .25);
+ 26 }
+ 27 
 ```
 
 Which approach you take doesn't make a huge difference, so long as code
 is being shared and reused, and the overall file size is reduced.
 
-### Minify & Compress Files
+<h4>Minify & Compress Files</h4>
 
 Simply removing duplicate and unnecessary code is the best way to cut
 down on file size, however there are additional ways. One way
-includes [[minifying]{.underline}](http://www.hanselman.com/blog/TheImportanceAndEaseOfMinifyingYourCSSAndJavaScriptAndOptimizingPNGsForYourBlogOrWebsite.aspx) and
+includes [minifying](http://www.hanselman.com/blog/TheImportanceAndEaseOfMinifyingYourCSSAndJavaScriptAndOptimizingPNGsForYourBlogOrWebsite.aspx) and
 compressing files, such as HTML, CSS, and JavaScript files.
 Additionally, images may be compressed, removing any unnecessary
 comments and color profiles.
 
-### gzip Compression
+<h4>gzip Compression</h4>
 
 One of the more popular types of file compression is called gzip. gzip
 compression takes common files, including HTML, CSS, JavaScript, and so
@@ -396,8 +388,8 @@ forth, and identifies similar strings to compress down. The more
 matching strings identified, the smaller the file can be compressed,
 thus sending a smaller file from the server to the browser.
 
-Setting up gzip is fairly painless, and the [[HTML5
-Boilerplate]{.underline}](http://html5boilerplate.com/) team has done a
+Setting up gzip is fairly painless, and the [HTML5
+Boilerplate](http://html5boilerplate.com/) team has done a
 great job of getting this going. To gzip files an .htaccess file needs
 to be added to the root directory of the web server, labeling the
 specific files to be gzipped. The dot at the beginning of the file name
@@ -426,24 +418,35 @@ Generally speaking this isn't an issue, and some web servers may even
 set up compression for you. After all, it is in the web server's best
 interest to compress files too.
 
-### Measuring Compression
+<h4>Measuring Compression</h4>
 
 Within the Google Chrome web browser the web inspector gives a plethora
 of data around performance, particularly within the Network tab.
 Additionally, there are a few websites that help identify if gzip
 compression is enabled.
 
-![gzip Overview Screenshot](./images/image001.png)
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~ 01. gzip overview screenshot (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="center" width="100%">
+  <img src="./images/image001.png"
+  style="width:40%"
+  alt="gzip Overview Screenshot." />
+</p>
 
-Fig. 1
+<h6>Fig. 1</h6>
 
 The Network tab identifies each file loaded within the browser and
 displays the file size and load time. Notice how gzipping has reduced
 the file sizes by around 60%.
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~ 02. gzip detail screenshot (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="center" width="100%">
+  <img src="./images/image002.png"
+  style="width:40%"
+  alt="gzip Detail Screenshot." />
+</p>
 
-![gzip Detail Screenshot](./images/image002.png)
-
-Fig. 1
+<h6>Fig. 1</h6>
 
 Looking at a file specifically identifies what type of compression
 encoding the browser supports. In this case gzip, deflate, and sdch are
@@ -466,27 +469,40 @@ allowing unnecessary color profiles and comments to be removed from the
 image without changing the quality of the image at all.
 
 There are a handful of tools to help compress images, two of the best
-are [[ImageOptim]{.underline}](http://imageoptim.com/) for Mac
-and [[PNGGauntlet]{.underline}](http://pnggauntlet.com/) for Windows.
+are [ImageOptim](http://imageoptim.com/) for Mac
+and [PNGGauntlet](http://pnggauntlet.com/) for Windows.
 Both of these services compress the most commonly used image formats,
 specifically JPG and PNG files.
 
-### Image Compression Demo
+<h4>Image Compression Demo</h4>
 
-### Uncompressed, 455kb
+<h4>Uncompressed, 455kb</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~ 03. uncompressed ocean picture (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="center" width="100%">
+  <img src="./images/image003.jpeg"
+  style="width:40%"
+  alt="Uncompressed Ocean Picture." />
+</p>
 
-![Uncompressed Ocean Picture](./3-25-24/media/image003.jpeg){width="5.0in"
-height="3.3360039370078742in"}
+<h4>Compressed, 401kb</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~ 04. compressed ocean picture (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="center" width="100%">
+  <img src="./images/image004.jpeg"
+  style="width:40%"
+  alt="Compressed Ocean Picture." />
+</p>
 
-Compressed, 401kb
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~ 05. imageoptim screenshot (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="center" width="100%">
+  <img src="./images/image005.png"
+  style="width:40%"
+  alt="ImageOptim Screenshot." />
+</p>
 
-![Compressed Ocean Picture](./3-25-24/media/image004.jpeg){width="5.0in"
-height="3.3360039370078742in"}
-
-![ImageOptim Screenshot](./3-25-24/media/image005.png){width="3.0in"
-height="0.9733398950131233in"}
-
-Fig. 1
+<h6>Fig. 1</h6>
 
 Using ImageOptim the above image was reduced over 14% without any
 reduction or loss in quality.
@@ -500,20 +516,19 @@ with the height and width attributes is bad practice as it loads more
 data than necessary.
 
 ```
-+---+----------------------------------------------------------------------+
- 1  &lt;img src=&quot;ocean.jpg&quot; height=&quot;440&quot; width=&quot;660&quot;                 
-    alt=&quot;Oceanview&quot;&gt;                                                  
- 2                                                                       
+ 1  <img src="ocean.jpg" height="440" width="660" 
+ 2    alt="Oceanview">
+ 3  
 ```
 
-### Reduce HTTP Requests
+<h4>Reduce HTTP Requests</h4>
 
 Next to file size, the number of HTTP requests a website makes is one of
 the largest performance pitfalls. Each time a request is made to the
 server the page load time increases. Some request have to finish before
 others can start, and too many request can bloat the server.
 
-### Combine Like Files
+<h4>Combine Like Files</h4>
 
 One way, and perhaps the easiest way, to reduce the number of HTTP
 requests is to combine like files. Specifically, combine all of the CSS
@@ -521,15 +536,14 @@ files into one and all of the JavaScript files into one. Combining these
 files then compressing them creates one, hopefully small, HTTP request.
 
 ```
-+---+----------------------------------------------------------------------+
- 1  &lt;!&#45;&#45; Bad &#45;&#45;&gt;                                                     
- 2  &lt;link href=&quot;css/reset.css&quot; rel=&quot;stylesheet&quot;&gt;                   
- 3  &lt;link href=&quot;css/base.css&quot; rel=&quot;stylesheet&quot;&gt;                    
- 4  &lt;link href=&quot;css/site.css&quot; rel=&quot;stylesheet&quot;&gt;                    
- 5  &lt;!&#45;&#45; Good &#45;&#45;&gt;                                                    
- 6  &lt;link href=&quot;css/styles.css&quot; rel=&quot;stylesheet&quot;&gt;                  
- 7                                                                       
- 8                                                                       
+ 1  <!-- Bad -->
+ 2  <link href="css/reset.css" rel="stylesheet">
+ 3  <link href="css/base.css" rel="stylesheet">
+ 4  <link href="css/site.css" rel="stylesheet">
+ 5  
+ 6  <!-- Good -->
+ 7  <link href="css/styles.css" rel="stylesheet">
+ 8  
 ```
 
 In general, the CSS for a web page should be loaded at
@@ -543,7 +557,7 @@ JavaScript files are asynchronously loaded after the page itself is done
 rendering. Another caveat is when JavaScript is needed in helping render
 the page, as such the case with the HTML5 shiv.
 
-### Image Sprites
+<h4>Image Sprites</h4>
 
 The practice of *spriting* images within CSS includes using one
 background image across multiple elements. The goal here is to cut down
@@ -560,10 +574,15 @@ expose the proper background image on a given element. For example, if
 an element is 16 pixels wide by 16 pixels tall it can only expose a
 background image of 16 pixels by 16 pixels, with the rest of the
 background image being hidden.
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~ 06. menu sprite (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="center" width="100%">
+  <img src="./images/image006.png"
+  style="width:40%"
+  alt="Menu Sprite." />
+</p>
 
-![Menu Sprite](./images/image006.png)
-
-Fig. 1
+<h6>Fig. 1</h6>
 
 Here is a sprite for a text editor menu, outlined with guides for
 reference of how the images background position will change.
@@ -576,38 +595,38 @@ be shown accordingly.
 <h5>HTML</h5>
 
 ```
- 1  &lt;ul&gt;                                                               
- 2  &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;bold&quot;&gt;Bold                    
-    Text&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;                                           
+ 1  <ul>                                                               
+ 2  <li><a href="#"><span class="bold">Bold                    
+    Text</span></a></li>                                           
  3                                                                       
-    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;italic&quot;&gt;Italicize             
- 4  Text&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;                                           
+    <li><a href="#"><span class="italic">Italicize             
+ 4  Text</span></a></li>                                           
                                                                          
- 5  &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;underline&quot;&gt;Underline          
-    Text&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;                                           
+ 5  <li><a href="#"><span class="underline">Underline          
+    Text</span></a></li>                                           
  6                                                                       
-    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;size&quot;&gt;Size                    
- 7  Text&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;                                           
+    <li><a href="#"><span class="size">Size                    
+ 7  Text</span></a></li>                                           
                                                                          
- 8  &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;bullet&quot;&gt;Bullet                
-    Text&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;                                           
+ 8  <li><a href="#"><span class="bullet">Bullet                
+    Text</span></a></li>                                           
  9                                                                       
-    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;number&quot;&gt;Number                
- 1  Text&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;                                           
+    <li><a href="#"><span class="number">Number                
+ 1  Text</span></a></li>                                           
  0                                                                       
-    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;quote&quot;&gt;Quote                  
- 1  Text&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;                                           
+    <li><a href="#"><span class="quote">Quote                  
+ 1  Text</span></a></li>                                           
  1                                                                       
-    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;left&quot;&gt;Left Align              
- 1  Text&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;                                           
+    <li><a href="#"><span class="left">Left Align              
+ 1  Text</span></a></li>                                           
  2                                                                       
-    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;center&quot;&gt;Center Align          
- 1  Text&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;                                           
+    <li><a href="#"><span class="center">Center Align          
+ 1  Text</span></a></li>                                           
  3                                                                       
-    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;right&quot;&gt;Right Align            
-    Text&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;                                           
+    <li><a href="#"><span class="right">Right Align            
+    Text</span></a></li>                                           
                                                                          
-    &lt;/ul&gt;                                                              
+    </ul>                                                              
 ``
 
 <b>CSS</b>
@@ -653,7 +672,7 @@ be shown accordingly.
  6                                                                       
     li span {                                                            
  1                                                                       
- 7  background: url(&quot;sprite.png&quot;) 0 0 no-repeat;                       
+ 7  background: url("sprite.png") 0 0 no-repeat;                       
                                                                          
  1  color: transparent;                                                  
  8                                                                       
@@ -795,15 +814,15 @@ than the actual image.
 <h5>HTML</h5>
 
 ```
- 1  &lt;img height=&quot;100&quot; width=&quot;660&quot; alt=&quot;Rigged Pattern&quot;            
-    src=&quot;data:image/png;base64,                                         
+ 1  <img height="100" width="660" alt="Rigged Pattern"            
+    src="data:image/png;base64,                                         
                                                                        
  2  iVBORw0KGg                                                           
      oAAAANSUhEUgAAAAoAAAAICAYAAADA+m62AAAAPUlEQVQYV2NkQAO6m73+X/bdxoguji 
                                                                          
     IAU4RNMVwhuiQ6H6wQl3XI4oy4FMHcCJPHcDS6J2A2EqUQpJ                     
                                                                          
-    hohQAyIyYy0nBAGgAAAABJRU5ErkJggg==&quot;&gt;                               
+    hohQAyIyYy0nBAGgAAAABJRU5ErkJggg==">                               
 ```
 
 <h5>CSS</h5>
@@ -811,10 +830,10 @@ than the actual image.
 ```
  1  div {                                                                
  2  background:                                                          
-    url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAI         
+    url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAI         
     CAYAA                                                                
  4  ADA+m62AAAAPUlEQVQYV2NkQAO6m73+X/bdxogujiIAU4RNMVwhuiQ6H6wQl3XI4oy4F 
-    MHcCJPHcDS6J2A2EqUQpJhohQAyIyYy0nBAGgAAAABJRU5ErkJggg==&quot;) repeat;   
+    MHcCJPHcDS6J2A2EqUQpJhohQAyIyYy0nBAGgAAAABJRU5ErkJggg==") repeat;   
 ```
 
 ### Image Data URI Demo
@@ -841,12 +860,12 @@ be loaded. Alternatively, the expires headers can be changed to a
 smaller period of time.
 
 ```
- 1  ExpiresByType text/css &quot;access plus 1 year&quot;                        
- 2  ExpiresByType application/javascript &quot;access plus 1 year&quot;          
+ 1  ExpiresByType text/css "access plus 1 year"                        
+ 2  ExpiresByType application/javascript "access plus 1 year"          
  3                                                                       
 ```
 
-Changing the &quot;access plus 1 year&quot; value to &quot;access plus 1 week&quot; is
+Changing the "access plus 1 year" value to "access plus 1 week" is
 better suited for CSS and JavaScript files that are changing weekly but
 are not version controlled with separate file names. For accepted
 expires header values reference
@@ -963,11 +982,11 @@ the .box-set division you will see it has a height of 0.
 <b>HTML</b>
 
 ```
- 1  &lt;div class=&quot;box-set&quot;&gt;                                            
- 2  &lt;figure class=&quot;box&quot;&gt;Box 1&lt;/figure&gt;                             
- 3  &lt;figure class=&quot;box&quot;&gt;Box 2&lt;/figure&gt;                             
- 4  &lt;figure class=&quot;box&quot;&gt;Box 3&lt;/figure&gt;                             
- 5  &lt;/div&gt;                                                             
+ 1  <div class="box-set">                                            
+ 2  <figure class="box">Box 1</figure>                             
+ 3  <figure class="box">Box 2</figure>                             
+ 4  <figure class="box">Box 3</figure>                             
+ 5  </div>                                                             
  6                                                                       
 ```
 
@@ -1067,7 +1086,7 @@ element.
 ```
  1  .box-set:before,                                                     
  2  .box-set:after {                                                     
- 3  content: &quot;&quot;;                                                       
+ 3  content: "";                                                       
  4  display: table;                                                      
  5  }                                                                    
  6  .box-set:after {                                                     
@@ -1100,7 +1119,7 @@ to contain floats.
 ```
  1  .group:before,                                                       
  2  .group:after {                                                       
- 3  content: &quot;&quot;;                                                       
+ 3  content: "";                                                       
  4  display: table;                                                      
  5  }                                                                    
  6  .group:after {                                                       
@@ -1147,12 +1166,12 @@ specific direction.
 <b>HTML</b>
 
 ```
- 1  &lt;div class=&quot;box-set&quot;&gt;                                            
- 2  &lt;figure class=&quot;box box-1&quot;&gt;Box 1&lt;/figure&gt;                       
- 3  &lt;figure class=&quot;box box-2&quot;&gt;Box 2&lt;/figure&gt;                       
- 4  &lt;figure class=&quot;box box-3&quot;&gt;Box 3&lt;/figure&gt;                       
- 5  &lt;figure class=&quot;box box-4&quot;&gt;Box 4&lt;/figure&gt;                       
- 6  &lt;/div&gt;                                                             
+ 1  <div class="box-set">                                            
+ 2  <figure class="box box-1">Box 1</figure>                       
+ 3  <figure class="box box-2">Box 2</figure>                       
+ 4  <figure class="box box-3">Box 3</figure>                       
+ 5  <figure class="box box-4">Box 4</figure>                       
+ 6  </div>                                                             
  7                                                                       
 ```
 
@@ -1220,12 +1239,12 @@ positioned elements default position.
 <b>HTML</b>
 
 ```
- 1  &lt;div class=&quot;box-set&quot;&gt;                                            
- 2  &lt;figure class=&quot;box box-1&quot;&gt;Box 1&lt;/figure&gt;                       
- 3  &lt;figure class=&quot;box box-2&quot;&gt;Box 2&lt;/figure&gt;                       
- 4  &lt;figure class=&quot;box box-3&quot;&gt;Box 3&lt;/figure&gt;                       
- 5  &lt;figure class=&quot;box box-4&quot;&gt;Box 4&lt;/figure&gt;                       
- 6  &lt;/div&gt;                                                             
+ 1  <div class="box-set">                                            
+ 2  <figure class="box box-1">Box 1</figure>                       
+ 3  <figure class="box box-2">Box 2</figure>                       
+ 4  <figure class="box box-3">Box 3</figure>                       
+ 5  <figure class="box box-4">Box 4</figure>                       
+ 6  </div>                                                             
  7                                                                       
 ```
 
@@ -1298,12 +1317,12 @@ value.
 <b>HTML</b>
 
 ```
- 1  &lt;div class=&quot;box-set&quot;&gt;
- 2  &lt;figure class=&quot;box box-1&quot;&gt;Box 1&lt;/figure&gt;
- 3  &lt;figure class=&quot;box box-2&quot;&gt;Box 2&lt;/figure&gt;
- 4  &lt;figure class=&quot;box box-3&quot;&gt;Box 3&lt;/figure&gt;
- 5  &lt;figure class=&quot;box box-4&quot;&gt;Box 4&lt;/figure&gt;
- 6  &lt;/div&gt;
+ 1  <div class="box-set">
+ 2  <figure class="box box-1">Box 1</figure>
+ 3  <figure class="box box-2">Box 2</figure>
+ 4  <figure class="box box-3">Box 3</figure>
+ 5  <figure class="box box-4">Box 4</figure>
+ 6  </div>
  7  
 ```
 
@@ -1377,17 +1396,17 @@ and not the containing, relatively positioned parent.
 <b>HTML</b>
 
 +---+----------------------------------------------------------------------+
- 1  &lt;div class=&quot;box-set&quot;&gt;                                            
+ 1  <div class="box-set">                                            
                                                                          
- 2  &lt;figure class=&quot;box box-1&quot;&gt;Box 1&lt;/figure&gt;                       
+ 2  <figure class="box box-1">Box 1</figure>                       
                                                                          
- 3  &lt;figure class=&quot;box box-2&quot;&gt;Box 2&lt;/figure&gt;                       
+ 3  <figure class="box box-2">Box 2</figure>                       
                                                                          
- 4  &lt;figure class=&quot;box box-3&quot;&gt;Box 3&lt;/figure&gt;                       
+ 4  <figure class="box box-3">Box 3</figure>                       
                                                                          
- 5  &lt;figure class=&quot;box box-4&quot;&gt;Box 4&lt;/figure&gt;                       
+ 5  <figure class="box box-4">Box 4</figure>                       
                                                                          
- 6  &lt;/div&gt;                                                             
+ 6  </div>                                                             
                                                                          
  7                                                                       
 +===+======================================================================+
@@ -1493,17 +1512,17 @@ box three.
 
 ```
 +---+----------------------------------------------------------------------+
- 1  &lt;div class=&quot;box-set&quot;&gt;                                            
+ 1  <div class="box-set">                                            
                                                                          
- 2  &lt;figure class=&quot;box box-1&quot;&gt;Box 1&lt;/figure&gt;                       
+ 2  <figure class="box box-1">Box 1</figure>                       
                                                                          
- 3  &lt;figure class=&quot;box box-2&quot;&gt;Box 2&lt;/figure&gt;                       
+ 3  <figure class="box box-2">Box 2</figure>                       
                                                                          
- 4  &lt;figure class=&quot;box box-3&quot;&gt;Box 3&lt;/figure&gt;                       
+ 4  <figure class="box box-3">Box 3</figure>                       
                                                                          
- 5  &lt;figure class=&quot;box box-4&quot;&gt;Box 4&lt;/figure&gt;                       
+ 5  <figure class="box box-4">Box 4</figure>                       
                                                                          
- 6  &lt;/div&gt;                                                             
+ 6  </div>                                                             
                                                                          
  7                                                                       
 ```
@@ -1629,13 +1648,13 @@ be used once per page.
 <b>HTML</b>
 
 +---+----------------------------------------------------------------------+
- 1  &lt;section id=&quot;intro&quot;&gt;                                             
+ 1  <section id="intro">                                             
                                                                          
- 2  &lt;h1&gt;&#8230;&lt;/h1&gt;                                                    
+ 2  <h1>&#8230;</h1>                                                    
                                                                          
- 3  &lt;h2 class=&quot;tagline&quot;&gt;&#8230;&lt;/h2&gt;                                  
+ 3  <h2 class="tagline">&#8230;</h2>                                  
                                                                          
- 4  &lt;/section&gt;                                                         
+ 4  </section>                                                         
                                                                          
  5                                                                       
 +===+======================================================================+
@@ -1692,19 +1711,19 @@ Below, the headings on lines 3 and 5 are selected.
 <b>HTML</b>
 
 +---+----------------------------------------------------------------------+
- 1  &lt;h2&gt;&#8230;&lt;/h2&gt;                                                    
+ 1  <h2>&#8230;</h2>                                                    
                                                                          
- 2  &lt;article&gt;                                                          
+ 2  <article>                                                          
                                                                          
- 3  &lt;h2&gt;This heading will be selected&lt;/h2&gt;                           
+ 3  <h2>This heading will be selected</h2>                           
                                                                          
- 4  &lt;div&gt;                                                              
+ 4  <div>                                                              
                                                                          
- 5  &lt;h2&gt;This heading will be selected&lt;/h2&gt;                           
+ 5  <h2>This heading will be selected</h2>                           
                                                                          
- 6  &lt;/div&gt;                                                             
+ 6  </div>                                                             
                                                                          
- 7  &lt;/article&gt;                                                         
+ 7  </article>                                                         
                                                                          
  8                                                                       
 +===+======================================================================+
@@ -1716,10 +1735,10 @@ Sometimes descendant selectors go a bit overboard, selecting more than
 hoped. At times only the direct children of a parent element need to be
 selected, not every instance of the element nested deeply inside of an
 ancestor. In this event the direct child selector may be used by placing
-a greater than sign, &gt;, between the parent element and child element
+a greater than sign, >, between the parent element and child element
 within the selector.
 
-For example, article &gt; p is a direct child selector only
+For example, article > p is a direct child selector only
 identifying p elements that fall directly within an article element.
 Any p element placed outside of an article element, or nested inside of
 another element other than the article element, will not be selected.
@@ -1730,7 +1749,7 @@ article, thus selected.
 <b>CSS</b>
 
 +---+----------------------------------------------------------------------+
- 1  article &gt; p {&#8230;}                                                  
+ 1  article > p {&#8230;}                                                  
                                                                          
  2                                                                       
 +===+======================================================================+
@@ -1739,19 +1758,19 @@ article, thus selected.
 <b>HTML</b>
 
 +---+----------------------------------------------------------------------+
- 1  &lt;p&gt;&#8230;&lt;/p&gt;                                                      
+ 1  <p>&#8230;</p>                                                      
                                                                          
- 2  &lt;article&gt;                                                          
+ 2  <article>                                                          
                                                                          
- 3  &lt;p&gt;This paragraph will be selected&lt;/p&gt;                           
+ 3  <p>This paragraph will be selected</p>                           
                                                                          
- 4  &lt;div&gt;                                                              
+ 4  <div>                                                              
                                                                          
- 5  &lt;p&gt;&#8230;&lt;/p&gt;                                                      
+ 5  <p>&#8230;</p>                                                      
                                                                          
- 6  &lt;/div&gt;                                                             
+ 6  </div>                                                             
                                                                          
- 7  &lt;/article&gt;                                                         
+ 7  </article>                                                         
                                                                          
  8                                                                       
 +===+======================================================================+
@@ -1765,7 +1784,7 @@ article, thus selected.
   article h2             Descendant Selector           Selects an element that resides anywhere
                                                        within an identified ancestor element
 
-  article &gt; p           Direct Child Selector         Selects an element that resides
+  article > p           Direct Child Selector         Selects an element that resides
                                                        immediately inside an identified parent
                                                        element
   -----------------------------------------------------------------------------------------------
@@ -1808,25 +1827,25 @@ sibling heading.
 <b>HTML</b>
 
 +---+----------------------------------------------------------------------+
- 1  &lt;p&gt;&#8230;&lt;/p&gt;                                                      
+ 1  <p>&#8230;</p>                                                      
                                                                          
- 2  &lt;section&gt;                                                          
+ 2  <section>                                                          
                                                                          
- 3  &lt;p&gt;&#8230;&lt;/p&gt;                                                      
+ 3  <p>&#8230;</p>                                                      
                                                                          
- 4  &lt;h2&gt;&#8230;&lt;/h2&gt;                                                    
+ 4  <h2>&#8230;</h2>                                                    
                                                                          
- 5  &lt;p&gt;This paragraph will be selected&lt;/p&gt;                           
+ 5  <p>This paragraph will be selected</p>                           
                                                                          
- 6  &lt;div&gt;                                                              
+ 6  <div>                                                              
                                                                          
- 7  &lt;p&gt;&#8230;&lt;/p&gt;                                                      
+ 7  <p>&#8230;</p>                                                      
                                                                          
- 8  &lt;/div&gt;                                                             
+ 8  </div>                                                             
                                                                          
- 9  &lt;p&gt;This paragraph will be selected&lt;/p&gt;                           
+ 9  <p>This paragraph will be selected</p>                           
                                                                          
- 1  &lt;/section&gt;                                                         
+ 1  </section>                                                         
  0                                                                       
                                                                          
  1                                                                       
@@ -1867,25 +1886,25 @@ selected.
 <b>HTML</b>
 
 +---+----------------------------------------------------------------------+
- 1  &lt;p&gt;&#8230;&lt;/p&gt;                                                      
+ 1  <p>&#8230;</p>                                                      
                                                                          
- 2  &lt;section&gt;                                                          
+ 2  <section>                                                          
                                                                          
- 3  &lt;p&gt;&#8230;&lt;/p&gt;                                                      
+ 3  <p>&#8230;</p>                                                      
                                                                          
- 4  &lt;h2&gt;&#8230;&lt;/h2&gt;                                                    
+ 4  <h2>&#8230;</h2>                                                    
                                                                          
- 5  &lt;p&gt;This paragraph will be selected&lt;/p&gt;                           
+ 5  <p>This paragraph will be selected</p>                           
                                                                          
- 6  &lt;div&gt;                                                              
+ 6  <div>                                                              
                                                                          
- 7  &lt;p&gt;&#8230;&lt;/p&gt;                                                      
+ 7  <p>&#8230;</p>                                                      
                                                                          
- 8  &lt;/div&gt;                                                             
+ 8  </div>                                                             
                                                                          
- 9  &lt;p&gt;&#8230;&lt;/p&gt;                                                      
+ 9  <p>&#8230;</p>                                                      
                                                                          
- 1  &lt;/section&gt;                                                         
+ 1  </section>                                                         
  0                                                                       
                                                                          
  1                                                                       
@@ -1898,25 +1917,25 @@ selected.
 <b>HTML</b>
 
 +---+-------------------------------------------------------------------+
- 1  &lt;input type=&quot;checkbox&quot; id=&quot;toggle&quot;&gt;                         
+ 1  <input type="checkbox" id="toggle">                         
                                                                       
- 2  &lt;label for=&quot;toggle&quot;&gt;&#9776;&lt;/label&gt;                         
+ 2  <label for="toggle">&#9776;</label>                         
                                                                       
- 3  &lt;nav&gt;                                                           
+ 3  <nav>                                                           
                                                                       
- 4  &lt;ul&gt;                                                            
+ 4  <ul>                                                            
                                                                       
- 5  &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;                           
+ 5  <li><a href="#">Home</a></li>                           
                                                                       
- 6  &lt;li&gt;&lt;a href=&quot;#&quot;&gt;About&lt;/a&gt;&lt;/li&gt;                          
+ 6  <li><a href="#">About</a></li>                          
                                                                       
- 7  &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Services&lt;/a&gt;&lt;/li&gt;                       
+ 7  <li><a href="#">Services</a></li>                       
                                                                       
- 8  &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;                        
+ 8  <li><a href="#">Contact</a></li>                        
                                                                       
- 9  &lt;/ul&gt;                                                           
+ 9  </ul>                                                           
                                                                       
- 1  &lt;/nav&gt;                                                          
+ 1  </nav>                                                          
  0                                                                    
                                                                       
  1                                                                    
@@ -2127,7 +2146,7 @@ class, all depending on the level of specificity desired.
 <b>HTML</b>
 
 +---+----------------------------------------------------------------------+
- 1  &lt;a href=&quot;#&quot; target=&quot;&#0095;blank&quot;&gt;&#8230;&lt;/a&gt;                        
+ 1  <a href="#" target="&#0095;blank">&#8230;</a>                        
                                                                          
  2                                                                       
 +===+======================================================================+
@@ -2139,13 +2158,13 @@ To identify an element with a specific, and exact matching, attribute
 value the same selector from before may be used, however this time
 inside of the square brackets following the attribute name, include the
 desired matching value. Inside the square brackets should be the
-attribute name followed by an equals sign, =, quotations, &quot;&quot;, and
+attribute name followed by an equals sign, =, quotations, "", and
 inside of the quotations should be the desired matching attribute value.
 
 <b>CSS</b>
 
 +---+----------------------------------------------------------------------+
- 1  a&lbrack;href=&quot;http://google.com/&quot;&rbrack; {&#8230;}                              
+ 1  a&lbrack;href="http://google.com/"&rbrack; {&#8230;}                              
                                                                          
  2                                                                       
 +===+======================================================================+
@@ -2154,7 +2173,7 @@ inside of the quotations should be the desired matching attribute value.
 <b>HTML</b>
 
 +---+----------------------------------------------------------------------+
- 1  &lt;a href=&quot;http://google.com/&quot;&gt;&#8230;&lt;/a&gt;                          
+ 1  <a href="http://google.com/">&#8230;</a>                          
                                                                          
  2                                                                       
 +===+======================================================================+
@@ -2172,7 +2191,7 @@ attribute value.
 <b>CSS</b>
 
 +---+----------------------------------------------------------------------+
- 1  a&lbrack;href&ast;=&quot;login&quot;&rbrack; {&#8230;}                                         
+ 1  a&lbrack;href&ast;="login"&rbrack; {&#8230;}                                         
                                                                          
  2                                                                       
 +===+======================================================================+
@@ -2181,7 +2200,7 @@ attribute value.
 <b>HTML</b>
 
 +---+----------------------------------------------------------------------+
- 1  &lt;a href=&quot;/login.php&quot;&gt;&#8230;&lt;/a&gt;                                  
+ 1  <a href="/login.php">&#8230;</a>                                  
                                                                          
  2                                                                       
 +===+======================================================================+
@@ -2199,7 +2218,7 @@ stated value.
 <b>CSS</b>
 
 +---+----------------------------------------------------------------------+
- 1  a&lbrack;href&Hat;=&quot;https://&quot;&rbrack; {&#8230;}                                      
+ 1  a&lbrack;href&Hat;="https://"&rbrack; {&#8230;}                                      
                                                                          
  2                                                                       
 +===+======================================================================+
@@ -2208,7 +2227,7 @@ stated value.
 <b>HTML</b>
 
 +---+----------------------------------------------------------------------+
- 1  &lt;a href=&quot;https://chase.com/&quot;&gt;&#8230;&lt;/a&gt;                          
+ 1  <a href="https://chase.com/">&#8230;</a>                          
                                                                          
  2                                                                       
 +===+======================================================================+
@@ -2226,7 +2245,7 @@ stated value.
 <b>CSS</b>
 
 +---+----------------------------------------------------------------------+
- 1  a&lbrack;href&#36;=&quot;.pdf&quot;&rbrack; {&#8230;}                                          
+ 1  a&lbrack;href&#36;=".pdf"&rbrack; {&#8230;}                                          
                                                                          
  2                                                                       
 +===+======================================================================+
@@ -2235,7 +2254,7 @@ stated value.
 <b>HTML</b>
 
 +---+----------------------------------------------------------------------+
- 1  &lt;a href=&quot;/docs/menu.pdf&quot;&gt;&#8230;&lt;/a&gt;                              
+ 1  <a href="/docs/menu.pdf">&#8230;</a>                              
                                                                          
  2                                                                       
 +===+======================================================================+
@@ -2253,7 +2272,7 @@ stated value.
 <b>CSS</b>
 
 +---+----------------------------------------------------------------------+
- 1  a&lbrack;rel&tilde;=&quot;tag&quot;&rbrack; {&#8230;}                                            
+ 1  a&lbrack;rel&tilde;="tag"&rbrack; {&#8230;}                                            
                                                                          
  2                                                                       
 +===+======================================================================+
@@ -2262,7 +2281,7 @@ stated value.
 <b>HTML</b>
 
 +---+----------------------------------------------------------------------+
- 1  &lt;a href=&quot;#&quot; rel=&quot;tag nofollow&quot;&gt;&#8230;&lt;/a&gt;                      
+ 1  <a href="#" rel="tag nofollow">&#8230;</a>                      
                                                                          
  2                                                                       
 +===+======================================================================+
@@ -2280,7 +2299,7 @@ stated value.
 **CSS**
 
 +---+----------------------------------------------------------------------+
- 1  a&lbrack;lang&#0124;=&quot;en&quot;&rbrack; {&#8230;}                                            
+ 1  a&lbrack;lang&#0124;="en"&rbrack; {&#8230;}                                            
                                                                          
  2                                                                       
 +===+======================================================================+
@@ -2289,7 +2308,7 @@ stated value.
 **HTML**
 
 +---+----------------------------------------------------------------------+
- 1  &lt;a href=&quot;#&quot; lang=&quot;en-US&quot;&gt;&#8230;&lt;/a&gt;                            
+ 1  <a href="#" lang="en-US">&#8230;</a>                            
                                                                          
  2                                                                       
 +===+======================================================================+
@@ -2300,19 +2319,19 @@ stated value.
 **HTML**
 
 +---+-------------------------------------------------------------------+
- 1  &lt;ul&gt;                                                            
+ 1  <ul>                                                            
                                                                       
- 2  &lt;li&gt;&lt;a href=&quot;#.pdf&quot;&gt;PDF Document&lt;/a&gt;&lt;/li&gt;               
+ 2  <li><a href="#.pdf">PDF Document</a></li>               
                                                                       
- 3  &lt;li&gt;&lt;a href=&quot;#.doc&quot;&gt;Word Document&lt;/a&gt;&lt;/li&gt;              
+ 3  <li><a href="#.doc">Word Document</a></li>              
                                                                       
- 4  &lt;li&gt;&lt;a href=&quot;#.jpg&quot;&gt;Image File&lt;/a&gt;&lt;/li&gt;                 
+ 4  <li><a href="#.jpg">Image File</a></li>                 
                                                                       
- 5  &lt;li&gt;&lt;a href=&quot;#.mp3&quot;&gt;Audio File&lt;/a&gt;&lt;/li&gt;                 
+ 5  <li><a href="#.mp3">Audio File</a></li>                 
                                                                       
- 6  &lt;li&gt;&lt;a href=&quot;#.mp4&quot;&gt;Video File&lt;/a&gt;&lt;/li&gt;                 
+ 6  <li><a href="#.mp4">Video File</a></li>                 
                                                                       
- 7  &lt;/ul&gt;                                                           
+ 7  </ul>                                                           
                                                                       
  8                                                                    
 +===+===================================================================+
@@ -2351,33 +2370,33 @@ stated value.
  1                                                                    
  3  }                                                                 
                                                                       
- 1  a&lbrack;href&#36;=&quot;.pdf&quot;&rbrack; {                                            
+ 1  a&lbrack;href&#36;=".pdf"&rbrack; {                                            
  4                                                                    
-    background-image: url(&quot;images/pdf.png&quot;);                        
+    background-image: url("images/pdf.png");                        
  1                                                                    
  5  }                                                                 
                                                                       
- 1  a&lbrack;href&#36;=&quot;.doc&quot;&rbrack; {                                            
+ 1  a&lbrack;href&#36;=".doc"&rbrack; {                                            
  6                                                                    
-    background-image: url(&quot;images/doc.png&quot;);                        
+    background-image: url("images/doc.png");                        
  1                                                                    
  7  }                                                                 
                                                                       
- 1  a&lbrack;href&#36;=&quot;.jpg&quot;&rbrack; {                                            
+ 1  a&lbrack;href&#36;=".jpg"&rbrack; {                                            
  8                                                                    
-    background-image: url(&quot;images/image.png&quot;);                      
+    background-image: url("images/image.png");                      
  1                                                                    
  9  }                                                                 
                                                                       
- 2  a&lbrack;href&#36;=&quot;.mp3&quot;&rbrack; {                                            
+ 2  a&lbrack;href&#36;=".mp3"&rbrack; {                                            
  0                                                                    
-    background-image: url(&quot;images/audio.png&quot;);                      
+    background-image: url("images/audio.png");                      
  2                                                                    
  1  }                                                                 
                                                                       
- 2  a&lbrack;href&#36;=&quot;.mp4&quot;&rbrack; {                                            
+ 2  a&lbrack;href&#36;=".mp4"&rbrack; {                                            
  2                                                                    
-    background-image: url(&quot;images/video.png&quot;);                      
+    background-image: url("images/video.png");                      
  2                                                                    
  3  }                                                                 
                                                                       
@@ -2417,28 +2436,28 @@ stated value.
   a&lbrack;target&rbrack;                        Attribute Present Selector    Selects an element if the given
                                                                    attribute is present
 
-  a&lbrack;href=&quot;http://google.com/&quot;&rbrack;   Attribute Equals Selector     Selects an element if the given
+  a&lbrack;href="http://google.com/"&rbrack;   Attribute Equals Selector     Selects an element if the given
                                                                    attribute value exactly matches the
                                                                    value stated
 
-  a&lbrack;href&ast;=&quot;login&quot;&rbrack;              Attribute Contains Selector   Selects an element if the given
+  a&lbrack;href&ast;="login"&rbrack;              Attribute Contains Selector   Selects an element if the given
                                                                    attribute value contains at least
                                                                    once instance of the value stated
 
-  a&lbrack;href&Hat;=&quot;https://&quot;&rbrack;           Attribute Begins With         Selects an element if the given
+  a&lbrack;href&Hat;="https://"&rbrack;           Attribute Begins With         Selects an element if the given
                                      Selector                      attribute value begins with the
                                                                    value stated
 
-  a&lbrack;href&#36;=&quot;.pdf&quot;&rbrack;               Attribute Ends With Selector  Selects an element if the given
+  a&lbrack;href&#36;=".pdf"&rbrack;               Attribute Ends With Selector  Selects an element if the given
                                                                    attribute value ends with the value
                                                                    stated
 
-  a&lbrack;rel&tilde;=&quot;tag&quot;&rbrack;                 Attribute Spaced Selector     Selects an element if the given
+  a&lbrack;rel&tilde;="tag"&rbrack;                 Attribute Spaced Selector     Selects an element if the given
                                                                    attribute value is
                                                                    whitespace-separated with one word
                                                                    being exactly as stated
 
-  a&lbrack;lang&#0124;=&quot;en&quot;&rbrack;                 Attribute Hyphenated Selector Selects an element if the given
+  a&lbrack;lang&#0124;="en"&rbrack;                 Attribute Hyphenated Selector Selects an element if the given
                                                                    attribute value is hyphen-separated
                                                                    and begins with the word stated
   ----------------------------------------------------------------------------------------------------
@@ -2582,27 +2601,27 @@ list item.
 **HTML**
 
 +---+----------------------------------------------------------------------+
- 1  &lt;ul&gt;                                                               
+ 1  <ul>                                                               
                                                                          
- 2  &lt;li&gt;This list item will be selected&lt;/li&gt;                         
+ 2  <li>This list item will be selected</li>                         
                                                                          
- 3  &lt;li&gt;                                                               
+ 3  <li>                                                               
                                                                          
- 4  &lt;div&gt;This div will be selected&lt;/div&gt;                             
+ 4  <div>This div will be selected</div>                             
                                                                          
- 5  &lt;/li&gt;                                                              
+ 5  </li>                                                              
                                                                          
- 6  &lt;li&gt;                                                               
+ 6  <li>                                                               
                                                                          
- 7  &lt;div&gt;&#8230;&lt;/div&gt;                                                  
+ 7  <div>&#8230;</div>                                                  
                                                                          
- 8  &lt;div&gt;&#8230;&lt;/div&gt;                                                  
+ 8  <div>&#8230;</div>                                                  
                                                                          
- 9  &lt;/li&gt;                                                              
+ 9  </li>                                                              
                                                                          
- 1  &lt;li&gt;This list item will be selected&lt;/li&gt;                         
+ 1  <li>This list item will be selected</li>                         
  0                                                                       
-    &lt;/ul&gt;                                                              
+    </ul>                                                              
  1                                                                       
  1                                                                       
                                                                          
@@ -2651,21 +2670,21 @@ the only image to appear within the article, thus also selected.
 **HTML**
 
 +---+----------------------------------------------------------------------+
- 1  &lt;article&gt;                                                          
+ 1  <article>                                                          
                                                                          
- 2  &lt;h1&gt;&#8230;&lt;/h1&gt;                                                    
+ 2  <h1>&#8230;</h1>                                                    
                                                                          
- 3  &lt;p&gt;This paragraph will be selected&lt;/p&gt;                           
+ 3  <p>This paragraph will be selected</p>                           
                                                                          
- 4  &lt;p&gt;&#8230;&lt;/p&gt;                                                      
+ 4  <p>&#8230;</p>                                                      
                                                                          
- 5  &lt;img src=&quot;#&quot;&gt;&lt;!&#45;&#45; This image will be selected &#45;&#45;&gt;            
+ 5  <img src="#"><!&#45;&#45; This image will be selected &#45;&#45;>            
                                                                          
- 6  &lt;p&gt;This paragraph will be selected&lt;/p&gt;                           
+ 6  <p>This paragraph will be selected</p>                           
                                                                          
- 7  &lt;h6&gt;&#8230;&lt;/h6&gt;                                                    
+ 7  <h6>&#8230;</h6>                                                    
                                                                          
- 8  &lt;/article&gt;                                                         
+ 8  </article>                                                         
                                                                          
  9                                                                       
 +===+======================================================================+
@@ -2773,21 +2792,21 @@ third list item, thus lines 4 and 7 are selected.
 **HTML**
 
 +---+----------------------------------------------------------------------+
- 1  &lt;ul&gt;                                                               
+ 1  <ul>                                                               
                                                                          
- 2  &lt;li&gt;&#8230;&lt;/li&gt;                                                    
+ 2  <li>&#8230;</li>                                                    
                                                                          
- 3  &lt;li&gt;&#8230;&lt;/li&gt;                                                    
+ 3  <li>&#8230;</li>                                                    
                                                                          
- 4  &lt;li&gt;This list item will be selected&lt;/li&gt;                         
+ 4  <li>This list item will be selected</li>                         
                                                                          
- 5  &lt;li&gt;&#8230;&lt;/li&gt;                                                    
+ 5  <li>&#8230;</li>                                                    
                                                                          
- 6  &lt;li&gt;&#8230;&lt;/li&gt;                                                    
+ 6  <li>&#8230;</li>                                                    
                                                                          
- 7  &lt;li&gt;This list item will be selected&lt;/li&gt;                         
+ 7  <li>This list item will be selected</li>                         
                                                                          
- 8  &lt;/ul&gt;                                                              
+ 8  </ul>                                                              
                                                                          
  9                                                                       
 +===+======================================================================+
@@ -2810,21 +2829,21 @@ and then onward. As a result, the list items lines 4 and 6 are selected.
 **HTML**
 
 +---+----------------------------------------------------------------------+
- 1  &lt;ul&gt;                                                               
+ 1  <ul>                                                               
                                                                          
- 2  &lt;li&gt;&#8230;&lt;/li&gt;                                                    
+ 2  <li>&#8230;</li>                                                    
                                                                          
- 3  &lt;li&gt;&#8230;&lt;/li&gt;                                                    
+ 3  <li>&#8230;</li>                                                    
                                                                          
- 4  &lt;li&gt;This list item will be selected&lt;/li&gt;                         
+ 4  <li>This list item will be selected</li>                         
                                                                          
- 5  &lt;li&gt;&#8230;&lt;/li&gt;                                                    
+ 5  <li>&#8230;</li>                                                    
                                                                          
- 6  &lt;li&gt;This list item will be selected&lt;/li&gt;                         
+ 6  <li>This list item will be selected</li>                         
                                                                          
- 7  &lt;li&gt;&#8230;&lt;/li&gt;                                                    
+ 7  <li>&#8230;</li>                                                    
                                                                          
- 8  &lt;/ul&gt;                                                              
+ 8  </ul>                                                              
                                                                          
  9                                                                       
 +===+======================================================================+
@@ -2847,21 +2866,21 @@ lines 2 through 5 are selected.
 **HTML**
 
 +---+----------------------------------------------------------------------+
- 1  &lt;ul&gt;                                                               
+ 1  <ul>                                                               
                                                                          
- 2  &lt;li&gt;This list item will be selected&lt;/li&gt;                         
+ 2  <li>This list item will be selected</li>                         
                                                                          
- 3  &lt;li&gt;This list item will be selected&lt;/li&gt;                         
+ 3  <li>This list item will be selected</li>                         
                                                                          
- 4  &lt;li&gt;This list item will be selected&lt;/li&gt;                         
+ 4  <li>This list item will be selected</li>                         
                                                                          
- 5  &lt;li&gt;This list item will be selected&lt;/li&gt;                         
+ 5  <li>This list item will be selected</li>                         
                                                                          
- 6  &lt;li&gt;&#8230;&lt;/li&gt;                                                    
+ 6  <li>&#8230;</li>                                                    
                                                                          
- 7  &lt;li&gt;&#8230;&lt;/li&gt;                                                    
+ 7  <li>&#8230;</li>                                                    
                                                                          
- 8  &lt;/ul&gt;                                                              
+ 8  </ul>                                                              
                                                                          
  9                                                                       
 +===+======================================================================+
@@ -2884,21 +2903,21 @@ item, thus the list items on lines 2, 4, and 6 are selected.
 **HTML**
 
 +---+----------------------------------------------------------------------+
- 1  &lt;ul&gt;                                                               
+ 1  <ul>                                                               
                                                                          
- 2  &lt;li&gt;This list item will be selected&lt;/li&gt;                         
+ 2  <li>This list item will be selected</li>                         
                                                                          
- 3  &lt;li&gt;&#8230;&lt;/li&gt;                                                    
+ 3  <li>&#8230;</li>                                                    
                                                                          
- 4  &lt;li&gt;This list item will be selected&lt;/li&gt;                         
+ 4  <li>This list item will be selected</li>                         
                                                                          
- 5  &lt;li&gt;&#8230;&lt;/li&gt;                                                    
+ 5  <li>&#8230;</li>                                                    
                                                                          
- 6  &lt;li&gt;This list item will be selected&lt;/li&gt;                         
+ 6  <li>This list item will be selected</li>                         
                                                                          
- 7  &lt;li&gt;&#8230;&lt;/li&gt;                                                    
+ 7  <li>&#8230;</li>                                                    
                                                                          
- 8  &lt;/ul&gt;                                                              
+ 8  </ul>                                                              
                                                                          
  9                                                                       
 +===+======================================================================+
@@ -2925,21 +2944,21 @@ are selected.
 **HTML**
 
 +---+----------------------------------------------------------------------+
- 1  &lt;ul&gt;                                                               
+ 1  <ul>                                                               
                                                                          
- 2  &lt;li&gt;&#8230;&lt;/li&gt;                                                    
+ 2  <li>&#8230;</li>                                                    
                                                                          
- 3  &lt;li&gt;This list item will be selected&lt;/li&gt;                         
+ 3  <li>This list item will be selected</li>                         
                                                                          
- 4  &lt;li&gt;&#8230;&lt;/li&gt;                                                    
+ 4  <li>&#8230;</li>                                                    
                                                                          
- 5  &lt;li&gt;&#8230;&lt;/li&gt;                                                    
+ 5  <li>&#8230;</li>                                                    
                                                                          
- 6  &lt;li&gt;This list item will be selected&lt;/li&gt;                         
+ 6  <li>This list item will be selected</li>                         
                                                                          
- 7  &lt;li&gt;&#8230;&lt;/li&gt;                                                    
+ 7  <li>&#8230;</li>                                                    
                                                                          
- 8  &lt;/ul&gt;                                                              
+ 8  </ul>                                                              
                                                                          
  9                                                                       
 +===+======================================================================+
@@ -2980,25 +2999,25 @@ the parent. Here the paragraphs on lines 5 and 9 are selected.
 **HTML**
 
 +---+----------------------------------------------------------------------+
- 1  &lt;article&gt;                                                          
+ 1  <article>                                                          
                                                                          
- 2  &lt;h1&gt;&#8230;&lt;/h1&gt;                                                    
+ 2  <h1>&#8230;</h1>                                                    
                                                                          
- 3  &lt;p&gt;&#8230;&lt;/p&gt;                                                      
+ 3  <p>&#8230;</p>                                                      
                                                                          
- 4  &lt;p&gt;&#8230;&lt;/p&gt;                                                      
+ 4  <p>&#8230;</p>                                                      
                                                                          
- 5  &lt;p&gt;This paragraph will be selected&lt;/p&gt;                           
+ 5  <p>This paragraph will be selected</p>                           
                                                                          
- 6  &lt;h2&gt;&#8230;&lt;/h2&gt;                                                    
+ 6  <h2>&#8230;</h2>                                                    
                                                                          
- 7  &lt;p&gt;&#8230;&lt;/p&gt;                                                      
+ 7  <p>&#8230;</p>                                                      
                                                                          
- 8  &lt;p&gt;&#8230;&lt;/p&gt;                                                      
+ 8  <p>&#8230;</p>                                                      
                                                                          
- 9  &lt;p&gt;This paragraph will be selected&lt;/p&gt;                           
+ 9  <p>This paragraph will be selected</p>                           
                                                                          
- 1  &lt;/article&gt;                                                         
+ 1  </article>                                                         
  0                                                                       
                                                                          
  1                                                                       
@@ -3030,25 +3049,25 @@ paragraph. Here the paragraphs on lines 4, 7, and 9 are selected.
 **HTML**
 
 +---+----------------------------------------------------------------------+
- 1  &lt;article&gt;                                                          
+ 1  <article>                                                          
                                                                          
- 2  &lt;h1&gt;&#8230;&lt;/h1&gt;                                                    
+ 2  <h1>&#8230;</h1>                                                    
                                                                          
- 3  &lt;p&gt;&#8230;&lt;/p&gt;                                                      
+ 3  <p>&#8230;</p>                                                      
                                                                          
- 4  &lt;p&gt;This paragraph will be selected&lt;/p&gt;                           
+ 4  <p>This paragraph will be selected</p>                           
                                                                          
- 5  &lt;p&gt;&#8230;&lt;/p&gt;                                                      
+ 5  <p>&#8230;</p>                                                      
                                                                          
- 6  &lt;h2&gt;&#8230;&lt;/h2&gt;                                                    
+ 6  <h2>&#8230;</h2>                                                    
                                                                          
- 7  &lt;p&gt;This paragraph will be selected&lt;/p&gt;                           
+ 7  <p>This paragraph will be selected</p>                           
                                                                          
- 8  &lt;p&gt;&#8230;&lt;/p&gt;                                                      
+ 8  <p>&#8230;</p>                                                      
                                                                          
- 9  &lt;p&gt;This paragraph will be selected&lt;/p&gt;                           
+ 9  <p>This paragraph will be selected</p>                           
                                                                          
- 1  &lt;/article&gt;                                                         
+ 1  </article>                                                         
  0                                                                       
                                                                          
  1                                                                       
@@ -3064,7 +3083,7 @@ fragment identifier within a URI can be recognized by the hash
 character, #, and what directly follows it. The
 URL http://example.com/index.html#hello includes the fragment identifier
 of hello. When this identifier matches the ID attribute value of an
-element on the page, &lt;section id=&quot;hello&quot;&gt; for example, that element
+element on the page, <section id="hello"> for example, that element
 may be identified and stylized using the :target pseudo-class. Fragment
 identifiers are most commonly seen when using [on page
 links](https://learn.shayhowe.com/html-css/getting-to-know-html/#hyperlinks),
@@ -3089,7 +3108,7 @@ selector and pseudo-class from before.
 **HTML**
 
 +---+----------------------------------------------------------------------+
- 1  &lt;section id=&quot;hello&quot;&gt;&#8230;&lt;/section&gt;                             
+ 1  <section id="hello">&#8230;</section>                             
                                                                          
  2                                                                       
 +===+======================================================================+
@@ -3122,16 +3141,16 @@ selected.
 **HTML**
 
 +---+----------------------------------------------------------------------+
- 1  &lt;div&gt;Hello&lt;/div&gt;                                                 
+ 1  <div>Hello</div>                                                 
                                                                          
- 2  &lt;div&gt;&lt;!&#45;&#45; Coming soon &#45;&#45;&gt;&lt;/div&gt;&lt;!&#45;&#45; This div will be       
-    selected &#45;&#45;&gt;                                                       
+ 2  <div><!&#45;&#45; Coming soon &#45;&#45;></div><!&#45;&#45; This div will be       
+    selected &#45;&#45;>                                                       
  3                                                                       
-    &lt;div&gt;&lt;/div&gt;&lt;!&#45;&#45; This div will be selected &#45;&#45;&gt;                
+    <div></div><!&#45;&#45; This div will be selected &#45;&#45;>                
  4                                                                       
-    &lt;div&gt; &lt;/div&gt;                                                     
+    <div> </div>                                                     
  5                                                                       
-    &lt;div&gt;&lt;strong&gt;&lt;/strong&gt;&lt;/div&gt;                                 
+    <div><strong></strong></div>                                 
  6                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
@@ -3169,14 +3188,14 @@ pseudo-classes.
 **HTML**
 
 +---+----------------------------------------------------------------------+
- 1  &lt;div&gt;This div will be selected&lt;/div&gt;                             
+ 1  <div>This div will be selected</div>                             
                                                                          
- 2  &lt;div class=&quot;awesome&quot;&gt;&#8230;&lt;/div&gt;                                
+ 2  <div class="awesome">&#8230;</div>                                
                                                                          
- 3  &lt;section&gt;This section will be selected&lt;/section&gt;                 
+ 3  <section>This section will be selected</section>                 
                                                                          
- 4  &lt;section class=&quot;awesome&quot;&gt;This section will be                    
-    selected&lt;/section&gt;                                                 
+ 4  <section class="awesome">This section will be                    
+    selected</section>                                                 
  5                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
@@ -3186,61 +3205,61 @@ pseudo-classes.
 **HTML**
 
 +---+-------------------------------------------------------------------+
- 1  &lt;table&gt;                                                         
+ 1  <table>                                                         
                                                                       
- 2  &lt;thead&gt;                                                         
+ 2  <thead>                                                         
                                                                       
- 3  &lt;tr&gt;                                                            
+ 3  <tr>                                                            
                                                                       
- 4  &lt;th&gt;Number&lt;/th&gt;                                               
+ 4  <th>Number</th>                                               
                                                                       
- 5  &lt;th&gt;Player&lt;/th&gt;                                               
+ 5  <th>Player</th>                                               
                                                                       
- 6  &lt;th&gt;Position&lt;/th&gt;                                             
+ 6  <th>Position</th>                                             
                                                                       
- 7  &lt;th&gt;Height&lt;/th&gt;                                               
+ 7  <th>Height</th>                                               
                                                                       
- 8  &lt;th&gt;Weight&lt;/th&gt;                                               
+ 8  <th>Weight</th>                                               
                                                                       
- 9  &lt;/tr&gt;                                                           
+ 9  </tr>                                                           
                                                                       
- 1  &lt;/thead&gt;                                                        
+ 1  </thead>                                                        
  0                                                                    
-    &lt;tbody&gt;                                                         
+    <tbody>                                                         
  1                                                                    
- 1  &lt;tr&gt;                                                            
+ 1  <tr>                                                            
                                                                       
- 1  &lt;td&gt;8&lt;/td&gt;                                                    
+ 1  <td>8</td>                                                    
  2                                                                    
-    &lt;td&gt;Marco Belinelli&lt;/td&gt;                                      
+    <td>Marco Belinelli</td>                                      
  1                                                                    
- 3  &lt;td&gt;G&lt;/td&gt;                                                    
+ 3  <td>G</td>                                                    
                                                                       
- 1  &lt;td&gt;6-5&lt;/td&gt;                                                  
+ 1  <td>6-5</td>                                                  
  4                                                                    
-    &lt;td&gt;195&lt;/td&gt;                                                  
+    <td>195</td>                                                  
  1                                                                    
- 5  &lt;/tr&gt;                                                           
+ 5  </tr>                                                           
                                                                       
- 1  &lt;tr&gt;                                                            
+ 1  <tr>                                                            
  6                                                                    
-    &lt;td&gt;5&lt;/td&gt;                                                    
+    <td>5</td>                                                    
  1                                                                    
- 7  &lt;td&gt;Carlos Boozer&lt;/td&gt;                                        
+ 7  <td>Carlos Boozer</td>                                        
                                                                       
- 1  &lt;td&gt;F&lt;/td&gt;                                                    
+ 1  <td>F</td>                                                    
  8                                                                    
-    &lt;td&gt;6-9&lt;/td&gt;                                                  
+    <td>6-9</td>                                                  
  1                                                                    
- 9  &lt;td&gt;266&lt;/td&gt;                                                  
+ 9  <td>266</td>                                                  
                                                                       
- 2  &lt;/tr&gt;                                                           
+ 2  </tr>                                                           
  0                                                                    
     &#8230;                                                              
  2                                                                    
- 1  &lt;/tbody&gt;                                                        
+ 1  </tbody>                                                        
                                                                       
- 2  &lt;/table&gt;                                                        
+ 2  </table>                                                        
  2                                                                    
                                                                       
  2                                                                    
@@ -3499,9 +3518,9 @@ pseudo-elements respectively.
 HTML
 
 +---+----------------------------------------------------------------------+
- 1  &lt;p class=&quot;alpha&quot;&gt;Lorem ipsum dolor&#8230;&lt;/p&gt;                     
+ 1  <p class="alpha">Lorem ipsum dolor&#8230;</p>                     
                                                                          
- 2  &lt;p class=&quot;bravo&quot;&gt;Integer eget enim&#8230;&lt;/p&gt;                     
+ 2  <p class="bravo">Integer eget enim&#8230;</p>                     
                                                                          
  3                                                                       
 +===+======================================================================+
@@ -3535,7 +3554,7 @@ necessary should a browser not support these pseudo-elements.
                                                                          
  2  color: #9799a7;                                                      
                                                                          
- 3  content: &quot; (&quot; attr(href) &quot;)&quot;;                                    
+ 3  content: " (" attr(href) ")";                                    
                                                                          
  4  font-size: 11px;                                                     
                                                                          
@@ -3548,10 +3567,10 @@ necessary should a browser not support these pseudo-elements.
 **HTML**
 
 +---+----------------------------------------------------------------------+
- 1  &lt;a href=&quot;http://google.com/&quot;&gt;Search the Web&lt;/a&gt;                
+ 1  <a href="http://google.com/">Search the Web</a>                
                                                                          
- 2  &lt;a href=&quot;http://learn.shayhowe.com/&quot;&gt;Learn How to Build          
-    Websites&lt;/a&gt;                                                       
+ 2  <a href="http://learn.shayhowe.com/">Learn How to Build          
+    Websites</a>                                                       
  3                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
@@ -3606,7 +3625,7 @@ added to ensure the best support for all browsers.
 ### **HTML**
 
 +---+--------------------------------------------------------------------+
- 1  &lt;a class=&quot;arrow&quot; href=&quot;#&quot;&gt;Continue Reading&lt;/a&gt;             
+ 1  <a class="arrow" href="#">Continue Reading</a>             
                                                                        
  2                                                                     
 +===+====================================================================+
@@ -3639,7 +3658,7 @@ added to ensure the best support for all browsers.
  1                                                                    
  1  .arrow:after {                                                    
                                                                       
- 1  content: &quot;&quot;;                                                    
+ 1  content: "";                                                    
  2                                                                    
     height: 0;                                                        
  1                                                                    
@@ -3975,13 +3994,13 @@ following.
 **HTML**
 
 +---+----------------------------------------------------------------------+
- 1  &lt;div class=&quot;container&quot;&gt;                                          
+ 1  <div class="container">                                          
                                                                          
- 2  &lt;section&gt;&#8230;&lt;/section&gt;                                          
+ 2  <section>&#8230;</section>                                          
                                                                          
- 3  &lt;aside&gt;&#8230;&lt;/aside&gt;                                              
+ 3  <aside>&#8230;</aside>                                              
                                                                          
- 4  &lt;/div&gt;                                                             
+ 4  </div>                                                             
                                                                          
  5                                                                       
 +===+======================================================================+
@@ -4109,10 +4128,10 @@ additional HTTP requests.
 **HTML**
 
 +---+----------------------------------------------------------------------+
- 1  &lt;!&#45;&#45; Separate CSS File &#45;&#45;&gt;                                       
+ 1  <!&#45;&#45; Separate CSS File &#45;&#45;>                                       
                                                                          
- 2  &lt;link href=&quot;styles.css&quot; rel=&quot;stylesheet&quot; media=&quot;all and        
-    (max-width: 1024px)&quot;&gt;                                              
+ 2  <link href="styles.css" rel="stylesheet" media="all and        
+    (max-width: 1024px)">                                              
  3                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
@@ -4233,7 +4252,7 @@ The min and max prefixes can be used on quite a few media features.
 The min prefix indicates a values of *greater than or equal to* while
 the max prefix indicates a value of *less than or equal to*.
 Using min and max prefixes avoid any conflict with the general HTML
-syntax, specifically not using the &lt; and &gt; symbols.
+syntax, specifically not using the < and > symbols.
 
 ### Orientation Media Feature
 
@@ -4440,7 +4459,7 @@ even reduce a device's battery life.
                                                                          
  7  body {                                                               
                                                                          
- 8  background-image: url(&quot;bg.png&quot;) 50% 50% no-repeat;                 
+ 8  background-image: url("bg.png") 50% 50% no-repeat;                 
                                                                          
  9  }                                                                    
                                                                          
@@ -4546,7 +4565,7 @@ you use the device defaults by applying
 the device-height and device-width values.
 
 +---+----------------------------------------------------------------------+
- 1  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot;&gt;            
+ 1  <meta name="viewport" content="width=device-width">            
                                                                          
  2                                                                       
 +===+======================================================================+
@@ -4574,7 +4593,7 @@ the ratio between the device width and the viewport size. Values
 for initial-scale should always be a positive integer between 0 and 10.
 
 +---+----------------------------------------------------------------------+
- 1  &lt;meta name=&quot;viewport&quot; content=&quot;initial-scale=2&quot;&gt;               
+ 1  <meta name="viewport" content="initial-scale=2">               
                                                                          
  2                                                                       
 +===+======================================================================+
@@ -4596,7 +4615,7 @@ integer greater than or equal to the initial-scale. Values for both of
 these must also be between 0 and 10.
 
 +---+----------------------------------------------------------------------+
- 1  &lt;meta name=&quot;viewport&quot; content=&quot;minimum-scale=0&quot;&gt;               
+ 1  <meta name="viewport" content="minimum-scale=0">               
                                                                          
  2                                                                       
 +===+======================================================================+
@@ -4613,7 +4632,7 @@ accessibility and usability, preventing those with disabilities from
 viewing a website as desired.
 
 +---+----------------------------------------------------------------------+
- 1  &lt;meta name=&quot;viewport&quot; content=&quot;user-scalable=yes&quot;&gt;             
+ 1  <meta name="viewport" content="user-scalable=yes">             
                                                                          
  2                                                                       
 +===+======================================================================+
@@ -4633,7 +4652,7 @@ Using the target-densitydpi viewport value is rare, but extremely
 helpful when pixel by pixel control is needed.
 
 +---+----------------------------------------------------------------------+
- 1  &lt;meta name=&quot;viewport&quot; content=&quot;target-densitydpi=device-dpi&quot;&gt;  
+ 1  <meta name="viewport" content="target-densitydpi=device-dpi">  
                                                                          
  2                                                                       
 +===+======================================================================+
@@ -4648,8 +4667,8 @@ the content attribute value. One of the recommended viewport values is
 outlined below, using both the width and initial-scale properties.
 
 +---+----------------------------------------------------------------------+
- 1  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,               
-    initial-scale=1&quot;&gt;                                                  
+ 1  <meta name="viewport" content="width=device-width,               
+    initial-scale=1">                                                  
  2                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
@@ -4738,12 +4757,12 @@ treating the parent element as an absolutely positioned element.
 **HTML**
 
 +---+----------------------------------------------------------------------+
- 1  &lt;figure&gt;                                                           
+ 1  <figure>                                                           
                                                                          
- 2  &lt;iframe                                                             
-    src=&quot;https://www.youtube.com/embed/Sv3xVOs7_No&quot;&gt;&lt;/iframe&gt;       
+ 2  <iframe                                                             
+    src="https://www.youtube.com/embed/Sv3xVOs7_No"></iframe>       
  3                                                                       
-    &lt;/figure&gt;                                                          
+    </figure>                                                          
  4                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
@@ -4949,7 +4968,7 @@ passed in after the exclamation points, !!! 5.
 **Compiled HTML**
 
 +---+----------------------------------------------------------------------+
- 1  &lt;!DOCTYPE html&gt;                                                    
+ 1  <!DOCTYPE html>                                                    
                                                                          
  2                                                                       
 +===+======================================================================+
@@ -4993,21 +5012,21 @@ struggle.
 **Compiled HTML**
 
 +---+----------------------------------------------------------------------+
- 1  &lt;body&gt;                                                             
+ 1  <body>                                                             
                                                                          
- 2  &lt;header&gt;                                                           
+ 2  <header>                                                           
                                                                          
- 3  &lt;h1&gt;Hello World&lt;/h1&gt;                                             
+ 3  <h1>Hello World</h1>                                             
                                                                          
- 4  &lt;/header&gt;                                                          
+ 4  </header>                                                          
                                                                          
- 5  &lt;section&gt;                                                          
+ 5  <section>                                                          
                                                                          
- 6  &lt;p&gt;Lorem ipsum dolor sit amet.&lt;/p&gt;                               
+ 6  <p>Lorem ipsum dolor sit amet.</p>                               
                                                                          
- 7  &lt;/section&gt;                                                         
+ 7  </section>                                                         
                                                                          
- 8  &lt;/body&gt;                                                            
+ 8  </body>                                                            
                                                                          
  9                                                                       
 +===+======================================================================+
@@ -5050,11 +5069,11 @@ style attributes will use standard HTML syntax inside of ().
 **Haml**
 
 +---+----------------------------------------------------------------------+
- 1  %img{:src =&gt; &quot;shay.jpg&quot;, :alt =&gt; &quot;Shay Howe&quot;}                  
+ 1  %img{:src => "shay.jpg", :alt => "Shay Howe"}                  
                                                                          
- 2  %img{src: &quot;shay.jpg&quot;, alt: &quot;Shay Howe&quot;}                          
+ 2  %img{src: "shay.jpg", alt: "Shay Howe"}                          
                                                                          
- 3  %img(src=&quot;shay.jpg&quot; alt=&quot;Shay Howe&quot;)                             
+ 3  %img(src="shay.jpg" alt="Shay Howe")                             
                                                                          
  4                                                                       
 +===+======================================================================+
@@ -5063,7 +5082,7 @@ style attributes will use standard HTML syntax inside of ().
 **Compiled HTML**
 
 +---+----------------------------------------------------------------------+
- 1  &lt;img src=&quot;shay.jpg&quot; alt=&quot;Shay Howe&quot;&gt;                           
+ 1  <img src="shay.jpg" alt="Shay Howe">                           
                                                                          
  2                                                                       
 +===+======================================================================+
@@ -5092,7 +5111,7 @@ outlined formats.
                                                                          
  3  %section#hello                                                       
                                                                          
- 4  %section#hello.feature(role=&quot;region&quot;)                              
+ 4  %section#hello.feature(role="region")                              
                                                                          
  5                                                                       
 +===+======================================================================+
@@ -5101,14 +5120,14 @@ outlined formats.
 **Compiled HTML**
 
 +---+----------------------------------------------------------------------+
- 1  &lt;section class=&quot;feature&quot;&gt;&lt;/section&gt;                            
+ 1  <section class="feature"></section>                            
                                                                          
- 2  &lt;section class=&quot;feature special&quot;&gt;&lt;/section&gt;                    
+ 2  <section class="feature special"></section>                    
                                                                          
- 3  &lt;section id=&quot;hello&quot;&gt;&lt;/section&gt;                                 
+ 3  <section id="hello"></section>                                 
                                                                          
- 4  &lt;section class=&quot;feature&quot; id=&quot;hello&quot;                             
-    role=&quot;region&quot;&gt;&lt;/section&gt;                                        
+ 4  <section class="feature" id="hello"                             
+    role="region"></section>                                        
  5                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
@@ -5135,11 +5154,11 @@ identified with a . and IDs are to be identified with a #.
 **Compiled HTML**
 
 +---+----------------------------------------------------------------------+
- 1  &lt;div class=&quot;awesome&quot;&gt;&lt;/div&gt;                                    
+ 1  <div class="awesome"></div>                                    
                                                                          
- 2  &lt;div class=&quot;awesome lesson&quot;&gt;&lt;/div&gt;                             
+ 2  <div class="awesome lesson"></div>                             
                                                                          
- 3  &lt;div class=&quot;lesson&quot; id=&quot;getting-started&quot;&gt;&lt;/div&gt;              
+ 3  <div class="lesson" id="getting-started"></div>              
                                                                          
  4                                                                       
 +===+======================================================================+
@@ -5153,11 +5172,11 @@ HTML, all depending on the syntax being used.
 **Haml**
 
 +---+----------------------------------------------------------------------+
- 1  %input{:type =&gt; &quot;checkbox&quot;, :checked =&gt; true}                    
+ 1  %input{:type => "checkbox", :checked => true}                    
                                                                          
- 2  %input(type=&quot;checkbox&quot; checked=true)                               
+ 2  %input(type="checkbox" checked=true)                               
                                                                          
- 3  %input(type=&quot;checkbox&quot; checked)                                    
+ 3  %input(type="checkbox" checked)                                    
                                                                          
  4                                                                       
 +===+======================================================================+
@@ -5166,7 +5185,7 @@ HTML, all depending on the syntax being used.
 **Compiled HTML**
 
 +---+----------------------------------------------------------------------+
- 1  &lt;input type=&quot;checkbox&quot; checked&gt;                                  
+ 1  <input type="checkbox" checked>                                  
                                                                          
  2                                                                       
 +===+======================================================================+
@@ -5200,13 +5219,13 @@ execution.
 **Compiled HTML**
 
 +---+----------------------------------------------------------------------+
- 1  &lt;div class=&quot;author&quot;&gt;                                             
+ 1  <div class="author">                                             
                                                                          
  2  Shay Howe                                                            
                                                                          
  3  = &#0064;author                                                           
                                                                          
- 4  &lt;/div&gt;                                                             
+ 4  </div>                                                             
                                                                          
  5                                                                       
 +===+======================================================================+
@@ -5234,9 +5253,9 @@ outside of the anchor text.
                                                                          
  2  Shay is                                                              
                                                                          
- 3  = succeed &quot;.&quot; do                                                   
+ 3  = succeed "." do                                                   
                                                                          
- 4  %a{:href =&gt; &quot;#&quot;} awesome                                          
+ 4  %a{:href => "#"} awesome                                          
                                                                          
  5                                                                       
 +===+======================================================================+
@@ -5245,7 +5264,7 @@ outside of the anchor text.
 **Compiled HTML**
 
 +---+----------------------------------------------------------------------+
- 1  &lt;p&gt;Shay is &lt;a href=&quot;#&quot;&gt;awesome&lt;/a&gt;.&lt;/p&gt;                    
+ 1  <p>Shay is <a href="#">awesome</a>.</p>                    
                                                                          
  2                                                                       
 +===+======================================================================+
@@ -5283,23 +5302,23 @@ code can be commented out by being nested underneath a forward slash.
 **Compiled HTML**
 
 +---+----------------------------------------------------------------------+
- 1  &lt;div&gt;                                                              
+ 1  <div>                                                              
                                                                          
- 2  &lt;!&#45;&#45; Commented line &#45;&#45;&gt;                                          
+ 2  <!&#45;&#45; Commented line &#45;&#45;>                                          
                                                                          
  3  Actual line                                                          
                                                                          
- 4  &lt;/div&gt;                                                             
+ 4  </div>                                                             
                                                                          
- 5  &lt;!&#45;&#45;                                                               
+ 5  <!&#45;&#45;                                                               
                                                                          
- 6  &lt;div&gt;                                                              
+ 6  <div>                                                              
                                                                          
  7  Commented block                                                      
                                                                          
- 8  &lt;/div&gt;                                                             
+ 8  </div>                                                             
                                                                          
- 9  &#45;&#45;&gt;                                                                
+ 9  &#45;&#45;>                                                                
                                                                          
  1                                                                       
  0                                                                       
@@ -5321,7 +5340,7 @@ slash.
 +---+----------------------------------------------------------------------+
  1  /&lbrack;if lt IE 9&rbrack;                                                      
                                                                          
- 2  %script{:src =&gt; &quot;html5shiv.js&quot;}                                   
+ 2  %script{:src => "html5shiv.js"}                                   
                                                                          
  3                                                                       
 +===+======================================================================+
@@ -5330,11 +5349,11 @@ slash.
 **Compiled HTML**
 
 +---+----------------------------------------------------------------------+
- 1  &lt;!&#45;&#45;&lbrack;if lt IE 9&rbrack;&gt;                                               
+ 1  <!&#45;&#45;&lbrack;if lt IE 9&rbrack;>                                               
                                                                          
- 2  &lt;script src=&quot;html5shiv.js&quot;&gt;&lt;/script&gt;                           
+ 2  <script src="html5shiv.js"></script>                           
                                                                          
- 3  &lt;&#0033;[endif&rbrack;&#45;&#45;&gt;                                                    
+ 3  <&#0033;[endif&rbrack;&#45;&#45;>                                                    
                                                                          
  4                                                                       
 +===+======================================================================+
@@ -5366,11 +5385,11 @@ multiple lines with the use of nesting.
 **Compiled HTML**
 
 +---+----------------------------------------------------------------------+
- 1  &lt;div&gt;                                                              
+ 1  <div>                                                              
                                                                          
  2  Actual line                                                          
                                                                          
- 3  &lt;/div&gt;                                                             
+ 3  </div>                                                             
                                                                          
  4                                                                       
 +===+======================================================================+
@@ -5438,7 +5457,7 @@ the group being :css and :javascript.
 **Compiled HTML**
 
 +---+----------------------------------------------------------------------+
- 1  &lt;script&gt;                                                           
+ 1  <script>                                                           
                                                                          
  2  &#36;(&#39;button&#39;).on(&#39;click&#39;, function(event) {                       
                                                                          
@@ -5446,7 +5465,7 @@ the group being :css and :javascript.
                                                                          
  4  });                                                                  
                                                                          
- 5  &lt;/script&gt;                                                          
+ 5  </script>                                                          
                                                                          
  6                                                                       
 +===+======================================================================+
@@ -5486,7 +5505,7 @@ the group being :css and :javascript.
 **Compiled HTML**
 
 +---+----------------------------------------------------------------------+
- 1  &lt;style&gt;                                                            
+ 1  <style>                                                            
                                                                          
  2  .container {                                                         
                                                                          
@@ -5496,7 +5515,7 @@ the group being :css and :javascript.
                                                                          
  5  }                                                                    
                                                                          
- 6  &lt;/style&gt;                                                           
+ 6  </style>                                                           
                                                                          
  7                                                                       
 +===+======================================================================+
@@ -5514,7 +5533,7 @@ Below is an example of Ruby being interpolated as part of a class name.
 **Haml**
 
 +---+----------------------------------------------------------------------+
- 1  %div{:class =&gt; &quot;student-#{@student.name}&quot;}                        
+ 1  %div{:class => "student-#{@student.name}"}                        
                                                                          
  2                                                                       
 +===+======================================================================+
@@ -5523,7 +5542,7 @@ Below is an example of Ruby being interpolated as part of a class name.
 **Compiled HTML**
 
 +---+----------------------------------------------------------------------+
- 1  &lt;div class=&quot;student-shay&quot;&gt;                                       
+ 1  <div class="student-shay">                                       
                                                                          
  2                                                                       
 +===+======================================================================+
@@ -5906,7 +5925,7 @@ of the most beneficial is inside of feature detection.
                                                                          
  3  .no-cssgradients &                                                   
                                                                          
- 4  background: url(&quot;gradient.png&quot;) 0 0 repeat-x                       
+ 4  background: url("gradient.png") 0 0 repeat-x                       
                                                                          
  5                                                                       
 +===+======================================================================+
@@ -5923,7 +5942,7 @@ of the most beneficial is inside of feature detection.
                                                                          
  4  .no-cssgradients .btn {                                              
                                                                          
- 5  background: url(&quot;gradient.png&quot;) 0 0 repeat-x;                      
+ 5  background: url("gradient.png") 0 0 repeat-x;                      
                                                                          
  6  }                                                                    
                                                                          
@@ -6002,7 +6021,7 @@ separated by spaces or commas.
 +---+----------------------------------------------------------------------+
  1  &#36;font-base: 1em                                                     
                                                                          
- 2  &#36;serif: &quot;Helvetica Neue&quot;, Arial, &quot;Lucida Grande&quot;, sans-serif    
+ 2  &#36;serif: "Helvetica Neue", Arial, "Lucida Grande", sans-serif    
                                                                          
  3  p                                                                    
                                                                          
@@ -6019,7 +6038,7 @@ separated by spaces or commas.
 +---+----------------------------------------------------------------------+
  1  p {                                                                  
                                                                          
- 2  font: 1em &quot;Helvetica Neue&quot;, Arial, &quot;Lucida Grande&quot;, sans-serif;  
+ 2  font: 1em "Helvetica Neue", Arial, "Lucida Grande", sans-serif;  
                                                                          
  3  }                                                                    
                                                                          
@@ -6808,9 +6827,9 @@ HTML document.
 **Sass**
 
 +---+----------------------------------------------------------------------+
- 1  &#0064;import &quot;normalize&quot;                                               
+ 1  &#0064;import "normalize"                                               
                                                                          
- 2  &#0064;import &quot;grid&quot;, &quot;typography&quot;                                    
+ 2  &#0064;import "grid", "typography"                                    
                                                                          
  3                                                                       
 +===+======================================================================+
@@ -6819,7 +6838,7 @@ HTML document.
 **Compiled HTML**
 
 +---+----------------------------------------------------------------------+
- 1  &lt;link href=&quot;styles.css&quot; rel=&quot;stylesheet&quot;&gt;                      
+ 1  <link href="styles.css" rel="stylesheet">                      
                                                                          
  2                                                                       
 +===+======================================================================+
@@ -6841,19 +6860,19 @@ operators. Relational operators looks at the relationship between two
 entities, while comparison operators determine equality or different
 between to entities.
 
--   &lt;\
+-   <\
     Less than
 
--   &gt;\
+-   >\
     Greater than
 
 -   ==\
     Equal to
 
--   &lt;=\
+-   <=\
     Less than or equal to
 
--   &gt;=\
+-   >=\
     Greather than or equal to
 
 -   !=\
@@ -6862,13 +6881,13 @@ between to entities.
 +---+----------------------------------------------------------------------+
  1  // Relational Operators                                              
                                                                          
- 2  6 &lt; 10 // true                                                      
+ 2  6 < 10 // true                                                      
                                                                          
- 3  4 &lt;= 60 // true                                                     
+ 3  4 <= 60 // true                                                     
                                                                          
- 4  8 &gt; 2 // true                                                       
+ 4  8 > 2 // true                                                       
                                                                          
- 5  10 &gt;= 10 // true                                                    
+ 5  10 >= 10 // true                                                    
                                                                          
  6  // Comparison Operators                                              
                                                                          
@@ -7010,7 +7029,7 @@ List may include multiple comma separated items.
                                                                          
  2  .#{&#36;class}-logo                                                     
                                                                          
- 3  background: url(&quot;/img/#{&#36;class}.jpg&quot;)                             
+ 3  background: url("/img/#{&#36;class}.jpg")                             
                                                                          
  4                                                                       
 +===+======================================================================+
@@ -7021,25 +7040,25 @@ List may include multiple comma separated items.
 +---+----------------------------------------------------------------------+
  1  .uxd-logo {                                                          
                                                                          
- 2  background: url(&quot;/img/uxd.jpg&quot;);                                   
+ 2  background: url("/img/uxd.jpg");                                   
                                                                          
  3  }                                                                    
                                                                          
  4  .rails-logo {                                                        
                                                                          
- 5  background: url(&quot;/img/rails.jpg&quot;);                                 
+ 5  background: url("/img/rails.jpg");                                 
                                                                          
  6  }                                                                    
                                                                          
  7  .html-logo {                                                         
                                                                          
- 8  background: url(&quot;/img/html.jpg&quot;);                                  
+ 8  background: url("/img/html.jpg");                                  
                                                                          
  9  }                                                                    
                                                                          
  1  .css-logo {                                                          
  0                                                                       
-    background: url(&quot;/img/css.jpg&quot;);                                   
+    background: url("/img/css.jpg");                                   
  1                                                                       
  1  }                                                                    
                                                                          
@@ -7062,7 +7081,7 @@ counter variable can be finely controlled allowing for precise looping.
 +---+----------------------------------------------------------------------+
  1  &#36;heading: 1                                                         
                                                                          
- 2  &#0064;while &#36;heading &lt;= 6                                              
+ 2  &#0064;while &#36;heading <= 6                                              
                                                                          
  3  h#{&#36;heading}                                                        
                                                                          
@@ -7222,13 +7241,13 @@ the .js file extension, and then referenced within an HTML document
 using the script element. Where the JavaScript reference is placed with
 HTML depends on when it should be executed. Generally speaking, the best
 place to reference JavaScript files is right before the
-closing &lt;/body&gt; tag so that the JavaScript file is loaded after all of
+closing </body> tag so that the JavaScript file is loaded after all of
 the HTML has been parsed. However, at times, JavaScript is needed to
 help render HTML and determine it's behavior, thus may be referenced
 within a documents head.
 
 +---+----------------------------------------------------------------------+
- 1  &lt;script src=&quot;script.js&quot;&gt;&lt;/script&gt;                              
+ 1  <script src="script.js"></script>                              
                                                                          
  2                                                                       
 +===+======================================================================+
@@ -7396,7 +7415,7 @@ actions with them.
 
 The first step to using jQuery is to reference it from within a HTML
 document. As previously mentioned with JavaScript, this is done using
-the script element just before the closing &lt;/body&gt; tag. Since jQuery
+the script element just before the closing </body> tag. Since jQuery
 is it's own library it is best to keep it separate from all the other
 JavaScript being written.
 
@@ -7410,11 +7429,11 @@ Additionally, using a CDN like Google also helps with loading time, and
 potential caching benefits.
 
 +---+----------------------------------------------------------------------+
- 1  &lt;script                                                             
-    src=&quot;//aja                                                          
- 2  x.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js&quot;&gt;&lt;/script&gt; 
+ 1  <script                                                             
+    src="//aja                                                          
+ 2  x.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script> 
                                                                          
- 3  &lt;script src=&quot;script.js&quot;&gt;&lt;/script&gt;                              
+ 3  <script src="script.js"></script>                              
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -7492,7 +7511,7 @@ parentheses, (&#39;&#8230;&#39;), and may select elements just like that of CSS
                                                                          
  3  &#36;(&#39;em, i&#39;); // Multiple selector                                  
                                                                          
- 4  &#36;(&#39;a&lbrack;target=&quot;&#0095;blank&quot;&rbrack;&#39;); // Attribute selector               
+ 4  &#36;(&#39;a&lbrack;target="&#0095;blank"&rbrack;&#39;); // Attribute selector               
                                                                          
  5  &#36;(&#39;p:nth-child(2)&#39;); // Pseudo-class selector                     
                                                                          
@@ -7801,9 +7820,9 @@ new em element just after the link, and the .text() method is replacing
 the text of any h1 elements with the text Hello World.
 
 +---+----------------------------------------------------------------------+
- 1  &#36;(&#39;section&#39;).prepend(&#39;&lt;h3&gt;Featured&lt;/h3&gt;&#39;);                  
+ 1  &#36;(&#39;section&#39;).prepend(&#39;<h3>Featured</h3>&#39;);                  
                                                                          
- 2  &#36;(&#39;a&lbrack;target=&quot;&#0095;blank&quot;&rbrack;&#39;).after(&#39;&lt;em&gt;New window.&lt;/em&gt;&#39;); 
+ 2  &#36;(&#39;a&lbrack;target="&#0095;blank"&rbrack;&#39;).after(&#39;<em>New window.</em>&#39;); 
                                                                          
  3  &#36;(&#39;h1&#39;).text(&#39;Hello World&#39;);                                    
                                                                          
@@ -7939,13 +7958,13 @@ clicking the close icon.
 **HTML**
 
 +---+--------------------------------------------------------------------+
- 1  &lt;div class=&quot;notice-warning&quot;&gt;                                   
+ 1  <div class="notice-warning">                                   
                                                                        
- 2  &lt;div class=&quot;notice-close&quot;&gt;&#215;&lt;/div&gt;                       
+ 2  <div class="notice-close">&#215;</div>                       
                                                                        
- 3  &lt;strong&gt;Warning!&lt;/strong&gt; I&#8217;m about to lose my cool.     
+ 3  <strong>Warning!</strong> I&#8217;m about to lose my cool.     
                                                                        
- 4  &lt;/div&gt;                                                           
+ 4  </div>                                                           
                                                                        
  5                                                                     
 +===+====================================================================+
@@ -8178,13 +8197,13 @@ animation is complete.
 ### **HTML**
 
 +---+--------------------------------------------------------------------+
- 1  &lt;div class=&quot;notice-warning&quot;&gt;                                   
+ 1  <div class="notice-warning">                                   
                                                                        
- 2  &lt;div class=&quot;notice-close&quot;&gt;&#215;&lt;/div&gt;                       
+ 2  <div class="notice-close">&#215;</div>                       
                                                                        
- 3  &lt;strong&gt;Warning!&lt;/strong&gt; I&#8217;m about to lose my cool.     
+ 3  <strong>Warning!</strong> I&#8217;m about to lose my cool.     
                                                                        
- 4  &lt;/div&gt;                                                           
+ 4  </div>                                                           
                                                                        
  5                                                                     
 +===+====================================================================+
@@ -8258,14 +8277,14 @@ animation is complete.
 **HTML**
 
 +---+-------------------------------------------------------------------+
- 1  &lt;div class=&quot;panel&quot;&gt;                                           
+ 1  <div class="panel">                                           
                                                                       
- 2  &lt;div class=&quot;panel-stage&quot;&gt;&lt;/div&gt;                             
+ 2  <div class="panel-stage"></div>                             
                                                                       
- 3  &lt;a href=&quot;#&quot; class=&quot;panel-tab&quot;&gt;Open                          
-    &lt;span&gt;&#9660;&lt;/span&gt;&lt;/a&gt;                                    
+ 3  <a href="#" class="panel-tab">Open                          
+    <span>&#9660;</span></a>                                    
  4                                                                    
-    &lt;/div&gt;                                                          
+    </div>                                                          
  5                                                                    
 +===+===================================================================+
 +---+-------------------------------------------------------------------+
@@ -8281,11 +8300,11 @@ animation is complete.
                                                                       
  4  if(&#36;(this).is(&#39;:visible&#39;)){                                    
                                                                       
- 5  &#36;(&#39;.panel-tab&#39;).html(&#39;Close &lt;span&gt;&#9650;&lt;/span&gt;&#39;);      
+ 5  &#36;(&#39;.panel-tab&#39;).html(&#39;Close <span>&#9650;</span>&#39;);      
                                                                       
  6  } else {                                                          
                                                                       
- 7  &#36;(&#39;.panel-tab&#39;).html(&#39;Open &lt;span&gt;&#9660;&lt;/span&gt;&#39;);       
+ 7  &#36;(&#39;.panel-tab&#39;).html(&#39;Open <span>&#9660;</span>&#39;);       
                                                                       
  8  }                                                                 
                                                                       
@@ -8306,21 +8325,21 @@ Tabs Demo
 **HTML**
 
 +---+--------------------------------------------------------------------+
- 1  &lt;ul class=&quot;tabs-nav&quot;&gt;                                          
+ 1  <ul class="tabs-nav">                                          
                                                                        
- 2  &lt;li&gt;&lt;a href=&quot;#tab-1&quot;&gt;Features&lt;/a&gt;&lt;/li&gt;                   
+ 2  <li><a href="#tab-1">Features</a></li>                   
                                                                        
- 3  &lt;li&gt;&lt;a href=&quot;#tab-2&quot;&gt;Details&lt;/a&gt;&lt;/li&gt;                    
+ 3  <li><a href="#tab-2">Details</a></li>                    
                                                                        
- 4  &lt;/ul&gt;                                                            
+ 4  </ul>                                                            
                                                                        
- 5  &lt;div class=&quot;tabs-stage&quot;&gt;                                       
+ 5  <div class="tabs-stage">                                       
                                                                        
- 6  &lt;div id=&quot;tab-1&quot;&gt;&#8230;&lt;/div&gt;                                   
+ 6  <div id="tab-1">&#8230;</div>                                   
                                                                        
- 7  &lt;div id=&quot;tab-2&quot;&gt;&#8230;&lt;/div&gt;                                   
+ 7  <div id="tab-2">&#8230;</div>                                   
                                                                        
- 8  &lt;/div&gt;                                                           
+ 8  </div>                                                           
                                                                        
  9                                                                     
 +===+====================================================================+
@@ -8504,9 +8523,9 @@ discuss how you can change this default point of rotation.
 **HTML**
 
 +---+----------------------------------------------------------------------+
- 1  &lt;figure class=&quot;box-1&quot;&gt;Box 1&lt;/figure&gt;                           
+ 1  <figure class="box-1">Box 1</figure>                           
                                                                          
- 2  &lt;figure class=&quot;box-2&quot;&gt;Box 2&lt;/figure&gt;                           
+ 2  <figure class="box-2">Box 2</figure>                           
                                                                          
  3                                                                       
 +===+======================================================================+
@@ -8550,9 +8569,9 @@ value greater than or equal to 1.01 makes an element appear larger.
 **HTML**
 
 +---+----------------------------------------------------------------------+
- 1  &lt;figure class=&quot;box-1&quot;&gt;Box 1&lt;/figure&gt;                           
+ 1  <figure class="box-1">Box 1</figure>                           
                                                                          
- 2  &lt;figure class=&quot;box-2&quot;&gt;Box 2&lt;/figure&gt;                           
+ 2  <figure class="box-2">Box 2</figure>                           
                                                                          
  3                                                                       
 +===+======================================================================+
@@ -8590,11 +8609,11 @@ comma, and then the y axis value.
 **HTML**
 
 +---+----------------------------------------------------------------------+
- 1  &lt;figure class=&quot;box-1&quot;&gt;Box 1&lt;/figure&gt;                           
+ 1  <figure class="box-1">Box 1</figure>                           
                                                                          
- 2  &lt;figure class=&quot;box-2&quot;&gt;Box 2&lt;/figure&gt;                           
+ 2  <figure class="box-2">Box 2</figure>                           
                                                                          
- 3  &lt;figure class=&quot;box-3&quot;&gt;Box 3&lt;/figure&gt;                           
+ 3  <figure class="box-3">Box 3</figure>                           
                                                                          
  4                                                                       
 +===+======================================================================+
@@ -8650,11 +8669,11 @@ position.
 **HTML**
 
 +---+----------------------------------------------------------------------+
- 1  &lt;figure class=&quot;box-1&quot;&gt;Box 1&lt;/figure&gt;                           
+ 1  <figure class="box-1">Box 1</figure>                           
                                                                          
- 2  &lt;figure class=&quot;box-2&quot;&gt;Box 2&lt;/figure&gt;                           
+ 2  <figure class="box-2">Box 2</figure>                           
                                                                          
- 3  &lt;figure class=&quot;box-3&quot;&gt;Box 3&lt;/figure&gt;                           
+ 3  <figure class="box-3">Box 3</figure>                           
                                                                          
  4                                                                       
 +===+======================================================================+
@@ -8705,11 +8724,11 @@ apply here.
 **HTML**
 
 +---+----------------------------------------------------------------------+
- 1  &lt;figure class=&quot;box-1&quot;&gt;Box 1&lt;/figure&gt;                           
+ 1  <figure class="box-1">Box 1</figure>                           
                                                                          
- 2  &lt;figure class=&quot;box-2&quot;&gt;Box 2&lt;/figure&gt;                           
+ 2  <figure class="box-2">Box 2</figure>                           
                                                                          
- 3  &lt;figure class=&quot;box-3&quot;&gt;Box 3&lt;/figure&gt;                           
+ 3  <figure class="box-3">Box 3</figure>                           
                                                                          
  4                                                                       
 +===+======================================================================+
@@ -8758,9 +8777,9 @@ same as if you were to set the height of an element numerous times.
 **HTML**
 
 +---+----------------------------------------------------------------------+
- 1  &lt;figure class=&quot;box-1&quot;&gt;Box 1&lt;/figure&gt;                           
+ 1  <figure class="box-1">Box 1</figure>                           
                                                                          
- 2  &lt;figure class=&quot;box-2&quot;&gt;Box 2&lt;/figure&gt;                           
+ 2  <figure class="box-2">Box 2</figure>                           
                                                                          
  3                                                                       
 +===+======================================================================+
@@ -8799,15 +8818,15 @@ transforms, try your hand at using the matrix property.
 **HTML**
 
 +---+--------------------------------------------------------------------+
- 1  &lt;div class=&quot;cube&quot;&gt;                                             
+ 1  <div class="cube">                                             
                                                                        
- 2  &lt;figure class=&quot;side top&quot;&gt;1&lt;/figure&gt;                          
+ 2  <figure class="side top">1</figure>                          
                                                                        
- 3  &lt;figure class=&quot;side left&quot;&gt;2&lt;/figure&gt;                         
+ 3  <figure class="side left">2</figure>                         
                                                                        
- 4  &lt;figure class=&quot;side right&quot;&gt;3&lt;/figure&gt;                        
+ 4  <figure class="side right">3</figure>                        
                                                                        
- 5  &lt;/div&gt;                                                           
+ 5  </div>                                                           
                                                                        
  6                                                                     
 +===+====================================================================+
@@ -8894,13 +8913,13 @@ the origin to 20 pixels across and 50 pixels down the element.
 **HTML**
 
 +---+----------------------------------------------------------------------+
- 1  &lt;figure class=&quot;box-1&quot;&gt;Box 1&lt;/figure&gt;                           
+ 1  <figure class="box-1">Box 1</figure>                           
                                                                          
- 2  &lt;figure class=&quot;box-2&quot;&gt;Box 2&lt;/figure&gt;                           
+ 2  <figure class="box-2">Box 2</figure>                           
                                                                          
- 3  &lt;figure class=&quot;box-3&quot;&gt;Box 3&lt;/figure&gt;                           
+ 3  <figure class="box-3">Box 3</figure>                           
                                                                          
- 4  &lt;figure class=&quot;box-4&quot;&gt;Box 3&lt;/figure&gt;                           
+ 4  <figure class="box-4">Box 3</figure>                           
                                                                          
  5                                                                       
 +===+======================================================================+
@@ -8985,11 +9004,11 @@ their individual perspectives with the perspective value.
 **HTML**
 
 +---+----------------------------------------------------------------------+
- 1  &lt;figure class=&quot;box&quot;&gt;Box 1&lt;/figure&gt;                             
+ 1  <figure class="box">Box 1</figure>                             
                                                                          
- 2  &lt;figure class=&quot;box&quot;&gt;Box 2&lt;/figure&gt;                             
+ 2  <figure class="box">Box 2</figure>                             
                                                                          
- 3  &lt;figure class=&quot;box&quot;&gt;Box 3&lt;/figure&gt;                             
+ 3  <figure class="box">Box 3</figure>                             
                                                                          
  4                                                                       
 +===+======================================================================+
@@ -9017,15 +9036,15 @@ the perspective property on their direct parent element.
 **HTML**
 
 +---+----------------------------------------------------------------------+
- 1  &lt;div class=&quot;group&quot;&gt;                                              
+ 1  <div class="group">                                              
                                                                          
- 2  &lt;figure class=&quot;box&quot;&gt;Box 1&lt;/figure&gt;                             
+ 2  <figure class="box">Box 1</figure>                             
                                                                          
- 3  &lt;figure class=&quot;box&quot;&gt;Box 2&lt;/figure&gt;                             
+ 3  <figure class="box">Box 2</figure>                             
                                                                          
- 4  &lt;figure class=&quot;box&quot;&gt;Box 3&lt;/figure&gt;                             
+ 4  <figure class="box">Box 3</figure>                             
                                                                          
- 5  &lt;/div&gt;                                                             
+ 5  </div>                                                             
                                                                          
  6                                                                       
 +===+======================================================================+
@@ -9073,9 +9092,9 @@ depth values.
 **HTML**
 
 +---+----------------------------------------------------------------------+
- 1  &lt;figure class=&quot;box-1&quot;&gt;Box 1&lt;/figure&gt;                           
+ 1  <figure class="box-1">Box 1</figure>                           
                                                                          
- 2  &lt;figure class=&quot;box-2&quot;&gt;Box 2&lt;/figure&gt;                           
+ 2  <figure class="box-2">Box 2</figure>                           
                                                                          
  3                                                                       
 +===+======================================================================+
@@ -9116,23 +9135,23 @@ coordinates of the vanishing point of a transform.
 **HTML**
 
 +---+----------------------------------------------------------------------+
- 1  &lt;div class=&quot;original original-1&quot;&gt;                                
+ 1  <div class="original original-1">                                
                                                                          
- 2  &lt;figure class=&quot;box&quot;&gt;Box 1&lt;/figure&gt;                             
+ 2  <figure class="box">Box 1</figure>                             
                                                                          
- 3  &lt;/div&gt;                                                             
+ 3  </div>                                                             
                                                                          
- 4  &lt;div class=&quot;original original-2&quot;&gt;                                
+ 4  <div class="original original-2">                                
                                                                          
- 5  &lt;figure class=&quot;box&quot;&gt;Box 2&lt;/figure&gt;                             
+ 5  <figure class="box">Box 2</figure>                             
                                                                          
- 6  &lt;/div&gt;                                                             
+ 6  </div>                                                             
                                                                          
- 7  &lt;div class=&quot;original original-3&quot;&gt;                                
+ 7  <div class="original original-3">                                
                                                                          
- 8  &lt;figure class=&quot;box&quot;&gt;Box 3&lt;/figure&gt;                             
+ 8  <figure class="box">Box 3</figure>                             
                                                                          
- 9  &lt;/div&gt;                                                             
+ 9  </div>                                                             
                                                                          
  1                                                                       
  0                                                                       
@@ -9214,11 +9233,11 @@ rotate the element counterclockwise.
 **HTML**
 
 +---+----------------------------------------------------------------------+
- 1  &lt;figure class=&quot;box-1&quot;&gt;Box 1&lt;/figure&gt;                           
+ 1  <figure class="box-1">Box 1</figure>                           
                                                                          
- 2  &lt;figure class=&quot;box-2&quot;&gt;Box 2&lt;/figure&gt;                           
+ 2  <figure class="box-2">Box 2</figure>                           
                                                                          
- 3  &lt;figure class=&quot;box-3&quot;&gt;Box 3&lt;/figure&gt;                           
+ 3  <figure class="box-3">Box 3</figure>                           
                                                                          
  4                                                                       
 +===+======================================================================+
@@ -9265,9 +9284,9 @@ the rotateX in this case, the elements will appear to be unchanged.
 **HTML**
 
 +---+----------------------------------------------------------------------+
- 1  &lt;figure class=&quot;box-1&quot;&gt;Box 1&lt;/figure&gt;                           
+ 1  <figure class="box-1">Box 1</figure>                           
                                                                          
- 2  &lt;figure class=&quot;box-2&quot;&gt;Box 2&lt;/figure&gt;                           
+ 2  <figure class="box-2">Box 2</figure>                           
                                                                          
  3                                                                       
 +===+======================================================================+
@@ -9312,9 +9331,9 @@ for example.
 **HTML**
 
 +---+----------------------------------------------------------------------+
- 1  &lt;figure class=&quot;box-1&quot;&gt;Box 1&lt;/figure&gt;                           
+ 1  <figure class="box-1">Box 1</figure>                           
                                                                          
- 2  &lt;figure class=&quot;box-2&quot;&gt;Box 2&lt;/figure&gt;                           
+ 2  <figure class="box-2">Box 2</figure>                           
                                                                          
  3                                                                       
 +===+======================================================================+
@@ -9376,17 +9395,17 @@ lie flat on the two-dimensional plane.
 **HTML**
 
 +---+----------------------------------------------------------------------+
- 1  &lt;div class=&quot;rotate three-d&quot;&gt;                                     
+ 1  <div class="rotate three-d">                                     
                                                                          
- 2  &lt;figure class=&quot;box&quot;&gt;Box 1&lt;/figure&gt;                             
+ 2  <figure class="box">Box 1</figure>                             
                                                                          
- 3  &lt;/div&gt;                                                             
+ 3  </div>                                                             
                                                                          
- 4  &lt;div class=&quot;rotate&quot;&gt;                                             
+ 4  <div class="rotate">                                             
                                                                          
- 5  &lt;figure class=&quot;box&quot;&gt;Box 2&lt;/figure&gt;                             
+ 5  <figure class="box">Box 2</figure>                             
                                                                          
- 6  &lt;/div&gt;                                                             
+ 6  </div>                                                             
                                                                          
  7                                                                       
 +===+======================================================================+
@@ -9448,9 +9467,9 @@ using [[animations]{.underline}](https://css-tricks.com/almanac/properties/b/ba
 **HTML**
 
 +---+----------------------------------------------------------------------+
- 1  &lt;figure class=&quot;box-1&quot;&gt;Box 1&lt;/figure&gt;                           
+ 1  <figure class="box-1">Box 1</figure>                           
                                                                          
- 2  &lt;figure class=&quot;box-2&quot;&gt;Box 2&lt;/figure&gt;                           
+ 2  <figure class="box-2">Box 2</figure>                           
                                                                          
  3                                                                       
 +===+======================================================================+
@@ -9484,25 +9503,25 @@ using [[animations]{.underline}](https://css-tricks.com/almanac/properties/b/ba
 **HTML**
 
 +---+--------------------------------------------------------------------+
- 1  &lt;div class=&quot;cube-container&quot;&gt;                                   
+ 1  <div class="cube-container">                                   
                                                                        
- 2  &lt;div class=&quot;cube&quot;&gt;                                             
+ 2  <div class="cube">                                             
                                                                        
- 3  &lt;figure class=&quot;side front&quot;&gt;1&lt;/figure&gt;                        
+ 3  <figure class="side front">1</figure>                        
                                                                        
- 4  &lt;figure class=&quot;side back&quot;&gt;2&lt;/figure&gt;                         
+ 4  <figure class="side back">2</figure>                         
                                                                        
- 5  &lt;figure class=&quot;side left&quot;&gt;3&lt;/figure&gt;                         
+ 5  <figure class="side left">3</figure>                         
                                                                        
- 6  &lt;figure class=&quot;side right&quot;&gt;4&lt;/figure&gt;                        
+ 6  <figure class="side right">4</figure>                        
                                                                        
- 7  &lt;figure class=&quot;side top&quot;&gt;5&lt;/figure&gt;                          
+ 7  <figure class="side top">5</figure>                          
                                                                        
- 8  &lt;figure class=&quot;side bottom&quot;&gt;6&lt;/figure&gt;                       
+ 8  <figure class="side bottom">6</figure>                       
                                                                        
- 9  &lt;/div&gt;                                                           
+ 9  </div>                                                           
                                                                        
- 1  &lt;/div&gt;                                                           
+ 1  </div>                                                           
  0                                                                     
                                                                        
  1                                                                     
@@ -10119,7 +10138,7 @@ transition values.
 <b>HTML**
 
 +---+--------------------------------------------------------------------+
- 1  &lt;button&gt;Awesome Button&lt;/button&gt;                                
+ 1  <button>Awesome Button</button>                                
                                                                        
  2                                                                     
 +===+====================================================================+
@@ -10182,17 +10201,17 @@ transition values.
 <b>HTML**
 
 +---+--------------------------------------------------------------------+
- 1  &lt;div class=&quot;card-container&quot;&gt;                                   
+ 1  <div class="card-container">                                   
                                                                        
- 2  &lt;div class=&quot;card&quot;&gt;                                             
+ 2  <div class="card">                                             
                                                                        
- 3  &lt;div class=&quot;side&quot;&gt;&#8230;&lt;/div&gt;                                 
+ 3  <div class="side">&#8230;</div>                                 
                                                                        
- 4  &lt;div class=&quot;side back&quot;&gt;&#8230;&lt;/div&gt;                            
+ 4  <div class="side back">&#8230;</div>                            
                                                                        
- 5  &lt;/div&gt;                                                           
+ 5  </div>                                                           
                                                                        
- 6  &lt;/div&gt;                                                           
+ 6  </div>                                                           
                                                                        
  7                                                                     
 +===+====================================================================+
@@ -10432,11 +10451,11 @@ the left, however only when hovering over the stage.
 <b>HTML**
 
 +---+----------------------------------------------------------------------+
- 1  &lt;div class=&quot;stage&quot;&gt;                                              
+ 1  <div class="stage">                                              
                                                                          
- 2  &lt;figure class=&quot;ball&quot;&gt;&lt;/figure&gt;                                 
+ 2  <figure class="ball"></figure>                                 
                                                                          
- 3  &lt;/div&gt;                                                             
+ 3  </div>                                                             
                                                                          
  4                                                                       
 +===+======================================================================+
@@ -10845,16 +10864,16 @@ comment](https://css-tricks.com/how-to-create-an-ie-only-stylesheet/),
 making sure that the file is only loaded within versions of Internet
 Explorer 8 and below.
 
-In this case the conditional comment looks like &lt;!&#45;&#45;&lbrack;if lt IE
-9&rbrack;&gt;&#8230;&lt;&#0033;[endif&rbrack;&#45;&#45;&gt;.
+In this case the conditional comment looks like <!&#45;&#45;&lbrack;if lt IE
+9&rbrack;>&#8230;<&#0033;[endif&rbrack;&#45;&#45;>.
 
 ```
 +---+----------------------------------------------------------------------+
- 1  &lt;!&#45;&#45;&lbrack;if lt IE 9&rbrack;&gt;                                               
+ 1  <!&#45;&#45;&lbrack;if lt IE 9&rbrack;>                                               
                                                                          
- 2  &lt;script src=&quot;html5shiv.js&quot;&gt;&lt;/script&gt;                           
+ 2  <script src="html5shiv.js"></script>                           
                                                                          
- 3  &lt;&#0033;[endif&rbrack;&#45;&#45;&gt;                                                    
+ 3  <&#0033;[endif&rbrack;&#45;&#45;>                                                    
                                                                          
  4                                                                       
 +===+======================================================================+
@@ -10874,63 +10893,33 @@ any block level elements need to be identified and updated using
 the display: block; declaration.
 
 ```
-+---+----------------------------------------------------------------------+
- 1  article,                                                             
-                                                                         
- 2  aside,                                                               
-                                                                         
- 3  details,                                                             
-                                                                         
- 4  figcaption,                                                          
-                                                                         
- 5  figure,                                                              
-                                                                         
- 6  footer,                                                              
-                                                                         
- 7  header,                                                              
-                                                                         
- 8  hgroup,                                                              
-                                                                         
- 9  nav,                                                                 
-                                                                         
- 1  section,                                                             
- 0                                                                       
-    summary {                                                            
- 1                                                                       
- 1  display: block;                                                      
-                                                                         
- 1  }                                                                    
- 2                                                                       
-                                                                         
- 1                                                                       
- 3                                                                       
-                                                                         
- 1                                                                       
- 4                                                                       
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+ 1  article,
+ 2  aside,
+ 3  details,
+ 4  figcaption,
+ 5  figure,
+ 6  footer,
+ 7  header,
+ 8  hgroup,
+ 9  nav,
+ 10 section,
+ 11 summary {
+ 12 display: block;
+ 13 }
+ 14 
 ```
-
 Lastly, Internet Explorer 8 and 9 do not correctly define styles for a
 few HTML5 inline-block level elements. As before, these styles will need
 to be explicitly stated. After which, all versions of Internet Explorer
 should be good to go using any new HTML5 elements.
 
 ```
-+---+----------------------------------------------------------------------+
- 1  audio,                                                               
-                                                                         
- 2  canvas,                                                              
-                                                                         
- 3  video {                                                              
-                                                                         
- 4  display: inline-block;                                               
-                                                                         
- 5  }                                                                    
-                                                                         
- 6                                                                       
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+ 1  audio,
+ 2  canvas,
+ 3  video {
+ 4  display: inline-block;
+ 5  }
+ 6  
 ```
 
 ### Detecting Browser Features
@@ -10962,12 +10951,8 @@ Shiv, in which case the shiv doesn't need to be referenced on top of
 Modernizr.
 
 ```
-+---+----------------------------------------------------------------------+
- 1  <script src="modernizr.js"></script>                                 
-                                                                         
- 2                                                                       
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+ 1  <script src="modernizr.js"></script>
+ 2  
 ```
 
 ### Conditionally Applying CSS Styles
@@ -10984,113 +10969,43 @@ When deciding to use feature detection, it is important to keep styles
 organized and performance in mind. Avoid duplicating any code or making
 additional HTTP requests when possible.
 
-+---+----------------------------------------------------------------------+
+```
  1  button {                                                             
-                                                                         
  2  border: 0;                                                           
-                                                                         
  3  color: #fff;                                                         
-                                                                         
  4  cursor: pointer;                                                     
-                                                                         
  5  font-size: 14px;                                                     
-                                                                         
  6  font-weight: 600;                                                    
-                                                                         
  7  margin: 0;                                                           
-                                                                         
  8  outline: 0;                                                          
-                                                                         
  9  }                                                                    
-                                                                         
  1  /&ast; With CSS Gradient Styles &ast;/                                     
- 0                                                                       
     .cssgradients button {                                               
- 1                                                                       
  1  border: 1px solid #0080c2;                                           
-                                                                         
  1  background: linear-gradient(#00a2f5, #0087cc);                       
- 2                                                                       
     border-radius: 6px;                                                  
- 1                                                                       
  3  padding: 15px 30px;                                                  
-                                                                         
  1  }                                                                    
- 4                                                                       
     .cssgradients button:hover {                                         
- 1                                                                       
  5  background: linear-gradient(#1ab1ff, #009beb);                       
-                                                                         
  1  }                                                                    
- 6                                                                       
     .cssgradients button:active {                                        
- 1                                                                       
  7  box-shadow: inset 0 1px 10px rgba(255, 255, 255, .5);                
-                                                                         
  1  }                                                                    
- 8                                                                       
     /&ast; Without CSS Gradient Styles &ast;/                                  
- 1                                                                       
  9  .no-cssgradients button {                                            
-                                                                         
- 2  background: transparent url(&quot;button.png&quot;) 0 0 no-repeat;           
- 0                                                                       
+ 2  background: transparent url("button.png") 0 0 no-repeat;           
     padding: 16px 31px;                                                  
- 2                                                                       
  1  }                                                                    
-                                                                         
  2  .no-cssgradients button:hover {                                      
- 2                                                                       
     background-position: 0 -49px;                                        
- 2                                                                       
  3  }                                                                    
-                                                                         
  2  .no-cssgradients button:active {                                     
- 4                                                                       
     background-position: 0 -98px;                                        
- 2                                                                       
  5  }                                                                    
-                                                                         
- 2                                                                       
- 6                                                                       
-                                                                         
- 2                                                                       
- 7                                                                       
-                                                                         
- 2                                                                       
- 8                                                                       
-                                                                         
- 2                                                                       
- 9                                                                       
-                                                                         
- 3                                                                       
- 0                                                                       
-                                                                         
- 3                                                                       
- 1                                                                       
-                                                                         
- 3                                                                       
  2                                                                       
                                                                          
- 3                                                                       
- 3                                                                       
-                                                                         
- 3                                                                       
- 4                                                                       
-                                                                         
- 3                                                                       
- 5                                                                       
-                                                                         
- 3                                                                       
- 6                                                                       
-                                                                         
- 3                                                                       
- 7                                                                       
-                                                                         
- 3                                                                       
- 8                                                                       
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 ### Feature Detection Demo
 
@@ -11128,29 +11043,18 @@ storage support. If local storage is supported 
 the storage.js file using the getScript method, and if local storage is not supported jQuery
 is used the storage-polyfill.js file using the getScript method.
 
-+---+----------------------------------------------------------------------+
+```
  1  &#36;(document).ready(function() {                                      
-                                                                         
  2  if (Modernizr.localstorage) {                                        
-                                                                         
  3  // Local storage is available                                        
-                                                                         
  4  jQuery.getScript(&#39;storage.js&#39;);                                    
-                                                                         
  5  } else {                                                             
-                                                                         
  6  // Local storage is not available                                    
-                                                                         
  7  jQuery.getScript(&#39;storage-polyfill.js&#39;);                           
-                                                                         
  8  }                                                                    
-                                                                         
  9  });                                                                  
-                                                                         
  1                                                                       
- 0                                                                       
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 ### Conditionally Loading Based on Media Queries
 
@@ -11159,20 +11063,14 @@ Doing so provides the ability to only load files based on different
 media query conditions. Not loading unnecessary files can be extremely
 beneficial for performance.
 
-+---+----------------------------------------------------------------------+
+```
  1  &#36;(document).ready(function() {                                      
-                                                                         
  2  if (Modernizr.mq(&#39;screen and (min-width: 640px)&#39;)) {               
-                                                                         
  3  jQuery.getScript(&#39;tabs.js&#39;);                                       
-                                                                         
  4  }                                                                    
-                                                                         
  5  });                                                                  
-                                                                         
  6                                                                       
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 Above, Modernizr looks to detect screens above 640 pixels wide,
 primarily desktops, and then loads the tabs.js file based off of this
@@ -11190,20 +11088,14 @@ instead showing the tooltip in plain text on the screen. The script for
 calling these tooltips could be wrapped in a Modernizr condition,
 preventing the script from loading on smaller screens.
 
-+---+----------------------------------------------------------------------+
+```
  1  &#36;(document).ready(function() {                                      
-                                                                         
  2  if (Modernizr.mq(&#39;screen and (max-width: 400px)&#39;)) {               
-                                                                         
  3  &#36;(&#39;.size&#39;).text(&#39;small&#39;);                                       
-                                                                         
  4  }                                                                    
-                                                                         
  5  });                                                                  
-                                                                         
  6                                                                       
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 ### Conditionally Running Scripts Demo
 
@@ -11395,20 +11287,22 @@ represents an element that should be hidden, or ignored, for the time
 being. Screen readers and other devices will recognize this, temporarily
 skipping it, where they may not done so with the CSS declaration.
 
+```
 +---+----------------------------------------------------------------------+
- 1  &lt;!&#45;&#45; Good &#45;&#45;&gt;                                                    
+ 1  <!&#45;&#45; Good &#45;&#45;>                                                    
                                                                          
- 2  &lt;div hidden&gt;&#8230;&lt;/div&gt;                                           
+ 2  <div hidden>&#8230;</div>                                           
                                                                          
- 3  &lt;!&#45;&#45; Not good &#45;&#45;&gt;                                                
+ 3  <!&#45;&#45; Not good &#45;&#45;>                                                
                                                                          
- 4  &lt;div style=&quot;display: none;&quot;&gt;&#8230;&lt;/div&gt;                         
+ 4  <div style="display: none;">&#8230;</div>                         
                                                                          
  5                                                                       
                                                                          
  6                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
+```
 
 Imagine a blind user attempting to fill out a form and the first piece
 of content, before even filling out the form, is a success message. This
@@ -11439,20 +11333,14 @@ the b element should be used solely as a styling hook to change the
 presentation of an element, where the strong element should be used to
 identify significantly important text.
 
-+---+----------------------------------------------------------------------+
- 1  &lt;!&#45;&#45; Strong importance &#45;&#45;&gt;                                       
-                                                                         
- 2  &lt;strong&gt;Caution:&lt;/strong&gt; Falling rocks.                         
-                                                                         
- 3  &lt;!&#45;&#45; Stylistically offset &#45;&#45;&gt;                                    
-                                                                         
- 4  This recipe calls for &lt;b&gt;bacon&lt;/b&gt; and &lt;b&gt;baconnaise&lt;/b&gt;.    
-                                                                         
- 5                                                                       
-                                                                         
- 6                                                                       
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
+ 1  <!&#45;&#45; Strong importance &#45;&#45;>
+ 2  <strong>Caution:</strong> Falling rocks.
+ 3  <!&#45;&#45; Stylistically offset &#45;&#45;>
+ 4  This recipe calls for <b>bacon</b> and <b>baconnaise</b>.
+ 5  
+ 6  
+```
 
 ### Bolding Text Demo
 
@@ -11472,20 +11360,14 @@ importance. On the other hand, the i element is primarily used within
 dialog or prose, offsetting text without any added emphasis or
 importance.
 
-+---+----------------------------------------------------------------------+
- 1  &lt;!&#45;&#45; Stressed emphasis &#45;&#45;&gt;                                       
-                                                                         
- 2  I &lt;em&gt;love&lt;/em&gt; Chicago!                                         
-                                                                         
- 3  &lt;!&#45;&#45; Alternative voice or tone &#45;&#45;&gt;                               
-                                                                         
- 4  The name &lt;i&gt;Shay&lt;/i&gt; means a gift.                               
-                                                                         
+```
+ 1  <!&#45;&#45; Stressed emphasis &#45;&#45;>                                       
+ 2  I <em>love</em> Chicago!                                         
+ 3  <!&#45;&#45; Alternative voice or tone &#45;&#45;>                               
+ 4  The name <i>Shay</i> means a gift.                               
  5                                                                       
-                                                                         
  6                                                                       
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 ### Italicizing Text Demo
 
@@ -11527,24 +11409,16 @@ thus have become a standard design practice. Underlining text that is
 not a hyperlink can confuse users and cause quite a bit of frustration.
 Use underlines with caution.
 
-+---+----------------------------------------------------------------------+
- 1  &lt;!&#45;&#45; Added to the document &#45;&#45;&gt;                                   
-                                                                         
- 2  &lt;ins cite=&quot;http://learn.shayhowe.com&quot; datetime=&quot;2012-07-01&quot;&gt;   
-                                                                         
+```
+ 1  <!&#45;&#45; Added to the document &#45;&#45;>                                   
+ 2  <ins cite="http://learn.shayhowe.com" datetime="2012-07-01">   
  3  Updated: This website now contains an advanced guide.                
-                                                                         
- 4  &lt;/ins&gt;                                                             
-                                                                         
- 5  &lt;!&#45;&#45; Unarticulated annotation &#45;&#45;&gt;                                
-                                                                         
- 6  &lt;u&gt;Urushihara Yuuji&lt;/u&gt; won &lt;u&gt;Sasuke 27&lt;/u&gt;.                
-                                                                         
+ 4  </ins>                                                             
+ 5  <!&#45;&#45; Unarticulated annotation &#45;&#45;>                                
+ 6  <u>Urushihara Yuuji</u> won <u>Sasuke 27</u>.                
  7                                                                       
-                                                                         
  8                                                                       
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 ### Underlining Text Demo
 
@@ -11564,20 +11438,14 @@ document.
 
 The s element identifies text that is no longer accurate or relevant.
 
-+---+----------------------------------------------------------------------+
- 1  &lt;!&#45;&#45; Deleted from the document &#45;&#45;&gt;                               
-                                                                         
- 2  I am an avid cyclist, &lt;del cite=&quot;http://shayhowe.com&quot;             
-    datetime=&quot;2012-07-01&quot;&gt;                                            
- 3                                                                       
-    skateboarder&lt;/del&gt; and designer.                                   
- 4                                                                       
-    &lt;!&#45;&#45; No longer accurate or relevant &#45;&#45;&gt;                          
- 5                                                                       
-    &lt;s&gt;&#36;24.99&lt;/s&gt; &#36;19.99                                           
- 6                                                                       
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
+ 1  <!&#45;&#45; Deleted from the document &#45;&#45;>                               
+ 2  I am an avid cyclist, <del cite="http://shayhowe.com"             
+    datetime="2012-07-01">                                            
+    skateboarder</del> and designer.                                   
+    <!&#45;&#45; No longer accurate or relevant &#45;&#45;>                          
+    <s>&#36;24.99</s> &#36;19.99                                           
+```
 
 ### Striking Text Demo
 
@@ -11588,14 +11456,11 @@ used. Added in HTML5, the mark element provides a clean, semantic way to
 identify text, specifically for reference purposes without having to use
 an un-semantic text level element.
 
-+---+----------------------------------------------------------------------+
- 1  &lt;!&#45;&#45; Highlighted for reference purposes &#45;&#45;&gt;                      
-                                                                         
- 2  Search results for &lt;mark&gt;&#39;chicago&#39;&lt;/mark&gt;.                     
-                                                                         
+```
+ 1  <!&#45;&#45; Highlighted for reference purposes &#45;&#45;>                      
+ 2  Search results for <mark>&#39;chicago&#39;</mark>.                     
  3                                                                       
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 ### Highlighting Text Demo
 
@@ -11608,14 +11473,11 @@ the phrase being abbreviated. The acronym element was originally used to
 distinguish acronyms from abbreviations but has since been deprecated,
 and shouldn't be used.
 
-+---+----------------------------------------------------------------------+
- 1  &lt;abbr title=&quot;HyperText Markup Language&quot;&gt;HTML&lt;/abbr&gt;            
-                                                                         
- 2  &lt;abbr title=&quot;Cascading Style Sheets&quot;&gt;CSS&lt;/abbr&gt;                
-                                                                         
+```
+ 1  <abbr title="HyperText Markup Language">HTML</abbr>            
+ 2  <abbr title="Cascading Style Sheets">CSS</abbr>                
  3                                                                       
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 ### Abbreviations Demo
 
@@ -11626,20 +11488,14 @@ the sub and sup elements respectively. It is important to note that
 these elements should be reserved for typographical conventions, not for
 presentational purposes.
 
-+---+----------------------------------------------------------------------+
- 1  &lt;!&#45;&#45; Subscript &#45;&#45;&gt;                                               
-                                                                         
- 2  H&lt;sub&gt;2&lt;/sub&gt;O                                                   
-                                                                         
- 3  &lt;!&#45;&#45; Superscripts &#45;&#45;&gt;                                            
-                                                                         
- 4  1&lt;sup&gt;st&lt;/sup&gt; Place                                             
-                                                                         
+```
+ 1  <!&#45;&#45; Subscript &#45;&#45;>                                               
+ 2  H<sub>2</sub>O                                                   
+ 3  <!&#45;&#45; Superscripts &#45;&#45;>                                            
+ 4  1<sup>st</sup> Place                                             
  5                                                                       
-                                                                         
  6                                                                       
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 ### Sub & Superscripts Demo
 
@@ -11665,27 +11521,22 @@ attributes that may be applied to the progress element, value and max.
 The value attributes indicates where the progress currently stands and
 the max attribute indicates what progress needs to be reached.
 
-+---+----------------------------------------------------------------------+
- 1  &lt;!&#45;&#45; Meter &#45;&#45;&gt;                                                   
-                                                                         
- 2  &lt;meter value=&quot;7&quot; max=&quot;10&quot;&gt;7 stars&lt;/meter&gt;                    
-                                                                         
- 3  &lt;meter value=&quot;47&quot; min=&quot;0&quot; max=&quot;105&quot; low=&quot;5&quot; high=&quot;65&quot;     
-    optimum=&quot;45&quot;&gt;The car                                              
+```
+ 1  <!&#45;&#45; Meter &#45;&#45;>                                                   
+ 2  <meter value="7" max="10">7 stars</meter>                    
+ 3  <meter value="47" min="0" max="105" low="5" high="65"     
+    optimum="45">The car                                              
  4                                                                       
-    is moving at a decent average mile per hour.&lt;/meter&gt;               
+    is moving at a decent average mile per hour.</meter>               
  5                                                                       
-    &lt;!&#45;&#45; Progress &#45;&#45;&gt;                                                
+    <!&#45;&#45; Progress &#45;&#45;>                                                
  6                                                                       
-    You are &lt;progress value=&quot;50&quot; max=&quot;100&quot;&gt;50%&lt;/progress&gt;        
+    You are <progress value="50" max="100">50%</progress>        
  7  complete.                                                            
-                                                                         
- 8  &lt;progress value=&quot;50&quot; min=&quot;0&quot; max=&quot;100&quot;&gt;Hold tight,           
+ 8  <progress value="50" min="0" max="100">Hold tight,           
     you&#8217;re getting                                                 
-                                                                         
-    there.&lt;/progress&gt;                                                  
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+    there.</progress>                                                  
+```
 
 ### Meter & Progress Demo
 
@@ -11704,50 +11555,34 @@ including a physical address as well as a website or email address. It
 should not include any further information than the contact information,
 and other content needs to be placed outside of the address element.
 
-+---+----------------------------------------------------------------------+
- 1  &lt;!&#45;&#45; Time &#45;&#45;&gt;                                                    
-                                                                         
- 2  &lt;time&gt;2011-08-24&lt;/time&gt;                                          
-                                                                         
- 3  &lt;time datetime=&quot;2011-08-24&quot; pubdate&gt;August 24th, 2011&lt;/time&gt;   
-                                                                         
- 4  &lt;time datetime=&quot;15:00&quot;&gt;3pm&lt;/time&gt;                              
-                                                                         
- 5  &lt;time datetime=&quot;2011-08-24T15:00&quot;&gt;August 24th, 2011 at           
-    3pm&lt;/time&gt;                                                         
+```
+ 1  <!&#45;&#45; Time &#45;&#45;>                                                    
+ 2  <time>2011-08-24</time>                                          
+ 3  <time datetime="2011-08-24" pubdate>August 24th, 2011</time>   
+ 4  <time datetime="15:00">3pm</time>                              
+ 5  <time datetime="2011-08-24T15:00">August 24th, 2011 at           
+    3pm</time>                                                         
  6                                                                       
-    &lt;!&#45;&#45; Address &#45;&#45;&gt;                                                 
- 7                                                                       
-    &lt;address&gt;                                                          
- 8                                                                       
-    &lt;strong&gt;Shay Howe&lt;/strong&gt;&lt;br&gt;                                 
- 9                                                                       
-    &lt;a                                                                  
+    <!&#45;&#45; Address &#45;&#45;>                                                 
+    <address>                                                          
+    <strong>Shay Howe</strong><br>                                 
+    <a                                                                  
  1  href=                                                                
- 0  &quot;http://learn.shayhowe.com&quot;&gt;http://learn.shayhowe.com&lt;/a&gt;&lt;br&gt; 
+ 0  "http://learn.shayhowe.com">http://learn.shayhowe.com</a><br> 
                                                                          
- 1  &lt;a href=&quot;mailto:hello@awesome.com&quot;&gt;hello@awesome.com&lt;/a&gt;&lt;br&gt; 
+ 1  <a href="mailto:hello@awesome.com">hello@awesome.com</a><br> 
  1                                                                       
-    600 W. Chicago Ave.&lt;br&gt;                                            
+    600 W. Chicago Ave.<br>                                            
  1                                                                       
- 2  Suite 620&lt;br&gt;                                                      
+ 2  Suite 620<br>                                                      
                                                                          
- 1  Chicago, IL 60654&lt;br&gt;                                              
+ 1  Chicago, IL 60654<br>                                              
  3                                                                       
     USA                                                                  
  1                                                                       
- 4  &lt;/address&gt;                                                         
+ 4  </address>                                                         
                                                                          
- 1                                                                       
- 5                                                                       
-                                                                         
- 1                                                                       
- 6                                                                       
-                                                                         
- 1                                                                       
- 7                                                                       
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 ### Time & Address Demo
 
@@ -11767,26 +11602,16 @@ the code element within the pre element semantically identifies larger
 samples of code, which include whitepsace, displayed in a block level
 manner.
 
-+---+----------------------------------------------------------------------+
- 1  &lt;!&#45;&#45; Inline code samples &#45;&#45;&gt;                                     
-                                                                         
- 2  Use the &lt;code&gt;article&lt;/code&gt; element.                            
-                                                                         
- 3  &lt;!&#45;&#45; Larger, block level code snippets &#45;&#45;&gt;                       
-                                                                         
- 4  &lt;pre&gt;&lt;code&gt;body {                                                
-                                                                         
+```
+ 1  <!&#45;&#45; Inline code samples &#45;&#45;>                                     
+ 2  Use the <code>article</code> element.                            
+ 3  <!&#45;&#45; Larger, block level code snippets &#45;&#45;>                       
+ 4  <pre><code>body {                                                
  5  color: #666;                                                         
-                                                                         
  6  font: 14px/20px Arial, sans-serif;                                   
-                                                                         
- 7  }&lt;/code&gt;&lt;/pre&gt;                                                   
-                                                                         
+ 7  }</code></pre>                                                   
  8                                                                       
-                                                                         
- 9                                                                       
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 ### Presenting Code Demo
 
@@ -11795,7 +11620,7 @@ manner.
 Occasionally you may want to include a line break within a line of text,
 in which case the br element may be used. The br element does not have a
 closing tag, simply a beginning. In XHTML the br element is self
-closing, including a trailing forward slash, &lt;br /&gt;.
+closing, including a trailing forward slash, <br />.
 
 Line breaks are not to be used for thematic grouping of content.
 Paragraphs or other elements are better suited for thematic grouping.
@@ -11807,24 +11632,16 @@ opportunities with the wbr element. Using the wbr element in the middle
 of a word ensures that, should the word need to wrap two lines, it does
 in a legible fashion.
 
-+---+----------------------------------------------------------------------+
- 1  &lt;!&#45;&#45; Line break &#45;&#45;&gt;                                              
-                                                                         
- 2  600 W. Chicago Ave.&lt;br&gt;                                            
-                                                                         
- 3  Chicago, IL 60654&lt;br&gt;                                              
-                                                                         
+```
+ 1  <!&#45;&#45; Line break &#45;&#45;>                                              
+ 2  600 W. Chicago Ave.<br>                                            
+ 3  Chicago, IL 60654<br>                                              
  4  USA                                                                  
-                                                                         
- 5  &lt;!&#45;&#45; Word break &#45;&#45;&gt;                                              
-                                                                         
- 6  http://shay&lt;wbr&gt;howe.com                                           
-                                                                         
+ 5  <!&#45;&#45; Word break &#45;&#45;>                                              
+ 6  http://shay<wbr>howe.com                                           
  7                                                                       
-                                                                         
  8                                                                       
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 ### Line & Word Breaks Demo
 
@@ -11838,14 +11655,11 @@ displayed at a smaller font size, however it semantically means to be
 rendered as a side comments or small print. This often includes
 copyright information or legal print.
 
-+---+----------------------------------------------------------------------+
- 1  &lt;!&#45;&#45; Side comments or small print &#45;&#45;&gt;                            
-                                                                         
- 2  &lt;small&gt;&copy; 2012 Shay Howe&lt;/small&gt;                             
-                                                                         
+```
+ 1  <!&#45;&#45; Side comments or small print &#45;&#45;>                            
+ 2  <small>&copy; 2012 Shay Howe</small>                             
  3                                                                       
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 ### Side Comments Demo
 
@@ -11880,20 +11694,14 @@ once downloaded. Using a specific value here lets you name the file as
 you wish on your server while still providing users with a meaningful
 name.
 
-+---+----------------------------------------------------------------------+
- 1  &lt;!&#45;&#45; Boolean &#45;&#45;&gt;                                                 
-                                                                         
- 2  &lt;a href=&quot;twitter-logo.png&quot; download&gt;Twitter Logo&lt;/a&gt;           
-                                                                         
- 3  &lt;!&#45;&#45; With a value &#45;&#45;&gt;                                            
-                                                                         
- 4  &lt;a href=&quot;twitter-logo.png&quot; download=&quot;Logo&quot;&gt;Twitter Logo&lt;/a&gt;  
-                                                                         
+```
+ 1  <!&#45;&#45; Boolean &#45;&#45;>                                                 
+ 2  <a href="twitter-logo.png" download>Twitter Logo</a>           
+ 3  <!&#45;&#45; With a value &#45;&#45;>                                            
+ 4  <a href="twitter-logo.png" download="Logo">Twitter Logo</a>  
  5                                                                       
-                                                                         
  6                                                                       
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 ### Download Attribute Demo
 
@@ -11905,17 +11713,13 @@ the relationship between the current document and the document being
 referenced. For example, when linking to a copyright statement
 the rel attribute value of copyright should be used.
 
-+---+----------------------------------------------------------------------+
- 1  &lt;a href=&quot;legal.html&quot; rel=&quot;copyright&quot;&gt;Terms of Use&lt;/a&gt;        
-                                                                         
- 2  &lt;a href=&quot;toc.html&quot; rel=&quot;contents&quot;&gt;Table of Contents&lt;/a&gt;      
-                                                                         
+```
+ 1  <a href="legal.html" rel="copyright">Terms of Use</a>        
+ 2  <a href="toc.html" rel="contents">Table of Contents</a>      
  3                                                                       
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
-A
-few [[popular]{.underline}](http://microformats.org/wiki/existing-rel-values) rel attribute
+A few [popular](http://microformats.org/wiki/existing-rel-values) rel attribute
 values include:
 
 -   alternate
@@ -11944,7 +11748,7 @@ values include:
 
 ### Microdata
 
-[[Microdata]{.underline}](http://www.w3.org/TR/microdata/) is HTML
+[Microdata](http://www.w3.org/TR/microdata/) is HTML
 extended with nested groups of name-value pairs that allow machines,
 including browsers and search engines, to pick up additional semantics
 and information for rich content. Adding microdata to your website is
@@ -11952,8 +11756,8 @@ accomplished by using predetermined attributes and values. These
 attributes and values will then be interpreted, and extended, as
 intended. Currently, the more popular uses of microdata reside within
 coding contact information and calendar events, however there
-are [[encoding
-models]{.underline}](http://schema.org/docs/schemas.html) for products,
+are [encoding
+models](http://schema.org/docs/schemas.html) for products,
 reviews, and more.
 
 One example of microdata at work is within Google, where microdata is
@@ -11963,9 +11767,7 @@ address and sub sequential contact information within the results.
 Chances are this information is being pulled from microdata written on
 an existing website.
 
-![Google
-Microdata](./3-25-24/media/image016.jpeg){width="4.235416666666667in"
-height="9.0in"}
+![Google Microdata](.images/image016.jpeg)
 
 Fig. 10
 
@@ -11975,13 +11777,13 @@ information, hours, pricing, ratings, and more.
 ### Microdata vs. Microformats vs. RDFa
 
 There are actually a handful of rich, structured data standards,
-including [[microdata]{.underline}](http://www.w3.org/TR/microdata/), [[microformats]{.underline}](http://microformats.org/wiki/Main_Page),
-and [[RDFa]{.underline}](http://www.w3.org/TR/xhtml-rdfa-primer/). All
+including [microdata](http://www.w3.org/TR/microdata/), [[microformats]{.underline}](http://microformats.org/wiki/Main_Page),
+and [RDFa](http://www.w3.org/TR/xhtml-rdfa-primer/). All
 of these have their pros and cons, and all of which are still viable to
 practice.
 
 Microdata is the recommended format
-from [[Google]{.underline}](https://support.google.com/webmasters/bin/answer.py?hl=en&answer=99170),
+from [Google](https://support.google.com/webmasters/bin/answer.py?hl=en&answer=99170),
 and other search engines, as well as part of the HTML5 specification. It
 uses findings from both microformats and RDFa to base it's design
 around, thus looking to be a solid choice, and the one covered here. It
@@ -12002,21 +11804,17 @@ microdata information pertaining to this item should reside.
 Once you have determined the scope, use the itemtype attribute to
 identify what microdata vocabulary should be used. Generally speaking,
 some of the more popular microdata item types have been outlined
-at [[Schema.org]{.underline}](http://schema.org/docs/schemas.html).
+at [Schema.org](http://schema.org/docs/schemas.html).
 There are, however, other websites which outline additional, and
 different, item types. You may also write your own item types should you
 find the need.
 
-+---+----------------------------------------------------------------------+
- 1  &lt;section itemscope itemtype=&quot;http://schema.org/Person&quot;&gt;          
-                                                                         
+```
+ 1  <section itemscope itemtype="http://schema.org/Person">          
  2  &#8230;                                                                 
-                                                                         
- 3  &lt;/section&gt;                                                         
-                                                                         
+ 3  </section>                                                         
  4                                                                       
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 Once the scope and type of the item have been determined, properties may
 then be set. These properties are identified by different elements which
@@ -12024,35 +11822,33 @@ include the itemprop attribute. The value of this attribute determines
 what property is being referenced, and the content within the element
 itself most commonly determines the value of the property.
 
-+---+----------------------------------------------------------------------+
- 1  &lt;section itemscope itemtype=&quot;http://schema.org/Person&quot;&gt;          
-                                                                         
- 2  &lt;h1 itemprop=&quot;name&quot;&gt;Shay Howe&lt;/h1&gt;                             
-                                                                         
- 3  &lt;/section&gt;                                                         
-                                                                         
+```
+ 1  <section itemscope itemtype="http://schema.org/Person">          
+ 2  <h1 itemprop="name">Shay Howe</h1>                             
+ 3  </section>                                                         
  4                                                                       
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 Some elements, however, do not get their itemprop value from the content
 within the element. Instead, their value is determined from the value of
 another attribute on the element. The table below outlines these one-off
 elements and what attribute is used for their property value.
 
+```
   ---------------------------------------------------------------------------------------
   <b>[Element]{.mark}</b>                                               <b>[Value]{.mark}</b>
   ------------------------------------------------------------------ --------------------
-  &lt;meta&gt;                                                           content attribute
+  <meta>                                                           content attribute
 
-  &lt;audio&gt;, &lt;embed&gt;, &lt;iframe&gt;, &lt;img&gt;, &lt;source&gt;, &lt;video&gt;   src attribute
+  <audio>, <embed>, <iframe>, <img>, <source>, <video>   src attribute
 
-  &lt;a&gt;, &lt;area&gt;, &lt;link&gt;                                          href attribute
+  <a>, <area>, <link>                                          href attribute
 
-  &lt;object&gt;                                                         data attribute
+  <object>                                                         data attribute
 
-  &lt;time&gt;                                                           datetime attribute
+  <time>                                                           datetime attribute
   ---------------------------------------------------------------------------------------
+```
 
 ### Person Microdata
 
@@ -12063,44 +11859,44 @@ might look like. Please notice, the person item type is used, as is the
 postal address item type within it. Also, please notice the different
 item properties and their corresponding values.
 
+```
 +---+----------------------------------------------------------------------+
- 1  &lt;section itemscope itemtype=&quot;http://schema.org/Person&quot;&gt;          
+ 1  <section itemscope itemtype="http://schema.org/Person">          
                                                                          
- 2  &lt;strong itemprop=&quot;name&quot;&gt;Shay Howe&lt;/strong&gt;                     
+ 2  <strong itemprop="name">Shay Howe</strong>                     
                                                                          
- 3  &lt;img src=&quot;shay.jpg&quot; itemprop=&quot;image&quot; alt=&quot;Shay Howe&quot;&gt;        
+ 3  <img src="shay.jpg" itemprop="image" alt="Shay Howe">        
                                                                          
- 4  &lt;div itemprop=&quot;jobTitle&quot;&gt;Designer and Front-end                  
-    Developer&lt;/div&gt;                                                    
+ 4  <div itemprop="jobTitle">Designer and Front-end                  
+    Developer</div>                                                    
  5                                                                       
-    &lt;a href=&quot;http://www.shayhowe.com&quot;                                 
- 6  itemprop=&quot;url&quot;&gt;shayhowe.com&lt;/a&gt;                                 
+    <a href="http://www.shayhowe.com"                                 
+ 6  itemprop="url">shayhowe.com</a>                                 
                                                                          
- 7  &lt;div itemprop=&quot;telephone&quot;&gt;(555) 123-4567&lt;/div&gt;                 
+ 7  <div itemprop="telephone">(555) 123-4567</div>                 
                                                                          
- 8  &lt;a href=&quot;mailto:shay@awesome.com&quot;                                 
-    itemprop=&quot;email&quot;&gt;shay@awesome.com&lt;/a&gt;                           
+ 8  <a href="mailto:shay@awesome.com"                                 
+    itemprop="email">shay@awesome.com</a>                           
  9                                                                       
-    &lt;address itemprop=&quot;address&quot; itemscope                             
- 1  itemtype=&quot;http://schema.org/PostalAddress&quot;&gt;                       
+    <address itemprop="address" itemscope                             
+ 1  itemtype="http://schema.org/PostalAddress">                       
  0                                                                       
-    &lt;span itemprop=&quot;streetAddress&quot;&gt;600 W. Chicago Ave.&lt;/span&gt;      
+    <span itemprop="streetAddress">600 W. Chicago Ave.</span>      
  1                                                                       
- 1  &lt;span itemprop=&quot;addressLocality&quot;&gt;Chicago&lt;/span&gt;,               
+ 1  <span itemprop="addressLocality">Chicago</span>,               
                                                                          
- 1  &lt;abbr itemprop=&quot;addressRegion&quot; title=&quot;Illinois&quot;&gt;IL&lt;/abbr&gt;    
+ 1  <abbr itemprop="addressRegion" title="Illinois">IL</abbr>    
  2                                                                       
-    &lt;span itemprop=&quot;postalCode&quot;&gt;60654&lt;/span&gt;                       
+    <span itemprop="postalCode">60654</span>                       
  1                                                                       
- 3  &lt;/address&gt;                                                         
+ 3  </address>                                                         
                                                                          
- 1  &lt;/section&gt;                                                         
+ 1  </section>                                                         
  4                                                                       
                                                                          
  1                                                                       
  5                                                                       
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 ### Person Microdata Demo
 
@@ -12117,47 +11913,42 @@ the [[event]{.underline}](http://schema.org/Event) microdata library
 instead. Common property similarities between the two can be identified,
 as can some of the nested item types.
 
-+---+----------------------------------------------------------------------+
- 1  &lt;section itemscope itemtype=&quot;http://schema.org/Event&quot;&gt;           
-                                                                         
- 2  &lt;a itemprop=&quot;url&quot; href=&quot;#&quot;&gt;                                    
-                                                                         
- 3  &lt;span itemprop=&quot;name&quot;&gt;Styles Conference&lt;/span&gt;                 
-                                                                         
- 4  &lt;/a&gt;                                                               
-                                                                         
- 5  &lt;time itemprop=&quot;startDate&quot; datetime=&quot;2014-08-2409:00&quot;&gt;Sunday,  
+```
+ 1  <section itemscope itemtype="http://schema.org/Event">           
+ 2  <a itemprop="url" href="#">                                    
+ 3  <span itemprop="name">Styles Conference</span>                 
+ 4  </a>                                                               
+ 5  <time itemprop="startDate" datetime="2014-08-2409:00">Sunday,  
     August 24,                                                           
  6                                                                       
-    2014 at 9:00 a.m.&lt;/time&gt;                                           
+    2014 at 9:00 a.m.</time>                                           
  7                                                                       
-    &lt;div itemprop=&quot;location&quot; itemscope                                
- 8  itemtype=&quot;http://schema.org/Place&quot;&gt;                               
+    <div itemprop="location" itemscope                                
+ 8  itemtype="http://schema.org/Place">                               
                                                                          
- 9  &lt;a itemprop=&quot;url&quot;                                                 
-    href=&quot;http://www.thechicagotheatre.com/&quot;&gt;Chicago Theatre&lt;/a&gt;    
+ 9  <a itemprop="url"                                                 
+    href="http://www.thechicagotheatre.com/">Chicago Theatre</a>    
  1                                                                       
- 0  &lt;address itemprop=&quot;address&quot; itemscope                             
-    itemtype=&quot;http://schema.org/PostalAddress&quot;&gt;                       
+ 0  <address itemprop="address" itemscope                             
+    itemtype="http://schema.org/PostalAddress">                       
  1                                                                       
- 1  &lt;div itemprop=&quot;streetAddress&quot;&gt;175 N. State St.&lt;/div&gt;           
+ 1  <div itemprop="streetAddress">175 N. State St.</div>           
                                                                          
- 1  &lt;span itemprop=&quot;addressLocality&quot;&gt;Chicago&lt;/span&gt;,               
+ 1  <span itemprop="addressLocality">Chicago</span>,               
  2                                                                       
-    &lt;abbr itemprop=&quot;addressRegion&quot; title=&quot;Illinois&quot;&gt;IL&lt;/abbr&gt;    
+    <abbr itemprop="addressRegion" title="Illinois">IL</abbr>    
  1                                                                       
- 3  &lt;span itemprop=&quot;postalCode&quot;&gt;60601&lt;/span&gt;                       
+ 3  <span itemprop="postalCode">60601</span>                       
                                                                          
- 1  &lt;/address&gt;                                                         
+ 1  </address>                                                         
  4                                                                       
-    &lt;/div&gt;                                                             
+    </div>                                                             
  1                                                                       
- 5  &lt;/section&gt;                                                         
+ 5  </section>                                                         
                                                                          
  1                                                                       
  6                                                                       
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 ### Event Microdata Demo
 
@@ -12184,12 +11975,11 @@ roles]{.underline}](https://www.w3.org/TR/wai-aria/#roles) is
 accomplished using the role attribute. These roles then specify what
 certain elements and blocks of content do on a page.
 
-+---+----------------------------------------------------------------------+
- 1  &lt;header role=&quot;banner&quot;&gt;&#8230;&lt;/header&gt;                            
+```
+ 1  <header role="banner">&#8230;</header>                            
                                                                          
  2                                                                       
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 WAI-ARIA roles break down into four different categories, including
 abstract, widget, document structure, and landmark roles. For this
@@ -12265,7 +12055,7 @@ page the banner and contentinfo roles should be applied on the elements
 directly tied to the document from a top level perspective, not elements
 nested within other regions of the document structure.
 
-+------+-----------+---------------------------------------------------+
+```
        *          <b>[Acceptable Roles]{.mark}</b>                  
                                                                     
                                                                     
@@ -12292,30 +12082,30 @@ nested within other regions of the document structure.
                                                                     
                   main, marquee, region, search, or status          
 +------+-----------+---------------------------------------------------+
+```
 
 Combining the elements with their matched roles in HTML5 would look like
 the following code snippet.
 
-+---+----------------------------------------------------------------------+
- 1  &lt;header role=&quot;banner&quot;&gt;                                           
+```
+ 1  <header role="banner">                                           
                                                                          
- 2  &lt;nav role=&quot;navigation&quot;&gt;&#8230;&lt;/nav&gt;                              
+ 2  <nav role="navigation">&#8230;</nav>                              
                                                                          
- 3  &lt;/header&gt;                                                          
+ 3  </header>                                                          
                                                                          
- 4  &lt;article role=&quot;article&quot;&gt;                                         
+ 4  <article role="article">                                         
                                                                          
- 5  &lt;section role=&quot;region&quot;&gt;&#8230;&lt;/section&gt;                          
+ 5  <section role="region">&#8230;</section>                          
                                                                          
- 6  &lt;/article&gt;                                                         
+ 6  </article>                                                         
                                                                          
- 7  &lt;aside role=&quot;complementary&quot;&gt;&#8230;&lt;/aside&gt;                       
+ 7  <aside role="complementary">&#8230;</aside>                       
                                                                          
- 8  &lt;footer role=&quot;contentinfo&quot;&gt;&#8230;&lt;/footer&gt;                       
+ 8  <footer role="contentinfo">&#8230;</footer>                       
                                                                          
  9                                                                       
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 <h3>States & Properties</h3>
 
