@@ -8,19 +8,6 @@ output:
 ---
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~ 01/02. javascript and uc davis logos (01) ~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-// <p align="center" width="100%">
-// <img src="./images/image001.png"
-//  style="width:20%"
-//  title="JavaScript logo"
-//  alt="JavaScript logo." />
-// <img src="./images/image002.png"
-//  style="width:20%"
-//  title="UC Davis logo"
-//  alt="UC Davis logo." />
-// </p>
-
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="about">About this Course</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
@@ -136,8 +123,8 @@ interface components, and business logic modules.
 +---+----------------------------------------------------------------------+
 
 The architecture outlined above includes three directories, all with
-individual groups of styles. The goal here is to **start thinking of
-websites as systems** rather than individual pages, and the code
+individual groups of styles. The goal here is to <b>start thinking of
+websites as systems</b> rather than individual pages, and the code
 architecture should reflect this mindset. Notice how there aren't any
 page specific styles here.
 
@@ -176,19 +163,19 @@ amount of code. These two principles include:
 
 -   Separate content from container
 
-Overall **separating structure from skin** includes abstracting the
+Overall <b>separating structure from skin</b> includes abstracting the
 layout of an element away from the theme of a website. The structure of
 a module should be transparent, allowing other styles to be inherited
 and displayed without conflict. Most commonly this requires a solid grid
 and layout structure, along with well crafted modules.
 
-**Separating content from the container** involves removing the
+<b>Separating content from the container</b> involves removing the
 dependency of a parent element nesting children elements. A heading
 should look the same regardless of its parent container. To accomplish
 this, elements need to inherit default styles, then be extended with
 multiple classes as necessary.
 
-### **HTML**
+### <b>HTML</b>
 
 +---+----------------------------------------------------------------------+
 | 1 | &lt;div class=&quot;alert alert-error&quot;&gt;                                  |
@@ -201,7 +188,7 @@ multiple classes as necessary.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-### **CSS**
+### <b>CSS</b>
 
 +---+----------------------------------------------------------------------+
 | 1 | .alert {&#8230;}                                                        |
@@ -224,7 +211,7 @@ a new page or feature to a website.
 Along the same line of Object Oriented CSS is the [[Scalable and Modular
 Architecture for CSS]{.underline}](http://smacss.com/) methodology
 developed by Jonathan Snook. The Scalable and Modular Architecture for
-CSS promotes breaking up styles into **five** core categories,
+CSS promotes breaking up styles into <b>five</b> core categories,
 including:
 
 -   Base
@@ -237,18 +224,18 @@ including:
 
 -   Theme
 
-The **base** category includes core element styles, covering the general
-defaults. The **layout** category then identifies the sizing and grid
+The <b>base</b> category includes core element styles, covering the general
+defaults. The <b>layout</b> category then identifies the sizing and grid
 styles of different elements, determining their
-layout. **Module** styles are more specific styles targeting individual
+layout. <b>Module</b> styles are more specific styles targeting individual
 parts of the page, such as navigation or feature styles.
-The **state** styles are then used to augment or override other styles
+The <b>state</b> styles are then used to augment or override other styles
 in the event that a module includes an alternate state, an active tab
-for example. Lastly, the **theme** category may be added which could
+for example. Lastly, the <b>theme</b> category may be added which could
 include styles based around the skin, or look and feel, of different
 modules.
 
-**HTML**
+<b>HTML</b>
 
 +---+----------------------------------------------------------------------+
 | 1 | &lt;div class=&quot;alert is-error&quot;&gt;                                     |
@@ -261,7 +248,7 @@ modules.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-**CSS**
+<b>CSS</b>
 
 +---+----------------------------------------------------------------------+
 | 1 | .alert {&#8230;}                                                        |
@@ -368,7 +355,7 @@ though, there are common practices to observe in order to see that they
 are leveraged properly.
 
 Since selectors are rendered from right to left it is important to keep
-an eye on the **key selector**. The key selector is the selector unit at
+an eye on the <b>key selector</b>. The key selector is the selector unit at
 the end, furthest to the right. The key selector is crucial as it
 identifies the first element a browser is going to find. Having a poor
 key selector can send the browser on a wild goose hunt. Don't be afraid
@@ -622,7 +609,7 @@ Using ImageOptim the above image was reduced over 14% without any
 reduction or loss in quality.
 
 It should also be noted, setting an image's dimensions in HTML by way of
-the height and width attributes **does help** render the page quicker,
+the height and width attributes <b>does help</b> render the page quicker,
 setting aside the appropriate space for the image. Understand, these
 attributes are to only be used to identify the exact image dimensions
 and not to shrink an image. Using a larger image, then scaling it down
@@ -670,8 +657,8 @@ files then compressing them creates one, hopefully small, HTTP request.
 +---+----------------------------------------------------------------------+
 
 In general, the CSS for a web page should be loaded at
-the **beginning** of the document within the head, while the JavaScript
-for a web page should be loaded at the **end**, just before the
+the <b>beginning</b> of the document within the head, while the JavaScript
+for a web page should be loaded at the <b>end</b>, just before the
 closing body tag. The reason for these unique placements is because CSS
 can be loaded while the rest of the website is being loaded as well.
 JavaScript, on the other hand, can only render one file at a time, thus
@@ -711,7 +698,7 @@ sprite as a background on the span element. Then, using classes to
 change the background position of the image sprite, different icons can
 be shown accordingly.
 
-**HTML**
+<b>HTML</b>
 
 +---+----------------------------------------------------------------------+
 | 1 | &lt;ul&gt;                                                               |
@@ -750,7 +737,7 @@ be shown accordingly.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-**CSS**
+<b>CSS</b>
 
 +---+----------------------------------------------------------------------+
 | 1 | ul {                                                                 |
@@ -933,7 +920,7 @@ generators]{.underline}](http://www.patternify.com/). Be careful though,
 and always double check to see that the actual data URI is less weight
 than the actual image.
 
-**HTML**
+<b>HTML</b>
 
 +---+----------------------------------------------------------------------+
 | 1 | &lt;img height=&quot;100&quot; width=&quot;660&quot; alt=&quot;Rigged Pattern&quot;            |
@@ -948,7 +935,7 @@ than the actual image.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-**CSS**
+<b>CSS</b>
 
 +---+----------------------------------------------------------------------+
 | 1 | div {                                                                |
@@ -1030,9 +1017,9 @@ the mod_expires [[syntax]{.underline}](http://httpd.apache.org/docs/current/mo
 -   [[Data URIs]{.underline}](https://css-tricks.com/data-uris/) via
     CSS-Tricks
 
-[**Lesson 1** [Performance &
+[<b>Lesson 1</b> [Performance &
 Organization]{.underline}](https://learn.shayhowe.com/advanced-html-css/performance-organization/)
-[**Lesson 3** [Complex
+[<b>Lesson 3</b> [Complex
 Selectors]{.underline}](https://learn.shayhowe.com/advanced-html-css/complex-selectors/)
 
 
@@ -1040,7 +1027,7 @@ Selectors]{.underline}](https://learn.shayhowe.com/advanced-html-css/complex-sel
 
 In this Lesson 2
 
-**CSS**
+<b>CSS</b>
 
 -   [[Containing
     Floats]{.underline}](https://learn.shayhowe.com/advanced-html-css/detailed-css-positioning/#containing-floats)
@@ -1051,7 +1038,7 @@ In this Lesson 2
 -   [[Z-Index
     Property]{.underline}](https://learn.shayhowe.com/advanced-html-css/detailed-css-positioning/#z-index-property)
 
-**SHARE**
+<b>SHARE</b>
 
 When it comes to building layouts and positioning content on a page
 there are a handful of different techniques to use. Which technique to
@@ -1112,7 +1099,7 @@ have a light gray background, however the background is not seen as all
 of the elements nested within it are floated. Upon inspecting
 the .box-set division you will see it has a height of 0.
 
-**HTML**
+<b>HTML</b>
 
 +---+----------------------------------------------------------------------+
 | 1 | &lt;div class=&quot;box-set&quot;&gt;                                            |
@@ -1129,7 +1116,7 @@ the .box-set division you will see it has a height of 0.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-**CSS**
+<b>CSS</b>
 
 +---+----------------------------------------------------------------------+
 | 1 | .box-set {                                                           |
@@ -1346,7 +1333,7 @@ In the demonstration below, all the boxes are stacked one on top of the
 other as they are block level elements and are not floated in any
 specific direction.
 
-**HTML**
+<b>HTML</b>
 
 +---+----------------------------------------------------------------------+
 | 1 | &lt;div class=&quot;box-set&quot;&gt;                                            |
@@ -1365,7 +1352,7 @@ specific direction.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-**CSS**
+<b>CSS</b>
 
 +---+----------------------------------------------------------------------+
 | 1 | .box-set {                                                           |
@@ -1435,7 +1422,7 @@ push each other in different directions. When an element is positioned
 relatively the surrounding elements will observe the relatively
 positioned elements default position.
 
-**HTML**
+<b>HTML</b>
 
 +---+----------------------------------------------------------------------+
 | 1 | &lt;div class=&quot;box-set&quot;&gt;                                            |
@@ -1454,7 +1441,7 @@ positioned elements default position.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-**CSS**
+<b>CSS</b>
 
 +---+----------------------------------------------------------------------+
 | 1 | .box-set {                                                           |
@@ -1550,7 +1537,7 @@ positioned. Each individual box is moved in from a specific side with a
 positive value, or pulled out from a specific side with a negative
 value.
 
-**HTML**
+<b>HTML</b>
 
 +---+----------------------------------------------------------------------+
 | 1 | &lt;div class=&quot;box-set&quot;&gt;                                            |
@@ -1569,7 +1556,7 @@ value.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-**CSS**
+<b>CSS</b>
 
 +---+----------------------------------------------------------------------+
 | 1 | .box-set {                                                           |
@@ -1681,7 +1668,7 @@ Keeping the same box offset properties from the previous demonstration,
 watch how the boxes are positioned in relation to the browser's viewport
 and not the containing, relatively positioned parent.
 
-**HTML**
+<b>HTML</b>
 
 +---+----------------------------------------------------------------------+
 | 1 | &lt;div class=&quot;box-set&quot;&gt;                                            |
@@ -1700,7 +1687,7 @@ and not the containing, relatively positioned parent.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-**CSS**
+<b>CSS</b>
 
 +---+----------------------------------------------------------------------+
 | 1 | .box {                                                               |
@@ -1777,7 +1764,7 @@ allows the footer to span the entire width of the bottom of the page,
 and it does so without disrupting the box model, allowing margins,
 borders, and padding to be applied freely.
 
-**HTML**
+<b>HTML</b>
 
 +---+----------------------------------------------------------------------+
 | 1 | &lt;footer&gt;Fixed Footer&lt;/footer&gt;                                    |
@@ -1786,7 +1773,7 @@ borders, and padding to be applied freely.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-**CSS**
+<b>CSS</b>
 
 +---+----------------------------------------------------------------------+
 | 1 | body {                                                               |
@@ -1844,7 +1831,7 @@ stacking with the z-index property now positions box two on top of every
 other box, followed by box three underneath it, and box four underneath
 box three.
 
-**HTML**
+<b>HTML</b>
 
 +---+----------------------------------------------------------------------+
 | 1 | &lt;div class=&quot;box-set&quot;&gt;                                            |
@@ -1863,7 +1850,7 @@ box three.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-**CSS**
+<b>CSS</b>
 
 +---+----------------------------------------------------------------------+
 | 1 | .box-set {                                                           |
@@ -1961,14 +1948,14 @@ box three.
     Impressive Webs</li>
 </ul>
 
-**Lesson 1** [Performance & Organization](https://learn.shayhowe.com/advanced-html-css/performance-organization/)
-**Lesson 3** [Complex Selectors](https://learn.shayhowe.com/advanced-html-css/complex-selectors/)
+<b>Lesson 1</b> [Performance & Organization](https://learn.shayhowe.com/advanced-html-css/performance-organization/)
+<b>Lesson 3</b> [Complex Selectors](https://learn.shayhowe.com/advanced-html-css/complex-selectors/)
 
 [Lesson 3] Complex Selectors
 
 In this Lesson 3
 
-**CSS**
+<b>CSS</b>
 
 -   [[Common
     Selectors]{.underline}](https://learn.shayhowe.com/advanced-html-css/complex-selectors/#common-selectors)
@@ -1986,7 +1973,7 @@ In this Lesson 3
 
 -   [[Pseudo-elements]{.underline}](https://learn.shayhowe.com/advanced-html-css/complex-selectors/#pseudo-elements)
 
-**SHARE**
+<b>SHARE</b>
 
 Selectors are one of, if not, the most important parts of CSS. They
 shape the cascade and determine how styles are to be applied to elements
@@ -2011,15 +1998,15 @@ those offered within CSS3, let's take a quick look at some of the more
 common selectors seen today. These selectors include the type, class,
 and ID selectors.
 
-The **type** selector identifies an element based on its type,
+The <b>type</b> selector identifies an element based on its type,
 specifically how that element is declared within HTML.
-The **class** selector identifies an element based on its class
+The <b>class</b> selector identifies an element based on its class
 attribute value, which may be reused on multiple elements as necessary
-to help share popular styles. Lastly, the **ID** selector identifies an
+to help share popular styles. Lastly, the <b>ID</b> selector identifies an
 element based on its ID attribute value, which is unique and should only
 be used once per page.
 
-**CSS**
+<b>CSS</b>
 
 +---+----------------------------------------------------------------------+
 | 1 | h1 {&#8230;}                                                            |
@@ -2032,7 +2019,7 @@ be used once per page.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-**HTML**
+<b>HTML</b>
 
 +---+----------------------------------------------------------------------+
 | 1 | &lt;section id=&quot;intro&quot;&gt;                                             |
@@ -2050,7 +2037,7 @@ be used once per page.
 ### Common Selectors Overview
 
   ----------------------------------------------------------------------------------------------------------
-  **[Example]{.mark}**   **[Classification]{.mark}**   **[Explanation]{.mark}**
+  <b>[Example]{.mark}</b>   <b>[Classification]{.mark}</b>   <b>[Explanation]{.mark}</b>
   ---------------------- ----------------------------- -----------------------------------------------------
   h1                     Type Selector                 Selects an element by its type
 
@@ -2086,7 +2073,7 @@ any h2 element outside of the article element is not selected.
 
 Below, the headings on lines 3 and 5 are selected.
 
-**CSS**
+<b>CSS</b>
 
 +---+----------------------------------------------------------------------+
 | 1 | article h2 {&#8230;}                                                    |
@@ -2095,7 +2082,7 @@ Below, the headings on lines 3 and 5 are selected.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-**HTML**
+<b>HTML</b>
 
 +---+----------------------------------------------------------------------+
 | 1 | &lt;h2&gt;&#8230;&lt;/h2&gt;                                                    |
@@ -2133,7 +2120,7 @@ another element other than the article element, will not be selected.
 Below, the paragraph on line 3 is the only direct child of its parent
 article, thus selected.
 
-**CSS**
+<b>CSS</b>
 
 +---+----------------------------------------------------------------------+
 | 1 | article &gt; p {&#8230;}                                                  |
@@ -2142,7 +2129,7 @@ article, thus selected.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-**HTML**
+<b>HTML</b>
 
 +---+----------------------------------------------------------------------+
 | 1 | &lt;p&gt;&#8230;&lt;/p&gt;                                                      |
@@ -2166,7 +2153,7 @@ article, thus selected.
 ### Child Selectors Overview
 
   -----------------------------------------------------------------------------------------------
-  **[Example]{.mark}**   **[Classification]{.mark}**   **[Explanation]{.mark}**
+  <b>[Example]{.mark}</b>   <b>[Classification]{.mark}</b>   <b>[Explanation]{.mark}</b>
   ---------------------- ----------------------------- ------------------------------------------
   article h2             Descendant Selector           Selects an element that resides anywhere
                                                        within an identified ancestor element
@@ -2202,7 +2189,7 @@ The paragraphs on lines 5 and 9 are selected as they come after the
 heading within the document tree and share the same parent as their
 sibling heading.
 
-**CSS**
+<b>CSS</b>
 
 +---+----------------------------------------------------------------------+
 | 1 | h2 &tilde; p {&#8230;}                                                       |
@@ -2211,7 +2198,7 @@ sibling heading.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-**HTML**
+<b>HTML</b>
 
 +---+----------------------------------------------------------------------+
 | 1 | &lt;p&gt;&#8230;&lt;/p&gt;                                                      |
@@ -2261,7 +2248,7 @@ The paragraph on line 5 is selected as it directly follows after its
 sibling heading along with sharing the same parent element, thus
 selected.
 
-**CSS**
+<b>CSS</b>
 
 +---+----------------------------------------------------------------------+
 | 1 | h2 + p {&#8230;}                                                        |
@@ -2270,7 +2257,7 @@ selected.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-**HTML**
+<b>HTML</b>
 
 +---+----------------------------------------------------------------------+
 | 1 | &lt;p&gt;&#8230;&lt;/p&gt;                                                      |
@@ -2301,7 +2288,7 @@ selected.
 
 ### Sibling Selectors Example
 
-**HTML**
+<b>HTML</b>
 
 +---+-------------------------------------------------------------------+
 | 1 | &lt;input type=&quot;checkbox&quot; id=&quot;toggle&quot;&gt;                         |
@@ -2330,7 +2317,7 @@ selected.
 +===+===================================================================+
 +---+-------------------------------------------------------------------+
 
-**CSS**
+<b>CSS</b>
 
 +---+-------------------------------------------------------------------+
 | 1 | input {                                                           |
@@ -2490,7 +2477,7 @@ selected.
 ### Sibling Selectors Overview
 
   ------------------------------------------------------------------------------------------------------
-  **[Example]{.mark}**   **[Classification]{.mark}**   **[Explanation]{.mark}**
+  <b>[Example]{.mark}</b>   <b>[Classification]{.mark}</b>   <b>[Explanation]{.mark}</b>
   ---------------------- ----------------------------- -------------------------------------------------
   h2 &tilde; p                General Sibling Selector      Selects an element that follows anywhere after
                                                        the prior element, in which both elements share
@@ -2521,7 +2508,7 @@ attribute name in square brackets, &lbrack;&rbrack;, within a selector. The squ
 brackets may or may not follow any qualifier such as an element type or
 class, all depending on the level of specificity desired.
 
-**CSS**
+<b>CSS</b>
 
 +---+----------------------------------------------------------------------+
 | 1 | a&lbrack;target&rbrack; {&#8230;}                                                   |
@@ -2530,7 +2517,7 @@ class, all depending on the level of specificity desired.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-**HTML**
+<b>HTML</b>
 
 +---+----------------------------------------------------------------------+
 | 1 | &lt;a href=&quot;#&quot; target=&quot;&#0095;blank&quot;&gt;&#8230;&lt;/a&gt;                        |
@@ -2548,7 +2535,7 @@ desired matching value. Inside the square brackets should be the
 attribute name followed by an equals sign, =, quotations, &quot;&quot;, and
 inside of the quotations should be the desired matching attribute value.
 
-**CSS**
+<b>CSS</b>
 
 +---+----------------------------------------------------------------------+
 | 1 | a&lbrack;href=&quot;http://google.com/&quot;&rbrack; {&#8230;}                              |
@@ -2557,7 +2544,7 @@ inside of the quotations should be the desired matching attribute value.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-**HTML**
+<b>HTML</b>
 
 +---+----------------------------------------------------------------------+
 | 1 | &lt;a href=&quot;http://google.com/&quot;&gt;&#8230;&lt;/a&gt;                          |
@@ -2575,7 +2562,7 @@ attribute name, directly before the equals sign. Doing so denotes that
 the value to follow only needs to appear, or be contained, within the
 attribute value.
 
-**CSS**
+<b>CSS</b>
 
 +---+----------------------------------------------------------------------+
 | 1 | a&lbrack;href&ast;=&quot;login&quot;&rbrack; {&#8230;}                                         |
@@ -2584,7 +2571,7 @@ attribute value.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-**HTML**
+<b>HTML</b>
 
 +---+----------------------------------------------------------------------+
 | 1 | &lt;a href=&quot;/login.php&quot;&gt;&#8230;&lt;/a&gt;                                  |
@@ -2602,7 +2589,7 @@ within the square brackets of a selector between the attribute name and
 equals sign denotes that the attribute value should begin with the
 stated value.
 
-**CSS**
+<b>CSS</b>
 
 +---+----------------------------------------------------------------------+
 | 1 | a&lbrack;href&Hat;=&quot;https://&quot;&rbrack; {&#8230;}                                      |
@@ -2611,7 +2598,7 @@ stated value.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-**HTML**
+<b>HTML</b>
 
 +---+----------------------------------------------------------------------+
 | 1 | &lt;a href=&quot;https://chase.com/&quot;&gt;&#8230;&lt;/a&gt;                          |
@@ -2629,7 +2616,7 @@ brackets of a selector between the attribute name and equals sign. Using
 the dollar sign denotes that the attribute value needs to end with the
 stated value.
 
-**CSS**
+<b>CSS</b>
 
 +---+----------------------------------------------------------------------+
 | 1 | a&lbrack;href&#36;=&quot;.pdf&quot;&rbrack; {&#8230;}                                          |
@@ -2638,7 +2625,7 @@ stated value.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-**HTML**
+<b>HTML</b>
 
 +---+----------------------------------------------------------------------+
 | 1 | &lt;a href=&quot;/docs/menu.pdf&quot;&gt;&#8230;&lt;/a&gt;                              |
@@ -2656,7 +2643,7 @@ between the attribute name and equals sign denotes an attribute value
 that should be whitespace-separated, with one word matching the exact
 stated value.
 
-**CSS**
+<b>CSS</b>
 
 +---+----------------------------------------------------------------------+
 | 1 | a&lbrack;rel&tilde;=&quot;tag&quot;&rbrack; {&#8230;}                                            |
@@ -2665,7 +2652,7 @@ stated value.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-**HTML**
+<b>HTML</b>
 
 +---+----------------------------------------------------------------------+
 | 1 | &lt;a href=&quot;#&quot; rel=&quot;tag nofollow&quot;&gt;&#8230;&lt;/a&gt;                      |
@@ -10029,49 +10016,36 @@ using [[animations]{.underline}](https://css-tricks.com/almanac/properties/b/ba
 +===+===================================================================+
 +---+-------------------------------------------------------------------+
 
-### Demo
+<h3>Demo</h3>
 
-### Resources & Links
+<h3>Resources & Links</h3>
 
--   [[Transform
-    Property]{.underline}](http://www.css3files.com/transform/) via CSS3
-    Files
+<ul>
+  <li><a href="http://www.css3files.com/transform/">
+    Transform Property</a> via CSS3 Files</li>
+  <li><a href="http://dev.opera.com/articles/view/understanding-the-css-transforms-matrix/">
+    Understanding the CSS Transforms Matrix</a> via Dev.Opera</li>
+  <li><a href="http://24ways.org/2010/intro-to-css-3d-transforms">
+    An Introduction to CSS 3-D Transforms</a> via 24 Ways</li>
+  <li><a href="https://developer.mozilla.org/en/CSS/transform-function">
+    Transform Function</a> via Mozilla Developer Network</li>
+  <li><a href="http://www.webkit.org/blog-files/3d-transforms/transform-style.html">
+    Transform Style</a> via WebKit</li>
+  <li><a href="https://css-tricks.com/almanac/properties/b/backface-visibility/">
+    Backface Visibility</a> via CSS-Tricks</li>
+</ul>
 
--   [[Understanding the CSS Transforms
-    Matrix]{.underline}](http://dev.opera.com/articles/view/understanding-the-css-transforms-matrix/) via
-    Dev.Opera
+[<b>Lesson 6</b>] <a href="https://learn.shayhowe.com/advanced-html-css/jquery/">jQuery</a>
+[<b>Lesson 8</b>] <a href="https://learn.shayhowe.com/advanced-html-css/transitions-animations/">Transitions &amp; Animations</a>
 
--   [[An Introduction to CSS 3-D
-    Transforms]{.underline}](http://24ways.org/2010/intro-to-css-3d-transforms) via
-    24 Ways
-
--   [[Transform
-    Function]{.underline}](https://developer.mozilla.org/en/CSS/transform-function) via
-    Mozilla Developer Network
-
--   [[Transform
-    Style]{.underline}](http://www.webkit.org/blog-files/3d-transforms/transform-style.html) via
-    WebKit
-
--   [[Backface
-    Visibility]{.underline}](https://css-tricks.com/almanac/properties/b/backface-visibility/) via
-    CSS-Tricks
-
-[**Lesson 6**
-[jQuery]{.underline}](https://learn.shayhowe.com/advanced-html-css/jquery/)
-[**Lesson 8** [Transitions &
-Animations]{.underline}](https://learn.shayhowe.com/advanced-html-css/transitions-animations/)
-
-**
-
-[Lesson 8]{.mark} Transitions & Animations
+[Lesson 8] Transitions & Animations
 
 In this Lesson 8
 
 GitlabGitLab is the only place where enterprises build mission‑critical
 software.
 
-**CSS**
+<b>CSS**
 
 -   [[Transitions]{.underline}](https://learn.shayhowe.com/advanced-html-css/transitions-animations/#transitions)
 
@@ -10086,7 +10060,7 @@ software.
 -   [[Shorthand
     Animations]{.underline}](https://learn.shayhowe.com/advanced-html-css/transitions-animations/#shorthand-animations)
 
-**SHARE**
+<b>SHARE**
 
 One evolution with CSS3 was the ability to write behaviors for
 transitions and animations. Front end developers have been asking for
@@ -10261,7 +10235,7 @@ element.
 
 ### Transitional Properties
 
-It is important to note, **not all properties may be transitioned**,
+It is important to note, <b>not all properties may be transitioned**,
 only properties that have an identifiable halfway point. Colors, font
 sizes, and the alike may be transitioned from one value to another as
 they have recognizable values in-between one another.
@@ -10535,7 +10509,7 @@ transition values.
 
 ### Transitional Button
 
-**HTML**
+<b>HTML**
 
 +---+--------------------------------------------------------------------+
 | 1 | &lt;button&gt;Awesome Button&lt;/button&gt;                                |
@@ -10544,7 +10518,7 @@ transition values.
 +===+====================================================================+
 +---+--------------------------------------------------------------------+
 
-**CSS**
+<b>CSS**
 
 +---+--------------------------------------------------------------------+
 | 1 | button {                                                           |
@@ -10598,7 +10572,7 @@ transition values.
 
 ### Card Flip
 
-**HTML**
+<b>HTML**
 
 +---+--------------------------------------------------------------------+
 | 1 | &lt;div class=&quot;card-container&quot;&gt;                                   |
@@ -10617,7 +10591,7 @@ transition values.
 +===+====================================================================+
 +---+--------------------------------------------------------------------+
 
-**CSS**
+<b>CSS**
 
 +---+--------------------------------------------------------------------+
 | 1 | .card-container {                                                  |
@@ -10848,7 +10822,7 @@ they do with transitions.
 The animation below should cause the ball to bounce once while moving to
 the left, however only when hovering over the stage.
 
-**HTML**
+<b>HTML**
 
 +---+----------------------------------------------------------------------+
 | 1 | &lt;div class=&quot;stage&quot;&gt;                                              |
@@ -10861,7 +10835,7 @@ the left, however only when hovering over the stage.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-**CSS**
+<b>CSS**
 
 +---+----------------------------------------------------------------------+
 | 1 | &#0064;keyframes slide {                                                  |
@@ -11056,6 +11030,7 @@ In the example below the animation-play-state property is set
 to paused when making the stage active by clicking on it. Notice how the
 animation will temporarily pause until you let up on the mouse.
 
+```
 +---+----------------------------------------------------------------------+
 | 1 | .stage:hover .ball {                                                 |
 |   |                                                                      |
@@ -11085,6 +11060,7 @@ animation will temporarily pause until you let up on the mouse.
 | 2 |                                                                      |
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
+```
 
 ### Animation Play State Demo
 
@@ -11115,6 +11091,7 @@ the animation-direction property value.
 Lastly, the both value will apply the behaviors from both
 the forwards and backwards values.
 
+```
 +---+----------------------------------------------------------------------+
 | 1 | .stage:hover .ball {                                                 |
 |   |                                                                      |
@@ -11141,6 +11118,7 @@ the forwards and backwards values.
 | 1 |                                                                      |
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
+```
 
 ### Animation Fill Mode Demo
 
@@ -11149,13 +11127,13 @@ the animation.
 
 ### Shorthand Animations
 
-Fortunately [[animations]{.underline}](https://developer.mozilla.org/en-US/docs/CSS/Using_CSS_animations),
+Fortunately [animations](https://developer.mozilla.org/en-US/docs/CSS/Using_CSS_animations),
 just like transitions, can be written out in a shorthand format. This is
 accomplished with one animation property, rather than multiple
 declarations. The order of values within the animation property should
-be animation-name, animation-duration, animation-timing-function, animation-delay, animation-iteration-count, animation-direction, animation-fill-mode,
-and lastly animation-play-state.
+be animation-name, animation-duration, animation-timing-function, animation-delay, animation-iteration-count, animation-direction, animation-fill-mode, and lastly animation-play-state.
 
+```
 +---+----------------------------------------------------------------------+
 | 1 | .stage:hover .ball {                                                 |
 |   |                                                                      |
@@ -11172,6 +11150,7 @@ and lastly animation-play-state.
 | 7 |                                                                      |
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
+```
 
 ### Shorthand Animations Demo
 
@@ -11180,55 +11159,51 @@ the animation.
 
 ### Resources & Links
 
--   [[Understanding CSS3
-    Transitions]{.underline}](http://www.alistapart.com/articles/understanding-css3-transitions/) via
-    A List Apart
+-   [Understanding CSS3 Transitions](http://www.alistapart.com/articles/understanding-css3-transitions/) 
+  via A List Apart
 
--   [[CSS Cubic-Bezier
-    Builder]{.underline}](http://www.roblaplaca.com/examples/bezierBuilder/) via
-    Rob LaPlaca
+-   [CSS Cubic-Bezier Builder](http://www.roblaplaca.com/examples/bezierBuilder/) 
+  via Rob LaPlaca
 
--   [[The Guide To CSS Animation: Principles and
-    Examples]{.underline}](http://coding.smashingmagazine.com/2011/09/14/the-guide-to-css-animation-principles-and-examples/) via
+-   [The Guide To CSS Animation: Principles and
+    Examples](http://coding.smashingmagazine.com/2011/09/14/the-guide-to-css-animation-principles-and-examples/) via
     Smashing Magazine
 
--   [[Using CSS
-    Animations]{.underline}](https://developer.mozilla.org/en-US/docs/CSS/Using_CSS_animations) via
+-   [Using CSS
+    Animations](https://developer.mozilla.org/en-US/docs/CSS/Using_CSS_animations) via
     Mozilla Developer Network
 
-[**Lesson 7**
-[Transforms]{.underline}](https://learn.shayhowe.com/advanced-html-css/css-transforms/)
-[**Lesson 9** [Feature Support &
-Polyfills]{.underline}](https://learn.shayhowe.com/advanced-html-css/feature-support-polyfills/)
+[<b>Lesson 7</b>] [Transforms](https://learn.shayhowe.com/advanced-html-css/css-transforms/)
+[<b>Lesson 9</b>] [Feature Support & Polyfills](https://learn.shayhowe.com/advanced-html-css/feature-support-polyfills/)
 
-[Lesson 9]{.mark} Feature Support & Polyfills
+[Lesson 9] Feature Support & Polyfills
 
 In this Lesson 9
 
-**HTML**
+<b>HTML**
 
--   [[HTML5
-    Shiv]{.underline}](https://learn.shayhowe.com/advanced-html-css/feature-support-polyfills/#html5-shiv)
+-   [HTML5
+    Shiv](https://learn.shayhowe.com/advanced-html-css/feature-support-polyfills/#html5-shiv)
 
--   [[Cross Browser
-    Testing]{.underline}](https://learn.shayhowe.com/advanced-html-css/feature-support-polyfills/#cross-browser-testing)
+-   [Cross Browser
+    Testing](https://learn.shayhowe.com/advanced-html-css/feature-support-polyfills/#cross-browser-testing)
 
-**CSS**
+<b>CSS**
 
--   [[Detecting Browser
-    Features]{.underline}](https://learn.shayhowe.com/advanced-html-css/feature-support-polyfills/#detecting-browser-features)
+-   [Detecting Browser
+    Features](https://learn.shayhowe.com/advanced-html-css/feature-support-polyfills/#detecting-browser-features)
 
-**JAVASCRIPT**
+<b>JAVASCRIPT**
 
--   [[Conditionally Loading
-    Files]{.underline}](https://learn.shayhowe.com/advanced-html-css/feature-support-polyfills/#conditionally-loading-files)
+-   [Conditionally Loading
+    Files](https://learn.shayhowe.com/advanced-html-css/feature-support-polyfills/#conditionally-loading-files)
 
 Building a website can be both extremely rewarding and frustrating.
 Common frustrations arise from trying to get a website to look and
 perform the same in every browser. All front end developers have shared
 this frustration at one point or another.
 
-Truth be told, websites **do not** need to look or perform the same in
+Truth be told, websites <b>do not** need to look or perform the same in
 every browser. Exactly how close a website works in each browser is up
 to you and your level of comfort for a given website. If a website
 receives under half a percent of traffic from Internet Explorer 6 it
@@ -11247,25 +11222,26 @@ supported by a specific browser.
 ### HTML5 Shiv
 
 Perhaps the most popular shiv, and one you may have likely used already,
-is the HTML5 Shiv. The HTML5 Shiv was [[created by Remy
-Sharp]{.underline}](http://paulirish.com/2011/the-history-of-the-html5-shiv/) to
+is the HTML5 Shiv. The HTML5 Shiv was [created by Remy
+Sharp](http://paulirish.com/2011/the-history-of-the-html5-shiv/) to
 provide the ability to use HTML5 elements within versions of Internet
 Explorer 8 and below. The HTML5 Shiv not only creates support for HTML5
 elements but also allows them to be properly styled with CSS.
 
-The [[shiv]{.underline}](https://code.google.com/p/html5shiv/) should be
+The [shiv](https://code.google.com/p/html5shiv/) should be
 downloaded from Google, where Remy maintains the latest version, then
 hosted on your server. For the best performance, reference the shiv
 JavaScript file within the head of the document, after any stylesheet
 references. Additionally, you want to reference the shiv inside of
-a [[conditional
-comment]{.underline}](https://css-tricks.com/how-to-create-an-ie-only-stylesheet/),
+a [conditional
+comment](https://css-tricks.com/how-to-create-an-ie-only-stylesheet/),
 making sure that the file is only loaded within versions of Internet
 Explorer 8 and below.
 
 In this case the conditional comment looks like &lt;!&#45;&#45;&lbrack;if lt IE
 9&rbrack;&gt;&#8230;&lt;&#0033;[endif&rbrack;&#45;&#45;&gt;.
 
+```
 +---+----------------------------------------------------------------------+
 | 1 | &lt;!&#45;&#45;&lbrack;if lt IE 9&rbrack;&gt;                                               |
 |   |                                                                      |
@@ -11276,12 +11252,13 @@ In this case the conditional comment looks like &lt;!&#45;&#45;&lbrack;if lt IE
 | 4 |                                                                      |
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
+```
 
 ### The Difference Between a Shiv & a Shim
 
 Chances are you may have heard of both the HTML5 *Shiv* and
 HTML5 *Shim*, and wondered what the difference, if any, may be. Oddly
-enough, there is **no** difference between the HTML5 Shiv and HTML5
+enough, there is <b>no** difference between the HTML5 Shiv and HTML5
 Shim. The two words are often used interchangeably and are commonly
 transposed.
 
@@ -11289,6 +11266,7 @@ Additionally, once the new HTML5 elements are created using the shiv,
 any block level elements need to be identified and updated using
 the display: block; declaration.
 
+```
 +---+----------------------------------------------------------------------+
 | 1 | article,                                                             |
 |   |                                                                      |
@@ -11324,12 +11302,14 @@ the display: block; declaration.
 | 4 |                                                                      |
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
+```
 
 Lastly, Internet Explorer 8 and 9 do not correctly define styles for a
 few HTML5 inline-block level elements. As before, these styles will need
 to be explicitly stated. After which, all versions of Internet Explorer
 should be good to go using any new HTML5 elements.
 
+```
 +---+----------------------------------------------------------------------+
 | 1 | audio,                                                               |
 |   |                                                                      |
@@ -11344,6 +11324,7 @@ should be good to go using any new HTML5 elements.
 | 6 |                                                                      |
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
+```
 
 ### Detecting Browser Features
 
@@ -11354,7 +11335,7 @@ support for specific HTML5 and CSS3 features, regardless of which
 browser is being used.
 
 Feature detection, as provided
-by [[Modernizr]{.underline}](http://modernizr.com/), provides a way to
+by [Modernizr](http://modernizr.com/), provides a way to
 write conditional CSS and JavaScript based on whether or not a browser
 supports a specific feature. For example, if a browser supports rounded
 corners Modernizr will add the class of borderradius to
@@ -11364,7 +11345,7 @@ Modernizr will add the class of no-borderradius to the html element.
 ### Loading Modernizr
 
 To get feature detection with Modernizr up and running, visit
-their [[download]{.underline}](http://modernizr.com/download/) page and
+their [download](http://modernizr.com/download/) page and
 customize what features you are looking to detect. Once downloaded,
 upload the JavaScript file on your server and reference it within
 the head of your HTML document, below any referenced style sheets.
@@ -11373,20 +11354,21 @@ It is worth noting that Modernizr may be configured to include the HTML5
 Shiv, in which case the shiv doesn't need to be referenced on top of
 Modernizr.
 
+```
 +---+----------------------------------------------------------------------+
-| 1 | &lt;script src=&quot;modernizr.js&quot;&gt;&lt;/script&gt;                           |
+| 1 | <script src="modernizr.js"></script>                                 |
 |   |                                                                      |
 | 2 |                                                                      |
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
+```
 
 ### Conditionally Applying CSS Styles
 
 Once Modernizr is up and running CSS styles may be conditionally applied
 based on the features a given browser supports. Modernizr has detection
 for the majority of the CSS3 properties and values, all of which can be
-found in the
-Modernizr [[documentation]{.underline}](https://modernizr.com/docs).
+found in the Modernizr <a href="https://modernizr.com/docs">documentation</a>.
 
 One item to weigh out is if feature detection is necessary for certain
 styles. For example, using an RGBa color value may easily be supported
@@ -11518,7 +11500,7 @@ necessary.
 When working with CSS3 feature detection it is hard to know what the
 styles look like in browsers that do not support specific CSS3 features.
 Fortunately, there is a bookmarklet
-called [[deCSS3]{.underline}](https://github.com/davatron5000/deCSS3) which
+called <a href="https://github.com/davatron5000/deCSS3">deCSS3</a> which
 disables any CSS3 features. Doing so allows you to see what a website
 would look like without CSS3, and if your conditional styles are
 working.
@@ -11526,18 +11508,17 @@ working.
 ### Conditionally Loading Files
 
 On top of conditionally loading styles, Modernizr also provides a way to
-use [[feature detection in
-JavaScript]{.underline}](https://modernizr.com/docs#using-modernizr-with-javascript).
-With this, JavaScript polyfills and conditional files may be loaded
-based on the detection of a given feature with the help of jQuery and
-the jQuery getScript method.
+use <a href="https://modernizr.com/docs#using-modernizr-with-javascript">
+feature detection in JavaScript</a>. With this, JavaScript polyfills and 
+conditional files may be loaded based on the detection of a given feature 
+with the help of jQuery and the jQuery getScript method.
 
 Using Modernizr to set the condition of an if statement in Javascript
 allows different scripts to be executed based on whether or not the
 given condition is true or false. Below Modernizr is checking for local
-storage support. If local storage is supported [[jQuery is used to
-load]{.underline}](https://davidwalsh.name/loading-scripts-jquery) the storage.js file
-using the getScript method, and if local storage is not supported jQuery
+storage support. If local storage is supported 
+<a href="https://davidwalsh.name/loading-scripts-jquery">jQuery is used to load</a>
+the storage.js file using the getScript method, and if local storage is not supported jQuery
 is used the storage-polyfill.js file using the getScript method.
 
 +---+----------------------------------------------------------------------+
@@ -11629,12 +11610,11 @@ swapped for 'large' based off of the executed JavaScript.
 
 Currently there are polyfills for nearly all of the different HTML5 and
 CSS3 features. The team over at Modernizr has put together quite an
-exhaustive [[list of
-polyfills]{.underline}](https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-browser-Polyfills).
+exhaustive [list of polyfills](https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-browser-Polyfills).
 These polyfills can be dropped in as needed.
 
 The same people behind Modernizr have also put together
-a [[list]{.underline}](http://html5please.com/) of all of the new HTML5
+a [list](http://html5please.com/) of all of the new HTML5
 and CSS3 features, including instructions on how to use them
 responsibly. Understand, not all of these features need polyfills. Quite
 a few of them can be used outright or with the use of a fallback.
@@ -11648,8 +11628,7 @@ Safari, all perform pretty well. The largest pitfalls live within
 Internet Explorer, and testing different versions of Internet Explorer
 can be difficult.
 
-There are
-a [[handful]{.underline}](http://www.smashingmagazine.com/2011/08/07/a-dozen-cross-browser-testing-tools/) of
+There are a [handful](http://www.smashingmagazine.com/2011/08/07/a-dozen-cross-browser-testing-tools/) of
 services out there that do help with cross browser testing, some are
 interactive while others are not. Being able to interact with a browser,
 rather than seeing a rendered screenshot, is far more helpful for
@@ -11657,16 +11636,14 @@ debugging code. One of the best ways to boot up multiple versions of
 Internet Explorer is by using multiple virtual machines, each with a
 different version of Internet Explorer.
 
-![VirtualBox](./3-25-24/media/image014.png){width="5.0in"
-height="3.161324365704287in"}
+![VirtualBox](./images/image014.png)
 
-**Fig. 9.**VirtualBox running on Mac OS X with Internet Explorer
+<b>Fig. 9.**VirtualBox running on Mac OS X with Internet Explorer
 versions 6 through 9.
 
 Microsoft provides a handful of VirtualPCs that can be used solely for
 testing. Setting all of these up can be a herculean task. Fortunately,
-Greg Thornton has built an [[automated
-installer]{.underline}](https://github.com/xdissent/ievms) for all of
+Greg Thornton has built an [automated installer](https://github.com/xdissent/ievms) for all of
 these virtual machines. The installation takes a while to download all
 of the different virtual machines, and requires a decent amount of disk
 space. Prepare adequately by only installing the necessary virtual
@@ -11679,66 +11656,55 @@ unfortunately versions 7 and below do not. The web inspector and all of
 the other debugging tools we've grown to love are not readily available
 within Internet Explorer 7 and below.
 
-![VirtualBox](./3-25-24/media/image015.png){width="5.0in"
-height="3.959935476815398in"}
+![VirtualBox](./images/image015.png)
 
-**Fig. 9** Internet Explorer 7 running inside of a virtual machine with
-the Firebug Lite
+<b>Fig. 9</b> Internet Explorer 7 running inside of a virtual machine with the Firebug Lite
 
 ### bookmarklet open for debugging.
 
 ### Resources & Links
 
--   [[HTML5 Shiv]{.underline}](https://code.google.com/p/html5shiv/) via
-    Remy Sharp
+-   [HTML5 Shiv](https://code.google.com/p/html5shiv/) via Remy Sharp
 
--   [[How To Create an IE-Only
-    Stylesheet]{.underline}](https://css-tricks.com/how-to-create-an-ie-only-stylesheet/) via
+-   [How To Create an IE-Only
+    Stylesheet](https://css-tricks.com/how-to-create-an-ie-only-stylesheet/) via
     CSS-Tricks
 
--   [[Modernizr]{.underline}](http://modernizr.com/)
+-   [Modernizr](http://modernizr.com/)
 
--   [[Loading Scripts with
-    jQuery]{.underline}](https://davidwalsh.name/loading-scripts-jquery) via
-    David Walsh
+-   [Loading Scripts with
+    jQuery](https://davidwalsh.name/loading-scripts-jquery) via David Walsh
 
--   [[deCSS3]{.underline}](https://github.com/davatron5000/deCSS3) via
-    Dave Rupert
+-   [deCSS3](https://github.com/davatron5000/deCSS3) via Dave Rupert
 
--   [[HTML5 Cross Browser
-    Polyfills]{.underline}](https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-browser-Polyfills)
+-   [HTML5 Cross Browser Polyfills](https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-browser-Polyfills)
 
--   [[HTML5 Please]{.underline}](http://html5please.com/)
+-   [HTML5 Please](http://html5please.com/)
 
--   [[Microsoft IE Virtual
-    Machines]{.underline}](https://github.com/xdissent/ievms) via Greg
-    Thornton
+-   [Microsoft IE Virtual Machines](https://github.com/xdissent/ievms) via Greg Thornton
 
-[**Lesson 8** [Transitions &
-Animations]{.underline}](https://learn.shayhowe.com/advanced-html-css/transitions-animations/)
-[**Lesson 10** [Extending Semantics &
-Accessibility]{.underline}](https://learn.shayhowe.com/advanced-html-css/semantics-accessibility/)
+<b>[Lesson 8]</b> [Transitions &
+Animations](https://learn.shayhowe.com/advanced-html-css/transitions-animations/)
+<b>[Lesson 10]</b> [Extending Semantics &
+Accessibility](https://learn.shayhowe.com/advanced-html-css/semantics-accessibility/)
 
-**[Lesson 10]{.mark} Extending Semantics & Accessibility
+<h2>[Lesson 10] Extending Semantics & Accessibility</h2>
 
-In this Lesson 10
+<h3>In this Lesson 10</h3>
 
-### **HTML**
+<h5>HTML</h5>
 
--   [[Semantic
-    Motivation]{.underline}](https://learn.shayhowe.com/advanced-html-css/semantics-accessibility/#semantic-motivation)
+-   [Semantic Motivation](https://learn.shayhowe.com/advanced-html-css/semantics-accessibility/#semantic-motivation)
 
--   [[Structural
-    Semantics]{.underline}](https://learn.shayhowe.com/advanced-html-css/semantics-accessibility/#structural-semantics)
+-   [Structural Semantics](https://learn.shayhowe.com/advanced-html-css/semantics-accessibility/#structural-semantics)
 
--   [[Text Level
-    Semantics]{.underline}](https://learn.shayhowe.com/advanced-html-css/semantics-accessibility/#text-level-semantics)
+-   [Text Level Semantics](https://learn.shayhowe.com/advanced-html-css/semantics-accessibility/#text-level-semantics)
 
--   [[Microdata]{.underline}](https://learn.shayhowe.com/advanced-html-css/semantics-accessibility/#microdata)
+-   [Microdata](https://learn.shayhowe.com/advanced-html-css/semantics-accessibility/#microdata)
 
--   [[WAI-ARIA]{.underline}](https://learn.shayhowe.com/advanced-html-css/semantics-accessibility/#wai-aria)
+-   [WAI-ARIA](https://learn.shayhowe.com/advanced-html-css/semantics-accessibility/#wai-aria)
 
-**SHARE**
+<b>SHARE</b>
 
 Semantics and accessibility are naturally part of HTML by design,
 however they are not fully leveraged unless used accordingly. Knowing
@@ -11757,7 +11723,7 @@ a h1 would be better fitted for example. Use semantic elements and
 attributes, as well as microdata and WAI-ARIA to extend the value of
 your code.
 
-Additionally, **be an advocate for semantics and accessibility**. Tell
+Additionally, <b>be an advocate for semantics and accessibility</b>. Tell
 others why you've written certain code, and provide reasoning why
 certain modules of content are marked up in a specific way. Outline
 goals and objectives within your code, and explain how those goals and
@@ -11859,9 +11825,9 @@ property. The two main elements used in this case include strong and b.
 While these two elements have the same presentation they have completely
 different semantic meanings.
 
-The strong element outlines text that has a **strong importance**. On
+The strong element outlines text that has a <b>strong importance</b>. On
 the contrasting side, the b element identifies text that is to
-be **stylistically offset**, without importance. Generally speaking,
+be <b>stylistically offset</b>, without importance. Generally speaking,
 the b element should be used solely as a styling hook to change the
 presentation of an element, where the strong element should be used to
 identify significantly important text.
@@ -11892,9 +11858,9 @@ property to achieve a desired presentation. When italicizing text, the
 two elements most commonly used are em and i. Again, these share the
 same presentation, yet have completely different semantic meanings.
 
-The em element places a **stressed emphasis** on text, while
-the i element identifies text to be expressed in an **alternate voice or
-tone**. Using the em element really drives prominence with an added
+The em element places a <b>stressed emphasis</b> on text, while
+the i element identifies text to be expressed in an <b>alternate voice or
+tone</b>. Using the em element really drives prominence with an added
 importance. On the other hand, the i element is primarily used within
 dialog or prose, offsetting text without any added emphasis or
 importance.
@@ -11935,9 +11901,9 @@ decoration]{.underline}](https://learn.shayhowe.com/html-css/working-with-typogr
 property. In this case, the two primary elements used to underline text
 are ins and u.
 
-The ins element is used to identify text that has been recently **added
-to the document**, and the u element simply refers to an **unarticulated
-annotation**.
+The ins element is used to identify text that has been recently <b>added
+to the document</b>, and the u element simply refers to an <b>unarticulated
+annotation</b>.
 
 For more semantic code, the ins element may be used with
 the cite and datetime attributes. The datetime attribute identifies when
@@ -11982,8 +11948,8 @@ elements may be used, as may the [[text
 decoration]{.underline}](https://learn.shayhowe.com/html-css/working-with-typography/) CSS
 property. The two properties most commonly used include del and s.
 
-The del element is used to identify text **deleted or removed from the
-document**. As with the ins element, it may be used with
+The del element is used to identify text <b>deleted or removed from the
+document</b>. As with the ins element, it may be used with
 the cite and datetime attributes. Each of which hold the identical
 semantic values as before, cite specifying a resource that explains the
 change and datetime identifying when the content was removed from the
@@ -12468,7 +12434,7 @@ another attribute on the element. The table below outlines these one-off
 elements and what attribute is used for their property value.
 
   ---------------------------------------------------------------------------------------
-  **[Element]{.mark}**                                               **[Value]{.mark}**
+  <b>[Element]{.mark}</b>                                               <b>[Value]{.mark}</b>
   ------------------------------------------------------------------ --------------------
   &lt;meta&gt;                                                           content attribute
 
@@ -12621,8 +12587,8 @@ certain elements and blocks of content do on a page.
 WAI-ARIA roles break down into four different categories, including
 abstract, widget, document structure, and landmark roles. For this
 lesson we will focus primarily on the document structure and landmark
-roles. **Document structure roles** define the organizational structure
-of content on a page, while **landmark roles** define the regions of a
+roles. <b>Document structure roles</b> define the organizational structure
+of content on a page, while <b>landmark roles</b> define the regions of a
 page. Specific role values for each of these categories are broken out
 below.
 
@@ -12686,18 +12652,18 @@ HTML5 introduced a handful of new structural elements which commonly
 match up against the document structure and landmark roles. Exactly how
 these roles match up against specific elements may be seen below. Please
 notice, the header and footer elements do not have an implied role, and
-the acceptable roles for these elements may only be used **once** per
+the acceptable roles for these elements may only be used <b>once</b> per
 page. That said, if you have multiple header and footer elements on a
 page the banner and contentinfo roles should be applied on the elements
 directly tied to the document from a top level perspective, not elements
 nested within other regions of the document structure.
 
 +------+-----------+---------------------------------------------------+
-| **[E | *         | **[Acceptable Roles]{.mark}**                     |
-| leme | *[Implied |                                                   |
-| nt]{ | Role]     |                                                   |
-| .mar | {.mark}** |                                                   |
-| k}** |           |                                                   |
+|      | *         | <b>[Acceptable Roles]{.mark}</b>                  |
+|      |           |                                                   |
+|      |           |                                                   |
+|      |           |                                                   |
+|      |           |                                                   |
 +======+===========+===================================================+
 | art  | article   | application, article, document, or main           |
 | icle |           |                                                   |
@@ -12747,20 +12713,20 @@ the following code snippet.
 <h3>States & Properties</h3>
 
 In combination with WAI-ARIA roles there are also 
-<a href="https://www.w3.org/TR/wai-aria/#states_and_properties">states and
-properties</a> which help inform assistive technologies how content is configured. 
-Like roles, the states and properties are broken into four categories,
-including widget attributes, live region attributes, drag-and-drop
-attributes, and relationship attributes 
+<a href="https://www.w3.org/TR/wai-aria/#states_and_properties" rel="noopener noreferrer" target="_blank">
+states and properties</a> which help inform assistive technologies how content 
+is configured. Like roles, the states and properties are broken into four 
+categories, including <b>widget attributes</b>, <b>live region attributes</b>, 
+<b>drag-and-drop attributes</b>, and <b>relationship attributes</b>.
 
-The **widget attributes** support widget roles and are specific to the
-user interface and where users take actions. The **live region
-attributes** may be applied to any element and are used to indicate
+The <b>widget attributes</b> support widget roles and are specific to the
+user interface and where users take actions. The <b>live region
+attributes</b> may be applied to any element and are used to indicate
 content changes for assistive technologies, on page alerts and
-notifications for example. **Drag-and-drop attributes** supply
+notifications for example. <b>Drag-and-drop attributes</b> supply
 information about drag-and-drop interface elements and provide alternate
-behaviors to assistive technologies. Lastly, **relationship
-attributes** outline the relationship between elements when the document
+behaviors to assistive technologies. Lastly, <b>relationship
+attributes</b> outline the relationship between elements when the document
 structure cannot be determined.
 
 <details>
@@ -12769,23 +12735,33 @@ structure cannot be determined.
   <h3>Resources & Links</h3>
 
   <ul>
-    <li><a href="https://developers.whatwg.org/text-level-semantics.html">
+    <li><a href="https://developers.whatwg.org/text-level-semantics.html" rel="noopener noreferrer" target="_blank">
       Text-Level Semantics</a> via WHATWG</li>
-    <li><a href="http://microformats.org/wiki/existing-rel-values">
+    <li><a href="http://microformats.org/wiki/existing-rel-values" rel="noopener noreferrer" target="_blank">
       Existing rel Values</a> via Microformats.org</li>
-    <li><a href="http://schema.org/docs/schemas.html">
+    <li><a href="http://schema.org/docs/schemas.html" rel="noopener noreferrer" target="_blank">
       Organization of Schemas</a> via Schema.org</li>
-    <li><a href="http://diveintohtml5.info/extensibility.html">
+    <li><a href="http://diveintohtml5.info/extensibility.html" rel="noopener noreferrer" target="_blank">
       Microdata</a> via Dive Into HTML5</li>
-    <li><a href="http://www.w3.org/WAI/intro/aria">
+    <li><a href="http://www.w3.org/WAI/intro/aria" rel="noopener noreferrer" target="_blank">
       WAI-ARIA Overview</a>) via W3.org</li>
-    <li><a href="https://www.w3.org/TR/wai-aria/#roles">
+    <li><a href="https://www.w3.org/TR/wai-aria/#roles" rel="noopener noreferrer" target="_blank">
       The Roles Model</a> via W3.org</li>
   </ul>
 
 </details>
 
-[**Lesson 9**] <a href="https://learn.shayhowe.com/advanced-html-css/feature-support-polyfills/">
-  Feature Support & Polyfills</a>
+[<b>Lesson 9</b>] <a href="https://learn.shayhowe.com/advanced-html-css/feature-support-polyfills/" rel="noopener noreferrer" target="_blank">
+  Feature Support &amp; Polyfills</a>
 
 ...the end.
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~ 0x/0x.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="center" width="100%">
+  <img src="./images/image00x.png"
+    style="width:40%"
+    alt="." />
+  <img src="./images/image00x.png"
+    style="width:40%"
+    alt="." />
+</p>
