@@ -8,13 +8,12 @@ output:
 ---
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="about">About this Course</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-<h1 style="align:center";>Advanced HTML &amp; CSS</h1>
-<h6 style="align:center">by Shay-Howe</h6>
+<h1 id="title"; style="align:center";>Advanced HTML &amp; CSS</h1>
+<h6 id="author"; style="align:center";>by Shay-Howe</h6>
 
-[Lesson 1] Performance & Organization
+<h2>[Lesson 1] Performance & Organization</h2>
 
 <h3>In this Lesson 1</h3>
 
@@ -75,52 +74,24 @@ intent, which includes creating directories for common base styles, user
 interface components, and business logic modules.
 
 ```
-| 1 | &#0035; Base                                                              |
-|   |                                                                      |
-| 2 | -- normalize.css                                                     |
-|   |                                                                      |
-| 3 | -- layout.css                                                        |
-|   |                                                                      |
-| 4 | -- typography.css                                                    |
-|   |                                                                      |
-| 5 | &#0035; Components                                                        |
-|   |                                                                      |
-| 6 | -- alerts.css                                                        |
-|   |                                                                      |
-| 7 | -- buttons.css                                                       |
-|   |                                                                      |
-| 8 | -- forms.css                                                         |
-|   |                                                                      |
-| 9 | -- list.css                                                          |
-|   |                                                                      |
-| 1 | -- nav.css                                                           |
-| 0 |                                                                      |
-|   | -- tables.css                                                        |
-| 1 |                                                                      |
-| 1 | &#0035; Modules                                                           |
-|   |                                                                      |
-| 1 | -- aside.css                                                         |
-| 2 |                                                                      |
-|   | -- footer.css                                                        |
-| 1 |                                                                      |
-| 3 | -- header.css                                                        |
-|   |                                                                      |
-| 1 |                                                                      |
-| 4 |                                                                      |
-|   |                                                                      |
-| 1 |                                                                      |
-| 5 |                                                                      |
-|   |                                                                      |
-| 1 |                                                                      |
-| 6 |                                                                      |
-|   |                                                                      |
-| 1 |                                                                      |
-| 7 |                                                                      |
-|   |                                                                      |
-| 1 |                                                                      |
-| 8 |                                                                      |
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+ 1   # Base
+ 2     -- normalize.css
+ 3     -- layout.css
+ 4     -- typography.css
+ 5  
+ 6   # Components
+ 7     -- alerts.css
+ 8     -- buttons.css
+ 9     -- forms.css
+ 10    -- list.css
+ 11    -- nav.css
+ 12    -- tables.css
+ 13  
+ 14  # Modules
+ 15    -- aside.css
+ 16    -- footer.css
+ 17    -- header.css
+ 18 
 ```
 
 The architecture outlined above includes three directories, all with
@@ -176,33 +147,23 @@ should look the same regardless of its parent container. To accomplish
 this, elements need to inherit default styles, then be extended with
 multiple classes as necessary.
 
-### <b>HTML</b>
+<h5>HTML</h5>
 
 ```
-+---+----------------------------------------------------------------------+
-| 1 | &lt;div class=&quot;alert alert-error&quot;&gt;                                  |
-|   |                                                                      |
-| 2 | &lt;p class=&quot;msg&quot;&gt;&#8230;&lt;/p&gt;                                        |
-|   |                                                                      |
-| 3 | &lt;/div&gt;                                                             |
-|   |                                                                      |
-| 4 |                                                                      |
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+ 1  <div class="alert alert-error">
+ 2    <p class="msg">...</p>
+ 3  </div>
+ 4 
 ```
 
-### <b>CSS</b>
+<h5>CSS</h5>
 
-+---+----------------------------------------------------------------------+
-| 1 | .alert {&#8230;}                                                        |
-|   |                                                                      |
-| 2 | .alert-error {&#8230;}                                                  |
-|   |                                                                      |
-| 3 | .msg {&#8230;}                                                          |
-|   |                                                                      |
-| 4 |                                                                      |
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
+ 1  .alert {...}
+ 2  .alert-error {...}
+ 3  .msg {...}
+ 4 
+```
 
 Object Oriented CSS advocates building a component library, staying
 flexible, and utilizing a grid. These are good ground rules, and they
@@ -701,8 +662,9 @@ sprite as a background on the span element. Then, using classes to
 change the background position of the image sprite, different icons can
 be shown accordingly.
 
-<b>HTML</b>
+<h5>HTML</h5>
 
+```
 +---+----------------------------------------------------------------------+
 | 1 | &lt;ul&gt;                                                               |
 |   |                                                                      |
@@ -737,12 +699,11 @@ be shown accordingly.
 |   | Text&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;                                           |
 |   |                                                                      |
 |   | &lt;/ul&gt;                                                              |
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+``
 
 <b>CSS</b>
 
-+---+----------------------------------------------------------------------+
+```
 | 1 | ul {                                                                 |
 |   |                                                                      |
 | 2 | margin: 0;                                                           |
@@ -898,8 +859,7 @@ be shown accordingly.
 |   |                                                                      |
 | 5 |                                                                      |
 | 5 |                                                                      |
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 ### Image Sprites Demo
 
@@ -923,23 +883,23 @@ generators]{.underline}](http://www.patternify.com/). Be careful though,
 and always double check to see that the actual data URI is less weight
 than the actual image.
 
-<b>HTML</b>
+<h5>HTML</h5>
 
-+---+----------------------------------------------------------------------+
+```
 | 1 | &lt;img height=&quot;100&quot; width=&quot;660&quot; alt=&quot;Rigged Pattern&quot;            |
 |   | src=&quot;data:image/png;base64,                                         |
-| 2 |                                                                      |
-|   | iVBORw0KGg                                                           |
-|   | oAAAANSUhEUgAAAAoAAAAICAYAAADA+m62AAAAPUlEQVQYV2NkQAO6m73+X/bdxoguji |
+| |                                                                      |
+| 2 | iVBORw0KGg                                                           |
+|    | oAAAANSUhEUgAAAAoAAAAICAYAAADA+m62AAAAPUlEQVQYV2NkQAO6m73+X/bdxoguji |
 |   |                                                                      |
 |   | IAU4RNMVwhuiQ6H6wQl3XI4oy4FMHcCJPHcDS6J2A2EqUQpJ                     |
 |   |                                                                      |
 |   | hohQAyIyYy0nBAGgAAAABJRU5ErkJggg==&quot;&gt;                               |
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
-<b>CSS</b>
+<h5>CSS</h5>
 
+```
 +---+----------------------------------------------------------------------+
 | 1 | div {                                                                |
 |   |                                                                      |
