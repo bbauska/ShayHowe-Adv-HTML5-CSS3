@@ -10,8 +10,8 @@ output:
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-<h1 id="title"; style="align:center";>Advanced HTML &amp; CSS</h1>
-<h6 id="author"; style="align:center";>by Shay-Howe</h6>
+<h1 id="title" style="text-align: center;">Advanced HTML &amp; CSS</h1>
+<h6 id="author" style="text-align: center;">by Shay-Howe</h6>
 
 <h2>[Lesson 1] Performance & Organization</h2>
 
