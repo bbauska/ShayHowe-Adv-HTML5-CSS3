@@ -1,4 +1,4 @@
----
+ ---
 title: "Shay & Howe's Advanced HTML and CSS"
 author: "Brian Bauska (bbauska)"
 date last editted: "3/25/2024 5 +pm"
@@ -221,7 +221,7 @@ In the example above the alert class falls into the module category
 while the is-error class falls into the state category. Styles from each
 of these categories are then inherited as necessary.
 
-### Choosing a Methodology
+<h4>Choosing a Methodology</h4>
 
 Choosing which methodology to use, if any, is completely [up to
 you](http://viget.com/inspire/css-squareoff) and what you
@@ -229,7 +229,7 @@ feel is best for a given website. Generally speaking, a solid mix of
 both OOCSS and SMACSS works well, borrowing principles from each
 methodology as you prefer.
 
-### Performance Driven Selectors
+<h4>Performance Driven Selectors</h4>
 
 One functionality of CSS often abused without awareness
 are [selectors](http://csswizardry.com/2011/09/writing-efficient-css-selectors/).
@@ -240,7 +240,7 @@ selected within CSS affects performance, including how fast a page
 renders as well as how practical and modular the styles are in the
 overall site architecture.
 
-### Keep Selectors Short
+<h4>Keep Selectors Short</h4>
 
 There are a handful of benefits to keeping CSS selectors as short as
 possible. These include minimizing specificity, allowing for better
@@ -455,7 +455,7 @@ all supported as noted within the request headers.
 Looking at the response headers identifies that the file was sent using
 the gzip compression encoding.
 
-### Image Compression
+<h4>Image Compression</h4>
 
 Cutting down the size of a text file helps, but you get even better
 results by compressing the file size of images. The total file size of
@@ -671,9 +671,9 @@ be shown accordingly.
     background-position: -144px 0;
 ```
 
-### Image Sprites Demo
+<h4>Image Sprites Demo</h4>
 
-### Image Data URI
+<h4>Image Data URI</h4>
 
 Additionally, instead of spriting images, the encoded data for an image
 can be included within HTML and CSS directly by way of the [data
@@ -715,9 +715,9 @@ than the actual image.
     MHcCJPHcDS6J2A2EqUQpJhohQAyIyYy0nBAGgAAAABJRU5ErkJggg==") repeat;
 ```
 
-### Image Data URI Demo
+<h4>Image Data URI Demo</h4>
 
-### Cache Common Files
+<h4>Cache Common Files</h4>
 
 Another way to help cut down HTTP requests, and to serve up pages
 faster, is to cache common files. When a page loads for the first time
@@ -750,7 +750,7 @@ are not version controlled with separate file names. For accepted
 expires header values reference
 the mod_expires [syntax](http://httpd.apache.org/docs/current/mod/mod_expires.html).
 
-### Resources & Links
+<h4>Resources & Links</h4>
 
 -   [Best Practices for Speeding Up Your Web
     Site](http://developer.yahoo.com/performance/rules.html) via
@@ -814,7 +814,7 @@ Following that, we'll cover more detailed positioning techniques,
 including how to precisely position elements on both the x and y axis as
 well as the z axis.
 
-### Containing Floats
+<h4>Containing Floats</h4>
 
 Floating elements is a natural process when building a website's layout,
 and is the instinctive method for positioning elements on a page. Floats
@@ -828,7 +828,7 @@ positioned around it. Will that element run into the one next to it?
 Will it appear on a new line? This all depends on the DOM (Document
 Object Model) and what surrounds an element.
 
-### What is the DOM?
+<h4>What is the DOM?</h4>
 
 The DOM, or Document Object Model, is an API for HTML and XML documents
 which provides their structural representation. In our case, we are
@@ -884,7 +884,7 @@ the .box-set division you will see it has a height of 0.
  10 
 ```
 
-### Containing Floats Demo
+<h4>Containing Floats Demo</h4>
 
 One way to force containing these floats would be to place an empty
 element just before the parent elements closing tag, of which would need
@@ -898,7 +898,7 @@ Fortunately there are a couple of different techniques we can use to
 contain these floats, the most popular of which include the overflow
 technique and the clearfix technique.
 
-### The Overflow Technique
+<h4>The Overflow Technique</h4>
 
 One technique for containing floats within a parent element is to use
 the CSS overflow property. Setting the overflow property value
@@ -919,7 +919,7 @@ element, in which it is better to use the overflow: hidden; declaration.
  4  
 ```
 
-### Overflow Technique Demo
+<h4>Overflow Technique Demo</h4>
 
 Using the overflow technique does come with a few drawbacks. For
 example, when adding styles or moving nested elements that span outside
@@ -933,9 +933,9 @@ could also implement scrollbars in different fashions here too. Look at
 the example below in different browsers, noticing how the columns
 display differently in each browser.
 
-### Overflow Pitfall Demo
+<h4>Overflow Pitfall Demo</h4>
 
-### The Clearfix Technique
+<h4>The Clearfix Technique</h4>
 
 Depending on the context of the floated elements a better technique to
 contain floats may be
@@ -978,9 +978,9 @@ element.
  13  
 ```
 
-### Clearfix Technique Demo
+<h4>Clearfix Technique Demo</h4>
 
-### Effectively Containing Floats
+<h4>Effectively Containing Floats</h4>
 
 Which techniques to use boils down to the content at hand and your
 personal preference. Some people prefer to stick strictly with the
@@ -1010,7 +1010,7 @@ to contain floats.
  12  }
 ```
 
-### Single Pseudo-Elements
+<h4>Single Pseudo-Elements</h4>
 
 It is worth noting only one :before and one :after pseudo-element are
 allowed per element, for the time being. When trying to use the clearfix
@@ -1021,7 +1021,7 @@ In the examples above, the clearfix styles would not live under
 the box-set class. Instead, the class of group would need to be added to
 the parent element containing the floats.
 
-### Position Property
+<h4>Position Property</h4>
 
 Occasionally you need more control over the position of an element, more
 than a float can provide, in which case the position property comes into
@@ -1030,7 +1030,7 @@ provide different ways to [uniquely
 position](http://www.alistapart.com/articles/css-positioning-101/) an
 element.
 
-### Position Static
+<h4>Position Static</h4>
 
 Elements by default have the position value of static, meaning they
 don't have, nor will they accept, any specific [box offset
@@ -1068,9 +1068,9 @@ specific direction.
  9  
 ```
 
-### Position Static Demo
+<h4>Position Static Demo</h4>
 
-### Position Relative
+<h4>Position Relative</h4>
 
 The relative value for the position property is very similar to that of
 the static value. The primary difference is that the relative value
@@ -1078,7 +1078,7 @@ accepts the box offset properties top, right, bottom, and left. These
 box offset properties allow the element to be precisely positioned,
 shifting the element from its default position in any direction.
 
-### How Box Offset Properties Work
+<h4>How Box Offset Properties Work</h4>
 
 The box offset properties, top, right, bottom, and left, specify how
 elements may be positioned, and in which direction. These offset
@@ -1153,7 +1153,7 @@ positioned elements default position.
  21 }
 ```
 
-### Position Relative Demo
+<h4>Position Relative Demo</h4>
 
 In the event that the top and bottom box offset properties are both
 declared on a relatively positioned element, the top properties will
@@ -1163,7 +1163,7 @@ given in the direction in which the language of the page is written. For
 example, in English pages the left offset property is given priority,
 and for Arabic pages the right offset property is given priority.
 
-### Position Absolute
+<h4>Position Absolute</h4>
 
 Absolutely positioned elements accept box offset properties, however
 they are removed from the normal flow of the document. Upon removing the
@@ -1237,7 +1237,7 @@ value.
  27  
 ```
 
-### Position Absolute Demo
+<h4>Position Absolute Demo</h4>
 
 When an element has a fixed height and width and is absolutely
 positioned, the top property takes priority should both
@@ -1255,7 +1255,7 @@ the left and right box offset properties. Using all four box offset
 properties will display an element with a full specified height and
 width.
 
-### Position Fixed
+<h4>Position Fixed</h4>
 
 Using the positioning value of fixed works just like that of absolute,
 however the positioning is relative to the browser viewport, and it does
@@ -1313,9 +1313,9 @@ and not the containing, relatively positioned parent.
  
 ```
 
-### Position Fixed Demo
+<h4>Position Fixed Demo</h4>
 
-### Fixed Header or Footer
+<h4>Fixed Header or Footer</h4>
 
 One of the most common uses of fixed positioning is to build a fixed
 header, or footer, anchored to one side of a page. As a user scrolls the
@@ -1351,9 +1351,9 @@ borders, and padding to be applied freely.
  11 
 ```
 
-### Fixed Footer Demo
+<h4>Fixed Footer Demo</h4>
 
-### Z-Index Property
+<h4>Z-Index Property</h4>
 
 By nature web pages are often considered to be two dimensional,
 displaying elements upon a x and y axis. However when you begin to
@@ -1427,9 +1427,9 @@ box three.
  2  
 ```
 
-### Z-Index Demo
+<h4>Z-Index Demo</h4>
 
-### Resources & Links
+<h4>Resources & Links</h4>
 
 <ul>
   <li><a href="https://css-tricks.com/all-about-floats/">All About Floats</a> via CSS-Tricks</li>
@@ -1482,7 +1482,7 @@ and improvements to existing practices. Here we'll
 discuss [selectors](http://net.tutsplus.com/tutorials/html-css-techniques/the-30-css-selectors-you-must-memorize/),
 old and new, and how to best put them to use.
 
-### Common Selectors
+<h4>Common Selectors</h4>
 
 Before diving too deep into some of the more complex selectors, and
 those offered within CSS3, let's take a quick look at some of the more
@@ -1516,7 +1516,7 @@ be used once per page.
  5                                                                       
 ```
 
-### Common Selectors Overview
+<h4>Common Selectors Overview</h4>
 
 ```
   ----------------------------------------------------------------------------------------------------------
@@ -1531,14 +1531,14 @@ be used once per page.
                                                        is unique and to only be used once per page
   ----------------------------------------------------------------------------------------------------------
 
-### Child Selectors
+<h4>Child Selectors</h4>
 
 Child selectors provide a way to select elements that fall within one
 another, thus making them children of their parent element. These
 selections can be made two different ways, using either descendant or
 direct child selectors.
 
-### Descendant Selector
+<h4>Descendant Selector</h4>
 
 The most common child selector is the descendant selector, which matches
 every element that follows an identified ancestor. The descendant
@@ -1586,7 +1586,7 @@ Below, the headings on lines 3 and 5 are selected.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-### Direct Child Selector
+<h4>Direct Child Selector</h4>
 
 Sometimes descendant selectors go a bit overboard, selecting more than
 hoped. At times only the direct children of a parent element need to be
@@ -1633,7 +1633,7 @@ article, thus selected.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-### Child Selectors Overview
+<h4>Child Selectors Overview</h4>
 
   -----------------------------------------------------------------------------------------------
   <b>[Example]{.mark}</b>   <b>[Classification]{.mark}</b>   <b>[Explanation]{.mark}</b>
@@ -1646,7 +1646,7 @@ article, thus selected.
                                                        element
   -----------------------------------------------------------------------------------------------
 
-### Sibling Selectors
+<h4>Sibling Selectors</h4>
 
 Knowing how to [select
 children](https://css-tricks.com/child-and-sibling-selectors/) of
@@ -1655,7 +1655,7 @@ sibling elements, those elements that share a common parent, may also
 need to be selected. These sibling selections can be made by way of the
 general sibling and adjacent sibling selectors.
 
-### General Sibling Selector
+<h4>General Sibling Selector</h4>
 
 The general sibling selector allow elements to be selected based on
 their sibling elements, those which share the same common parent. They
@@ -1710,7 +1710,7 @@ sibling heading.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-### Adjacent Sibling Selector
+<h4>Adjacent Sibling Selector</h4>
 
 Occasionally a little more control may be desired, including the ability
 to select a sibling element that directly follows after another sibling
@@ -1769,7 +1769,7 @@ selected.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-### Sibling Selectors Example
+<h4>Sibling Selectors Example</h4>
 
 <b>HTML</b>
 
@@ -1955,9 +1955,9 @@ selected.
 +===+===================================================================+
 +---+-------------------------------------------------------------------+
 
-### Demo
+<h4>Demo</h4>
 
-### Sibling Selectors Overview
+<h4>Sibling Selectors Overview</h4>
 
   ------------------------------------------------------------------------------------------------------
   <b>[Example]{.mark}</b>   <b>[Classification]{.mark}</b>   <b>[Explanation]{.mark}</b>
@@ -1971,7 +1971,7 @@ selected.
                                                        the same parent
   ------------------------------------------------------------------------------------------------------
 
-### Attribute Selectors
+<h4>Attribute Selectors</h4>
 
 Some of the common selectors looked at early may also be defined as
 attribute selectors, in which an element is selected based upon its
@@ -1982,7 +1982,7 @@ emerged over the years, specifically taking a large leap forward with
 CSS3. Now elements can be selected based on whether an attribute is
 present and what its value may contain.
 
-### Attribute Present Selector
+<h4>Attribute Present Selector</h4>
 
 The first attribute selector identifies an element based on whether it
 includes an attribute or not, regardless of any actual value. To select
@@ -2009,7 +2009,7 @@ class, all depending on the level of specificity desired.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-### Attribute Equals Selector
+<h4>Attribute Equals Selector</h4>
 
 To identify an element with a specific, and exact matching, attribute
 value the same selector from before may be used, however this time
@@ -2036,7 +2036,7 @@ inside of the quotations should be the desired matching attribute value.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-### Attribute Contains Selector
+<h4>Attribute Contains Selector</h4>
 
 When looking to find an element based on part of an attribute value, but
 not an exact match, the asterisk character, &ast;, may be used within the
@@ -2063,7 +2063,7 @@ attribute value.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-### Attribute Begins With Selector
+<h4>Attribute Begins With Selector</h4>
 
 In addition to selecting an element based on if an attribute value
 contains a stated value, it is also possible to select an element based
@@ -2090,7 +2090,7 @@ stated value.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-### Attribute Ends With Selector
+<h4>Attribute Ends With Selector</h4>
 
 Opposite of the begins with selector, there is also an ends with
 attribute selector. Instead of using the circumflex accent, the ends
@@ -2117,7 +2117,7 @@ stated value.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-### Attribute Spaced Selector
+<h4>Attribute Spaced Selector</h4>
 
 At times attribute values may be spaced apart, in which only one of the
 words needs to be matched in order to make a selection. In this event
@@ -2144,7 +2144,7 @@ stated value.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-### Attribute Hyphenated Selector
+<h4>Attribute Hyphenated Selector</h4>
 
 When an attribute value is hyphen-separated, rather than
 whitespace-separated, the vertical line character, &#0124;, may be used
@@ -2171,7 +2171,7 @@ stated value.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-### Attribute Selectors Example
+<h4>Attribute Selectors Example</h4>
 
 **HTML**
 
@@ -2283,9 +2283,9 @@ stated value.
 +===+===================================================================+
 +---+-------------------------------------------------------------------+
 
-### Demo
+<h4>Demo</h4>
 
-### Attribute Selectors Overview
+<h4>Attribute Selectors Overview</h4>
 
   ----------------------------------------------------------------------------------------------------
   **[Example]{.mark}**               **[Classification]{.mark}**   **[Explanation]{.mark}**
@@ -2319,7 +2319,7 @@ stated value.
                                                                    and begins with the word stated
   ----------------------------------------------------------------------------------------------------
 
-### Pseudo-classes
+<h4>Pseudo-classes</h4>
 
 [Pseudo-classes](http://coding.smashingmagazine.com/2011/03/30/how-to-use-css3-pseudo-classes/) are
 similar to regular classes in HTML however they are not directly stated
@@ -2329,7 +2329,7 @@ and one you've likely seen before, is :hover. Notice how this
 pseudo-class begins with the colon character, :, as will all other
 pseudo-classes.
 
-### Link Pseudo-classes
+<h4>Link Pseudo-classes</h4>
 
 Some of the more basic pseudo-classes include two revolving around links
 specifically. The :link and :visited pseudo-classes define if a link has
@@ -2338,16 +2338,13 @@ the :link pseudo-class comes into play, where the :visited pseudo-class
 styles links that a user has already visited based on their browsing
 history.
 
-+---+----------------------------------------------------------------------+
+```
  1  a:link {&#8230;}                                                        
-                                                                         
  2  a:visited {&#8230;}                                                     
-                                                                         
  3                                                                       
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
-### User Action Pseudo-classes
+<h4>User Action Pseudo-classes</h4>
 
 Based on a users' actions different pseudo-classes may be dynamically
 applied to an element, of which include the :hover, :active,
@@ -2359,18 +2356,14 @@ Lastly, the :focus pseudo-class is applied to an element when a user has
 made an element the focus point of the page, often by using the keyboard
 to tab from one element to another.
 
-+---+----------------------------------------------------------------------+
+```
  1  a:hover {&#8230;}                                                       
-                                                                         
  2  a:active {&#8230;}                                                      
-                                                                         
  3  a:focus {&#8230;}                                                       
-                                                                         
  4                                                                       
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
-### User Interface State Pseudo-classes
+<h4>User Interface State Pseudo-classes</h4>
 
 As with the link pseudo-classes there are also some pseudo-classes
 generated around the user interface state of elements, particularly
@@ -2384,14 +2377,11 @@ browsers by default will fade out disabled inputs to inform users that
 the input is not available for interaction, however those styles may be
 adjusted as wished with the :disabled pseudo-class.
 
-+---+----------------------------------------------------------------------+
+```
  1  input:enabled {&#8230;}                                                 
-                                                                         
  2  input:disabled {&#8230;}                                                
-                                                                         
  3                                                                       
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 The last two user interface element state pseudo-classes
 of :checked and :indeterminate revolve around checkbox and radio button
@@ -2401,16 +2391,12 @@ button has neither been selected nor unselected it lives in an
 indeterminate state, from which the :indeterminate pseudo-class can be
 used to target these elements.
 
-+---+----------------------------------------------------------------------+
+```
  1  input:checked {&#8230;}                                                 
-                                                                         
  2  input:indeterminate {&#8230;}                                           
-                                                                         
- 3                                                                       
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
-### Structural & Position Pseudo-classes
+<h4>Structural & Position Pseudo-classes</h4>
 
 A handful of pseudo-classes are structural and position based, in which
 they are determined based off where elements reside in the document
@@ -2420,7 +2406,8 @@ function. Some pseudo-classes have been around longer than others,
 however CSS3 brought way of an entire new set of pseudo-classes to
 supplement the existing ones.
 
-**:first-child, :last-child, & :only-child**
+<h3>:first-child, :last-child, &amp; :only-child</h3>
+
 
 The first structural and position based pseudo-classes one is likely to
 come across are the :first-child, :last-child,
@@ -2444,50 +2431,31 @@ list item.
 
 **CSS**
 
-+---+----------------------------------------------------------------------+
+```
  1  li:first-child {&#8230;}                                                
-                                                                         
  2  li:last-child {&#8230;}                                                 
-                                                                         
  3  div:only-child {&#8230;}                                                
-                                                                         
  4                                                                       
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 **HTML**
 
-+---+----------------------------------------------------------------------+
+```
  1  <ul>                                                               
-                                                                         
  2  <li>This list item will be selected</li>                         
-                                                                         
  3  <li>                                                               
-                                                                         
  4  <div>This div will be selected</div>                             
-                                                                         
  5  </li>                                                              
-                                                                         
  6  <li>                                                               
-                                                                         
  7  <div>&#8230;</div>                                                  
-                                                                         
  8  <div>&#8230;</div>                                                  
-                                                                         
  9  </li>                                                              
-                                                                         
  1  <li>This list item will be selected</li>                         
- 0                                                                       
     </ul>                                                              
- 1                                                                       
- 1                                                                       
-                                                                         
- 1                                                                       
  2                                                                       
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
-**:first-of-type, :last-of-type, & :only-of-type**
+<h3>:first-of-type, :last-of-type, &amp; :only-of-type</h3>
 
 Finding the first, last, and only children of a parent is pretty
 helpful, and often all that is needed. However sometimes you only want
@@ -2513,39 +2481,26 @@ the only image to appear within the article, thus also selected.
 
 **CSS**
 
-+---+----------------------------------------------------------------------+
+```
  1  p:first-of-type {&#8230;}                                               
-                                                                         
  2  p:last-of-type {&#8230;}                                                
-                                                                         
  3  img:only-of-type {&#8230;}                                              
-                                                                         
  4                                                                       
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 **HTML**
 
-+---+----------------------------------------------------------------------+
+```
  1  <article>                                                          
-                                                                         
  2  <h1>&#8230;</h1>                                                    
-                                                                         
  3  <p>This paragraph will be selected</p>                           
-                                                                         
  4  <p>&#8230;</p>                                                      
-                                                                         
  5  <img src="#"><!&#45;&#45; This image will be selected &#45;&#45;>            
-                                                                         
  6  <p>This paragraph will be selected</p>                           
-                                                                         
  7  <h6>&#8230;</h6>                                                    
-                                                                         
  8  </article>                                                         
-                                                                         
  9                                                                       
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 Lastly there are a few structural and position based pseudo-classes that
 select elements based on a number or an algebraic expression. These
@@ -2562,7 +2517,7 @@ document tree and then select one element, while using an expression
 will count numerous elements from the beginning or end of the document
 tree and select them in groups or multiples.
 
-### Using Pseudo-class Numbers & Expressions
+<h4>Using Pseudo-class Numbers &amp; Expressions</h4>
 
 As mentioned, using numbers outright within a pseudo-class will count
 from the beginning, or end, of the document tree and select one element
@@ -2620,7 +2575,7 @@ selector li:nth-child(-n+9) will select the first nine list items within
 a list, as the n argument, without any stated a variable, is defaulted
 to -1.
 
-### :nth-child(n) & :nth-last-child(n)
+<h4>:nth-child(n) & :nth-last-child(n)</h4>
 
 With a general understanding of how the pseudo-class numbers and
 expressions work let's take a look at the actual pseudo-classes in which
@@ -2639,35 +2594,22 @@ third list item, thus lines 4 and 7 are selected.
 
 **CSS**
 
-+---+----------------------------------------------------------------------+
+```
  1  li:nth-child(3n) {&#8230;}                                              
-                                                                         
- 2                                                                       
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 **HTML**
 
-+---+----------------------------------------------------------------------+
+```
  1  <ul>                                                               
-                                                                         
  2  <li>&#8230;</li>                                                    
-                                                                         
  3  <li>&#8230;</li>                                                    
-                                                                         
  4  <li>This list item will be selected</li>                         
-                                                                         
  5  <li>&#8230;</li>                                                    
-                                                                         
  6  <li>&#8230;</li>                                                    
-                                                                         
  7  <li>This list item will be selected</li>                         
-                                                                         
  8  </ul>                                                              
-                                                                         
- 9                                                                       
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 Using a different expression within the :nth-child(n) pseudo-class will
 yield a different selection. The li:nth-child(2n+3) selector, for
@@ -2676,35 +2618,23 @@ and then onward. As a result, the list items lines 4 and 6 are selected.
 
 **CSS**
 
-+---+----------------------------------------------------------------------+
+```
  1  li:nth-child(2n+3) {&#8230;}                                            
-                                                                         
- 2                                                                       
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 **HTML**
 
-+---+----------------------------------------------------------------------+
+```
  1  <ul>                                                               
-                                                                         
  2  <li>&#8230;</li>                                                    
-                                                                         
  3  <li>&#8230;</li>                                                    
-                                                                         
  4  <li>This list item will be selected</li>                         
-                                                                         
  5  <li>&#8230;</li>                                                    
-                                                                         
  6  <li>This list item will be selected</li>                         
-                                                                         
  7  <li>&#8230;</li>                                                    
-                                                                         
  8  </ul>                                                              
-                                                                         
  9                                                                       
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 Changing the expression again, this time with a negative value, yields
 new selection. Here the li:nth-child(-n+4) selector is identifying the
@@ -2713,35 +2643,24 @@ lines 2 through 5 are selected.
 
 **CSS**
 
-+---+----------------------------------------------------------------------+
+```
  1  li:nth-child(-n+4) {&#8230;}                                            
-                                                                         
- 2                                                                       
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+ 2 
+```
 
 **HTML**
 
-+---+----------------------------------------------------------------------+
+```
  1  <ul>                                                               
-                                                                         
  2  <li>This list item will be selected</li>                         
-                                                                         
  3  <li>This list item will be selected</li>                         
-                                                                         
  4  <li>This list item will be selected</li>                         
-                                                                         
  5  <li>This list item will be selected</li>                         
-                                                                         
  6  <li>&#8230;</li>                                                    
-                                                                         
  7  <li>&#8230;</li>                                                    
-                                                                         
  8  </ul>                                                              
-                                                                         
  9                                                                       
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 Adding a negative integer before the n argument changes the selection
 again. Here the li:nth-child(-2n+5) selector identifies every second
@@ -2750,35 +2669,22 @@ item, thus the list items on lines 2, 4, and 6 are selected.
 
 **CSS**
 
-+---+----------------------------------------------------------------------+
+```
  1  li:nth-child(-2n+5) {&#8230;}                                           
-                                                                         
- 2                                                                       
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 **HTML**
 
-+---+----------------------------------------------------------------------+
+```
  1  <ul>                                                               
-                                                                         
  2  <li>This list item will be selected</li>                         
-                                                                         
  3  <li>&#8230;</li>                                                    
-                                                                         
  4  <li>This list item will be selected</li>                         
-                                                                         
  5  <li>&#8230;</li>                                                    
-                                                                         
  6  <li>This list item will be selected</li>                         
-                                                                         
  7  <li>&#8230;</li>                                                    
-                                                                         
  8  </ul>                                                              
-                                                                         
- 9                                                                       
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 Changing from the :nth-child(n) pseudo-class to
 the :nth-last-child(n) pseudo-class switches the direction of counting,
@@ -2789,39 +2695,27 @@ third list item starting from the second to last item in a list, moving
 towards the beginning of the list. Here the list items on lines 3 and 6
 are selected.
 
-**CSS**
+<h4>CSS</h4>
 
-+---+----------------------------------------------------------------------+
+```
  1  li:nth-last-child(3n+2) {&#8230;}                                       
                                                                          
- 2                                                                       
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
-**HTML**
+<h4>HTML</h4>
 
-+---+----------------------------------------------------------------------+
+```
  1  <ul>                                                               
-                                                                         
  2  <li>&#8230;</li>                                                    
-                                                                         
  3  <li>This list item will be selected</li>                         
-                                                                         
  4  <li>&#8230;</li>                                                    
-                                                                         
  5  <li>&#8230;</li>                                                    
-                                                                         
  6  <li>This list item will be selected</li>                         
-                                                                         
  7  <li>&#8230;</li>                                                    
-                                                                         
  8  </ul>                                                              
-                                                                         
- 9                                                                       
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
-### :nth-of-type(n) & :nth-last-of-type(n)
+<h4>:nth-of-type(n) & :nth-last-of-type(n)
 
 The :nth-of-type(n) and :nth-last-of-type(n) pseudo-classes are very
 similar to that of
@@ -2844,43 +2738,27 @@ the p:nth-of-type(3n) selector we are able to identify every third
 paragraph within a parent, regardless of other sibling elements within
 the parent. Here the paragraphs on lines 5 and 9 are selected.
 
-**CSS**
+<h4>CSS</h4>
 
-+---+----------------------------------------------------------------------+
+```
  1  p:nth-of-type(3n) {&#8230;}                                             
-                                                                         
- 2                                                                       
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
-**HTML**
+<h4>HTML</h4>
 
-+---+----------------------------------------------------------------------+
+```
  1  <article>                                                          
-                                                                         
  2  <h1>&#8230;</h1>                                                    
-                                                                         
  3  <p>&#8230;</p>                                                      
-                                                                         
  4  <p>&#8230;</p>                                                      
-                                                                         
  5  <p>This paragraph will be selected</p>                           
-                                                                         
  6  <h2>&#8230;</h2>                                                    
-                                                                         
  7  <p>&#8230;</p>                                                      
-                                                                         
  8  <p>&#8230;</p>                                                      
-                                                                         
  9  <p>This paragraph will be selected</p>                           
-                                                                         
- 1  </article>                                                         
- 0                                                                       
-                                                                         
- 1                                                                       
- 1                                                                       
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+ 10  </article>                                                         
+ 11 
+```
 
 As with the :nth-child(n) and :nth-last-child(n) pseudo-classes, the
 primary difference between
@@ -2894,45 +2772,30 @@ the p:nth-last-of-type(2n+1) selector which identifies every second
 paragraph from the end of a parent element starting with the last
 paragraph. Here the paragraphs on lines 4, 7, and 9 are selected.
 
-**CSS**
+<h4>CSS</h4>
 
-+---+----------------------------------------------------------------------+
- 1  p:nth-last-of-type(2n+1) {&#8230;}                                      
-                                                                         
- 2                                                                       
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
+ 1  p:nth-last-of-type(2n+1) {&#8230;}
+ 2  
+```
 
-**HTML**
+<h4>HTML</h4>
 
-+---+----------------------------------------------------------------------+
+```
  1  <article>                                                          
-                                                                         
  2  <h1>&#8230;</h1>                                                    
-                                                                         
  3  <p>&#8230;</p>                                                      
-                                                                         
  4  <p>This paragraph will be selected</p>                           
-                                                                         
  5  <p>&#8230;</p>                                                      
-                                                                         
  6  <h2>&#8230;</h2>                                                    
-                                                                         
  7  <p>This paragraph will be selected</p>                           
-                                                                         
  8  <p>&#8230;</p>                                                      
-                                                                         
  9  <p>This paragraph will be selected</p>                           
-                                                                         
- 1  </article>                                                         
- 0                                                                       
-                                                                         
- 1                                                                       
- 1                                                                       
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+ 10 </article>                                                         
+ 11                                                                       
+```
 
-### Target Pseudo-class
+<h4>Target Pseudo-class</h4>
 
 The :target pseudo-class is used to style elements when an element's ID
 attribute value matches that of the URI fragment identifier. The
@@ -2953,25 +2816,21 @@ the URI fragment identifier changes, and matches the ID attribute value
 of another section, that new section may be stylized using the same
 selector and pseudo-class from before.
 
-**CSS**
+<h4>CSS</h4>
 
-+---+----------------------------------------------------------------------+
- 1  section:target {&#8230;}                                                
-                                                                         
- 2                                                                       
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
+ 1  section:target {&#8230;}
+ 2  
+```
 
-**HTML**
+<h4>HTML</h4>
 
-+---+----------------------------------------------------------------------+
- 1  <section id="hello">&#8230;</section>                             
-                                                                         
- 2                                                                       
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
+ 1  <section id="hello">&#8230;</section>
+ 2  
+```
 
-### Empty Pseudo-class
+<h4>Empty Pseudo-class</h4>
 
 The :empty pseudo-class allows elements that do not contain children or
 text nodes to be selected. Comments, processing instructions, and empty
@@ -2986,33 +2845,26 @@ contains one blank text space, and the last division contains
 a strong child element, thus they are all ruled out and are not
 selected.
 
-**CSS**
+<h4>CSS</h4>
 
-+---+----------------------------------------------------------------------+
+```
  1  div:empty {&#8230;}                                                     
-                                                                         
  2                                                                       
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
-**HTML**
+<h4>HTML</h4>
 
-+---+----------------------------------------------------------------------+
+```
  1  <div>Hello</div>                                                 
-                                                                         
  2  <div><!&#45;&#45; Coming soon &#45;&#45;></div><!&#45;&#45; This div will be       
     selected &#45;&#45;>                                                       
- 3                                                                       
     <div></div><!&#45;&#45; This div will be selected &#45;&#45;>                
- 4                                                                       
     <div> </div>                                                     
- 5                                                                       
     <div><strong></strong></div>                                 
- 6                                                                       
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+ 6  
+```
 
-### Negation Pseudo-class
+<h4>Negation Pseudo-class</h4>
 
 The negation pseudo-class, :not(x), is a pseudo-class that takes an
 argument which is filtered out from the selection to be made.
@@ -3031,227 +2883,108 @@ thus they are marked bold. The only element not selected is the division
 with the class of awesome, as it falls outside of the two negation
 pseudo-classes.
 
-**CSS**
+<h4>CSS</h4>
 
-+---+----------------------------------------------------------------------+
- 1  div:not(.awesome) {&#8230;}                                             
-                                                                         
- 2  :not(div) {&#8230;}                                                     
-                                                                         
- 3                                                                       
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
+ 1  div:not(.awesome) {&#8230;}
+ 2  :not(div) {&#8230;}
+ 3  
+```
 
-**HTML**
+<h4>HTML</h4>
 
-+---+----------------------------------------------------------------------+
+```
  1  <div>This div will be selected</div>                             
-                                                                         
  2  <div class="awesome">&#8230;</div>                                
-                                                                         
  3  <section>This section will be selected</section>                 
-                                                                         
  4  <section class="awesome">This section will be                    
     selected</section>                                                 
  5                                                                       
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
-### Pseudo-classes Example
+<h4>Pseudo-classes Example</h4>
 
-**HTML**
+<h4>HTML</h4>
 
-+---+-------------------------------------------------------------------+
- 1  <table>                                                         
-                                                                      
- 2  <thead>                                                         
-                                                                      
- 3  <tr>                                                            
-                                                                      
- 4  <th>Number</th>                                               
-                                                                      
- 5  <th>Player</th>                                               
-                                                                      
- 6  <th>Position</th>                                             
-                                                                      
- 7  <th>Height</th>                                               
-                                                                      
- 8  <th>Weight</th>                                               
-                                                                      
- 9  </tr>                                                           
-                                                                      
- 1  </thead>                                                        
- 0                                                                    
-    <tbody>                                                         
- 1                                                                    
- 1  <tr>                                                            
-                                                                      
- 1  <td>8</td>                                                    
- 2                                                                    
-    <td>Marco Belinelli</td>                                      
- 1                                                                    
- 3  <td>G</td>                                                    
-                                                                      
- 1  <td>6-5</td>                                                  
- 4                                                                    
-    <td>195</td>                                                  
- 1                                                                    
- 5  </tr>                                                           
-                                                                      
- 1  <tr>                                                            
- 6                                                                    
-    <td>5</td>                                                    
- 1                                                                    
- 7  <td>Carlos Boozer</td>                                        
-                                                                      
- 1  <td>F</td>                                                    
- 8                                                                    
-    <td>6-9</td>                                                  
- 1                                                                    
- 9  <td>266</td>                                                  
-                                                                      
- 2  </tr>                                                           
- 0                                                                    
-    &#8230;                                                              
- 2                                                                    
- 1  </tbody>                                                        
-                                                                      
- 2  </table>                                                        
- 2                                                                    
-                                                                      
- 2                                                                    
- 3                                                                    
-                                                                      
- 2                                                                    
- 4                                                                    
-                                                                      
- 2                                                                    
- 5                                                                    
-                                                                      
- 2                                                                    
- 6                                                                    
-                                                                      
- 2                                                                    
- 7                                                                    
-                                                                      
- 2                                                                    
- 8                                                                    
-                                                                      
- 2                                                                    
- 9                                                                    
-+===+===================================================================+
-+---+-------------------------------------------------------------------+
+```
+ 1  <table>
+ 2  <thead>
+ 3  <tr>
+ 4  <th>Number</th>
+ 5  <th>Player</th>
+ 6  <th>Position</th>
+ 7  <th>Height</th>
+ 8  <th>Weight</th>
+ 9  </tr>
+ 10  </thead>
+ 11   <tbody>
+ 12  <tr>
+ 13  <td>8</td>
+ 14   <td>Marco Belinelli</td>
+ 15  <td>G</td>
+ 16  <td>6-5</td>
+ 17   <td>195</td>
+ 18  </tr>
+ 19  <tr>
+ 20   <td>5</td>
+ 21  <td>Carlos Boozer</td>
+ 22  <td>F</td>
+ 23   <td>6-9</td>
+ 24  <td>266</td>
+ 25  </tr>
+ 26   &#8230;
+ 27  </tbody>
+ 28  </table>
+ 29  
+```
 
-**CSS**
 
-+---+-------------------------------------------------------------------+
- 1  table {                                                           
-                                                                      
+<h4>CSS</h4>
+
+```
+ 1  table {
  2  border-collapse: separate;                                        
-                                                                      
  3  border-spacing: 0;                                                
-                                                                      
  4  width: 100%;                                                      
-                                                                      
- 5  }                                                                 
-                                                                      
- 6  th,                                                               
-                                                                      
- 7  td {                                                              
-                                                                      
+ 5  }
+ 6  th,
+ 7  td {
  8  padding: 6px 15px;                                                
+ 9  }
+ 10  th {
+ 11   background: #42444e;                                              
+ 12  color: #fff;                                                      
+ 13  text-align: left;                                                 
+ 14   }
+ 15  tr:first-child th:first-child {                                   
+ 16  border-top-left-radius: 6px;                                      
+ 17   }
+ 18  tr:first-child th:last-child {                                    
+ 19  border-top-right-radius: 6px;                                     
+ 20   }
+ 21  td {
+ 22  border-right: 1px solid #c6c9cc;                                  
+ 23   border-bottom: 1px solid #c6c9cc;                                 
+ 24  }
+ 25  td:first-child {                                                  
+ 26   border-left: 1px solid #c6c9cc;                                   
+ 27  }
+ 28  tr:nth-child(even) td {                                           
+ 29   background: #eaeaed;                                              
+ 30  }
+ 31  tr:last-child td:first-child {                                    
+ 32   border-bottom-left-radius: 6px;                                   
+ 33  }
+ 34  tr:last-child td:last-child {
+ 35   border-bottom-right-radius: 6px;
+ 36  }
+ 37  
+```
                                                                       
- 9  }                                                                 
-                                                                      
- 1  th {                                                              
- 0                                                                    
-    background: #42444e;                                              
- 1                                                                    
- 1  color: #fff;                                                      
-                                                                      
- 1  text-align: left;                                                 
- 2                                                                    
-    }                                                                 
- 1                                                                    
- 3  tr:first-child th:first-child {                                   
-                                                                      
- 1  border-top-left-radius: 6px;                                      
- 4                                                                    
-    }                                                                 
- 1                                                                    
- 5  tr:first-child th:last-child {                                    
-                                                                      
- 1  border-top-right-radius: 6px;                                     
- 6                                                                    
-    }                                                                 
- 1                                                                    
- 7  td {                                                              
-                                                                      
- 1  border-right: 1px solid #c6c9cc;                                  
- 8                                                                    
-    border-bottom: 1px solid #c6c9cc;                                 
- 1                                                                    
- 9  }                                                                 
-                                                                      
- 2  td:first-child {                                                  
- 0                                                                    
-    border-left: 1px solid #c6c9cc;                                   
- 2                                                                    
- 1  }                                                                 
-                                                                      
- 2  tr:nth-child(even) td {                                           
- 2                                                                    
-    background: #eaeaed;                                              
- 2                                                                    
- 3  }                                                                 
-                                                                      
- 2  tr:last-child td:first-child {                                    
- 4                                                                    
-    border-bottom-left-radius: 6px;                                   
- 2                                                                    
- 5  }                                                                 
-                                                                      
- 2  tr:last-child td:last-child {                                     
- 6                                                                    
-    border-bottom-right-radius: 6px;                                  
- 2                                                                    
- 7  }                                                                 
-                                                                      
- 2                                                                    
- 8                                                                    
-                                                                      
- 2                                                                    
- 9                                                                    
-                                                                      
- 3                                                                    
- 0                                                                    
-                                                                      
- 3                                                                    
- 1                                                                    
-                                                                      
- 3                                                                    
- 2                                                                    
-                                                                      
- 3                                                                    
- 3                                                                    
-                                                                      
- 3                                                                    
- 4                                                                    
-                                                                      
- 3                                                                    
- 5                                                                    
-                                                                      
- 3                                                                    
- 6                                                                    
-                                                                      
- 3                                                                    
- 7                                                                    
-+===+===================================================================+
-+---+-------------------------------------------------------------------+
 
-### Demo
+<h4>Demo</h4>
 
-### Pseudo-classes Overview
+<h4>Pseudo-classes Overview</h4>
 
   --------------------------------------------------------------------------------------------------
   **[Example]{.mark}**       **[Classification]{.mark}**   **[Explanation]{.mark}**
@@ -3355,37 +3088,28 @@ the first line of the paragraph with the class of bravo. These
 selections are made by use of the :first-letter and :first-line textual
 pseudo-elements respectively.
 
-**CSS**
+<h4>CSS</h4>
 
-+---+----------------------------------------------------------------------+
+```
  1  .alpha:first-letter,                                                 
-                                                                         
  2  .bravo:first-line {                                                  
-                                                                         
  3  color: #ff7b29;                                                      
-                                                                         
  4  font-size: 18px;                                                     
-                                                                         
  5  }                                                                    
-                                                                         
  6                                                                       
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
-HTML
+<h4>HTML</h4>
 
-+---+----------------------------------------------------------------------+
+```
  1  <p class="alpha">Lorem ipsum dolor&#8230;</p>                     
-                                                                         
  2  <p class="bravo">Integer eget enim&#8230;</p>                     
-                                                                         
  3                                                                       
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
-### Textual Pseudo-elements Demo
+<h4>Textual Pseudo-elements Demo</h4>
 
-### Generated Content Pseudo-elements
+<h4>Generated Content Pseudo-elements</h4>
 
 The :before and :after generated content pseudo-elements create new
 inline level pseudo-elements just inside the selected element. Most
@@ -3404,37 +3128,29 @@ the href attribute value of anchor links within parentheses after the
 actual links. The information here is helpful, but not ultimately
 necessary should a browser not support these pseudo-elements.
 
-**CSS**
+<h4>CSS</h4>
 
-+---+----------------------------------------------------------------------+
+```
  1  a:after {                                                            
-                                                                         
  2  color: #9799a7;                                                      
-                                                                         
  3  content: " (" attr(href) ")";                                    
-                                                                         
  4  font-size: 11px;                                                     
-                                                                         
  5  }                                                                    
-                                                                         
  6                                                                       
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
-**HTML**
+<h4>HTML</h4>
 
-+---+----------------------------------------------------------------------+
+```
  1  <a href="http://google.com/">Search the Web</a>                
-                                                                         
  2  <a href="http://learn.shayhowe.com/">Learn How to Build          
     Websites</a>                                                       
  3                                                                       
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
-### Generated Content Pseudo-elements Demo
+<h4>Generated Content Pseudo-elements Demo</h4>
 
-### Fragment Pseudo-element
+<h4>Fragment Pseudo-element</h4>
 
 The ::selection fragment pseudo-element identifies part of the document
 that has been selected, or highlighted, by a user's actions. The
@@ -3444,7 +3160,7 @@ is worth noting, the background-image property is ignore. While the
 shorthand background property may be used to add a color, any images
 will be ignored.
 
-### Single Colon (:) versus Double Colons (::)
+<h4>Single Colon (:) versus Double Colons (::)</h4>
 
 The fragment pseudo-element was added with CSS3 and in attempt to
 differentiate pseudo-classes from pseudo-elements the double colons were
@@ -3458,155 +3174,77 @@ thanks to the ::selection fragment pseudo-element. Also note,
 the ::-moz-selection Mozilla prefixed fragment pseudo-element has been
 added to ensure the best support for all browsers.
 
-+---+----------------------------------------------------------------------+
+```
  1  ::-moz-selection {                                                   
-                                                                         
  2  background: #ff7b29;                                                 
-                                                                         
  3  }                                                                    
-                                                                         
  4  ::selection {                                                        
-                                                                         
  5  background: #ff7b29;                                                 
-                                                                         
  6  }                                                                    
-                                                                         
  7                                                                       
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
-### Fragment Pseudo-element Demo
+<h4>Fragment Pseudo-element Demo</h4>
 
-### Pseudo-elements Example
+<h4>Pseudo-elements Example</h4>
 
-### **HTML**
+<h4>HTML</h4>
 
-+---+--------------------------------------------------------------------+
- 1  <a class="arrow" href="#">Continue Reading</a>             
-                                                                       
- 2                                                                     
-+===+====================================================================+
-+---+--------------------------------------------------------------------+
+```
+ 1  <a class="arrow" href="#">Continue Reading</a>
+ 2  
+```
 
 **CSS**
 
-+---+-------------------------------------------------------------------+
+```
  1  .arrow {                                                          
-                                                                      
  2  background: #2db34a;                                              
-                                                                      
  3  color: #fff;                                                      
-                                                                      
  4  display: inline-block;                                            
-                                                                      
  5  height: 30px;                                                     
-                                                                      
  6  line-height: 30px;                                                
-                                                                      
  7  padding: 0 12px;                                                  
-                                                                      
  8  position: relative;                                               
-                                                                      
  9  text-decoration: none;                                            
-                                                                      
- 1  }                                                                 
- 0                                                                    
-    .arrow:before,                                                    
- 1                                                                    
- 1  .arrow:after {                                                    
-                                                                      
- 1  content: "";                                                    
- 2                                                                    
-    height: 0;                                                        
- 1                                                                    
- 3  position: absolute;                                               
-                                                                      
- 1  width: 0;                                                         
- 4                                                                    
-    }                                                                 
- 1                                                                    
- 5  .arrow:before {                                                   
-                                                                      
- 1  border-bottom: 15px solid #2db34a;                                
- 6                                                                    
-    border-left: 15px solid transparent;                              
- 1                                                                    
- 7  border-top: 15px solid #2db34a;                                   
-                                                                      
- 1  left: -15px;                                                      
- 8                                                                    
-    }                                                                 
- 1                                                                    
- 9  .arrow:after {                                                    
-                                                                      
- 2  border-bottom: 15px solid transparent;                            
- 0                                                                    
-    border-left: 15px solid #2db34a;                                  
- 2                                                                    
- 1  border-top: 15px solid transparent;                               
-                                                                      
- 2  right: -15px;                                                     
- 2                                                                    
-    }                                                                 
- 2                                                                    
- 3  .arrow:hover {                                                    
-                                                                      
- 2  background: #ff7b29;                                              
- 4                                                                    
-    }                                                                 
- 2                                                                    
- 5  .arrow:hover:before {                                             
-                                                                      
- 2  border-bottom: 15px solid #ff7b29;                                
- 6                                                                    
-    border-top: 15px solid #ff7b29;                                   
- 2                                                                    
- 7  }                                                                 
-                                                                      
- 2  .arrow:hover:after {                                              
- 8                                                                    
-    border-left: 15px solid #ff7b29;                                  
- 2                                                                    
- 9  }                                                                 
-                                                                      
- 3                                                                    
- 0                                                                    
-                                                                      
- 3                                                                    
- 1                                                                    
-                                                                      
- 3                                                                    
- 2                                                                    
-                                                                      
- 3                                                                    
- 3                                                                    
-                                                                      
- 3                                                                    
- 4                                                                    
-                                                                      
- 3                                                                    
- 5                                                                    
-                                                                      
- 3                                                                    
- 6                                                                    
-                                                                      
- 3                                                                    
- 7                                                                    
-                                                                      
- 3                                                                    
- 8                                                                    
-                                                                      
- 3                                                                    
- 9                                                                    
-                                                                      
- 4                                                                    
- 0                                                                    
-+===+===================================================================+
-+---+-------------------------------------------------------------------+
+ 10  }                                                                 
+ 11   .arrow:before,                                                    
+ 12  .arrow:after {                                                    
+ 13  content: "";                                                    
+ 14   height: 0;                                                        
+ 15  position: absolute;                                               
+ 16  width: 0;                                                         
+ 17   }                                                                 
+ 18  .arrow:before {                                                   
+ 19  border-bottom: 15px solid #2db34a;                                
+ 20   border-left: 15px solid transparent;                              
+ 21  border-top: 15px solid #2db34a;                                   
+ 22  left: -15px;                                                      
+ 23   }                                                                 
+ 24  .arrow:after {                                                    
+ 25  border-bottom: 15px solid transparent;                            
+ 26   border-left: 15px solid #2db34a;                                  
+ 27  border-top: 15px solid transparent;                               
+ 28  right: -15px;                                                     
+ 29   }                                                                 
+ 30  .arrow:hover {                                                    
+ 31  background: #ff7b29;                                              
+ 32   }                                                                 
+ 33  .arrow:hover:before {                                             
+ 34  border-bottom: 15px solid #ff7b29;                                
+ 35   border-top: 15px solid #ff7b29;                                   
+ 36  }                                                                 
+ 37  .arrow:hover:after {                                              
+ 38  
+ 39  border-left: 15px solid #ff7b29;                                  
+ 40                                                                    
+ 41  }
+ 42 
+```
 
-### Demo
+<h4>Demo</h4>
 
-### Pseudo-elements Overview
+<h4>Pseudo-elements Overview</h4>
 
   ------------------------------------------------------------------------------------------------
   **[Example]{.mark}**   **[Classification]{.mark}**   **[Explanation]{.mark}**
@@ -3628,7 +3266,7 @@ added to ensure the best support for all browsers.
                                                        actions
   ------------------------------------------------------------------------------------------------
 
-### Selector Browser Support
+<h4>Selector Browser Support</h4>
 
 While these selectors provide a variety of opportunity and the ability
 to do some truly amazing things with CSS, they are at times plagued by
@@ -3649,14 +3287,14 @@ Internet Explorer 6-8. More support, should it be necessary, can also be
 provided by [[jQuery
 selectors]{.underline}](http://api.jquery.com/category/selectors/).
 
-### Selector Speed & Performance
+<h4>Selector Speed & Performance</h4>
 
 It is important to pay attention the speed and performance of selectors,
 as using too many intricate selectors can slow down the rendering of a
 page. Be attentive and when a selector begins to look a bit foreign
 think about revisiting it, and seeing if a better solution can be found.
 
-### Resources & Links
+<h4>Resources & Links</h4>
 
 -   [[The 30 CSS Selectors you Must
     Memorize]{.underline}](http://net.tutsplus.com/tutorials/html-css-techniques/the-30-css-selectors-you-must-memorize/) via
@@ -3689,13 +3327,11 @@ Positioning]{.underline}](https://learn.shayhowe.com/advanced-html-css/detailed-
 [**Lesson 4** [Responsive Web
 Design]{.underline}](https://learn.shayhowe.com/advanced-html-css/responsive-web-design/)
 
-**
-
 [Lesson 4]{.mark} Responsive Web Design
 
 In this Lesson 4
 
-### **HTML**
+<h4>HTML</h4>
 
 -   [[Responsive
     Overview]{.underline}](https://learn.shayhowe.com/advanced-html-css/responsive-web-design/#responsive-web-design)
@@ -3734,7 +3370,7 @@ With the growth in mobile Internet usage comes the question of how to
 build websites suitable for all users. The industry response to this
 question has become responsive web design, also known as RWD.
 
-### Responsive Overview
+<h4>Responsive Overview</h4>
 
 Responsive web design is the practice of building a website suitable to
 work on every device and every screen size, no matter how large or
@@ -3790,7 +3426,7 @@ favoring design that dynamically adapts to different browser and device
 viewports, changing layout and content along the way. This solution has
 the benefits of being all three, responsive, adaptive, and mobile.
 
-### Flexible Layouts
+<h4>Flexible Layouts</h4>
 
 Responsive web design is broken down into three main components,
 including flexible layouts, media queries, and flexible media. The first
@@ -3801,7 +3437,7 @@ commonly percentages or em units. These relative lengths are then used
 to declare common grid property values such as width, margin,
 or padding.
 
-### Relative Viewport Lengths
+<h4>Relative Viewport Lengths</h4>
 
 CSS3 [[introduced]{.underline}](http://dev.w3.org/csswg/css3-values/#viewport-relative-lengths) some
 new relative length units, specifically related to the viewport size of
@@ -3832,14 +3468,12 @@ The formula is based around taking the target width of an element and
 dividing it by the width of it's parent element. The result is the
 relative width of the target element.
 
-+---+----------------------------------------------------------------------+
- 1  target ÷ context = result                                            
-                                                                         
- 2                                                                       
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
+ 1  target ÷ context = result
+ 2  
+```
 
-### Flexible Grid
+<h4>Flexible Grid</h4>
 
 Let's see how this formula works inside of a two column layout. Below we
 have a parent division with the class of container wrapping both
@@ -3907,7 +3541,7 @@ following.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-### Fixed Grid Demo
+<h4>Fixed Grid Demo</h4>
 
 Using the flexible grid formula we can take all of the fixed units of
 length and turn them into relative units. In this example we'll use
@@ -3948,7 +3582,7 @@ widths scale proportionally.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-### Flexible Grid Demo
+<h4>Flexible Grid Demo</h4>
 
 Taking the flexible layout concept, and formula, and reapplying it to
 all parts of a grid will create a completely dynamic website, scaling to
@@ -3963,7 +3597,7 @@ display content. Specifically, when the layout gets too small, or too
 large, text may become illegible and the layout may begin to break. In
 this event, media queries can be used to help build a better experience.
 
-### Media Queries
+<h4>Media Queries</h4>
 
 Media queries were built as an extension to media types commonly found
 when targeting and including styles. Media queries provide the ability
@@ -3973,7 +3607,7 @@ example. Being able to apply uniquely [[targeted
 styles]{.underline}](https://css-tricks.com/css-media-queries/) opens up
 a world of opportunity and leverage to responsive web design.
 
-### Initializing Media Queries
+<h4>Initializing Media Queries</h4>
 
 There are a couple different ways to use media queries, using
 the @media rule inside of an existing style sheet, importing a new style
@@ -4022,7 +3656,7 @@ false. When a media feature and value allocate to true, the styles are
 applied. If the media feature and value allocate to false the styles are
 ignored.
 
-### Logical Operators in Media Queries
+<h4>Logical Operators in Media Queries</h4>
 
 Logical operators in media queries help build powerful expressions.
 There are three different logical operators available for use within
@@ -4066,19 +3700,19 @@ user agent capable of rending media queries.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-### Omitting a Media Type
+<h4>Omitting a Media Type</h4>
 
 When using the not and only logical operators the media type may be left
 off. In this case the media type is defaulted to all.
 
-### Media Features in Media Queries
+<h4>Media Features in Media Queries</h4>
 
 Knowing the media query syntax and how logical operators work is a great
 introduction to media queries but the true work comes with media
 features. Media features identify what attributes or properties will be
 targeted within the media query expression.
 
-### Height & Width Media Features
+<h4>Height & Width Media Features</h4>
 
 One of the most common media features revolves around determining a
 height or width for a device or browser viewport. The height and width
@@ -4103,7 +3737,7 @@ include min-width and max-width. These help build responsive websites on
 desktops and mobile devices equally, avoiding any confusion with device
 features.
 
-### Using Minimum & Maximum Prefixes
+<h4>Using Minimum & Maximum Prefixes</h4>
 
 The min and max prefixes can be used on quite a few media features.
 The min prefix indicates a values of *greater than or equal to* while
@@ -4111,7 +3745,7 @@ the max prefix indicates a value of *less than or equal to*.
 Using min and max prefixes avoid any conflict with the general HTML
 syntax, specifically not using the < and > symbols.
 
-### Orientation Media Feature
+<h4>Orientation Media Feature</h4>
 
 The orientation media feature determines if a device is in
 the landscape or portrait orientation. The landscape mode is triggered
@@ -4126,7 +3760,7 @@ plays a large part with mobile devices.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-### Aspect Ratio Media Features
+<h4>Aspect Ratio Media Features</h4>
 
 The aspect-ratio and device-aspect-ratio features specifies
 the width/height pixel ratio of the targeted rendering area or output
@@ -4145,7 +3779,7 @@ pixels while the second integer identifies the height in pixels.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-### Pixel Ratio Media Features
+<h4>Pixel Ratio Media Features</h4>
 
 In addition to the aspect ratio media features there are
 also pixel-ratio media features. These features do include
@@ -4161,7 +3795,7 @@ so look like the following.
 +===+===================================================================+
 +---+-------------------------------------------------------------------+
 
-### Resolution Media Feature
+<h4>Resolution Media Feature</h4>
 
 The resolution media feature specifies the resolution of the output
 device in pixel density, also known as dots per inch or DPI.
@@ -4177,7 +3811,7 @@ resolution values.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-### Other Media Features
+<h4>Other Media Features</h4>
 
 Other media features include identifying available output colors with
 use of the color, color-index, and monochrome features, identifying
@@ -4185,7 +3819,7 @@ bitmap devices with the grid feature, and identifying the scanning
 process of a television with the scan feature. These features are less
 common but equally as helpful when needed.
 
-### Media Query Browser Support
+<h4>Media Query Browser Support</h4>
 
 Unfortunately media queries do not work within Internet Explorer 8 and
 below, as well as other legacy browsers. There are, however, a couple
@@ -4201,7 +3835,7 @@ polyfill can have performance concerns, and potentially slow down
 websites. Make sure that any given polyfill is worth the performance
 trade off.
 
-### Media Queries Demo
+<h4>Media Queries Demo</h4>
 
 Using media queries we will now rewrite the flexible layout we built
 previously. One of the current problems within the demo appears when the
@@ -4242,7 +3876,7 @@ height="2.2881944444444446in"}
 widths, the section and aside are now able to span the full width of the
 viewport, allowing breathing room for any existing content.
 
-### Identifying Breakpoints
+<h4>Identifying Breakpoints</h4>
 
 Your instinct might be to write media query breakpoints around common
 viewport sizes as determined by different device resolutions, such
@@ -4257,7 +3891,7 @@ experience is being hampered.
 Additionally, new devices and resolutions are being released all of the
 time. Trying to keep up with these changes could be an endless process.
 
-### Mobile First
+<h4>Mobile First</h4>
 
 One popular technique with using media queries is called *mobile first*.
 The [[mobile
@@ -4328,7 +3962,7 @@ even reduce a device's battery life.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-### Mobile First Demo
+<h4>Mobile First Demo</h4>
 
 Adding media queries to our previous example, we overwrote a handful of
 styles in order to have a better layout on viewports under 420 pixels
@@ -4384,14 +4018,14 @@ build the following:
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-### Mobile First Demo
+<h4>Mobile First Demo</h4>
 
 Notice, this is the same amount of code as before. The only exception
 here is that mobile devices only have to render only **one** CSS
 declaration. All of the other styles are deferred, only loading on
 larger viewports and done so without overwriting any initial styles.
 
-### Viewport
+<h4>Viewport</h4>
 
 Mobile devices generally do a pretty decent job of displaying websites
 these days. Sometimes they could use a little assistance though,
@@ -4408,7 +4042,7 @@ height="4.336805555555555in"}
 still do not know the initial width or scale of the website. Therefore,
 they may not interrupt media queries.
 
-### Viewport Height & Width
+<h4>Viewport Height & Width</h4>
 
 Using the viewport meta tag with either the height or width values will
 define the height or width of the viewport respectively. Each value
@@ -4436,7 +4070,7 @@ height="4.336805555555555in"}
 website, device-width in this case, allows the website to be sized
 properly and to pick up any qualifying media queries.
 
-### Viewport Scale
+<h4>Viewport Scale</h4>
 
 To control how a website is scaled on a mobile device, and how users can
 continue to scale a website, use
@@ -4495,7 +4129,7 @@ viewing a website as desired.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-### Viewport Resolution
+<h4>Viewport Resolution</h4>
 
 Letting the browser decide how to scale a website based off any viewport
 scale values usually does the trick. When more control is needed,
@@ -4515,7 +4149,7 @@ helpful when pixel by pixel control is needed.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-### Combining Viewport Values
+<h4>Combining Viewport Values</h4>
 
 The viewport meta tag will accept individual values as well as multiple
 values, allowing multiple viewport properties to be set at once. Setting
@@ -4538,7 +4172,7 @@ height="4.336805555555555in"}
 of width=device-width and initial-scale=1 provide the initial size and
 zoom commonly required.
 
-### CSS Viewport Rule
+<h4>CSS Viewport Rule</h4>
 
 Since the viewport meta tag revolves so heavily around setting the
 styles of how a website should be rendered it has been recommend to move
@@ -4564,7 +4198,7 @@ following @viewport rule in CSS.
 +===+====================================================================+
 +---+--------------------------------------------------------------------+
 
-### Flexible Media
+<h4>Flexible Media</h4>
 
 The final, equally important aspect to responsive web design involves
 flexible media. As viewports begin to change size media doesn't always
@@ -4586,9 +4220,9 @@ any media will scale down according to its containers width.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-### Flexible Media Demo
+<h4>Flexible Media Demo</h4>
 
-### Flexible Embedded Media
+<h4>Flexible Embedded Media</h4>
 
 Unfortunately the max-width property doesn't work well for all instances
 of media, specifically around iframes and embedded media. When it comes
@@ -4662,7 +4296,7 @@ treating the parent element as an absolutely positioned element.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-### Flexible Embedded Media Demo
+<h4>Flexible Embedded Media Demo</h4>
 
 For security reasons CodePen doesn't allow iframes within embedded code
 samples, however you may [[review and edit this
@@ -4675,7 +4309,7 @@ website.
 
 50% Wide Container
 
-### Resources & Links
+<h4>Resources & Links</h4>
 
 -   [[Responsive Web
     Design]{.underline}](http://www.alistapart.com/articles/responsive-web-design/) via
@@ -4742,7 +4376,7 @@ websites easier and more logical. The popularity of preprocessors have
 also brought along different frameworks to support them, one of the more
 popular being Compass.
 
-### Haml
+<h4>Haml</h4>
 
 Haml, known as [[HTML abstraction markup
 language]{.underline}](http://haml.info/docs/yardoc/file.REFERENCE.html),
@@ -4752,7 +4386,7 @@ in Haml is later processed to HTML. Haml promotes DRY and well
 structured markup, providing a pleasing experience for anyone having to
 write or read it.
 
-### Installation
+<h4>Installation</h4>
 
 Haml requires Ruby to be compiled to HTML, so the first step to using it
 is to ensure that Ruby is installed. Fortunately for those on Mac OS X
@@ -4787,7 +4421,7 @@ outside this directory the path where the files reside need to be
 included within the command. At any time the command haml &#45;&#45;help may be
 run to see a list of different available options.
 
-### Watching a File or Directory
+<h4>Watching a File or Directory</h4>
 
 Unfortunately Haml doesn't provide a way to watch a file, or directory,
 for changes without the use of another dependency.
@@ -4801,7 +4435,7 @@ being [[CodeKit]{.underline}](https://codekitapp.com/).
 On top of Haml CodeKit also supports other preprocessors, which may also
 come in handy.
 
-### Doctype
+<h4>Doctype</h4>
 
 The first part to writing a document in Haml is knowing what type
 of doctype is to be used. When working with HTML documents, the general
@@ -4831,7 +4465,7 @@ passed in after the exclamation points, !!! 5.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-### Declaring Elements
+<h4>Declaring Elements</h4>
 
 One of the defining features of Haml is its syntax, and how to [[declare
 and
@@ -4889,7 +4523,7 @@ struggle.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-### Handling Text
+<h4>Handling Text</h4>
 
 Text within Haml can be placed on the same line as the declared element,
 or indented below the element. Text cannot be both on the same line as
@@ -4915,7 +4549,7 @@ example from above could be rewritten as the following:
 +===+====================================================================+
 +---+--------------------------------------------------------------------+
 
-### Attributes
+<h4>Attributes</h4>
 
 Attributes, as with elements, are declared a bit differently in Haml.
 Attributes are declared directly after the element in either {} or (),
@@ -4945,7 +4579,7 @@ style attributes will use standard HTML syntax inside of ().
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-### Classes & IDs
+<h4>Classes &amp; IDs</h4>
 
 If you wish to, Class and ID attributes may be declared the same as all
 other attributes, however they may also be treated a bit differently.
@@ -4959,7 +4593,7 @@ together in the appropriate format. Classes are to be separated with
 a . and other attributes may be added using one of the previously
 outlined formats.
 
-### **Haml**
+<h4>Haml</h4>
 
 +---+----------------------------------------------------------------------+
  1  %section.feature                                                     
@@ -4989,7 +4623,7 @@ outlined formats.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-### Division Classes & IDs
+<h4>Division Classes &amp; IDs</h4>
 
 In the event a class or ID is used on a div the %div may be omitted, and
 the class or ID value can be used outright. Again, classes are to be
@@ -5021,7 +4655,7 @@ identified with a . and IDs are to be identified with a #.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-### Boolean Attributes
+<h4>Boolean Attributes</h4>
 
 Boolean attributes are handled just as they would be within Ruby or
 HTML, all depending on the syntax being used.
@@ -5048,7 +4682,7 @@ HTML, all depending on the syntax being used.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-### Escaping Text
+<h4>Escaping Text</h4>
 
 One of the benefits of Haml is the ability to evaluate and run Ruby,
 however this isn't always the desired action. Text, and lines of code,
@@ -5088,7 +4722,7 @@ execution.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-### Text Escaping Alternatives
+<h4>Text Escaping Alternatives</h4>
 
 Occasionally escaping text doesn't quite do the job and Ruby is needed
 to generate the desired output. One popular instance of this is when
@@ -5127,7 +4761,7 @@ outside of the anchor text.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-### Comments
+<h4>Comments</h4>
 
 As with elements and attributes, comments are handled a bit differently
 in Haml as well. Simply enough, code can be commented out with the use
@@ -5185,7 +4819,7 @@ code can be commented out by being nested underneath a forward slash.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-### Conditional Comments
+<h4>Conditional Comments</h4>
 
 Conditional comments are also handled differently in Haml. To create a
 conditional comment use square brackets, &lbrack;&rbrack;, around the condition.
@@ -5216,7 +4850,7 @@ slash.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-### Silent Comments
+<h4>Silent Comments</h4>
 
 Haml also provides the ability to create Haml specific comments, or
 silent comments. Silent comments differ from general HTML comments in
@@ -5252,14 +4886,14 @@ multiple lines with the use of nesting.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-### Filters
+<h4>Filters</h4>
 
 Haml provides a handful of filters, allowing different types of input to
 be used inside of Haml. Filters are identified with a colon followed by
 the name of the filter, :markdown for example, with all of the content
 to be filtered nested underneath.
 
-### Common Filters
+<h4>Common Filters</h4>
 
 Below are some of the more common filters, with the more popular ones of
 the group being :css and :javascript.
@@ -5294,7 +4928,7 @@ the group being :css and :javascript.
 
 -   :textile
 
-### Javascript Filter
+<h4>Javascript Filter</h4>
 
 **Haml**
 
@@ -5328,7 +4962,7 @@ the group being :css and :javascript.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-### CSS & Sass Filters
+<h4>CSS &amp; Sass Filters</h4>
 
 **Haml**
 
@@ -5378,7 +5012,7 @@ the group being :css and :javascript.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-### Ruby Interpolation
+<h4>Ruby Interpolation</h4>
 
 As previously mentioned Haml can evaluate Ruby, and there may
 occasionally be times where Ruby needs to be evaluated inside of plain
@@ -5405,7 +5039,7 @@ Below is an example of Ruby being interpolated as part of a class name.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-### SCSS & Sass
+<h4>SCSS &amp; Sass</h4>
 
 SCSS and Sass are preprocessing languages which are compiled to CSS,
 resembling Haml a bit in that they make writing code easier, and provide
@@ -5418,7 +5052,7 @@ first and is a strict indented syntax. SCSS, Sassy CSS, followed shortly
 after providing the same firing power of Sass but with a more flexible
 syntax, including the ability to write plain CSS.
 
-### Installation
+<h4>Installation</h4>
 
 As with Haml, SCSS and Sass
 are [[compiled]{.underline}](http://sassmeister.com/) using Ruby
@@ -5476,7 +5110,7 @@ CSS the sass command below may be run.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-### Converting Files from SCSS to Sass & Vice Versa
+<h4>Converting Files from SCSS to Sass &amp; Vice Versa</h4>
 
 On top of being able to convert SCSS and Sass files to CSS you can also
 convert files from SCSS to Sass and vice versa. To do so
@@ -5498,7 +5132,7 @@ then a Sass file to SCSS respectively.
 +===+====================================================================+
 +---+--------------------------------------------------------------------+
 
-### Syntax
+<h4>Syntax</h4>
 
 As previously mentioned the primary difference between SCSS and Sass is
 their syntax, and their difference in severity. The syntax of SCSS isn't
@@ -5567,7 +5201,7 @@ indentation and clear line breaks for formatting.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-### Using SCSS vs. Sass
+<h4>Using SCSS vs. Sass</h4>
 
 Deciding on whether to use SCSS or Sass boils down to personal
 preference, and is a decision to be made based on what is best for a
@@ -5583,7 +5217,7 @@ well worth the ease of manageable styles.
 Moving forward the examples in this lesson will use Sass, however they
 may also all be accomplished with SCSS.
 
-### Nesting
+<h4>Nesting</h4>
 
 In the syntax example above you will notice how selectors may be nested
 inside of one another to create compound selectors. The nesting quickly
@@ -5637,7 +5271,7 @@ selectors without raising specificity is important.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-### Nesting Properties
+<h4>Nesting Properties</h4>
 
 On top of nesting selectors it is also possible to nest properties. Some
 of the most popular uses of this may be seen with font, margin, padding,
@@ -5680,7 +5314,7 @@ your decision is up to personal preference.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-### Nested Media Queries
+<h4>Nested Media Queries</h4>
 
 Individual media queries may also be nested inside of a selector,
 changing property values based off a media condition.
@@ -5723,7 +5357,7 @@ changing property values based off a media condition.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-### Parent Selector
+<h4>Parent Selector</h4>
 
 Sass provides a way to add styles to a previous selector with the use of
 the parent selector, implemented by using an ampersand, &. Most commonly
@@ -5766,7 +5400,7 @@ as &.featured.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-### Parent Key Selector
+<h4>Parent Key Selector</h4>
 
 The parent selector may also be used as the key selector, adding
 qualifying selectors to make compound selectors. There are an abundance
@@ -5807,7 +5441,7 @@ of the most beneficial is inside of feature detection.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-### Comments
+<h4>Comments</h4>
 
 Sass handles comments very similar to that of Haml. The standard CSS
 syntax, /&ast; &#8230; &ast;/, for comments works as intended within Sass however
@@ -5861,7 +5495,7 @@ is not rendered in the compiled CSS.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-### Variables
+<h4>Variables</h4>
 
 Variables are one of the more sought after features of CSS that Sass
 provides. With Sass you can define variables and then reuse them as
@@ -5873,7 +5507,7 @@ empty space, such as &#36;font-base: 1em. As for the value of the variable,
 it may be a number, string, color, boolean, null, or a list of values
 separated by spaces or commas.
 
-### **Sass**
+<h4>Sass</h4>
 
 +---+----------------------------------------------------------------------+
  1  &#36;font-base: 1em                                                     
@@ -5903,7 +5537,7 @@ separated by spaces or commas.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-### Variable Interpolation
+<h4>Variable Interpolation</h4>
 
 For the most part variables may be used anywhere inside of a Sass
 document. However, they may occasionally need to be interpolated using
@@ -5911,7 +5545,7 @@ the syntax. A few instances of where variables need to be interpolated
 include when being used in a class name, property name, or inside a
 string of plain text.
 
-### **Sass**
+<h4>Sass</h4>
 
 +---+----------------------------------------------------------------------+
  1  &#36;location: chicago                                                  
@@ -5941,7 +5575,7 @@ string of plain text.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-### Calculations
+<h4>Calculations</h4>
 
 Sass also has the ability to do calculations in a variety of different
 manners. Calculations can handle most problems, such as addition,
@@ -5960,7 +5594,7 @@ percent sign, %, will return the remainder of the two numbers upon being
 divided, and as with multiplication, only allows one number, if any, to
 have a unit.
 
-### **Sass**
+<h4>Sass</h4>
 
 +---+----------------------------------------------------------------------+
  1  width: 40px + 6                                                      
@@ -5990,7 +5624,7 @@ have a unit.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-### Division
+<h4>Division</h4>
 
 Division is a bit trickier in Sass as the forward slash, /, used to
 perform division is already used in some CSS property values. Generally
@@ -6038,7 +5672,7 @@ value will be unitless.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-### Detailed Math
+<h4>Detailed Math</h4>
 
 As one may expect, Sass is also capable of combining multiple math
 operations. Sass also recognizes which operations to execute first based
@@ -6072,7 +5706,7 @@ on the use of parentheses.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-### Number Functions
+<h4>Number Functions</h4>
 
 By default Sass includes a handful of [[built in
 functions]{.underline}](https://sass-lang.com/documentation/modules/math),
@@ -6129,7 +5763,7 @@ the absolute value of a given number.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-### Color
+<h4>Color</h4>
 
 Sass provides quite a bit of assistance in working with colors,
 providing a handful of different features to alter and manipulate
@@ -6161,7 +5795,7 @@ value.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-### Color Operations
+<h4>Color Operations</h4>
 
 On top of numbers, math may additionally be performed on colors using
 addition, subtraction, multiplication, and division. These computations
@@ -6194,7 +5828,7 @@ intended.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-### Color Alterations
+<h4>Color Alterations</h4>
 
 Using color operators to perform calculations is helpful but can be a
 bit challenging as well. In this case color alterations may be a better
@@ -6244,7 +5878,7 @@ of a color.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-### HSLa Color Alterations
+<h4>HSLa Color Alterations</h4>
 
 HSLa color alterations take things a step further, adding in even more
 alterations. Some of the more popular HSLa color alterations
@@ -6310,7 +5944,7 @@ include lighten(), darken(), saturate(), and desaturate().
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-### Color Manipulation
+<h4>Color Manipulation</h4>
 
 Outside of altering colors Sass can also directly manipulate colors.
 Manipulating colors provides the most control over how to finely tune
@@ -6357,7 +5991,7 @@ alterations.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-### Extends
+<h4>Extends</h4>
 
 Extends provide a way to easily share and reuse styles without having to
 explicitly repeat code or use additional classes, providing a perfect
@@ -6422,7 +6056,7 @@ code weight. Additionally, extends parley nicely with OOCSS and SMACSS.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-### Placeholder Selector Extend
+<h4>Placeholder Selector Extend</h4>
 
 To avoid building a bunch of unused classes purely for extends we can
 use what is known as a placeholder selector. The placeholder selector is
@@ -6477,7 +6111,7 @@ the .alert selector never makes its way into the CSS.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-### Element Selector Extend
+<h4>Element Selector Extend</h4>
 
 As with classes, extends also work with standard element selectors too.
 
@@ -6521,7 +6155,7 @@ As with classes, extends also work with standard element selectors too.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-### Mixins
+<h4>Mixins</h4>
 
 Mixins provide a way to easily template properties and values, then
 share them amongst different selectors. Mixins differ from extends as
@@ -6575,7 +6209,7 @@ using a plus sign to call a mixin SCSS use an @include rule.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-### Default Arguments
+<h4>Default Arguments</h4>
 
 Using the same example from above we can also specify default argument
 values, which may be over written if wished.
@@ -6620,7 +6254,7 @@ values, which may be over written if wished.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-### Variable Arguments
+<h4>Variable Arguments</h4>
 
 When one or more values need to be passed to an argument the variable
 name may end with &#8230; inside of the mixin. In the example below with
@@ -6662,7 +6296,7 @@ box shadows we can pass in comma separated values to the mixin.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-### Imports
+<h4>Imports</h4>
 
 One of nicest parts of Sass is its ability to import
 multiple .scss or .sass files and condense them into one single file.
@@ -6701,7 +6335,7 @@ HTML document.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-### Loops & Conditionals
+<h4>Loops & Conditionals</h4>
 
 For a bit more intricate styling Sass supports different control
 directives. Its important to understand these directives are not
@@ -6709,7 +6343,7 @@ intended for everyday styling but for creating detailed mixins and
 helpers. Many of these will look familiar as they are borrowed from
 other programming languages.
 
-### Operators
+<h4>Operators</h4>
 
 Some loops and conditionals will require operators to determine their
 behavior, of which can be broken down into relational and comparison
@@ -6762,7 +6396,7 @@ between to entities.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-### If Function
+<h4>If Function</h4>
 
 The @if rule test an expressions then loads the styles beneath that
 expression should it return anything other than false or null. The
@@ -6809,7 +6443,7 @@ directly tied to it will be applied.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-### For Loop
+<h4>For Loop</h4>
 
 The @for rule outputs different sets of styles based off of a counter
 variable. There are two different forms available for for loops, those
@@ -6874,7 +6508,7 @@ output styles up to, but not including, 3. The other form, @for &#36;i from
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-### Each Loop
+<h4>Each Loop</h4>
 
 Simply enough, the @each rule returns styles for each item in a list.
 List may include multiple comma separated items.
@@ -6927,7 +6561,7 @@ List may include multiple comma separated items.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-### While Loop
+<h4>While Loop</h4>
 
 The @while rule repeatedly returns styles until the statement becomes
 false. The directive accepts a handful of different operators and the
@@ -7003,13 +6637,13 @@ counter variable can be finely controlled allowing for precise looping.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-### Other Preprocessors
+<h4>Other Preprocessors</h4>
 
 Haml and Sass are far from the only preprocessing languages available,
 including JavaScript preprocessors as well. Some of the other popular
 preprocessors
-including [[Jade]{.underline}](http://jade-lang.com/), [[Slim]{.underline}](http://slim-lang.com/), [[LESS]{.underline}](http://lesscss.org/),
-and [[CoffeeScript]{.underline}](http://coffeescript.org/).
+including [Jade](http://jade-lang.com/), [Slim](http://slim-lang.com/), [LESS](http://lesscss.org/),
+and [CoffeeScript](http://coffeescript.org/).
 
 In the interest of brevity Haml and Sass were the only preprocessors
 covered in this lesson. They were also chosen because they are built
@@ -7022,31 +6656,31 @@ built in Node.js may likely better benefit from Jade. The most important
 aspect to consider, though, is what your team is accustomed to using. Do
 your research for each project and make the most educated decision.
 
-### Resources & Links
+<h4>Resources & Links</h4>
 
--   [[Haml]{.underline}](http://haml.info/) --- HTML Abstraction Markup
+-   [Haml](http://haml.info/) --- HTML Abstraction Markup
     Language
 
--   [[Sass]{.underline}](http://sass-lang.com/) --- Syntactically
+-   [Sass](http://sass-lang.com/) --- Syntactically
     Awesome Stylesheets
 
--   [[Haml Documentation
-    Reference]{.underline}](http://haml.info/docs/yardoc/file.REFERENCE.html)
+-   [Haml Documentation
+    Reference](http://haml.info/docs/yardoc/file.REFERENCE.html)
 
--   [[Sass Documentation
-    Reference]{.underline}](https://sass-lang.com/documentation/)
+-   [Sass Documentation
+    Reference](https://sass-lang.com/documentation/)
 
--   [[Sass Playground]{.underline}](http://sassmeister.com/) via
+-   [Sass Playground](http://sassmeister.com/) via
     SassMeister
 
--   [[SassScript
-    Function]{.underline}](https://sass-lang.com/documentation/modules) via
+-   [SassScript
+    Function](https://sass-lang.com/documentation/modules) via
     Sass Documentation
 
 [**Lesson 4** [Responsive Web
-Design]{.underline}](https://learn.shayhowe.com/advanced-html-css/responsive-web-design/)
+Design](https://learn.shayhowe.com/advanced-html-css/responsive-web-design/)
 [**Lesson 6**
-[jQuery]{.underline}](https://learn.shayhowe.com/advanced-html-css/jquery/)
+[jQuery](https://learn.shayhowe.com/advanced-html-css/jquery/)
 
 [Lesson 6]{.mark} jQuery
 
@@ -7054,32 +6688,32 @@ In this Lesson 6
 
 **JAVASCRIPT**
 
--   [[JavaScript
-    Intro]{.underline}](https://learn.shayhowe.com/advanced-html-css/jquery/#javascript)
+-   [JavaScript
+    Intro](https://learn.shayhowe.com/advanced-html-css/jquery/#javascript)
 
--   [[jQuery
-    Intro]{.underline}](https://learn.shayhowe.com/advanced-html-css/jquery/#jquery)
+-   [jQuery
+    Intro](https://learn.shayhowe.com/advanced-html-css/jquery/#jquery)
 
--   [[Selectors]{.underline}](https://learn.shayhowe.com/advanced-html-css/jquery/#selectors)
+-   [Selectors](https://learn.shayhowe.com/advanced-html-css/jquery/#selectors)
 
--   [[Traversing]{.underline}](https://learn.shayhowe.com/advanced-html-css/jquery/#traversing)
+-   [Traversing](https://learn.shayhowe.com/advanced-html-css/jquery/#traversing)
 
--   [[Manipulation]{.underline}](https://learn.shayhowe.com/advanced-html-css/jquery/#manipulation)
+-   [Manipulation](https://learn.shayhowe.com/advanced-html-css/jquery/#manipulation)
 
--   [[Events]{.underline}](https://learn.shayhowe.com/advanced-html-css/jquery/#events)
+-   [Events](https://learn.shayhowe.com/advanced-html-css/jquery/#events)
 
--   [[Effects]{.underline}](https://learn.shayhowe.com/advanced-html-css/jquery/#effects)
+-   [Effects](https://learn.shayhowe.com/advanced-html-css/jquery/#effects)
 
 **SHARE**
 
 In part of being a web designer or front end developer you will commonly
 run into JavaScript, often referred to as JS, and jQuery. Within the top
-10,000 websites JavaScript is used within [[over
-92%]{.underline}](https://trends.builtwith.com/docinfo/Javascript) of
-them, and jQuery is used within in [[over
-63%]{.underline}](https://trends.builtwith.com/javascript/jQuery) of
+10,000 websites JavaScript is used within [over
+92%](https://trends.builtwith.com/docinfo/Javascript) of
+them, and jQuery is used within in [over
+63%](https://trends.builtwith.com/javascript/jQuery) of
 them. Needless to say, they are fairly popular. You may even aspire
-to [[write]{.underline}](http://jsforcats.com/) JavaScript or jQuery to
+to [write](http://jsforcats.com/) JavaScript or jQuery to
 build your own behaviors at one point or another.
 
 If you are asking what exactly are JavaScript and jQuery fear not, this
@@ -7088,7 +6722,7 @@ jQuery.
 
 JavaScript Intro
 
-[[JavaScript]{.underline}](https://developer.mozilla.org/en-US/docs/JavaScript/A_re-introduction_to_JavaScript) provides
+[JavaScript](https://developer.mozilla.org/en-US/docs/JavaScript/A_re-introduction_to_JavaScript) provides
 the ability to add interactivity to a website, and help enrich the user
 experience. HTML provides a page with **structure** and CSS provides a
 page with **appearance**, JavaScript provide a page with **behavior**.
@@ -7110,7 +6744,7 @@ within a documents head.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-### Values & Variables
+<h4>Values & Variables</h4>
 
 Part of the fundamentals of JavaScript include values and variables.
 Values, in general, are the different types of values that JavaScript
@@ -7148,7 +6782,7 @@ example, shay_is_awesome would more commonly named shayIsAwesome.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-### Statements
+<h4>Statements</h4>
 
 As a whole, JavaScript is a set of statements, of which are executed by
 the browser in the sequence they are written. These statements provide
@@ -7169,7 +6803,7 @@ legibility, but is not required.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-### Functions
+<h4>Functions</h4>
 
 Adding to the fundamentals of JavaScript, it is important to take a look
 at functions. Functions provide a way to perform a set of scripted
@@ -7192,7 +6826,7 @@ statements, that defines the function enclosed in curly braces, {}.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-### Arrays
+<h4>Arrays</h4>
 
 As you may have recognized, some values may be returned as an array.
 Arrays include a way to store a list of items, or values. Arrays are
@@ -7206,7 +6840,7 @@ with comma separated items. The items start at 0 and increase from
 there. When identifying the third item in a list it is actually
 identified as &lbrack;2&rbrack;.
 
-### Objects
+<h4>Objects</h4>
 
 JavaScript is also built on the foundation of objects, which are a
 collection of key and value pairs. For example, there may be an object
@@ -7245,7 +6879,7 @@ properties, each having a key followed by a colon and value.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-![Web Inspector Console](./3-25-24/media/image013.png){width="5.0in"
+![Web Inspector Console](./images/image013.png){width="5.0in"
 height="3.201388888888889in"}
 
 Fig. 6
@@ -7253,7 +6887,7 @@ Fig. 6
 Using the developer tools built into the Chrome web browser, JavaScript
 may be run from within the console.
 
-### jQuery Intro
+<h4>jQuery Intro</h4>
 
 With a basic understanding of JavaScript and some of it's foundations,
 it is time to take a look at jQuery. jQuery is an open source JavaScript
@@ -7261,14 +6895,14 @@ library written by John Resig that simplifies the interaction between
 HTML, CSS, and JavaScript. Since 2006, when jQuery was released, it has
 taken off, being used by websites and companies large and small.
 
-What has made jQuery so popular is it's [[ease of
-use]{.underline}](https://tutsplus.com/course/30-days-to-learn-jquery/),
+What has made jQuery so popular is it's [ease of
+use](https://tutsplus.com/course/30-days-to-learn-jquery/),
 with selections resembling CSS and a comprehensible separation of
 behavior. The benefits of jQuery are massive, however for our purpose we
 will only be considered about the ability to find elements and perform
 actions with them.
 
-### Getting Started with jQuery
+<h4>Getting Started with jQuery</h4>
 
 The first step to using jQuery is to reference it from within a HTML
 document. As previously mentioned with JavaScript, this is done using
@@ -7300,7 +6934,7 @@ jQuery should be written in this file. Additionally, this file is
 specifically placed after the jQuery file so that it may reference
 jQuery functions already defined.
 
-### Where is the leading http?
+<h4>Where is the leading http?</h4>
 
 You may have noticed that there isn't a leading http within Google CDN
 reference example above. The http has been omitted intentionally to
@@ -7309,7 +6943,7 @@ the benefit of a web server, the leading http will need to be included
 to prevent attempting to locate the file on the systems local disk
 drive.
 
-### jQuery Object
+<h4>jQuery Object</h4>
 
 jQuery comes with it's own object, the dollar sign, &#36;, also known
 as jQuery. The &#36; object is specifically made for selecting an element
@@ -7326,7 +6960,7 @@ outside of the actual jQuery library.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-### Document Ready
+<h4>Document Ready</h4>
 
 Before trigging any jQuery to traverse and manipulate a page it is best
 to wait until the DOM is finished loading. Fortunately jQuery has a
@@ -7346,7 +6980,7 @@ until the page has loaded and the DOM is ready.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-### Selectors
+<h4>Selectors</h4>
 
 As previously mentioned, one of the core concepts of jQuery is
 to [[select
@@ -7376,7 +7010,7 @@ parentheses, (&#39;&#8230;&#39;), and may select elements just like that of CSS
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-### This Selection Keyword
+<h4>This Selection Keyword</h4>
 
 When working inside of a jQuery function you may want to select the
 element in which was referenced inside of the original selector. In this
@@ -7394,7 +7028,7 @@ the current handler.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-### jQuery Selection Filters
+<h4>jQuery Selection Filters</h4>
 
 Should CSS selectors not be enough there are also
 custom [[filters]{.underline}](http://api.jquery.com/category/selectors/jquery-selector-extensions/) built
@@ -7413,7 +7047,7 @@ not being native to the DOM they are a bit slow. The best results with
 using these filters is accomplished by using the :filter() method, which
 is part of the traversing feature in jQuery.
 
-### Traversing
+<h4>Traversing</h4>
 
 At times the general CSS selectors alone don't cut it and a little more
 detailed control is desired. Fortunately jQuery provides a handful of
@@ -7434,7 +7068,7 @@ without a class of type or collection will be selected.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-### Chaining Methods
+<h4>Chaining Methods</h4>
 
 For even more control as to which elements are selected different
 traversing methods may be chained together simply by using a dot
@@ -7451,7 +7085,7 @@ elements of div elements without a class of type or collection.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-### Traversing Methods
+<h4>Traversing Methods</h4>
 
 jQuery has quite a
 few [[traversing]{.underline}](http://api.jquery.com/category/traversing/) methods
@@ -7459,7 +7093,7 @@ available to use. In general, they all fall into three categories,
 filtering, miscellaneous traversing, and DOM tree traversing. The
 specific methods within each category may be seen below.
 
-### Filtering
+<h4>Filtering</h4>
 
 -   .eq()
 
@@ -7479,7 +7113,7 @@ specific methods within each category may be seen below.
 
 -   .slice()
 
-### Miscellaneous Traversing
+<h4>Miscellaneous Traversing</h4>
 
 -   .add()
 
@@ -7489,7 +7123,7 @@ specific methods within each category may be seen below.
 
 -   .end()
 
-### DOM Tree Traversal
+<h4>DOM Tree Traversal</h4>
 
 -   .children()
 
@@ -7519,7 +7153,7 @@ specific methods within each category may be seen below.
 
 -   .siblings()
 
-### Manipulation
+<h4>Manipulation</h4>
 
 Selecting and traversing elements in the DOM is only part of what jQuery
 offers, one other major part is what is possible with those elements
@@ -7530,7 +7164,7 @@ Additionally, elements may be altered in the DOM, changing their
 placement, removing them, adding new elements, and so forth. Overall the
 options to manipulate elements are fairly vast.
 
-### Getting & Setting
+<h4>Getting & Setting</h4>
 
 The manipulation methods to follow are most commonly used in one of two
 directives, that being *getting* or *setting* information. Getting
@@ -7558,7 +7192,7 @@ In the examples and snippets to follow methods will primarily be used in
 a setting mode, however they may also be able to be used in a getting
 mode as well.
 
-### Attribute Manipulation
+<h4>Attribute Manipulation</h4>
 
 One part of elements able to be inspected and manipulated are
 attributes. A few options include the ability to add, remove, or change
@@ -7579,7 +7213,7 @@ any abbr element and set it to Hello World.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-### Attribute Manipulation Methods
+<h4>Attribute Manipulation Methods</h4>
 
 -   .addClass()
 
@@ -7599,7 +7233,7 @@ any abbr element and set it to Hello World.
 
 -   .val()
 
-### Style Manipulation
+<h4>Style Manipulation</h4>
 
 On top of manipulating attributes, the style of an element may also be
 manipulated using a variety of methods. When reading or setting the
@@ -7639,7 +7273,7 @@ sign followed by the quoted unit of measurement.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-### Style Manipulation Methods
+<h4>Style Manipulation Methods</h4>
 
 -   .css()
 
@@ -7663,7 +7297,7 @@ sign followed by the quoted unit of measurement.
 
 -   .width()
 
-### DOM Manipulation
+<h4>DOM Manipulation</h4>
 
 Lastly, we are able to inspect and manipulate the DOM, changing the
 placement of elements, adding and removing elements, as well as flat out
@@ -7687,7 +7321,7 @@ the text of any h1 elements with the text Hello World.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-### DOM Manipulation Methods
+<h4>DOM Manipulation Methods</h4>
 
 -   .after()
 
@@ -7729,7 +7363,7 @@ the text of any h1 elements with the text Hello World.
 
 -   .wrapInner()
 
-### Events
+<h4>Events</h4>
 
 One of the beauties of jQuery is the ability to easily add [[event
 handlers]{.underline}](http://api.jquery.com/category/events/), which
@@ -7760,7 +7394,7 @@ the this keyword, receives the class of saved-item.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-### Event Flexibility
+<h4>Event Flexibility</h4>
 
 The .click() event method, along with a handful of other event methods,
 is actually a [[shorthand
@@ -7787,7 +7421,7 @@ function staying the same as before.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-### Nesting Events
+<h4>Nesting Events</h4>
 
 It is possible to have multiple event handlers and triggers, nesting one
 inside another. As an example, below the .on() event method is passed
@@ -7806,7 +7440,7 @@ the .click() event is called on the anchor with the up ID.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-### Event Demo
+<h4>Event Demo</h4>
 
 Using an alert message as a demo, the following code snippets show how
 to create an alert message and then removing that message based upon
@@ -7840,9 +7474,9 @@ clicking the close icon.
 +===+====================================================================+
 +---+--------------------------------------------------------------------+
 
-### Demo
+<h4>Demo</h4>
 
-### Event Methods
+<h4>Event Methods</h4>
 
 jQuery provides quite a few methods, all of which are based around
 registering user behaviors as they interact with the browser. These
@@ -7850,17 +7484,17 @@ methods register quite a few events, most popularly, but not limited to,
 browser, form, keyboard, and mouse events. The most popular of these
 methods include:
 
-### Browser Events
+<h4>Browser Events</h4>
 
 -   .resize()
 
 -   .scroll()
 
-### Document Loading
+<h4>Document Loading</h4>
 
 -   .ready()
 
-### Event Handler Attachment
+<h4>Event Handler Attachment</h4>
 
 -   .off()
 
@@ -7878,7 +7512,7 @@ methods include:
 
 -   .undelegate()
 
-### Event Object
+<h4>Event Object</h4>
 
 -   event.currentTarget
 
@@ -7890,7 +7524,7 @@ methods include:
 
 -   event.type
 
-### Form Events
+<h4>Form Events</h4>
 
 -   .blur()
 
@@ -7902,7 +7536,7 @@ methods include:
 
 -   .submit()
 
-### Keyboard Events
+<h4>Keyboard Events</h4>
 
 -   .focusin()
 
@@ -7914,7 +7548,7 @@ methods include:
 
 -   .keyup()
 
-### Mouse Events
+<h4>Mouse Events</h4>
 
 -   .click()
 
@@ -7940,7 +7574,7 @@ methods include:
 
 -   .mouseup()
 
-### Effects
+<h4>Effects</h4>
 
 Next to events, jQuery also provides a handful of customizable effects.
 These effects come by the way of different methods, including event
@@ -7955,7 +7589,7 @@ specific syntax around each method. Most commonly though, effects
 generally accept a duration, easing, and the ability to specify a
 callback function.
 
-### jQuery CSS Animations
+<h4>jQuery CSS Animations</h4>
 
 Custom animations of different CSS properties can be accomplished in
 jQuery, although this is a little less relevant as CSS can now handle
@@ -7964,7 +7598,7 @@ browser processing standpoint and are preferred where possible. jQuery
 animation effects, with the help of Modernizr, make for a perfect backup
 solution to any browser not supporting CSS animations.
 
-### Effect Duration
+<h4>Effect Duration</h4>
 
 Using the .show() method as an example, the first parameter available to
 optionally pass in to the method is the duration, which can be
@@ -7985,7 +7619,7 @@ values must be quoted while millisecond values do not.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-### Effect Easing
+<h4>Effect Easing</h4>
 
 In addition to setting the duration in which an effect takes place the
 easing, or speed at which an animation progresses at during different
@@ -8005,7 +7639,7 @@ animation at one constant pace for the entire duration.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-### jQuery UI
+<h4>jQuery UI</h4>
 
 The two easing values that come with jQuery may be extend with the use
 of different plug-ins, of which may offer additional values. One of the
@@ -8016,7 +7650,7 @@ On top of new easing values jQuery UI also provides a handful other
 interactions, effects, widgets, and other helpful resources worth taking
 a look at.
 
-### Effect Callback
+<h4>Effect Callback</h4>
 
 When an animation is completed it is possible to run another function,
 called a callback function. The callback function should be placed after
@@ -8034,7 +7668,7 @@ or effects may be placed, each following their own required syntax.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-### Effect Syntax
+<h4>Effect Syntax</h4>
 
 As previously mentioned, each effect method has it's own syntax which
 can be found in the jQuery [[effects
@@ -8043,7 +7677,7 @@ The duration, easing, and callback parameters outlined here are common,
 but not available on every method. It is best to review the syntax of a
 method should you have any questions around it.
 
-### Effects Demo
+<h4>Effects Demo</h4>
 
 Taking the same events demo from above, the .remove() method is now used
 as part of a callback function on the .fadeOut() method. Using
@@ -8051,7 +7685,7 @@ the .fadeOut() method allows for the alert message to gradually fade out
 rather than quickly disappearing, then be removed from the DOM after the
 animation is complete.
 
-### **HTML**
+**HTML**
 
 +---+--------------------------------------------------------------------+
  1  <div class="notice-warning">                                   
@@ -8083,9 +7717,9 @@ animation is complete.
 +===+===================================================================+
 +---+-------------------------------------------------------------------+
 
-### Demo
+<h4>Demo</h4>
 
-### Basic Effects
+<h4>Basic Effects
 
 -   .hide()
 
@@ -8093,7 +7727,7 @@ animation is complete.
 
 -   .toggle()
 
-### Custom Effects
+<h4>Custom Effects</h4>
 
 -   .animate()
 
@@ -8111,7 +7745,7 @@ animation is complete.
 
 -   .stop()
 
-### Fading Effects
+<h4>Fading Effects</h4>
 
 -   .fadeIn()
 
@@ -8121,7 +7755,7 @@ animation is complete.
 
 -   .fadeToggle()
 
-### Sliding Effects
+<h4>Sliding Effects</h4>
 
 -   .slideDown()
 
@@ -8129,7 +7763,7 @@ animation is complete.
 
 -   .slideUp()
 
-### Slide Demo
+<h4>Slide Demo</h4>
 
 **HTML**
 
@@ -8240,34 +7874,34 @@ Tabs Demo
 +===+====================================================================+
 +---+--------------------------------------------------------------------+
 
-### Demo
+<h4>Demo</h4>
 
-### Resources & Links
+<h4>Resources &amp; Links</h4>
 
--   [[JavaScript For Cats]{.underline}](http://jsforcats.com/)
+-   [JavaScript For Cats](http://jsforcats.com/)
 
--   [[A Re-introduction to
-    JavaScript]{.underline}](https://developer.mozilla.org/en-US/docs/JavaScript/A_re-introduction_to_JavaScript) via
+-   [A Re-introduction to
+    JavaScript](https://developer.mozilla.org/en-US/docs/JavaScript/A_re-introduction_to_JavaScript) via
     Mozilla Developer Network
 
--   [[30 Days to Learn
-    jQuery]{.underline}](https://tutsplus.com/course/30-days-to-learn-jquery/) via
+-   [30 Days to Learn
+    jQuery](https://tutsplus.com/course/30-days-to-learn-jquery/) via
     Tuts+ Premium
 
--   [[Google Hosted
-    Libraries]{.underline}](https://developers.google.com/speed/libraries/devguide)
+-   [Google Hosted
+    Libraries](https://developers.google.com/speed/libraries/devguide)
 
--   [[jQuery Documentation]{.underline}](http://docs.jquery.com/)
+-   [jQuery Documentation](http://docs.jquery.com/)
 
--   [[jQuery Fundamentals]{.underline}](http://jqfundamentals.com/) via
+-   [jQuery Fundamentals](http://jqfundamentals.com/) via
     Bocoup
 
--   [[jQuery UI]{.underline}](http://jqueryui.com/)
+-   [jQuery UI](http://jqueryui.com/)
 
-[**Lesson 5**
-[Preprocessors]{.underline}](https://learn.shayhowe.com/advanced-html-css/preprocessors/)
-[**Lesson 7**
-[Transforms]{.underline}](https://learn.shayhowe.com/advanced-html-css/css-transforms/)
+[**Lesson 5**]
+[Preprocessors](https://learn.shayhowe.com/advanced-html-css/preprocessors/)
+[**Lesson 7**]
+[Transforms](https://learn.shayhowe.com/advanced-html-css/css-transforms/)
 
 [Lesson 7]{.mark} Transforms
 
@@ -8278,28 +7912,28 @@ Software. Faster.
 
 **CSS**
 
--   [[Transform
-    Syntax]{.underline}](https://learn.shayhowe.com/advanced-html-css/css-transforms/#transform-syntax)
+-   [Transform
+    Syntax](https://learn.shayhowe.com/advanced-html-css/css-transforms/#transform-syntax)
 
--   [[2D
-    Transforms]{.underline}](https://learn.shayhowe.com/advanced-html-css/css-transforms/#two-dimensional-transforms)
+-   [2D
+    Transforms](https://learn.shayhowe.com/advanced-html-css/css-transforms/#two-dimensional-transforms)
 
--   [[Combining
-    Transforms]{.underline}](https://learn.shayhowe.com/advanced-html-css/css-transforms/#combining-transforms)
+-   [Combining
+    Transforms](https://learn.shayhowe.com/advanced-html-css/css-transforms/#combining-transforms)
 
--   [[Transform
-    Origin]{.underline}](https://learn.shayhowe.com/advanced-html-css/css-transforms/#transform-origin)
+-   [Transform
+    Origin](https://learn.shayhowe.com/advanced-html-css/css-transforms/#transform-origin)
 
--   [[Perspective]{.underline}](https://learn.shayhowe.com/advanced-html-css/css-transforms/#perspective)
+-   [Perspective](https://learn.shayhowe.com/advanced-html-css/css-transforms/#perspective)
 
--   [[3D
-    Transforms]{.underline}](https://learn.shayhowe.com/advanced-html-css/css-transforms/#three-dimensional-transforms)
+-   [3D
+    Transforms](https://learn.shayhowe.com/advanced-html-css/css-transforms/#three-dimensional-transforms)
 
--   [[Transform
-    Style]{.underline}](https://learn.shayhowe.com/advanced-html-css/css-transforms/#transform-style)
+-   [Transform
+    Style](https://learn.shayhowe.com/advanced-html-css/css-transforms/#transform-style)
 
--   [[Backface
-    Visibility]{.underline}](https://learn.shayhowe.com/advanced-html-css/css-transforms/#backface-visibility)
+-   [Backface
+    Visibility](https://learn.shayhowe.com/advanced-html-css/css-transforms/#backface-visibility)
 
 **SHARE**
 
@@ -8320,7 +7954,7 @@ need to download the nightly version
 of [[Chrome]{.underline}](https://tools.google.com/dlpage/chromesxs/) to
 see all of these transforms in action.
 
-### Transform Syntax
+<h4>Transform Syntax</h4>
 
 The actual syntax for the transform property is quite simple, including
 the transform property followed by the value. The value specifies the
@@ -8354,7 +7988,7 @@ code in a production environment. Over time we will be able to remove
 these prefixes, however keeping them in is the safest approach for the
 time being.
 
-### 2D Transforms
+<h4>2D Transforms</h4>
 
 Elements may be distorted, or transformed, on both a two-dimensional
 plane or a three-dimensional plane. Two-dimensional transforms work on
@@ -8367,7 +8001,7 @@ elements]{.underline}](http://www.css3files.com/transform/) on a
 two-dimensional plane, and then work our way into three-dimensional
 transforms.
 
-### 2D Rotate
+<h4>2D Rotate</h4>
 
 The transform property accepts a handful of different values.
 The rotate value provides the ability to rotate an element
@@ -8407,7 +8041,7 @@ discuss how you can change this default point of rotation.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-### Rotate Demo
+<h4>Rotate Demo</h4>
 
 The gray box behind the rotated element symbolizes the original position
 of the element. Additionally, upon hover the box will rotate 360 degrees
@@ -8416,7 +8050,7 @@ within each demonstration as a reference to the element's original
 position and the horizontal rotation to help demonstrate an elements
 alteration and depth.
 
-### 2D Scale
+<h4>2D Scale</h4>
 
 Using the scale value within the transform property allows you to change
 the appeared size of an element. The default scale value is 1, therefore
@@ -8453,7 +8087,7 @@ value greater than or equal to 1.01 makes an element appear larger.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-### Scale Demo
+<h4>Scale Demo</h4>
 
 It is possible to scale only the height or width of an element using
 the scaleX and scaleY values. The scaleX value will scale the width of
@@ -8502,9 +8136,9 @@ comma, and then the y axis value.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-### Multiple Scaling Demo
+<h4>Multiple Scaling Demo</h4>
 
-### 2D Translate
+<h4>2D Translate</h4>
 
 The translate value works a bit like that of relative positioning,
 pushing and pulling an element in different directions without
@@ -8562,9 +8196,9 @@ position.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-### Translate Demo
+<h4>Translate Demo</h4>
 
-### 2D Skew
+<h4>2D Skew</h4>
 
 The last transform value in the group, skew, is used to distort elements
 on the horizontal axis, vertical axis, or both. The syntax is very
@@ -8617,9 +8251,9 @@ apply here.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-### Skew Demo
+<h4>Skew Demo</h4>
 
-### Combining Transforms
+<h4>Combining Transforms</h4>
 
 It is common for multiple transforms to be used at once, rotating and
 scaling the size of an element at the same time for example. In this
@@ -8661,7 +8295,7 @@ same as if you were to set the height of an element numerous times.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-### Combining Transforms Demo
+<h4>Combining Transforms Demo</h4>
 
 Behind every transform there is also a matrix explicitly defining the
 behavior of the transform. Using the rotate, scale, transition,
@@ -8670,7 +8304,7 @@ should you be mathematically inclined, and prefer to take a [[deeper
 dive]{.underline}](http://dev.opera.com/articles/view/understanding-the-css-transforms-matrix/) into
 transforms, try your hand at using the matrix property.
 
-### 2D Cube Demo
+<h4>2D Cube Demo</h4>
 
 **HTML**
 
@@ -8748,9 +8382,9 @@ transforms, try your hand at using the matrix property.
 +===+====================================================================+
 +---+--------------------------------------------------------------------+
 
-### Demo
+<h4>Demo</h4>
 
-### Transform Origin
+<h4>Transform Origin</h4>
 
 As previously mentioned, the default transform origin is the dead center
 of an element, both 50% horizontally and 50% vertically. To change this
@@ -8829,7 +8463,7 @@ the origin to 20 pixels across and 50 pixels down the element.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-### Transform Origin Demo
+<h4>Transform Origin Demo</h4>
 
 Notably, the transform-origin property does run into some issues when
 also using the translate transform value. Since both of them are
@@ -8837,7 +8471,7 @@ attempting to position the element, their values can collide. Use the
 two of these with caution, always checking to make sure the desired
 outcome is achieved.
 
-### Perspective
+<h4>Perspective</h4>
 
 In order for three-dimensional transforms to work the elements need a
 perspective from which to transform. The perspective for each element
@@ -8884,7 +8518,7 @@ their individual perspectives with the perspective value.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-### Perspective Value Demo
+<h4>Perspective Value Demo</h4>
 
 The following example shows a handful of elements, side by side, all
 transformed using the same perspective, accomplished by using
@@ -8926,9 +8560,9 @@ the perspective property on their direct parent element.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-### Perspective Property Demo
+<h4>Perspective Property Demo</h4>
 
-### Perspective Depth Value
+<h4>Perspective Depth Value</h4>
 
 The perspective value can be set as none or a length measurement.
 The none value turns off any perspective, while the length value will
@@ -8976,9 +8610,9 @@ depth values.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-### Perspective Depth Value Demo
+<h4>Perspective Depth Value Demo</h4>
 
-### Perspective Origin
+<h4>Perspective Origin</h4>
 
 As with setting a transform-origin you can also set
 a perspective-origin. The same values used for
@@ -9059,9 +8693,9 @@ coordinates of the vanishing point of a transform.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-### Perspective Origin Demo
+<h4>Perspective Origin Demo</h4>
 
-### 3D Transforms
+<h4>3D Transforms</h4>
 
 Working with two-dimensional transforms we are able to alter elements on
 the horizontal and vertical axes, however there is another axis along
@@ -9070,7 +8704,7 @@ transforms]{.underline}](http://24ways.org/2010/intro-to-css-3d-transforms) we
 can change elements on the z axis, giving us control of depth as well as
 length and width.
 
-### 3D Rotate
+<h4>3D Rotate</h4>
 
 So far we've discussed how to rotate an object either clockwise or
 counterclockwise on a flat plane. With three-dimensional transforms we
@@ -9126,9 +8760,9 @@ rotate the element counterclockwise.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-### 3D Rotate Demo
+<h4>3D Rotate Demo</h4>
 
-### 3D Scale
+<h4>3D Scale</h4>
 
 By using the scaleZ three-dimensional transform elements may be scaled
 on the z axis. This isn't extremely exciting when no other
@@ -9168,9 +8802,9 @@ the rotateX in this case, the elements will appear to be unchanged.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-### 3D Scale Demo
+<h4>3D Scale Demo</h4>
 
-### 3D Translate
+<h4>3D Translate</h4>
 
 Elements may also be translated on the z axis using
 the translateZ value. A negative value here will push an element further
@@ -9215,16 +8849,16 @@ for example.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-### 3D Translate Demo
+<h4>3D Translate Demo</h4>
 
-### 3D Skew
+<h4>3D Skew</h4>
 
 Skew is the one two-dimensional transform that **cannot** be transformed
 on a three-dimensional scale. Elements may be skewed on
 the x and y axis, then transformed three-dimensionally as wished, but
 they cannot be skewed on the z axis.
 
-### Shorthand 3D Transforms
+<h4>Shorthand 3D Transforms</h4>
 
 As with combining two-dimensional transforms, there are also properties
 to write out shorthand three-dimensional transforms. These properties
@@ -9234,7 +8868,7 @@ strong [[understanding]{.underline}](https://developer.mozilla.org/en/CSS/trans
 the matrices behind each transform. Should you be interested in looking
 a bit deeper into them, please do!
 
-### Transform Style
+<h4>Transform Style</h4>
 
 On occasion three-dimensional transforms will be applied on an element
 that is nested within a parent element which is also being transformed.
@@ -9297,13 +8931,13 @@ lie flat on the two-dimensional plane.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-### Transform Style Demo
+<h4>Transform Style Demo</h4>
 
 To see an additional example of the transform-style property in action
 check out the
 WebKit [[explanation]{.underline}](http://www.webkit.org/blog-files/3d-transforms/transform-style.html).
 
-### Backface Visibility
+<h4>Backface Visibility</h4>
 
 When working with three-dimensional transforms, elements will
 occasionally be transformed in a way that causes them to face away from
@@ -9353,9 +8987,9 @@ using [[animations]{.underline}](https://css-tricks.com/almanac/properties/b/ba
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-### Backface Visibility Demo
+<h4>Backface Visibility Demo</h4>
 
-### 3D Cube Demo
+<h4>3D Cube Demo</h4>
 
 **HTML**
 
@@ -9559,7 +9193,7 @@ to be altered in multiple keyframes. Transitions provide a change from
 one state to another, while animations can set multiple points of
 transition upon different keyframes.
 
-### Transitions
+<h4>Transitions</h4>
 
 As mentioned, for
 a [[transition]{.underline}](http://www.alistapart.com/articles/understanding-css3-transitions/) to
@@ -9600,9 +9234,9 @@ course of 1 second in a linear fashion.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-### Transition Demo
+<h4>Transition Demo</h4>
 
-### Vendor Prefixes
+<h4>Vendor Prefixes</h4>
 
 The code above, as with the rest of the code samples in this lesson, are
 not vendor prefixed. This is intentionally un-prefixed in the interest
@@ -9663,7 +9297,7 @@ the following.
 +===+====================================================================+
 +---+--------------------------------------------------------------------+
 
-### Transitional Property
+<h4>Transitional Property</h4>
 
 The transition-property property determines exactly what properties will
 be altered in conjunction with the other transitional properties. By
@@ -9714,9 +9348,9 @@ element.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-### Transition Property Demo
+<h4>Transition Property Demo</h4>
 
-### Transitional Properties
+<h4>Transitional Properties</h4>
 
 It is important to note, <b>not all properties may be transitioned**,
 only properties that have an identifiable halfway point. Colors, font
@@ -9794,7 +9428,7 @@ properties include the following.
 
 -   z-index
 
-### Transition Duration
+<h4>Transition Duration</h4>
 
 The duration in which a transition takes place is set using
 the transition-duration property. The value of this property can be set
@@ -9844,9 +9478,9 @@ transitioned properties.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-### Transition Duration Demo
+<h4>Transition Duration Demo</h4>
 
-### Transition Timing
+<h4>Transition Timing</h4>
 
 The transition-timing-function property is used to set the speed in
 which a transition will move. Knowing the duration from
@@ -9888,9 +9522,9 @@ property values, may be declared as comma separated values.
  12 
 ```
 
-### Transition Timing Demo
+<h4>Transition Timing Demo</h4>
 
-### Transition Delay
+<h4>Transition Delay</h4>
 
 On top of declaring the transition property, duration, and timing
 function, you can also set a delay with the transition-delay property.
@@ -9915,9 +9549,9 @@ can be declared as comma separated values.
  13  
 ```
 
-### Transition Delay Demo
+<h4>Transition Delay Demo</h4>
 
-### Shorthand Transitions
+<h4>Shorthand Transitions</h4>
 
 Declaring every transition property individually can become quite
 intensive, especially with vendor prefixes. Fortunately there is a
@@ -9945,9 +9579,9 @@ transition values.
  1                                                                       
 ```
 
-### Shorthand Transitions Demo
+<h4>Shorthand Transitions Demo</h4>
 
-### Transitional Button
+<h4>Transitional Button</h4>
 
 <b>HTML**
 
@@ -9979,9 +9613,9 @@ transition values.
  5                                                                     
 ```
 
-### Demo
+<h4>Demo</h4>
 
-### Card Flip
+<h4>Card Flip</h4>
 
 <b>HTML**
 
@@ -10057,9 +9691,9 @@ transition values.
  0                                                                     
 ```
 
-### Demo
+<h4>Demo</h4>
 
-### Animations
+<h4>Animations</h4>
 
 Transitions do a great job of building out visual interactions from one
 state to another, and are perfect for these kinds of single state
@@ -10068,7 +9702,7 @@ have multiple states. In return, this is
 where [animations](http://coding.smashingmagazine.com/2011/09/14/the-guide-to-css-animation-principles-and-examples/) pick
 up where transitions leave off.
 
-### Animations Keyframes
+<h4>Animations Keyframes</h4>
 
 To set multiple points at which an element should undergo a transition,
 use the @keyframes rule. The @keyframes rule includes the animation
@@ -10107,7 +9741,7 @@ animated.
  3                                                                       
 ```
 
-### Vendor Prefixing the Keyframe Rule
+<h4>Vendor Prefixing the Keyframe Rule</h4>
 
 The @keyframes rule must be vendor prefixed, just like all of the
 other transition and animation properties. The vendor prefixes for
@@ -10134,11 +9768,11 @@ not work, because animations can only apply a transition within a single
 property, not from one property to another. In this case, the element
 will need to be animated from top: 0; to top: 100%;.
 
-### Animations Keyframes Demo
+<h4>Animations Keyframes Demo</h4>
 
 Hover over the ball below to see the animation in action.
 
-### Animation Name
+<h4>Animation Name</h4>
 
 Once the keyframes for an animation have been declared they need to be
 assigned to an element. To do so, the animation-name property is used
@@ -10161,7 +9795,7 @@ Using the animation-name property alone isn't enough though. You also
 need to declare an animation-duration property and value so that the
 browser knows how long an animation should take to complete.
 
-### Animation Duration, Timing Function, & Delay
+<h4>Animation Duration, Timing Function, & Delay</h4>
 
 Once you have declared the animation-name property on an element,
 animations behave similarly to transitions. They include a duration,
@@ -10169,155 +9803,88 @@ timing function, and delay if desired. To start, animations need a
 duration declared using the animation-duration property. As with
 transitions, the duration may be set in seconds or milliseconds.
 
-+---+----------------------------------------------------------------------+
+```
  1  .stage:hover .ball {                                                 
-                                                                         
  2  animation-name: slide;                                               
-                                                                         
  3  animation-duration: 2s;                                              
-                                                                         
  4  }                                                                    
-                                                                         
  5                                                                       
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 A timing function and delay can be declared using
 the animation-timing-function and animation-delay properties
 respectively. The values for these properties mimic and behave just as
 they do with transitions.
 
-+---+----------------------------------------------------------------------+
+```
  1  .stage:hover .ball {                                                 
-                                                                         
  2  animation-name: slide;                                               
-                                                                         
  3  animation-duration: 2s;                                              
-                                                                         
  4  animation-timing-function: ease-in-out;                              
-                                                                         
  5  animation-delay: .5s;                                                
-                                                                         
  6  }                                                                    
-                                                                         
  7                                                                       
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 The animation below should cause the ball to bounce once while moving to
 the left, however only when hovering over the stage.
 
-<b>HTML**
+<b>HTML</b>
 
-+---+----------------------------------------------------------------------+
+```
  1  <div class="stage">                                              
-                                                                         
  2  <figure class="ball"></figure>                                 
-                                                                         
  3  </div>                                                             
-                                                                         
  4                                                                       
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
-<b>CSS**
+<b>CSS</b>
 
-+---+----------------------------------------------------------------------+
+```
  1  &#0064;keyframes slide {                                                  
-                                                                         
  2  0% {                                                                 
-                                                                         
  3  left: 0;                                                             
-                                                                         
  4  top: 0;                                                              
-                                                                         
  5  }                                                                    
-                                                                         
  6  50% {                                                                
-                                                                         
  7  left: 244px;                                                         
-                                                                         
  8  top: 100px;                                                          
-                                                                         
  9  }                                                                    
-                                                                         
  1  100% {                                                               
- 0                                                                       
     left: 488px;                                                         
- 1                                                                       
  1  top: 0;                                                              
-                                                                         
  1  }                                                                    
- 2                                                                       
     }                                                                    
- 1                                                                       
  3  .stage {                                                             
-                                                                         
  1  height: 150px;                                                       
- 4                                                                       
     position: relative;                                                  
- 1                                                                       
  5  }                                                                    
-                                                                         
  1  .ball {                                                              
- 6                                                                       
     height: 50px;                                                        
- 1                                                                       
  7  position: absolute;                                                  
-                                                                         
  1  width: 50px;                                                         
- 8                                                                       
     }                                                                    
- 1                                                                       
  9  .stage:hover .ball {                                                 
-                                                                         
  2  animation-name: slide;                                               
- 0                                                                       
     animation-duration: 2s;                                              
- 2                                                                       
  1  animation-timing-function: ease-in-out;                              
-                                                                         
  2  animation-delay: .5s;                                                
- 2                                                                       
     }                                                                    
  2                                                                       
- 3                                                                       
-                                                                         
- 2                                                                       
- 4                                                                       
-                                                                         
- 2                                                                       
- 5                                                                       
-                                                                         
- 2                                                                       
- 6                                                                       
-                                                                         
- 2                                                                       
- 7                                                                       
-                                                                         
- 2                                                                       
- 8                                                                       
-                                                                         
- 2                                                                       
- 9                                                                       
-                                                                         
- 3                                                                       
- 0                                                                       
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
-### Animation Demo
+<h4>Animation Demo</h4>
 
 Hover over the ball below to see the animation in action.
 
-### Customizing Animations
+<h4>Customizing Animations</h4>
 
 Animations also provide the ability to further customize an element's
 behavior, including the ability to declare the number of times an
 animation runs, as well as the direction in which an animation
 completes.
 
-### Animation Iteration
+<h4>Animation Iteration</h4>
 
 By default, animations run their cycle once from beginning to end and
 then stop. To have an animation repeat itself numerous times
@@ -10327,30 +9894,22 @@ the infinite keyword. Using an integer will repeat the animation as many
 times as specified, while the infinite keyword will repeat the animation
 indefinitely in a never ending fashion.
 
-+---+----------------------------------------------------------------------+
+```
  1  .stage:hover .ball {                                                 
-                                                                         
  2  animation-name: slide;                                               
-                                                                         
  3  animation-duration: 2s;                                              
-                                                                         
  4  animation-timing-function: ease-in-out;                              
-                                                                         
  5  animation-delay: .5s;                                                
-                                                                         
  6  animation-iteration-count: infinite;                                 
-                                                                         
- 7  }                                                                    
-                                                                         
- 8                                                                       
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+ 7  }
+ 8  
+```
 
-### Animation Iteration Demo
+<h4>Animation Iteration Demo</h4>
 
 Hover over the ball below to see the animation in action.
 
-### Animation Direction
+<h4>Animation Direction</h4>
 
 On top of being able to set the number of times an animation repeats,
 you may also declare the direction an animation completes using
@@ -10379,32 +9938,23 @@ the alternate and reverse values, running an animation backwards then
 forwards. The alternate-reverse value starts at 100% running to 0% and
 then back to 100% again.
 
-+---+----------------------------------------------------------------------+
+```
  1  .stage:hover .ball {                                                 
-                                                                         
  2  animation-name: slide;                                               
-                                                                         
  3  animation-duration: 2s;                                              
-                                                                         
  4  animation-timing-function: ease-in-out;                              
-                                                                         
  5  animation-delay: .5s;                                                
-                                                                         
  6  animation-iteration-count: infinite;                                 
-                                                                         
  7  animation-direction: alternate;                                      
-                                                                         
- 8  }                                                                    
-                                                                         
- 9                                                                       
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+ 8  }
+ 9  
+```
 
-### Animation Direction Demo
+<h4>Animation Direction Demo</h4>
 
 Hover over the ball below to see the animation in action.
 
-### Animation Play State
+<h4>Animation Play State</h4>
 
 The animation-play-state property allows an animation to be played or
 paused using the running and paused keyword values respectively. When
@@ -10416,43 +9966,26 @@ to paused when making the stage active by clicking on it. Notice how the
 animation will temporarily pause until you let up on the mouse.
 
 ```
-+---+----------------------------------------------------------------------+
  1  .stage:hover .ball {                                                 
-                                                                         
  2  animation-name: slide;                                               
-                                                                         
  3  animation-duration: 2s;                                              
-                                                                         
  4  animation-timing-function: ease-in-out;                              
-                                                                         
  5  animation-delay: .5s;                                                
-                                                                         
  6  animation-iteration-count: infinite;                                 
-                                                                         
  7  animation-direction: alternate;                                      
-                                                                         
  8  }                                                                    
-                                                                         
  9  .stage:active .ball {                                                
-                                                                         
- 1  animation-play-state: paused;                                        
- 0                                                                       
-    }                                                                    
- 1                                                                       
- 1                                                                       
-                                                                         
- 1                                                                       
- 2                                                                       
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+ 10  animation-play-state: paused;                                        
+ 11   }                                                                    
+ 12                                                                       
 ```
 
-### Animation Play State Demo
+<h4>Animation Play State Demo</h4>
 
 Hover over the ball below to see the animation in action. Click to pause
 the animation.
 
-### Animation Fill Mode
+<h4>Animation Fill Mode</h4>
 
 The animation-fill-mode property identifies how an element should be
 styled either before, after, or before and after an animation is run.
@@ -10477,40 +10010,25 @@ Lastly, the both value will apply the behaviors from both
 the forwards and backwards values.
 
 ```
-+---+----------------------------------------------------------------------+
  1  .stage:hover .ball {                                                 
-                                                                         
  2  animation-name: slide;                                               
-                                                                         
  3  animation-duration: 2s;                                              
-                                                                         
  4  animation-timing-function: ease-in-out;                              
-                                                                         
  5  animation-delay: .5s;                                                
-                                                                         
  6  animation-fill-mode: forwards;                                       
-                                                                         
  7  }                                                                    
-                                                                         
  8  .stage:active .ball {                                                
-                                                                         
  9  animation-play-state: paused;                                        
-                                                                         
  1  }                                                                    
  0                                                                       
-                                                                         
- 1                                                                       
- 1                                                                       
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
 ```
 
-### Animation Fill Mode Demo
+<h4>Animation Fill Mode Demo</h4>
 
 Hover over the ball below to see the animation in action. Click to pause
 the animation.
 
-### Shorthand Animations
+<h4>Shorthand Animations</h4>
 
 Fortunately [animations](https://developer.mozilla.org/en-US/docs/CSS/Using_CSS_animations),
 just like transitions, can be written out in a shorthand format. This is
@@ -10519,30 +10037,21 @@ declarations. The order of values within the animation property should
 be animation-name, animation-duration, animation-timing-function, animation-delay, animation-iteration-count, animation-direction, animation-fill-mode, and lastly animation-play-state.
 
 ```
-+---+----------------------------------------------------------------------+
  1  .stage:hover .ball {                                                 
-                                                                         
  2  animation: slide 2s ease-in-out .5s infinite alternate;              
-                                                                         
  3  }                                                                    
-                                                                         
  4  .stage:active .ball {                                                
-                                                                         
  5  animation-play-state: paused;                                        
-                                                                         
  6  }                                                                    
-                                                                         
  7                                                                       
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
 ```
 
-### Shorthand Animations Demo
+<h4>Shorthand Animations Demo</h4>
 
 Hover over the ball below to see the animation in action. Click to pause
 the animation.
 
-### Resources & Links
+<h4>Resources & Links</h4>
 
 -   [Understanding CSS3 Transitions](http://www.alistapart.com/articles/understanding-css3-transitions/) 
   via A List Apart
@@ -10565,7 +10074,7 @@ the animation.
 
 In this Lesson 9
 
-<b>HTML**
+<b>HTML</b>
 
 -   [HTML5
     Shiv](https://learn.shayhowe.com/advanced-html-css/feature-support-polyfills/#html5-shiv)
@@ -10573,12 +10082,12 @@ In this Lesson 9
 -   [Cross Browser
     Testing](https://learn.shayhowe.com/advanced-html-css/feature-support-polyfills/#cross-browser-testing)
 
-<b>CSS**
+<b>CSS</b>
 
 -   [Detecting Browser
     Features](https://learn.shayhowe.com/advanced-html-css/feature-support-polyfills/#detecting-browser-features)
 
-<b>JAVASCRIPT**
+<b>JAVASCRIPT</b>
 
 -   [Conditionally Loading
     Files](https://learn.shayhowe.com/advanced-html-css/feature-support-polyfills/#conditionally-loading-files)
@@ -10588,7 +10097,7 @@ Common frustrations arise from trying to get a website to look and
 perform the same in every browser. All front end developers have shared
 this frustration at one point or another.
 
-Truth be told, websites <b>do not** need to look or perform the same in
+Truth be told, websites <b>do not</b> need to look or perform the same in
 every browser. Exactly how close a website works in each browser is up
 to you and your level of comfort for a given website. If a website
 receives under half a percent of traffic from Internet Explorer 6 it
@@ -10604,7 +10113,7 @@ polyfills. Generally speaking, shivs and polyfills are small JavaScript
 plugins that add support for a requested set of features not natively
 supported by a specific browser.
 
-### HTML5 Shiv
+<h4>HTML5 Shiv</h4>
 
 Perhaps the most popular shiv, and one you may have likely used already,
 is the HTML5 Shiv. The HTML5 Shiv was [created by Remy
@@ -10627,23 +10136,17 @@ In this case the conditional comment looks like <!&#45;&#45;&lbrack;if lt IE
 9&rbrack;>&#8230;<&#0033;[endif&rbrack;&#45;&#45;>.
 
 ```
-+---+----------------------------------------------------------------------+
  1  <!&#45;&#45;&lbrack;if lt IE 9&rbrack;>                                               
-                                                                         
  2  <script src="html5shiv.js"></script>                           
-                                                                         
  3  <&#0033;[endif&rbrack;&#45;&#45;>                                                    
-                                                                         
  4                                                                       
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
 ```
 
-### The Difference Between a Shiv & a Shim
+<h4>The Difference Between a Shiv & a Shim</h4>
 
 Chances are you may have heard of both the HTML5 *Shiv* and
 HTML5 *Shim*, and wondered what the difference, if any, may be. Oddly
-enough, there is <b>no** difference between the HTML5 Shiv and HTML5
+enough, there is <b>no</b> difference between the HTML5 Shiv and HTML5
 Shim. The two words are often used interchangeably and are commonly
 transposed.
 
@@ -10681,7 +10184,7 @@ should be good to go using any new HTML5 elements.
  6  
 ```
 
-### Detecting Browser Features
+<h4>Detecting Browser Features</h4>
 
 Referencing the HTML5 Shiv works well with a conditional comment because
 the intention is to specifically target browsers that don't support new
@@ -10697,7 +10200,7 @@ corners Modernizr will add the class of borderradius to
 the html element. If the browser doesn't support rounded corners,
 Modernizr will add the class of no-borderradius to the html element.
 
-### Loading Modernizr
+<h4>Loading Modernizr</h4>
 
 To get feature detection with Modernizr up and running, visit
 their [download](http://modernizr.com/download/) page and
@@ -10714,7 +10217,7 @@ Modernizr.
  2  
 ```
 
-### Conditionally Applying CSS Styles
+<h4>Conditionally Applying CSS Styles</h4>
 
 Once Modernizr is up and running CSS styles may be conditionally applied
 based on the features a given browser supports. Modernizr has detection
@@ -10766,7 +10269,7 @@ additional HTTP requests when possible.
                                                                          
 ```
 
-### Feature Detection Demo
+<h4>Feature Detection Demo</h4>
 
 In the demonstration above, the button inherits some default styles.
 However, specific styles are only applied based on whether or not CSS3
@@ -10786,7 +10289,7 @@ disables any CSS3 features. Doing so allows you to see what a website
 would look like without CSS3, and if your conditional styles are
 working.
 
-### Conditionally Loading Files
+<h4>Conditionally Loading Files</h4>
 
 On top of conditionally loading styles, Modernizr also provides a way to
 use <a href="https://modernizr.com/docs#using-modernizr-with-javascript">
@@ -10815,7 +10318,7 @@ is used the storage-polyfill.js file using the getScript method.
  1                                                                       
 ```
 
-### Conditionally Loading Based on Media Queries
+<h4>Conditionally Loading Based on Media Queries</h4>
 
 One interesting condition Modernizr can test against is media queries.
 Doing so provides the ability to only load files based on different
@@ -10838,7 +10341,7 @@ once, when the page loads, and that is it. Should a user resize the
 page, this condition will not be retested. Should this condition need to
 be retested, additional JavaScript would need to be included.
 
-### Conditionally Running Scripts
+<h4>Conditionally Running Scripts</h4>
 
 Using Modernizr, all of the HTML5 and CSS3 features they detect may be
 tested within JavaScript. For example, it may be worth disabling
@@ -10856,7 +10359,7 @@ preventing the script from loading on smaller screens.
  6                                                                       
 ```
 
-### Conditionally Running Scripts Demo
+<h4>Conditionally Running Scripts Demo</h4>
 
 Above is a basic example of how JavaScript can be executed based on a
 condition established by Modernizr. Upon loading the page, if the screen
@@ -10864,7 +10367,7 @@ is above 800 pixels wide nothing happens. However, if the screen is
 below 800 pixels wide, upon being loaded, the word 'small' will be
 swapped for 'large' based off of the executed JavaScript.
 
-### HTML5 & CSS3 Polyfills
+<h4>HTML5 & CSS3 Polyfills</h4>
 
 Currently there are polyfills for nearly all of the different HTML5 and
 CSS3 features. The team over at Modernizr has put together quite an
@@ -10877,7 +10380,7 @@ and CSS3 features, including instructions on how to use them
 responsibly. Understand, not all of these features need polyfills. Quite
 a few of them can be used outright or with the use of a fallback.
 
-### Cross Browser Testing
+<h4>Cross Browser Testing</h4>
 
 Perhaps the most dreaded part of web design and development is cross
 browser testing, making sure a website works well in all browsers.
@@ -10896,8 +10399,8 @@ different version of Internet Explorer.
 
 ![VirtualBox](./images/image014.png)
 
-<b>Fig. 9.**VirtualBox running on Mac OS X with Internet Explorer
-versions 6 through 9.
+<h6><b>Fig. 9.</b> VirtualBox running on Mac OS X with Internet Explorer
+versions 6 through 9.</h6>
 
 Microsoft provides a handful of VirtualPCs that can be used solely for
 testing. Setting all of these up can be a herculean task. Fortunately,
@@ -10916,11 +10419,10 @@ within Internet Explorer 7 and below.
 
 ![VirtualBox](./images/image015.png)
 
-<b>Fig. 9</b> Internet Explorer 7 running inside of a virtual machine with the Firebug Lite
+<h6><b>Fig. 9</b> Internet Explorer 7 running inside of a virtual machine with the Firebug Lite
+bookmarklet open for debugging.</h6>
 
-### bookmarklet open for debugging.
-
-### Resources & Links
+<h4>Resources & Links</h4>
 
 -   [HTML5 Shiv](https://code.google.com/p/html5shiv/) via Remy Sharp
 
@@ -10989,7 +10491,7 @@ objectives are being accomplished. The practice of writing semantic and
 accessible code is growing, however adoption at large has not yet been
 achieved. Be an advocate for the code you write.
 
-### Semantic Motivation
+<h4>Semantic Motivation</h4>
 
 Occasionally, one may ask if semantics really make a difference. You may
 hear they slow down development, are poorly supported, or that they are
@@ -11019,7 +10521,7 @@ recap, semantics provide:
 
 -   Interoperability
 
-### Structural Semantics
+<h4>Structural Semantics</h4>
 
 Within the beginner's guide we discuss the use of [structural
 semantics](https://learn.shayhowe.com/html-css/getting-to-know-html/),
@@ -11030,7 +10532,7 @@ meaning to web browsers and other devices. This is important, as it
 provides a better way to outline and structure pages, not to mention a
 more meaningful solution than divisions.
 
-### Hiding Content
+<h4>Hiding Content</h4>
 
 Every now and then you may want to hide a block of content on the page,
 perhaps showing or hiding an element depending on a user's state. For
@@ -11068,7 +10570,7 @@ of content, before even filling out the form, is a success message. This
 is a poor user experience, and one that can easily be fixed using proper
 semantics.
 
-### Text Level Semantics
+<h4>Text Level Semantics</h4>
 
 The majority of content on the web lives within text, and we primarily
 browse the Internet looking for this content. Using the
@@ -11076,7 +10578,7 @@ proper [semantic
 markup](https://developers.whatwg.org/text-level-semantics.html) for
 text makes it easier for users to find what they need.
 
-### Bolding Text
+<h4>Bolding Text</h4>
 
 There are a few different ways to make text bold, including multiple
 elements and the [font
@@ -11101,9 +10603,9 @@ identify significantly important text.
  6  
 ```
 
-### Bolding Text Demo
+<h4>Bolding Text Demo</h4>
 
-### Italicizing Text
+<h4>Italicizing Text</h4>
 
 Italicizing text falls in line with that of bolding text, where we can
 use multiple elements or the [font
@@ -11128,9 +10630,9 @@ importance.
  6                                                                       
 ```
 
-### Italicizing Text Demo
+<h4>Italicizing Text Demo</h4>
 
-### Using i for Icons
+<h4>Using i for Icons</h4>
 
 Recently there has been a small movement of front end programmers using
 the i element for including icons on a page, specifically as seen
@@ -11140,7 +10642,7 @@ icon background image to apply to the element. Depending on how closely
 you wish to follow semantics this may or may not be an acceptable
 practices.
 
-### Underlining Text
+<h4>Underlining Text</h4>
 
 Continuing the pattern of having multiple elements with the same
 presentation, underlining text is no different. There are a couple of
@@ -11179,9 +10681,9 @@ Use underlines with caution.
  8                                                                       
 ```
 
-### Underlining Text Demo
+<h4>Underlining Text Demo</h4>
 
-### Striking Text
+<h4>Striking Text</h4>
 
 Striking text follows the same pattern as before where different
 elements may be used, as may the [text
@@ -11206,9 +10708,9 @@ The s element identifies text that is no longer accurate or relevant.
     <s>&#36;24.99</s> &#36;19.99                                           
 ```
 
-### Striking Text Demo
+<h4>Striking Text Demo</h4>
 
-### Highlighting Text
+<h4>Highlighting Text</h4>
 
 To highlight text for reference purposes the mark element should be
 used. Added in HTML5, the mark element provides a clean, semantic way to
@@ -11221,9 +10723,9 @@ an un-semantic text level element.
  3                                                                       
 ```
 
-### Highlighting Text Demo
+<h4>Highlighting Text Demo</h4>
 
-### Abbreviations
+<h4>Abbreviations</h4>
 
 Abbreviations, the shortened form of a phrase, can be semantically
 marked up in HTML using the abbr element. The abbr element should be
@@ -11238,9 +10740,9 @@ and shouldn't be used.
  3                                                                       
 ```
 
-### Abbreviations Demo
+<h4>Abbreviations Demo</h4>
 
-### Sub & Superscripts
+<h4>Sub & Superscripts</h4>
 
 Subscripts and superscripts may be marked up accordingly using
 the sub and sup elements respectively. It is important to note that
@@ -11256,9 +10758,9 @@ presentational purposes.
  6                                                                       
 ```
 
-### Sub & Superscripts Demo
+<h4>Sub & Superscripts Demo</h4>
 
-### Meter & Progress
+<h4>Meter & Progress</h4>
 
 To gauge scale or indicate progress the meter and progress elements
 should be used. The meter element is used to measure a fixed value, one
@@ -11297,9 +10799,9 @@ the max attribute indicates what progress needs to be reached.
     there.</progress>                                                  
 ```
 
-### Meter & Progress Demo
+<h4>Meter & Progress Demo</h4>
 
-### Time & Address
+<h4>Time & Address</h4>
 
 Representing time and addresses in HTML can be accomplished using
 the time and address elements respectively. The time element may be used
@@ -11343,9 +10845,9 @@ and other content needs to be placed outside of the address element.
                                                                          
 ```
 
-### Time & Address Demo
+<h4>Time & Address Demo</h4>
 
-### Presenting Code
+<h4>Presenting Code</h4>
 
 Presenting code snippets, or samples, within a page can be accomplished
 using either the code or pre elements, or a combination of the two.
@@ -11372,9 +10874,9 @@ manner.
  8                                                                       
 ```
 
-### Presenting Code Demo
+<h4>Presenting Code Demo</h4>
 
-### Line & Word Breaks
+<h4>Line & Word Breaks</h4>
 
 Occasionally you may want to include a line break within a line of text,
 in which case the br element may be used. The br element does not have a
@@ -11402,9 +10904,9 @@ in a legible fashion.
  8                                                                       
 ```
 
-### Line & Word Breaks Demo
+<h4>Line & Word Breaks Demo</h4>
 
-### Side Comments
+<h4>Side Comments</h4>
 
 Originally the small element was used to render text as one font size
 smaller than the default, purely for presentational purposes. As we are
@@ -11420,9 +10922,9 @@ copyright information or legal print.
  3                                                                       
 ```
 
-### Side Comments Demo
+<h4>Side Comments Demo</h4>
 
-### Citations & Quotes
+<h4>Citations & Quotes</h4>
 
 The beginner's guide discusses [citations and
 quotes](https://learn.shayhowe.com/html-css/working-with-typography/),
@@ -11431,7 +10933,7 @@ quick reminder, the cite element refers to a title of work,
 the q element identifies dialog or prose, and the blockquote element is
 used to code longer formed quotes, commonly from external sources.
 
-### Hyperlink Attributes
+<h4>Hyperlink Attributes</h4>
 
 The beginner's guide also
 outlines [hyperlinks](https://learn.shayhowe.com/html-css/getting-to-know-html/),
@@ -11439,7 +10941,7 @@ and some of their different behaviors. What is not covered, however, is
 some of the semantic benefits to hyperlinks, specifically with the use
 of the download and rel attributes.
 
-### Download Attribute
+<h4>Download Attribute</h4>
 
 The download attribute tells the browser to prompt a download for a
 file, rather than the default behavior of navigation to the file. As an
@@ -11462,9 +10964,9 @@ name.
  6                                                                       
 ```
 
-### Download Attribute Demo
+<h4>Download Attribute Demo</h4>
 
-### Relationship Attribute
+<h4>Relationship Attribute</h4>
 
 For any hyperlinks including a reference attribute, href, you may also
 include the relationship attribute, rel. The rel attribute identifies
@@ -11505,7 +11007,7 @@ values include:
 
 -   tag
 
-### Microdata
+<h4>Microdata</h4>
 
 [Microdata](http://www.w3.org/TR/microdata/) is HTML
 extended with nested groups of name-value pairs that allow machines,
@@ -11533,7 +11035,7 @@ Fig. 10
 Google uses microdata to identify business locations, contact
 information, hours, pricing, ratings, and more.
 
-### Microdata vs. Microformats vs. RDFa
+<h4>Microdata vs. Microformats vs. RDFa</h4>
 
 There are actually a handful of rich, structured data standards,
 including [microdata](http://www.w3.org/TR/microdata/), [microformats](http://microformats.org/wiki/Main_Page),
@@ -11551,7 +11053,7 @@ community, find what works best for your situation, and use that. Using
 one of these standards is substantially better than not using any. Find
 what will provide the best benefit for your users.
 
-### Outlining Microdata
+<h4>Outlining Microdata</h4>
 
 Microdata is identified using three main
 attributes, itemscope, itemtype, and itemprop.
@@ -11609,7 +11111,7 @@ elements and what attribute is used for their property value.
   ---------------------------------------------------------------------------------------
 ```
 
-### Person Microdata
+<h4>Person Microdata</h4>
 
 When referring to a person
 the [person](http://schema.org/Person) microdata library
@@ -11641,14 +11143,14 @@ item properties and their corresponding values.
  5                                                                       
 ```
 
-### Person Microdata Demo
+<h4>Person Microdata Demo</h4>
 
 Please keep in mind, this code is for an individual person. Should you
 wish to refer to an organization, a more
 specific [organization](http://schema.org/Organization) microdata
 library should be followed.
 
-### Event Microdata
+<h4>Event Microdata</h4>
 
 The event microdata is very similar to that of the person microdata,
 however it uses
@@ -11693,7 +11195,7 @@ as can some of the nested item types.
  6                                                                       
 ```
 
-### Event Microdata Demo
+<h4>Event Microdata Demo</h4>
 
 Microdata provides a lot of ways to further extend the content of a
 page. We have only touched the surface here. Further information on
@@ -11701,7 +11203,7 @@ microdata may be found at [Dive Into HTML5
 Microdata](http://diveintohtml5.info/extensibility.html) and [WHATWG
 Microdata](https://developers.whatwg.org/links.html#microdata).
 
-### WAI-ARIA
+<h4>WAI-ARIA</h4>
 
 [WAI-ARIA](http://www.w3.org/WAI/intro/aria), also know as
 Web Accessibility Initiative --- Accessible Rich Internet Applications,
@@ -11711,7 +11213,7 @@ define roles (for what blocks of content do), states (for how blocks of
 content are configured), and additional properties to support assistive
 technologies.
 
-### Roles
+<h4>Roles</h4>
 
 Setting [WAI-ARIA
 roles](https://www.w3.org/TR/wai-aria/#roles) is
@@ -11732,7 +11234,7 @@ of content on a page, while <b>landmark roles</b> define the regions of a
 page. Specific role values for each of these categories are broken out
 below.
 
-### Document Structure Roles
+<h4>Document Structure Roles</h4>
 
 -   article
 
@@ -11770,7 +11272,7 @@ below.
 
 -   toolbar
 
-### Landmark Roles
+<h4>Landmark Roles</h4>
 
 -   application
 
