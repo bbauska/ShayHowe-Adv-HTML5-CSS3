@@ -1,4 +1,4 @@
- ---
+---
 title: "Shay & Howe's Advanced HTML and CSS"
 author: "Brian Bauska (bbauska)"
 date last editted: "3/25/2024 5 +pm"
