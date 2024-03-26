@@ -9,55 +9,55 @@ output:
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~ 01/02. javascript and uc davis logos (01) ~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p align="center" width="100%">
-<img src="./images/image001.png"
-  style="width:20%"
-  title="JavaScript logo"
-  alt="JavaScript logo." />
-<img src="./images/image002.png"
-  style="width:20%"
-  title="UC Davis logo"
-  alt="UC Davis logo." />
-</p>
+// <p align="center" width="100%">
+// <img src="./images/image001.png"
+//  style="width:20%"
+//  title="JavaScript logo"
+//  alt="JavaScript logo." />
+// <img src="./images/image002.png"
+//  style="width:20%"
+//  title="UC Davis logo"
+//  alt="UC Davis logo." />
+// </p>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="about">About this Course</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-by Shay-Howe
+<h1 style="align:center";>Advanced HTML &amp; CSS</h1>
+<h6 style="align:center">by Shay-Howe</h6>
 
-[Lesson 1]{.mark} Performance & Organization
+[Lesson 1] Performance & Organization
 
-In this Lesson 1
+<h3>In this Lesson 1</h3>
 
-**HTML**
+<h5>HTML</h5>
 
--   [[Minify & Compress
-    Files]{.underline}](https://learn.shayhowe.com/advanced-html-css/performance-organization/#minify-compress-files)
+<ul>
+  <li><a href="https://learn.shayhowe.com/advanced-html-css/performance-organization/#minify-compress-files">
+    Minify & Compress Files</a></li>
+  <li><a href="https://learn.shayhowe.com/advanced-html-css/performance-organization/#cache-common-files">
+    Cache Common Files</a></li>
+</ul>
 
--   [[Cache Common
-    Files]{.underline}](https://learn.shayhowe.com/advanced-html-css/performance-organization/#cache-common-files)
+<h5>CSS</h5>
 
-**CSS**
+<ul>
+  <li><a href="https://learn.shayhowe.com/advanced-html-css/performance-organization/#strategy-structure">
+    Strategy &amp; Structure</a></li>
+  <li><a href="https://learn.shayhowe.com/advanced-html-css/performance-organization/#performance-driven-selectors">
+    Performance Driven Selectors</a></li>
+  <li><a href="https://learn.shayhowe.com/advanced-html-css/performance-organization/#reusable-code">
+    Reusable Code</a></li>
+  <li><a href="https://learn.shayhowe.com/advanced-html-css/performance-organization/#reduce-http-requests">
+    Reduce HTTP Requests</a></li>
+</ul>
 
--   [[Strategy & Structure]{.underline}](https://learn.shayhowe.com/advanced-html-css/performance-organization/#strategy-structure)
-
--   [[Performance Driven
-    Selectors]{.underline}](https://learn.shayhowe.com/advanced-html-css/performance-organization/#performance-driven-selectors)
-
--   [[Reusable
-    Code]{.underline}](https://learn.shayhowe.com/advanced-html-css/performance-organization/#reusable-code)
-
--   [[Reduce HTTP
-    Requests]{.underline}](https://learn.shayhowe.com/advanced-html-css/performance-organization/#reduce-http-requests)
-
-Having the ability to [[write HTML and
-CSS]{.underline}](https://learn.shayhowe.com/html-css/writing-your-best-code/) with
-a solid understanding is a great expertise to have. As a website's code
-base and traffic grows, a new skill set comes into play, one that is
-extremely important to both development time and user experience.
-Knowing the fundamentals of
-website [[performance]{.underline}](http://developer.yahoo.com/performance/rules.html) and
+Having the ability to <a href="https://learn.shayhowe.com/html-css/writing-your-best-code/">
+write HTML and CSS with a solid understanding is a great expertise to have. As a 
+website's code base and traffic grows, a new skill set comes into play, one that is
+extremely important to both development time and user experience. Knowing the fundamentals of
+website <a href="http://developer.yahoo.com/performance/rules.html">performance</a> and
 organization can go a long way.
 
 The organization and architecture of a code base can greatly affect not
@@ -68,19 +68,18 @@ and identify how all of the different components will work together, can
 speed up production and make for a better experience all around.
 
 Additionally, taking a few small steps to improve the performance of a
-website can pay off in dividends. [[Website
-performance]{.underline}](https://www.stevesouders.com/blog/2012/02/10/the-performance-golden-rule/) greatly
-resembles the 80/20 rule, where 20% of the optimizations will speed up
+website can pay off in dividends. <a href="https://www.stevesouders.com/blog/2012/02/10/the-performance-golden-rule/">
+Website performance</a> greatly resembles the 80/20 rule, where 20% of the optimizations will speed up
 roughly 80% of the website.
 
-### Strategy & Structure
+<h4>Strategy & Structure</h4>
 
 The first part to improving a website's performance and organization
 revolves around identifying a good strategy and structure for developing
 the code base. Specifically, building a strong directory architecture,
 outlining design patterns, and finding ways to reuse common code.
 
-### Style Architecture
+<h4>Style Architecture</h4>
 
 Exactly how to organize styles boils down to personal preference and
 what is best for a given website but generally speaking there are best
@@ -88,7 +87,7 @@ practices to follow. One practice includes separating styles based on
 intent, which includes creating directories for common base styles, user
 interface components, and business logic modules.
 
-+---+----------------------------------------------------------------------+
+```
 | 1 | &#0035; Base                                                              |
 |   |                                                                      |
 | 2 | -- normalize.css                                                     |
@@ -564,8 +563,7 @@ of data around performance, particularly within the Network tab.
 Additionally, there are a few websites that help identify if gzip
 compression is enabled.
 
-![gzip Overview Screenshot](./3-25-24/media/image1.png){width="3.0in"
-height="1.0221905074365705in"}
+![gzip Overview Screenshot](./images/image001.png)
 
 Fig. 1
 
@@ -573,8 +571,7 @@ The Network tab identifies each file loaded within the browser and
 displays the file size and load time. Notice how gzipping has reduced
 the file sizes by around 60%.
 
-![gzip Detail Screenshot](./3-25-24/media/image2.png){width="3.0in"
-height="2.8368405511811026in"}
+![gzip Detail Screenshot](./images/image002.png)
 
 Fig. 1
 
@@ -608,15 +605,15 @@ specifically JPG and PNG files.
 
 ### Uncompressed, 455kb
 
-![Uncompressed Ocean Picture](./3-25-24/media/image3.jpeg){width="5.0in"
+![Uncompressed Ocean Picture](./3-25-24/media/image003.jpeg){width="5.0in"
 height="3.3360039370078742in"}
 
 Compressed, 401kb
 
-![Compressed Ocean Picture](./3-25-24/media/image4.jpeg){width="5.0in"
+![Compressed Ocean Picture](./3-25-24/media/image004.jpeg){width="5.0in"
 height="3.3360039370078742in"}
 
-![ImageOptim Screenshot](./3-25-24/media/image5.png){width="3.0in"
+![ImageOptim Screenshot](./3-25-24/media/image005.png){width="3.0in"
 height="0.9733398950131233in"}
 
 Fig. 1
@@ -701,7 +698,7 @@ an element is 16 pixels wide by 16 pixels tall it can only expose a
 background image of 16 pixels by 16 pixels, with the rest of the
 background image being hidden.
 
-![Menu Sprite](./3-25-24/media/image6.png){width="3.0in"
+![Menu Sprite](./3-25-24/media/image006.png){width="3.0in"
 height="0.310087489063867in"}
 
 Fig. 1
@@ -4285,7 +4282,7 @@ Design]{.underline}*](http://www.abookapart.com/products/responsive-web-design/)
 which is worth a read.
 
 ![Food Sense Responsive
-Layout](./3-25-24/media/image7.png){width="5.0159722222222225in"
+Layout](./3-25-24/media/image007.png){width="5.0159722222222225in"
 height="9.0in"}
 
 Fig. 4
@@ -4761,14 +4758,14 @@ the section and aside.
 +---+----------------------------------------------------------------------+
 
 ![Demo without Media
-Queries](./3-25-24/media/image8.png){width="3.4131944444444446in"
+Queries](./3-25-24/media/image008.png){width="3.4131944444444446in"
 height="1.2118055555555556in"}
 
 **Fig. 4.**Without any media queries the section and aside become quite
 small. Perhaps too small to even contain any real content.
 
 ![Demo with Media
-Queries](./3-25-24/media/image9.png){width="3.4131944444444446in"
+Queries](./3-25-24/media/image009.png){width="3.4131944444444446in"
 height="2.2881944444444446in"}
 
 **Fig. 4.**Using media queries to remove the floats and change their
@@ -4934,7 +4931,7 @@ scale, and resolution of a website. To remedy this, Apple invented
 the viewport meta tag.
 
 ![Website without Viewport Meta
-Tag](./3-25-24/media/image10.png){width="3.3368055555555554in"
+Tag](./3-25-24/media/image010.png){width="3.3368055555555554in"
 height="4.336805555555555in"}
 
 **Fig. 4.** Although this demo has media queries, many mobile devices
@@ -4962,7 +4959,7 @@ the device-height and device-width values.
 +---+----------------------------------------------------------------------+
 
 ![Website with Viewport Meta
-Tag](./3-25-24/media/image11.png){width="3.3368055555555554in"
+Tag](./3-25-24/media/image011.png){width="3.3368055555555554in"
 height="4.336805555555555in"}
 
 **Fig. 4.** Letting devices know the intended width of the
@@ -4990,7 +4987,7 @@ for initial-scale should always be a positive integer between 0 and 10.
 +---+----------------------------------------------------------------------+
 
 ![Viewport Scale Meta
-Tag](./3-25-24/media/image12.png){width="3.3368055555555554in"
+Tag](./3-25-24/media/image012.png){width="3.3368055555555554in"
 height="4.336805555555555in"}
 
 **Fig. 4.** Using an integer above 1 will zoom the website to be larger
@@ -5064,7 +5061,7 @@ outlined below, using both the width and initial-scale properties.
 +---+----------------------------------------------------------------------+
 
 ![Website with Viewport Meta
-Tag](./3-25-24/media/image11.png){width="3.3368055555555554in"
+Tag](./3-25-24/media/image011.png){width="3.3368055555555554in"
 height="4.336805555555555in"}
 
 **Fig. 4** A combination
@@ -7778,7 +7775,7 @@ properties, each having a key followed by a colon and value.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-![Web Inspector Console](./3-25-24/media/image13.png){width="5.0in"
+![Web Inspector Console](./3-25-24/media/image013.png){width="5.0in"
 height="3.201388888888889in"}
 
 Fig. 6
@@ -11660,7 +11657,7 @@ debugging code. One of the best ways to boot up multiple versions of
 Internet Explorer is by using multiple virtual machines, each with a
 different version of Internet Explorer.
 
-![VirtualBox](./3-25-24/media/image14.png){width="5.0in"
+![VirtualBox](./3-25-24/media/image014.png){width="5.0in"
 height="3.161324365704287in"}
 
 **Fig. 9.**VirtualBox running on Mac OS X with Internet Explorer
@@ -11682,7 +11679,7 @@ unfortunately versions 7 and below do not. The web inspector and all of
 the other debugging tools we've grown to love are not readily available
 within Internet Explorer 7 and below.
 
-![VirtualBox](./3-25-24/media/image15.png){width="5.0in"
+![VirtualBox](./3-25-24/media/image015.png){width="5.0in"
 height="3.959935476815398in"}
 
 **Fig. 9** Internet Explorer 7 running inside of a virtual machine with
@@ -12394,7 +12391,7 @@ Chances are this information is being pulled from microdata written on
 an existing website.
 
 ![Google
-Microdata](./3-25-24/media/image16.jpeg){width="4.235416666666667in"
+Microdata](./3-25-24/media/image016.jpeg){width="4.235416666666667in"
 height="9.0in"}
 
 Fig. 10
