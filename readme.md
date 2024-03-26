@@ -10,7 +10,6 @@ output:
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h1 align="center" width="100%">Advanced HTML &amp; CSS</h1>
-
 <h6 align="center">by Shay-Howe</h6>
 
 <h2>[Lesson 1] Performance & Organization</h2>
@@ -40,7 +39,7 @@ output:
 </ul>
 
 Having the ability to <a href="https://learn.shayhowe.com/html-css/writing-your-best-code/">
-write HTML and CSS with a solid understanding is a great expertise to have. As a 
+write HTML and CSS</a> with a solid understanding is a great expertise to have. As a 
 website's code base and traffic grows, a new skill set comes into play, one that is
 extremely important to both development time and user experience. Knowing the fundamentals of
 website <a href="http://developer.yahoo.com/performance/rules.html">performance</a> and
@@ -123,9 +122,9 @@ Object Oriented CSS, OOCSS, and the Scalable and Modular Architecture
 for CSS, SMACSS. These methodologies have their own opinions on
 structure, as well as on how to use styles.
 
-### Object Oriented CSS
+<h4>Object Oriented CSS</h4>
 
-The [[Object Oriented CSS]{.underline}](http://oocss.org/) methodology
+The [Object Oriented CSS](http://oocss.org/) methodology
 was pioneered by Nicole Sullivan in her work with writing styles for
 larger websites. Object Oriented CSS identifies two principles that will
 help build scalable websites with a strong architecture and a reasonable
@@ -170,10 +169,10 @@ flexible, and utilizing a grid. These are good ground rules, and they
 can help you avoid the need to add additional styles every time you add
 a new page or feature to a website.
 
-### Scalable & Modular Architecture for CSS
+<h4>Scalable & Modular Architecture for CSS</h4>
 
-Along the same line of Object Oriented CSS is the [[Scalable and Modular
-Architecture for CSS]{.underline}](http://smacss.com/) methodology
+Along the same line of Object Oriented CSS is the [Scalable and Modular
+Architecture for CSS]](http://smacss.com/) methodology
 developed by Jonathan Snook. The Scalable and Modular Architecture for
 CSS promotes breaking up styles into <b>five</b> core categories,
 including:
@@ -201,31 +200,22 @@ modules.
 
 <b>HTML</b>
 
-+---+----------------------------------------------------------------------+
-| 1 | &lt;div class=&quot;alert is-error&quot;&gt;                                     |
-|   |                                                                      |
-| 2 | &lt;p&gt;&#8230;&lt;/p&gt;                                                      |
-|   |                                                                      |
-| 3 | &lt;/div&gt;                                                             |
-|   |                                                                      |
-| 4 |                                                                      |
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
+ 1  <div class="alert is-error">
+ 2    <p>...</p>
+ 3  </div>
+ 4  
+```
 
 <b>CSS</b>
 
-+---+----------------------------------------------------------------------+
-| 1 | .alert {&#8230;}                                                        |
-|   |                                                                      |
-| 2 | .alert.is-error {&#8230;}                                               |
-|   |                                                                      |
-| 3 | .alert p {&#8230;}                                                      |
-|   |                                                                      |
-| 4 | .alert.is-error p {&#8230;}                                             |
-|   |                                                                      |
-| 5 |                                                                      |
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
+ 1  .alert {...}
+ 2  .alert.is-error {...}
+ 3  .alert p {...}
+ 4  .alert.is-error p {...}
+ 5  
+```
 
 In the example above the alert class falls into the module category
 while the is-error class falls into the state category. Styles from each
@@ -259,41 +249,22 @@ qualified selectors reduce performance because they force the browser to
 render each individual selector type from right to left. They also put a
 burden on all other selectors to be more specific.
 
-+---+----------------------------------------------------------------------+
-| 1 | /&ast; Bad &ast;/                                                          |
-|   |                                                                      |
-| 2 | header nav ul li a {&#8230;}                                            |
-|   |                                                                      |
-| 3 | /&ast; Good &ast;/                                                         |
-|   |                                                                      |
-| 4 | .primary-link {&#8230;}                                                 |
-|   |                                                                      |
-| 5 | /&ast; Bad &ast;/                                                          |
-|   |                                                                      |
-| 6 | button strong span {&#8230;}                                            |
-|   |                                                                      |
-| 7 | button strong span .callout {&#8230;}                                   |
-|   |                                                                      |
-| 8 | /&ast; Good &ast;/                                                         |
-|   |                                                                      |
-| 9 | button span {&#8230;}                                                   |
-|   |                                                                      |
-| 1 | button .callout {&#8230;}                                               |
-| 0 |                                                                      |
-|   |                                                                      |
-| 1 |                                                                      |
-| 1 |                                                                      |
-|   |                                                                      |
-| 1 |                                                                      |
-| 2 |                                                                      |
-|   |                                                                      |
-| 1 |                                                                      |
-| 3 |                                                                      |
-|   |                                                                      |
-| 1 |                                                                      |
-| 4 |                                                                      |
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
+ 1  /* Bad */
+ 2  header nav ul li a {...}
+ 3  
+ 4  /* Good */
+ 5  .primary-link {...}
+ 6  
+ 7  /* Bad */
+ 8  button strong span {...}
+ 9  button strong span .callout {...}
+ 10 
+ 11 /* Good */
+ 12 button span {...}
+ 13 button .callout {...}
+ 14 
+```
 
 In the code above, the first selector is extremely specific and could be
 identified, and rendered, much quicker with the use of a class.
@@ -311,7 +282,7 @@ strength, allows them to better cooperate.
 The overall goal with short selectors is to decrease specificity,
 creating cleaner, more charitable code.
 
-### Favor Classes
+<h4>Favor Classes</h4>
 
 Classes are great, they render quickly, allow for styles to be reused,
 and are already commonly used in building a website. When using classes
@@ -329,35 +300,20 @@ Additionally, do not prefix class selectors with an element. Doing so
 prohibits those styles from easily being applied to a different element
 and increases the overall specificity of the selector.
 
-+---+----------------------------------------------------------------------+
-| 1 | /&ast; Bad &ast;/                                                          |
-|   |                                                                      |
-| 2 | #container header nav {&#8230;}                                         |
-|   |                                                                      |
-| 3 | /&ast; Good &ast;/                                                         |
-|   |                                                                      |
-| 4 | .primary-nav {&#8230;}                                                  |
-|   |                                                                      |
-| 5 | /&ast; Bad &ast;/                                                          |
-|   |                                                                      |
-| 6 | article.feat-post {&#8230;}                                             |
-|   |                                                                      |
-| 7 | /&ast; Good &ast;/                                                         |
-|   |                                                                      |
-| 8 | .feat-post {&#8230;}                                                    |
-|   |                                                                      |
-| 9 |                                                                      |
-|   |                                                                      |
-| 1 |                                                                      |
-| 0 |                                                                      |
-|   |                                                                      |
-| 1 |                                                                      |
-| 1 |                                                                      |
-|   |                                                                      |
-| 1 |                                                                      |
-| 2 |                                                                      |
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
+ 1  /* Bad */
+ 2  #container header nav {...}
+ 3 
+ 4  /* Good */
+ 5  .primary-nav {...}
+ 6 
+ 7  /* Bad */
+ 8  article.feat-post {...}
+ 9 
+ 10 /* Good */
+ 11 .feat-post {...}
+ 12                                                                      
+```
 
 It is also worth noting, stay away from ID selectors where possible as
 they are overly specific and do not allow for any repetition. At the end
@@ -382,80 +338,43 @@ Another approach, often seen within the OOCSS and SMACSS methodologies
 previously mentioned, includes binding styles to one class, then using
 multiple classes on the same element.
 
-+---+----------------------------------------------------------------------+
-| 1 | /&ast; Bad &ast;/                                                          |
-|   |                                                                      |
-| 2 | .news {                                                              |
-|   |                                                                      |
-| 3 | background: #eee;                                                    |
-|   |                                                                      |
-| 4 | border-radius: 5px;                                                  |
-|   |                                                                      |
-| 5 | box-shadow: inset 0 1px 2px rgba(0, 0, 0, .25);                      |
-|   |                                                                      |
-| 6 | }                                                                    |
-|   |                                                                      |
-| 7 | .social {                                                            |
-|   |                                                                      |
-| 8 | background: #eee;                                                    |
-|   |                                                                      |
-| 9 | border-radius: 5px;                                                  |
-|   |                                                                      |
-| 1 | box-shadow: inset 0 1px 2px rgba(0, 0, 0, .25);                      |
-| 0 |                                                                      |
-|   | }                                                                    |
-| 1 |                                                                      |
-| 1 | /&ast; Good &ast;/                                                         |
-|   |                                                                      |
-| 1 | .news,                                                               |
-| 2 |                                                                      |
-|   | .social {                                                            |
-| 1 |                                                                      |
-| 3 | background: #eee;                                                    |
-|   |                                                                      |
-| 1 | border-radius: 5px;                                                  |
-| 4 |                                                                      |
-|   | box-shadow: inset 0 1px 2px rgba(0, 0, 0, .25);                      |
-| 1 |                                                                      |
-| 5 | }                                                                    |
-|   |                                                                      |
-| 1 | /&ast; Even Better &ast;/                                                  |
-| 6 |                                                                      |
-|   | .modal {                                                             |
-| 1 |                                                                      |
-| 7 | background: #eee;                                                    |
-|   |                                                                      |
-| 1 | border-radius: 5px;                                                  |
-| 8 |                                                                      |
-|   | box-shadow: inset 0 1px 2px rgba(0, 0, 0, .25);                      |
-| 1 |                                                                      |
-| 9 | }                                                                    |
-|   |                                                                      |
-| 2 |                                                                      |
-| 0 |                                                                      |
-|   |                                                                      |
-| 2 |                                                                      |
-| 1 |                                                                      |
-|   |                                                                      |
-| 2 |                                                                      |
-| 2 |                                                                      |
-|   |                                                                      |
-| 2 |                                                                      |
-| 3 |                                                                      |
-|   |                                                                      |
-| 2 |                                                                      |
-| 4 |                                                                      |
-|   |                                                                      |
-| 2 |                                                                      |
-| 5 |                                                                      |
-|   |                                                                      |
-| 2 |                                                                      |
-| 6 |                                                                      |
-|   |                                                                      |
-| 2 |                                                                      |
-| 7 |                                                                      |
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
+ 1  /&ast; Bad &ast;/
+ 2  .news {                                                              
+ 3  background: #eee;                                                    
+ 4  border-radius: 5px;                                                  
+ 5  box-shadow: inset 0 1px 2px rgba(0, 0, 0, .25);                      
+ 6  }
+ 7  .social {
+ 8  background: #eee;
+ 9  border-radius: 5px;
+ 1  box-shadow: inset 0 1px 2px rgba(0, 0, 0, .25);
+ 11 }
+ 12
+ 1  /&ast; Good &ast;/                                                         
+                                                                         
+ 1  .news,                                                               
+ 2                                                                       
+    .social {                                                            
+ 1                                                                       
+ 3  background: #eee;                                                    
+                                                                         
+ 1  border-radius: 5px;                                                  
+ 4                                                                       
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, .25);                      
+ 1                                                                       
+ 5  }                                                                    
+                                                                         
+ 1  /&ast; Even Better &ast;/                                                  
+ 6                                                                       
+    .modal {                                                             
+ 1                                                                       
+ 7  background: #eee;                                                    
+                                                                         
+ 1  border-radius: 5px;                                                  
+ 8                                                                       
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, .25);                      
+```
 
 Which approach you take doesn't make a huge difference, so long as code
 is being shared and reused, and the overall file size is reduced.
@@ -580,12 +499,12 @@ and not to shrink an image. Using a larger image, then scaling it down
 with the height and width attributes is bad practice as it loads more
 data than necessary.
 
+```
 +---+----------------------------------------------------------------------+
-| 1 | &lt;img src=&quot;ocean.jpg&quot; height=&quot;440&quot; width=&quot;660&quot;                 |
-|   | alt=&quot;Oceanview&quot;&gt;                                                  |
-| 2 |                                                                      |
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+ 1  &lt;img src=&quot;ocean.jpg&quot; height=&quot;440&quot; width=&quot;660&quot;                 
+    alt=&quot;Oceanview&quot;&gt;                                                  
+ 2                                                                       
+```
 
 ### Reduce HTTP Requests
 
@@ -601,24 +520,17 @@ requests is to combine like files. Specifically, combine all of the CSS
 files into one and all of the JavaScript files into one. Combining these
 files then compressing them creates one, hopefully small, HTTP request.
 
+```
 +---+----------------------------------------------------------------------+
-| 1 | &lt;!&#45;&#45; Bad &#45;&#45;&gt;                                                     |
-|   |                                                                      |
-| 2 | &lt;link href=&quot;css/reset.css&quot; rel=&quot;stylesheet&quot;&gt;                   |
-|   |                                                                      |
-| 3 | &lt;link href=&quot;css/base.css&quot; rel=&quot;stylesheet&quot;&gt;                    |
-|   |                                                                      |
-| 4 | &lt;link href=&quot;css/site.css&quot; rel=&quot;stylesheet&quot;&gt;                    |
-|   |                                                                      |
-| 5 | &lt;!&#45;&#45; Good &#45;&#45;&gt;                                                    |
-|   |                                                                      |
-| 6 | &lt;link href=&quot;css/styles.css&quot; rel=&quot;stylesheet&quot;&gt;                  |
-|   |                                                                      |
-| 7 |                                                                      |
-|   |                                                                      |
-| 8 |                                                                      |
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+ 1  &lt;!&#45;&#45; Bad &#45;&#45;&gt;                                                     
+ 2  &lt;link href=&quot;css/reset.css&quot; rel=&quot;stylesheet&quot;&gt;                   
+ 3  &lt;link href=&quot;css/base.css&quot; rel=&quot;stylesheet&quot;&gt;                    
+ 4  &lt;link href=&quot;css/site.css&quot; rel=&quot;stylesheet&quot;&gt;                    
+ 5  &lt;!&#45;&#45; Good &#45;&#45;&gt;                                                    
+ 6  &lt;link href=&quot;css/styles.css&quot; rel=&quot;stylesheet&quot;&gt;                  
+ 7                                                                       
+ 8                                                                       
+```
 
 In general, the CSS for a web page should be loaded at
 the <b>beginning</b> of the document within the head, while the JavaScript
@@ -649,8 +561,7 @@ an element is 16 pixels wide by 16 pixels tall it can only expose a
 background image of 16 pixels by 16 pixels, with the rest of the
 background image being hidden.
 
-![Menu Sprite](./3-25-24/media/image006.png){width="3.0in"
-height="0.310087489063867in"}
+![Menu Sprite](./images/image006.png)
 
 Fig. 1
 
@@ -665,200 +576,198 @@ be shown accordingly.
 <h5>HTML</h5>
 
 ```
-+---+----------------------------------------------------------------------+
-| 1 | &lt;ul&gt;                                                               |
-|   |                                                                      |
-| 2 | &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;bold&quot;&gt;Bold                    |
-|   | Text&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;                                           |
-| 3 |                                                                      |
-|   | &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;italic&quot;&gt;Italicize             |
-| 4 | Text&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;                                           |
-|   |                                                                      |
-| 5 | &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;underline&quot;&gt;Underline          |
-|   | Text&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;                                           |
-| 6 |                                                                      |
-|   | &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;size&quot;&gt;Size                    |
-| 7 | Text&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;                                           |
-|   |                                                                      |
-| 8 | &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;bullet&quot;&gt;Bullet                |
-|   | Text&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;                                           |
-| 9 |                                                                      |
-|   | &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;number&quot;&gt;Number                |
-| 1 | Text&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;                                           |
-| 0 |                                                                      |
-|   | &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;quote&quot;&gt;Quote                  |
-| 1 | Text&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;                                           |
-| 1 |                                                                      |
-|   | &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;left&quot;&gt;Left Align              |
-| 1 | Text&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;                                           |
-| 2 |                                                                      |
-|   | &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;center&quot;&gt;Center Align          |
-| 1 | Text&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;                                           |
-| 3 |                                                                      |
-|   | &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;right&quot;&gt;Right Align            |
-|   | Text&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;                                           |
-|   |                                                                      |
-|   | &lt;/ul&gt;                                                              |
+ 1  &lt;ul&gt;                                                               
+ 2  &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;bold&quot;&gt;Bold                    
+    Text&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;                                           
+ 3                                                                       
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;italic&quot;&gt;Italicize             
+ 4  Text&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;                                           
+                                                                         
+ 5  &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;underline&quot;&gt;Underline          
+    Text&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;                                           
+ 6                                                                       
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;size&quot;&gt;Size                    
+ 7  Text&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;                                           
+                                                                         
+ 8  &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;bullet&quot;&gt;Bullet                
+    Text&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;                                           
+ 9                                                                       
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;number&quot;&gt;Number                
+ 1  Text&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;                                           
+ 0                                                                       
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;quote&quot;&gt;Quote                  
+ 1  Text&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;                                           
+ 1                                                                       
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;left&quot;&gt;Left Align              
+ 1  Text&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;                                           
+ 2                                                                       
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;center&quot;&gt;Center Align          
+ 1  Text&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;                                           
+ 3                                                                       
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;right&quot;&gt;Right Align            
+    Text&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;                                           
+                                                                         
+    &lt;/ul&gt;                                                              
 ``
 
 <b>CSS</b>
 
 ```
-| 1 | ul {                                                                 |
-|   |                                                                      |
-| 2 | margin: 0;                                                           |
-|   |                                                                      |
-| 3 | padding: 0;                                                          |
-|   |                                                                      |
-| 4 | }                                                                    |
-|   |                                                                      |
-| 5 | li {                                                                 |
-|   |                                                                      |
-| 6 | float: left;                                                         |
-|   |                                                                      |
-| 7 | list-style: none;                                                    |
-|   |                                                                      |
-| 8 | margin: 2px;                                                         |
-|   |                                                                      |
-| 9 | }                                                                    |
-|   |                                                                      |
-| 1 | li a {                                                               |
-| 0 |                                                                      |
-|   | background: linear-gradient(#fff, #eee);                             |
-| 1 |                                                                      |
-| 1 | border: 1px solid #ccc;                                              |
-|   |                                                                      |
-| 1 | border-radius: 3px;                                                  |
-| 2 |                                                                      |
-|   | display: block;                                                      |
-| 1 |                                                                      |
-| 3 | padding: 3px;                                                        |
-|   |                                                                      |
-| 1 | }                                                                    |
-| 4 |                                                                      |
-|   | li a:hover {                                                         |
-| 1 |                                                                      |
-| 5 | border-color: #999;                                                  |
-|   |                                                                      |
-| 1 | }                                                                    |
-| 6 |                                                                      |
-|   | li span {                                                            |
-| 1 |                                                                      |
-| 7 | background: url(&quot;sprite.png&quot;) 0 0 no-repeat;                       |
-|   |                                                                      |
-| 1 | color: transparent;                                                  |
-| 8 |                                                                      |
-|   | display: block;                                                      |
-| 1 |                                                                      |
-| 9 | font: 0/0 a;                                                         |
-|   |                                                                      |
-| 2 | height: 16px;                                                        |
-| 0 |                                                                      |
-|   | width: 16px;                                                         |
-| 2 |                                                                      |
-| 1 | }                                                                    |
-|   |                                                                      |
-| 2 | .italic {                                                            |
-| 2 |                                                                      |
-|   | background-position: -16px 0;                                        |
-| 2 |                                                                      |
-| 3 | }                                                                    |
-|   |                                                                      |
-| 2 | .underline {                                                         |
-| 4 |                                                                      |
-|   | background-position: -32px 0;                                        |
-| 2 |                                                                      |
-| 5 | }                                                                    |
-|   |                                                                      |
-| 2 | .size {                                                              |
-| 6 |                                                                      |
-|   | background-position: -48px 0;                                        |
-| 2 |                                                                      |
-| 7 | }                                                                    |
-|   |                                                                      |
-| 2 | .bullet {                                                            |
-| 8 |                                                                      |
-|   | background-position: -64px 0;                                        |
-| 2 |                                                                      |
-| 9 | }                                                                    |
-|   |                                                                      |
-| 3 | .number {                                                            |
-| 0 |                                                                      |
-|   | background-position: -80px 0;                                        |
-| 3 |                                                                      |
-| 1 | }                                                                    |
-|   |                                                                      |
-| 3 | .quote {                                                             |
-| 2 |                                                                      |
-|   | background-position: -96px 0;                                        |
-| 3 |                                                                      |
-| 3 | }                                                                    |
-|   |                                                                      |
-| 3 | .left {                                                              |
-| 4 |                                                                      |
-|   | background-position: -112px 0;                                       |
-| 3 |                                                                      |
-| 5 | }                                                                    |
-|   |                                                                      |
-| 3 | .center {                                                            |
-| 6 |                                                                      |
-|   | background-position: -128px 0;                                       |
-| 3 |                                                                      |
-| 7 | }                                                                    |
-|   |                                                                      |
-| 3 | .right {                                                             |
-| 8 |                                                                      |
-|   | background-position: -144px 0;                                       |
-| 3 |                                                                      |
-| 9 | }                                                                    |
-|   |                                                                      |
-| 4 |                                                                      |
-| 0 |                                                                      |
-|   |                                                                      |
-| 4 |                                                                      |
-| 1 |                                                                      |
-|   |                                                                      |
-| 4 |                                                                      |
-| 2 |                                                                      |
-|   |                                                                      |
-| 4 |                                                                      |
-| 3 |                                                                      |
-|   |                                                                      |
-| 4 |                                                                      |
-| 4 |                                                                      |
-|   |                                                                      |
-| 4 |                                                                      |
-| 5 |                                                                      |
-|   |                                                                      |
-| 4 |                                                                      |
-| 6 |                                                                      |
-|   |                                                                      |
-| 4 |                                                                      |
-| 7 |                                                                      |
-|   |                                                                      |
-| 4 |                                                                      |
-| 8 |                                                                      |
-|   |                                                                      |
-| 4 |                                                                      |
-| 9 |                                                                      |
-|   |                                                                      |
-| 5 |                                                                      |
-| 0 |                                                                      |
-|   |                                                                      |
-| 5 |                                                                      |
-| 1 |                                                                      |
-|   |                                                                      |
-| 5 |                                                                      |
-| 2 |                                                                      |
-|   |                                                                      |
-| 5 |                                                                      |
-| 3 |                                                                      |
-|   |                                                                      |
-| 5 |                                                                      |
-| 4 |                                                                      |
-|   |                                                                      |
-| 5 |                                                                      |
-| 5 |                                                                      |
+ 1  ul {                                                                 
+                                                                         
+ 2  margin: 0;                                                           
+                                                                         
+ 3  padding: 0;                                                          
+                                                                         
+ 4  }                                                                    
+                                                                         
+ 5  li {                                                                 
+                                                                         
+ 6  float: left;                                                         
+                                                                         
+ 7  list-style: none;                                                    
+                                                                         
+ 8  margin: 2px;                                                         
+                                                                         
+ 9  }                                                                    
+                                                                         
+ 1  li a {                                                               
+ 0                                                                       
+    background: linear-gradient(#fff, #eee);                             
+ 1                                                                       
+ 1  border: 1px solid #ccc;                                              
+                                                                         
+ 1  border-radius: 3px;                                                  
+ 2                                                                       
+    display: block;                                                      
+ 1                                                                       
+ 3  padding: 3px;                                                        
+                                                                         
+ 1  }                                                                    
+ 4                                                                       
+    li a:hover {                                                         
+ 1                                                                       
+ 5  border-color: #999;                                                  
+                                                                         
+ 1  }                                                                    
+ 6                                                                       
+    li span {                                                            
+ 1                                                                       
+ 7  background: url(&quot;sprite.png&quot;) 0 0 no-repeat;                       
+                                                                         
+ 1  color: transparent;                                                  
+ 8                                                                       
+    display: block;                                                      
+ 1                                                                       
+ 9  font: 0/0 a;                                                         
+                                                                         
+ 2  height: 16px;                                                        
+ 0                                                                       
+    width: 16px;                                                         
+ 2                                                                       
+ 1  }                                                                    
+                                                                         
+ 2  .italic {                                                            
+ 2                                                                       
+    background-position: -16px 0;                                        
+ 2                                                                       
+ 3  }                                                                    
+                                                                         
+ 2  .underline {                                                         
+ 4                                                                       
+    background-position: -32px 0;                                        
+ 2                                                                       
+ 5  }                                                                    
+                                                                         
+ 2  .size {                                                              
+ 6                                                                       
+    background-position: -48px 0;                                        
+ 2                                                                       
+ 7  }                                                                    
+                                                                         
+ 2  .bullet {                                                            
+ 8                                                                       
+    background-position: -64px 0;                                        
+ 2                                                                       
+ 9  }                                                                    
+                                                                         
+ 3  .number {                                                            
+ 0                                                                       
+    background-position: -80px 0;                                        
+ 3                                                                       
+ 1  }                                                                    
+                                                                         
+ 3  .quote {                                                             
+ 2                                                                       
+    background-position: -96px 0;                                        
+ 3                                                                       
+ 3  }                                                                    
+                                                                         
+ 3  .left {                                                              
+ 4                                                                       
+    background-position: -112px 0;                                       
+ 3                                                                       
+ 5  }                                                                    
+                                                                         
+ 3  .center {                                                            
+ 6                                                                       
+    background-position: -128px 0;                                       
+ 3                                                                       
+ 7  }                                                                    
+                                                                         
+ 3  .right {                                                             
+ 8                                                                       
+    background-position: -144px 0;                                       
+ 3                                                                       
+ 9  }                                                                    
+                                                                         
+ 4                                                                       
+ 0                                                                       
+                                                                         
+ 4                                                                       
+ 1                                                                       
+                                                                         
+ 4                                                                       
+ 2                                                                       
+                                                                         
+ 4                                                                       
+ 3                                                                       
+                                                                         
+ 4                                                                       
+ 4                                                                       
+                                                                         
+ 4                                                                       
+ 5                                                                       
+                                                                         
+ 4                                                                       
+ 6                                                                       
+                                                                         
+ 4                                                                       
+ 7                                                                       
+                                                                         
+ 4                                                                       
+ 8                                                                       
+                                                                         
+ 4                                                                       
+ 9                                                                       
+                                                                         
+ 5                                                                       
+ 0                                                                       
+                                                                         
+ 5                                                                       
+ 1                                                                       
+                                                                         
+ 5                                                                       
+ 2                                                                       
+                                                                         
+ 5                                                                       
+ 3                                                                       
+                                                                         
+ 5                                                                       
+ 4                                                                       
+                                                                         
+ 5                                                                       
+ 5                                                                       
 ```
 
 ### Image Sprites Demo
@@ -866,8 +775,8 @@ be shown accordingly.
 ### Image Data URI
 
 Additionally, instead of spriting images, the encoded data for an image
-can be included within HTML and CSS directly by way of the [[data
-URI]{.underline}](https://css-tricks.com/data-uris/), removing the need
+can be included within HTML and CSS directly by way of the [data
+URI](https://css-tricks.com/data-uris/), removing the need
 for a HTTP request all together. Using the image data URI works great
 for small images, likely to never change, and where the HTML and CSS can
 be heavily cached. There are, however, a couple of problems with data
@@ -878,42 +787,35 @@ specifically Internet Explorer 7 and below.
 If using data URIs helps cut down a few HTTP requests, and the HTML or
 CSS can be heavily cached, the benefits tend to outweigh the risk. A few
 tools to help generate data URIs
-include [[converters]{.underline}](http://websemantics.co.uk/online_tools/image_to_data_uri_convertor/) and [[pattern
-generators]{.underline}](http://www.patternify.com/). Be careful though,
+include [converters](http://websemantics.co.uk/online_tools/image_to_data_uri_convertor/) and [pattern
+generators](http://www.patternify.com/). Be careful though,
 and always double check to see that the actual data URI is less weight
 than the actual image.
 
 <h5>HTML</h5>
 
 ```
-| 1 | &lt;img height=&quot;100&quot; width=&quot;660&quot; alt=&quot;Rigged Pattern&quot;            |
-|   | src=&quot;data:image/png;base64,                                         |
-| |                                                                      |
-| 2 | iVBORw0KGg                                                           |
-|    | oAAAANSUhEUgAAAAoAAAAICAYAAADA+m62AAAAPUlEQVQYV2NkQAO6m73+X/bdxoguji |
-|   |                                                                      |
-|   | IAU4RNMVwhuiQ6H6wQl3XI4oy4FMHcCJPHcDS6J2A2EqUQpJ                     |
-|   |                                                                      |
-|   | hohQAyIyYy0nBAGgAAAABJRU5ErkJggg==&quot;&gt;                               |
+ 1  &lt;img height=&quot;100&quot; width=&quot;660&quot; alt=&quot;Rigged Pattern&quot;            
+    src=&quot;data:image/png;base64,                                         
+                                                                       
+ 2  iVBORw0KGg                                                           
+     oAAAANSUhEUgAAAAoAAAAICAYAAADA+m62AAAAPUlEQVQYV2NkQAO6m73+X/bdxoguji 
+                                                                         
+    IAU4RNMVwhuiQ6H6wQl3XI4oy4FMHcCJPHcDS6J2A2EqUQpJ                     
+                                                                         
+    hohQAyIyYy0nBAGgAAAABJRU5ErkJggg==&quot;&gt;                               
 ```
 
 <h5>CSS</h5>
 
 ```
-+---+----------------------------------------------------------------------+
-| 1 | div {                                                                |
-|   |                                                                      |
-| 2 | background:                                                          |
-|   | url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAI         |
-| 3 |                                                                      |
-|   | CAYAA                                                                |
-| 4 | ADA+m62AAAAPUlEQVQYV2NkQAO6m73+X/bdxogujiIAU4RNMVwhuiQ6H6wQl3XI4oy4F |
-|   |                                                                      |
-|   | MHcCJPHcDS6J2A2EqUQpJhohQAyIyYy0nBAGgAAAABJRU5ErkJggg==&quot;) repeat;   |
-|   |                                                                      |
-|   | }                                                                    |
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+ 1  div {                                                                
+ 2  background:                                                          
+    url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAI         
+    CAYAA                                                                
+ 4  ADA+m62AAAAPUlEQVQYV2NkQAO6m73+X/bdxogujiIAU4RNMVwhuiQ6H6wQl3XI4oy4F 
+    MHcCJPHcDS6J2A2EqUQpJhohQAyIyYy0nBAGgAAAABJRU5ErkJggg==&quot;) repeat;   
+```
 
 ### Image Data URI Demo
 
@@ -938,68 +840,64 @@ the file name will need to be changed, preferably versioned, in order to
 be loaded. Alternatively, the expires headers can be changed to a
 smaller period of time.
 
-+---+----------------------------------------------------------------------+
-| 1 | ExpiresByType text/css &quot;access plus 1 year&quot;                        |
-|   |                                                                      |
-| 2 | ExpiresByType application/javascript &quot;access plus 1 year&quot;          |
-|   |                                                                      |
-| 3 |                                                                      |
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
+ 1  ExpiresByType text/css &quot;access plus 1 year&quot;                        
+ 2  ExpiresByType application/javascript &quot;access plus 1 year&quot;          
+ 3                                                                       
+```
 
 Changing the &quot;access plus 1 year&quot; value to &quot;access plus 1 week&quot; is
 better suited for CSS and JavaScript files that are changing weekly but
 are not version controlled with separate file names. For accepted
 expires header values reference
-the mod_expires [[syntax]{.underline}](http://httpd.apache.org/docs/current/mod/mod_expires.html).
+the mod_expires [syntax](http://httpd.apache.org/docs/current/mod/mod_expires.html).
 
 ### Resources & Links
 
--   [[Best Practices for Speeding Up Your Web
-    Site]{.underline}](http://developer.yahoo.com/performance/rules.html) via
+-   [Best Practices for Speeding Up Your Web
+    Site](http://developer.yahoo.com/performance/rules.html) via
     Yahoo! Developer Network
 
--   [[Rules for Faster-Loading Web
-    Sites]{.underline}](https://www.stevesouders.com/blog/2012/02/10/the-performance-golden-rule/) via
+-   [Rules for Faster-Loading Web
+    Sites](https://www.stevesouders.com/blog/2012/02/10/the-performance-golden-rule/) via
     Steve Sounders
 
--   [[CSS Strategy
-    Square-off]{.underline}](http://viget.com/inspire/css-squareoff) via
+-   [CSS Strategy
+    Square-off](http://viget.com/inspire/css-squareoff) via
     Viget Labs
 
--   [[Writing Efficient CSS
-    Selectors]{.underline}](http://csswizardry.com/2011/09/writing-efficient-css-selectors/) via
+-   [Writing Efficient CSS
+    Selectors](http://csswizardry.com/2011/09/writing-efficient-css-selectors/) via
     Harry Roberts
 
--   [[Minifying and Optimizing
-    Files]{.underline}](http://www.hanselman.com/blog/TheImportanceAndEaseOfMinifyingYourCSSAndJavaScriptAndOptimizingPNGsForYourBlogOrWebsite.aspx) via
+-   [Minifying and Optimizing     Files](http://www.hanselman.com/blog/TheImportanceAndEaseOfMinifyingYourCSSAndJavaScriptAndOptimizingPNGsForYourBlogOrWebsite.aspx) via
     Scott Hanselman
 
--   [[HTML5 Boilerplate]{.underline}](http://html5boilerplate.com/)
+-   [HTML5 Boilerplate](http://html5boilerplate.com/)
 
--   [[Data URIs]{.underline}](https://css-tricks.com/data-uris/) via
+-   [Data URIs](https://css-tricks.com/data-uris/) via
     CSS-Tricks
 
-[<b>Lesson 1</b> [Performance &
-Organization]{.underline}](https://learn.shayhowe.com/advanced-html-css/performance-organization/)
-[<b>Lesson 3</b> [Complex
-Selectors]{.underline}](https://learn.shayhowe.com/advanced-html-css/complex-selectors/)
+[<b>Lesson 1</b>] [Performance &
+Organization](https://learn.shayhowe.com/advanced-html-css/performance-organization/)
+[<b>Lesson 3</b>] [Complex
+Selectors](https://learn.shayhowe.com/advanced-html-css/complex-selectors/)
 
 
-[Lesson 2]{.mark} Detailed Positioning
+[Lesson 2] Detailed Positioning
 
 In this Lesson 2
 
 <b>CSS</b>
 
--   [[Containing
-    Floats]{.underline}](https://learn.shayhowe.com/advanced-html-css/detailed-css-positioning/#containing-floats)
+-   [Containing
+    Floats](https://learn.shayhowe.com/advanced-html-css/detailed-css-positioning/#containing-floats)
 
--   [[Position
-    Property]{.underline}](https://learn.shayhowe.com/advanced-html-css/detailed-css-positioning/#position-property)
+-   [Position
+    Property](https://learn.shayhowe.com/advanced-html-css/detailed-css-positioning/#position-property)
 
--   [[Z-Index
-    Property]{.underline}](https://learn.shayhowe.com/advanced-html-css/detailed-css-positioning/#z-index-property)
+-   [Z-Index
+    Property](https://learn.shayhowe.com/advanced-html-css/detailed-css-positioning/#z-index-property)
 
 <b>SHARE</b>
 
@@ -1044,7 +942,7 @@ having a different relationship with those around it. Elements nested
 inside others have a parent and child relationship while elements that
 share the same parent have a sibling relationship.
 
-While [[floats]{.underline}](https://css-tricks.com/all-about-floats/) do
+While [floats](https://css-tricks.com/all-about-floats/) do
 provide quite a bit of fire power, they do come with a few of their own
 problems. The most popular problem involves a parent element that
 contains numerous floated elements. Content on the page will respect the
@@ -1064,46 +962,29 @@ the .box-set division you will see it has a height of 0.
 
 <b>HTML</b>
 
-+---+----------------------------------------------------------------------+
-| 1 | &lt;div class=&quot;box-set&quot;&gt;                                            |
-|   |                                                                      |
-| 2 | &lt;figure class=&quot;box&quot;&gt;Box 1&lt;/figure&gt;                             |
-|   |                                                                      |
-| 3 | &lt;figure class=&quot;box&quot;&gt;Box 2&lt;/figure&gt;                             |
-|   |                                                                      |
-| 4 | &lt;figure class=&quot;box&quot;&gt;Box 3&lt;/figure&gt;                             |
-|   |                                                                      |
-| 5 | &lt;/div&gt;                                                             |
-|   |                                                                      |
-| 6 |                                                                      |
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
+ 1  &lt;div class=&quot;box-set&quot;&gt;                                            
+ 2  &lt;figure class=&quot;box&quot;&gt;Box 1&lt;/figure&gt;                             
+ 3  &lt;figure class=&quot;box&quot;&gt;Box 2&lt;/figure&gt;                             
+ 4  &lt;figure class=&quot;box&quot;&gt;Box 3&lt;/figure&gt;                             
+ 5  &lt;/div&gt;                                                             
+ 6                                                                       
+```
 
 <b>CSS</b>
 
-+---+----------------------------------------------------------------------+
-| 1 | .box-set {                                                           |
-|   |                                                                      |
-| 2 | background: #eaeaed;                                                 |
-|   |                                                                      |
-| 3 | }                                                                    |
-|   |                                                                      |
-| 4 | .box {                                                               |
-|   |                                                                      |
-| 5 | background: #2db34a;                                                 |
-|   |                                                                      |
-| 6 | float: left;                                                         |
-|   |                                                                      |
-| 7 | margin: 1.858736059%;                                                |
-|   |                                                                      |
-| 8 | width: 29.615861214%;                                                |
-|   |                                                                      |
-| 9 | }                                                                    |
-|   |                                                                      |
-| 1 |                                                                      |
-| 0 |                                                                      |
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
+ 1  .box-set {                                                           
+ 2  background: #eaeaed;                                                 
+ 3  }                                                                    
+ 4  .box {                                                               
+ 5  background: #2db34a;                                                 
+ 6  float: left;                                                         
+ 7  margin: 1.858736059%;                                                
+ 8  width: 29.615861214%;                                                
+ 9  }                                                                    
+ 10                                                                       
+```
 
 ### Containing Floats Demo
 
@@ -1133,16 +1014,12 @@ a width of 100% will do the trick. Using overflow: auto; in Internet
 Explorer on an Apple computer will also add scrollbars to the parent
 element, in which it is better to use the overflow: hidden; declaration.
 
-+---+----------------------------------------------------------------------+
-| 1 | .box-set {                                                           |
-|   |                                                                      |
-| 2 | overflow: auto;                                                      |
-|   |                                                                      |
-| 3 | }                                                                    |
-|   |                                                                      |
-| 4 |                                                                      |
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
+ 1  .box-set {                                                           
+ 2  overflow: auto;                                                      
+ 3  }                                                                    
+ 4                                                                       
+```
 
 ### Overflow Technique Demo
 
@@ -1164,7 +1041,7 @@ display differently in each browser.
 
 Depending on the context of the floated elements a better technique to
 contain floats may be
-the [[clearfix]{.underline}](http://nicolasgallagher.com/micro-clearfix-hack/) technique.
+the [clearfix](http://nicolasgallagher.com/micro-clearfix-hack/) technique.
 The clearfix technique is a bit more complex but does have better
 support as compared to the overflow technique.
 
@@ -1187,35 +1064,21 @@ Taking the same example from above you can see how the floats are
 contained and the elements are able to live outside of the parent
 element.
 
-+---+----------------------------------------------------------------------+
-| 1 | .box-set:before,                                                     |
-|   |                                                                      |
-| 2 | .box-set:after {                                                     |
-|   |                                                                      |
-| 3 | content: &quot;&quot;;                                                       |
-|   |                                                                      |
-| 4 | display: table;                                                      |
-|   |                                                                      |
-| 5 | }                                                                    |
-|   |                                                                      |
-| 6 | .box-set:after {                                                     |
-|   |                                                                      |
-| 7 | clear: both;                                                         |
-|   |                                                                      |
-| 8 | }                                                                    |
-|   |                                                                      |
-| 9 | .box-set {                                                           |
-|   |                                                                      |
-| 1 | &ast;zoom: 1;                                                           |
-| 0 |                                                                      |
-|   | }                                                                    |
-| 1 |                                                                      |
-| 1 |                                                                      |
-|   |                                                                      |
-| 1 |                                                                      |
-| 2 |                                                                      |
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
+ 1  .box-set:before,                                                     
+ 2  .box-set:after {                                                     
+ 3  content: &quot;&quot;;                                                       
+ 4  display: table;                                                      
+ 5  }                                                                    
+ 6  .box-set:after {                                                     
+ 7  clear: both;                                                         
+ 8  }                                                                    
+ 9  .box-set {                                                           
+ 10  &ast;zoom: 1;                                                           
+ 11  }                                                                    
+ 12                                                                       
+ 13                                                                       
+```
 
 ### Clearfix Technique Demo
 
@@ -1234,35 +1097,20 @@ technique for example, Dan Cederholm helped coin the class name group.
 The group class name can then be applied to any parent element needing
 to contain floats.
 
-+---+----------------------------------------------------------------------+
-| 1 | .group:before,                                                       |
-|   |                                                                      |
-| 2 | .group:after {                                                       |
-|   |                                                                      |
-| 3 | content: &quot;&quot;;                                                       |
-|   |                                                                      |
-| 4 | display: table;                                                      |
-|   |                                                                      |
-| 5 | }                                                                    |
-|   |                                                                      |
-| 6 | .group:after {                                                       |
-|   |                                                                      |
-| 7 | clear: both;                                                         |
-|   |                                                                      |
-| 8 | }                                                                    |
-|   |                                                                      |
-| 9 | .group {                                                             |
-|   |                                                                      |
-| 1 | &ast;zoom: 1;                                                           |
-| 0 |                                                                      |
-|   | }                                                                    |
-| 1 |                                                                      |
-| 1 |                                                                      |
-|   |                                                                      |
-| 1 |                                                                      |
-| 2 |                                                                      |
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
+ 1  .group:before,                                                       
+ 2  .group:after {                                                       
+ 3  content: &quot;&quot;;                                                       
+ 4  display: table;                                                      
+ 5  }                                                                    
+ 6  .group:after {                                                       
+ 7  clear: both;                                                         
+ 8  }                                                                    
+ 9  .group {                                                             
+ 10                                                                        
+ 11  &ast;zoom: 1;                                                           
+ 12  }                                                                    
+```
 
 ### Single Pseudo-Elements
 
@@ -1280,15 +1128,15 @@ the parent element containing the floats.
 Occasionally you need more control over the position of an element, more
 than a float can provide, in which case the position property comes into
 play. The position property accepts five different values, each of which
-provide different ways to [[uniquely
-position]{.underline}](http://www.alistapart.com/articles/css-positioning-101/) an
+provide different ways to [uniquely
+position](http://www.alistapart.com/articles/css-positioning-101/) an
 element.
 
 ### Position Static
 
 Elements by default have the position value of static, meaning they
-don't have, nor will they accept, any specific [[box offset
-properties]{.underline}](https://learn.shayhowe.com/html-css/opening-the-box-model/).
+don't have, nor will they accept, any specific [box offset
+properties](https://learn.shayhowe.com/html-css/opening-the-box-model/).
 Furthermore, elements will be positioned as intended, with their default
 behaviors.
 
@@ -1298,45 +1146,29 @@ specific direction.
 
 <b>HTML</b>
 
-+---+----------------------------------------------------------------------+
-| 1 | &lt;div class=&quot;box-set&quot;&gt;                                            |
-|   |                                                                      |
-| 2 | &lt;figure class=&quot;box box-1&quot;&gt;Box 1&lt;/figure&gt;                       |
-|   |                                                                      |
-| 3 | &lt;figure class=&quot;box box-2&quot;&gt;Box 2&lt;/figure&gt;                       |
-|   |                                                                      |
-| 4 | &lt;figure class=&quot;box box-3&quot;&gt;Box 3&lt;/figure&gt;                       |
-|   |                                                                      |
-| 5 | &lt;figure class=&quot;box box-4&quot;&gt;Box 4&lt;/figure&gt;                       |
-|   |                                                                      |
-| 6 | &lt;/div&gt;                                                             |
-|   |                                                                      |
-| 7 |                                                                      |
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
+ 1  &lt;div class=&quot;box-set&quot;&gt;                                            
+ 2  &lt;figure class=&quot;box box-1&quot;&gt;Box 1&lt;/figure&gt;                       
+ 3  &lt;figure class=&quot;box box-2&quot;&gt;Box 2&lt;/figure&gt;                       
+ 4  &lt;figure class=&quot;box box-3&quot;&gt;Box 3&lt;/figure&gt;                       
+ 5  &lt;figure class=&quot;box box-4&quot;&gt;Box 4&lt;/figure&gt;                       
+ 6  &lt;/div&gt;                                                             
+ 7                                                                       
+```
 
 <b>CSS</b>
 
-+---+----------------------------------------------------------------------+
-| 1 | .box-set {                                                           |
-|   |                                                                      |
-| 2 | background: #eaeaed;                                                 |
-|   |                                                                      |
-| 3 | }                                                                    |
-|   |                                                                      |
-| 4 | .box {                                                               |
-|   |                                                                      |
-| 5 | background: #2db34a;                                                 |
-|   |                                                                      |
-| 6 | height: 80px;                                                        |
-|   |                                                                      |
-| 7 | width: 80px;                                                         |
-|   |                                                                      |
-| 8 | }                                                                    |
-|   |                                                                      |
-| 9 |                                                                      |
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
+ 1  .box-set {                                                           
+ 2  background: #eaeaed;                                                 
+ 3  }                                                                    
+ 4  .box {                                                               
+ 5  background: #2db34a;                                                 
+ 6  height: 80px;                                                        
+ 7  width: 80px;                                                         
+ 8  }                                                                    
+ 9                                                                       
+```
 
 ### Position Static Demo
 
@@ -1387,78 +1219,41 @@ positioned elements default position.
 
 <b>HTML</b>
 
-+---+----------------------------------------------------------------------+
-| 1 | &lt;div class=&quot;box-set&quot;&gt;                                            |
-|   |                                                                      |
-| 2 | &lt;figure class=&quot;box box-1&quot;&gt;Box 1&lt;/figure&gt;                       |
-|   |                                                                      |
-| 3 | &lt;figure class=&quot;box box-2&quot;&gt;Box 2&lt;/figure&gt;                       |
-|   |                                                                      |
-| 4 | &lt;figure class=&quot;box box-3&quot;&gt;Box 3&lt;/figure&gt;                       |
-|   |                                                                      |
-| 5 | &lt;figure class=&quot;box box-4&quot;&gt;Box 4&lt;/figure&gt;                       |
-|   |                                                                      |
-| 6 | &lt;/div&gt;                                                             |
-|   |                                                                      |
-| 7 |                                                                      |
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
+ 1  &lt;div class=&quot;box-set&quot;&gt;                                            
+ 2  &lt;figure class=&quot;box box-1&quot;&gt;Box 1&lt;/figure&gt;                       
+ 3  &lt;figure class=&quot;box box-2&quot;&gt;Box 2&lt;/figure&gt;                       
+ 4  &lt;figure class=&quot;box box-3&quot;&gt;Box 3&lt;/figure&gt;                       
+ 5  &lt;figure class=&quot;box box-4&quot;&gt;Box 4&lt;/figure&gt;                       
+ 6  &lt;/div&gt;                                                             
+ 7                                                                       
+```
 
 <b>CSS</b>
 
-+---+----------------------------------------------------------------------+
-| 1 | .box-set {                                                           |
-|   |                                                                      |
-| 2 | background: #eaeaed;                                                 |
-|   |                                                                      |
-| 3 | }                                                                    |
-|   |                                                                      |
-| 4 | .box {                                                               |
-|   |                                                                      |
-| 5 | background: #2db34a;                                                 |
-|   |                                                                      |
-| 6 | height: 80px;                                                        |
-|   |                                                                      |
-| 7 | position: relative;                                                  |
-|   |                                                                      |
-| 8 | width: 80px;                                                         |
-|   |                                                                      |
-| 9 | }                                                                    |
-|   |                                                                      |
-| 1 | .box-1 {                                                             |
-| 0 |                                                                      |
-|   | top: 20px;                                                           |
-| 1 |                                                                      |
-| 1 | }                                                                    |
-|   |                                                                      |
-| 1 | .box-2 {                                                             |
-| 2 |                                                                      |
-|   | left: 40px;                                                          |
-| 1 |                                                                      |
-| 3 | }                                                                    |
-|   |                                                                      |
-| 1 | .box-3 {                                                             |
-| 4 |                                                                      |
-|   | bottom: -10px;                                                       |
-| 1 |                                                                      |
-| 5 | right: 20px;                                                         |
-|   |                                                                      |
-| 1 | }                                                                    |
-| 6 |                                                                      |
-|   |                                                                      |
-| 1 |                                                                      |
-| 7 |                                                                      |
-|   |                                                                      |
-| 1 |                                                                      |
-| 8 |                                                                      |
-|   |                                                                      |
-| 1 |                                                                      |
-| 9 |                                                                      |
-|   |                                                                      |
-| 2 |                                                                      |
-| 0 |                                                                      |
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
+ 1  .box-set {
+ 2  background: #eaeaed;
+ 3  }
+ 4  .box {
+ 5    background: #2db34a;
+ 6    height: 80px;
+ 7    position: relative;
+ 8  width: 80px;
+ 9  }
+ 10 .box-1 {
+ 11 
+ 12 top: 20px;
+ 13 }
+ 14  .box-2 {
+ 15   left: 40px;
+ 16 }
+ 17  .box-3 {
+ 18 bottom: -10px;
+ 19 
+ 20  right: 20px;
+ 21 }
+```
 
 ### Position Relative Demo
 
@@ -1502,99 +1297,47 @@ value.
 
 <b>HTML</b>
 
-+---+----------------------------------------------------------------------+
-| 1 | &lt;div class=&quot;box-set&quot;&gt;                                            |
-|   |                                                                      |
-| 2 | &lt;figure class=&quot;box box-1&quot;&gt;Box 1&lt;/figure&gt;                       |
-|   |                                                                      |
-| 3 | &lt;figure class=&quot;box box-2&quot;&gt;Box 2&lt;/figure&gt;                       |
-|   |                                                                      |
-| 4 | &lt;figure class=&quot;box box-3&quot;&gt;Box 3&lt;/figure&gt;                       |
-|   |                                                                      |
-| 5 | &lt;figure class=&quot;box box-4&quot;&gt;Box 4&lt;/figure&gt;                       |
-|   |                                                                      |
-| 6 | &lt;/div&gt;                                                             |
-|   |                                                                      |
-| 7 |                                                                      |
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
+ 1  &lt;div class=&quot;box-set&quot;&gt;
+ 2  &lt;figure class=&quot;box box-1&quot;&gt;Box 1&lt;/figure&gt;
+ 3  &lt;figure class=&quot;box box-2&quot;&gt;Box 2&lt;/figure&gt;
+ 4  &lt;figure class=&quot;box box-3&quot;&gt;Box 3&lt;/figure&gt;
+ 5  &lt;figure class=&quot;box box-4&quot;&gt;Box 4&lt;/figure&gt;
+ 6  &lt;/div&gt;
+ 7  
+```
 
 <b>CSS</b>
 
-+---+----------------------------------------------------------------------+
-| 1 | .box-set {                                                           |
-|   |                                                                      |
-| 2 | background: #eaeaed;                                                 |
-|   |                                                                      |
-| 3 | height: 200px;                                                       |
-|   |                                                                      |
-| 4 | position: relative;                                                  |
-|   |                                                                      |
-| 5 | }                                                                    |
-|   |                                                                      |
-| 6 | .box {                                                               |
-|   |                                                                      |
-| 7 | background: #2db34a;                                                 |
-|   |                                                                      |
-| 8 | height: 80px;                                                        |
-|   |                                                                      |
-| 9 | position: absolute;                                                  |
-|   |                                                                      |
-| 1 | width: 80px;                                                         |
-| 0 |                                                                      |
-|   | }                                                                    |
-| 1 |                                                                      |
-| 1 | .box-1 {                                                             |
-|   |                                                                      |
-| 1 | top: 6%;                                                             |
-| 2 |                                                                      |
-|   | left: 2%;                                                            |
-| 1 |                                                                      |
-| 3 | }                                                                    |
-|   |                                                                      |
-| 1 | .box-2 {                                                             |
-| 4 |                                                                      |
-|   | top: 0;                                                              |
-| 1 |                                                                      |
-| 5 | right: -40px;                                                        |
-|   |                                                                      |
-| 1 | }                                                                    |
-| 6 |                                                                      |
-|   | .box-3 {                                                             |
-| 1 |                                                                      |
-| 7 | bottom: -10px;                                                       |
-|   |                                                                      |
-| 1 | right: 20px;                                                         |
-| 8 |                                                                      |
-|   | }                                                                    |
-| 1 |                                                                      |
-| 9 | .box-4 {                                                             |
-|   |                                                                      |
-| 2 | bottom: 0;                                                           |
-| 0 |                                                                      |
-|   | }                                                                    |
-| 2 |                                                                      |
-| 1 |                                                                      |
-|   |                                                                      |
-| 2 |                                                                      |
-| 2 |                                                                      |
-|   |                                                                      |
-| 2 |                                                                      |
-| 3 |                                                                      |
-|   |                                                                      |
-| 2 |                                                                      |
-| 4 |                                                                      |
-|   |                                                                      |
-| 2 |                                                                      |
-| 5 |                                                                      |
-|   |                                                                      |
-| 2 |                                                                      |
-| 6 |                                                                      |
-|   |                                                                      |
-| 2 |                                                                      |
-| 7 |                                                                      |
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
+ 1  .box-set {                                                           
+ 2  background: #eaeaed;                                                 
+ 3  height: 200px;                                                       
+ 4  position: relative;                                                  
+ 5  }                                                                    
+ 6  .box {                                                               
+ 7  background: #2db34a;                                                 
+ 8  height: 80px;                                                        
+ 9  position: absolute;                                                  
+ 10  width: 80px;                                                         
+ 11   }                                                                    
+ 12  .box-1 {                                                             
+ 13  top: 6%;                                                             
+ 14   left: 2%;                                                            
+ 15                                                                        
+ 16  .box-2 {                                                             
+ 17   top: 0;                                                              
+ 18 right: -40px;                                                        
+ 19  }                                                                    
+ 20   .box-3 {                                                             
+ 21  bottom: -10px;                                                       
+ 22  right: 20px;                                                         
+ 23   }                                                                    
+ 24  .box-4 {                                                             
+ 25  bottom: 0;                                                           
+ 26  }     
+ 27  
+```
 
 ### Position Absolute Demo
 
@@ -1634,83 +1377,50 @@ and not the containing, relatively positioned parent.
 <b>HTML</b>
 
 +---+----------------------------------------------------------------------+
-| 1 | &lt;div class=&quot;box-set&quot;&gt;                                            |
-|   |                                                                      |
-| 2 | &lt;figure class=&quot;box box-1&quot;&gt;Box 1&lt;/figure&gt;                       |
-|   |                                                                      |
-| 3 | &lt;figure class=&quot;box box-2&quot;&gt;Box 2&lt;/figure&gt;                       |
-|   |                                                                      |
-| 4 | &lt;figure class=&quot;box box-3&quot;&gt;Box 3&lt;/figure&gt;                       |
-|   |                                                                      |
-| 5 | &lt;figure class=&quot;box box-4&quot;&gt;Box 4&lt;/figure&gt;                       |
-|   |                                                                      |
-| 6 | &lt;/div&gt;                                                             |
-|   |                                                                      |
-| 7 |                                                                      |
+ 1  &lt;div class=&quot;box-set&quot;&gt;                                            
+                                                                         
+ 2  &lt;figure class=&quot;box box-1&quot;&gt;Box 1&lt;/figure&gt;                       
+                                                                         
+ 3  &lt;figure class=&quot;box box-2&quot;&gt;Box 2&lt;/figure&gt;                       
+                                                                         
+ 4  &lt;figure class=&quot;box box-3&quot;&gt;Box 3&lt;/figure&gt;                       
+                                                                         
+ 5  &lt;figure class=&quot;box box-4&quot;&gt;Box 4&lt;/figure&gt;                       
+                                                                         
+ 6  &lt;/div&gt;                                                             
+                                                                         
+ 7                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 <b>CSS</b>
 
-+---+----------------------------------------------------------------------+
-| 1 | .box {                                                               |
-|   |                                                                      |
-| 2 | background: #2db34a;                                                 |
-|   |                                                                      |
-| 3 | height: 80px;                                                        |
-|   |                                                                      |
-| 4 | position: fixed;                                                     |
-|   |                                                                      |
-| 5 | width: 80px;                                                         |
-|   |                                                                      |
-| 6 | }                                                                    |
-|   |                                                                      |
-| 7 | .box-1 {                                                             |
-|   |                                                                      |
-| 8 | top: 6%;                                                             |
-|   |                                                                      |
-| 9 | left: 2%;                                                            |
-|   |                                                                      |
-| 1 | }                                                                    |
-| 0 |                                                                      |
-|   | .box-2 {                                                             |
-| 1 |                                                                      |
-| 1 | top: 0;                                                              |
-|   |                                                                      |
-| 1 | right: -40px;                                                        |
-| 2 |                                                                      |
-|   | }                                                                    |
-| 1 |                                                                      |
-| 3 | .box-3 {                                                             |
-|   |                                                                      |
-| 1 | bottom: -10px;                                                       |
-| 4 |                                                                      |
-|   | right: 20px;                                                         |
-| 1 |                                                                      |
-| 5 | }                                                                    |
-|   |                                                                      |
-| 1 | .box-4 {                                                             |
-| 6 |                                                                      |
-|   | bottom: 0;                                                           |
-| 1 |                                                                      |
-| 7 | }                                                                    |
-|   |                                                                      |
-| 1 |                                                                      |
-| 8 |                                                                      |
-|   |                                                                      |
-| 1 |                                                                      |
-| 9 |                                                                      |
-|   |                                                                      |
-| 2 |                                                                      |
-| 0 |                                                                      |
-|   |                                                                      |
-| 2 |                                                                      |
-| 1 |                                                                      |
-|   |                                                                      |
-| 2 |                                                                      |
-| 2 |                                                                      |
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
+ 1  .box {
+ 2  background: #2db34a;
+ 3  height: 80px;
+ 4  position: fixed;
+ 5  width: 80px;
+ 6  }
+ 7  .box-1 {
+ 8  top: 6%;
+ 9  left: 2%;
+ 1  }
+    .box-2 {
+ 1  top: 0;
+ 1  right: -40px;
+    }
+ 1  
+ 3  .box-3 {
+ 1  bottom: -10px;
+ 4  
+    right: 20px;                                                         
+ 5  }                                                                    
+ 1  .box-4 {                                                             
+    bottom: 0;
+ 7  }
+ 
+```
 
 ### Position Fixed Demo
 
@@ -1729,41 +1439,26 @@ borders, and padding to be applied freely.
 
 <b>HTML</b>
 
-+---+----------------------------------------------------------------------+
-| 1 | &lt;footer&gt;Fixed Footer&lt;/footer&gt;                                    |
-|   |                                                                      |
-| 2 |                                                                      |
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
+ 1  <footer>Fixed Footer</footer>
+ 2  
+```
 
 <b>CSS</b>
 
-+---+----------------------------------------------------------------------+
-| 1 | body {                                                               |
-|   |                                                                      |
-| 2 | background: #eaeaed;                                                 |
-|   |                                                                      |
-| 3 | }                                                                    |
-|   |                                                                      |
-| 4 | footer {                                                             |
-|   |                                                                      |
-| 5 | background: #2db34a;                                                 |
-|   |                                                                      |
-| 6 | bottom: 0;                                                           |
-|   |                                                                      |
-| 7 | left: 0;                                                             |
-|   |                                                                      |
-| 8 | position: fixed;                                                     |
-|   |                                                                      |
-| 9 | right: 0;                                                            |
-|   |                                                                      |
-| 1 | }                                                                    |
-| 0 |                                                                      |
-|   |                                                                      |
-| 1 |                                                                      |
-| 1 |                                                                      |
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
+ 1  body {
+ 2  background: #eaeaed;
+ 3  }
+ 4  footer {
+ 5  background: #2db34a;
+ 6  bottom: 0;
+ 7  left: 0;
+ 8  position: fixed;
+ 9  right: 0;
+ 10 }
+ 11 
+```
 
 ### Fixed Footer Demo
 
@@ -1796,108 +1491,57 @@ box three.
 
 <b>HTML</b>
 
+```
 +---+----------------------------------------------------------------------+
-| 1 | &lt;div class=&quot;box-set&quot;&gt;                                            |
-|   |                                                                      |
-| 2 | &lt;figure class=&quot;box box-1&quot;&gt;Box 1&lt;/figure&gt;                       |
-|   |                                                                      |
-| 3 | &lt;figure class=&quot;box box-2&quot;&gt;Box 2&lt;/figure&gt;                       |
-|   |                                                                      |
-| 4 | &lt;figure class=&quot;box box-3&quot;&gt;Box 3&lt;/figure&gt;                       |
-|   |                                                                      |
-| 5 | &lt;figure class=&quot;box box-4&quot;&gt;Box 4&lt;/figure&gt;                       |
-|   |                                                                      |
-| 6 | &lt;/div&gt;                                                             |
-|   |                                                                      |
-| 7 |                                                                      |
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+ 1  &lt;div class=&quot;box-set&quot;&gt;                                            
+                                                                         
+ 2  &lt;figure class=&quot;box box-1&quot;&gt;Box 1&lt;/figure&gt;                       
+                                                                         
+ 3  &lt;figure class=&quot;box box-2&quot;&gt;Box 2&lt;/figure&gt;                       
+                                                                         
+ 4  &lt;figure class=&quot;box box-3&quot;&gt;Box 3&lt;/figure&gt;                       
+                                                                         
+ 5  &lt;figure class=&quot;box box-4&quot;&gt;Box 4&lt;/figure&gt;                       
+                                                                         
+ 6  &lt;/div&gt;                                                             
+                                                                         
+ 7                                                                       
+```
 
 <b>CSS</b>
 
-+---+----------------------------------------------------------------------+
-| 1 | .box-set {                                                           |
-|   |                                                                      |
-| 2 | background: #eaeaed;                                                 |
-|   |                                                                      |
-| 3 | height: 160px;                                                       |
-|   |                                                                      |
-| 4 | position: relative;                                                  |
-|   |                                                                      |
-| 5 | }                                                                    |
-|   |                                                                      |
-| 6 | .box {                                                               |
-|   |                                                                      |
-| 7 | background: #2db34a;                                                 |
-|   |                                                                      |
-| 8 | border: 2px solid #ff7b29;                                           |
-|   |                                                                      |
-| 9 | position: absolute;                                                  |
-|   |                                                                      |
-| 1 | }                                                                    |
-| 0 |                                                                      |
-|   | .box-1 {                                                             |
-| 1 |                                                                      |
-| 1 | left: 10px;                                                          |
-|   |                                                                      |
-| 1 | top: 10px;                                                           |
-| 2 |                                                                      |
-|   | }                                                                    |
-| 1 |                                                                      |
-| 3 | .box-2 {                                                             |
-|   |                                                                      |
-| 1 | bottom: 10px;                                                        |
-| 4 |                                                                      |
-|   | left: 70px;                                                          |
-| 1 |                                                                      |
-| 5 | z-index: 3;                                                          |
-|   |                                                                      |
-| 1 | }                                                                    |
-| 6 |                                                                      |
-|   | .box-3 {                                                             |
-| 1 |                                                                      |
-| 7 | left: 130px;                                                         |
-|   |                                                                      |
-| 1 | top: 10px;                                                           |
-| 8 |                                                                      |
-|   | z-index: 2;                                                          |
-| 1 |                                                                      |
-| 9 | }                                                                    |
-|   |                                                                      |
-| 2 | .box-4 {                                                             |
-| 0 |                                                                      |
-|   | bottom: 10px;                                                        |
-| 2 |                                                                      |
-| 1 | left: 190px;                                                         |
-|   |                                                                      |
-| 2 | z-index: 1;                                                          |
-| 2 |                                                                      |
-|   | }                                                                    |
-| 2 |                                                                      |
-| 3 |                                                                      |
-|   |                                                                      |
-| 2 |                                                                      |
-| 4 |                                                                      |
-|   |                                                                      |
-| 2 |                                                                      |
-| 5 |                                                                      |
-|   |                                                                      |
-| 2 |                                                                      |
-| 6 |                                                                      |
-|   |                                                                      |
-| 2 |                                                                      |
-| 7 |                                                                      |
-|   |                                                                      |
-| 2 |                                                                      |
-| 8 |                                                                      |
-|   |                                                                      |
-| 2 |                                                                      |
-| 9 |                                                                      |
-|   |                                                                      |
-| 3 |                                                                      |
-| 0 |                                                                      |
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
+ 1  .box-set {
+ 2  background: #eaeaed;
+ 3  height: 160px;
+ 4  position: relative;
+ 5  }
+ 6  .box {
+ 7  background: #2db34a;
+ 8  border: 2px solid #ff7b29;
+ 9  position: absolute;
+ 1  }
+    .box-1 {
+ 1  left: 10px;
+ 1  top: 10px;
+    }
+ 3  .box-2 {
+ 1  bottom: 10px;
+    left: 70px;
+ 5  z-index: 3;
+ 1  }
+    .box-3 {
+ 7  left: 130px;
+ 1  top: 10px;
+    z-index: 2;
+ 9  }
+ 2  .box-4 {
+    bottom: 10px;
+ 1  left: 190px;
+ 2  z-index: 1;
+    }
+ 2  
+```
 
 ### Z-Index Demo
 
@@ -1920,21 +1564,21 @@ In this Lesson 3
 
 <b>CSS</b>
 
--   [[Common
-    Selectors]{.underline}](https://learn.shayhowe.com/advanced-html-css/complex-selectors/#common-selectors)
+-   [Common
+    Selectors](https://learn.shayhowe.com/advanced-html-css/complex-selectors/#common-selectors)
 
--   [[Child
-    Selectors]{.underline}](https://learn.shayhowe.com/advanced-html-css/complex-selectors/#child-selectors)
+-   [Child
+    Selectors](https://learn.shayhowe.com/advanced-html-css/complex-selectors/#child-selectors)
 
--   [[Sibling
-    Selectors]{.underline}](https://learn.shayhowe.com/advanced-html-css/complex-selectors/#sibling-selectors)
+-   [Sibling
+    Selectors](https://learn.shayhowe.com/advanced-html-css/complex-selectors/#sibling-selectors)
 
--   [[Attribute
-    Selectors]{.underline}](https://learn.shayhowe.com/advanced-html-css/complex-selectors/#attribute-selectors)
+-   [Attribute
+    Selectors](https://learn.shayhowe.com/advanced-html-css/complex-selectors/#attribute-selectors)
 
--   [[Pseudo-classes]{.underline}](https://learn.shayhowe.com/advanced-html-css/complex-selectors/#pseudo-classes)
+-   [Pseudo-classes](https://learn.shayhowe.com/advanced-html-css/complex-selectors/#pseudo-classes)
 
--   [[Pseudo-elements]{.underline}](https://learn.shayhowe.com/advanced-html-css/complex-selectors/#pseudo-elements)
+-   [Pseudo-elements](https://learn.shayhowe.com/advanced-html-css/complex-selectors/#pseudo-elements)
 
 <b>SHARE</b>
 
@@ -1951,7 +1595,7 @@ in different states of use.
 
 CSS3 brought new selectors, opening a whole new world of opportunities
 and improvements to existing practices. Here we'll
-discuss [[selectors]{.underline}](http://net.tutsplus.com/tutorials/html-css-techniques/the-30-css-selectors-you-must-memorize/),
+discuss [selectors](http://net.tutsplus.com/tutorials/html-css-techniques/the-30-css-selectors-you-must-memorize/),
 old and new, and how to best put them to use.
 
 ### Common Selectors
@@ -1972,28 +1616,28 @@ be used once per page.
 <b>CSS</b>
 
 +---+----------------------------------------------------------------------+
-| 1 | h1 {&#8230;}                                                            |
-|   |                                                                      |
-| 2 | .tagline {&#8230;}                                                      |
-|   |                                                                      |
-| 3 | #intro {&#8230;}                                                        |
-|   |                                                                      |
-| 4 |                                                                      |
+ 1  h1 {&#8230;}                                                            
+                                                                         
+ 2  .tagline {&#8230;}                                                      
+                                                                         
+ 3  #intro {&#8230;}                                                        
+                                                                         
+ 4                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 <b>HTML</b>
 
 +---+----------------------------------------------------------------------+
-| 1 | &lt;section id=&quot;intro&quot;&gt;                                             |
-|   |                                                                      |
-| 2 | &lt;h1&gt;&#8230;&lt;/h1&gt;                                                    |
-|   |                                                                      |
-| 3 | &lt;h2 class=&quot;tagline&quot;&gt;&#8230;&lt;/h2&gt;                                  |
-|   |                                                                      |
-| 4 | &lt;/section&gt;                                                         |
-|   |                                                                      |
-| 5 |                                                                      |
+ 1  &lt;section id=&quot;intro&quot;&gt;                                             
+                                                                         
+ 2  &lt;h1&gt;&#8230;&lt;/h1&gt;                                                    
+                                                                         
+ 3  &lt;h2 class=&quot;tagline&quot;&gt;&#8230;&lt;/h2&gt;                                  
+                                                                         
+ 4  &lt;/section&gt;                                                         
+                                                                         
+ 5                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -2039,30 +1683,30 @@ Below, the headings on lines 3 and 5 are selected.
 <b>CSS</b>
 
 +---+----------------------------------------------------------------------+
-| 1 | article h2 {&#8230;}                                                    |
-|   |                                                                      |
-| 2 |                                                                      |
+ 1  article h2 {&#8230;}                                                    
+                                                                         
+ 2                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 <b>HTML</b>
 
 +---+----------------------------------------------------------------------+
-| 1 | &lt;h2&gt;&#8230;&lt;/h2&gt;                                                    |
-|   |                                                                      |
-| 2 | &lt;article&gt;                                                          |
-|   |                                                                      |
-| 3 | &lt;h2&gt;This heading will be selected&lt;/h2&gt;                           |
-|   |                                                                      |
-| 4 | &lt;div&gt;                                                              |
-|   |                                                                      |
-| 5 | &lt;h2&gt;This heading will be selected&lt;/h2&gt;                           |
-|   |                                                                      |
-| 6 | &lt;/div&gt;                                                             |
-|   |                                                                      |
-| 7 | &lt;/article&gt;                                                         |
-|   |                                                                      |
-| 8 |                                                                      |
+ 1  &lt;h2&gt;&#8230;&lt;/h2&gt;                                                    
+                                                                         
+ 2  &lt;article&gt;                                                          
+                                                                         
+ 3  &lt;h2&gt;This heading will be selected&lt;/h2&gt;                           
+                                                                         
+ 4  &lt;div&gt;                                                              
+                                                                         
+ 5  &lt;h2&gt;This heading will be selected&lt;/h2&gt;                           
+                                                                         
+ 6  &lt;/div&gt;                                                             
+                                                                         
+ 7  &lt;/article&gt;                                                         
+                                                                         
+ 8                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -2086,30 +1730,30 @@ article, thus selected.
 <b>CSS</b>
 
 +---+----------------------------------------------------------------------+
-| 1 | article &gt; p {&#8230;}                                                  |
-|   |                                                                      |
-| 2 |                                                                      |
+ 1  article &gt; p {&#8230;}                                                  
+                                                                         
+ 2                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 <b>HTML</b>
 
 +---+----------------------------------------------------------------------+
-| 1 | &lt;p&gt;&#8230;&lt;/p&gt;                                                      |
-|   |                                                                      |
-| 2 | &lt;article&gt;                                                          |
-|   |                                                                      |
-| 3 | &lt;p&gt;This paragraph will be selected&lt;/p&gt;                           |
-|   |                                                                      |
-| 4 | &lt;div&gt;                                                              |
-|   |                                                                      |
-| 5 | &lt;p&gt;&#8230;&lt;/p&gt;                                                      |
-|   |                                                                      |
-| 6 | &lt;/div&gt;                                                             |
-|   |                                                                      |
-| 7 | &lt;/article&gt;                                                         |
-|   |                                                                      |
-| 8 |                                                                      |
+ 1  &lt;p&gt;&#8230;&lt;/p&gt;                                                      
+                                                                         
+ 2  &lt;article&gt;                                                          
+                                                                         
+ 3  &lt;p&gt;This paragraph will be selected&lt;/p&gt;                           
+                                                                         
+ 4  &lt;div&gt;                                                              
+                                                                         
+ 5  &lt;p&gt;&#8230;&lt;/p&gt;                                                      
+                                                                         
+ 6  &lt;/div&gt;                                                             
+                                                                         
+ 7  &lt;/article&gt;                                                         
+                                                                         
+ 8                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -2128,8 +1772,8 @@ article, thus selected.
 
 ### Sibling Selectors
 
-Knowing how to [[select
-children]{.underline}](https://css-tricks.com/child-and-sibling-selectors/) of
+Knowing how to [select
+children](https://css-tricks.com/child-and-sibling-selectors/) of
 an element is largely beneficial, and quite commonly seen. However
 sibling elements, those elements that share a common parent, may also
 need to be selected. These sibling selections can be made by way of the
@@ -2155,38 +1799,38 @@ sibling heading.
 <b>CSS</b>
 
 +---+----------------------------------------------------------------------+
-| 1 | h2 &tilde; p {&#8230;}                                                       |
-|   |                                                                      |
-| 2 |                                                                      |
+ 1  h2 &tilde; p {&#8230;}                                                       
+                                                                         
+ 2                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 <b>HTML</b>
 
 +---+----------------------------------------------------------------------+
-| 1 | &lt;p&gt;&#8230;&lt;/p&gt;                                                      |
-|   |                                                                      |
-| 2 | &lt;section&gt;                                                          |
-|   |                                                                      |
-| 3 | &lt;p&gt;&#8230;&lt;/p&gt;                                                      |
-|   |                                                                      |
-| 4 | &lt;h2&gt;&#8230;&lt;/h2&gt;                                                    |
-|   |                                                                      |
-| 5 | &lt;p&gt;This paragraph will be selected&lt;/p&gt;                           |
-|   |                                                                      |
-| 6 | &lt;div&gt;                                                              |
-|   |                                                                      |
-| 7 | &lt;p&gt;&#8230;&lt;/p&gt;                                                      |
-|   |                                                                      |
-| 8 | &lt;/div&gt;                                                             |
-|   |                                                                      |
-| 9 | &lt;p&gt;This paragraph will be selected&lt;/p&gt;                           |
-|   |                                                                      |
-| 1 | &lt;/section&gt;                                                         |
-| 0 |                                                                      |
-|   |                                                                      |
-| 1 |                                                                      |
-| 1 |                                                                      |
+ 1  &lt;p&gt;&#8230;&lt;/p&gt;                                                      
+                                                                         
+ 2  &lt;section&gt;                                                          
+                                                                         
+ 3  &lt;p&gt;&#8230;&lt;/p&gt;                                                      
+                                                                         
+ 4  &lt;h2&gt;&#8230;&lt;/h2&gt;                                                    
+                                                                         
+ 5  &lt;p&gt;This paragraph will be selected&lt;/p&gt;                           
+                                                                         
+ 6  &lt;div&gt;                                                              
+                                                                         
+ 7  &lt;p&gt;&#8230;&lt;/p&gt;                                                      
+                                                                         
+ 8  &lt;/div&gt;                                                             
+                                                                         
+ 9  &lt;p&gt;This paragraph will be selected&lt;/p&gt;                           
+                                                                         
+ 1  &lt;/section&gt;                                                         
+ 0                                                                       
+                                                                         
+ 1                                                                       
+ 1                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -2214,38 +1858,38 @@ selected.
 <b>CSS</b>
 
 +---+----------------------------------------------------------------------+
-| 1 | h2 + p {&#8230;}                                                        |
-|   |                                                                      |
-| 2 |                                                                      |
+ 1  h2 + p {&#8230;}                                                        
+                                                                         
+ 2                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 <b>HTML</b>
 
 +---+----------------------------------------------------------------------+
-| 1 | &lt;p&gt;&#8230;&lt;/p&gt;                                                      |
-|   |                                                                      |
-| 2 | &lt;section&gt;                                                          |
-|   |                                                                      |
-| 3 | &lt;p&gt;&#8230;&lt;/p&gt;                                                      |
-|   |                                                                      |
-| 4 | &lt;h2&gt;&#8230;&lt;/h2&gt;                                                    |
-|   |                                                                      |
-| 5 | &lt;p&gt;This paragraph will be selected&lt;/p&gt;                           |
-|   |                                                                      |
-| 6 | &lt;div&gt;                                                              |
-|   |                                                                      |
-| 7 | &lt;p&gt;&#8230;&lt;/p&gt;                                                      |
-|   |                                                                      |
-| 8 | &lt;/div&gt;                                                             |
-|   |                                                                      |
-| 9 | &lt;p&gt;&#8230;&lt;/p&gt;                                                      |
-|   |                                                                      |
-| 1 | &lt;/section&gt;                                                         |
-| 0 |                                                                      |
-|   |                                                                      |
-| 1 |                                                                      |
-| 1 |                                                                      |
+ 1  &lt;p&gt;&#8230;&lt;/p&gt;                                                      
+                                                                         
+ 2  &lt;section&gt;                                                          
+                                                                         
+ 3  &lt;p&gt;&#8230;&lt;/p&gt;                                                      
+                                                                         
+ 4  &lt;h2&gt;&#8230;&lt;/h2&gt;                                                    
+                                                                         
+ 5  &lt;p&gt;This paragraph will be selected&lt;/p&gt;                           
+                                                                         
+ 6  &lt;div&gt;                                                              
+                                                                         
+ 7  &lt;p&gt;&#8230;&lt;/p&gt;                                                      
+                                                                         
+ 8  &lt;/div&gt;                                                             
+                                                                         
+ 9  &lt;p&gt;&#8230;&lt;/p&gt;                                                      
+                                                                         
+ 1  &lt;/section&gt;                                                         
+ 0                                                                       
+                                                                         
+ 1                                                                       
+ 1                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -2254,184 +1898,184 @@ selected.
 <b>HTML</b>
 
 +---+-------------------------------------------------------------------+
-| 1 | &lt;input type=&quot;checkbox&quot; id=&quot;toggle&quot;&gt;                         |
-|   |                                                                   |
-| 2 | &lt;label for=&quot;toggle&quot;&gt;&#9776;&lt;/label&gt;                         |
-|   |                                                                   |
-| 3 | &lt;nav&gt;                                                           |
-|   |                                                                   |
-| 4 | &lt;ul&gt;                                                            |
-|   |                                                                   |
-| 5 | &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;                           |
-|   |                                                                   |
-| 6 | &lt;li&gt;&lt;a href=&quot;#&quot;&gt;About&lt;/a&gt;&lt;/li&gt;                          |
-|   |                                                                   |
-| 7 | &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Services&lt;/a&gt;&lt;/li&gt;                       |
-|   |                                                                   |
-| 8 | &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;                        |
-|   |                                                                   |
-| 9 | &lt;/ul&gt;                                                           |
-|   |                                                                   |
-| 1 | &lt;/nav&gt;                                                          |
-| 0 |                                                                   |
-|   |                                                                   |
-| 1 |                                                                   |
-| 1 |                                                                   |
+ 1  &lt;input type=&quot;checkbox&quot; id=&quot;toggle&quot;&gt;                         
+                                                                      
+ 2  &lt;label for=&quot;toggle&quot;&gt;&#9776;&lt;/label&gt;                         
+                                                                      
+ 3  &lt;nav&gt;                                                           
+                                                                      
+ 4  &lt;ul&gt;                                                            
+                                                                      
+ 5  &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;                           
+                                                                      
+ 6  &lt;li&gt;&lt;a href=&quot;#&quot;&gt;About&lt;/a&gt;&lt;/li&gt;                          
+                                                                      
+ 7  &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Services&lt;/a&gt;&lt;/li&gt;                       
+                                                                      
+ 8  &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;                        
+                                                                      
+ 9  &lt;/ul&gt;                                                           
+                                                                      
+ 1  &lt;/nav&gt;                                                          
+ 0                                                                    
+                                                                      
+ 1                                                                    
+ 1                                                                    
 +===+===================================================================+
 +---+-------------------------------------------------------------------+
 
 <b>CSS</b>
 
 +---+-------------------------------------------------------------------+
-| 1 | input {                                                           |
-|   |                                                                   |
-| 2 | display: none;                                                    |
-|   |                                                                   |
-| 3 | }                                                                 |
-|   |                                                                   |
-| 4 | label,                                                            |
-|   |                                                                   |
-| 5 | ul {                                                              |
-|   |                                                                   |
-| 6 | border: 1px solid #cecfd5;                                        |
-|   |                                                                   |
-| 7 | border-radius: 6px;                                               |
-|   |                                                                   |
-| 8 | }                                                                 |
-|   |                                                                   |
-| 9 | label {                                                           |
-|   |                                                                   |
-| 1 | color: #0087cc;                                                   |
-| 0 |                                                                   |
-|   | cursor: pointer;                                                  |
-| 1 |                                                                   |
-| 1 | display: inline-block;                                            |
-|   |                                                                   |
-| 1 | font-size: 18px;                                                  |
-| 2 |                                                                   |
-|   | padding: 5px 9px;                                                 |
-| 1 |                                                                   |
-| 3 | transition: all .15s ease;                                        |
-|   |                                                                   |
-| 1 | }                                                                 |
-| 4 |                                                                   |
-|   | label:hover {                                                     |
-| 1 |                                                                   |
-| 5 | color: #ff7b29;                                                   |
-|   |                                                                   |
-| 1 | }                                                                 |
-| 6 |                                                                   |
-|   | input:checked + label {                                           |
-| 1 |                                                                   |
-| 7 | box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15);                  |
-|   |                                                                   |
-| 1 | color: #9799a7;                                                   |
-| 8 |                                                                   |
-|   | }                                                                 |
-| 1 |                                                                   |
-| 9 | nav {                                                             |
-|   |                                                                   |
-| 2 | max-height: 0;                                                    |
-| 0 |                                                                   |
-|   | overflow: hidden;                                                 |
-| 2 |                                                                   |
-| 1 | transition: all .15s ease;                                        |
-|   |                                                                   |
-| 2 | }                                                                 |
-| 2 |                                                                   |
-|   | input:checked &tilde; nav {                                            |
-| 2 |                                                                   |
-| 3 | max-height: 500px;                                                |
-|   |                                                                   |
-| 2 | }                                                                 |
-| 4 |                                                                   |
-|   | ul {                                                              |
-| 2 |                                                                   |
-| 5 | list-style: none;                                                 |
-|   |                                                                   |
-| 2 | margin: 8px 0 0 0;                                                |
-| 6 |                                                                   |
-|   | padding: 0;                                                       |
-| 2 |                                                                   |
-| 7 | width: 100px;                                                     |
-|   |                                                                   |
-| 2 | }                                                                 |
-| 8 |                                                                   |
-|   | li {                                                              |
-| 2 |                                                                   |
-| 9 | border-bottom: 1px solid #cecfd5;                                 |
-|   |                                                                   |
-| 3 | }                                                                 |
-| 0 |                                                                   |
-|   | li:last-child {                                                   |
-| 3 |                                                                   |
-| 1 | border-bottom: 0;                                                 |
-|   |                                                                   |
-| 3 | }                                                                 |
-| 2 |                                                                   |
-|   | a {                                                               |
-| 3 |                                                                   |
-| 3 | color: #0087cc;                                                   |
-|   |                                                                   |
-| 3 | display: block;                                                   |
-| 4 |                                                                   |
-|   | padding: 6px 12px;                                                |
-| 3 |                                                                   |
-| 5 | text-decoration: none;                                            |
-|   |                                                                   |
-| 3 | }                                                                 |
-| 6 |                                                                   |
-|   | a:hover {                                                         |
-| 3 |                                                                   |
-| 7 | color: #ff7b29;                                                   |
-|   |                                                                   |
-| 3 | }                                                                 |
-| 8 |                                                                   |
-|   |                                                                   |
-| 3 |                                                                   |
-| 9 |                                                                   |
-|   |                                                                   |
-| 4 |                                                                   |
-| 0 |                                                                   |
-|   |                                                                   |
-| 4 |                                                                   |
-| 1 |                                                                   |
-|   |                                                                   |
-| 4 |                                                                   |
-| 2 |                                                                   |
-|   |                                                                   |
-| 4 |                                                                   |
-| 3 |                                                                   |
-|   |                                                                   |
-| 4 |                                                                   |
-| 4 |                                                                   |
-|   |                                                                   |
-| 4 |                                                                   |
-| 5 |                                                                   |
-|   |                                                                   |
-| 4 |                                                                   |
-| 6 |                                                                   |
-|   |                                                                   |
-| 4 |                                                                   |
-| 7 |                                                                   |
-|   |                                                                   |
-| 4 |                                                                   |
-| 8 |                                                                   |
-|   |                                                                   |
-| 4 |                                                                   |
-| 9 |                                                                   |
-|   |                                                                   |
-| 5 |                                                                   |
-| 0 |                                                                   |
-|   |                                                                   |
-| 5 |                                                                   |
-| 1 |                                                                   |
-|   |                                                                   |
-| 5 |                                                                   |
-| 2 |                                                                   |
-|   |                                                                   |
-| 5 |                                                                   |
-| 3 |                                                                   |
+ 1  input {                                                           
+                                                                      
+ 2  display: none;                                                    
+                                                                      
+ 3  }                                                                 
+                                                                      
+ 4  label,                                                            
+                                                                      
+ 5  ul {                                                              
+                                                                      
+ 6  border: 1px solid #cecfd5;                                        
+                                                                      
+ 7  border-radius: 6px;                                               
+                                                                      
+ 8  }                                                                 
+                                                                      
+ 9  label {                                                           
+                                                                      
+ 1  color: #0087cc;                                                   
+ 0                                                                    
+    cursor: pointer;                                                  
+ 1                                                                    
+ 1  display: inline-block;                                            
+                                                                      
+ 1  font-size: 18px;                                                  
+ 2                                                                    
+    padding: 5px 9px;                                                 
+ 1                                                                    
+ 3  transition: all .15s ease;                                        
+                                                                      
+ 1  }                                                                 
+ 4                                                                    
+    label:hover {                                                     
+ 1                                                                    
+ 5  color: #ff7b29;                                                   
+                                                                      
+ 1  }                                                                 
+ 6                                                                    
+    input:checked + label {                                           
+ 1                                                                    
+ 7  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15);                  
+                                                                      
+ 1  color: #9799a7;                                                   
+ 8                                                                    
+    }                                                                 
+ 1                                                                    
+ 9  nav {                                                             
+                                                                      
+ 2  max-height: 0;                                                    
+ 0                                                                    
+    overflow: hidden;                                                 
+ 2                                                                    
+ 1  transition: all .15s ease;                                        
+                                                                      
+ 2  }                                                                 
+ 2                                                                    
+    input:checked &tilde; nav {                                            
+ 2                                                                    
+ 3  max-height: 500px;                                                
+                                                                      
+ 2  }                                                                 
+ 4                                                                    
+    ul {                                                              
+ 2                                                                    
+ 5  list-style: none;                                                 
+                                                                      
+ 2  margin: 8px 0 0 0;                                                
+ 6                                                                    
+    padding: 0;                                                       
+ 2                                                                    
+ 7  width: 100px;                                                     
+                                                                      
+ 2  }                                                                 
+ 8                                                                    
+    li {                                                              
+ 2                                                                    
+ 9  border-bottom: 1px solid #cecfd5;                                 
+                                                                      
+ 3  }                                                                 
+ 0                                                                    
+    li:last-child {                                                   
+ 3                                                                    
+ 1  border-bottom: 0;                                                 
+                                                                      
+ 3  }                                                                 
+ 2                                                                    
+    a {                                                               
+ 3                                                                    
+ 3  color: #0087cc;                                                   
+                                                                      
+ 3  display: block;                                                   
+ 4                                                                    
+    padding: 6px 12px;                                                
+ 3                                                                    
+ 5  text-decoration: none;                                            
+                                                                      
+ 3  }                                                                 
+ 6                                                                    
+    a:hover {                                                         
+ 3                                                                    
+ 7  color: #ff7b29;                                                   
+                                                                      
+ 3  }                                                                 
+ 8                                                                    
+                                                                      
+ 3                                                                    
+ 9                                                                    
+                                                                      
+ 4                                                                    
+ 0                                                                    
+                                                                      
+ 4                                                                    
+ 1                                                                    
+                                                                      
+ 4                                                                    
+ 2                                                                    
+                                                                      
+ 4                                                                    
+ 3                                                                    
+                                                                      
+ 4                                                                    
+ 4                                                                    
+                                                                      
+ 4                                                                    
+ 5                                                                    
+                                                                      
+ 4                                                                    
+ 6                                                                    
+                                                                      
+ 4                                                                    
+ 7                                                                    
+                                                                      
+ 4                                                                    
+ 8                                                                    
+                                                                      
+ 4                                                                    
+ 9                                                                    
+                                                                      
+ 5                                                                    
+ 0                                                                    
+                                                                      
+ 5                                                                    
+ 1                                                                    
+                                                                      
+ 5                                                                    
+ 2                                                                    
+                                                                      
+ 5                                                                    
+ 3                                                                    
 +===+===================================================================+
 +---+-------------------------------------------------------------------+
 
@@ -2456,8 +2100,8 @@ selected.
 Some of the common selectors looked at early may also be defined as
 attribute selectors, in which an element is selected based upon its
 class or ID value. These class and ID attribute selectors are widely
-used and extremely powerful but only the beginning. Other [[attribute
-selectors]{.underline}](http://www.css3.info/preview/attribute-selectors/) have
+used and extremely powerful but only the beginning. Other [attribute
+selectors](http://www.css3.info/preview/attribute-selectors/) have
 emerged over the years, specifically taking a large leap forward with
 CSS3. Now elements can be selected based on whether an attribute is
 present and what its value may contain.
@@ -2474,18 +2118,18 @@ class, all depending on the level of specificity desired.
 <b>CSS</b>
 
 +---+----------------------------------------------------------------------+
-| 1 | a&lbrack;target&rbrack; {&#8230;}                                                   |
-|   |                                                                      |
-| 2 |                                                                      |
+ 1  a&lbrack;target&rbrack; {&#8230;}                                                   
+                                                                         
+ 2                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 <b>HTML</b>
 
 +---+----------------------------------------------------------------------+
-| 1 | &lt;a href=&quot;#&quot; target=&quot;&#0095;blank&quot;&gt;&#8230;&lt;/a&gt;                        |
-|   |                                                                      |
-| 2 |                                                                      |
+ 1  &lt;a href=&quot;#&quot; target=&quot;&#0095;blank&quot;&gt;&#8230;&lt;/a&gt;                        
+                                                                         
+ 2                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -2501,18 +2145,18 @@ inside of the quotations should be the desired matching attribute value.
 <b>CSS</b>
 
 +---+----------------------------------------------------------------------+
-| 1 | a&lbrack;href=&quot;http://google.com/&quot;&rbrack; {&#8230;}                              |
-|   |                                                                      |
-| 2 |                                                                      |
+ 1  a&lbrack;href=&quot;http://google.com/&quot;&rbrack; {&#8230;}                              
+                                                                         
+ 2                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 <b>HTML</b>
 
 +---+----------------------------------------------------------------------+
-| 1 | &lt;a href=&quot;http://google.com/&quot;&gt;&#8230;&lt;/a&gt;                          |
-|   |                                                                      |
-| 2 |                                                                      |
+ 1  &lt;a href=&quot;http://google.com/&quot;&gt;&#8230;&lt;/a&gt;                          
+                                                                         
+ 2                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -2528,18 +2172,18 @@ attribute value.
 <b>CSS</b>
 
 +---+----------------------------------------------------------------------+
-| 1 | a&lbrack;href&ast;=&quot;login&quot;&rbrack; {&#8230;}                                         |
-|   |                                                                      |
-| 2 |                                                                      |
+ 1  a&lbrack;href&ast;=&quot;login&quot;&rbrack; {&#8230;}                                         
+                                                                         
+ 2                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 <b>HTML</b>
 
 +---+----------------------------------------------------------------------+
-| 1 | &lt;a href=&quot;/login.php&quot;&gt;&#8230;&lt;/a&gt;                                  |
-|   |                                                                      |
-| 2 |                                                                      |
+ 1  &lt;a href=&quot;/login.php&quot;&gt;&#8230;&lt;/a&gt;                                  
+                                                                         
+ 2                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -2555,18 +2199,18 @@ stated value.
 <b>CSS</b>
 
 +---+----------------------------------------------------------------------+
-| 1 | a&lbrack;href&Hat;=&quot;https://&quot;&rbrack; {&#8230;}                                      |
-|   |                                                                      |
-| 2 |                                                                      |
+ 1  a&lbrack;href&Hat;=&quot;https://&quot;&rbrack; {&#8230;}                                      
+                                                                         
+ 2                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 <b>HTML</b>
 
 +---+----------------------------------------------------------------------+
-| 1 | &lt;a href=&quot;https://chase.com/&quot;&gt;&#8230;&lt;/a&gt;                          |
-|   |                                                                      |
-| 2 |                                                                      |
+ 1  &lt;a href=&quot;https://chase.com/&quot;&gt;&#8230;&lt;/a&gt;                          
+                                                                         
+ 2                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -2582,18 +2226,18 @@ stated value.
 <b>CSS</b>
 
 +---+----------------------------------------------------------------------+
-| 1 | a&lbrack;href&#36;=&quot;.pdf&quot;&rbrack; {&#8230;}                                          |
-|   |                                                                      |
-| 2 |                                                                      |
+ 1  a&lbrack;href&#36;=&quot;.pdf&quot;&rbrack; {&#8230;}                                          
+                                                                         
+ 2                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 <b>HTML</b>
 
 +---+----------------------------------------------------------------------+
-| 1 | &lt;a href=&quot;/docs/menu.pdf&quot;&gt;&#8230;&lt;/a&gt;                              |
-|   |                                                                      |
-| 2 |                                                                      |
+ 1  &lt;a href=&quot;/docs/menu.pdf&quot;&gt;&#8230;&lt;/a&gt;                              
+                                                                         
+ 2                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -2609,18 +2253,18 @@ stated value.
 <b>CSS</b>
 
 +---+----------------------------------------------------------------------+
-| 1 | a&lbrack;rel&tilde;=&quot;tag&quot;&rbrack; {&#8230;}                                            |
-|   |                                                                      |
-| 2 |                                                                      |
+ 1  a&lbrack;rel&tilde;=&quot;tag&quot;&rbrack; {&#8230;}                                            
+                                                                         
+ 2                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 <b>HTML</b>
 
 +---+----------------------------------------------------------------------+
-| 1 | &lt;a href=&quot;#&quot; rel=&quot;tag nofollow&quot;&gt;&#8230;&lt;/a&gt;                      |
-|   |                                                                      |
-| 2 |                                                                      |
+ 1  &lt;a href=&quot;#&quot; rel=&quot;tag nofollow&quot;&gt;&#8230;&lt;/a&gt;                      
+                                                                         
+ 2                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -2636,18 +2280,18 @@ stated value.
 **CSS**
 
 +---+----------------------------------------------------------------------+
-| 1 | a&lbrack;lang&#0124;=&quot;en&quot;&rbrack; {&#8230;}                                            |
-|   |                                                                      |
-| 2 |                                                                      |
+ 1  a&lbrack;lang&#0124;=&quot;en&quot;&rbrack; {&#8230;}                                            
+                                                                         
+ 2                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **HTML**
 
 +---+----------------------------------------------------------------------+
-| 1 | &lt;a href=&quot;#&quot; lang=&quot;en-US&quot;&gt;&#8230;&lt;/a&gt;                            |
-|   |                                                                      |
-| 2 |                                                                      |
+ 1  &lt;a href=&quot;#&quot; lang=&quot;en-US&quot;&gt;&#8230;&lt;/a&gt;                            
+                                                                         
+ 2                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -2656,110 +2300,110 @@ stated value.
 **HTML**
 
 +---+-------------------------------------------------------------------+
-| 1 | &lt;ul&gt;                                                            |
-|   |                                                                   |
-| 2 | &lt;li&gt;&lt;a href=&quot;#.pdf&quot;&gt;PDF Document&lt;/a&gt;&lt;/li&gt;               |
-|   |                                                                   |
-| 3 | &lt;li&gt;&lt;a href=&quot;#.doc&quot;&gt;Word Document&lt;/a&gt;&lt;/li&gt;              |
-|   |                                                                   |
-| 4 | &lt;li&gt;&lt;a href=&quot;#.jpg&quot;&gt;Image File&lt;/a&gt;&lt;/li&gt;                 |
-|   |                                                                   |
-| 5 | &lt;li&gt;&lt;a href=&quot;#.mp3&quot;&gt;Audio File&lt;/a&gt;&lt;/li&gt;                 |
-|   |                                                                   |
-| 6 | &lt;li&gt;&lt;a href=&quot;#.mp4&quot;&gt;Video File&lt;/a&gt;&lt;/li&gt;                 |
-|   |                                                                   |
-| 7 | &lt;/ul&gt;                                                           |
-|   |                                                                   |
-| 8 |                                                                   |
+ 1  &lt;ul&gt;                                                            
+                                                                      
+ 2  &lt;li&gt;&lt;a href=&quot;#.pdf&quot;&gt;PDF Document&lt;/a&gt;&lt;/li&gt;               
+                                                                      
+ 3  &lt;li&gt;&lt;a href=&quot;#.doc&quot;&gt;Word Document&lt;/a&gt;&lt;/li&gt;              
+                                                                      
+ 4  &lt;li&gt;&lt;a href=&quot;#.jpg&quot;&gt;Image File&lt;/a&gt;&lt;/li&gt;                 
+                                                                      
+ 5  &lt;li&gt;&lt;a href=&quot;#.mp3&quot;&gt;Audio File&lt;/a&gt;&lt;/li&gt;                 
+                                                                      
+ 6  &lt;li&gt;&lt;a href=&quot;#.mp4&quot;&gt;Video File&lt;/a&gt;&lt;/li&gt;                 
+                                                                      
+ 7  &lt;/ul&gt;                                                           
+                                                                      
+ 8                                                                    
 +===+===================================================================+
 +---+-------------------------------------------------------------------+
 
 **CSS**
 
 +---+-------------------------------------------------------------------+
-| 1 | ul {                                                              |
-|   |                                                                   |
-| 2 | list-style: none;                                                 |
-|   |                                                                   |
-| 3 | margin: 0;                                                        |
-|   |                                                                   |
-| 4 | padding: 0;                                                       |
-|   |                                                                   |
-| 5 | }                                                                 |
-|   |                                                                   |
-| 6 | a {                                                               |
-|   |                                                                   |
-| 7 | background-position: 0 50%;                                       |
-|   |                                                                   |
-| 8 | background-repeat: no-repeat;                                     |
-|   |                                                                   |
-| 9 | color: #0087cc;                                                   |
-|   |                                                                   |
-| 1 | padding-left: 22px;                                               |
-| 0 |                                                                   |
-|   | text-decoration: none;                                            |
-| 1 |                                                                   |
-| 1 | }                                                                 |
-|   |                                                                   |
-| 1 | a:hover {                                                         |
-| 2 |                                                                   |
-|   | color: #ff7b29;                                                   |
-| 1 |                                                                   |
-| 3 | }                                                                 |
-|   |                                                                   |
-| 1 | a&lbrack;href&#36;=&quot;.pdf&quot;&rbrack; {                                            |
-| 4 |                                                                   |
-|   | background-image: url(&quot;images/pdf.png&quot;);                        |
-| 1 |                                                                   |
-| 5 | }                                                                 |
-|   |                                                                   |
-| 1 | a&lbrack;href&#36;=&quot;.doc&quot;&rbrack; {                                            |
-| 6 |                                                                   |
-|   | background-image: url(&quot;images/doc.png&quot;);                        |
-| 1 |                                                                   |
-| 7 | }                                                                 |
-|   |                                                                   |
-| 1 | a&lbrack;href&#36;=&quot;.jpg&quot;&rbrack; {                                            |
-| 8 |                                                                   |
-|   | background-image: url(&quot;images/image.png&quot;);                      |
-| 1 |                                                                   |
-| 9 | }                                                                 |
-|   |                                                                   |
-| 2 | a&lbrack;href&#36;=&quot;.mp3&quot;&rbrack; {                                            |
-| 0 |                                                                   |
-|   | background-image: url(&quot;images/audio.png&quot;);                      |
-| 2 |                                                                   |
-| 1 | }                                                                 |
-|   |                                                                   |
-| 2 | a&lbrack;href&#36;=&quot;.mp4&quot;&rbrack; {                                            |
-| 2 |                                                                   |
-|   | background-image: url(&quot;images/video.png&quot;);                      |
-| 2 |                                                                   |
-| 3 | }                                                                 |
-|   |                                                                   |
-| 2 |                                                                   |
-| 4 |                                                                   |
-|   |                                                                   |
-| 2 |                                                                   |
-| 5 |                                                                   |
-|   |                                                                   |
-| 2 |                                                                   |
-| 6 |                                                                   |
-|   |                                                                   |
-| 2 |                                                                   |
-| 7 |                                                                   |
-|   |                                                                   |
-| 2 |                                                                   |
-| 8 |                                                                   |
-|   |                                                                   |
-| 2 |                                                                   |
-| 9 |                                                                   |
-|   |                                                                   |
-| 3 |                                                                   |
-| 0 |                                                                   |
-|   |                                                                   |
-| 3 |                                                                   |
-| 1 |                                                                   |
+ 1  ul {                                                              
+                                                                      
+ 2  list-style: none;                                                 
+                                                                      
+ 3  margin: 0;                                                        
+                                                                      
+ 4  padding: 0;                                                       
+                                                                      
+ 5  }                                                                 
+                                                                      
+ 6  a {                                                               
+                                                                      
+ 7  background-position: 0 50%;                                       
+                                                                      
+ 8  background-repeat: no-repeat;                                     
+                                                                      
+ 9  color: #0087cc;                                                   
+                                                                      
+ 1  padding-left: 22px;                                               
+ 0                                                                    
+    text-decoration: none;                                            
+ 1                                                                    
+ 1  }                                                                 
+                                                                      
+ 1  a:hover {                                                         
+ 2                                                                    
+    color: #ff7b29;                                                   
+ 1                                                                    
+ 3  }                                                                 
+                                                                      
+ 1  a&lbrack;href&#36;=&quot;.pdf&quot;&rbrack; {                                            
+ 4                                                                    
+    background-image: url(&quot;images/pdf.png&quot;);                        
+ 1                                                                    
+ 5  }                                                                 
+                                                                      
+ 1  a&lbrack;href&#36;=&quot;.doc&quot;&rbrack; {                                            
+ 6                                                                    
+    background-image: url(&quot;images/doc.png&quot;);                        
+ 1                                                                    
+ 7  }                                                                 
+                                                                      
+ 1  a&lbrack;href&#36;=&quot;.jpg&quot;&rbrack; {                                            
+ 8                                                                    
+    background-image: url(&quot;images/image.png&quot;);                      
+ 1                                                                    
+ 9  }                                                                 
+                                                                      
+ 2  a&lbrack;href&#36;=&quot;.mp3&quot;&rbrack; {                                            
+ 0                                                                    
+    background-image: url(&quot;images/audio.png&quot;);                      
+ 2                                                                    
+ 1  }                                                                 
+                                                                      
+ 2  a&lbrack;href&#36;=&quot;.mp4&quot;&rbrack; {                                            
+ 2                                                                    
+    background-image: url(&quot;images/video.png&quot;);                      
+ 2                                                                    
+ 3  }                                                                 
+                                                                      
+ 2                                                                    
+ 4                                                                    
+                                                                      
+ 2                                                                    
+ 5                                                                    
+                                                                      
+ 2                                                                    
+ 6                                                                    
+                                                                      
+ 2                                                                    
+ 7                                                                    
+                                                                      
+ 2                                                                    
+ 8                                                                    
+                                                                      
+ 2                                                                    
+ 9                                                                    
+                                                                      
+ 3                                                                    
+ 0                                                                    
+                                                                      
+ 3                                                                    
+ 1                                                                    
 +===+===================================================================+
 +---+-------------------------------------------------------------------+
 
@@ -2801,7 +2445,7 @@ stated value.
 
 ### Pseudo-classes
 
-[[Pseudo-classes]{.underline}](http://coding.smashingmagazine.com/2011/03/30/how-to-use-css3-pseudo-classes/) are
+[Pseudo-classes](http://coding.smashingmagazine.com/2011/03/30/how-to-use-css3-pseudo-classes/) are
 similar to regular classes in HTML however they are not directly stated
 within the markup, instead they are dynamically populated as a result of
 users' actions or the document structure. The most common pseudo-class,
@@ -2819,11 +2463,11 @@ styles links that a user has already visited based on their browsing
 history.
 
 +---+----------------------------------------------------------------------+
-| 1 | a:link {&#8230;}                                                        |
-|   |                                                                      |
-| 2 | a:visited {&#8230;}                                                     |
-|   |                                                                      |
-| 3 |                                                                      |
+ 1  a:link {&#8230;}                                                        
+                                                                         
+ 2  a:visited {&#8230;}                                                     
+                                                                         
+ 3                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -2840,13 +2484,13 @@ made an element the focus point of the page, often by using the keyboard
 to tab from one element to another.
 
 +---+----------------------------------------------------------------------+
-| 1 | a:hover {&#8230;}                                                       |
-|   |                                                                      |
-| 2 | a:active {&#8230;}                                                      |
-|   |                                                                      |
-| 3 | a:focus {&#8230;}                                                       |
-|   |                                                                      |
-| 4 |                                                                      |
+ 1  a:hover {&#8230;}                                                       
+                                                                         
+ 2  a:active {&#8230;}                                                      
+                                                                         
+ 3  a:focus {&#8230;}                                                       
+                                                                         
+ 4                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -2865,11 +2509,11 @@ the input is not available for interaction, however those styles may be
 adjusted as wished with the :disabled pseudo-class.
 
 +---+----------------------------------------------------------------------+
-| 1 | input:enabled {&#8230;}                                                 |
-|   |                                                                      |
-| 2 | input:disabled {&#8230;}                                                |
-|   |                                                                      |
-| 3 |                                                                      |
+ 1  input:enabled {&#8230;}                                                 
+                                                                         
+ 2  input:disabled {&#8230;}                                                
+                                                                         
+ 3                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -2882,11 +2526,11 @@ indeterminate state, from which the :indeterminate pseudo-class can be
 used to target these elements.
 
 +---+----------------------------------------------------------------------+
-| 1 | input:checked {&#8230;}                                                 |
-|   |                                                                      |
-| 2 | input:indeterminate {&#8230;}                                           |
-|   |                                                                      |
-| 3 |                                                                      |
+ 1  input:checked {&#8230;}                                                 
+                                                                         
+ 2  input:indeterminate {&#8230;}                                           
+                                                                         
+ 3                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -2925,45 +2569,45 @@ list item.
 **CSS**
 
 +---+----------------------------------------------------------------------+
-| 1 | li:first-child {&#8230;}                                                |
-|   |                                                                      |
-| 2 | li:last-child {&#8230;}                                                 |
-|   |                                                                      |
-| 3 | div:only-child {&#8230;}                                                |
-|   |                                                                      |
-| 4 |                                                                      |
+ 1  li:first-child {&#8230;}                                                
+                                                                         
+ 2  li:last-child {&#8230;}                                                 
+                                                                         
+ 3  div:only-child {&#8230;}                                                
+                                                                         
+ 4                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **HTML**
 
 +---+----------------------------------------------------------------------+
-| 1 | &lt;ul&gt;                                                               |
-|   |                                                                      |
-| 2 | &lt;li&gt;This list item will be selected&lt;/li&gt;                         |
-|   |                                                                      |
-| 3 | &lt;li&gt;                                                               |
-|   |                                                                      |
-| 4 | &lt;div&gt;This div will be selected&lt;/div&gt;                             |
-|   |                                                                      |
-| 5 | &lt;/li&gt;                                                              |
-|   |                                                                      |
-| 6 | &lt;li&gt;                                                               |
-|   |                                                                      |
-| 7 | &lt;div&gt;&#8230;&lt;/div&gt;                                                  |
-|   |                                                                      |
-| 8 | &lt;div&gt;&#8230;&lt;/div&gt;                                                  |
-|   |                                                                      |
-| 9 | &lt;/li&gt;                                                              |
-|   |                                                                      |
-| 1 | &lt;li&gt;This list item will be selected&lt;/li&gt;                         |
-| 0 |                                                                      |
-|   | &lt;/ul&gt;                                                              |
-| 1 |                                                                      |
-| 1 |                                                                      |
-|   |                                                                      |
-| 1 |                                                                      |
-| 2 |                                                                      |
+ 1  &lt;ul&gt;                                                               
+                                                                         
+ 2  &lt;li&gt;This list item will be selected&lt;/li&gt;                         
+                                                                         
+ 3  &lt;li&gt;                                                               
+                                                                         
+ 4  &lt;div&gt;This div will be selected&lt;/div&gt;                             
+                                                                         
+ 5  &lt;/li&gt;                                                              
+                                                                         
+ 6  &lt;li&gt;                                                               
+                                                                         
+ 7  &lt;div&gt;&#8230;&lt;/div&gt;                                                  
+                                                                         
+ 8  &lt;div&gt;&#8230;&lt;/div&gt;                                                  
+                                                                         
+ 9  &lt;/li&gt;                                                              
+                                                                         
+ 1  &lt;li&gt;This list item will be selected&lt;/li&gt;                         
+ 0                                                                       
+    &lt;/ul&gt;                                                              
+ 1                                                                       
+ 1                                                                       
+                                                                         
+ 1                                                                       
+ 2                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -2994,36 +2638,36 @@ the only image to appear within the article, thus also selected.
 **CSS**
 
 +---+----------------------------------------------------------------------+
-| 1 | p:first-of-type {&#8230;}                                               |
-|   |                                                                      |
-| 2 | p:last-of-type {&#8230;}                                                |
-|   |                                                                      |
-| 3 | img:only-of-type {&#8230;}                                              |
-|   |                                                                      |
-| 4 |                                                                      |
+ 1  p:first-of-type {&#8230;}                                               
+                                                                         
+ 2  p:last-of-type {&#8230;}                                                
+                                                                         
+ 3  img:only-of-type {&#8230;}                                              
+                                                                         
+ 4                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **HTML**
 
 +---+----------------------------------------------------------------------+
-| 1 | &lt;article&gt;                                                          |
-|   |                                                                      |
-| 2 | &lt;h1&gt;&#8230;&lt;/h1&gt;                                                    |
-|   |                                                                      |
-| 3 | &lt;p&gt;This paragraph will be selected&lt;/p&gt;                           |
-|   |                                                                      |
-| 4 | &lt;p&gt;&#8230;&lt;/p&gt;                                                      |
-|   |                                                                      |
-| 5 | &lt;img src=&quot;#&quot;&gt;&lt;!&#45;&#45; This image will be selected &#45;&#45;&gt;            |
-|   |                                                                      |
-| 6 | &lt;p&gt;This paragraph will be selected&lt;/p&gt;                           |
-|   |                                                                      |
-| 7 | &lt;h6&gt;&#8230;&lt;/h6&gt;                                                    |
-|   |                                                                      |
-| 8 | &lt;/article&gt;                                                         |
-|   |                                                                      |
-| 9 |                                                                      |
+ 1  &lt;article&gt;                                                          
+                                                                         
+ 2  &lt;h1&gt;&#8230;&lt;/h1&gt;                                                    
+                                                                         
+ 3  &lt;p&gt;This paragraph will be selected&lt;/p&gt;                           
+                                                                         
+ 4  &lt;p&gt;&#8230;&lt;/p&gt;                                                      
+                                                                         
+ 5  &lt;img src=&quot;#&quot;&gt;&lt;!&#45;&#45; This image will be selected &#45;&#45;&gt;            
+                                                                         
+ 6  &lt;p&gt;This paragraph will be selected&lt;/p&gt;                           
+                                                                         
+ 7  &lt;h6&gt;&#8230;&lt;/h6&gt;                                                    
+                                                                         
+ 8  &lt;/article&gt;                                                         
+                                                                         
+ 9                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -3052,8 +2696,8 @@ and increases by one for each list item, until finally locating and
 selecting the fourth item. When using a number outright it must be a
 positive number.
 
-[[Expressions for
-pseudo-classes]{.underline}](http://reference.sitepoint.com/css/understandingnthchildexpressions) fall
+[Expressions for
+pseudo-classes](http://reference.sitepoint.com/css/understandingnthchildexpressions) fall
 in the format of *a*n, *a*n+*b*, *a*n-*b*, n+*b*, *-*n+*b*,
 and *-a*n+*b*. The same expression may be translated and read
 as (a×n)±b. The a variable stands for the multiplier in which elements
@@ -3120,32 +2764,32 @@ third list item, thus lines 4 and 7 are selected.
 **CSS**
 
 +---+----------------------------------------------------------------------+
-| 1 | li:nth-child(3n) {&#8230;}                                              |
-|   |                                                                      |
-| 2 |                                                                      |
+ 1  li:nth-child(3n) {&#8230;}                                              
+                                                                         
+ 2                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **HTML**
 
 +---+----------------------------------------------------------------------+
-| 1 | &lt;ul&gt;                                                               |
-|   |                                                                      |
-| 2 | &lt;li&gt;&#8230;&lt;/li&gt;                                                    |
-|   |                                                                      |
-| 3 | &lt;li&gt;&#8230;&lt;/li&gt;                                                    |
-|   |                                                                      |
-| 4 | &lt;li&gt;This list item will be selected&lt;/li&gt;                         |
-|   |                                                                      |
-| 5 | &lt;li&gt;&#8230;&lt;/li&gt;                                                    |
-|   |                                                                      |
-| 6 | &lt;li&gt;&#8230;&lt;/li&gt;                                                    |
-|   |                                                                      |
-| 7 | &lt;li&gt;This list item will be selected&lt;/li&gt;                         |
-|   |                                                                      |
-| 8 | &lt;/ul&gt;                                                              |
-|   |                                                                      |
-| 9 |                                                                      |
+ 1  &lt;ul&gt;                                                               
+                                                                         
+ 2  &lt;li&gt;&#8230;&lt;/li&gt;                                                    
+                                                                         
+ 3  &lt;li&gt;&#8230;&lt;/li&gt;                                                    
+                                                                         
+ 4  &lt;li&gt;This list item will be selected&lt;/li&gt;                         
+                                                                         
+ 5  &lt;li&gt;&#8230;&lt;/li&gt;                                                    
+                                                                         
+ 6  &lt;li&gt;&#8230;&lt;/li&gt;                                                    
+                                                                         
+ 7  &lt;li&gt;This list item will be selected&lt;/li&gt;                         
+                                                                         
+ 8  &lt;/ul&gt;                                                              
+                                                                         
+ 9                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -3157,32 +2801,32 @@ and then onward. As a result, the list items lines 4 and 6 are selected.
 **CSS**
 
 +---+----------------------------------------------------------------------+
-| 1 | li:nth-child(2n+3) {&#8230;}                                            |
-|   |                                                                      |
-| 2 |                                                                      |
+ 1  li:nth-child(2n+3) {&#8230;}                                            
+                                                                         
+ 2                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **HTML**
 
 +---+----------------------------------------------------------------------+
-| 1 | &lt;ul&gt;                                                               |
-|   |                                                                      |
-| 2 | &lt;li&gt;&#8230;&lt;/li&gt;                                                    |
-|   |                                                                      |
-| 3 | &lt;li&gt;&#8230;&lt;/li&gt;                                                    |
-|   |                                                                      |
-| 4 | &lt;li&gt;This list item will be selected&lt;/li&gt;                         |
-|   |                                                                      |
-| 5 | &lt;li&gt;&#8230;&lt;/li&gt;                                                    |
-|   |                                                                      |
-| 6 | &lt;li&gt;This list item will be selected&lt;/li&gt;                         |
-|   |                                                                      |
-| 7 | &lt;li&gt;&#8230;&lt;/li&gt;                                                    |
-|   |                                                                      |
-| 8 | &lt;/ul&gt;                                                              |
-|   |                                                                      |
-| 9 |                                                                      |
+ 1  &lt;ul&gt;                                                               
+                                                                         
+ 2  &lt;li&gt;&#8230;&lt;/li&gt;                                                    
+                                                                         
+ 3  &lt;li&gt;&#8230;&lt;/li&gt;                                                    
+                                                                         
+ 4  &lt;li&gt;This list item will be selected&lt;/li&gt;                         
+                                                                         
+ 5  &lt;li&gt;&#8230;&lt;/li&gt;                                                    
+                                                                         
+ 6  &lt;li&gt;This list item will be selected&lt;/li&gt;                         
+                                                                         
+ 7  &lt;li&gt;&#8230;&lt;/li&gt;                                                    
+                                                                         
+ 8  &lt;/ul&gt;                                                              
+                                                                         
+ 9                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -3194,32 +2838,32 @@ lines 2 through 5 are selected.
 **CSS**
 
 +---+----------------------------------------------------------------------+
-| 1 | li:nth-child(-n+4) {&#8230;}                                            |
-|   |                                                                      |
-| 2 |                                                                      |
+ 1  li:nth-child(-n+4) {&#8230;}                                            
+                                                                         
+ 2                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **HTML**
 
 +---+----------------------------------------------------------------------+
-| 1 | &lt;ul&gt;                                                               |
-|   |                                                                      |
-| 2 | &lt;li&gt;This list item will be selected&lt;/li&gt;                         |
-|   |                                                                      |
-| 3 | &lt;li&gt;This list item will be selected&lt;/li&gt;                         |
-|   |                                                                      |
-| 4 | &lt;li&gt;This list item will be selected&lt;/li&gt;                         |
-|   |                                                                      |
-| 5 | &lt;li&gt;This list item will be selected&lt;/li&gt;                         |
-|   |                                                                      |
-| 6 | &lt;li&gt;&#8230;&lt;/li&gt;                                                    |
-|   |                                                                      |
-| 7 | &lt;li&gt;&#8230;&lt;/li&gt;                                                    |
-|   |                                                                      |
-| 8 | &lt;/ul&gt;                                                              |
-|   |                                                                      |
-| 9 |                                                                      |
+ 1  &lt;ul&gt;                                                               
+                                                                         
+ 2  &lt;li&gt;This list item will be selected&lt;/li&gt;                         
+                                                                         
+ 3  &lt;li&gt;This list item will be selected&lt;/li&gt;                         
+                                                                         
+ 4  &lt;li&gt;This list item will be selected&lt;/li&gt;                         
+                                                                         
+ 5  &lt;li&gt;This list item will be selected&lt;/li&gt;                         
+                                                                         
+ 6  &lt;li&gt;&#8230;&lt;/li&gt;                                                    
+                                                                         
+ 7  &lt;li&gt;&#8230;&lt;/li&gt;                                                    
+                                                                         
+ 8  &lt;/ul&gt;                                                              
+                                                                         
+ 9                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -3231,32 +2875,32 @@ item, thus the list items on lines 2, 4, and 6 are selected.
 **CSS**
 
 +---+----------------------------------------------------------------------+
-| 1 | li:nth-child(-2n+5) {&#8230;}                                           |
-|   |                                                                      |
-| 2 |                                                                      |
+ 1  li:nth-child(-2n+5) {&#8230;}                                           
+                                                                         
+ 2                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **HTML**
 
 +---+----------------------------------------------------------------------+
-| 1 | &lt;ul&gt;                                                               |
-|   |                                                                      |
-| 2 | &lt;li&gt;This list item will be selected&lt;/li&gt;                         |
-|   |                                                                      |
-| 3 | &lt;li&gt;&#8230;&lt;/li&gt;                                                    |
-|   |                                                                      |
-| 4 | &lt;li&gt;This list item will be selected&lt;/li&gt;                         |
-|   |                                                                      |
-| 5 | &lt;li&gt;&#8230;&lt;/li&gt;                                                    |
-|   |                                                                      |
-| 6 | &lt;li&gt;This list item will be selected&lt;/li&gt;                         |
-|   |                                                                      |
-| 7 | &lt;li&gt;&#8230;&lt;/li&gt;                                                    |
-|   |                                                                      |
-| 8 | &lt;/ul&gt;                                                              |
-|   |                                                                      |
-| 9 |                                                                      |
+ 1  &lt;ul&gt;                                                               
+                                                                         
+ 2  &lt;li&gt;This list item will be selected&lt;/li&gt;                         
+                                                                         
+ 3  &lt;li&gt;&#8230;&lt;/li&gt;                                                    
+                                                                         
+ 4  &lt;li&gt;This list item will be selected&lt;/li&gt;                         
+                                                                         
+ 5  &lt;li&gt;&#8230;&lt;/li&gt;                                                    
+                                                                         
+ 6  &lt;li&gt;This list item will be selected&lt;/li&gt;                         
+                                                                         
+ 7  &lt;li&gt;&#8230;&lt;/li&gt;                                                    
+                                                                         
+ 8  &lt;/ul&gt;                                                              
+                                                                         
+ 9                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -3272,32 +2916,32 @@ are selected.
 **CSS**
 
 +---+----------------------------------------------------------------------+
-| 1 | li:nth-last-child(3n+2) {&#8230;}                                       |
-|   |                                                                      |
-| 2 |                                                                      |
+ 1  li:nth-last-child(3n+2) {&#8230;}                                       
+                                                                         
+ 2                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **HTML**
 
 +---+----------------------------------------------------------------------+
-| 1 | &lt;ul&gt;                                                               |
-|   |                                                                      |
-| 2 | &lt;li&gt;&#8230;&lt;/li&gt;                                                    |
-|   |                                                                      |
-| 3 | &lt;li&gt;This list item will be selected&lt;/li&gt;                         |
-|   |                                                                      |
-| 4 | &lt;li&gt;&#8230;&lt;/li&gt;                                                    |
-|   |                                                                      |
-| 5 | &lt;li&gt;&#8230;&lt;/li&gt;                                                    |
-|   |                                                                      |
-| 6 | &lt;li&gt;This list item will be selected&lt;/li&gt;                         |
-|   |                                                                      |
-| 7 | &lt;li&gt;&#8230;&lt;/li&gt;                                                    |
-|   |                                                                      |
-| 8 | &lt;/ul&gt;                                                              |
-|   |                                                                      |
-| 9 |                                                                      |
+ 1  &lt;ul&gt;                                                               
+                                                                         
+ 2  &lt;li&gt;&#8230;&lt;/li&gt;                                                    
+                                                                         
+ 3  &lt;li&gt;This list item will be selected&lt;/li&gt;                         
+                                                                         
+ 4  &lt;li&gt;&#8230;&lt;/li&gt;                                                    
+                                                                         
+ 5  &lt;li&gt;&#8230;&lt;/li&gt;                                                    
+                                                                         
+ 6  &lt;li&gt;This list item will be selected&lt;/li&gt;                         
+                                                                         
+ 7  &lt;li&gt;&#8230;&lt;/li&gt;                                                    
+                                                                         
+ 8  &lt;/ul&gt;                                                              
+                                                                         
+ 9                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -3327,38 +2971,38 @@ the parent. Here the paragraphs on lines 5 and 9 are selected.
 **CSS**
 
 +---+----------------------------------------------------------------------+
-| 1 | p:nth-of-type(3n) {&#8230;}                                             |
-|   |                                                                      |
-| 2 |                                                                      |
+ 1  p:nth-of-type(3n) {&#8230;}                                             
+                                                                         
+ 2                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **HTML**
 
 +---+----------------------------------------------------------------------+
-| 1 | &lt;article&gt;                                                          |
-|   |                                                                      |
-| 2 | &lt;h1&gt;&#8230;&lt;/h1&gt;                                                    |
-|   |                                                                      |
-| 3 | &lt;p&gt;&#8230;&lt;/p&gt;                                                      |
-|   |                                                                      |
-| 4 | &lt;p&gt;&#8230;&lt;/p&gt;                                                      |
-|   |                                                                      |
-| 5 | &lt;p&gt;This paragraph will be selected&lt;/p&gt;                           |
-|   |                                                                      |
-| 6 | &lt;h2&gt;&#8230;&lt;/h2&gt;                                                    |
-|   |                                                                      |
-| 7 | &lt;p&gt;&#8230;&lt;/p&gt;                                                      |
-|   |                                                                      |
-| 8 | &lt;p&gt;&#8230;&lt;/p&gt;                                                      |
-|   |                                                                      |
-| 9 | &lt;p&gt;This paragraph will be selected&lt;/p&gt;                           |
-|   |                                                                      |
-| 1 | &lt;/article&gt;                                                         |
-| 0 |                                                                      |
-|   |                                                                      |
-| 1 |                                                                      |
-| 1 |                                                                      |
+ 1  &lt;article&gt;                                                          
+                                                                         
+ 2  &lt;h1&gt;&#8230;&lt;/h1&gt;                                                    
+                                                                         
+ 3  &lt;p&gt;&#8230;&lt;/p&gt;                                                      
+                                                                         
+ 4  &lt;p&gt;&#8230;&lt;/p&gt;                                                      
+                                                                         
+ 5  &lt;p&gt;This paragraph will be selected&lt;/p&gt;                           
+                                                                         
+ 6  &lt;h2&gt;&#8230;&lt;/h2&gt;                                                    
+                                                                         
+ 7  &lt;p&gt;&#8230;&lt;/p&gt;                                                      
+                                                                         
+ 8  &lt;p&gt;&#8230;&lt;/p&gt;                                                      
+                                                                         
+ 9  &lt;p&gt;This paragraph will be selected&lt;/p&gt;                           
+                                                                         
+ 1  &lt;/article&gt;                                                         
+ 0                                                                       
+                                                                         
+ 1                                                                       
+ 1                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -3377,38 +3021,38 @@ paragraph. Here the paragraphs on lines 4, 7, and 9 are selected.
 **CSS**
 
 +---+----------------------------------------------------------------------+
-| 1 | p:nth-last-of-type(2n+1) {&#8230;}                                      |
-|   |                                                                      |
-| 2 |                                                                      |
+ 1  p:nth-last-of-type(2n+1) {&#8230;}                                      
+                                                                         
+ 2                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **HTML**
 
 +---+----------------------------------------------------------------------+
-| 1 | &lt;article&gt;                                                          |
-|   |                                                                      |
-| 2 | &lt;h1&gt;&#8230;&lt;/h1&gt;                                                    |
-|   |                                                                      |
-| 3 | &lt;p&gt;&#8230;&lt;/p&gt;                                                      |
-|   |                                                                      |
-| 4 | &lt;p&gt;This paragraph will be selected&lt;/p&gt;                           |
-|   |                                                                      |
-| 5 | &lt;p&gt;&#8230;&lt;/p&gt;                                                      |
-|   |                                                                      |
-| 6 | &lt;h2&gt;&#8230;&lt;/h2&gt;                                                    |
-|   |                                                                      |
-| 7 | &lt;p&gt;This paragraph will be selected&lt;/p&gt;                           |
-|   |                                                                      |
-| 8 | &lt;p&gt;&#8230;&lt;/p&gt;                                                      |
-|   |                                                                      |
-| 9 | &lt;p&gt;This paragraph will be selected&lt;/p&gt;                           |
-|   |                                                                      |
-| 1 | &lt;/article&gt;                                                         |
-| 0 |                                                                      |
-|   |                                                                      |
-| 1 |                                                                      |
-| 1 |                                                                      |
+ 1  &lt;article&gt;                                                          
+                                                                         
+ 2  &lt;h1&gt;&#8230;&lt;/h1&gt;                                                    
+                                                                         
+ 3  &lt;p&gt;&#8230;&lt;/p&gt;                                                      
+                                                                         
+ 4  &lt;p&gt;This paragraph will be selected&lt;/p&gt;                           
+                                                                         
+ 5  &lt;p&gt;&#8230;&lt;/p&gt;                                                      
+                                                                         
+ 6  &lt;h2&gt;&#8230;&lt;/h2&gt;                                                    
+                                                                         
+ 7  &lt;p&gt;This paragraph will be selected&lt;/p&gt;                           
+                                                                         
+ 8  &lt;p&gt;&#8230;&lt;/p&gt;                                                      
+                                                                         
+ 9  &lt;p&gt;This paragraph will be selected&lt;/p&gt;                           
+                                                                         
+ 1  &lt;/article&gt;                                                         
+ 0                                                                       
+                                                                         
+ 1                                                                       
+ 1                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -3422,8 +3066,8 @@ URL http://example.com/index.html#hello includes the fragment identifier
 of hello. When this identifier matches the ID attribute value of an
 element on the page, &lt;section id=&quot;hello&quot;&gt; for example, that element
 may be identified and stylized using the :target pseudo-class. Fragment
-identifiers are most commonly seen when using [[on page
-links]{.underline}](https://learn.shayhowe.com/html-css/getting-to-know-html/#hyperlinks),
+identifiers are most commonly seen when using [on page
+links](https://learn.shayhowe.com/html-css/getting-to-know-html/#hyperlinks),
 or linking to another part of the same page.
 
 Looking at the code below, if a user would visit a page with the URI
@@ -3436,18 +3080,18 @@ selector and pseudo-class from before.
 **CSS**
 
 +---+----------------------------------------------------------------------+
-| 1 | section:target {&#8230;}                                                |
-|   |                                                                      |
-| 2 |                                                                      |
+ 1  section:target {&#8230;}                                                
+                                                                         
+ 2                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **HTML**
 
 +---+----------------------------------------------------------------------+
-| 1 | &lt;section id=&quot;hello&quot;&gt;&#8230;&lt;/section&gt;                             |
-|   |                                                                      |
-| 2 |                                                                      |
+ 1  &lt;section id=&quot;hello&quot;&gt;&#8230;&lt;/section&gt;                             
+                                                                         
+ 2                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -3469,26 +3113,26 @@ selected.
 **CSS**
 
 +---+----------------------------------------------------------------------+
-| 1 | div:empty {&#8230;}                                                     |
-|   |                                                                      |
-| 2 |                                                                      |
+ 1  div:empty {&#8230;}                                                     
+                                                                         
+ 2                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **HTML**
 
 +---+----------------------------------------------------------------------+
-| 1 | &lt;div&gt;Hello&lt;/div&gt;                                                 |
-|   |                                                                      |
-| 2 | &lt;div&gt;&lt;!&#45;&#45; Coming soon &#45;&#45;&gt;&lt;/div&gt;&lt;!&#45;&#45; This div will be       |
-|   | selected &#45;&#45;&gt;                                                       |
-| 3 |                                                                      |
-|   | &lt;div&gt;&lt;/div&gt;&lt;!&#45;&#45; This div will be selected &#45;&#45;&gt;                |
-| 4 |                                                                      |
-|   | &lt;div&gt; &lt;/div&gt;                                                     |
-| 5 |                                                                      |
-|   | &lt;div&gt;&lt;strong&gt;&lt;/strong&gt;&lt;/div&gt;                                 |
-| 6 |                                                                      |
+ 1  &lt;div&gt;Hello&lt;/div&gt;                                                 
+                                                                         
+ 2  &lt;div&gt;&lt;!&#45;&#45; Coming soon &#45;&#45;&gt;&lt;/div&gt;&lt;!&#45;&#45; This div will be       
+    selected &#45;&#45;&gt;                                                       
+ 3                                                                       
+    &lt;div&gt;&lt;/div&gt;&lt;!&#45;&#45; This div will be selected &#45;&#45;&gt;                
+ 4                                                                       
+    &lt;div&gt; &lt;/div&gt;                                                     
+ 5                                                                       
+    &lt;div&gt;&lt;strong&gt;&lt;/strong&gt;&lt;/div&gt;                                 
+ 6                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -3514,26 +3158,26 @@ pseudo-classes.
 **CSS**
 
 +---+----------------------------------------------------------------------+
-| 1 | div:not(.awesome) {&#8230;}                                             |
-|   |                                                                      |
-| 2 | :not(div) {&#8230;}                                                     |
-|   |                                                                      |
-| 3 |                                                                      |
+ 1  div:not(.awesome) {&#8230;}                                             
+                                                                         
+ 2  :not(div) {&#8230;}                                                     
+                                                                         
+ 3                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **HTML**
 
 +---+----------------------------------------------------------------------+
-| 1 | &lt;div&gt;This div will be selected&lt;/div&gt;                             |
-|   |                                                                      |
-| 2 | &lt;div class=&quot;awesome&quot;&gt;&#8230;&lt;/div&gt;                                |
-|   |                                                                      |
-| 3 | &lt;section&gt;This section will be selected&lt;/section&gt;                 |
-|   |                                                                      |
-| 4 | &lt;section class=&quot;awesome&quot;&gt;This section will be                    |
-|   | selected&lt;/section&gt;                                                 |
-| 5 |                                                                      |
+ 1  &lt;div&gt;This div will be selected&lt;/div&gt;                             
+                                                                         
+ 2  &lt;div class=&quot;awesome&quot;&gt;&#8230;&lt;/div&gt;                                
+                                                                         
+ 3  &lt;section&gt;This section will be selected&lt;/section&gt;                 
+                                                                         
+ 4  &lt;section class=&quot;awesome&quot;&gt;This section will be                    
+    selected&lt;/section&gt;                                                 
+ 5                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -3542,190 +3186,190 @@ pseudo-classes.
 **HTML**
 
 +---+-------------------------------------------------------------------+
-| 1 | &lt;table&gt;                                                         |
-|   |                                                                   |
-| 2 | &lt;thead&gt;                                                         |
-|   |                                                                   |
-| 3 | &lt;tr&gt;                                                            |
-|   |                                                                   |
-| 4 | &lt;th&gt;Number&lt;/th&gt;                                               |
-|   |                                                                   |
-| 5 | &lt;th&gt;Player&lt;/th&gt;                                               |
-|   |                                                                   |
-| 6 | &lt;th&gt;Position&lt;/th&gt;                                             |
-|   |                                                                   |
-| 7 | &lt;th&gt;Height&lt;/th&gt;                                               |
-|   |                                                                   |
-| 8 | &lt;th&gt;Weight&lt;/th&gt;                                               |
-|   |                                                                   |
-| 9 | &lt;/tr&gt;                                                           |
-|   |                                                                   |
-| 1 | &lt;/thead&gt;                                                        |
-| 0 |                                                                   |
-|   | &lt;tbody&gt;                                                         |
-| 1 |                                                                   |
-| 1 | &lt;tr&gt;                                                            |
-|   |                                                                   |
-| 1 | &lt;td&gt;8&lt;/td&gt;                                                    |
-| 2 |                                                                   |
-|   | &lt;td&gt;Marco Belinelli&lt;/td&gt;                                      |
-| 1 |                                                                   |
-| 3 | &lt;td&gt;G&lt;/td&gt;                                                    |
-|   |                                                                   |
-| 1 | &lt;td&gt;6-5&lt;/td&gt;                                                  |
-| 4 |                                                                   |
-|   | &lt;td&gt;195&lt;/td&gt;                                                  |
-| 1 |                                                                   |
-| 5 | &lt;/tr&gt;                                                           |
-|   |                                                                   |
-| 1 | &lt;tr&gt;                                                            |
-| 6 |                                                                   |
-|   | &lt;td&gt;5&lt;/td&gt;                                                    |
-| 1 |                                                                   |
-| 7 | &lt;td&gt;Carlos Boozer&lt;/td&gt;                                        |
-|   |                                                                   |
-| 1 | &lt;td&gt;F&lt;/td&gt;                                                    |
-| 8 |                                                                   |
-|   | &lt;td&gt;6-9&lt;/td&gt;                                                  |
-| 1 |                                                                   |
-| 9 | &lt;td&gt;266&lt;/td&gt;                                                  |
-|   |                                                                   |
-| 2 | &lt;/tr&gt;                                                           |
-| 0 |                                                                   |
-|   | &#8230;                                                              |
-| 2 |                                                                   |
-| 1 | &lt;/tbody&gt;                                                        |
-|   |                                                                   |
-| 2 | &lt;/table&gt;                                                        |
-| 2 |                                                                   |
-|   |                                                                   |
-| 2 |                                                                   |
-| 3 |                                                                   |
-|   |                                                                   |
-| 2 |                                                                   |
-| 4 |                                                                   |
-|   |                                                                   |
-| 2 |                                                                   |
-| 5 |                                                                   |
-|   |                                                                   |
-| 2 |                                                                   |
-| 6 |                                                                   |
-|   |                                                                   |
-| 2 |                                                                   |
-| 7 |                                                                   |
-|   |                                                                   |
-| 2 |                                                                   |
-| 8 |                                                                   |
-|   |                                                                   |
-| 2 |                                                                   |
-| 9 |                                                                   |
+ 1  &lt;table&gt;                                                         
+                                                                      
+ 2  &lt;thead&gt;                                                         
+                                                                      
+ 3  &lt;tr&gt;                                                            
+                                                                      
+ 4  &lt;th&gt;Number&lt;/th&gt;                                               
+                                                                      
+ 5  &lt;th&gt;Player&lt;/th&gt;                                               
+                                                                      
+ 6  &lt;th&gt;Position&lt;/th&gt;                                             
+                                                                      
+ 7  &lt;th&gt;Height&lt;/th&gt;                                               
+                                                                      
+ 8  &lt;th&gt;Weight&lt;/th&gt;                                               
+                                                                      
+ 9  &lt;/tr&gt;                                                           
+                                                                      
+ 1  &lt;/thead&gt;                                                        
+ 0                                                                    
+    &lt;tbody&gt;                                                         
+ 1                                                                    
+ 1  &lt;tr&gt;                                                            
+                                                                      
+ 1  &lt;td&gt;8&lt;/td&gt;                                                    
+ 2                                                                    
+    &lt;td&gt;Marco Belinelli&lt;/td&gt;                                      
+ 1                                                                    
+ 3  &lt;td&gt;G&lt;/td&gt;                                                    
+                                                                      
+ 1  &lt;td&gt;6-5&lt;/td&gt;                                                  
+ 4                                                                    
+    &lt;td&gt;195&lt;/td&gt;                                                  
+ 1                                                                    
+ 5  &lt;/tr&gt;                                                           
+                                                                      
+ 1  &lt;tr&gt;                                                            
+ 6                                                                    
+    &lt;td&gt;5&lt;/td&gt;                                                    
+ 1                                                                    
+ 7  &lt;td&gt;Carlos Boozer&lt;/td&gt;                                        
+                                                                      
+ 1  &lt;td&gt;F&lt;/td&gt;                                                    
+ 8                                                                    
+    &lt;td&gt;6-9&lt;/td&gt;                                                  
+ 1                                                                    
+ 9  &lt;td&gt;266&lt;/td&gt;                                                  
+                                                                      
+ 2  &lt;/tr&gt;                                                           
+ 0                                                                    
+    &#8230;                                                              
+ 2                                                                    
+ 1  &lt;/tbody&gt;                                                        
+                                                                      
+ 2  &lt;/table&gt;                                                        
+ 2                                                                    
+                                                                      
+ 2                                                                    
+ 3                                                                    
+                                                                      
+ 2                                                                    
+ 4                                                                    
+                                                                      
+ 2                                                                    
+ 5                                                                    
+                                                                      
+ 2                                                                    
+ 6                                                                    
+                                                                      
+ 2                                                                    
+ 7                                                                    
+                                                                      
+ 2                                                                    
+ 8                                                                    
+                                                                      
+ 2                                                                    
+ 9                                                                    
 +===+===================================================================+
 +---+-------------------------------------------------------------------+
 
 **CSS**
 
 +---+-------------------------------------------------------------------+
-| 1 | table {                                                           |
-|   |                                                                   |
-| 2 | border-collapse: separate;                                        |
-|   |                                                                   |
-| 3 | border-spacing: 0;                                                |
-|   |                                                                   |
-| 4 | width: 100%;                                                      |
-|   |                                                                   |
-| 5 | }                                                                 |
-|   |                                                                   |
-| 6 | th,                                                               |
-|   |                                                                   |
-| 7 | td {                                                              |
-|   |                                                                   |
-| 8 | padding: 6px 15px;                                                |
-|   |                                                                   |
-| 9 | }                                                                 |
-|   |                                                                   |
-| 1 | th {                                                              |
-| 0 |                                                                   |
-|   | background: #42444e;                                              |
-| 1 |                                                                   |
-| 1 | color: #fff;                                                      |
-|   |                                                                   |
-| 1 | text-align: left;                                                 |
-| 2 |                                                                   |
-|   | }                                                                 |
-| 1 |                                                                   |
-| 3 | tr:first-child th:first-child {                                   |
-|   |                                                                   |
-| 1 | border-top-left-radius: 6px;                                      |
-| 4 |                                                                   |
-|   | }                                                                 |
-| 1 |                                                                   |
-| 5 | tr:first-child th:last-child {                                    |
-|   |                                                                   |
-| 1 | border-top-right-radius: 6px;                                     |
-| 6 |                                                                   |
-|   | }                                                                 |
-| 1 |                                                                   |
-| 7 | td {                                                              |
-|   |                                                                   |
-| 1 | border-right: 1px solid #c6c9cc;                                  |
-| 8 |                                                                   |
-|   | border-bottom: 1px solid #c6c9cc;                                 |
-| 1 |                                                                   |
-| 9 | }                                                                 |
-|   |                                                                   |
-| 2 | td:first-child {                                                  |
-| 0 |                                                                   |
-|   | border-left: 1px solid #c6c9cc;                                   |
-| 2 |                                                                   |
-| 1 | }                                                                 |
-|   |                                                                   |
-| 2 | tr:nth-child(even) td {                                           |
-| 2 |                                                                   |
-|   | background: #eaeaed;                                              |
-| 2 |                                                                   |
-| 3 | }                                                                 |
-|   |                                                                   |
-| 2 | tr:last-child td:first-child {                                    |
-| 4 |                                                                   |
-|   | border-bottom-left-radius: 6px;                                   |
-| 2 |                                                                   |
-| 5 | }                                                                 |
-|   |                                                                   |
-| 2 | tr:last-child td:last-child {                                     |
-| 6 |                                                                   |
-|   | border-bottom-right-radius: 6px;                                  |
-| 2 |                                                                   |
-| 7 | }                                                                 |
-|   |                                                                   |
-| 2 |                                                                   |
-| 8 |                                                                   |
-|   |                                                                   |
-| 2 |                                                                   |
-| 9 |                                                                   |
-|   |                                                                   |
-| 3 |                                                                   |
-| 0 |                                                                   |
-|   |                                                                   |
-| 3 |                                                                   |
-| 1 |                                                                   |
-|   |                                                                   |
-| 3 |                                                                   |
-| 2 |                                                                   |
-|   |                                                                   |
-| 3 |                                                                   |
-| 3 |                                                                   |
-|   |                                                                   |
-| 3 |                                                                   |
-| 4 |                                                                   |
-|   |                                                                   |
-| 3 |                                                                   |
-| 5 |                                                                   |
-|   |                                                                   |
-| 3 |                                                                   |
-| 6 |                                                                   |
-|   |                                                                   |
-| 3 |                                                                   |
-| 7 |                                                                   |
+ 1  table {                                                           
+                                                                      
+ 2  border-collapse: separate;                                        
+                                                                      
+ 3  border-spacing: 0;                                                
+                                                                      
+ 4  width: 100%;                                                      
+                                                                      
+ 5  }                                                                 
+                                                                      
+ 6  th,                                                               
+                                                                      
+ 7  td {                                                              
+                                                                      
+ 8  padding: 6px 15px;                                                
+                                                                      
+ 9  }                                                                 
+                                                                      
+ 1  th {                                                              
+ 0                                                                    
+    background: #42444e;                                              
+ 1                                                                    
+ 1  color: #fff;                                                      
+                                                                      
+ 1  text-align: left;                                                 
+ 2                                                                    
+    }                                                                 
+ 1                                                                    
+ 3  tr:first-child th:first-child {                                   
+                                                                      
+ 1  border-top-left-radius: 6px;                                      
+ 4                                                                    
+    }                                                                 
+ 1                                                                    
+ 5  tr:first-child th:last-child {                                    
+                                                                      
+ 1  border-top-right-radius: 6px;                                     
+ 6                                                                    
+    }                                                                 
+ 1                                                                    
+ 7  td {                                                              
+                                                                      
+ 1  border-right: 1px solid #c6c9cc;                                  
+ 8                                                                    
+    border-bottom: 1px solid #c6c9cc;                                 
+ 1                                                                    
+ 9  }                                                                 
+                                                                      
+ 2  td:first-child {                                                  
+ 0                                                                    
+    border-left: 1px solid #c6c9cc;                                   
+ 2                                                                    
+ 1  }                                                                 
+                                                                      
+ 2  tr:nth-child(even) td {                                           
+ 2                                                                    
+    background: #eaeaed;                                              
+ 2                                                                    
+ 3  }                                                                 
+                                                                      
+ 2  tr:last-child td:first-child {                                    
+ 4                                                                    
+    border-bottom-left-radius: 6px;                                   
+ 2                                                                    
+ 5  }                                                                 
+                                                                      
+ 2  tr:last-child td:last-child {                                     
+ 6                                                                    
+    border-bottom-right-radius: 6px;                                  
+ 2                                                                    
+ 7  }                                                                 
+                                                                      
+ 2                                                                    
+ 8                                                                    
+                                                                      
+ 2                                                                    
+ 9                                                                    
+                                                                      
+ 3                                                                    
+ 0                                                                    
+                                                                      
+ 3                                                                    
+ 1                                                                    
+                                                                      
+ 3                                                                    
+ 2                                                                    
+                                                                      
+ 3                                                                    
+ 3                                                                    
+                                                                      
+ 3                                                                    
+ 4                                                                    
+                                                                      
+ 3                                                                    
+ 5                                                                    
+                                                                      
+ 3                                                                    
+ 6                                                                    
+                                                                      
+ 3                                                                    
+ 7                                                                    
 +===+===================================================================+
 +---+-------------------------------------------------------------------+
 
@@ -3817,7 +3461,7 @@ Pseudo-elements
 
 Pseudo-elements are dynamic elements that don't exist in the document
 tree, and when used within selectors
-these [[pseudo-elements]{.underline}](http://coding.smashingmagazine.com/2009/08/17/taming-advanced-css-selectors/) allow
+these [pseudo-elements](http://coding.smashingmagazine.com/2009/08/17/taming-advanced-css-selectors/) allow
 unique parts of the page to be stylized. One important point to note,
 only one pseudo-element may be used within a selector at a given time.
 
@@ -3838,28 +3482,28 @@ pseudo-elements respectively.
 **CSS**
 
 +---+----------------------------------------------------------------------+
-| 1 | .alpha:first-letter,                                                 |
-|   |                                                                      |
-| 2 | .bravo:first-line {                                                  |
-|   |                                                                      |
-| 3 | color: #ff7b29;                                                      |
-|   |                                                                      |
-| 4 | font-size: 18px;                                                     |
-|   |                                                                      |
-| 5 | }                                                                    |
-|   |                                                                      |
-| 6 |                                                                      |
+ 1  .alpha:first-letter,                                                 
+                                                                         
+ 2  .bravo:first-line {                                                  
+                                                                         
+ 3  color: #ff7b29;                                                      
+                                                                         
+ 4  font-size: 18px;                                                     
+                                                                         
+ 5  }                                                                    
+                                                                         
+ 6                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 HTML
 
 +---+----------------------------------------------------------------------+
-| 1 | &lt;p class=&quot;alpha&quot;&gt;Lorem ipsum dolor&#8230;&lt;/p&gt;                     |
-|   |                                                                      |
-| 2 | &lt;p class=&quot;bravo&quot;&gt;Integer eget enim&#8230;&lt;/p&gt;                     |
-|   |                                                                      |
-| 3 |                                                                      |
+ 1  &lt;p class=&quot;alpha&quot;&gt;Lorem ipsum dolor&#8230;&lt;/p&gt;                     
+                                                                         
+ 2  &lt;p class=&quot;bravo&quot;&gt;Integer eget enim&#8230;&lt;/p&gt;                     
+                                                                         
+ 3                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -3887,28 +3531,28 @@ necessary should a browser not support these pseudo-elements.
 **CSS**
 
 +---+----------------------------------------------------------------------+
-| 1 | a:after {                                                            |
-|   |                                                                      |
-| 2 | color: #9799a7;                                                      |
-|   |                                                                      |
-| 3 | content: &quot; (&quot; attr(href) &quot;)&quot;;                                    |
-|   |                                                                      |
-| 4 | font-size: 11px;                                                     |
-|   |                                                                      |
-| 5 | }                                                                    |
-|   |                                                                      |
-| 6 |                                                                      |
+ 1  a:after {                                                            
+                                                                         
+ 2  color: #9799a7;                                                      
+                                                                         
+ 3  content: &quot; (&quot; attr(href) &quot;)&quot;;                                    
+                                                                         
+ 4  font-size: 11px;                                                     
+                                                                         
+ 5  }                                                                    
+                                                                         
+ 6                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **HTML**
 
 +---+----------------------------------------------------------------------+
-| 1 | &lt;a href=&quot;http://google.com/&quot;&gt;Search the Web&lt;/a&gt;                |
-|   |                                                                      |
-| 2 | &lt;a href=&quot;http://learn.shayhowe.com/&quot;&gt;Learn How to Build          |
-|   | Websites&lt;/a&gt;                                                       |
-| 3 |                                                                      |
+ 1  &lt;a href=&quot;http://google.com/&quot;&gt;Search the Web&lt;/a&gt;                
+                                                                         
+ 2  &lt;a href=&quot;http://learn.shayhowe.com/&quot;&gt;Learn How to Build          
+    Websites&lt;/a&gt;                                                       
+ 3                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -3939,19 +3583,19 @@ the ::-moz-selection Mozilla prefixed fragment pseudo-element has been
 added to ensure the best support for all browsers.
 
 +---+----------------------------------------------------------------------+
-| 1 | ::-moz-selection {                                                   |
-|   |                                                                      |
-| 2 | background: #ff7b29;                                                 |
-|   |                                                                      |
-| 3 | }                                                                    |
-|   |                                                                      |
-| 4 | ::selection {                                                        |
-|   |                                                                      |
-| 5 | background: #ff7b29;                                                 |
-|   |                                                                      |
-| 6 | }                                                                    |
-|   |                                                                      |
-| 7 |                                                                      |
+ 1  ::-moz-selection {                                                   
+                                                                         
+ 2  background: #ff7b29;                                                 
+                                                                         
+ 3  }                                                                    
+                                                                         
+ 4  ::selection {                                                        
+                                                                         
+ 5  background: #ff7b29;                                                 
+                                                                         
+ 6  }                                                                    
+                                                                         
+ 7                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -3962,125 +3606,125 @@ added to ensure the best support for all browsers.
 ### **HTML**
 
 +---+--------------------------------------------------------------------+
-| 1 | &lt;a class=&quot;arrow&quot; href=&quot;#&quot;&gt;Continue Reading&lt;/a&gt;             |
-|   |                                                                    |
-| 2 |                                                                    |
+ 1  &lt;a class=&quot;arrow&quot; href=&quot;#&quot;&gt;Continue Reading&lt;/a&gt;             
+                                                                       
+ 2                                                                     
 +===+====================================================================+
 +---+--------------------------------------------------------------------+
 
 **CSS**
 
 +---+-------------------------------------------------------------------+
-| 1 | .arrow {                                                          |
-|   |                                                                   |
-| 2 | background: #2db34a;                                              |
-|   |                                                                   |
-| 3 | color: #fff;                                                      |
-|   |                                                                   |
-| 4 | display: inline-block;                                            |
-|   |                                                                   |
-| 5 | height: 30px;                                                     |
-|   |                                                                   |
-| 6 | line-height: 30px;                                                |
-|   |                                                                   |
-| 7 | padding: 0 12px;                                                  |
-|   |                                                                   |
-| 8 | position: relative;                                               |
-|   |                                                                   |
-| 9 | text-decoration: none;                                            |
-|   |                                                                   |
-| 1 | }                                                                 |
-| 0 |                                                                   |
-|   | .arrow:before,                                                    |
-| 1 |                                                                   |
-| 1 | .arrow:after {                                                    |
-|   |                                                                   |
-| 1 | content: &quot;&quot;;                                                    |
-| 2 |                                                                   |
-|   | height: 0;                                                        |
-| 1 |                                                                   |
-| 3 | position: absolute;                                               |
-|   |                                                                   |
-| 1 | width: 0;                                                         |
-| 4 |                                                                   |
-|   | }                                                                 |
-| 1 |                                                                   |
-| 5 | .arrow:before {                                                   |
-|   |                                                                   |
-| 1 | border-bottom: 15px solid #2db34a;                                |
-| 6 |                                                                   |
-|   | border-left: 15px solid transparent;                              |
-| 1 |                                                                   |
-| 7 | border-top: 15px solid #2db34a;                                   |
-|   |                                                                   |
-| 1 | left: -15px;                                                      |
-| 8 |                                                                   |
-|   | }                                                                 |
-| 1 |                                                                   |
-| 9 | .arrow:after {                                                    |
-|   |                                                                   |
-| 2 | border-bottom: 15px solid transparent;                            |
-| 0 |                                                                   |
-|   | border-left: 15px solid #2db34a;                                  |
-| 2 |                                                                   |
-| 1 | border-top: 15px solid transparent;                               |
-|   |                                                                   |
-| 2 | right: -15px;                                                     |
-| 2 |                                                                   |
-|   | }                                                                 |
-| 2 |                                                                   |
-| 3 | .arrow:hover {                                                    |
-|   |                                                                   |
-| 2 | background: #ff7b29;                                              |
-| 4 |                                                                   |
-|   | }                                                                 |
-| 2 |                                                                   |
-| 5 | .arrow:hover:before {                                             |
-|   |                                                                   |
-| 2 | border-bottom: 15px solid #ff7b29;                                |
-| 6 |                                                                   |
-|   | border-top: 15px solid #ff7b29;                                   |
-| 2 |                                                                   |
-| 7 | }                                                                 |
-|   |                                                                   |
-| 2 | .arrow:hover:after {                                              |
-| 8 |                                                                   |
-|   | border-left: 15px solid #ff7b29;                                  |
-| 2 |                                                                   |
-| 9 | }                                                                 |
-|   |                                                                   |
-| 3 |                                                                   |
-| 0 |                                                                   |
-|   |                                                                   |
-| 3 |                                                                   |
-| 1 |                                                                   |
-|   |                                                                   |
-| 3 |                                                                   |
-| 2 |                                                                   |
-|   |                                                                   |
-| 3 |                                                                   |
-| 3 |                                                                   |
-|   |                                                                   |
-| 3 |                                                                   |
-| 4 |                                                                   |
-|   |                                                                   |
-| 3 |                                                                   |
-| 5 |                                                                   |
-|   |                                                                   |
-| 3 |                                                                   |
-| 6 |                                                                   |
-|   |                                                                   |
-| 3 |                                                                   |
-| 7 |                                                                   |
-|   |                                                                   |
-| 3 |                                                                   |
-| 8 |                                                                   |
-|   |                                                                   |
-| 3 |                                                                   |
-| 9 |                                                                   |
-|   |                                                                   |
-| 4 |                                                                   |
-| 0 |                                                                   |
+ 1  .arrow {                                                          
+                                                                      
+ 2  background: #2db34a;                                              
+                                                                      
+ 3  color: #fff;                                                      
+                                                                      
+ 4  display: inline-block;                                            
+                                                                      
+ 5  height: 30px;                                                     
+                                                                      
+ 6  line-height: 30px;                                                
+                                                                      
+ 7  padding: 0 12px;                                                  
+                                                                      
+ 8  position: relative;                                               
+                                                                      
+ 9  text-decoration: none;                                            
+                                                                      
+ 1  }                                                                 
+ 0                                                                    
+    .arrow:before,                                                    
+ 1                                                                    
+ 1  .arrow:after {                                                    
+                                                                      
+ 1  content: &quot;&quot;;                                                    
+ 2                                                                    
+    height: 0;                                                        
+ 1                                                                    
+ 3  position: absolute;                                               
+                                                                      
+ 1  width: 0;                                                         
+ 4                                                                    
+    }                                                                 
+ 1                                                                    
+ 5  .arrow:before {                                                   
+                                                                      
+ 1  border-bottom: 15px solid #2db34a;                                
+ 6                                                                    
+    border-left: 15px solid transparent;                              
+ 1                                                                    
+ 7  border-top: 15px solid #2db34a;                                   
+                                                                      
+ 1  left: -15px;                                                      
+ 8                                                                    
+    }                                                                 
+ 1                                                                    
+ 9  .arrow:after {                                                    
+                                                                      
+ 2  border-bottom: 15px solid transparent;                            
+ 0                                                                    
+    border-left: 15px solid #2db34a;                                  
+ 2                                                                    
+ 1  border-top: 15px solid transparent;                               
+                                                                      
+ 2  right: -15px;                                                     
+ 2                                                                    
+    }                                                                 
+ 2                                                                    
+ 3  .arrow:hover {                                                    
+                                                                      
+ 2  background: #ff7b29;                                              
+ 4                                                                    
+    }                                                                 
+ 2                                                                    
+ 5  .arrow:hover:before {                                             
+                                                                      
+ 2  border-bottom: 15px solid #ff7b29;                                
+ 6                                                                    
+    border-top: 15px solid #ff7b29;                                   
+ 2                                                                    
+ 7  }                                                                 
+                                                                      
+ 2  .arrow:hover:after {                                              
+ 8                                                                    
+    border-left: 15px solid #ff7b29;                                  
+ 2                                                                    
+ 9  }                                                                 
+                                                                      
+ 3                                                                    
+ 0                                                                    
+                                                                      
+ 3                                                                    
+ 1                                                                    
+                                                                      
+ 3                                                                    
+ 2                                                                    
+                                                                      
+ 3                                                                    
+ 3                                                                    
+                                                                      
+ 3                                                                    
+ 4                                                                    
+                                                                      
+ 3                                                                    
+ 5                                                                    
+                                                                      
+ 3                                                                    
+ 6                                                                    
+                                                                      
+ 3                                                                    
+ 7                                                                    
+                                                                      
+ 3                                                                    
+ 8                                                                    
+                                                                      
+ 3                                                                    
+ 9                                                                    
+                                                                      
+ 4                                                                    
+ 0                                                                    
 +===+===================================================================+
 +---+-------------------------------------------------------------------+
 
@@ -4313,9 +3957,9 @@ dividing it by the width of it's parent element. The result is the
 relative width of the target element.
 
 +---+----------------------------------------------------------------------+
-| 1 | target ÷ context = result                                            |
-|   |                                                                      |
-| 2 |                                                                      |
+ 1  target ÷ context = result                                            
+                                                                         
+ 2                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -4331,59 +3975,59 @@ following.
 **HTML**
 
 +---+----------------------------------------------------------------------+
-| 1 | &lt;div class=&quot;container&quot;&gt;                                          |
-|   |                                                                      |
-| 2 | &lt;section&gt;&#8230;&lt;/section&gt;                                          |
-|   |                                                                      |
-| 3 | &lt;aside&gt;&#8230;&lt;/aside&gt;                                              |
-|   |                                                                      |
-| 4 | &lt;/div&gt;                                                             |
-|   |                                                                      |
-| 5 |                                                                      |
+ 1  &lt;div class=&quot;container&quot;&gt;                                          
+                                                                         
+ 2  &lt;section&gt;&#8230;&lt;/section&gt;                                          
+                                                                         
+ 3  &lt;aside&gt;&#8230;&lt;/aside&gt;                                              
+                                                                         
+ 4  &lt;/div&gt;                                                             
+                                                                         
+ 5                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **CSS**
 
 +---+----------------------------------------------------------------------+
-| 1 | .container {                                                         |
-|   |                                                                      |
-| 2 | width: 538px;                                                        |
-|   |                                                                      |
-| 3 | }                                                                    |
-|   |                                                                      |
-| 4 | section,                                                             |
-|   |                                                                      |
-| 5 | aside {                                                              |
-|   |                                                                      |
-| 6 | margin: 10px;                                                        |
-|   |                                                                      |
-| 7 | }                                                                    |
-|   |                                                                      |
-| 8 | section {                                                            |
-|   |                                                                      |
-| 9 | float: left;                                                         |
-|   |                                                                      |
-| 1 | width: 340px;                                                        |
-| 0 |                                                                      |
-|   | }                                                                    |
-| 1 |                                                                      |
-| 1 | aside {                                                              |
-|   |                                                                      |
-| 1 | float: right;                                                        |
-| 2 |                                                                      |
-|   | width: 158px;                                                        |
-| 1 |                                                                      |
-| 3 | }                                                                    |
-|   |                                                                      |
-| 1 |                                                                      |
-| 4 |                                                                      |
-|   |                                                                      |
-| 1 |                                                                      |
-| 5 |                                                                      |
-|   |                                                                      |
-| 1 |                                                                      |
-| 6 |                                                                      |
+ 1  .container {                                                         
+                                                                         
+ 2  width: 538px;                                                        
+                                                                         
+ 3  }                                                                    
+                                                                         
+ 4  section,                                                             
+                                                                         
+ 5  aside {                                                              
+                                                                         
+ 6  margin: 10px;                                                        
+                                                                         
+ 7  }                                                                    
+                                                                         
+ 8  section {                                                            
+                                                                         
+ 9  float: left;                                                         
+                                                                         
+ 1  width: 340px;                                                        
+ 0                                                                       
+    }                                                                    
+ 1                                                                       
+ 1  aside {                                                              
+                                                                         
+ 1  float: right;                                                        
+ 2                                                                       
+    width: 158px;                                                        
+ 1                                                                       
+ 3  }                                                                    
+                                                                         
+ 1                                                                       
+ 4                                                                       
+                                                                         
+ 1                                                                       
+ 5                                                                       
+                                                                         
+ 1                                                                       
+ 6                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -4396,35 +4040,35 @@ how wide the parent container becomes, the section and aside margins and
 widths scale proportionally.
 
 +---+----------------------------------------------------------------------+
-| 1 | section,                                                             |
-|   |                                                                      |
-| 2 | aside {                                                              |
-|   |                                                                      |
-| 3 | margin: 1.858736059%; /&ast; 10px ÷ 538px = .018587361 &ast;/              |
-|   |                                                                      |
-| 4 | }                                                                    |
-|   |                                                                      |
-| 5 | section {                                                            |
-|   |                                                                      |
-| 6 | float: left;                                                         |
-|   |                                                                      |
-| 7 | width: 63.197026%; /&ast; 340px ÷ 538px = .63197026 &ast;/                 |
-|   |                                                                      |
-| 8 | }                                                                    |
-|   |                                                                      |
-| 9 | aside {                                                              |
-|   |                                                                      |
-| 1 | float: right;                                                        |
-| 0 |                                                                      |
-|   | width: 29.3680297%; /&ast; 158px ÷ 538px = .293680297 &ast;/               |
-| 1 |                                                                      |
-| 1 | }                                                                    |
-|   |                                                                      |
-| 1 |                                                                      |
-| 2 |                                                                      |
-|   |                                                                      |
-| 1 |                                                                      |
-| 3 |                                                                      |
+ 1  section,                                                             
+                                                                         
+ 2  aside {                                                              
+                                                                         
+ 3  margin: 1.858736059%; /&ast; 10px ÷ 538px = .018587361 &ast;/              
+                                                                         
+ 4  }                                                                    
+                                                                         
+ 5  section {                                                            
+                                                                         
+ 6  float: left;                                                         
+                                                                         
+ 7  width: 63.197026%; /&ast; 340px ÷ 538px = .63197026 &ast;/                 
+                                                                         
+ 8  }                                                                    
+                                                                         
+ 9  aside {                                                              
+                                                                         
+ 1  float: right;                                                        
+ 0                                                                       
+    width: 29.3680297%; /&ast; 158px ÷ 538px = .293680297 &ast;/               
+ 1                                                                       
+ 1  }                                                                    
+                                                                         
+ 1                                                                       
+ 2                                                                       
+                                                                         
+ 1                                                                       
+ 3                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -4465,28 +4109,28 @@ additional HTTP requests.
 **HTML**
 
 +---+----------------------------------------------------------------------+
-| 1 | &lt;!&#45;&#45; Separate CSS File &#45;&#45;&gt;                                       |
-|   |                                                                      |
-| 2 | &lt;link href=&quot;styles.css&quot; rel=&quot;stylesheet&quot; media=&quot;all and        |
-|   | (max-width: 1024px)&quot;&gt;                                              |
-| 3 |                                                                      |
+ 1  &lt;!&#45;&#45; Separate CSS File &#45;&#45;&gt;                                       
+                                                                         
+ 2  &lt;link href=&quot;styles.css&quot; rel=&quot;stylesheet&quot; media=&quot;all and        
+    (max-width: 1024px)&quot;&gt;                                              
+ 3                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **CSS**
 
 +---+----------------------------------------------------------------------+
-| 1 | /&ast; &#0064;media Rule &ast;/                                                 |
-|   |                                                                      |
-| 2 | &#0064;media all and (max-width: 1024px) {&#8230;}                           |
-|   |                                                                      |
-| 3 | /&ast; &#0064;import Rule &ast;/                                                |
-|   |                                                                      |
-| 4 | &#0064;import url(styles.css) all and (max-width: 1024px) {&#8230;}          |
-|   |                                                                      |
-| 5 |                                                                      |
-|   |                                                                      |
-| 6 |                                                                      |
+ 1  /&ast; &#0064;media Rule &ast;/                                                 
+                                                                         
+ 2  &#0064;media all and (max-width: 1024px) {&#8230;}                           
+                                                                         
+ 3  /&ast; &#0064;import Rule &ast;/                                                
+                                                                         
+ 4  &#0064;import url(styles.css) all and (max-width: 1024px) {&#8230;}          
+                                                                         
+ 5                                                                       
+                                                                         
+ 6                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -4515,9 +4159,9 @@ comma separated, acting as an unspoken or operator. The example below
 selects all media types between 800 and 1024 pixels wide.
 
 +---+----------------------------------------------------------------------+
-| 1 | &#0064;media all and (min-width: 800px) and (max-width: 1024px) {&#8230;}    |
-|   |                                                                      |
-| 2 |                                                                      |
+ 1  &#0064;media all and (min-width: 800px) and (max-width: 1024px) {&#8230;}    
+                                                                         
+ 2                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -4527,9 +4171,9 @@ device that does not have a color screen. Black and white or monochrome
 screens would apply here for example.
 
 +---+----------------------------------------------------------------------+
-| 1 | &#0064;media not screen and (color) {&#8230;}                                |
-|   |                                                                      |
-| 2 |                                                                      |
+ 1  &#0064;media not screen and (color) {&#8230;}                                
+                                                                         
+ 2                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -4540,9 +4184,9 @@ expression selects only screens in a portrait orientation that have a
 user agent capable of rending media queries.
 
 +---+----------------------------------------------------------------------+
-| 1 | &#0064;media only screen and (orientation: portrait) {&#8230;}               |
-|   |                                                                      |
-| 2 |                                                                      |
+ 1  &#0064;media only screen and (orientation: portrait) {&#8230;}               
+                                                                         
+ 2                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -4572,9 +4216,9 @@ these height and width media features may be any length unit, relative
 or absolute.
 
 +---+----------------------------------------------------------------------+
-| 1 | &#0064;media all and (min-width: 320px) and (max-width: 780px) {&#8230;}     |
-|   |                                                                      |
-| 2 |                                                                      |
+ 1  &#0064;media all and (min-width: 320px) and (max-width: 780px) {&#8230;}     
+                                                                         
+ 2                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -4600,9 +4244,9 @@ triggered when the display is taller than wider. This media feature
 plays a large part with mobile devices.
 
 +---+----------------------------------------------------------------------+
-| 1 | &#0064;media all and (orientation: landscape) {&#8230;}                      |
-|   |                                                                      |
-| 2 |                                                                      |
+ 1  &#0064;media all and (orientation: landscape) {&#8230;}                      
+                                                                         
+ 2                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -4619,9 +4263,9 @@ separated by a forward slash. The first integer identifies the width in
 pixels while the second integer identifies the height in pixels.
 
 +---+----------------------------------------------------------------------+
-| 1 | &#0064;media all and (min-device-aspect-ratio: 16/9) {&#8230;}               |
-|   |                                                                      |
-| 2 |                                                                      |
+ 1  &#0064;media all and (min-device-aspect-ratio: 16/9) {&#8230;}               
+                                                                         
+ 2                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -4635,9 +4279,9 @@ definition devices, including retina displays. Media queries for doing
 so look like the following.
 
 +---+-------------------------------------------------------------------+
-| 1 | &#0064;media only screen and (-webkit-min-device-pixel-ratio: 1.3),    |
-|   | only screen and (min-device-pixel-ratio: 1.3) {&#8230;}              |
-| 2 |                                                                   |
+ 1  &#0064;media only screen and (-webkit-min-device-pixel-ratio: 1.3),    
+    only screen and (min-device-pixel-ratio: 1.3) {&#8230;}              
+ 2                                                                    
 +===+===================================================================+
 +---+-------------------------------------------------------------------+
 
@@ -4651,9 +4295,9 @@ Additionally, the resolution media feature will accept dots per pixel
 resolution values.
 
 +---+----------------------------------------------------------------------+
-| 1 | &#0064;media print and (min-resolution: 300dpi) {&#8230;}                    |
-|   |                                                                      |
-| 2 |                                                                      |
+ 1  &#0064;media print and (min-resolution: 300dpi) {&#8230;}                    
+                                                                         
+ 2                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -4691,19 +4335,19 @@ by turning off the floats and changing the widths of
 the section and aside.
 
 +---+----------------------------------------------------------------------+
-| 1 | &#0064;media all and (max-width: 420px) {                                 |
-|   |                                                                      |
-| 2 | section, aside {                                                     |
-|   |                                                                      |
-| 3 | float: none;                                                         |
-|   |                                                                      |
-| 4 | width: auto;                                                         |
-|   |                                                                      |
-| 5 | }                                                                    |
-|   |                                                                      |
-| 6 | }                                                                    |
-|   |                                                                      |
-| 7 |                                                                      |
+ 1  &#0064;media all and (max-width: 420px) {                                 
+                                                                         
+ 2  section, aside {                                                     
+                                                                         
+ 3  float: none;                                                         
+                                                                         
+ 4  width: auto;                                                         
+                                                                         
+ 5  }                                                                    
+                                                                         
+ 6  }                                                                    
+                                                                         
+ 7                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -4761,17 +4405,17 @@ A breakout of mobile first media queries might look abit like the
 following.
 
 +---+----------------------------------------------------------------------+
-| 1 | /&ast; Default styles first then media queries &ast;/                      |
-|   |                                                                      |
-| 2 | &#0064;media screen and (min-width: 400px) {&#8230;}                         |
-|   |                                                                      |
-| 3 | &#0064;media screen and (min-width: 600px) {&#8230;}                         |
-|   |                                                                      |
-| 4 | &#0064;media screen and (min-width: 1000px) {&#8230;}                        |
-|   |                                                                      |
-| 5 | &#0064;media screen and (min-width: 1400px) {&#8230;}                        |
-|   |                                                                      |
-| 6 |                                                                      |
+ 1  /&ast; Default styles first then media queries &ast;/                      
+                                                                         
+ 2  &#0064;media screen and (min-width: 400px) {&#8230;}                         
+                                                                         
+ 3  &#0064;media screen and (min-width: 600px) {&#8230;}                         
+                                                                         
+ 4  &#0064;media screen and (min-width: 1000px) {&#8230;}                        
+                                                                         
+ 5  &#0064;media screen and (min-width: 1400px) {&#8230;}                        
+                                                                         
+ 6                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -4782,29 +4426,29 @@ idea either. When used excessively, they cause heavy loading and can
 even reduce a device's battery life.
 
 +---+----------------------------------------------------------------------+
-| 1 | /&ast; Default media &ast;/                                                |
-|   |                                                                      |
-| 2 | body {                                                               |
-|   |                                                                      |
-| 3 | background: #ddd;                                                    |
-|   |                                                                      |
-| 4 | }                                                                    |
-|   |                                                                      |
-| 5 | /&ast; Media for larger devices &ast;/                                     |
-|   |                                                                      |
-| 6 | &#0064;media screen and (min-width: 800px) {                              |
-|   |                                                                      |
-| 7 | body {                                                               |
-|   |                                                                      |
-| 8 | background-image: url(&quot;bg.png&quot;) 50% 50% no-repeat;                 |
-|   |                                                                      |
-| 9 | }                                                                    |
-|   |                                                                      |
-| 1 | }                                                                    |
-| 0 |                                                                      |
-|   |                                                                      |
-| 1 |                                                                      |
-| 1 |                                                                      |
+ 1  /&ast; Default media &ast;/                                                
+                                                                         
+ 2  body {                                                               
+                                                                         
+ 3  background: #ddd;                                                    
+                                                                         
+ 4  }                                                                    
+                                                                         
+ 5  /&ast; Media for larger devices &ast;/                                     
+                                                                         
+ 6  &#0064;media screen and (min-width: 800px) {                              
+                                                                         
+ 7  body {                                                               
+                                                                         
+ 8  background-image: url(&quot;bg.png&quot;) 50% 50% no-repeat;                 
+                                                                         
+ 9  }                                                                    
+                                                                         
+ 1  }                                                                    
+ 0                                                                       
+                                                                         
+ 1                                                                       
+ 1                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -4817,50 +4461,50 @@ adding media queries to adjust for viewports over 420 pixels wide we
 build the following:
 
 +---+----------------------------------------------------------------------+
-| 1 | section,                                                             |
-|   |                                                                      |
-| 2 | aside {                                                              |
-|   |                                                                      |
-| 3 | margin: 1.858736059%;                                                |
-|   |                                                                      |
-| 4 | }                                                                    |
-|   |                                                                      |
-| 5 | &#0064;media all and (min-width: 420px) {                                 |
-|   |                                                                      |
-| 6 | .container {                                                         |
-|   |                                                                      |
-| 7 | max-width: 538px;                                                    |
-|   |                                                                      |
-| 8 | }                                                                    |
-|   |                                                                      |
-| 9 | section {                                                            |
-|   |                                                                      |
-| 1 | float: left;                                                         |
-| 0 |                                                                      |
-|   | width: 63.197026%;                                                   |
-| 1 |                                                                      |
-| 1 | }                                                                    |
-|   |                                                                      |
-| 1 | aside {                                                              |
-| 2 |                                                                      |
-|   | float: right;                                                        |
-| 1 |                                                                      |
-| 3 | width: 29.3680297%;                                                  |
-|   |                                                                      |
-| 1 | }                                                                    |
-| 4 |                                                                      |
-|   | }                                                                    |
-| 1 |                                                                      |
-| 5 |                                                                      |
-|   |                                                                      |
-| 1 |                                                                      |
-| 6 |                                                                      |
-|   |                                                                      |
-| 1 |                                                                      |
-| 7 |                                                                      |
-|   |                                                                      |
-| 1 |                                                                      |
-| 8 |                                                                      |
+ 1  section,                                                             
+                                                                         
+ 2  aside {                                                              
+                                                                         
+ 3  margin: 1.858736059%;                                                
+                                                                         
+ 4  }                                                                    
+                                                                         
+ 5  &#0064;media all and (min-width: 420px) {                                 
+                                                                         
+ 6  .container {                                                         
+                                                                         
+ 7  max-width: 538px;                                                    
+                                                                         
+ 8  }                                                                    
+                                                                         
+ 9  section {                                                            
+                                                                         
+ 1  float: left;                                                         
+ 0                                                                       
+    width: 63.197026%;                                                   
+ 1                                                                       
+ 1  }                                                                    
+                                                                         
+ 1  aside {                                                              
+ 2                                                                       
+    float: right;                                                        
+ 1                                                                       
+ 3  width: 29.3680297%;                                                  
+                                                                         
+ 1  }                                                                    
+ 4                                                                       
+    }                                                                    
+ 1                                                                       
+ 5                                                                       
+                                                                         
+ 1                                                                       
+ 6                                                                       
+                                                                         
+ 1                                                                       
+ 7                                                                       
+                                                                         
+ 1                                                                       
+ 8                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -4902,9 +4546,9 @@ you use the device defaults by applying
 the device-height and device-width values.
 
 +---+----------------------------------------------------------------------+
-| 1 | &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot;&gt;            |
-|   |                                                                      |
-| 2 |                                                                      |
+ 1  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot;&gt;            
+                                                                         
+ 2                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -4930,9 +4574,9 @@ the ratio between the device width and the viewport size. Values
 for initial-scale should always be a positive integer between 0 and 10.
 
 +---+----------------------------------------------------------------------+
-| 1 | &lt;meta name=&quot;viewport&quot; content=&quot;initial-scale=2&quot;&gt;               |
-|   |                                                                      |
-| 2 |                                                                      |
+ 1  &lt;meta name=&quot;viewport&quot; content=&quot;initial-scale=2&quot;&gt;               
+                                                                         
+ 2                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -4952,9 +4596,9 @@ integer greater than or equal to the initial-scale. Values for both of
 these must also be between 0 and 10.
 
 +---+----------------------------------------------------------------------+
-| 1 | &lt;meta name=&quot;viewport&quot; content=&quot;minimum-scale=0&quot;&gt;               |
-|   |                                                                      |
-| 2 |                                                                      |
+ 1  &lt;meta name=&quot;viewport&quot; content=&quot;minimum-scale=0&quot;&gt;               
+                                                                         
+ 2                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -4969,9 +4613,9 @@ accessibility and usability, preventing those with disabilities from
 viewing a website as desired.
 
 +---+----------------------------------------------------------------------+
-| 1 | &lt;meta name=&quot;viewport&quot; content=&quot;user-scalable=yes&quot;&gt;             |
-|   |                                                                      |
-| 2 |                                                                      |
+ 1  &lt;meta name=&quot;viewport&quot; content=&quot;user-scalable=yes&quot;&gt;             
+                                                                         
+ 2                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -4989,9 +4633,9 @@ Using the target-densitydpi viewport value is rare, but extremely
 helpful when pixel by pixel control is needed.
 
 +---+----------------------------------------------------------------------+
-| 1 | &lt;meta name=&quot;viewport&quot; content=&quot;target-densitydpi=device-dpi&quot;&gt;  |
-|   |                                                                      |
-| 2 |                                                                      |
+ 1  &lt;meta name=&quot;viewport&quot; content=&quot;target-densitydpi=device-dpi&quot;&gt;  
+                                                                         
+ 2                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -5004,9 +4648,9 @@ the content attribute value. One of the recommended viewport values is
 outlined below, using both the width and initial-scale properties.
 
 +---+----------------------------------------------------------------------+
-| 1 | &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,               |
-|   | initial-scale=1&quot;&gt;                                                  |
-| 2 |                                                                      |
+ 1  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,               
+    initial-scale=1&quot;&gt;                                                  
+ 2                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -5032,15 +4676,15 @@ recommended viewport meta tag would look like the
 following @viewport rule in CSS.
 
 +---+--------------------------------------------------------------------+
-| 1 | &#0064;viewport {                                                       |
-|   |                                                                    |
-| 2 | width: device-width;                                               |
-|   |                                                                    |
-| 3 | zoom: 1;                                                           |
-|   |                                                                    |
-| 4 | }                                                                  |
-|   |                                                                    |
-| 5 |                                                                    |
+ 1  &#0064;viewport {                                                       
+                                                                       
+ 2  width: device-width;                                               
+                                                                       
+ 3  zoom: 1;                                                           
+                                                                       
+ 4  }                                                                  
+                                                                       
+ 5                                                                     
 +===+====================================================================+
 +---+--------------------------------------------------------------------+
 
@@ -5056,13 +4700,13 @@ with a value of 100%. Doing so ensures that as the viewport gets smaller
 any media will scale down according to its containers width.
 
 +---+----------------------------------------------------------------------+
-| 1 | img, video, canvas {                                                 |
-|   |                                                                      |
-| 2 | max-width: 100%;                                                     |
-|   |                                                                      |
-| 3 | }                                                                    |
-|   |                                                                      |
-| 4 |                                                                      |
+ 1  img, video, canvas {                                                 
+                                                                         
+ 2  max-width: 100%;                                                     
+                                                                         
+ 3  }                                                                    
+                                                                         
+ 4                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -5094,51 +4738,51 @@ treating the parent element as an absolutely positioned element.
 **HTML**
 
 +---+----------------------------------------------------------------------+
-| 1 | &lt;figure&gt;                                                           |
-|   |                                                                      |
-| 2 | &lt;iframe                                                             |
-|   | src=&quot;https://www.youtube.com/embed/Sv3xVOs7_No&quot;&gt;&lt;/iframe&gt;       |
-| 3 |                                                                      |
-|   | &lt;/figure&gt;                                                          |
-| 4 |                                                                      |
+ 1  &lt;figure&gt;                                                           
+                                                                         
+ 2  &lt;iframe                                                             
+    src=&quot;https://www.youtube.com/embed/Sv3xVOs7_No&quot;&gt;&lt;/iframe&gt;       
+ 3                                                                       
+    &lt;/figure&gt;                                                          
+ 4                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **CSS**
 
 +---+----------------------------------------------------------------------+
-| 1 | figure {                                                             |
-|   |                                                                      |
-| 2 | height: 0;                                                           |
-|   |                                                                      |
-| 3 | padding-bottom: 56.25%; /&ast; 16:9 &ast;/                                 |
-|   |                                                                      |
-| 4 | position: relative;                                                  |
-|   |                                                                      |
-| 5 | width: 100%;                                                         |
-|   |                                                                      |
-| 6 | }                                                                    |
-|   |                                                                      |
-| 7 | iframe {                                                             |
-|   |                                                                      |
-| 8 | height: 100%;                                                        |
-|   |                                                                      |
-| 9 | left: 0;                                                             |
-|   |                                                                      |
-| 1 | position: absolute;                                                  |
-| 0 |                                                                      |
-|   | top: 0;                                                              |
-| 1 |                                                                      |
-| 1 | width: 100%;                                                         |
-|   |                                                                      |
-| 1 | }                                                                    |
-| 2 |                                                                      |
-|   |                                                                      |
-| 1 |                                                                      |
-| 3 |                                                                      |
-|   |                                                                      |
-| 1 |                                                                      |
-| 4 |                                                                      |
+ 1  figure {                                                             
+                                                                         
+ 2  height: 0;                                                           
+                                                                         
+ 3  padding-bottom: 56.25%; /&ast; 16:9 &ast;/                                 
+                                                                         
+ 4  position: relative;                                                  
+                                                                         
+ 5  width: 100%;                                                         
+                                                                         
+ 6  }                                                                    
+                                                                         
+ 7  iframe {                                                             
+                                                                         
+ 8  height: 100%;                                                        
+                                                                         
+ 9  left: 0;                                                             
+                                                                         
+ 1  position: absolute;                                                  
+ 0                                                                       
+    top: 0;                                                              
+ 1                                                                       
+ 1  width: 100%;                                                         
+                                                                         
+ 1  }                                                                    
+ 2                                                                       
+                                                                         
+ 1                                                                       
+ 3                                                                       
+                                                                         
+ 1                                                                       
+ 4                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -5243,9 +4887,9 @@ haml command needs to be run from the command line, using Terminal or
 the alike command line program, to install Haml.
 
 +---+----------------------------------------------------------------------+
-| 1 | gem install haml                                                     |
-|   |                                                                      |
-| 2 |                                                                      |
+ 1  gem install haml                                                     
+                                                                         
+ 2                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -5254,9 +4898,9 @@ of .haml. To then convert these files from Haml to HTML the haml command
 below needs to be run to compile each individual file.
 
 +---+----------------------------------------------------------------------+
-| 1 | haml index.haml index.html                                           |
-|   |                                                                      |
-| 2 |                                                                      |
+ 1  haml index.haml index.html                                           
+                                                                         
+ 2                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -5296,18 +4940,18 @@ passed in after the exclamation points, !!! 5.
 **Haml**
 
 +---+----------------------------------------------------------------------+
-| 1 | !!! 5                                                                |
-|   |                                                                      |
-| 2 |                                                                      |
+ 1  !!! 5                                                                
+                                                                         
+ 2                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **Compiled HTML**
 
 +---+----------------------------------------------------------------------+
-| 1 | &lt;!DOCTYPE html&gt;                                                    |
-|   |                                                                      |
-| 2 |                                                                      |
+ 1  &lt;!DOCTYPE html&gt;                                                    
+                                                                         
+ 2                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -5332,40 +4976,40 @@ struggle.
 **Haml**
 
 +---+----------------------------------------------------------------------+
-| 1 | %body                                                                |
-|   |                                                                      |
-| 2 | %header                                                              |
-|   |                                                                      |
-| 3 | %h1 Hello World                                                      |
-|   |                                                                      |
-| 4 | %section                                                             |
-|   |                                                                      |
-| 5 | %p Lorem ipsum dolor sit amet.                                       |
-|   |                                                                      |
-| 6 |                                                                      |
+ 1  %body                                                                
+                                                                         
+ 2  %header                                                              
+                                                                         
+ 3  %h1 Hello World                                                      
+                                                                         
+ 4  %section                                                             
+                                                                         
+ 5  %p Lorem ipsum dolor sit amet.                                       
+                                                                         
+ 6                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **Compiled HTML**
 
 +---+----------------------------------------------------------------------+
-| 1 | &lt;body&gt;                                                             |
-|   |                                                                      |
-| 2 | &lt;header&gt;                                                           |
-|   |                                                                      |
-| 3 | &lt;h1&gt;Hello World&lt;/h1&gt;                                             |
-|   |                                                                      |
-| 4 | &lt;/header&gt;                                                          |
-|   |                                                                      |
-| 5 | &lt;section&gt;                                                          |
-|   |                                                                      |
-| 6 | &lt;p&gt;Lorem ipsum dolor sit amet.&lt;/p&gt;                               |
-|   |                                                                      |
-| 7 | &lt;/section&gt;                                                         |
-|   |                                                                      |
-| 8 | &lt;/body&gt;                                                            |
-|   |                                                                      |
-| 9 |                                                                      |
+ 1  &lt;body&gt;                                                             
+                                                                         
+ 2  &lt;header&gt;                                                           
+                                                                         
+ 3  &lt;h1&gt;Hello World&lt;/h1&gt;                                             
+                                                                         
+ 4  &lt;/header&gt;                                                          
+                                                                         
+ 5  &lt;section&gt;                                                          
+                                                                         
+ 6  &lt;p&gt;Lorem ipsum dolor sit amet.&lt;/p&gt;                               
+                                                                         
+ 7  &lt;/section&gt;                                                         
+                                                                         
+ 8  &lt;/body&gt;                                                            
+                                                                         
+ 9                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -5377,21 +5021,21 @@ the declared element and nested below it, it has to be either or. The
 example from above could be rewritten as the following:
 
 +---+--------------------------------------------------------------------+
-| 1 | %body                                                              |
-|   |                                                                    |
-| 2 | %header                                                            |
-|   |                                                                    |
-| 3 | %h1                                                                |
-|   |                                                                    |
-| 4 | Hello World                                                        |
-|   |                                                                    |
-| 5 | %section                                                           |
-|   |                                                                    |
-| 6 | %p                                                                 |
-|   |                                                                    |
-| 7 | Lorem ipsum dolor sit amet.                                        |
-|   |                                                                    |
-| 8 |                                                                    |
+ 1  %body                                                              
+                                                                       
+ 2  %header                                                            
+                                                                       
+ 3  %h1                                                                
+                                                                       
+ 4  Hello World                                                        
+                                                                       
+ 5  %section                                                           
+                                                                       
+ 6  %p                                                                 
+                                                                       
+ 7  Lorem ipsum dolor sit amet.                                        
+                                                                       
+ 8                                                                     
 +===+====================================================================+
 +---+--------------------------------------------------------------------+
 
@@ -5406,22 +5050,22 @@ style attributes will use standard HTML syntax inside of ().
 **Haml**
 
 +---+----------------------------------------------------------------------+
-| 1 | %img{:src =&gt; &quot;shay.jpg&quot;, :alt =&gt; &quot;Shay Howe&quot;}                  |
-|   |                                                                      |
-| 2 | %img{src: &quot;shay.jpg&quot;, alt: &quot;Shay Howe&quot;}                          |
-|   |                                                                      |
-| 3 | %img(src=&quot;shay.jpg&quot; alt=&quot;Shay Howe&quot;)                             |
-|   |                                                                      |
-| 4 |                                                                      |
+ 1  %img{:src =&gt; &quot;shay.jpg&quot;, :alt =&gt; &quot;Shay Howe&quot;}                  
+                                                                         
+ 2  %img{src: &quot;shay.jpg&quot;, alt: &quot;Shay Howe&quot;}                          
+                                                                         
+ 3  %img(src=&quot;shay.jpg&quot; alt=&quot;Shay Howe&quot;)                             
+                                                                         
+ 4                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **Compiled HTML**
 
 +---+----------------------------------------------------------------------+
-| 1 | &lt;img src=&quot;shay.jpg&quot; alt=&quot;Shay Howe&quot;&gt;                           |
-|   |                                                                      |
-| 2 |                                                                      |
+ 1  &lt;img src=&quot;shay.jpg&quot; alt=&quot;Shay Howe&quot;&gt;                           
+                                                                         
+ 2                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -5442,30 +5086,30 @@ outlined formats.
 ### **Haml**
 
 +---+----------------------------------------------------------------------+
-| 1 | %section.feature                                                     |
-|   |                                                                      |
-| 2 | %section.feature.special                                             |
-|   |                                                                      |
-| 3 | %section#hello                                                       |
-|   |                                                                      |
-| 4 | %section#hello.feature(role=&quot;region&quot;)                              |
-|   |                                                                      |
-| 5 |                                                                      |
+ 1  %section.feature                                                     
+                                                                         
+ 2  %section.feature.special                                             
+                                                                         
+ 3  %section#hello                                                       
+                                                                         
+ 4  %section#hello.feature(role=&quot;region&quot;)                              
+                                                                         
+ 5                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **Compiled HTML**
 
 +---+----------------------------------------------------------------------+
-| 1 | &lt;section class=&quot;feature&quot;&gt;&lt;/section&gt;                            |
-|   |                                                                      |
-| 2 | &lt;section class=&quot;feature special&quot;&gt;&lt;/section&gt;                    |
-|   |                                                                      |
-| 3 | &lt;section id=&quot;hello&quot;&gt;&lt;/section&gt;                                 |
-|   |                                                                      |
-| 4 | &lt;section class=&quot;feature&quot; id=&quot;hello&quot;                             |
-|   | role=&quot;region&quot;&gt;&lt;/section&gt;                                        |
-| 5 |                                                                      |
+ 1  &lt;section class=&quot;feature&quot;&gt;&lt;/section&gt;                            
+                                                                         
+ 2  &lt;section class=&quot;feature special&quot;&gt;&lt;/section&gt;                    
+                                                                         
+ 3  &lt;section id=&quot;hello&quot;&gt;&lt;/section&gt;                                 
+                                                                         
+ 4  &lt;section class=&quot;feature&quot; id=&quot;hello&quot;                             
+    role=&quot;region&quot;&gt;&lt;/section&gt;                                        
+ 5                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -5478,26 +5122,26 @@ identified with a . and IDs are to be identified with a #.
 **Haml**
 
 +---+----------------------------------------------------------------------+
-| 1 | .awesome                                                             |
-|   |                                                                      |
-| 2 | .awesome.lesson                                                      |
-|   |                                                                      |
-| 3 | #getting-started.lesson                                              |
-|   |                                                                      |
-| 4 |                                                                      |
+ 1  .awesome                                                             
+                                                                         
+ 2  .awesome.lesson                                                      
+                                                                         
+ 3  #getting-started.lesson                                              
+                                                                         
+ 4                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **Compiled HTML**
 
 +---+----------------------------------------------------------------------+
-| 1 | &lt;div class=&quot;awesome&quot;&gt;&lt;/div&gt;                                    |
-|   |                                                                      |
-| 2 | &lt;div class=&quot;awesome lesson&quot;&gt;&lt;/div&gt;                             |
-|   |                                                                      |
-| 3 | &lt;div class=&quot;lesson&quot; id=&quot;getting-started&quot;&gt;&lt;/div&gt;              |
-|   |                                                                      |
-| 4 |                                                                      |
+ 1  &lt;div class=&quot;awesome&quot;&gt;&lt;/div&gt;                                    
+                                                                         
+ 2  &lt;div class=&quot;awesome lesson&quot;&gt;&lt;/div&gt;                             
+                                                                         
+ 3  &lt;div class=&quot;lesson&quot; id=&quot;getting-started&quot;&gt;&lt;/div&gt;              
+                                                                         
+ 4                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -5509,22 +5153,22 @@ HTML, all depending on the syntax being used.
 **Haml**
 
 +---+----------------------------------------------------------------------+
-| 1 | %input{:type =&gt; &quot;checkbox&quot;, :checked =&gt; true}                    |
-|   |                                                                      |
-| 2 | %input(type=&quot;checkbox&quot; checked=true)                               |
-|   |                                                                      |
-| 3 | %input(type=&quot;checkbox&quot; checked)                                    |
-|   |                                                                      |
-| 4 |                                                                      |
+ 1  %input{:type =&gt; &quot;checkbox&quot;, :checked =&gt; true}                    
+                                                                         
+ 2  %input(type=&quot;checkbox&quot; checked=true)                               
+                                                                         
+ 3  %input(type=&quot;checkbox&quot; checked)                                    
+                                                                         
+ 4                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **Compiled HTML**
 
 +---+----------------------------------------------------------------------+
-| 1 | &lt;input type=&quot;checkbox&quot; checked&gt;                                  |
-|   |                                                                      |
-| 2 |                                                                      |
+ 1  &lt;input type=&quot;checkbox&quot; checked&gt;                                  
+                                                                         
+ 2                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -5543,28 +5187,28 @@ execution.
 **Haml**
 
 +---+----------------------------------------------------------------------+
-| 1 | .author                                                              |
-|   |                                                                      |
-| 2 | = &#0064;author                                                           |
-|   |                                                                      |
-| 3 | \\= &#0064;author                                                         |
-|   |                                                                      |
-| 4 |                                                                      |
+ 1  .author                                                              
+                                                                         
+ 2  = &#0064;author                                                           
+                                                                         
+ 3  \\= &#0064;author                                                         
+                                                                         
+ 4                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **Compiled HTML**
 
 +---+----------------------------------------------------------------------+
-| 1 | &lt;div class=&quot;author&quot;&gt;                                             |
-|   |                                                                      |
-| 2 | Shay Howe                                                            |
-|   |                                                                      |
-| 3 | = &#0064;author                                                           |
-|   |                                                                      |
-| 4 | &lt;/div&gt;                                                             |
-|   |                                                                      |
-| 5 |                                                                      |
+ 1  &lt;div class=&quot;author&quot;&gt;                                             
+                                                                         
+ 2  Shay Howe                                                            
+                                                                         
+ 3  = &#0064;author                                                           
+                                                                         
+ 4  &lt;/div&gt;                                                             
+                                                                         
+ 5                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -5586,24 +5230,24 @@ outside of the anchor text.
 **Haml**
 
 +---+----------------------------------------------------------------------+
-| 1 | %p                                                                   |
-|   |                                                                      |
-| 2 | Shay is                                                              |
-|   |                                                                      |
-| 3 | = succeed &quot;.&quot; do                                                   |
-|   |                                                                      |
-| 4 | %a{:href =&gt; &quot;#&quot;} awesome                                          |
-|   |                                                                      |
-| 5 |                                                                      |
+ 1  %p                                                                   
+                                                                         
+ 2  Shay is                                                              
+                                                                         
+ 3  = succeed &quot;.&quot; do                                                   
+                                                                         
+ 4  %a{:href =&gt; &quot;#&quot;} awesome                                          
+                                                                         
+ 5                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **Compiled HTML**
 
 +---+----------------------------------------------------------------------+
-| 1 | &lt;p&gt;Shay is &lt;a href=&quot;#&quot;&gt;awesome&lt;/a&gt;.&lt;/p&gt;                    |
-|   |                                                                      |
-| 2 |                                                                      |
+ 1  &lt;p&gt;Shay is &lt;a href=&quot;#&quot;&gt;awesome&lt;/a&gt;.&lt;/p&gt;                    
+                                                                         
+ 2                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -5618,50 +5262,50 @@ code can be commented out by being nested underneath a forward slash.
 **Haml**
 
 +---+----------------------------------------------------------------------+
-| 1 | %div                                                                 |
-|   |                                                                      |
-| 2 | / Commented line                                                     |
-|   |                                                                      |
-| 3 | Actual line                                                          |
-|   |                                                                      |
-| 4 | /                                                                    |
-|   |                                                                      |
-| 5 | %div                                                                 |
-|   |                                                                      |
-| 6 | Commented block                                                      |
-|   |                                                                      |
-| 7 |                                                                      |
-|   |                                                                      |
-| 8 |                                                                      |
+ 1  %div                                                                 
+                                                                         
+ 2  / Commented line                                                     
+                                                                         
+ 3  Actual line                                                          
+                                                                         
+ 4  /                                                                    
+                                                                         
+ 5  %div                                                                 
+                                                                         
+ 6  Commented block                                                      
+                                                                         
+ 7                                                                       
+                                                                         
+ 8                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **Compiled HTML**
 
 +---+----------------------------------------------------------------------+
-| 1 | &lt;div&gt;                                                              |
-|   |                                                                      |
-| 2 | &lt;!&#45;&#45; Commented line &#45;&#45;&gt;                                          |
-|   |                                                                      |
-| 3 | Actual line                                                          |
-|   |                                                                      |
-| 4 | &lt;/div&gt;                                                             |
-|   |                                                                      |
-| 5 | &lt;!&#45;&#45;                                                               |
-|   |                                                                      |
-| 6 | &lt;div&gt;                                                              |
-|   |                                                                      |
-| 7 | Commented block                                                      |
-|   |                                                                      |
-| 8 | &lt;/div&gt;                                                             |
-|   |                                                                      |
-| 9 | &#45;&#45;&gt;                                                                |
-|   |                                                                      |
-| 1 |                                                                      |
-| 0 |                                                                      |
-|   |                                                                      |
-| 1 |                                                                      |
-| 1 |                                                                      |
+ 1  &lt;div&gt;                                                              
+                                                                         
+ 2  &lt;!&#45;&#45; Commented line &#45;&#45;&gt;                                          
+                                                                         
+ 3  Actual line                                                          
+                                                                         
+ 4  &lt;/div&gt;                                                             
+                                                                         
+ 5  &lt;!&#45;&#45;                                                               
+                                                                         
+ 6  &lt;div&gt;                                                              
+                                                                         
+ 7  Commented block                                                      
+                                                                         
+ 8  &lt;/div&gt;                                                             
+                                                                         
+ 9  &#45;&#45;&gt;                                                                
+                                                                         
+ 1                                                                       
+ 0                                                                       
+                                                                         
+ 1                                                                       
+ 1                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -5675,24 +5319,24 @@ slash.
 **Haml**
 
 +---+----------------------------------------------------------------------+
-| 1 | /&lbrack;if lt IE 9&rbrack;                                                      |
-|   |                                                                      |
-| 2 | %script{:src =&gt; &quot;html5shiv.js&quot;}                                   |
-|   |                                                                      |
-| 3 |                                                                      |
+ 1  /&lbrack;if lt IE 9&rbrack;                                                      
+                                                                         
+ 2  %script{:src =&gt; &quot;html5shiv.js&quot;}                                   
+                                                                         
+ 3                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **Compiled HTML**
 
 +---+----------------------------------------------------------------------+
-| 1 | &lt;!&#45;&#45;&lbrack;if lt IE 9&rbrack;&gt;                                               |
-|   |                                                                      |
-| 2 | &lt;script src=&quot;html5shiv.js&quot;&gt;&lt;/script&gt;                           |
-|   |                                                                      |
-| 3 | &lt;&#0033;[endif&rbrack;&#45;&#45;&gt;                                                    |
-|   |                                                                      |
-| 4 |                                                                      |
+ 1  &lt;!&#45;&#45;&lbrack;if lt IE 9&rbrack;&gt;                                               
+                                                                         
+ 2  &lt;script src=&quot;html5shiv.js&quot;&gt;&lt;/script&gt;                           
+                                                                         
+ 3  &lt;&#0033;[endif&rbrack;&#45;&#45;&gt;                                                    
+                                                                         
+ 4                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -5709,26 +5353,26 @@ multiple lines with the use of nesting.
 **Haml**
 
 +---+----------------------------------------------------------------------+
-| 1 | %div                                                                 |
-|   |                                                                      |
-| 2 | -# Removed line                                                      |
-|   |                                                                      |
-| 3 | Actual line                                                          |
-|   |                                                                      |
-| 4 |                                                                      |
+ 1  %div                                                                 
+                                                                         
+ 2  -# Removed line                                                      
+                                                                         
+ 3  Actual line                                                          
+                                                                         
+ 4                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **Compiled HTML**
 
 +---+----------------------------------------------------------------------+
-| 1 | &lt;div&gt;                                                              |
-|   |                                                                      |
-| 2 | Actual line                                                          |
-|   |                                                                      |
-| 3 | &lt;/div&gt;                                                             |
-|   |                                                                      |
-| 4 |                                                                      |
+ 1  &lt;div&gt;                                                              
+                                                                         
+ 2  Actual line                                                          
+                                                                         
+ 3  &lt;/div&gt;                                                             
+                                                                         
+ 4                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -5779,32 +5423,32 @@ the group being :css and :javascript.
 **Haml**
 
 +---+----------------------------------------------------------------------+
-| 1 | :javascript                                                          |
-|   |                                                                      |
-| 2 | &#36;(&#39;button&#39;).on(&#39;click&#39;, function(event) {                       |
-|   |                                                                      |
-| 3 | &#36;(&#39;p&#39;).hide(&#39;slow&#39;);                                            |
-|   |                                                                      |
-| 4 | });                                                                  |
-|   |                                                                      |
-| 5 |                                                                      |
+ 1  :javascript                                                          
+                                                                         
+ 2  &#36;(&#39;button&#39;).on(&#39;click&#39;, function(event) {                       
+                                                                         
+ 3  &#36;(&#39;p&#39;).hide(&#39;slow&#39;);                                            
+                                                                         
+ 4  });                                                                  
+                                                                         
+ 5                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **Compiled HTML**
 
 +---+----------------------------------------------------------------------+
-| 1 | &lt;script&gt;                                                           |
-|   |                                                                      |
-| 2 | &#36;(&#39;button&#39;).on(&#39;click&#39;, function(event) {                       |
-|   |                                                                      |
-| 3 | &#36;(&#39;p&#39;).hide(&#39;slow&#39;);                                            |
-|   |                                                                      |
-| 4 | });                                                                  |
-|   |                                                                      |
-| 5 | &lt;/script&gt;                                                          |
-|   |                                                                      |
-| 6 |                                                                      |
+ 1  &lt;script&gt;                                                           
+                                                                         
+ 2  &#36;(&#39;button&#39;).on(&#39;click&#39;, function(event) {                       
+                                                                         
+ 3  &#36;(&#39;p&#39;).hide(&#39;slow&#39;);                                            
+                                                                         
+ 4  });                                                                  
+                                                                         
+ 5  &lt;/script&gt;                                                          
+                                                                         
+ 6                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -5813,48 +5457,48 @@ the group being :css and :javascript.
 **Haml**
 
 +---+----------------------------------------------------------------------+
-| 1 | :css                                                                 |
-|   |                                                                      |
-| 2 | .container {                                                         |
-|   |                                                                      |
-| 3 | margin: 0 auto;                                                      |
-|   |                                                                      |
-| 4 | width: 960px;                                                        |
-|   |                                                                      |
-| 5 | }                                                                    |
-|   |                                                                      |
-| 6 | :sass                                                                |
-|   |                                                                      |
-| 7 | .container                                                           |
-|   |                                                                      |
-| 8 | margin: 0 auto                                                       |
-|   |                                                                      |
-| 9 | width: 960px                                                         |
-|   |                                                                      |
-| 1 |                                                                      |
-| 0 |                                                                      |
-|   |                                                                      |
-| 1 |                                                                      |
-| 1 |                                                                      |
+ 1  :css                                                                 
+                                                                         
+ 2  .container {                                                         
+                                                                         
+ 3  margin: 0 auto;                                                      
+                                                                         
+ 4  width: 960px;                                                        
+                                                                         
+ 5  }                                                                    
+                                                                         
+ 6  :sass                                                                
+                                                                         
+ 7  .container                                                           
+                                                                         
+ 8  margin: 0 auto                                                       
+                                                                         
+ 9  width: 960px                                                         
+                                                                         
+ 1                                                                       
+ 0                                                                       
+                                                                         
+ 1                                                                       
+ 1                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **Compiled HTML**
 
 +---+----------------------------------------------------------------------+
-| 1 | &lt;style&gt;                                                            |
-|   |                                                                      |
-| 2 | .container {                                                         |
-|   |                                                                      |
-| 3 | margin: 0 auto;                                                      |
-|   |                                                                      |
-| 4 | width: 960px;                                                        |
-|   |                                                                      |
-| 5 | }                                                                    |
-|   |                                                                      |
-| 6 | &lt;/style&gt;                                                           |
-|   |                                                                      |
-| 7 |                                                                      |
+ 1  &lt;style&gt;                                                            
+                                                                         
+ 2  .container {                                                         
+                                                                         
+ 3  margin: 0 auto;                                                      
+                                                                         
+ 4  width: 960px;                                                        
+                                                                         
+ 5  }                                                                    
+                                                                         
+ 6  &lt;/style&gt;                                                           
+                                                                         
+ 7                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -5870,18 +5514,18 @@ Below is an example of Ruby being interpolated as part of a class name.
 **Haml**
 
 +---+----------------------------------------------------------------------+
-| 1 | %div{:class =&gt; &quot;student-#{@student.name}&quot;}                        |
-|   |                                                                      |
-| 2 |                                                                      |
+ 1  %div{:class =&gt; &quot;student-#{@student.name}&quot;}                        
+                                                                         
+ 2                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **Compiled HTML**
 
 +---+----------------------------------------------------------------------+
-| 1 | &lt;div class=&quot;student-shay&quot;&gt;                                       |
-|   |                                                                      |
-| 2 |                                                                      |
+ 1  &lt;div class=&quot;student-shay&quot;&gt;                                       
+                                                                         
+ 2                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -5909,9 +5553,9 @@ Once Ruby is installed the gem install sass command needs to be run from
 the command line to install SCSS and Sass.
 
 +---+----------------------------------------------------------------------+
-| 1 | gem install sass                                                     |
-|   |                                                                      |
-| 2 |                                                                      |
+ 1  gem install sass                                                     
+                                                                         
+ 2                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -5920,9 +5564,9 @@ extensions respectively. To convert either of these file types
 to .css the following sass command needs to be run.
 
 +---+----------------------------------------------------------------------+
-| 1 | sass styles.sass styles.css                                          |
-|   |                                                                      |
-| 2 |                                                                      |
+ 1  sass styles.sass styles.css                                          
+                                                                         
+ 2                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -5938,9 +5582,9 @@ recompile the CSS every time a change takes place. To watch a Sass file
 the following sass command may be run.
 
 +---+----------------------------------------------------------------------+
-| 1 | sass &#45;&#45;watch styles.sass:styles.css                                 |
-|   |                                                                      |
-| 2 |                                                                      |
+ 1  sass &#45;&#45;watch styles.sass:styles.css                                 
+                                                                         
+ 2                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -5950,9 +5594,9 @@ example, to watch an entire directory of Sass files and convert them to
 CSS the sass command below may be run.
 
 +---+----------------------------------------------------------------------+
-| 1 | sass &#45;&#45;watch assets/sass:public/css                                 |
-|   |                                                                      |
-| 2 |                                                                      |
+ 1  sass &#45;&#45;watch assets/sass:public/css                                 
+                                                                         
+ 2                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -5964,17 +5608,17 @@ the sass commands below may be used to convert a SCSS file to Sass, and
 then a Sass file to SCSS respectively.
 
 +---+--------------------------------------------------------------------+
-| 1 | &#0035; Convert Sass to SCSS                                            |
-|   |                                                                    |
-| 2 | sass-convert styles.sass styles.scss                               |
-|   |                                                                    |
-| 3 | &#0035; Convert SCSS to Sass                                            |
-|   |                                                                    |
-| 4 | sass-convert styles.scss styles.sass                               |
-|   |                                                                    |
-| 5 |                                                                    |
-|   |                                                                    |
-| 6 |                                                                    |
+ 1  &#0035; Convert Sass to SCSS                                            
+                                                                       
+ 2  sass-convert styles.sass styles.scss                               
+                                                                       
+ 3  &#0035; Convert SCSS to Sass                                            
+                                                                       
+ 4  sass-convert styles.scss styles.sass                               
+                                                                       
+ 5                                                                     
+                                                                       
+ 6                                                                     
 +===+====================================================================+
 +---+--------------------------------------------------------------------+
 
@@ -5991,59 +5635,59 @@ indentation and clear line breaks for formatting.
 **SCSS**
 
 +---+----------------------------------------------------------------------+
-| 1 | .new {                                                               |
-|   |                                                                      |
-| 2 | color: #ff7b29;                                                      |
-|   |                                                                      |
-| 3 | font-weight: bold;                                                   |
-|   |                                                                      |
-| 4 | span {                                                               |
-|   |                                                                      |
-| 5 | text-transform: uppercase;                                           |
-|   |                                                                      |
-| 6 | }                                                                    |
-|   |                                                                      |
-| 7 | }                                                                    |
-|   |                                                                      |
-| 8 |                                                                      |
+ 1  .new {                                                               
+                                                                         
+ 2  color: #ff7b29;                                                      
+                                                                         
+ 3  font-weight: bold;                                                   
+                                                                         
+ 4  span {                                                               
+                                                                         
+ 5  text-transform: uppercase;                                           
+                                                                         
+ 6  }                                                                    
+                                                                         
+ 7  }                                                                    
+                                                                         
+ 8                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **Sass**
 
 +---+----------------------------------------------------------------------+
-| 1 | .new                                                                 |
-|   |                                                                      |
-| 2 | color: #ff7b29                                                       |
-|   |                                                                      |
-| 3 | font-weight: bold                                                    |
-|   |                                                                      |
-| 4 | span                                                                 |
-|   |                                                                      |
-| 5 | text-transform: uppercase                                            |
-|   |                                                                      |
-| 6 |                                                                      |
+ 1  .new                                                                 
+                                                                         
+ 2  color: #ff7b29                                                       
+                                                                         
+ 3  font-weight: bold                                                    
+                                                                         
+ 4  span                                                                 
+                                                                         
+ 5  text-transform: uppercase                                            
+                                                                         
+ 6                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **Compiled CSS**
 
 +---+----------------------------------------------------------------------+
-| 1 | .new {                                                               |
-|   |                                                                      |
-| 2 | color: #ff7b29;                                                      |
-|   |                                                                      |
-| 3 | font-weight: bold;                                                   |
-|   |                                                                      |
-| 4 | }                                                                    |
-|   |                                                                      |
-| 5 | .new span {                                                          |
-|   |                                                                      |
-| 6 | text-transform: uppercase;                                           |
-|   |                                                                      |
-| 7 | }                                                                    |
-|   |                                                                      |
-| 8 |                                                                      |
+ 1  .new {                                                               
+                                                                         
+ 2  color: #ff7b29;                                                      
+                                                                         
+ 3  font-weight: bold;                                                   
+                                                                         
+ 4  }                                                                    
+                                                                         
+ 5  .new span {                                                          
+                                                                         
+ 6  text-transform: uppercase;                                           
+                                                                         
+ 7  }                                                                    
+                                                                         
+ 8                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -6075,45 +5719,45 @@ selectors without raising specificity is important.
 **Sass**
 
 +---+----------------------------------------------------------------------+
-| 1 | .portfolio                                                           |
-|   |                                                                      |
-| 2 | border: 1px solid #9799a7                                            |
-|   |                                                                      |
-| 3 | ul                                                                   |
-|   |                                                                      |
-| 4 | list-style: none                                                     |
-|   |                                                                      |
-| 5 | li                                                                   |
-|   |                                                                      |
-| 6 | float: left                                                          |
-|   |                                                                      |
-| 7 |                                                                      |
+ 1  .portfolio                                                           
+                                                                         
+ 2  border: 1px solid #9799a7                                            
+                                                                         
+ 3  ul                                                                   
+                                                                         
+ 4  list-style: none                                                     
+                                                                         
+ 5  li                                                                   
+                                                                         
+ 6  float: left                                                          
+                                                                         
+ 7                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **Compiled CSS**
 
 +---+----------------------------------------------------------------------+
-| 1 | .portfolio {                                                         |
-|   |                                                                      |
-| 2 | border: 1px solid #9799a7;                                           |
-|   |                                                                      |
-| 3 | }                                                                    |
-|   |                                                                      |
-| 4 | .portfolio ul {                                                      |
-|   |                                                                      |
-| 5 | list-style: none;                                                    |
-|   |                                                                      |
-| 6 | }                                                                    |
-|   |                                                                      |
-| 7 | .portfolio li {                                                      |
-|   |                                                                      |
-| 8 | float: left;                                                         |
-|   |                                                                      |
-| 9 | }                                                                    |
-|   |                                                                      |
-| 1 |                                                                      |
-| 0 |                                                                      |
+ 1  .portfolio {                                                         
+                                                                         
+ 2  border: 1px solid #9799a7;                                           
+                                                                         
+ 3  }                                                                    
+                                                                         
+ 4  .portfolio ul {                                                      
+                                                                         
+ 5  list-style: none;                                                    
+                                                                         
+ 6  }                                                                    
+                                                                         
+ 7  .portfolio li {                                                      
+                                                                         
+ 8  float: left;                                                         
+                                                                         
+ 9  }                                                                    
+                                                                         
+ 1                                                                       
+ 0                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -6129,34 +5773,34 @@ your decision is up to personal preference.
 **Sass**
 
 +---+----------------------------------------------------------------------+
-| 1 | div                                                                  |
-|   |                                                                      |
-| 2 | font:                                                                |
-|   |                                                                      |
-| 3 | family: Baskerville, Palatino, serif                                 |
-|   |                                                                      |
-| 4 | style: italic                                                        |
-|   |                                                                      |
-| 5 | weight: normal                                                       |
-|   |                                                                      |
-| 6 |                                                                      |
+ 1  div                                                                  
+                                                                         
+ 2  font:                                                                
+                                                                         
+ 3  family: Baskerville, Palatino, serif                                 
+                                                                         
+ 4  style: italic                                                        
+                                                                         
+ 5  weight: normal                                                       
+                                                                         
+ 6                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **Compiled CSS**
 
 +---+----------------------------------------------------------------------+
-| 1 | div {                                                                |
-|   |                                                                      |
-| 2 | font-family: Baskerville, Palatino, serif;                           |
-|   |                                                                      |
-| 3 | font-style: italic;                                                  |
-|   |                                                                      |
-| 4 | font-weight: normal;                                                 |
-|   |                                                                      |
-| 5 | }                                                                    |
-|   |                                                                      |
-| 6 |                                                                      |
+ 1  div {                                                                
+                                                                         
+ 2  font-family: Baskerville, Palatino, serif;                           
+                                                                         
+ 3  font-style: italic;                                                  
+                                                                         
+ 4  font-weight: normal;                                                 
+                                                                         
+ 5  }                                                                    
+                                                                         
+ 6                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -6168,38 +5812,38 @@ changing property values based off a media condition.
 **Sass**
 
 +---+----------------------------------------------------------------------+
-| 1 | .container                                                           |
-|   |                                                                      |
-| 2 | width: 960px                                                         |
-|   |                                                                      |
-| 3 | &#0064;media screen and (max-width: 960px)                                |
-|   |                                                                      |
-| 4 | width: 100%                                                          |
-|   |                                                                      |
-| 5 |                                                                      |
+ 1  .container                                                           
+                                                                         
+ 2  width: 960px                                                         
+                                                                         
+ 3  &#0064;media screen and (max-width: 960px)                                
+                                                                         
+ 4  width: 100%                                                          
+                                                                         
+ 5                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **Compiled CSS**
 
 +---+----------------------------------------------------------------------+
-| 1 | .container {                                                         |
-|   |                                                                      |
-| 2 | width: 960px;                                                        |
-|   |                                                                      |
-| 3 | }                                                                    |
-|   |                                                                      |
-| 4 | &#0064;media screen and (max-width: 960px) {                              |
-|   |                                                                      |
-| 5 | .container {                                                         |
-|   |                                                                      |
-| 6 | width: 100%;                                                         |
-|   |                                                                      |
-| 7 | }                                                                    |
-|   |                                                                      |
-| 8 | }                                                                    |
-|   |                                                                      |
-| 9 |                                                                      |
+ 1  .container {                                                         
+                                                                         
+ 2  width: 960px;                                                        
+                                                                         
+ 3  }                                                                    
+                                                                         
+ 4  &#0064;media screen and (max-width: 960px) {                              
+                                                                         
+ 5  .container {                                                         
+                                                                         
+ 6  width: 100%;                                                         
+                                                                         
+ 7  }                                                                    
+                                                                         
+ 8  }                                                                    
+                                                                         
+ 9                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -6215,34 +5859,34 @@ as &.featured.
 **Sass**
 
 +---+----------------------------------------------------------------------+
-| 1 | a                                                                    |
-|   |                                                                      |
-| 2 | color: #0087cc                                                       |
-|   |                                                                      |
-| 3 | &:hover                                                              |
-|   |                                                                      |
-| 4 | color: #ff7b29                                                       |
-|   |                                                                      |
-| 5 |                                                                      |
+ 1  a                                                                    
+                                                                         
+ 2  color: #0087cc                                                       
+                                                                         
+ 3  &:hover                                                              
+                                                                         
+ 4  color: #ff7b29                                                       
+                                                                         
+ 5                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **Compiled CSS**
 
 +---+----------------------------------------------------------------------+
-| 1 | a {                                                                  |
-|   |                                                                      |
-| 2 | color: #0087cc;                                                      |
-|   |                                                                      |
-| 3 | }                                                                    |
-|   |                                                                      |
-| 4 | a:hover {                                                            |
-|   |                                                                      |
-| 5 | color: #ff7b29;                                                      |
-|   |                                                                      |
-| 6 | }                                                                    |
-|   |                                                                      |
-| 7 |                                                                      |
+ 1  a {                                                                  
+                                                                         
+ 2  color: #0087cc;                                                      
+                                                                         
+ 3  }                                                                    
+                                                                         
+ 4  a:hover {                                                            
+                                                                         
+ 5  color: #ff7b29;                                                      
+                                                                         
+ 6  }                                                                    
+                                                                         
+ 7                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -6256,34 +5900,34 @@ of the most beneficial is inside of feature detection.
 **Sass**
 
 +---+----------------------------------------------------------------------+
-| 1 | .btn                                                                 |
-|   |                                                                      |
-| 2 | background: linear-gradient(#fff, #9799a7)                           |
-|   |                                                                      |
-| 3 | .no-cssgradients &                                                   |
-|   |                                                                      |
-| 4 | background: url(&quot;gradient.png&quot;) 0 0 repeat-x                       |
-|   |                                                                      |
-| 5 |                                                                      |
+ 1  .btn                                                                 
+                                                                         
+ 2  background: linear-gradient(#fff, #9799a7)                           
+                                                                         
+ 3  .no-cssgradients &                                                   
+                                                                         
+ 4  background: url(&quot;gradient.png&quot;) 0 0 repeat-x                       
+                                                                         
+ 5                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **Compiled CSS**
 
 +---+----------------------------------------------------------------------+
-| 1 | .btn {                                                               |
-|   |                                                                      |
-| 2 | background: linear-gradient(#fff, #9799a7);                          |
-|   |                                                                      |
-| 3 | }                                                                    |
-|   |                                                                      |
-| 4 | .no-cssgradients .btn {                                              |
-|   |                                                                      |
-| 5 | background: url(&quot;gradient.png&quot;) 0 0 repeat-x;                      |
-|   |                                                                      |
-| 6 | }                                                                    |
-|   |                                                                      |
-| 7 |                                                                      |
+ 1  .btn {                                                               
+                                                                         
+ 2  background: linear-gradient(#fff, #9799a7);                          
+                                                                         
+ 3  }                                                                    
+                                                                         
+ 4  .no-cssgradients .btn {                                              
+                                                                         
+ 5  background: url(&quot;gradient.png&quot;) 0 0 repeat-x;                      
+                                                                         
+ 6  }                                                                    
+                                                                         
+ 7                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -6302,42 +5946,42 @@ is not rendered in the compiled CSS.
 **Sass**
 
 +---+----------------------------------------------------------------------+
-| 1 | /&ast; Normal comment &ast;/                                               |
-|   |                                                                      |
-| 2 | div                                                                  |
-|   |                                                                      |
-| 3 | background: #333                                                     |
-|   |                                                                      |
-| 4 | // Omitted comment                                                   |
-|   |                                                                      |
-| 5 | strong                                                               |
-|   |                                                                      |
-| 6 | display: block                                                       |
-|   |                                                                      |
-| 7 |                                                                      |
+ 1  /&ast; Normal comment &ast;/                                               
+                                                                         
+ 2  div                                                                  
+                                                                         
+ 3  background: #333                                                     
+                                                                         
+ 4  // Omitted comment                                                   
+                                                                         
+ 5  strong                                                               
+                                                                         
+ 6  display: block                                                       
+                                                                         
+ 7                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **Compiled CSS**
 
 +---+----------------------------------------------------------------------+
-| 1 | /&ast; Normal comment &ast;/                                               |
-|   |                                                                      |
-| 2 | div {                                                                |
-|   |                                                                      |
-| 3 | background: #333;                                                    |
-|   |                                                                      |
-| 4 | }                                                                    |
-|   |                                                                      |
-| 5 | strong {                                                             |
-|   |                                                                      |
-| 6 | display: block;                                                      |
-|   |                                                                      |
-| 7 | }                                                                    |
-|   |                                                                      |
-| 8 |                                                                      |
-|   |                                                                      |
-| 9 |                                                                      |
+ 1  /&ast; Normal comment &ast;/                                               
+                                                                         
+ 2  div {                                                                
+                                                                         
+ 3  background: #333;                                                    
+                                                                         
+ 4  }                                                                    
+                                                                         
+ 5  strong {                                                             
+                                                                         
+ 6  display: block;                                                      
+                                                                         
+ 7  }                                                                    
+                                                                         
+ 8                                                                       
+                                                                         
+ 9                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -6356,30 +6000,30 @@ separated by spaces or commas.
 ### **Sass**
 
 +---+----------------------------------------------------------------------+
-| 1 | &#36;font-base: 1em                                                     |
-|   |                                                                      |
-| 2 | &#36;serif: &quot;Helvetica Neue&quot;, Arial, &quot;Lucida Grande&quot;, sans-serif    |
-|   |                                                                      |
-| 3 | p                                                                    |
-|   |                                                                      |
-| 4 | font: &#36;font-base &#36;serif                                            |
-|   |                                                                      |
-| 5 |                                                                      |
-|   |                                                                      |
-| 6 |                                                                      |
+ 1  &#36;font-base: 1em                                                     
+                                                                         
+ 2  &#36;serif: &quot;Helvetica Neue&quot;, Arial, &quot;Lucida Grande&quot;, sans-serif    
+                                                                         
+ 3  p                                                                    
+                                                                         
+ 4  font: &#36;font-base &#36;serif                                            
+                                                                         
+ 5                                                                       
+                                                                         
+ 6                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **Compiled CSS**
 
 +---+----------------------------------------------------------------------+
-| 1 | p {                                                                  |
-|   |                                                                      |
-| 2 | font: 1em &quot;Helvetica Neue&quot;, Arial, &quot;Lucida Grande&quot;, sans-serif;  |
-|   |                                                                      |
-| 3 | }                                                                    |
-|   |                                                                      |
-| 4 |                                                                      |
+ 1  p {                                                                  
+                                                                         
+ 2  font: 1em &quot;Helvetica Neue&quot;, Arial, &quot;Lucida Grande&quot;, sans-serif;  
+                                                                         
+ 3  }                                                                    
+                                                                         
+ 4                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -6394,30 +6038,30 @@ string of plain text.
 ### **Sass**
 
 +---+----------------------------------------------------------------------+
-| 1 | &#36;location: chicago                                                  |
-|   |                                                                      |
-| 2 | &#36;offset: left                                                       |
-|   |                                                                      |
-| 3 | .#{&#36;location}                                                       |
-|   |                                                                      |
-| 4 | #{&#36;offset}: 20px                                                    |
-|   |                                                                      |
-| 5 |                                                                      |
-|   |                                                                      |
-| 6 |                                                                      |
+ 1  &#36;location: chicago                                                  
+                                                                         
+ 2  &#36;offset: left                                                       
+                                                                         
+ 3  .#{&#36;location}                                                       
+                                                                         
+ 4  #{&#36;offset}: 20px                                                    
+                                                                         
+ 5                                                                       
+                                                                         
+ 6                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **Compiled CSS**
 
 +---+----------------------------------------------------------------------+
-| 1 | .chicago {                                                           |
-|   |                                                                      |
-| 2 | left: 20px;                                                          |
-|   |                                                                      |
-| 3 | }                                                                    |
-|   |                                                                      |
-| 4 |                                                                      |
+ 1  .chicago {                                                           
+                                                                         
+ 2  left: 20px;                                                          
+                                                                         
+ 3  }                                                                    
+                                                                         
+ 4                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -6443,30 +6087,30 @@ have a unit.
 ### **Sass**
 
 +---+----------------------------------------------------------------------+
-| 1 | width: 40px + 6                                                      |
-|   |                                                                      |
-| 2 | width: 40px - 6                                                      |
-|   |                                                                      |
-| 3 | width: 40px &ast; 6                                                     |
-|   |                                                                      |
-| 4 | width: 40px % 6                                                      |
-|   |                                                                      |
-| 5 |                                                                      |
+ 1  width: 40px + 6                                                      
+                                                                         
+ 2  width: 40px - 6                                                      
+                                                                         
+ 3  width: 40px &ast; 6                                                     
+                                                                         
+ 4  width: 40px % 6                                                      
+                                                                         
+ 5                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **Compiled CSS**
 
 +---+----------------------------------------------------------------------+
-| 1 | width: 46px;                                                         |
-|   |                                                                      |
-| 2 | width: 34px;                                                         |
-|   |                                                                      |
-| 3 | width: 240px;                                                        |
-|   |                                                                      |
-| 4 | width: 4px;                                                          |
-|   |                                                                      |
-| 5 |                                                                      |
+ 1  width: 46px;                                                         
+                                                                         
+ 2  width: 34px;                                                         
+                                                                         
+ 3  width: 240px;                                                        
+                                                                         
+ 4  width: 4px;                                                          
+                                                                         
+ 5                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -6485,36 +6129,36 @@ value will be unitless.
 **Sass**
 
 +---+----------------------------------------------------------------------+
-| 1 | width: 100px / 10                                                    |
-|   |                                                                      |
-| 2 | width: (100px / 10)                                                  |
-|   |                                                                      |
-| 3 | width: (100px / 10px)                                                |
-|   |                                                                      |
-| 4 | &#36;width: 100px                                                       |
-|   |                                                                      |
-| 5 | width: &#36;width / 10                                                  |
-|   |                                                                      |
-| 6 | width: 5px - 100px / 10                                              |
-|   |                                                                      |
-| 7 |                                                                      |
+ 1  width: 100px / 10                                                    
+                                                                         
+ 2  width: (100px / 10)                                                  
+                                                                         
+ 3  width: (100px / 10px)                                                
+                                                                         
+ 4  &#36;width: 100px                                                       
+                                                                         
+ 5  width: &#36;width / 10                                                  
+                                                                         
+ 6  width: 5px - 100px / 10                                              
+                                                                         
+ 7                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **Compiled CSS**
 
 +---+----------------------------------------------------------------------+
-| 1 | width: 100px/10;                                                     |
-|   |                                                                      |
-| 2 | width: 10px;                                                         |
-|   |                                                                      |
-| 3 | width: 10;                                                           |
-|   |                                                                      |
-| 4 | width: 10px;                                                         |
-|   |                                                                      |
-| 5 | width: -5px;                                                         |
-|   |                                                                      |
-| 6 |                                                                      |
+ 1  width: 100px/10;                                                     
+                                                                         
+ 2  width: 10px;                                                         
+                                                                         
+ 3  width: 10;                                                           
+                                                                         
+ 4  width: 10px;                                                         
+                                                                         
+ 5  width: -5px;                                                         
+                                                                         
+ 6                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -6527,28 +6171,28 @@ on the use of parentheses.
 **Sass**
 
 +---+----------------------------------------------------------------------+
-| 1 | &#36;grid: 16                                                           |
-|   |                                                                      |
-| 2 | &#36;column: 40px                                                       |
-|   |                                                                      |
-| 3 | &#36;gutter: 20px                                                       |
-|   |                                                                      |
-| 4 | &#36;container: (&#36;column &ast; &#36;grid) + (&#36;gutter &ast; &#36;grid)             |
-|   |                                                                      |
-| 5 | width: &#36;container                                                   |
-|   |                                                                      |
-| 6 |                                                                      |
-|   |                                                                      |
-| 7 |                                                                      |
+ 1  &#36;grid: 16                                                           
+                                                                         
+ 2  &#36;column: 40px                                                       
+                                                                         
+ 3  &#36;gutter: 20px                                                       
+                                                                         
+ 4  &#36;container: (&#36;column &ast; &#36;grid) + (&#36;gutter &ast; &#36;grid)             
+                                                                         
+ 5  width: &#36;container                                                   
+                                                                         
+ 6                                                                       
+                                                                         
+ 7                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **Compiled CSS**
 
 +---+----------------------------------------------------------------------+
-| 1 | width: 960px;                                                        |
-|   |                                                                      |
-| 2 |                                                                      |
+ 1  width: 960px;                                                        
+                                                                         
+ 2                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -6578,34 +6222,34 @@ the absolute value of a given number.
 **Sass**
 
 +---+----------------------------------------------------------------------+
-| 1 | width: percentage(2.5)                                               |
-|   |                                                                      |
-| 2 | width: round(2.5px)                                                  |
-|   |                                                                      |
-| 3 | width: ceil(2.5px)                                                   |
-|   |                                                                      |
-| 4 | width: floor(2.5px)                                                  |
-|   |                                                                      |
-| 5 | width: abs(-2.5px)                                                   |
-|   |                                                                      |
-| 6 |                                                                      |
+ 1  width: percentage(2.5)                                               
+                                                                         
+ 2  width: round(2.5px)                                                  
+                                                                         
+ 3  width: ceil(2.5px)                                                   
+                                                                         
+ 4  width: floor(2.5px)                                                  
+                                                                         
+ 5  width: abs(-2.5px)                                                   
+                                                                         
+ 6                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **Compiled CSS**
 
 +---+----------------------------------------------------------------------+
-| 1 | width: 250%;                                                         |
-|   |                                                                      |
-| 2 | width: 3px;                                                          |
-|   |                                                                      |
-| 3 | width: 3px;                                                          |
-|   |                                                                      |
-| 4 | width: 2px;                                                          |
-|   |                                                                      |
-| 5 | width: 2.5px;                                                        |
-|   |                                                                      |
-| 6 |                                                                      |
+ 1  width: 250%;                                                         
+                                                                         
+ 2  width: 3px;                                                          
+                                                                         
+ 3  width: 3px;                                                          
+                                                                         
+ 4  width: 2px;                                                          
+                                                                         
+ 5  width: 2.5px;                                                        
+                                                                         
+ 6                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -6620,24 +6264,24 @@ value.
 **Sass**
 
 +---+----------------------------------------------------------------------+
-| 1 | color: rgba(#8ec63f, .25)                                            |
-|   |                                                                      |
-| 2 | &#36;green: #8ec63f                                                     |
-|   |                                                                      |
-| 3 | color: rgba(&#36;green, .25)                                            |
-|   |                                                                      |
-| 4 |                                                                      |
-|   |                                                                      |
-| 5 |                                                                      |
+ 1  color: rgba(#8ec63f, .25)                                            
+                                                                         
+ 2  &#36;green: #8ec63f                                                     
+                                                                         
+ 3  color: rgba(&#36;green, .25)                                            
+                                                                         
+ 4                                                                       
+                                                                         
+ 5                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **Compiled CSS**
 
 +---+----------------------------------------------------------------------+
-| 1 | color: rgba(142, 198, 63, .25);                                      |
-|   |                                                                      |
-| 2 |                                                                      |
+ 1  color: rgba(142, 198, 63, .25);                                      
+                                                                         
+ 2                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -6651,26 +6295,26 @@ intended.
 **Sass**
 
 +---+----------------------------------------------------------------------+
-| 1 | color: #8ec63f + #666                                                |
-|   |                                                                      |
-| 2 | color: #8ec63f &ast; 2                                                  |
-|   |                                                                      |
-| 3 | color: rgba(142, 198, 63, .75) / rgba(255, 255, 255, .75)            |
-|   |                                                                      |
-| 4 |                                                                      |
+ 1  color: #8ec63f + #666                                                
+                                                                         
+ 2  color: #8ec63f &ast; 2                                                  
+                                                                         
+ 3  color: rgba(142, 198, 63, .75) / rgba(255, 255, 255, .75)            
+                                                                         
+ 4                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **Compiled CSS**
 
 +---+----------------------------------------------------------------------+
-| 1 | color: #f4ffa5;                                                      |
-|   |                                                                      |
-| 2 | color: #ffff7e;                                                      |
-|   |                                                                      |
-| 3 | color: rgba(0, 0, 0, .75);                                           |
-|   |                                                                      |
-| 4 |                                                                      |
+ 1  color: #f4ffa5;                                                      
+                                                                         
+ 2  color: #ffff7e;                                                      
+                                                                         
+ 3  color: rgba(0, 0, 0, .75);                                           
+                                                                         
+ 4                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -6693,34 +6337,34 @@ of a color.
 **Sass**
 
 +---+----------------------------------------------------------------------+
-| 1 | color: invert(#8ec63f)                                               |
-|   |                                                                      |
-| 2 | color: complement(#8ec63f)                                           |
-|   |                                                                      |
-| 3 | color: mix(#8ec63f, #fff)                                            |
-|   |                                                                      |
-| 4 | color: mix(#8ec63f, #fff, 10%)                                       |
-|   |                                                                      |
-| 5 | color: grayscale(#8ec63f)                                            |
-|   |                                                                      |
-| 6 |                                                                      |
+ 1  color: invert(#8ec63f)                                               
+                                                                         
+ 2  color: complement(#8ec63f)                                           
+                                                                         
+ 3  color: mix(#8ec63f, #fff)                                            
+                                                                         
+ 4  color: mix(#8ec63f, #fff, 10%)                                       
+                                                                         
+ 5  color: grayscale(#8ec63f)                                            
+                                                                         
+ 6                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **Compiled CSS**
 
 +---+----------------------------------------------------------------------+
-| 1 | color: #7139c0;                                                      |
-|   |                                                                      |
-| 2 | color: #773fc6;                                                      |
-|   |                                                                      |
-| 3 | color: #c6e29f;                                                      |
-|   |                                                                      |
-| 4 | color: #f3f9eb;                                                      |
-|   |                                                                      |
-| 5 | color: #838383;                                                      |
-|   |                                                                      |
-| 6 |                                                                      |
+ 1  color: #7139c0;                                                      
+                                                                         
+ 2  color: #773fc6;                                                      
+                                                                         
+ 3  color: #c6e29f;                                                      
+                                                                         
+ 4  color: #f3f9eb;                                                      
+                                                                         
+ 5  color: #838383;                                                      
+                                                                         
+ 6                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -6747,46 +6391,46 @@ include lighten(), darken(), saturate(), and desaturate().
 **Sass**
 
 +---+----------------------------------------------------------------------+
-| 1 | color: lighten(#8ec63f, 50%)                                         |
-|   |                                                                      |
-| 2 | color: darken(#8ec63f, 30%)                                          |
-|   |                                                                      |
-| 3 | color: saturate(#8ec63f, 75%)                                        |
-|   |                                                                      |
-| 4 | color: desaturate(#8ec63f, 25%)                                      |
-|   |                                                                      |
-| 5 | color: adjust-hue(#8ec63f, 30)                                       |
-|   |                                                                      |
-| 6 | color: adjust-hue(#8ec63f, -30)                                      |
-|   |                                                                      |
-| 7 | color: fade-in(rgba(142, 198, 63, 0), .4)                            |
-|   |                                                                      |
-| 8 | color: fade-out(#8ec63f, .4)                                         |
-|   |                                                                      |
-| 9 |                                                                      |
+ 1  color: lighten(#8ec63f, 50%)                                         
+                                                                         
+ 2  color: darken(#8ec63f, 30%)                                          
+                                                                         
+ 3  color: saturate(#8ec63f, 75%)                                        
+                                                                         
+ 4  color: desaturate(#8ec63f, 25%)                                      
+                                                                         
+ 5  color: adjust-hue(#8ec63f, 30)                                       
+                                                                         
+ 6  color: adjust-hue(#8ec63f, -30)                                      
+                                                                         
+ 7  color: fade-in(rgba(142, 198, 63, 0), .4)                            
+                                                                         
+ 8  color: fade-out(#8ec63f, .4)                                         
+                                                                         
+ 9                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **Compiled CSS**
 
 +---+----------------------------------------------------------------------+
-| 1 | color: white;                                                        |
-|   |                                                                      |
-| 2 | color: #3b5319;                                                      |
-|   |                                                                      |
-| 3 | color: #98ff06;                                                      |
-|   |                                                                      |
-| 4 | color: #89a75e;                                                      |
-|   |                                                                      |
-| 5 | color: #4ac63f;                                                      |
-|   |                                                                      |
-| 6 | color: #c6bb3f;                                                      |
-|   |                                                                      |
-| 7 | color: rgba(142, 198, 63, 0.4);                                      |
-|   |                                                                      |
-| 8 | color: rgba(142, 198, 63, 0.6);                                      |
-|   |                                                                      |
-| 9 |                                                                      |
+ 1  color: white;                                                        
+                                                                         
+ 2  color: #3b5319;                                                      
+                                                                         
+ 3  color: #98ff06;                                                      
+                                                                         
+ 4  color: #89a75e;                                                      
+                                                                         
+ 5  color: #4ac63f;                                                      
+                                                                         
+ 6  color: #c6bb3f;                                                      
+                                                                         
+ 7  color: rgba(142, 198, 63, 0.4);                                      
+                                                                         
+ 8  color: rgba(142, 198, 63, 0.6);                                      
+                                                                         
+ 9                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -6814,26 +6458,26 @@ alterations.
 **Sass**
 
 +---+----------------------------------------------------------------------+
-| 1 | color: change-color(#8ec63f, &#36;red: 60, &#36;green: 255)                |
-|   |                                                                      |
-| 2 | color: adjust-color(#8ec63f, &#36;hue: 300, &#36;lightness: 50%)           |
-|   |                                                                      |
-| 3 | color: scale-color(#8ec63f, &#36;lightness: 25%, &#36;alpha: 30%)          |
-|   |                                                                      |
-| 4 |                                                                      |
+ 1  color: change-color(#8ec63f, &#36;red: 60, &#36;green: 255)                
+                                                                         
+ 2  color: adjust-color(#8ec63f, &#36;hue: 300, &#36;lightness: 50%)           
+                                                                         
+ 3  color: scale-color(#8ec63f, &#36;lightness: 25%, &#36;alpha: 30%)          
+                                                                         
+ 4                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **Compiled CSS**
 
 +---+----------------------------------------------------------------------+
-| 1 | color: #3cff3f;                                                      |
-|   |                                                                      |
-| 2 | color: white;                                                        |
-|   |                                                                      |
-| 3 | color: #aad46f;                                                      |
-|   |                                                                      |
-| 4 |                                                                      |
+ 1  color: #3cff3f;                                                      
+                                                                         
+ 2  color: white;                                                        
+                                                                         
+ 3  color: #aad46f;                                                      
+                                                                         
+ 4                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -6856,49 +6500,49 @@ code weight. Additionally, extends parley nicely with OOCSS and SMACSS.
 **Sass**
 
 +---+----------------------------------------------------------------------+
-| 1 | .alert                                                               |
-|   |                                                                      |
-| 2 | border-radius: 10px                                                  |
-|   |                                                                      |
-| 3 | padding: 10px 20px                                                   |
-|   |                                                                      |
-| 4 | .alert-error                                                         |
-|   |                                                                      |
-| 5 | &#0064;extend .alert                                                      |
-|   |                                                                      |
-| 6 | background: #f2dede                                                  |
-|   |                                                                      |
-| 7 | color: #b94a48                                                       |
-|   |                                                                      |
-| 8 |                                                                      |
-|   |                                                                      |
-| 9 |                                                                      |
+ 1  .alert                                                               
+                                                                         
+ 2  border-radius: 10px                                                  
+                                                                         
+ 3  padding: 10px 20px                                                   
+                                                                         
+ 4  .alert-error                                                         
+                                                                         
+ 5  &#0064;extend .alert                                                      
+                                                                         
+ 6  background: #f2dede                                                  
+                                                                         
+ 7  color: #b94a48                                                       
+                                                                         
+ 8                                                                       
+                                                                         
+ 9                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **Compiled CSS**
 
 +---+----------------------------------------------------------------------+
-| 1 | .alert,                                                              |
-|   |                                                                      |
-| 2 | .alert-error {                                                       |
-|   |                                                                      |
-| 3 | border-radius: 10px;                                                 |
-|   |                                                                      |
-| 4 | padding: 10px 20px;                                                  |
-|   |                                                                      |
-| 5 | }                                                                    |
-|   |                                                                      |
-| 6 | .alert-error {                                                       |
-|   |                                                                      |
-| 7 | background: #f2dede;                                                 |
-|   |                                                                      |
-| 8 | color: #b94a48;                                                      |
-|   |                                                                      |
-| 9 | }                                                                    |
-|   |                                                                      |
-| 1 |                                                                      |
-| 0 |                                                                      |
+ 1  .alert,                                                              
+                                                                         
+ 2  .alert-error {                                                       
+                                                                         
+ 3  border-radius: 10px;                                                 
+                                                                         
+ 4  padding: 10px 20px;                                                  
+                                                                         
+ 5  }                                                                    
+                                                                         
+ 6  .alert-error {                                                       
+                                                                         
+ 7  background: #f2dede;                                                 
+                                                                         
+ 8  color: #b94a48;                                                      
+                                                                         
+ 9  }                                                                    
+                                                                         
+ 1                                                                       
+ 0                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -6914,46 +6558,46 @@ the .alert selector never makes its way into the CSS.
 **Sass**
 
 +---+----------------------------------------------------------------------+
-| 1 | %alert                                                               |
-|   |                                                                      |
-| 2 | border-radius: 10px                                                  |
-|   |                                                                      |
-| 3 | padding: 10px 20px                                                   |
-|   |                                                                      |
-| 4 | .alert-error                                                         |
-|   |                                                                      |
-| 5 | &#0064;extend %alert                                                      |
-|   |                                                                      |
-| 6 | background: #f2dede                                                  |
-|   |                                                                      |
-| 7 | color: #b94a48                                                       |
-|   |                                                                      |
-| 8 |                                                                      |
-|   |                                                                      |
-| 9 |                                                                      |
+ 1  %alert                                                               
+                                                                         
+ 2  border-radius: 10px                                                  
+                                                                         
+ 3  padding: 10px 20px                                                   
+                                                                         
+ 4  .alert-error                                                         
+                                                                         
+ 5  &#0064;extend %alert                                                      
+                                                                         
+ 6  background: #f2dede                                                  
+                                                                         
+ 7  color: #b94a48                                                       
+                                                                         
+ 8                                                                       
+                                                                         
+ 9                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **Compiled CSS**
 
 +---+----------------------------------------------------------------------+
-| 1 | .alert-error {                                                       |
-|   |                                                                      |
-| 2 | border-radius: 10px;                                                 |
-|   |                                                                      |
-| 3 | padding: 10px 20px;                                                  |
-|   |                                                                      |
-| 4 | }                                                                    |
-|   |                                                                      |
-| 5 | .alert-error {                                                       |
-|   |                                                                      |
-| 6 | background: #f2dede;                                                 |
-|   |                                                                      |
-| 7 | color: #b94a48;                                                      |
-|   |                                                                      |
-| 8 | }                                                                    |
-|   |                                                                      |
-| 9 |                                                                      |
+ 1  .alert-error {                                                       
+                                                                         
+ 2  border-radius: 10px;                                                 
+                                                                         
+ 3  padding: 10px 20px;                                                  
+                                                                         
+ 4  }                                                                    
+                                                                         
+ 5  .alert-error {                                                       
+                                                                         
+ 6  background: #f2dede;                                                 
+                                                                         
+ 7  color: #b94a48;                                                      
+                                                                         
+ 8  }                                                                    
+                                                                         
+ 9                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -6964,40 +6608,40 @@ As with classes, extends also work with standard element selectors too.
 **Sass**
 
 +---+----------------------------------------------------------------------+
-| 1 | h2                                                                   |
-|   |                                                                      |
-| 2 | color: #9c6                                                          |
-|   |                                                                      |
-| 3 | span                                                                 |
-|   |                                                                      |
-| 4 | text-decoration: underline                                           |
-|   |                                                                      |
-| 5 | .sub-heading                                                         |
-|   |                                                                      |
-| 6 | &#0064;extend h2                                                          |
-|   |                                                                      |
-| 7 |                                                                      |
-|   |                                                                      |
-| 8 |                                                                      |
+ 1  h2                                                                   
+                                                                         
+ 2  color: #9c6                                                          
+                                                                         
+ 3  span                                                                 
+                                                                         
+ 4  text-decoration: underline                                           
+                                                                         
+ 5  .sub-heading                                                         
+                                                                         
+ 6  &#0064;extend h2                                                          
+                                                                         
+ 7                                                                       
+                                                                         
+ 8                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **Compiled CSS**
 
 +---+----------------------------------------------------------------------+
-| 1 | h2, .sub-heading {                                                   |
-|   |                                                                      |
-| 2 | color: #9c6;                                                         |
-|   |                                                                      |
-| 3 | }                                                                    |
-|   |                                                                      |
-| 4 | h2 span, .sub-heading span {                                         |
-|   |                                                                      |
-| 5 | text-decoration: underline;                                          |
-|   |                                                                      |
-| 6 | }                                                                    |
-|   |                                                                      |
-| 7 |                                                                      |
+ 1  h2, .sub-heading {                                                   
+                                                                         
+ 2  color: #9c6;                                                         
+                                                                         
+ 3  }                                                                    
+                                                                         
+ 4  h2 span, .sub-heading span {                                         
+                                                                         
+ 5  text-decoration: underline;                                          
+                                                                         
+ 6  }                                                                    
+                                                                         
+ 7                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -7018,40 +6662,40 @@ using a plus sign to call a mixin SCSS use an @include rule.
 **Sass**
 
 +---+----------------------------------------------------------------------+
-| 1 | &#0064;mixin btn(&#36;color, &#36;color-hover)                                  |
-|   |                                                                      |
-| 2 | color: &#36;color                                                       |
-|   |                                                                      |
-| 3 | &:hover                                                              |
-|   |                                                                      |
-| 4 | color: &#36;color-hover                                                 |
-|   |                                                                      |
-| 5 | .btn                                                                 |
-|   |                                                                      |
-| 6 | +btn(&#36;color: #fff, &#36;color-hover: #9799a7)                          |
-|   |                                                                      |
-| 7 |                                                                      |
-|   |                                                                      |
-| 8 |                                                                      |
+ 1  &#0064;mixin btn(&#36;color, &#36;color-hover)                                  
+                                                                         
+ 2  color: &#36;color                                                       
+                                                                         
+ 3  &:hover                                                              
+                                                                         
+ 4  color: &#36;color-hover                                                 
+                                                                         
+ 5  .btn                                                                 
+                                                                         
+ 6  +btn(&#36;color: #fff, &#36;color-hover: #9799a7)                          
+                                                                         
+ 7                                                                       
+                                                                         
+ 8                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **Compiled CSS**
 
 +---+----------------------------------------------------------------------+
-| 1 | .btn {                                                               |
-|   |                                                                      |
-| 2 | color: #fff;                                                         |
-|   |                                                                      |
-| 3 | }                                                                    |
-|   |                                                                      |
-| 4 | .btn:hover {                                                         |
-|   |                                                                      |
-| 5 | color: #9799a7;                                                      |
-|   |                                                                      |
-| 6 | }                                                                    |
-|   |                                                                      |
-| 7 |                                                                      |
+ 1  .btn {                                                               
+                                                                         
+ 2  color: #fff;                                                         
+                                                                         
+ 3  }                                                                    
+                                                                         
+ 4  .btn:hover {                                                         
+                                                                         
+ 5  color: #9799a7;                                                      
+                                                                         
+ 6  }                                                                    
+                                                                         
+ 7                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -7063,40 +6707,40 @@ values, which may be over written if wished.
 **Sass**
 
 +---+----------------------------------------------------------------------+
-| 1 | &#0064;mixin btn(&#36;color: #fff, &#36;color-hover: #9799a7)                   |
-|   |                                                                      |
-| 2 | color: &#36;color                                                       |
-|   |                                                                      |
-| 3 | &:hover                                                              |
-|   |                                                                      |
-| 4 | color: &#36;color-hover                                                 |
-|   |                                                                      |
-| 5 | .btn                                                                 |
-|   |                                                                      |
-| 6 | +btn(&#36;color-hover: #9799a7)                                         |
-|   |                                                                      |
-| 7 |                                                                      |
-|   |                                                                      |
-| 8 |                                                                      |
+ 1  &#0064;mixin btn(&#36;color: #fff, &#36;color-hover: #9799a7)                   
+                                                                         
+ 2  color: &#36;color                                                       
+                                                                         
+ 3  &:hover                                                              
+                                                                         
+ 4  color: &#36;color-hover                                                 
+                                                                         
+ 5  .btn                                                                 
+                                                                         
+ 6  +btn(&#36;color-hover: #9799a7)                                         
+                                                                         
+ 7                                                                       
+                                                                         
+ 8                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **Compiled CSS**
 
 +---+----------------------------------------------------------------------+
-| 1 | .btn {                                                               |
-|   |                                                                      |
-| 2 | color: #fff;                                                         |
-|   |                                                                      |
-| 3 | }                                                                    |
-|   |                                                                      |
-| 4 | .btn:hover {                                                         |
-|   |                                                                      |
-| 5 | color: #9799a7;                                                      |
-|   |                                                                      |
-| 6 | }                                                                    |
-|   |                                                                      |
-| 7 |                                                                      |
+ 1  .btn {                                                               
+                                                                         
+ 2  color: #fff;                                                         
+                                                                         
+ 3  }                                                                    
+                                                                         
+ 4  .btn:hover {                                                         
+                                                                         
+ 5  color: #9799a7;                                                      
+                                                                         
+ 6  }                                                                    
+                                                                         
+ 7                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -7107,38 +6751,38 @@ name may end with &#8230; inside of the mixin. In the example below with
 box shadows we can pass in comma separated values to the mixin.
 
 +---+----------------------------------------------------------------------+
-| 1 | &#0064;mixin box-shadow(&#36;shadow&#8230;)                                     |
-|   |                                                                      |
-| 2 | -webkit-box-shadow: &#36;shadow                                         |
-|   |                                                                      |
-| 3 | -moz-box-shadow: &#36;shadow                                            |
-|   |                                                                      |
-| 4 | box-shadow: &#36;shadow                                                 |
-|   |                                                                      |
-| 5 | .shadows                                                             |
-|   |                                                                      |
-| 6 | +box-shadow(0 1px 2px #cecfd5, inset 0 0 5px #cecfd5)                |
-|   |                                                                      |
-| 7 |                                                                      |
-|   |                                                                      |
-| 8 |                                                                      |
+ 1  &#0064;mixin box-shadow(&#36;shadow&#8230;)                                     
+                                                                         
+ 2  -webkit-box-shadow: &#36;shadow                                         
+                                                                         
+ 3  -moz-box-shadow: &#36;shadow                                            
+                                                                         
+ 4  box-shadow: &#36;shadow                                                 
+                                                                         
+ 5  .shadows                                                             
+                                                                         
+ 6  +box-shadow(0 1px 2px #cecfd5, inset 0 0 5px #cecfd5)                
+                                                                         
+ 7                                                                       
+                                                                         
+ 8                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **Compiled CSS**
 
 +---+----------------------------------------------------------------------+
-| 1 | .shadows {                                                           |
-|   |                                                                      |
-| 2 | -moz-box-shadow: 0 1px 2px #cecfd5, inset 0 0 5px #cecfd5;           |
-|   |                                                                      |
-| 3 | -webkit-box-shadow: 0 1px 2px #cecfd5, inset 0 0 5px #cecfd5;        |
-|   |                                                                      |
-| 4 | box-shadow: 0 1px 2px #cecfd5, inset 0 0 5px #cecfd5;                |
-|   |                                                                      |
-| 5 | }                                                                    |
-|   |                                                                      |
-| 6 |                                                                      |
+ 1  .shadows {                                                           
+                                                                         
+ 2  -moz-box-shadow: 0 1px 2px #cecfd5, inset 0 0 5px #cecfd5;           
+                                                                         
+ 3  -webkit-box-shadow: 0 1px 2px #cecfd5, inset 0 0 5px #cecfd5;        
+                                                                         
+ 4  box-shadow: 0 1px 2px #cecfd5, inset 0 0 5px #cecfd5;                
+                                                                         
+ 5  }                                                                    
+                                                                         
+ 6                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -7164,20 +6808,20 @@ HTML document.
 **Sass**
 
 +---+----------------------------------------------------------------------+
-| 1 | &#0064;import &quot;normalize&quot;                                               |
-|   |                                                                      |
-| 2 | &#0064;import &quot;grid&quot;, &quot;typography&quot;                                    |
-|   |                                                                      |
-| 3 |                                                                      |
+ 1  &#0064;import &quot;normalize&quot;                                               
+                                                                         
+ 2  &#0064;import &quot;grid&quot;, &quot;typography&quot;                                    
+                                                                         
+ 3                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **Compiled HTML**
 
 +---+----------------------------------------------------------------------+
-| 1 | &lt;link href=&quot;styles.css&quot; rel=&quot;stylesheet&quot;&gt;                      |
-|   |                                                                      |
-| 2 |                                                                      |
+ 1  &lt;link href=&quot;styles.css&quot; rel=&quot;stylesheet&quot;&gt;                      
+                                                                         
+ 2                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -7216,29 +6860,29 @@ between to entities.
     Not equal to
 
 +---+----------------------------------------------------------------------+
-| 1 | // Relational Operators                                              |
-|   |                                                                      |
-| 2 | 6 &lt; 10 // true                                                      |
-|   |                                                                      |
-| 3 | 4 &lt;= 60 // true                                                     |
-|   |                                                                      |
-| 4 | 8 &gt; 2 // true                                                       |
-|   |                                                                      |
-| 5 | 10 &gt;= 10 // true                                                    |
-|   |                                                                      |
-| 6 | // Comparison Operators                                              |
-|   |                                                                      |
-| 7 | #fff == white // true                                                |
-|   |                                                                      |
-| 8 | 10 + 30 == 40 // true                                                |
-|   |                                                                      |
-| 9 | normal != bold // true                                               |
-|   |                                                                      |
-| 1 |                                                                      |
-| 0 |                                                                      |
-|   |                                                                      |
-| 1 |                                                                      |
-| 1 |                                                                      |
+ 1  // Relational Operators                                              
+                                                                         
+ 2  6 &lt; 10 // true                                                      
+                                                                         
+ 3  4 &lt;= 60 // true                                                     
+                                                                         
+ 4  8 &gt; 2 // true                                                       
+                                                                         
+ 5  10 &gt;= 10 // true                                                    
+                                                                         
+ 6  // Comparison Operators                                              
+                                                                         
+ 7  #fff == white // true                                                
+                                                                         
+ 8  10 + 30 == 40 // true                                                
+                                                                         
+ 9  normal != bold // true                                               
+                                                                         
+ 1                                                                       
+ 0                                                                       
+                                                                         
+ 1                                                                       
+ 1                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -7253,39 +6897,39 @@ directly tied to it will be applied.
 **Sass**
 
 +---+----------------------------------------------------------------------+
-| 1 | &#36;shay: awesome                                                      |
-|   |                                                                      |
-| 2 | .shay                                                                |
-|   |                                                                      |
-| 3 | &#0064;if &#36;shay == awesome                                               |
-|   |                                                                      |
-| 4 | background: #ff7b29                                                  |
-|   |                                                                      |
-| 5 | &#0064;else if &#36;shay == cool                                             |
-|   |                                                                      |
-| 6 | background: #0087cc                                                  |
-|   |                                                                      |
-| 7 | &#0064;else                                                               |
-|   |                                                                      |
-| 8 | background: #333                                                     |
-|   |                                                                      |
-| 9 |                                                                      |
-|   |                                                                      |
-| 1 |                                                                      |
-| 0 |                                                                      |
+ 1  &#36;shay: awesome                                                      
+                                                                         
+ 2  .shay                                                                
+                                                                         
+ 3  &#0064;if &#36;shay == awesome                                               
+                                                                         
+ 4  background: #ff7b29                                                  
+                                                                         
+ 5  &#0064;else if &#36;shay == cool                                             
+                                                                         
+ 6  background: #0087cc                                                  
+                                                                         
+ 7  &#0064;else                                                               
+                                                                         
+ 8  background: #333                                                     
+                                                                         
+ 9                                                                       
+                                                                         
+ 1                                                                       
+ 0                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **Compiled CSS**
 
 +---+----------------------------------------------------------------------+
-| 1 | .shay {                                                              |
-|   |                                                                      |
-| 2 | background: #ff7b29;                                                 |
-|   |                                                                      |
-| 3 | }                                                                    |
-|   |                                                                      |
-| 4 |                                                                      |
+ 1  .shay {                                                              
+                                                                         
+ 2  background: #ff7b29;                                                 
+                                                                         
+ 3  }                                                                    
+                                                                         
+ 4                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -7300,57 +6944,57 @@ output styles up to, but not including, 3. The other form, @for &#36;i from
 **Sass**
 
 +---+----------------------------------------------------------------------+
-| 1 | &#0064;for &#36;col from 1 to 6                                              |
-|   |                                                                      |
-| 2 | .col-#{&#36;col}                                                        |
-|   |                                                                      |
-| 3 | width: 40px &ast; &#36;col                                                 |
-|   |                                                                      |
-| 4 |                                                                      |
+ 1  &#0064;for &#36;col from 1 to 6                                              
+                                                                         
+ 2  .col-#{&#36;col}                                                        
+                                                                         
+ 3  width: 40px &ast; &#36;col                                                 
+                                                                         
+ 4                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **Compiled CSS**
 
 +---+----------------------------------------------------------------------+
-| 1 | .col-1 {                                                             |
-|   |                                                                      |
-| 2 | width: 40px;                                                         |
-|   |                                                                      |
-| 3 | }                                                                    |
-|   |                                                                      |
-| 4 | .col-2 {                                                             |
-|   |                                                                      |
-| 5 | width: 80px;                                                         |
-|   |                                                                      |
-| 6 | }                                                                    |
-|   |                                                                      |
-| 7 | .col-3 {                                                             |
-|   |                                                                      |
-| 8 | width: 120px;                                                        |
-|   |                                                                      |
-| 9 | }                                                                    |
-|   |                                                                      |
-| 1 | .col-4 {                                                             |
-| 0 |                                                                      |
-|   | width: 160px;                                                        |
-| 1 |                                                                      |
-| 1 | }                                                                    |
-|   |                                                                      |
-| 1 | .col-5 {                                                             |
-| 2 |                                                                      |
-|   | width: 200px;                                                        |
-| 1 |                                                                      |
-| 3 | }                                                                    |
-|   |                                                                      |
-| 1 |                                                                      |
-| 4 |                                                                      |
-|   |                                                                      |
-| 1 |                                                                      |
-| 5 |                                                                      |
-|   |                                                                      |
-| 1 |                                                                      |
-| 6 |                                                                      |
+ 1  .col-1 {                                                             
+                                                                         
+ 2  width: 40px;                                                         
+                                                                         
+ 3  }                                                                    
+                                                                         
+ 4  .col-2 {                                                             
+                                                                         
+ 5  width: 80px;                                                         
+                                                                         
+ 6  }                                                                    
+                                                                         
+ 7  .col-3 {                                                             
+                                                                         
+ 8  width: 120px;                                                        
+                                                                         
+ 9  }                                                                    
+                                                                         
+ 1  .col-4 {                                                             
+ 0                                                                       
+    width: 160px;                                                        
+ 1                                                                       
+ 1  }                                                                    
+                                                                         
+ 1  .col-5 {                                                             
+ 2                                                                       
+    width: 200px;                                                        
+ 1                                                                       
+ 3  }                                                                    
+                                                                         
+ 1                                                                       
+ 4                                                                       
+                                                                         
+ 1                                                                       
+ 5                                                                       
+                                                                         
+ 1                                                                       
+ 6                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -7362,48 +7006,48 @@ List may include multiple comma separated items.
 **Sass**
 
 +---+----------------------------------------------------------------------+
-| 1 | &#0064;each &#36;class in uxd, rails, html, css                              |
-|   |                                                                      |
-| 2 | .#{&#36;class}-logo                                                     |
-|   |                                                                      |
-| 3 | background: url(&quot;/img/#{&#36;class}.jpg&quot;)                             |
-|   |                                                                      |
-| 4 |                                                                      |
+ 1  &#0064;each &#36;class in uxd, rails, html, css                              
+                                                                         
+ 2  .#{&#36;class}-logo                                                     
+                                                                         
+ 3  background: url(&quot;/img/#{&#36;class}.jpg&quot;)                             
+                                                                         
+ 4                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **Compiled CSS**
 
 +---+----------------------------------------------------------------------+
-| 1 | .uxd-logo {                                                          |
-|   |                                                                      |
-| 2 | background: url(&quot;/img/uxd.jpg&quot;);                                   |
-|   |                                                                      |
-| 3 | }                                                                    |
-|   |                                                                      |
-| 4 | .rails-logo {                                                        |
-|   |                                                                      |
-| 5 | background: url(&quot;/img/rails.jpg&quot;);                                 |
-|   |                                                                      |
-| 6 | }                                                                    |
-|   |                                                                      |
-| 7 | .html-logo {                                                         |
-|   |                                                                      |
-| 8 | background: url(&quot;/img/html.jpg&quot;);                                  |
-|   |                                                                      |
-| 9 | }                                                                    |
-|   |                                                                      |
-| 1 | .css-logo {                                                          |
-| 0 |                                                                      |
-|   | background: url(&quot;/img/css.jpg&quot;);                                   |
-| 1 |                                                                      |
-| 1 | }                                                                    |
-|   |                                                                      |
-| 1 |                                                                      |
-| 2 |                                                                      |
-|   |                                                                      |
-| 1 |                                                                      |
-| 3 |                                                                      |
+ 1  .uxd-logo {                                                          
+                                                                         
+ 2  background: url(&quot;/img/uxd.jpg&quot;);                                   
+                                                                         
+ 3  }                                                                    
+                                                                         
+ 4  .rails-logo {                                                        
+                                                                         
+ 5  background: url(&quot;/img/rails.jpg&quot;);                                 
+                                                                         
+ 6  }                                                                    
+                                                                         
+ 7  .html-logo {                                                         
+                                                                         
+ 8  background: url(&quot;/img/html.jpg&quot;);                                  
+                                                                         
+ 9  }                                                                    
+                                                                         
+ 1  .css-logo {                                                          
+ 0                                                                       
+    background: url(&quot;/img/css.jpg&quot;);                                   
+ 1                                                                       
+ 1  }                                                                    
+                                                                         
+ 1                                                                       
+ 2                                                                       
+                                                                         
+ 1                                                                       
+ 3                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -7416,70 +7060,70 @@ counter variable can be finely controlled allowing for precise looping.
 **Sass**
 
 +---+----------------------------------------------------------------------+
-| 1 | &#36;heading: 1                                                         |
-|   |                                                                      |
-| 2 | &#0064;while &#36;heading &lt;= 6                                              |
-|   |                                                                      |
-| 3 | h#{&#36;heading}                                                        |
-|   |                                                                      |
-| 4 | font-size: 2em - (&#36;heading &ast; .25em)                                |
-|   |                                                                      |
-| 5 | &#36;heading: &#36;heading + 1                                             |
-|   |                                                                      |
-| 6 |                                                                      |
+ 1  &#36;heading: 1                                                         
+                                                                         
+ 2  &#0064;while &#36;heading &lt;= 6                                              
+                                                                         
+ 3  h#{&#36;heading}                                                        
+                                                                         
+ 4  font-size: 2em - (&#36;heading &ast; .25em)                                
+                                                                         
+ 5  &#36;heading: &#36;heading + 1                                             
+                                                                         
+ 6                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **Compiled CSS**
 
 +---+----------------------------------------------------------------------+
-| 1 | h1 {                                                                 |
-|   |                                                                      |
-| 2 | font-size: 1.75em;                                                   |
-|   |                                                                      |
-| 3 | }                                                                    |
-|   |                                                                      |
-| 4 | h2 {                                                                 |
-|   |                                                                      |
-| 5 | font-size: 1.5em;                                                    |
-|   |                                                                      |
-| 6 | }                                                                    |
-|   |                                                                      |
-| 7 | h3 {                                                                 |
-|   |                                                                      |
-| 8 | font-size: 1.25em;                                                   |
-|   |                                                                      |
-| 9 | }                                                                    |
-|   |                                                                      |
-| 1 | h4 {                                                                 |
-| 0 |                                                                      |
-|   | font-size: 1em;                                                      |
-| 1 |                                                                      |
-| 1 | }                                                                    |
-|   |                                                                      |
-| 1 | h5 {                                                                 |
-| 2 |                                                                      |
-|   | font-size: 0.75em;                                                   |
-| 1 |                                                                      |
-| 3 | }                                                                    |
-|   |                                                                      |
-| 1 | h6 {                                                                 |
-| 4 |                                                                      |
-|   | font-size: 0.5em;                                                    |
-| 1 |                                                                      |
-| 5 | }                                                                    |
-|   |                                                                      |
-| 1 |                                                                      |
-| 6 |                                                                      |
-|   |                                                                      |
-| 1 |                                                                      |
-| 7 |                                                                      |
-|   |                                                                      |
-| 1 |                                                                      |
-| 8 |                                                                      |
-|   |                                                                      |
-| 1 |                                                                      |
-| 9 |                                                                      |
+ 1  h1 {                                                                 
+                                                                         
+ 2  font-size: 1.75em;                                                   
+                                                                         
+ 3  }                                                                    
+                                                                         
+ 4  h2 {                                                                 
+                                                                         
+ 5  font-size: 1.5em;                                                    
+                                                                         
+ 6  }                                                                    
+                                                                         
+ 7  h3 {                                                                 
+                                                                         
+ 8  font-size: 1.25em;                                                   
+                                                                         
+ 9  }                                                                    
+                                                                         
+ 1  h4 {                                                                 
+ 0                                                                       
+    font-size: 1em;                                                      
+ 1                                                                       
+ 1  }                                                                    
+                                                                         
+ 1  h5 {                                                                 
+ 2                                                                       
+    font-size: 0.75em;                                                   
+ 1                                                                       
+ 3  }                                                                    
+                                                                         
+ 1  h6 {                                                                 
+ 4                                                                       
+    font-size: 0.5em;                                                    
+ 1                                                                       
+ 5  }                                                                    
+                                                                         
+ 1                                                                       
+ 6                                                                       
+                                                                         
+ 1                                                                       
+ 7                                                                       
+                                                                         
+ 1                                                                       
+ 8                                                                       
+                                                                         
+ 1                                                                       
+ 9                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -7584,9 +7228,9 @@ help render HTML and determine it's behavior, thus may be referenced
 within a documents head.
 
 +---+----------------------------------------------------------------------+
-| 1 | &lt;script src=&quot;script.js&quot;&gt;&lt;/script&gt;                              |
-|   |                                                                      |
-| 2 |                                                                      |
+ 1  &lt;script src=&quot;script.js&quot;&gt;&lt;/script&gt;                              
+                                                                         
+ 2                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -7616,15 +7260,15 @@ each new word except for the initial word. For
 example, shay_is_awesome would more commonly named shayIsAwesome.
 
 +---+----------------------------------------------------------------------+
-| 1 | var theStarterLeague = 125;                                          |
-|   |                                                                      |
-| 2 | var food_truck = &#39;Coffee&#39;;                                         |
-|   |                                                                      |
-| 3 | var mixtape01 = true;                                                |
-|   |                                                                      |
-| 4 | var vinyl = &lbrack;&#39;Miles Davis&#39;, &#39;Frank Sinatra&#39;, &#39;Ray Charles&#39;&rbrack;; |
-|   |                                                                      |
-| 5 |                                                                      |
+ 1  var theStarterLeague = 125;                                          
+                                                                         
+ 2  var food_truck = &#39;Coffee&#39;;                                         
+                                                                         
+ 3  var mixtape01 = true;                                                
+                                                                         
+ 4  var vinyl = &lbrack;&#39;Miles Davis&#39;, &#39;Frank Sinatra&#39;, &#39;Ray Charles&#39;&rbrack;; 
+                                                                         
+ 5                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -7639,13 +7283,13 @@ and indentation should be used when nesting statements for better
 legibility, but is not required.
 
 +---+----------------------------------------------------------------------+
-| 1 | log(polaroid);                                                       |
-|   |                                                                      |
-| 2 | return(&#39;bicycle lane&#39;);                                            |
-|   |                                                                      |
-| 3 | alert(&#39;Congratulations, you &#39; + outcome);                          |
-|   |                                                                      |
-| 4 |                                                                      |
+ 1  log(polaroid);                                                       
+                                                                         
+ 2  return(&#39;bicycle lane&#39;);                                            
+                                                                         
+ 3  alert(&#39;Congratulations, you &#39; + outcome);                          
+                                                                         
+ 4                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -7662,13 +7306,13 @@ parentheses, if necessary, and then the JavaScript statement, or
 statements, that defines the function enclosed in curly braces, {}.
 
 +---+----------------------------------------------------------------------+
-| 1 | function sayHello(name) {                                            |
-|   |                                                                      |
-| 2 | return(&#39;Hello &#39; + name);                                           |
-|   |                                                                      |
-| 3 | }                                                                    |
-|   |                                                                      |
-| 4 |                                                                      |
+ 1  function sayHello(name) {                                            
+                                                                         
+ 2  return(&#39;Hello &#39; + name);                                           
+                                                                         
+ 3  }                                                                    
+                                                                         
+ 4                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -7699,29 +7343,29 @@ object is wrapped inside of curly braces, {}, with comma separated
 properties, each having a key followed by a colon and value.
 
 +---+----------------------------------------------------------------------+
-| 1 | // Object                                                            |
-|   |                                                                      |
-| 2 | var school = {                                                       |
-|   |                                                                      |
-| 3 | name: &#39;The Starter League&#39;,                                        |
-|   |                                                                      |
-| 4 | location: &#39;Merchandise Mart&#39;,                                      |
-|   |                                                                      |
-| 5 | students: 120,                                                       |
-|   |                                                                      |
-| 6 | teachers: &lbrack;&#39;Jeff&#39;, &#39;Raghu&#39;, &#39;Carolyn&#39;, &#39;Shay&#39;&rbrack;             |
-|   |                                                                      |
-| 7 | };                                                                   |
-|   |                                                                      |
-| 8 | // Array                                                             |
-|   |                                                                      |
-| 9 | var school = &lbrack;&#39;Austin&#39;, &#39;Chicago&#39;, &#39;Portland&#39;&rbrack;;              |
-|   |                                                                      |
-| 1 |                                                                      |
-| 0 |                                                                      |
-|   |                                                                      |
-| 1 |                                                                      |
-| 1 |                                                                      |
+ 1  // Object                                                            
+                                                                         
+ 2  var school = {                                                       
+                                                                         
+ 3  name: &#39;The Starter League&#39;,                                        
+                                                                         
+ 4  location: &#39;Merchandise Mart&#39;,                                      
+                                                                         
+ 5  students: 120,                                                       
+                                                                         
+ 6  teachers: &lbrack;&#39;Jeff&#39;, &#39;Raghu&#39;, &#39;Carolyn&#39;, &#39;Shay&#39;&rbrack;             
+                                                                         
+ 7  };                                                                   
+                                                                         
+ 8  // Array                                                             
+                                                                         
+ 9  var school = &lbrack;&#39;Austin&#39;, &#39;Chicago&#39;, &#39;Portland&#39;&rbrack;;              
+                                                                         
+ 1                                                                       
+ 0                                                                       
+                                                                         
+ 1                                                                       
+ 1                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -7766,11 +7410,11 @@ Additionally, using a CDN like Google also helps with loading time, and
 potential caching benefits.
 
 +---+----------------------------------------------------------------------+
-| 1 | &lt;script                                                             |
-|   | src=&quot;//aja                                                          |
-| 2 | x.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js&quot;&gt;&lt;/script&gt; |
-|   |                                                                      |
-| 3 | &lt;script src=&quot;script.js&quot;&gt;&lt;/script&gt;                              |
+ 1  &lt;script                                                             
+    src=&quot;//aja                                                          
+ 2  x.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js&quot;&gt;&lt;/script&gt; 
+                                                                         
+ 3  &lt;script src=&quot;script.js&quot;&gt;&lt;/script&gt;                              
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -7798,11 +7442,11 @@ selections and actions should be written in a new file, referenced
 outside of the actual jQuery library.
 
 +---+----------------------------------------------------------------------+
-| 1 | &#36;();                                                                |
-|   |                                                                      |
-| 2 | jQuery();                                                            |
-|   |                                                                      |
-| 3 |                                                                      |
+ 1  &#36;();                                                                
+                                                                         
+ 2  jQuery();                                                            
+                                                                         
+ 3                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -7816,13 +7460,13 @@ inside of this function we can guarantee that it will not be executed
 until the page has loaded and the DOM is ready.
 
 +---+----------------------------------------------------------------------+
-| 1 | &#36;(document).ready(function(event){                                  |
-|   |                                                                      |
-| 2 | // jQuery code                                                       |
-|   |                                                                      |
-| 3 | });                                                                  |
-|   |                                                                      |
-| 4 |                                                                      |
+ 1  &#36;(document).ready(function(event){                                  
+                                                                         
+ 2  // jQuery code                                                       
+                                                                         
+ 3  });                                                                  
+                                                                         
+ 4                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -7842,17 +7486,17 @@ DOM node to manipulate it. The selector falls within the
 parentheses, (&#39;&#8230;&#39;), and may select elements just like that of CSS.
 
 +---+----------------------------------------------------------------------+
-| 1 | &#36;(&#39;.feature&#39;); // Class selector                                  |
-|   |                                                                      |
-| 2 | &#36;(&#39;li strong&#39;); // Descendant selector                            |
-|   |                                                                      |
-| 3 | &#36;(&#39;em, i&#39;); // Multiple selector                                  |
-|   |                                                                      |
-| 4 | &#36;(&#39;a&lbrack;target=&quot;&#0095;blank&quot;&rbrack;&#39;); // Attribute selector               |
-|   |                                                                      |
-| 5 | &#36;(&#39;p:nth-child(2)&#39;); // Pseudo-class selector                     |
-|   |                                                                      |
-| 6 |                                                                      |
+ 1  &#36;(&#39;.feature&#39;); // Class selector                                  
+                                                                         
+ 2  &#36;(&#39;li strong&#39;); // Descendant selector                            
+                                                                         
+ 3  &#36;(&#39;em, i&#39;); // Multiple selector                                  
+                                                                         
+ 4  &#36;(&#39;a&lbrack;target=&quot;&#0095;blank&quot;&rbrack;&#39;); // Attribute selector               
+                                                                         
+ 5  &#36;(&#39;p:nth-child(2)&#39;); // Pseudo-class selector                     
+                                                                         
+ 6                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -7864,13 +7508,13 @@ event the this keyword may be used to refer to the element selected in
 the current handler.
 
 +---+----------------------------------------------------------------------+
-| 1 | &#36;(&#39;div&#39;).click(function(event){                                   |
-|   |                                                                      |
-| 2 | &#36;(this);                                                            |
-|   |                                                                      |
-| 3 | });                                                                  |
-|   |                                                                      |
-| 4 |                                                                      |
+ 1  &#36;(&#39;div&#39;).click(function(event){                                   
+                                                                         
+ 2  &#36;(this);                                                            
+                                                                         
+ 3  });                                                                  
+                                                                         
+ 4                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -7882,9 +7526,9 @@ into jQuery to help out. These filters are an extension to CSS3 and
 provide more control over selecting an element or its relatives.
 
 +---+--------------------------------------------------------------------+
-| 1 | &#36;(&#39;div:has(strong)&#39;);                                           |
-|   |                                                                    |
-| 2 |                                                                    |
+ 1  &#36;(&#39;div:has(strong)&#39;);                                           
+                                                                       
+ 2                                                                     
 +===+====================================================================+
 +---+--------------------------------------------------------------------+
 
@@ -7908,9 +7552,9 @@ the .not() method. With this specific method all of the div elements
 without a class of type or collection will be selected.
 
 +---+----------------------------------------------------------------------+
-| 1 | &#36;(&#39;div&#39;).not(&#39;.type, .collection&#39;);                             |
-|   |                                                                      |
-| 2 |                                                                      |
+ 1  &#36;(&#39;div&#39;).not(&#39;.type, .collection&#39;);                             
+                                                                         
+ 2                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -7925,9 +7569,9 @@ the .parent() method. Combined together this will only select the parent
 elements of div elements without a class of type or collection.
 
 +---+----------------------------------------------------------------------+
-| 1 | &#36;(&#39;div&#39;).not(&#39;.type, .collection&#39;).parent();                    |
-|   |                                                                      |
-| 2 |                                                                      |
+ 1  &#36;(&#39;div&#39;).not(&#39;.type, .collection&#39;).parent();                    
+                                                                         
+ 2                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -8020,17 +7664,17 @@ the same selector and method may also be used to set a piece of
 information.
 
 +---+----------------------------------------------------------------------+
-| 1 | // Gets the value of the alt attribute                               |
-|   |                                                                      |
-| 2 | &#36;(&#39;img&#39;).attr(&#39;alt&#39;);                                           |
-|   |                                                                      |
-| 3 | // Sets the value of the alt attribute                               |
-|   |                                                                      |
-| 4 | &#36;(&#39;img&#39;).attr(&#39;alt&#39;, &#39;Wild kangaroo&#39;);                        |
-|   |                                                                      |
-| 5 |                                                                      |
-|   |                                                                      |
-| 6 |                                                                      |
+ 1  // Gets the value of the alt attribute                               
+                                                                         
+ 2  &#36;(&#39;img&#39;).attr(&#39;alt&#39;);                                           
+                                                                         
+ 3  // Sets the value of the alt attribute                               
+                                                                         
+ 4  &#36;(&#39;img&#39;).attr(&#39;alt&#39;, &#39;Wild kangaroo&#39;);                        
+                                                                         
+ 5                                                                       
+                                                                         
+ 6                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -8049,13 +7693,13 @@ the .attr() method is used to find the value of the title attribute of
 any abbr element and set it to Hello World.
 
 +---+----------------------------------------------------------------------+
-| 1 | &#36;(&#39;li:even&#39;).addClass(&#39;even-item&#39;);                             |
-|   |                                                                      |
-| 2 | &#36;(&#39;p&#39;).removeClass();                                             |
-|   |                                                                      |
-| 3 | &#36;(&#39;abbr&#39;).attr(&#39;title&#39;, &#39;Hello World&#39;);                       |
-|   |                                                                      |
-| 4 |                                                                      |
+ 1  &#36;(&#39;li:even&#39;).addClass(&#39;even-item&#39;);                             
+                                                                         
+ 2  &#36;(&#39;p&#39;).removeClass();                                             
+                                                                         
+ 3  &#36;(&#39;abbr&#39;).attr(&#39;title&#39;, &#39;Hello World&#39;);                       
+                                                                         
+ 4                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -8101,21 +7745,21 @@ to change the unit of measurement identify the value then use a plus
 sign followed by the quoted unit of measurement.
 
 +---+----------------------------------------------------------------------+
-| 1 | &#36;(&#39;h1 span&#39;).css(&#39;font-size&#39;, &#39;normal&#39;);                      |
-|   |                                                                      |
-| 2 | &#36;(&#39;div&#39;).css({                                                    |
-|   |                                                                      |
-| 3 | fontSize: &#39;13px&#39;,                                                  |
-|   |                                                                      |
-| 4 | background: &#39;#f60&#39;                                                 |
-|   |                                                                      |
-| 5 | });                                                                  |
-|   |                                                                      |
-| 6 | &#36;(&#39;header&#39;).height(200);                                          |
-|   |                                                                      |
-| 7 | &#36;(&#39;.extend&#39;).height(30 + &#39;em&#39;);                                 |
-|   |                                                                      |
-| 8 |                                                                      |
+ 1  &#36;(&#39;h1 span&#39;).css(&#39;font-size&#39;, &#39;normal&#39;);                      
+                                                                         
+ 2  &#36;(&#39;div&#39;).css({                                                    
+                                                                         
+ 3  fontSize: &#39;13px&#39;,                                                  
+                                                                         
+ 4  background: &#39;#f60&#39;                                                 
+                                                                         
+ 5  });                                                                  
+                                                                         
+ 6  &#36;(&#39;header&#39;).height(200);                                          
+                                                                         
+ 7  &#36;(&#39;.extend&#39;).height(30 + &#39;em&#39;);                                 
+                                                                         
+ 8                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -8157,13 +7801,13 @@ new em element just after the link, and the .text() method is replacing
 the text of any h1 elements with the text Hello World.
 
 +---+----------------------------------------------------------------------+
-| 1 | &#36;(&#39;section&#39;).prepend(&#39;&lt;h3&gt;Featured&lt;/h3&gt;&#39;);                  |
-|   |                                                                      |
-| 2 | &#36;(&#39;a&lbrack;target=&quot;&#0095;blank&quot;&rbrack;&#39;).after(&#39;&lt;em&gt;New window.&lt;/em&gt;&#39;); |
-|   |                                                                      |
-| 3 | &#36;(&#39;h1&#39;).text(&#39;Hello World&#39;);                                    |
-|   |                                                                      |
-| 4 |                                                                      |
+ 1  &#36;(&#39;section&#39;).prepend(&#39;&lt;h3&gt;Featured&lt;/h3&gt;&#39;);                  
+                                                                         
+ 2  &#36;(&#39;a&lbrack;target=&quot;&#0095;blank&quot;&rbrack;&#39;).after(&#39;&lt;em&gt;New window.&lt;/em&gt;&#39;); 
+                                                                         
+ 3  &#36;(&#39;h1&#39;).text(&#39;Hello World&#39;);                                    
+                                                                         
+ 4                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -8230,13 +7874,13 @@ bound to it. Now, when a list item is clicked on that list item, via
 the this keyword, receives the class of saved-item.
 
 +---+----------------------------------------------------------------------+
-| 1 | &#36;(&#39;li&#39;).click(function(event){                                    |
-|   |                                                                      |
-| 2 | &#36;(this).addClass(&#39;saved-item&#39;);                                   |
-|   |                                                                      |
-| 3 | });                                                                  |
-|   |                                                                      |
-| 4 |                                                                      |
+ 1  &#36;(&#39;li&#39;).click(function(event){                                    
+                                                                         
+ 2  &#36;(this).addClass(&#39;saved-item&#39;);                                   
+                                                                         
+ 3  });                                                                  
+                                                                         
+ 4                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -8257,13 +7901,13 @@ as the first argument inside the .on() method with the event handler
 function staying the same as before.
 
 +---+----------------------------------------------------------------------+
-| 1 | &#36;(&#39;li&#39;).on(&#39;click&#39;, function(event){                            |
-|   |                                                                      |
-| 2 | &#36;(this).addClass(&#39;saved-item&#39;);                                   |
-|   |                                                                      |
-| 3 | });                                                                  |
-|   |                                                                      |
-| 4 |                                                                      |
+ 1  &#36;(&#39;li&#39;).on(&#39;click&#39;, function(event){                            
+                                                                         
+ 2  &#36;(this).addClass(&#39;saved-item&#39;);                                   
+                                                                         
+ 3  });                                                                  
+                                                                         
+ 4                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -8276,13 +7920,13 @@ with the class of pagination. Upon calling the .on() event
 the .click() event is called on the anchor with the up ID.
 
 +---+----------------------------------------------------------------------+
-| 1 | &#36;(&#39;.pagination&#39;).on(&#39;hover&#39;, function(event){                   |
-|   |                                                                      |
-| 2 | &#36;(&#39;a#up&#39;).click();                                                |
-|   |                                                                      |
-| 3 | });                                                                  |
-|   |                                                                      |
-| 4 |                                                                      |
+ 1  &#36;(&#39;.pagination&#39;).on(&#39;hover&#39;, function(event){                   
+                                                                         
+ 2  &#36;(&#39;a#up&#39;).click();                                                
+                                                                         
+ 3  });                                                                  
+                                                                         
+ 4                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -8295,28 +7939,28 @@ clicking the close icon.
 **HTML**
 
 +---+--------------------------------------------------------------------+
-| 1 | &lt;div class=&quot;notice-warning&quot;&gt;                                   |
-|   |                                                                    |
-| 2 | &lt;div class=&quot;notice-close&quot;&gt;&#215;&lt;/div&gt;                       |
-|   |                                                                    |
-| 3 | &lt;strong&gt;Warning!&lt;/strong&gt; I&#8217;m about to lose my cool.     |
-|   |                                                                    |
-| 4 | &lt;/div&gt;                                                           |
-|   |                                                                    |
-| 5 |                                                                    |
+ 1  &lt;div class=&quot;notice-warning&quot;&gt;                                   
+                                                                       
+ 2  &lt;div class=&quot;notice-close&quot;&gt;&#215;&lt;/div&gt;                       
+                                                                       
+ 3  &lt;strong&gt;Warning!&lt;/strong&gt; I&#8217;m about to lose my cool.     
+                                                                       
+ 4  &lt;/div&gt;                                                           
+                                                                       
+ 5                                                                     
 +===+====================================================================+
 +---+--------------------------------------------------------------------+
 
 **JavaScript**
 
 +---+--------------------------------------------------------------------+
-| 1 | &#36;(&#39;.notice-close&#39;).on(&#39;click&#39;, function(event){               |
-|   |                                                                    |
-| 2 | &#36;(&#39;.notice-warning&#39;).remove();                                  |
-|   |                                                                    |
-| 3 | });                                                                |
-|   |                                                                    |
-| 4 |                                                                    |
+ 1  &#36;(&#39;.notice-close&#39;).on(&#39;click&#39;, function(event){               
+                                                                       
+ 2  &#36;(&#39;.notice-warning&#39;).remove();                                  
+                                                                       
+ 3  });                                                                
+                                                                       
+ 4                                                                     
 +===+====================================================================+
 +---+--------------------------------------------------------------------+
 
@@ -8455,13 +8099,13 @@ fine, but millisecond values may also be passed in directly. Keyword
 values must be quoted while millisecond values do not.
 
 +---+----------------------------------------------------------------------+
-| 1 | &#36;(&#39;.error&#39;).show();                                               |
-|   |                                                                      |
-| 2 | &#36;(&#39;.error&#39;).show(&#39;slow&#39;);                                       |
-|   |                                                                      |
-| 3 | &#36;(&#39;.error&#39;).show(500);                                            |
-|   |                                                                      |
-| 4 |                                                                      |
+ 1  &#36;(&#39;.error&#39;).show();                                               
+                                                                         
+ 2  &#36;(&#39;.error&#39;).show(&#39;slow&#39;);                                       
+                                                                         
+ 3  &#36;(&#39;.error&#39;).show(500);                                            
+                                                                         
+ 4                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -8477,11 +8121,11 @@ then slows down again before completion. The linear value runs the
 animation at one constant pace for the entire duration.
 
 +---+----------------------------------------------------------------------+
-| 1 | &#36;(&#39;.error&#39;).show(&#39;slow&#39;, &#39;linear&#39;);                           |
-|   |                                                                      |
-| 2 | &#36;(&#39;.error&#39;).show(500, &#39;linear&#39;);                                |
-|   |                                                                      |
-| 3 |                                                                      |
+ 1  &#36;(&#39;.error&#39;).show(&#39;slow&#39;, &#39;linear&#39;);                           
+                                                                         
+ 2  &#36;(&#39;.error&#39;).show(500, &#39;linear&#39;);                                
+                                                                         
+ 3                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -8504,13 +8148,13 @@ the duration or easing, if either exist. Inside this function new events
 or effects may be placed, each following their own required syntax.
 
 +---+----------------------------------------------------------------------+
-| 1 | &#36;(&#39;.error&#39;).show(&#39;slow&#39;, &#39;linear&#39;, function(event){           |
-|   |                                                                      |
-| 2 | &#36;(&#39;.error .status&#39;).text(&#39;Continue&#39;);                           |
-|   |                                                                      |
-| 3 | });                                                                  |
-|   |                                                                      |
-| 4 |                                                                      |
+ 1  &#36;(&#39;.error&#39;).show(&#39;slow&#39;, &#39;linear&#39;, function(event){           
+                                                                         
+ 2  &#36;(&#39;.error .status&#39;).text(&#39;Continue&#39;);                           
+                                                                         
+ 3  });                                                                  
+                                                                         
+ 4                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -8534,32 +8178,32 @@ animation is complete.
 ### **HTML**
 
 +---+--------------------------------------------------------------------+
-| 1 | &lt;div class=&quot;notice-warning&quot;&gt;                                   |
-|   |                                                                    |
-| 2 | &lt;div class=&quot;notice-close&quot;&gt;&#215;&lt;/div&gt;                       |
-|   |                                                                    |
-| 3 | &lt;strong&gt;Warning!&lt;/strong&gt; I&#8217;m about to lose my cool.     |
-|   |                                                                    |
-| 4 | &lt;/div&gt;                                                           |
-|   |                                                                    |
-| 5 |                                                                    |
+ 1  &lt;div class=&quot;notice-warning&quot;&gt;                                   
+                                                                       
+ 2  &lt;div class=&quot;notice-close&quot;&gt;&#215;&lt;/div&gt;                       
+                                                                       
+ 3  &lt;strong&gt;Warning!&lt;/strong&gt; I&#8217;m about to lose my cool.     
+                                                                       
+ 4  &lt;/div&gt;                                                           
+                                                                       
+ 5                                                                     
 +===+====================================================================+
 +---+--------------------------------------------------------------------+
 
 **JavaScript**
 
 +---+-------------------------------------------------------------------+
-| 1 | &#36;(&#39;.notice-close&#39;).on(&#39;click&#39;, function(event){              |
-|   |                                                                   |
-| 2 | &#36;(&#39;.notice-warning&#39;).fadeOut(&#39;slow&#39;, function(event){        |
-|   |                                                                   |
-| 3 | &#36;(this).remove();                                                |
-|   |                                                                   |
-| 4 | });                                                               |
-|   |                                                                   |
-| 5 | });                                                               |
-|   |                                                                   |
-| 6 |                                                                   |
+ 1  &#36;(&#39;.notice-close&#39;).on(&#39;click&#39;, function(event){              
+                                                                      
+ 2  &#36;(&#39;.notice-warning&#39;).fadeOut(&#39;slow&#39;, function(event){        
+                                                                      
+ 3  &#36;(this).remove();                                                
+                                                                      
+ 4  });                                                               
+                                                                      
+ 5  });                                                               
+                                                                      
+ 6                                                                    
 +===+===================================================================+
 +---+-------------------------------------------------------------------+
 
@@ -8614,44 +8258,44 @@ animation is complete.
 **HTML**
 
 +---+-------------------------------------------------------------------+
-| 1 | &lt;div class=&quot;panel&quot;&gt;                                           |
-|   |                                                                   |
-| 2 | &lt;div class=&quot;panel-stage&quot;&gt;&lt;/div&gt;                             |
-|   |                                                                   |
-| 3 | &lt;a href=&quot;#&quot; class=&quot;panel-tab&quot;&gt;Open                          |
-|   | &lt;span&gt;&#9660;&lt;/span&gt;&lt;/a&gt;                                    |
-| 4 |                                                                   |
-|   | &lt;/div&gt;                                                          |
-| 5 |                                                                   |
+ 1  &lt;div class=&quot;panel&quot;&gt;                                           
+                                                                      
+ 2  &lt;div class=&quot;panel-stage&quot;&gt;&lt;/div&gt;                             
+                                                                      
+ 3  &lt;a href=&quot;#&quot; class=&quot;panel-tab&quot;&gt;Open                          
+    &lt;span&gt;&#9660;&lt;/span&gt;&lt;/a&gt;                                    
+ 4                                                                    
+    &lt;/div&gt;                                                          
+ 5                                                                    
 +===+===================================================================+
 +---+-------------------------------------------------------------------+
 
 **JavaScript**
 
 +---+-------------------------------------------------------------------+
-| 1 | &#36;(&#39;.panel-tab&#39;).on(&#39;click&#39;, function(event){                 |
-|   |                                                                   |
-| 2 | event.preventDefault();                                           |
-|   |                                                                   |
-| 3 | &#36;(&#39;.panel-stage&#39;).slideToggle(&#39;slow&#39;, function(event){       |
-|   |                                                                   |
-| 4 | if(&#36;(this).is(&#39;:visible&#39;)){                                    |
-|   |                                                                   |
-| 5 | &#36;(&#39;.panel-tab&#39;).html(&#39;Close &lt;span&gt;&#9650;&lt;/span&gt;&#39;);      |
-|   |                                                                   |
-| 6 | } else {                                                          |
-|   |                                                                   |
-| 7 | &#36;(&#39;.panel-tab&#39;).html(&#39;Open &lt;span&gt;&#9660;&lt;/span&gt;&#39;);       |
-|   |                                                                   |
-| 8 | }                                                                 |
-|   |                                                                   |
-| 9 | });                                                               |
-|   |                                                                   |
-| 1 | });                                                               |
-| 0 |                                                                   |
-|   |                                                                   |
-| 1 |                                                                   |
-| 1 |                                                                   |
+ 1  &#36;(&#39;.panel-tab&#39;).on(&#39;click&#39;, function(event){                 
+                                                                      
+ 2  event.preventDefault();                                           
+                                                                      
+ 3  &#36;(&#39;.panel-stage&#39;).slideToggle(&#39;slow&#39;, function(event){       
+                                                                      
+ 4  if(&#36;(this).is(&#39;:visible&#39;)){                                    
+                                                                      
+ 5  &#36;(&#39;.panel-tab&#39;).html(&#39;Close &lt;span&gt;&#9650;&lt;/span&gt;&#39;);      
+                                                                      
+ 6  } else {                                                          
+                                                                      
+ 7  &#36;(&#39;.panel-tab&#39;).html(&#39;Open &lt;span&gt;&#9660;&lt;/span&gt;&#39;);       
+                                                                      
+ 8  }                                                                 
+                                                                      
+ 9  });                                                               
+                                                                      
+ 1  });                                                               
+ 0                                                                    
+                                                                      
+ 1                                                                    
+ 1                                                                    
 +===+===================================================================+
 +---+-------------------------------------------------------------------+
 
@@ -8662,61 +8306,61 @@ Tabs Demo
 **HTML**
 
 +---+--------------------------------------------------------------------+
-| 1 | &lt;ul class=&quot;tabs-nav&quot;&gt;                                          |
-|   |                                                                    |
-| 2 | &lt;li&gt;&lt;a href=&quot;#tab-1&quot;&gt;Features&lt;/a&gt;&lt;/li&gt;                   |
-|   |                                                                    |
-| 3 | &lt;li&gt;&lt;a href=&quot;#tab-2&quot;&gt;Details&lt;/a&gt;&lt;/li&gt;                    |
-|   |                                                                    |
-| 4 | &lt;/ul&gt;                                                            |
-|   |                                                                    |
-| 5 | &lt;div class=&quot;tabs-stage&quot;&gt;                                       |
-|   |                                                                    |
-| 6 | &lt;div id=&quot;tab-1&quot;&gt;&#8230;&lt;/div&gt;                                   |
-|   |                                                                    |
-| 7 | &lt;div id=&quot;tab-2&quot;&gt;&#8230;&lt;/div&gt;                                   |
-|   |                                                                    |
-| 8 | &lt;/div&gt;                                                           |
-|   |                                                                    |
-| 9 |                                                                    |
+ 1  &lt;ul class=&quot;tabs-nav&quot;&gt;                                          
+                                                                       
+ 2  &lt;li&gt;&lt;a href=&quot;#tab-1&quot;&gt;Features&lt;/a&gt;&lt;/li&gt;                   
+                                                                       
+ 3  &lt;li&gt;&lt;a href=&quot;#tab-2&quot;&gt;Details&lt;/a&gt;&lt;/li&gt;                    
+                                                                       
+ 4  &lt;/ul&gt;                                                            
+                                                                       
+ 5  &lt;div class=&quot;tabs-stage&quot;&gt;                                       
+                                                                       
+ 6  &lt;div id=&quot;tab-1&quot;&gt;&#8230;&lt;/div&gt;                                   
+                                                                       
+ 7  &lt;div id=&quot;tab-2&quot;&gt;&#8230;&lt;/div&gt;                                   
+                                                                       
+ 8  &lt;/div&gt;                                                           
+                                                                       
+ 9                                                                     
 +===+====================================================================+
 +---+--------------------------------------------------------------------+
 
 **JavaScript**
 
 +---+--------------------------------------------------------------------+
-| 1 | // Show the first tab by default                                   |
-|   |                                                                    |
-| 2 | &#36;(&#39;.tabs-stage div&#39;).hide();                                    |
-|   |                                                                    |
-| 3 | &#36;(&#39;.tabs-stage div:first&#39;).show();                              |
-|   |                                                                    |
-| 4 | &#36;(&#39;.tabs-nav li:first&#39;).addClass(&#39;tab-active&#39;);               |
-|   |                                                                    |
-| 5 | // Change tab class and display content                            |
-|   |                                                                    |
-| 6 | &#36;(&#39;.tabs-nav a&#39;).on(&#39;click&#39;, function(event){                 |
-|   |                                                                    |
-| 7 | event.preventDefault();                                            |
-|   |                                                                    |
-| 8 | &#36;(&#39;.tabs-nav li&#39;).removeClass(&#39;tab-active&#39;);                  |
-|   |                                                                    |
-| 9 | &#36;(this).parent().addClass(&#39;tab-active&#39;);                        |
-|   |                                                                    |
-| 1 | &#36;(&#39;.tabs-stage div&#39;).hide();                                    |
-| 0 |                                                                    |
-|   | &#36;(&#36;(this).attr(&#39;href&#39;)).show();                                |
-| 1 |                                                                    |
-| 1 | });                                                                |
-|   |                                                                    |
-| 1 |                                                                    |
-| 2 |                                                                    |
-|   |                                                                    |
-| 1 |                                                                    |
-| 3 |                                                                    |
-|   |                                                                    |
-| 1 |                                                                    |
-| 4 |                                                                    |
+ 1  // Show the first tab by default                                   
+                                                                       
+ 2  &#36;(&#39;.tabs-stage div&#39;).hide();                                    
+                                                                       
+ 3  &#36;(&#39;.tabs-stage div:first&#39;).show();                              
+                                                                       
+ 4  &#36;(&#39;.tabs-nav li:first&#39;).addClass(&#39;tab-active&#39;);               
+                                                                       
+ 5  // Change tab class and display content                            
+                                                                       
+ 6  &#36;(&#39;.tabs-nav a&#39;).on(&#39;click&#39;, function(event){                 
+                                                                       
+ 7  event.preventDefault();                                            
+                                                                       
+ 8  &#36;(&#39;.tabs-nav li&#39;).removeClass(&#39;tab-active&#39;);                  
+                                                                       
+ 9  &#36;(this).parent().addClass(&#39;tab-active&#39;);                        
+                                                                       
+ 1  &#36;(&#39;.tabs-stage div&#39;).hide();                                    
+ 0                                                                     
+    &#36;(&#36;(this).attr(&#39;href&#39;)).show();                                
+ 1                                                                     
+ 1  });                                                                
+                                                                       
+ 1                                                                     
+ 2                                                                     
+                                                                       
+ 1                                                                     
+ 3                                                                     
+                                                                       
+ 1                                                                     
+ 4                                                                     
 +===+====================================================================+
 +---+--------------------------------------------------------------------+
 
@@ -8807,19 +8451,19 @@ the transform property followed by the value. The value specifies the
 transform type followed by a specific amount inside parentheses.
 
 +---+----------------------------------------------------------------------+
-| 1 | div {                                                                |
-|   |                                                                      |
-| 2 | -webkit-transform: scale(1.5);                                       |
-|   |                                                                      |
-| 3 | -moz-transform: scale(1.5);                                          |
-|   |                                                                      |
-| 4 | -o-transform: scale(1.5);                                            |
-|   |                                                                      |
-| 5 | transform: scale(1.5);                                               |
-|   |                                                                      |
-| 6 | }                                                                    |
-|   |                                                                      |
-| 7 |                                                                      |
+ 1  div {                                                                
+                                                                         
+ 2  -webkit-transform: scale(1.5);                                       
+                                                                         
+ 3  -moz-transform: scale(1.5);                                          
+                                                                         
+ 4  -o-transform: scale(1.5);                                            
+                                                                         
+ 5  transform: scale(1.5);                                               
+                                                                         
+ 6  }                                                                    
+                                                                         
+ 7                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -8860,30 +8504,30 @@ discuss how you can change this default point of rotation.
 **HTML**
 
 +---+----------------------------------------------------------------------+
-| 1 | &lt;figure class=&quot;box-1&quot;&gt;Box 1&lt;/figure&gt;                           |
-|   |                                                                      |
-| 2 | &lt;figure class=&quot;box-2&quot;&gt;Box 2&lt;/figure&gt;                           |
-|   |                                                                      |
-| 3 |                                                                      |
+ 1  &lt;figure class=&quot;box-1&quot;&gt;Box 1&lt;/figure&gt;                           
+                                                                         
+ 2  &lt;figure class=&quot;box-2&quot;&gt;Box 2&lt;/figure&gt;                           
+                                                                         
+ 3                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **CSS**
 
 +---+----------------------------------------------------------------------+
-| 1 | .box-1 {                                                             |
-|   |                                                                      |
-| 2 | transform: rotate(20deg);                                            |
-|   |                                                                      |
-| 3 | }                                                                    |
-|   |                                                                      |
-| 4 | .box-2 {                                                             |
-|   |                                                                      |
-| 5 | transform: rotate(-55deg);                                           |
-|   |                                                                      |
-| 6 | }                                                                    |
-|   |                                                                      |
-| 7 |                                                                      |
+ 1  .box-1 {                                                             
+                                                                         
+ 2  transform: rotate(20deg);                                            
+                                                                         
+ 3  }                                                                    
+                                                                         
+ 4  .box-2 {                                                             
+                                                                         
+ 5  transform: rotate(-55deg);                                           
+                                                                         
+ 6  }                                                                    
+                                                                         
+ 7                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -8906,30 +8550,30 @@ value greater than or equal to 1.01 makes an element appear larger.
 **HTML**
 
 +---+----------------------------------------------------------------------+
-| 1 | &lt;figure class=&quot;box-1&quot;&gt;Box 1&lt;/figure&gt;                           |
-|   |                                                                      |
-| 2 | &lt;figure class=&quot;box-2&quot;&gt;Box 2&lt;/figure&gt;                           |
-|   |                                                                      |
-| 3 |                                                                      |
+ 1  &lt;figure class=&quot;box-1&quot;&gt;Box 1&lt;/figure&gt;                           
+                                                                         
+ 2  &lt;figure class=&quot;box-2&quot;&gt;Box 2&lt;/figure&gt;                           
+                                                                         
+ 3                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **CSS**
 
 +---+----------------------------------------------------------------------+
-| 1 | .box-1 {                                                             |
-|   |                                                                      |
-| 2 | transform: scale(.75);                                               |
-|   |                                                                      |
-| 3 | }                                                                    |
-|   |                                                                      |
-| 4 | .box-2 {                                                             |
-|   |                                                                      |
-| 5 | transform: scale(1.25);                                              |
-|   |                                                                      |
-| 6 | }                                                                    |
-|   |                                                                      |
-| 7 |                                                                      |
+ 1  .box-1 {                                                             
+                                                                         
+ 2  transform: scale(.75);                                               
+                                                                         
+ 3  }                                                                    
+                                                                         
+ 4  .box-2 {                                                             
+                                                                         
+ 5  transform: scale(1.25);                                              
+                                                                         
+ 6  }                                                                    
+                                                                         
+ 7                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -8946,39 +8590,39 @@ comma, and then the y axis value.
 **HTML**
 
 +---+----------------------------------------------------------------------+
-| 1 | &lt;figure class=&quot;box-1&quot;&gt;Box 1&lt;/figure&gt;                           |
-|   |                                                                      |
-| 2 | &lt;figure class=&quot;box-2&quot;&gt;Box 2&lt;/figure&gt;                           |
-|   |                                                                      |
-| 3 | &lt;figure class=&quot;box-3&quot;&gt;Box 3&lt;/figure&gt;                           |
-|   |                                                                      |
-| 4 |                                                                      |
+ 1  &lt;figure class=&quot;box-1&quot;&gt;Box 1&lt;/figure&gt;                           
+                                                                         
+ 2  &lt;figure class=&quot;box-2&quot;&gt;Box 2&lt;/figure&gt;                           
+                                                                         
+ 3  &lt;figure class=&quot;box-3&quot;&gt;Box 3&lt;/figure&gt;                           
+                                                                         
+ 4                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **CSS**
 
 +---+----------------------------------------------------------------------+
-| 1 | .box-1 {                                                             |
-|   |                                                                      |
-| 2 | transform: scaleX(.5);                                               |
-|   |                                                                      |
-| 3 | }                                                                    |
-|   |                                                                      |
-| 4 | .box-2 {                                                             |
-|   |                                                                      |
-| 5 | transform: scaleY(1.15);                                             |
-|   |                                                                      |
-| 6 | }                                                                    |
-|   |                                                                      |
-| 7 | .box-3 {                                                             |
-|   |                                                                      |
-| 8 | transform: scale(.5, 1.15);                                          |
-|   |                                                                      |
-| 9 | }                                                                    |
-|   |                                                                      |
-| 1 |                                                                      |
-| 0 |                                                                      |
+ 1  .box-1 {                                                             
+                                                                         
+ 2  transform: scaleX(.5);                                               
+                                                                         
+ 3  }                                                                    
+                                                                         
+ 4  .box-2 {                                                             
+                                                                         
+ 5  transform: scaleY(1.15);                                             
+                                                                         
+ 6  }                                                                    
+                                                                         
+ 7  .box-3 {                                                             
+                                                                         
+ 8  transform: scale(.5, 1.15);                                          
+                                                                         
+ 9  }                                                                    
+                                                                         
+ 1                                                                       
+ 0                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -9006,39 +8650,39 @@ position.
 **HTML**
 
 +---+----------------------------------------------------------------------+
-| 1 | &lt;figure class=&quot;box-1&quot;&gt;Box 1&lt;/figure&gt;                           |
-|   |                                                                      |
-| 2 | &lt;figure class=&quot;box-2&quot;&gt;Box 2&lt;/figure&gt;                           |
-|   |                                                                      |
-| 3 | &lt;figure class=&quot;box-3&quot;&gt;Box 3&lt;/figure&gt;                           |
-|   |                                                                      |
-| 4 |                                                                      |
+ 1  &lt;figure class=&quot;box-1&quot;&gt;Box 1&lt;/figure&gt;                           
+                                                                         
+ 2  &lt;figure class=&quot;box-2&quot;&gt;Box 2&lt;/figure&gt;                           
+                                                                         
+ 3  &lt;figure class=&quot;box-3&quot;&gt;Box 3&lt;/figure&gt;                           
+                                                                         
+ 4                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **CSS**
 
 +---+----------------------------------------------------------------------+
-| 1 | .box-1 {                                                             |
-|   |                                                                      |
-| 2 | transform: translateX(-10px);                                        |
-|   |                                                                      |
-| 3 | }                                                                    |
-|   |                                                                      |
-| 4 | .box-2 {                                                             |
-|   |                                                                      |
-| 5 | transform: translateY(25%);                                          |
-|   |                                                                      |
-| 6 | }                                                                    |
-|   |                                                                      |
-| 7 | .box-3 {                                                             |
-|   |                                                                      |
-| 8 | transform: translate(-10px, 25%);                                    |
-|   |                                                                      |
-| 9 | }                                                                    |
-|   |                                                                      |
-| 1 |                                                                      |
-| 0 |                                                                      |
+ 1  .box-1 {                                                             
+                                                                         
+ 2  transform: translateX(-10px);                                        
+                                                                         
+ 3  }                                                                    
+                                                                         
+ 4  .box-2 {                                                             
+                                                                         
+ 5  transform: translateY(25%);                                          
+                                                                         
+ 6  }                                                                    
+                                                                         
+ 7  .box-3 {                                                             
+                                                                         
+ 8  transform: translate(-10px, 25%);                                    
+                                                                         
+ 9  }                                                                    
+                                                                         
+ 1                                                                       
+ 0                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -9061,39 +8705,39 @@ apply here.
 **HTML**
 
 +---+----------------------------------------------------------------------+
-| 1 | &lt;figure class=&quot;box-1&quot;&gt;Box 1&lt;/figure&gt;                           |
-|   |                                                                      |
-| 2 | &lt;figure class=&quot;box-2&quot;&gt;Box 2&lt;/figure&gt;                           |
-|   |                                                                      |
-| 3 | &lt;figure class=&quot;box-3&quot;&gt;Box 3&lt;/figure&gt;                           |
-|   |                                                                      |
-| 4 |                                                                      |
+ 1  &lt;figure class=&quot;box-1&quot;&gt;Box 1&lt;/figure&gt;                           
+                                                                         
+ 2  &lt;figure class=&quot;box-2&quot;&gt;Box 2&lt;/figure&gt;                           
+                                                                         
+ 3  &lt;figure class=&quot;box-3&quot;&gt;Box 3&lt;/figure&gt;                           
+                                                                         
+ 4                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **CSS**
 
 +---+----------------------------------------------------------------------+
-| 1 | .box-1 {                                                             |
-|   |                                                                      |
-| 2 | transform: skewX(5deg);                                              |
-|   |                                                                      |
-| 3 | }                                                                    |
-|   |                                                                      |
-| 4 | .box-2 {                                                             |
-|   |                                                                      |
-| 5 | transform: skewY(-20deg);                                            |
-|   |                                                                      |
-| 6 | }                                                                    |
-|   |                                                                      |
-| 7 | .box-3 {                                                             |
-|   |                                                                      |
-| 8 | transform: skew(5deg, -20deg);                                       |
-|   |                                                                      |
-| 9 | }                                                                    |
-|   |                                                                      |
-| 1 |                                                                      |
-| 0 |                                                                      |
+ 1  .box-1 {                                                             
+                                                                         
+ 2  transform: skewX(5deg);                                              
+                                                                         
+ 3  }                                                                    
+                                                                         
+ 4  .box-2 {                                                             
+                                                                         
+ 5  transform: skewY(-20deg);                                            
+                                                                         
+ 6  }                                                                    
+                                                                         
+ 7  .box-3 {                                                             
+                                                                         
+ 8  transform: skew(5deg, -20deg);                                       
+                                                                         
+ 9  }                                                                    
+                                                                         
+ 1                                                                       
+ 0                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -9114,30 +8758,30 @@ same as if you were to set the height of an element numerous times.
 **HTML**
 
 +---+----------------------------------------------------------------------+
-| 1 | &lt;figure class=&quot;box-1&quot;&gt;Box 1&lt;/figure&gt;                           |
-|   |                                                                      |
-| 2 | &lt;figure class=&quot;box-2&quot;&gt;Box 2&lt;/figure&gt;                           |
-|   |                                                                      |
-| 3 |                                                                      |
+ 1  &lt;figure class=&quot;box-1&quot;&gt;Box 1&lt;/figure&gt;                           
+                                                                         
+ 2  &lt;figure class=&quot;box-2&quot;&gt;Box 2&lt;/figure&gt;                           
+                                                                         
+ 3                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **CSS**
 
 +---+----------------------------------------------------------------------+
-| 1 | .box-1 {                                                             |
-|   |                                                                      |
-| 2 | transform: rotate(25deg) scale(.75);                                 |
-|   |                                                                      |
-| 3 | }                                                                    |
-|   |                                                                      |
-| 4 | .box-2 {                                                             |
-|   |                                                                      |
-| 5 | transform: skew(10deg, 20deg) translateX(20px);                      |
-|   |                                                                      |
-| 6 | }                                                                    |
-|   |                                                                      |
-| 7 |                                                                      |
+ 1  .box-1 {                                                             
+                                                                         
+ 2  transform: rotate(25deg) scale(.75);                                 
+                                                                         
+ 3  }                                                                    
+                                                                         
+ 4  .box-2 {                                                             
+                                                                         
+ 5  transform: skew(10deg, 20deg) translateX(20px);                      
+                                                                         
+ 6  }                                                                    
+                                                                         
+ 7                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -9155,76 +8799,76 @@ transforms, try your hand at using the matrix property.
 **HTML**
 
 +---+--------------------------------------------------------------------+
-| 1 | &lt;div class=&quot;cube&quot;&gt;                                             |
-|   |                                                                    |
-| 2 | &lt;figure class=&quot;side top&quot;&gt;1&lt;/figure&gt;                          |
-|   |                                                                    |
-| 3 | &lt;figure class=&quot;side left&quot;&gt;2&lt;/figure&gt;                         |
-|   |                                                                    |
-| 4 | &lt;figure class=&quot;side right&quot;&gt;3&lt;/figure&gt;                        |
-|   |                                                                    |
-| 5 | &lt;/div&gt;                                                           |
-|   |                                                                    |
-| 6 |                                                                    |
+ 1  &lt;div class=&quot;cube&quot;&gt;                                             
+                                                                       
+ 2  &lt;figure class=&quot;side top&quot;&gt;1&lt;/figure&gt;                          
+                                                                       
+ 3  &lt;figure class=&quot;side left&quot;&gt;2&lt;/figure&gt;                         
+                                                                       
+ 4  &lt;figure class=&quot;side right&quot;&gt;3&lt;/figure&gt;                        
+                                                                       
+ 5  &lt;/div&gt;                                                           
+                                                                       
+ 6                                                                     
 +===+====================================================================+
 +---+--------------------------------------------------------------------+
 
 **CSS**
 
 +---+--------------------------------------------------------------------+
-| 1 | .cube {                                                            |
-|   |                                                                    |
-| 2 | position: relative;                                                |
-|   |                                                                    |
-| 3 | }                                                                  |
-|   |                                                                    |
-| 4 | .side {                                                            |
-|   |                                                                    |
-| 5 | height: 95px;                                                      |
-|   |                                                                    |
-| 6 | position: absolute;                                                |
-|   |                                                                    |
-| 7 | width: 95px;                                                       |
-|   |                                                                    |
-| 8 | }                                                                  |
-|   |                                                                    |
-| 9 | .top {                                                             |
-|   |                                                                    |
-| 1 | background: #9acc53;                                               |
-| 0 |                                                                    |
-|   | transform: rotate(-45deg) skew(15deg, 15deg);                      |
-| 1 |                                                                    |
-| 1 | }                                                                  |
-|   |                                                                    |
-| 1 | .left {                                                            |
-| 2 |                                                                    |
-|   | background: #8ec63f;                                               |
-| 1 |                                                                    |
-| 3 | transform: rotate(15deg) skew(15deg, 15deg) translate(-50%, 100%); |
-|   |                                                                    |
-| 1 | }                                                                  |
-| 4 |                                                                    |
-|   | .right {                                                           |
-| 1 |                                                                    |
-| 5 | background: #80b239;                                               |
-|   |                                                                    |
-| 1 | transform: rotate(-15deg) skew(-15deg, -15deg) translate(50%,      |
-| 6 | 100%);                                                             |
-|   |                                                                    |
-| 1 | }                                                                  |
-| 7 |                                                                    |
-|   |                                                                    |
-| 1 |                                                                    |
-| 8 |                                                                    |
-|   |                                                                    |
-| 1 |                                                                    |
-| 9 |                                                                    |
-|   |                                                                    |
-| 2 |                                                                    |
-| 0 |                                                                    |
-|   |                                                                    |
-| 2 |                                                                    |
-| 1 |                                                                    |
+ 1  .cube {                                                            
+                                                                       
+ 2  position: relative;                                                
+                                                                       
+ 3  }                                                                  
+                                                                       
+ 4  .side {                                                            
+                                                                       
+ 5  height: 95px;                                                      
+                                                                       
+ 6  position: absolute;                                                
+                                                                       
+ 7  width: 95px;                                                       
+                                                                       
+ 8  }                                                                  
+                                                                       
+ 9  .top {                                                             
+                                                                       
+ 1  background: #9acc53;                                               
+ 0                                                                     
+    transform: rotate(-45deg) skew(15deg, 15deg);                      
+ 1                                                                     
+ 1  }                                                                  
+                                                                       
+ 1  .left {                                                            
+ 2                                                                     
+    background: #8ec63f;                                               
+ 1                                                                     
+ 3  transform: rotate(15deg) skew(15deg, 15deg) translate(-50%, 100%); 
+                                                                       
+ 1  }                                                                  
+ 4                                                                     
+    .right {                                                           
+ 1                                                                     
+ 5  background: #80b239;                                               
+                                                                       
+ 1  transform: rotate(-15deg) skew(-15deg, -15deg) translate(50%,      
+ 6  100%);                                                             
+                                                                       
+ 1  }                                                                  
+ 7                                                                     
+                                                                       
+ 1                                                                     
+ 8                                                                     
+                                                                       
+ 1                                                                     
+ 9                                                                     
+                                                                       
+ 2                                                                     
+ 0                                                                     
+                                                                       
+ 2                                                                     
+ 1                                                                     
 +===+====================================================================+
 +---+--------------------------------------------------------------------+
 
@@ -9250,62 +8894,62 @@ the origin to 20 pixels across and 50 pixels down the element.
 **HTML**
 
 +---+----------------------------------------------------------------------+
-| 1 | &lt;figure class=&quot;box-1&quot;&gt;Box 1&lt;/figure&gt;                           |
-|   |                                                                      |
-| 2 | &lt;figure class=&quot;box-2&quot;&gt;Box 2&lt;/figure&gt;                           |
-|   |                                                                      |
-| 3 | &lt;figure class=&quot;box-3&quot;&gt;Box 3&lt;/figure&gt;                           |
-|   |                                                                      |
-| 4 | &lt;figure class=&quot;box-4&quot;&gt;Box 3&lt;/figure&gt;                           |
-|   |                                                                      |
-| 5 |                                                                      |
+ 1  &lt;figure class=&quot;box-1&quot;&gt;Box 1&lt;/figure&gt;                           
+                                                                         
+ 2  &lt;figure class=&quot;box-2&quot;&gt;Box 2&lt;/figure&gt;                           
+                                                                         
+ 3  &lt;figure class=&quot;box-3&quot;&gt;Box 3&lt;/figure&gt;                           
+                                                                         
+ 4  &lt;figure class=&quot;box-4&quot;&gt;Box 3&lt;/figure&gt;                           
+                                                                         
+ 5                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **CSS**
 
 +---+----------------------------------------------------------------------+
-| 1 | .box-1 {                                                             |
-|   |                                                                      |
-| 2 | transform: rotate(15deg);                                            |
-|   |                                                                      |
-| 3 | transform-origin: 0 0;                                               |
-|   |                                                                      |
-| 4 | }                                                                    |
-|   |                                                                      |
-| 5 | .box-2 {                                                             |
-|   |                                                                      |
-| 6 | transform: scale(.5);                                                |
-|   |                                                                      |
-| 7 | transform-origin: 100% 100%;                                         |
-|   |                                                                      |
-| 8 | }                                                                    |
-|   |                                                                      |
-| 9 | .box-3 {                                                             |
-|   |                                                                      |
-| 1 | transform: skewX(20deg);                                             |
-| 0 |                                                                      |
-|   | transform-origin: top left;                                          |
-| 1 |                                                                      |
-| 1 | }                                                                    |
-|   |                                                                      |
-| 1 | .box-4 {                                                             |
-| 2 |                                                                      |
-|   | transform: scale(.75) translate(-10px, -10px);                       |
-| 1 |                                                                      |
-| 3 | transform-origin: 20px 50px;                                         |
-|   |                                                                      |
-| 1 | }                                                                    |
-| 4 |                                                                      |
-|   |                                                                      |
-| 1 |                                                                      |
-| 5 |                                                                      |
-|   |                                                                      |
-| 1 |                                                                      |
-| 6 |                                                                      |
-|   |                                                                      |
-| 1 |                                                                      |
-| 7 |                                                                      |
+ 1  .box-1 {                                                             
+                                                                         
+ 2  transform: rotate(15deg);                                            
+                                                                         
+ 3  transform-origin: 0 0;                                               
+                                                                         
+ 4  }                                                                    
+                                                                         
+ 5  .box-2 {                                                             
+                                                                         
+ 6  transform: scale(.5);                                                
+                                                                         
+ 7  transform-origin: 100% 100%;                                         
+                                                                         
+ 8  }                                                                    
+                                                                         
+ 9  .box-3 {                                                             
+                                                                         
+ 1  transform: skewX(20deg);                                             
+ 0                                                                       
+    transform-origin: top left;                                          
+ 1                                                                       
+ 1  }                                                                    
+                                                                         
+ 1  .box-4 {                                                             
+ 2                                                                       
+    transform: scale(.75) translate(-10px, -10px);                       
+ 1                                                                       
+ 3  transform-origin: 20px 50px;                                         
+                                                                         
+ 1  }                                                                    
+ 4                                                                       
+                                                                         
+ 1                                                                       
+ 5                                                                       
+                                                                         
+ 1                                                                       
+ 6                                                                       
+                                                                         
+ 1                                                                       
+ 7                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -9341,26 +8985,26 @@ their individual perspectives with the perspective value.
 **HTML**
 
 +---+----------------------------------------------------------------------+
-| 1 | &lt;figure class=&quot;box&quot;&gt;Box 1&lt;/figure&gt;                             |
-|   |                                                                      |
-| 2 | &lt;figure class=&quot;box&quot;&gt;Box 2&lt;/figure&gt;                             |
-|   |                                                                      |
-| 3 | &lt;figure class=&quot;box&quot;&gt;Box 3&lt;/figure&gt;                             |
-|   |                                                                      |
-| 4 |                                                                      |
+ 1  &lt;figure class=&quot;box&quot;&gt;Box 1&lt;/figure&gt;                             
+                                                                         
+ 2  &lt;figure class=&quot;box&quot;&gt;Box 2&lt;/figure&gt;                             
+                                                                         
+ 3  &lt;figure class=&quot;box&quot;&gt;Box 3&lt;/figure&gt;                             
+                                                                         
+ 4                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **CSS**
 
 +---+----------------------------------------------------------------------+
-| 1 | .box {                                                               |
-|   |                                                                      |
-| 2 | transform: perspective(200px) rotateX(45deg);                        |
-|   |                                                                      |
-| 3 | }                                                                    |
-|   |                                                                      |
-| 4 |                                                                      |
+ 1  .box {                                                               
+                                                                         
+ 2  transform: perspective(200px) rotateX(45deg);                        
+                                                                         
+ 3  }                                                                    
+                                                                         
+ 4                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -9373,36 +9017,36 @@ the perspective property on their direct parent element.
 **HTML**
 
 +---+----------------------------------------------------------------------+
-| 1 | &lt;div class=&quot;group&quot;&gt;                                              |
-|   |                                                                      |
-| 2 | &lt;figure class=&quot;box&quot;&gt;Box 1&lt;/figure&gt;                             |
-|   |                                                                      |
-| 3 | &lt;figure class=&quot;box&quot;&gt;Box 2&lt;/figure&gt;                             |
-|   |                                                                      |
-| 4 | &lt;figure class=&quot;box&quot;&gt;Box 3&lt;/figure&gt;                             |
-|   |                                                                      |
-| 5 | &lt;/div&gt;                                                             |
-|   |                                                                      |
-| 6 |                                                                      |
+ 1  &lt;div class=&quot;group&quot;&gt;                                              
+                                                                         
+ 2  &lt;figure class=&quot;box&quot;&gt;Box 1&lt;/figure&gt;                             
+                                                                         
+ 3  &lt;figure class=&quot;box&quot;&gt;Box 2&lt;/figure&gt;                             
+                                                                         
+ 4  &lt;figure class=&quot;box&quot;&gt;Box 3&lt;/figure&gt;                             
+                                                                         
+ 5  &lt;/div&gt;                                                             
+                                                                         
+ 6                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **CSS**
 
 +---+----------------------------------------------------------------------+
-| 1 | .group {                                                             |
-|   |                                                                      |
-| 2 | perspective: 200px;                                                  |
-|   |                                                                      |
-| 3 | }                                                                    |
-|   |                                                                      |
-| 4 | .box {                                                               |
-|   |                                                                      |
-| 5 | transform: rotateX(45deg);                                           |
-|   |                                                                      |
-| 6 | }                                                                    |
-|   |                                                                      |
-| 7 |                                                                      |
+ 1  .group {                                                             
+                                                                         
+ 2  perspective: 200px;                                                  
+                                                                         
+ 3  }                                                                    
+                                                                         
+ 4  .box {                                                               
+                                                                         
+ 5  transform: rotateX(45deg);                                           
+                                                                         
+ 6  }                                                                    
+                                                                         
+ 7                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -9429,30 +9073,30 @@ depth values.
 **HTML**
 
 +---+----------------------------------------------------------------------+
-| 1 | &lt;figure class=&quot;box-1&quot;&gt;Box 1&lt;/figure&gt;                           |
-|   |                                                                      |
-| 2 | &lt;figure class=&quot;box-2&quot;&gt;Box 2&lt;/figure&gt;                           |
-|   |                                                                      |
-| 3 |                                                                      |
+ 1  &lt;figure class=&quot;box-1&quot;&gt;Box 1&lt;/figure&gt;                           
+                                                                         
+ 2  &lt;figure class=&quot;box-2&quot;&gt;Box 2&lt;/figure&gt;                           
+                                                                         
+ 3                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **CSS**
 
 +---+----------------------------------------------------------------------+
-| 1 | .box-1 {                                                             |
-|   |                                                                      |
-| 2 | transform: perspective(100px) rotateX(45deg);                        |
-|   |                                                                      |
-| 3 | }                                                                    |
-|   |                                                                      |
-| 4 | .box-2 {                                                             |
-|   |                                                                      |
-| 5 | transform: perspective(1000px) rotateX(45deg);                       |
-|   |                                                                      |
-| 6 | }                                                                    |
-|   |                                                                      |
-| 7 |                                                                      |
+ 1  .box-1 {                                                             
+                                                                         
+ 2  transform: perspective(100px) rotateX(45deg);                        
+                                                                         
+ 3  }                                                                    
+                                                                         
+ 4  .box-2 {                                                             
+                                                                         
+ 5  transform: perspective(1000px) rotateX(45deg);                       
+                                                                         
+ 6  }                                                                    
+                                                                         
+ 7                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -9472,70 +9116,70 @@ coordinates of the vanishing point of a transform.
 **HTML**
 
 +---+----------------------------------------------------------------------+
-| 1 | &lt;div class=&quot;original original-1&quot;&gt;                                |
-|   |                                                                      |
-| 2 | &lt;figure class=&quot;box&quot;&gt;Box 1&lt;/figure&gt;                             |
-|   |                                                                      |
-| 3 | &lt;/div&gt;                                                             |
-|   |                                                                      |
-| 4 | &lt;div class=&quot;original original-2&quot;&gt;                                |
-|   |                                                                      |
-| 5 | &lt;figure class=&quot;box&quot;&gt;Box 2&lt;/figure&gt;                             |
-|   |                                                                      |
-| 6 | &lt;/div&gt;                                                             |
-|   |                                                                      |
-| 7 | &lt;div class=&quot;original original-3&quot;&gt;                                |
-|   |                                                                      |
-| 8 | &lt;figure class=&quot;box&quot;&gt;Box 3&lt;/figure&gt;                             |
-|   |                                                                      |
-| 9 | &lt;/div&gt;                                                             |
-|   |                                                                      |
-| 1 |                                                                      |
-| 0 |                                                                      |
+ 1  &lt;div class=&quot;original original-1&quot;&gt;                                
+                                                                         
+ 2  &lt;figure class=&quot;box&quot;&gt;Box 1&lt;/figure&gt;                             
+                                                                         
+ 3  &lt;/div&gt;                                                             
+                                                                         
+ 4  &lt;div class=&quot;original original-2&quot;&gt;                                
+                                                                         
+ 5  &lt;figure class=&quot;box&quot;&gt;Box 2&lt;/figure&gt;                             
+                                                                         
+ 6  &lt;/div&gt;                                                             
+                                                                         
+ 7  &lt;div class=&quot;original original-3&quot;&gt;                                
+                                                                         
+ 8  &lt;figure class=&quot;box&quot;&gt;Box 3&lt;/figure&gt;                             
+                                                                         
+ 9  &lt;/div&gt;                                                             
+                                                                         
+ 1                                                                       
+ 0                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **CSS**
 
 +---+----------------------------------------------------------------------+
-| 1 | .original {                                                          |
-|   |                                                                      |
-| 2 | perspective: 200px;                                                  |
-|   |                                                                      |
-| 3 | }                                                                    |
-|   |                                                                      |
-| 4 | .box {                                                               |
-|   |                                                                      |
-| 5 | transform: rotateX(45deg);                                           |
-|   |                                                                      |
-| 6 | }                                                                    |
-|   |                                                                      |
-| 7 | .original-1 {                                                        |
-|   |                                                                      |
-| 8 | perspective-origin: 0 0;                                             |
-|   |                                                                      |
-| 9 | }                                                                    |
-|   |                                                                      |
-| 1 | .original-2 {                                                        |
-| 0 |                                                                      |
-|   | perspective-origin: 75% 75%;                                         |
-| 1 |                                                                      |
-| 1 | }                                                                    |
-|   |                                                                      |
-| 1 | .original-3 {                                                        |
-| 2 |                                                                      |
-|   | perspective-origin: 20px 40px;                                       |
-| 1 |                                                                      |
-| 3 | }                                                                    |
-|   |                                                                      |
-| 1 |                                                                      |
-| 4 |                                                                      |
-|   |                                                                      |
-| 1 |                                                                      |
-| 5 |                                                                      |
-|   |                                                                      |
-| 1 |                                                                      |
-| 6 |                                                                      |
+ 1  .original {                                                          
+                                                                         
+ 2  perspective: 200px;                                                  
+                                                                         
+ 3  }                                                                    
+                                                                         
+ 4  .box {                                                               
+                                                                         
+ 5  transform: rotateX(45deg);                                           
+                                                                         
+ 6  }                                                                    
+                                                                         
+ 7  .original-1 {                                                        
+                                                                         
+ 8  perspective-origin: 0 0;                                             
+                                                                         
+ 9  }                                                                    
+                                                                         
+ 1  .original-2 {                                                        
+ 0                                                                       
+    perspective-origin: 75% 75%;                                         
+ 1                                                                       
+ 1  }                                                                    
+                                                                         
+ 1  .original-3 {                                                        
+ 2                                                                       
+    perspective-origin: 20px 40px;                                       
+ 1                                                                       
+ 3  }                                                                    
+                                                                         
+ 1                                                                       
+ 4                                                                       
+                                                                         
+ 1                                                                       
+ 5                                                                       
+                                                                         
+ 1                                                                       
+ 6                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -9570,39 +9214,39 @@ rotate the element counterclockwise.
 **HTML**
 
 +---+----------------------------------------------------------------------+
-| 1 | &lt;figure class=&quot;box-1&quot;&gt;Box 1&lt;/figure&gt;                           |
-|   |                                                                      |
-| 2 | &lt;figure class=&quot;box-2&quot;&gt;Box 2&lt;/figure&gt;                           |
-|   |                                                                      |
-| 3 | &lt;figure class=&quot;box-3&quot;&gt;Box 3&lt;/figure&gt;                           |
-|   |                                                                      |
-| 4 |                                                                      |
+ 1  &lt;figure class=&quot;box-1&quot;&gt;Box 1&lt;/figure&gt;                           
+                                                                         
+ 2  &lt;figure class=&quot;box-2&quot;&gt;Box 2&lt;/figure&gt;                           
+                                                                         
+ 3  &lt;figure class=&quot;box-3&quot;&gt;Box 3&lt;/figure&gt;                           
+                                                                         
+ 4                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **CSS**
 
 +---+----------------------------------------------------------------------+
-| 1 | .box-1 {                                                             |
-|   |                                                                      |
-| 2 | transform: perspective(200px) rotateX(45deg);                        |
-|   |                                                                      |
-| 3 | }                                                                    |
-|   |                                                                      |
-| 4 | .box-2 {                                                             |
-|   |                                                                      |
-| 5 | transform: perspective(200px) rotateY(45deg);                        |
-|   |                                                                      |
-| 6 | }                                                                    |
-|   |                                                                      |
-| 7 | .box-3 {                                                             |
-|   |                                                                      |
-| 8 | transform: perspective(200px) rotateZ(45deg);                        |
-|   |                                                                      |
-| 9 | }                                                                    |
-|   |                                                                      |
-| 1 |                                                                      |
-| 0 |                                                                      |
+ 1  .box-1 {                                                             
+                                                                         
+ 2  transform: perspective(200px) rotateX(45deg);                        
+                                                                         
+ 3  }                                                                    
+                                                                         
+ 4  .box-2 {                                                             
+                                                                         
+ 5  transform: perspective(200px) rotateY(45deg);                        
+                                                                         
+ 6  }                                                                    
+                                                                         
+ 7  .box-3 {                                                             
+                                                                         
+ 8  transform: perspective(200px) rotateZ(45deg);                        
+                                                                         
+ 9  }                                                                    
+                                                                         
+ 1                                                                       
+ 0                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -9621,30 +9265,30 @@ the rotateX in this case, the elements will appear to be unchanged.
 **HTML**
 
 +---+----------------------------------------------------------------------+
-| 1 | &lt;figure class=&quot;box-1&quot;&gt;Box 1&lt;/figure&gt;                           |
-|   |                                                                      |
-| 2 | &lt;figure class=&quot;box-2&quot;&gt;Box 2&lt;/figure&gt;                           |
-|   |                                                                      |
-| 3 |                                                                      |
+ 1  &lt;figure class=&quot;box-1&quot;&gt;Box 1&lt;/figure&gt;                           
+                                                                         
+ 2  &lt;figure class=&quot;box-2&quot;&gt;Box 2&lt;/figure&gt;                           
+                                                                         
+ 3                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **CSS**
 
 +---+----------------------------------------------------------------------+
-| 1 | .box-1 {                                                             |
-|   |                                                                      |
-| 2 | transform: perspective(200px) scaleZ(1.75) rotateX(45deg);           |
-|   |                                                                      |
-| 3 | }                                                                    |
-|   |                                                                      |
-| 4 | .box-2 {                                                             |
-|   |                                                                      |
-| 5 | transform: perspective(200px) scaleZ(.25) rotateX(45deg);            |
-|   |                                                                      |
-| 6 | }                                                                    |
-|   |                                                                      |
-| 7 |                                                                      |
+ 1  .box-1 {                                                             
+                                                                         
+ 2  transform: perspective(200px) scaleZ(1.75) rotateX(45deg);           
+                                                                         
+ 3  }                                                                    
+                                                                         
+ 4  .box-2 {                                                             
+                                                                         
+ 5  transform: perspective(200px) scaleZ(.25) rotateX(45deg);            
+                                                                         
+ 6  }                                                                    
+                                                                         
+ 7                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -9668,30 +9312,30 @@ for example.
 **HTML**
 
 +---+----------------------------------------------------------------------+
-| 1 | &lt;figure class=&quot;box-1&quot;&gt;Box 1&lt;/figure&gt;                           |
-|   |                                                                      |
-| 2 | &lt;figure class=&quot;box-2&quot;&gt;Box 2&lt;/figure&gt;                           |
-|   |                                                                      |
-| 3 |                                                                      |
+ 1  &lt;figure class=&quot;box-1&quot;&gt;Box 1&lt;/figure&gt;                           
+                                                                         
+ 2  &lt;figure class=&quot;box-2&quot;&gt;Box 2&lt;/figure&gt;                           
+                                                                         
+ 3                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **CSS**
 
 +---+----------------------------------------------------------------------+
-| 1 | .box-1 {                                                             |
-|   |                                                                      |
-| 2 | transform: perspective(200px) translateZ(-50px);                     |
-|   |                                                                      |
-| 3 | }                                                                    |
-|   |                                                                      |
-| 4 | .box-2 {                                                             |
-|   |                                                                      |
-| 5 | transform: perspective(200px) translateZ(50px);                      |
-|   |                                                                      |
-| 6 | }                                                                    |
-|   |                                                                      |
-| 7 |                                                                      |
+ 1  .box-1 {                                                             
+                                                                         
+ 2  transform: perspective(200px) translateZ(-50px);                     
+                                                                         
+ 3  }                                                                    
+                                                                         
+ 4  .box-2 {                                                             
+                                                                         
+ 5  transform: perspective(200px) translateZ(50px);                      
+                                                                         
+ 6  }                                                                    
+                                                                         
+ 7                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -9732,48 +9376,48 @@ lie flat on the two-dimensional plane.
 **HTML**
 
 +---+----------------------------------------------------------------------+
-| 1 | &lt;div class=&quot;rotate three-d&quot;&gt;                                     |
-|   |                                                                      |
-| 2 | &lt;figure class=&quot;box&quot;&gt;Box 1&lt;/figure&gt;                             |
-|   |                                                                      |
-| 3 | &lt;/div&gt;                                                             |
-|   |                                                                      |
-| 4 | &lt;div class=&quot;rotate&quot;&gt;                                             |
-|   |                                                                      |
-| 5 | &lt;figure class=&quot;box&quot;&gt;Box 2&lt;/figure&gt;                             |
-|   |                                                                      |
-| 6 | &lt;/div&gt;                                                             |
-|   |                                                                      |
-| 7 |                                                                      |
+ 1  &lt;div class=&quot;rotate three-d&quot;&gt;                                     
+                                                                         
+ 2  &lt;figure class=&quot;box&quot;&gt;Box 1&lt;/figure&gt;                             
+                                                                         
+ 3  &lt;/div&gt;                                                             
+                                                                         
+ 4  &lt;div class=&quot;rotate&quot;&gt;                                             
+                                                                         
+ 5  &lt;figure class=&quot;box&quot;&gt;Box 2&lt;/figure&gt;                             
+                                                                         
+ 6  &lt;/div&gt;                                                             
+                                                                         
+ 7                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **CSS**
 
 +---+----------------------------------------------------------------------+
-| 1 | .rotate {                                                            |
-|   |                                                                      |
-| 2 | transform: perspective(200px) rotateY(45deg);                        |
-|   |                                                                      |
-| 3 | }                                                                    |
-|   |                                                                      |
-| 4 | .three-d {                                                           |
-|   |                                                                      |
-| 5 | transform-style: preserve-3d;                                        |
-|   |                                                                      |
-| 6 | }                                                                    |
-|   |                                                                      |
-| 7 | .box {                                                               |
-|   |                                                                      |
-| 8 | transform: rotateX(15deg) translateZ(20px);                          |
-|   |                                                                      |
-| 9 | transform-origin: 0 0;                                               |
-|   |                                                                      |
-| 1 | }                                                                    |
-| 0 |                                                                      |
-|   |                                                                      |
-| 1 |                                                                      |
-| 1 |                                                                      |
+ 1  .rotate {                                                            
+                                                                         
+ 2  transform: perspective(200px) rotateY(45deg);                        
+                                                                         
+ 3  }                                                                    
+                                                                         
+ 4  .three-d {                                                           
+                                                                         
+ 5  transform-style: preserve-3d;                                        
+                                                                         
+ 6  }                                                                    
+                                                                         
+ 7  .box {                                                               
+                                                                         
+ 8  transform: rotateX(15deg) translateZ(20px);                          
+                                                                         
+ 9  transform-origin: 0 0;                                               
+                                                                         
+ 1  }                                                                    
+ 0                                                                       
+                                                                         
+ 1                                                                       
+ 1                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -9804,32 +9448,32 @@ using [[animations]{.underline}](https://css-tricks.com/almanac/properties/b/ba
 **HTML**
 
 +---+----------------------------------------------------------------------+
-| 1 | &lt;figure class=&quot;box-1&quot;&gt;Box 1&lt;/figure&gt;                           |
-|   |                                                                      |
-| 2 | &lt;figure class=&quot;box-2&quot;&gt;Box 2&lt;/figure&gt;                           |
-|   |                                                                      |
-| 3 |                                                                      |
+ 1  &lt;figure class=&quot;box-1&quot;&gt;Box 1&lt;/figure&gt;                           
+                                                                         
+ 2  &lt;figure class=&quot;box-2&quot;&gt;Box 2&lt;/figure&gt;                           
+                                                                         
+ 3                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **CSS**
 
 +---+----------------------------------------------------------------------+
-| 1 | .box-1 {                                                             |
-|   |                                                                      |
-| 2 | transform: rotateY(180deg);                                          |
-|   |                                                                      |
-| 3 | }                                                                    |
-|   |                                                                      |
-| 4 | .box-2 {                                                             |
-|   |                                                                      |
-| 5 | backface-visibility: hidden;                                         |
-|   |                                                                      |
-| 6 | transform: rotateY(180deg);                                          |
-|   |                                                                      |
-| 7 | }                                                                    |
-|   |                                                                      |
-| 8 |                                                                      |
+ 1  .box-1 {                                                             
+                                                                         
+ 2  transform: rotateY(180deg);                                          
+                                                                         
+ 3  }                                                                    
+                                                                         
+ 4  .box-2 {                                                             
+                                                                         
+ 5  backface-visibility: hidden;                                         
+                                                                         
+ 6  transform: rotateY(180deg);                                          
+                                                                         
+ 7  }                                                                    
+                                                                         
+ 8                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -9840,142 +9484,142 @@ using [[animations]{.underline}](https://css-tricks.com/almanac/properties/b/ba
 **HTML**
 
 +---+--------------------------------------------------------------------+
-| 1 | &lt;div class=&quot;cube-container&quot;&gt;                                   |
-|   |                                                                    |
-| 2 | &lt;div class=&quot;cube&quot;&gt;                                             |
-|   |                                                                    |
-| 3 | &lt;figure class=&quot;side front&quot;&gt;1&lt;/figure&gt;                        |
-|   |                                                                    |
-| 4 | &lt;figure class=&quot;side back&quot;&gt;2&lt;/figure&gt;                         |
-|   |                                                                    |
-| 5 | &lt;figure class=&quot;side left&quot;&gt;3&lt;/figure&gt;                         |
-|   |                                                                    |
-| 6 | &lt;figure class=&quot;side right&quot;&gt;4&lt;/figure&gt;                        |
-|   |                                                                    |
-| 7 | &lt;figure class=&quot;side top&quot;&gt;5&lt;/figure&gt;                          |
-|   |                                                                    |
-| 8 | &lt;figure class=&quot;side bottom&quot;&gt;6&lt;/figure&gt;                       |
-|   |                                                                    |
-| 9 | &lt;/div&gt;                                                           |
-|   |                                                                    |
-| 1 | &lt;/div&gt;                                                           |
-| 0 |                                                                    |
-|   |                                                                    |
-| 1 |                                                                    |
-| 1 |                                                                    |
+ 1  &lt;div class=&quot;cube-container&quot;&gt;                                   
+                                                                       
+ 2  &lt;div class=&quot;cube&quot;&gt;                                             
+                                                                       
+ 3  &lt;figure class=&quot;side front&quot;&gt;1&lt;/figure&gt;                        
+                                                                       
+ 4  &lt;figure class=&quot;side back&quot;&gt;2&lt;/figure&gt;                         
+                                                                       
+ 5  &lt;figure class=&quot;side left&quot;&gt;3&lt;/figure&gt;                         
+                                                                       
+ 6  &lt;figure class=&quot;side right&quot;&gt;4&lt;/figure&gt;                        
+                                                                       
+ 7  &lt;figure class=&quot;side top&quot;&gt;5&lt;/figure&gt;                          
+                                                                       
+ 8  &lt;figure class=&quot;side bottom&quot;&gt;6&lt;/figure&gt;                       
+                                                                       
+ 9  &lt;/div&gt;                                                           
+                                                                       
+ 1  &lt;/div&gt;                                                           
+ 0                                                                     
+                                                                       
+ 1                                                                     
+ 1                                                                     
 +===+====================================================================+
 +---+--------------------------------------------------------------------+
 
 **CSS**
 
 +---+-------------------------------------------------------------------+
-| 1 | .cube-container {                                                 |
-|   |                                                                   |
-| 2 | height: 200px;                                                    |
-|   |                                                                   |
-| 3 | perspective: 300;                                                 |
-|   |                                                                   |
-| 4 | position: relative;                                               |
-|   |                                                                   |
-| 5 | width: 200px;                                                     |
-|   |                                                                   |
-| 6 | }                                                                 |
-|   |                                                                   |
-| 7 | .cube {                                                           |
-|   |                                                                   |
-| 8 | height: 100%;                                                     |
-|   |                                                                   |
-| 9 | position: absolute;                                               |
-|   |                                                                   |
-| 1 | transform: translateZ(-100px);                                    |
-| 0 |                                                                   |
-|   | transform-style: preserve-3d;                                     |
-| 1 |                                                                   |
-| 1 | width: 100%;                                                      |
-|   |                                                                   |
-| 1 | }                                                                 |
-| 2 |                                                                   |
-|   | .side {                                                           |
-| 1 |                                                                   |
-| 3 | background: rgba(45, 179, 74, .3);                                |
-|   |                                                                   |
-| 1 | border: 2px solid #2db34a;                                        |
-| 4 |                                                                   |
-|   | height: 196px;                                                    |
-| 1 |                                                                   |
-| 5 | position: absolute;                                               |
-|   |                                                                   |
-| 1 | width: 196px;                                                     |
-| 6 |                                                                   |
-|   | }                                                                 |
-| 1 |                                                                   |
-| 7 | .front {                                                          |
-|   |                                                                   |
-| 1 | transform: translateZ(100px);                                     |
-| 8 |                                                                   |
-|   | }                                                                 |
-| 1 |                                                                   |
-| 9 | .back {                                                           |
-|   |                                                                   |
-| 2 | transform: rotateX(180deg) translateZ(100px);                     |
-| 0 |                                                                   |
-|   | }                                                                 |
-| 2 |                                                                   |
-| 1 | .left {                                                           |
-|   |                                                                   |
-| 2 | transform: rotateY(-90deg) translateZ(100px);                     |
-| 2 |                                                                   |
-|   | }                                                                 |
-| 2 |                                                                   |
-| 3 | .right {                                                          |
-|   |                                                                   |
-| 2 | transform: rotateY(90deg) translateZ(100px);                      |
-| 4 |                                                                   |
-|   | }                                                                 |
-| 2 |                                                                   |
-| 5 | .top {                                                            |
-|   |                                                                   |
-| 2 | transform: rotateX(90deg) translateZ(100px);                      |
-| 6 |                                                                   |
-|   | }                                                                 |
-| 2 |                                                                   |
-| 7 | .bottom {                                                         |
-|   |                                                                   |
-| 2 | transform: rotateX(-90deg) translateZ(100px);                     |
-| 8 |                                                                   |
-|   | }                                                                 |
-| 2 |                                                                   |
-| 9 |                                                                   |
-|   |                                                                   |
-| 3 |                                                                   |
-| 0 |                                                                   |
-|   |                                                                   |
-| 3 |                                                                   |
-| 1 |                                                                   |
-|   |                                                                   |
-| 3 |                                                                   |
-| 2 |                                                                   |
-|   |                                                                   |
-| 3 |                                                                   |
-| 3 |                                                                   |
-|   |                                                                   |
-| 3 |                                                                   |
-| 4 |                                                                   |
-|   |                                                                   |
-| 3 |                                                                   |
-| 5 |                                                                   |
-|   |                                                                   |
-| 3 |                                                                   |
-| 6 |                                                                   |
-|   |                                                                   |
-| 3 |                                                                   |
-| 7 |                                                                   |
-|   |                                                                   |
-| 3 |                                                                   |
-| 8 |                                                                   |
-|   |                                                                   |
-| 3 |                                                                   |
-| 9 |                                                                   |
+ 1  .cube-container {                                                 
+                                                                      
+ 2  height: 200px;                                                    
+                                                                      
+ 3  perspective: 300;                                                 
+                                                                      
+ 4  position: relative;                                               
+                                                                      
+ 5  width: 200px;                                                     
+                                                                      
+ 6  }                                                                 
+                                                                      
+ 7  .cube {                                                           
+                                                                      
+ 8  height: 100%;                                                     
+                                                                      
+ 9  position: absolute;                                               
+                                                                      
+ 1  transform: translateZ(-100px);                                    
+ 0                                                                    
+    transform-style: preserve-3d;                                     
+ 1                                                                    
+ 1  width: 100%;                                                      
+                                                                      
+ 1  }                                                                 
+ 2                                                                    
+    .side {                                                           
+ 1                                                                    
+ 3  background: rgba(45, 179, 74, .3);                                
+                                                                      
+ 1  border: 2px solid #2db34a;                                        
+ 4                                                                    
+    height: 196px;                                                    
+ 1                                                                    
+ 5  position: absolute;                                               
+                                                                      
+ 1  width: 196px;                                                     
+ 6                                                                    
+    }                                                                 
+ 1                                                                    
+ 7  .front {                                                          
+                                                                      
+ 1  transform: translateZ(100px);                                     
+ 8                                                                    
+    }                                                                 
+ 1                                                                    
+ 9  .back {                                                           
+                                                                      
+ 2  transform: rotateX(180deg) translateZ(100px);                     
+ 0                                                                    
+    }                                                                 
+ 2                                                                    
+ 1  .left {                                                           
+                                                                      
+ 2  transform: rotateY(-90deg) translateZ(100px);                     
+ 2                                                                    
+    }                                                                 
+ 2                                                                    
+ 3  .right {                                                          
+                                                                      
+ 2  transform: rotateY(90deg) translateZ(100px);                      
+ 4                                                                    
+    }                                                                 
+ 2                                                                    
+ 5  .top {                                                            
+                                                                      
+ 2  transform: rotateX(90deg) translateZ(100px);                      
+ 6                                                                    
+    }                                                                 
+ 2                                                                    
+ 7  .bottom {                                                         
+                                                                      
+ 2  transform: rotateX(-90deg) translateZ(100px);                     
+ 8                                                                    
+    }                                                                 
+ 2                                                                    
+ 9                                                                    
+                                                                      
+ 3                                                                    
+ 0                                                                    
+                                                                      
+ 3                                                                    
+ 1                                                                    
+                                                                      
+ 3                                                                    
+ 2                                                                    
+                                                                      
+ 3                                                                    
+ 3                                                                    
+                                                                      
+ 3                                                                    
+ 4                                                                    
+                                                                      
+ 3                                                                    
+ 5                                                                    
+                                                                      
+ 3                                                                    
+ 6                                                                    
+                                                                      
+ 3                                                                    
+ 7                                                                    
+                                                                      
+ 3                                                                    
+ 8                                                                    
+                                                                      
+ 3                                                                    
+ 9                                                                    
 +===+===================================================================+
 +---+-------------------------------------------------------------------+
 
@@ -10057,26 +9701,26 @@ In the example below the box will change its background color over the
 course of 1 second in a linear fashion.
 
 +---+----------------------------------------------------------------------+
-| 1 | .box {                                                               |
-|   |                                                                      |
-| 2 | background: #2db34a;                                                 |
-|   |                                                                      |
-| 3 | transition-property: background;                                     |
-|   |                                                                      |
-| 4 | transition-duration: 1s;                                             |
-|   |                                                                      |
-| 5 | transition-timing-function: linear;                                  |
-|   |                                                                      |
-| 6 | }                                                                    |
-|   |                                                                      |
-| 7 | .box:hover {                                                         |
-|   |                                                                      |
-| 8 | background: #ff7b29;                                                 |
-|   |                                                                      |
-| 9 | }                                                                    |
-|   |                                                                      |
-| 1 |                                                                      |
-| 0 |                                                                      |
+ 1  .box {                                                               
+                                                                         
+ 2  background: #2db34a;                                                 
+                                                                         
+ 3  transition-property: background;                                     
+                                                                         
+ 4  transition-duration: 1s;                                             
+                                                                         
+ 5  transition-timing-function: linear;                                  
+                                                                         
+ 6  }                                                                    
+                                                                         
+ 7  .box:hover {                                                         
+                                                                         
+ 8  background: #ff7b29;                                                 
+                                                                         
+ 9  }                                                                    
+                                                                         
+ 1                                                                       
+ 0                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -10093,53 +9737,53 @@ For reference, the prefixed version of the code above would look like
 the following.
 
 +---+--------------------------------------------------------------------+
-| 1 | .box {                                                             |
-|   |                                                                    |
-| 2 | background: #2db34a;                                               |
-|   |                                                                    |
-| 3 | -webkit-transition-property: background;                           |
-|   |                                                                    |
-| 4 | -moz-transition-property: background;                              |
-|   |                                                                    |
-| 5 | -o-transition-property: background;                                |
-|   |                                                                    |
-| 6 | transition-property: background;                                   |
-|   |                                                                    |
-| 7 | -webkit-transition-duration: 1s;                                   |
-|   |                                                                    |
-| 8 | -moz-transition-duration: 1s;                                      |
-|   |                                                                    |
-| 9 | -o-transition-duration: 1s;                                        |
-|   |                                                                    |
-| 1 | transition-duration: 1s;                                           |
-| 0 |                                                                    |
-|   | -webkit-transition-timing-function: linear;                        |
-| 1 |                                                                    |
-| 1 | -moz-transition-timing-function: linear;                           |
-|   |                                                                    |
-| 1 | -o-transition-timing-function: linear;                             |
-| 2 |                                                                    |
-|   | transition-timing-function: linear;                                |
-| 1 |                                                                    |
-| 3 | }                                                                  |
-|   |                                                                    |
-| 1 | .box:hover {                                                       |
-| 4 |                                                                    |
-|   | background: #ff7b29;                                               |
-| 1 |                                                                    |
-| 5 | }                                                                  |
-|   |                                                                    |
-| 1 |                                                                    |
-| 6 |                                                                    |
-|   |                                                                    |
-| 1 |                                                                    |
-| 7 |                                                                    |
-|   |                                                                    |
-| 1 |                                                                    |
-| 8 |                                                                    |
-|   |                                                                    |
-| 1 |                                                                    |
-| 9 |                                                                    |
+ 1  .box {                                                             
+                                                                       
+ 2  background: #2db34a;                                               
+                                                                       
+ 3  -webkit-transition-property: background;                           
+                                                                       
+ 4  -moz-transition-property: background;                              
+                                                                       
+ 5  -o-transition-property: background;                                
+                                                                       
+ 6  transition-property: background;                                   
+                                                                       
+ 7  -webkit-transition-duration: 1s;                                   
+                                                                       
+ 8  -moz-transition-duration: 1s;                                      
+                                                                       
+ 9  -o-transition-duration: 1s;                                        
+                                                                       
+ 1  transition-duration: 1s;                                           
+ 0                                                                     
+    -webkit-transition-timing-function: linear;                        
+ 1                                                                     
+ 1  -moz-transition-timing-function: linear;                           
+                                                                       
+ 1  -o-transition-timing-function: linear;                             
+ 2                                                                     
+    transition-timing-function: linear;                                
+ 1                                                                     
+ 3  }                                                                  
+                                                                       
+ 1  .box:hover {                                                       
+ 4                                                                     
+    background: #ff7b29;                                               
+ 1                                                                     
+ 5  }                                                                  
+                                                                       
+ 1                                                                     
+ 6                                                                     
+                                                                       
+ 1                                                                     
+ 7                                                                     
+                                                                       
+ 1                                                                     
+ 8                                                                     
+                                                                       
+ 1                                                                     
+ 9                                                                     
 +===+====================================================================+
 +---+--------------------------------------------------------------------+
 
@@ -10165,32 +9809,32 @@ keyword value all may be used to transition all properties of an
 element.
 
 +---+----------------------------------------------------------------------+
-| 1 | .box {                                                               |
-|   |                                                                      |
-| 2 | background: #2db34a;                                                 |
-|   |                                                                      |
-| 3 | border-radius: 6px                                                   |
-|   |                                                                      |
-| 4 | transition-property: background, border-radius;                      |
-|   |                                                                      |
-| 5 | transition-duration: 1s;                                             |
-|   |                                                                      |
-| 6 | transition-timing-function: linear;                                  |
-|   |                                                                      |
-| 7 | }                                                                    |
-|   |                                                                      |
-| 8 | .box:hover {                                                         |
-|   |                                                                      |
-| 9 | background: #ff7b29;                                                 |
-|   |                                                                      |
-| 1 | border-radius: 50%;                                                  |
-| 0 |                                                                      |
-|   | }                                                                    |
-| 1 |                                                                      |
-| 1 |                                                                      |
-|   |                                                                      |
-| 1 |                                                                      |
-| 2 |                                                                      |
+ 1  .box {                                                               
+                                                                         
+ 2  background: #2db34a;                                                 
+                                                                         
+ 3  border-radius: 6px                                                   
+                                                                         
+ 4  transition-property: background, border-radius;                      
+                                                                         
+ 5  transition-duration: 1s;                                             
+                                                                         
+ 6  transition-timing-function: linear;                                  
+                                                                         
+ 7  }                                                                    
+                                                                         
+ 8  .box:hover {                                                         
+                                                                         
+ 9  background: #ff7b29;                                                 
+                                                                         
+ 1  border-radius: 50%;                                                  
+ 0                                                                       
+    }                                                                    
+ 1                                                                       
+ 1                                                                       
+                                                                         
+ 1                                                                       
+ 2                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -10295,32 +9939,32 @@ value declared, that one value will be the duration of all the
 transitioned properties.
 
 +---+----------------------------------------------------------------------+
-| 1 | .box {                                                               |
-|   |                                                                      |
-| 2 | background: #2db34a;                                                 |
-|   |                                                                      |
-| 3 | border-radius: 6px;                                                  |
-|   |                                                                      |
-| 4 | transition-property: background, border-radius;                      |
-|   |                                                                      |
-| 5 | transition-duration: .2s, 1s;                                        |
-|   |                                                                      |
-| 6 | transition-timing-function: linear;                                  |
-|   |                                                                      |
-| 7 | }                                                                    |
-|   |                                                                      |
-| 8 | .box:hover {                                                         |
-|   |                                                                      |
-| 9 | background: #ff7b29;                                                 |
-|   |                                                                      |
-| 1 | border-radius: 50%;                                                  |
-| 0 |                                                                      |
-|   | }                                                                    |
-| 1 |                                                                      |
-| 1 |                                                                      |
-|   |                                                                      |
-| 1 |                                                                      |
-| 2 |                                                                      |
+ 1  .box {                                                               
+                                                                         
+ 2  background: #2db34a;                                                 
+                                                                         
+ 3  border-radius: 6px;                                                  
+                                                                         
+ 4  transition-property: background, border-radius;                      
+                                                                         
+ 5  transition-duration: .2s, 1s;                                        
+                                                                         
+ 6  transition-timing-function: linear;                                  
+                                                                         
+ 7  }                                                                    
+                                                                         
+ 8  .box:hover {                                                         
+                                                                         
+ 9  background: #ff7b29;                                                 
+                                                                         
+ 1  border-radius: 50%;                                                  
+ 0                                                                       
+    }                                                                    
+ 1                                                                       
+ 1                                                                       
+                                                                         
+ 1                                                                       
+ 2                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -10354,32 +9998,32 @@ functions. These timing function values, as with other transition
 property values, may be declared as comma separated values.
 
 +---+----------------------------------------------------------------------+
-| 1 | .box {                                                               |
-|   |                                                                      |
-| 2 | background: #2db34a;                                                 |
-|   |                                                                      |
-| 3 | border-radius: 6px;                                                  |
-|   |                                                                      |
-| 4 | transition-property: background, border-radius;                      |
-|   |                                                                      |
-| 5 | transition-duration: .2s, 1s;                                        |
-|   |                                                                      |
-| 6 | transition-timing-function: linear, ease-in;                         |
-|   |                                                                      |
-| 7 | }                                                                    |
-|   |                                                                      |
-| 8 | .box:hover {                                                         |
-|   |                                                                      |
-| 9 | background: #ff7b29;                                                 |
-|   |                                                                      |
-| 1 | border-radius: 50%;                                                  |
-| 0 |                                                                      |
-|   | }                                                                    |
-| 1 |                                                                      |
-| 1 |                                                                      |
-|   |                                                                      |
-| 1 |                                                                      |
-| 2 |                                                                      |
+ 1  .box {                                                               
+                                                                         
+ 2  background: #2db34a;                                                 
+                                                                         
+ 3  border-radius: 6px;                                                  
+                                                                         
+ 4  transition-property: background, border-radius;                      
+                                                                         
+ 5  transition-duration: .2s, 1s;                                        
+                                                                         
+ 6  transition-timing-function: linear, ease-in;                         
+                                                                         
+ 7  }                                                                    
+                                                                         
+ 8  .box:hover {                                                         
+                                                                         
+ 9  background: #ff7b29;                                                 
+                                                                         
+ 1  border-radius: 50%;                                                  
+ 0                                                                       
+    }                                                                    
+ 1                                                                       
+ 1                                                                       
+                                                                         
+ 1                                                                       
+ 2                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -10395,35 +10039,35 @@ other transition properties, to delay numerous transitions, each delay
 can be declared as comma separated values.
 
 +---+----------------------------------------------------------------------+
-| 1 | .box {                                                               |
-|   |                                                                      |
-| 2 | background: #2db34a;                                                 |
-|   |                                                                      |
-| 3 | border-radius: 6px                                                   |
-|   |                                                                      |
-| 4 | transition-property: background, border-radius;                      |
-|   |                                                                      |
-| 5 | transition-duration: .2s, 1s;                                        |
-|   |                                                                      |
-| 6 | transition-timing-function: linear, ease-in;                         |
-|   |                                                                      |
-| 7 | transition-delay: 0s, 1s;                                            |
-|   |                                                                      |
-| 8 | }                                                                    |
-|   |                                                                      |
-| 9 | .box:hover {                                                         |
-|   |                                                                      |
-| 1 | background: #ff7b29;                                                 |
-| 0 |                                                                      |
-|   | border-radius: 50%;                                                  |
-| 1 |                                                                      |
-| 1 | }                                                                    |
-|   |                                                                      |
-| 1 |                                                                      |
-| 2 |                                                                      |
-|   |                                                                      |
-| 1 |                                                                      |
-| 3 |                                                                      |
+ 1  .box {                                                               
+                                                                         
+ 2  background: #2db34a;                                                 
+                                                                         
+ 3  border-radius: 6px                                                   
+                                                                         
+ 4  transition-property: background, border-radius;                      
+                                                                         
+ 5  transition-duration: .2s, 1s;                                        
+                                                                         
+ 6  transition-timing-function: linear, ease-in;                         
+                                                                         
+ 7  transition-delay: 0s, 1s;                                            
+                                                                         
+ 8  }                                                                    
+                                                                         
+ 9  .box:hover {                                                         
+                                                                         
+ 1  background: #ff7b29;                                                 
+ 0                                                                       
+    border-radius: 50%;                                                  
+ 1                                                                       
+ 1  }                                                                    
+                                                                         
+ 1                                                                       
+ 2                                                                       
+                                                                         
+ 1                                                                       
+ 3                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -10445,26 +10089,26 @@ transition values, then use a comma to separate each additional group of
 transition values.
 
 +---+----------------------------------------------------------------------+
-| 1 | .box {                                                               |
-|   |                                                                      |
-| 2 | background: #2db34a;                                                 |
-|   |                                                                      |
-| 3 | border-radius: 6px;                                                  |
-|   |                                                                      |
-| 4 | transition: background .2s linear, border-radius 1s ease-in 1s;      |
-|   |                                                                      |
-| 5 | }                                                                    |
-|   |                                                                      |
-| 6 | .box:hover {                                                         |
-|   |                                                                      |
-| 7 | color: #ff7b29;                                                      |
-|   |                                                                      |
-| 8 | border-radius: 50%;                                                  |
-|   |                                                                      |
-| 9 | }                                                                    |
-|   |                                                                      |
-| 1 |                                                                      |
-| 0 |                                                                      |
+ 1  .box {                                                               
+                                                                         
+ 2  background: #2db34a;                                                 
+                                                                         
+ 3  border-radius: 6px;                                                  
+                                                                         
+ 4  transition: background .2s linear, border-radius 1s ease-in 1s;      
+                                                                         
+ 5  }                                                                    
+                                                                         
+ 6  .box:hover {                                                         
+                                                                         
+ 7  color: #ff7b29;                                                      
+                                                                         
+ 8  border-radius: 50%;                                                  
+                                                                         
+ 9  }                                                                    
+                                                                         
+ 1                                                                       
+ 0                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -10475,59 +10119,59 @@ transition values.
 <b>HTML**
 
 +---+--------------------------------------------------------------------+
-| 1 | &lt;button&gt;Awesome Button&lt;/button&gt;                                |
-|   |                                                                    |
-| 2 |                                                                    |
+ 1  &lt;button&gt;Awesome Button&lt;/button&gt;                                
+                                                                       
+ 2                                                                     
 +===+====================================================================+
 +---+--------------------------------------------------------------------+
 
 <b>CSS**
 
 +---+--------------------------------------------------------------------+
-| 1 | button {                                                           |
-|   |                                                                    |
-| 2 | border: 0;                                                         |
-|   |                                                                    |
-| 3 | background: #0087cc;                                               |
-|   |                                                                    |
-| 4 | border-radius: 4px;                                                |
-|   |                                                                    |
-| 5 | box-shadow: 0 5px 0 #006599;                                       |
-|   |                                                                    |
-| 6 | color: #fff;                                                       |
-|   |                                                                    |
-| 7 | cursor: pointer;                                                   |
-|   |                                                                    |
-| 8 | font: inherit;                                                     |
-|   |                                                                    |
-| 9 | margin: 0;                                                         |
-|   |                                                                    |
-| 1 | outline: 0;                                                        |
-| 0 |                                                                    |
-|   | padding: 12px 20px;                                                |
-| 1 |                                                                    |
-| 1 | transition: all .1s linear;                                        |
-|   |                                                                    |
-| 1 | }                                                                  |
-| 2 |                                                                    |
-|   | button:active {                                                    |
-| 1 |                                                                    |
-| 3 | box-shadow: 0 2px 0 #006599;                                       |
-|   |                                                                    |
-| 1 | transform: translateY(3px);                                        |
-| 4 |                                                                    |
-|   | }                                                                  |
-| 1 |                                                                    |
-| 5 |                                                                    |
-|   |                                                                    |
-| 1 |                                                                    |
-| 6 |                                                                    |
-|   |                                                                    |
-| 1 |                                                                    |
-| 7 |                                                                    |
-|   |                                                                    |
-| 1 |                                                                    |
-| 8 |                                                                    |
+ 1  button {                                                           
+                                                                       
+ 2  border: 0;                                                         
+                                                                       
+ 3  background: #0087cc;                                               
+                                                                       
+ 4  border-radius: 4px;                                                
+                                                                       
+ 5  box-shadow: 0 5px 0 #006599;                                       
+                                                                       
+ 6  color: #fff;                                                       
+                                                                       
+ 7  cursor: pointer;                                                   
+                                                                       
+ 8  font: inherit;                                                     
+                                                                       
+ 9  margin: 0;                                                         
+                                                                       
+ 1  outline: 0;                                                        
+ 0                                                                     
+    padding: 12px 20px;                                                
+ 1                                                                     
+ 1  transition: all .1s linear;                                        
+                                                                       
+ 1  }                                                                  
+ 2                                                                     
+    button:active {                                                    
+ 1                                                                     
+ 3  box-shadow: 0 2px 0 #006599;                                       
+                                                                       
+ 1  transform: translateY(3px);                                        
+ 4                                                                     
+    }                                                                  
+ 1                                                                     
+ 5                                                                     
+                                                                       
+ 1                                                                     
+ 6                                                                     
+                                                                       
+ 1                                                                     
+ 7                                                                     
+                                                                       
+ 1                                                                     
+ 8                                                                     
 +===+====================================================================+
 +---+--------------------------------------------------------------------+
 
@@ -10538,93 +10182,93 @@ transition values.
 <b>HTML**
 
 +---+--------------------------------------------------------------------+
-| 1 | &lt;div class=&quot;card-container&quot;&gt;                                   |
-|   |                                                                    |
-| 2 | &lt;div class=&quot;card&quot;&gt;                                             |
-|   |                                                                    |
-| 3 | &lt;div class=&quot;side&quot;&gt;&#8230;&lt;/div&gt;                                 |
-|   |                                                                    |
-| 4 | &lt;div class=&quot;side back&quot;&gt;&#8230;&lt;/div&gt;                            |
-|   |                                                                    |
-| 5 | &lt;/div&gt;                                                           |
-|   |                                                                    |
-| 6 | &lt;/div&gt;                                                           |
-|   |                                                                    |
-| 7 |                                                                    |
+ 1  &lt;div class=&quot;card-container&quot;&gt;                                   
+                                                                       
+ 2  &lt;div class=&quot;card&quot;&gt;                                             
+                                                                       
+ 3  &lt;div class=&quot;side&quot;&gt;&#8230;&lt;/div&gt;                                 
+                                                                       
+ 4  &lt;div class=&quot;side back&quot;&gt;&#8230;&lt;/div&gt;                            
+                                                                       
+ 5  &lt;/div&gt;                                                           
+                                                                       
+ 6  &lt;/div&gt;                                                           
+                                                                       
+ 7                                                                     
 +===+====================================================================+
 +---+--------------------------------------------------------------------+
 
 <b>CSS**
 
 +---+--------------------------------------------------------------------+
-| 1 | .card-container {                                                  |
-|   |                                                                    |
-| 2 | height: 150px;                                                     |
-|   |                                                                    |
-| 3 | perspective: 600;                                                  |
-|   |                                                                    |
-| 4 | position: relative;                                                |
-|   |                                                                    |
-| 5 | width: 150px;                                                      |
-|   |                                                                    |
-| 6 | }                                                                  |
-|   |                                                                    |
-| 7 | .card {                                                            |
-|   |                                                                    |
-| 8 | height: 100%;                                                      |
-|   |                                                                    |
-| 9 | position: absolute;                                                |
-|   |                                                                    |
-| 1 | transform-style: preserve-3d;                                      |
-| 0 |                                                                    |
-|   | transition: all 1s ease-in-out;                                    |
-| 1 |                                                                    |
-| 1 | width: 100%;                                                       |
-|   |                                                                    |
-| 1 | }                                                                  |
-| 2 |                                                                    |
-|   | .card:hover {                                                      |
-| 1 |                                                                    |
-| 3 | transform: rotateY(180deg);                                        |
-|   |                                                                    |
-| 1 | }                                                                  |
-| 4 |                                                                    |
-|   | .card .side {                                                      |
-| 1 |                                                                    |
-| 5 | backface-visibility: hidden;                                       |
-|   |                                                                    |
-| 1 | height: 100%;                                                      |
-| 6 |                                                                    |
-|   | position: absolute;                                                |
-| 1 |                                                                    |
-| 7 | width: 100%;                                                       |
-|   |                                                                    |
-| 1 | }                                                                  |
-| 8 |                                                                    |
-|   | .card .back {                                                      |
-| 1 |                                                                    |
-| 9 | transform: rotateY(180deg);                                        |
-|   |                                                                    |
-| 2 | }                                                                  |
-| 0 |                                                                    |
-|   |                                                                    |
-| 2 |                                                                    |
-| 1 |                                                                    |
-|   |                                                                    |
-| 2 |                                                                    |
-| 2 |                                                                    |
-|   |                                                                    |
-| 2 |                                                                    |
-| 3 |                                                                    |
-|   |                                                                    |
-| 2 |                                                                    |
-| 4 |                                                                    |
-|   |                                                                    |
-| 2 |                                                                    |
-| 5 |                                                                    |
-|   |                                                                    |
-| 2 |                                                                    |
-| 6 |                                                                    |
+ 1  .card-container {                                                  
+                                                                       
+ 2  height: 150px;                                                     
+                                                                       
+ 3  perspective: 600;                                                  
+                                                                       
+ 4  position: relative;                                                
+                                                                       
+ 5  width: 150px;                                                      
+                                                                       
+ 6  }                                                                  
+                                                                       
+ 7  .card {                                                            
+                                                                       
+ 8  height: 100%;                                                      
+                                                                       
+ 9  position: absolute;                                                
+                                                                       
+ 1  transform-style: preserve-3d;                                      
+ 0                                                                     
+    transition: all 1s ease-in-out;                                    
+ 1                                                                     
+ 1  width: 100%;                                                       
+                                                                       
+ 1  }                                                                  
+ 2                                                                     
+    .card:hover {                                                      
+ 1                                                                     
+ 3  transform: rotateY(180deg);                                        
+                                                                       
+ 1  }                                                                  
+ 4                                                                     
+    .card .side {                                                      
+ 1                                                                     
+ 5  backface-visibility: hidden;                                       
+                                                                       
+ 1  height: 100%;                                                      
+ 6                                                                     
+    position: absolute;                                                
+ 1                                                                     
+ 7  width: 100%;                                                       
+                                                                       
+ 1  }                                                                  
+ 8                                                                     
+    .card .back {                                                      
+ 1                                                                     
+ 9  transform: rotateY(180deg);                                        
+                                                                       
+ 2  }                                                                  
+ 0                                                                     
+                                                                       
+ 2                                                                     
+ 1                                                                     
+                                                                       
+ 2                                                                     
+ 2                                                                     
+                                                                       
+ 2                                                                     
+ 3                                                                     
+                                                                       
+ 2                                                                     
+ 4                                                                     
+                                                                       
+ 2                                                                     
+ 5                                                                     
+                                                                       
+ 2                                                                     
+ 6                                                                     
 +===+====================================================================+
 +---+--------------------------------------------------------------------+
 
@@ -10647,41 +10291,41 @@ name, any animation breakpoints, and the properties intended to be
 animated.
 
 +---+----------------------------------------------------------------------+
-| 1 | &#0064;keyframes slide {                                                  |
-|   |                                                                      |
-| 2 | 0% {                                                                 |
-|   |                                                                      |
-| 3 | left: 0;                                                             |
-|   |                                                                      |
-| 4 | top: 0;                                                              |
-|   |                                                                      |
-| 5 | }                                                                    |
-|   |                                                                      |
-| 6 | 50% {                                                                |
-|   |                                                                      |
-| 7 | left: 244px;                                                         |
-|   |                                                                      |
-| 8 | top: 100px;                                                          |
-|   |                                                                      |
-| 9 | }                                                                    |
-|   |                                                                      |
-| 1 | 100% {                                                               |
-| 0 |                                                                      |
-|   | left: 488px;                                                         |
-| 1 |                                                                      |
-| 1 | top: 0;                                                              |
-|   |                                                                      |
-| 1 | }                                                                    |
-| 2 |                                                                      |
-|   | }                                                                    |
-| 1 |                                                                      |
-| 3 |                                                                      |
-|   |                                                                      |
-| 1 |                                                                      |
-| 4 |                                                                      |
-|   |                                                                      |
-| 1 |                                                                      |
-| 5 |                                                                      |
+ 1  &#0064;keyframes slide {                                                  
+                                                                         
+ 2  0% {                                                                 
+                                                                         
+ 3  left: 0;                                                             
+                                                                         
+ 4  top: 0;                                                              
+                                                                         
+ 5  }                                                                    
+                                                                         
+ 6  50% {                                                                
+                                                                         
+ 7  left: 244px;                                                         
+                                                                         
+ 8  top: 100px;                                                          
+                                                                         
+ 9  }                                                                    
+                                                                         
+ 1  100% {                                                               
+ 0                                                                       
+    left: 488px;                                                         
+ 1                                                                       
+ 1  top: 0;                                                              
+                                                                         
+ 1  }                                                                    
+ 2                                                                       
+    }                                                                    
+ 1                                                                       
+ 3                                                                       
+                                                                         
+ 1                                                                       
+ 4                                                                       
+                                                                         
+ 1                                                                       
+ 5                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -10725,13 +10369,13 @@ property value. The animation-name declaration is applied to the element
 in which the animation is to be applied to.
 
 +---+----------------------------------------------------------------------+
-| 1 | .stage:hover .ball {                                                 |
-|   |                                                                      |
-| 2 | animation-name: slide;                                               |
-|   |                                                                      |
-| 3 | }                                                                    |
-|   |                                                                      |
-| 4 |                                                                      |
+ 1  .stage:hover .ball {                                                 
+                                                                         
+ 2  animation-name: slide;                                               
+                                                                         
+ 3  }                                                                    
+                                                                         
+ 4                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -10748,15 +10392,15 @@ duration declared using the animation-duration property. As with
 transitions, the duration may be set in seconds or milliseconds.
 
 +---+----------------------------------------------------------------------+
-| 1 | .stage:hover .ball {                                                 |
-|   |                                                                      |
-| 2 | animation-name: slide;                                               |
-|   |                                                                      |
-| 3 | animation-duration: 2s;                                              |
-|   |                                                                      |
-| 4 | }                                                                    |
-|   |                                                                      |
-| 5 |                                                                      |
+ 1  .stage:hover .ball {                                                 
+                                                                         
+ 2  animation-name: slide;                                               
+                                                                         
+ 3  animation-duration: 2s;                                              
+                                                                         
+ 4  }                                                                    
+                                                                         
+ 5                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -10766,19 +10410,19 @@ respectively. The values for these properties mimic and behave just as
 they do with transitions.
 
 +---+----------------------------------------------------------------------+
-| 1 | .stage:hover .ball {                                                 |
-|   |                                                                      |
-| 2 | animation-name: slide;                                               |
-|   |                                                                      |
-| 3 | animation-duration: 2s;                                              |
-|   |                                                                      |
-| 4 | animation-timing-function: ease-in-out;                              |
-|   |                                                                      |
-| 5 | animation-delay: .5s;                                                |
-|   |                                                                      |
-| 6 | }                                                                    |
-|   |                                                                      |
-| 7 |                                                                      |
+ 1  .stage:hover .ball {                                                 
+                                                                         
+ 2  animation-name: slide;                                               
+                                                                         
+ 3  animation-duration: 2s;                                              
+                                                                         
+ 4  animation-timing-function: ease-in-out;                              
+                                                                         
+ 5  animation-delay: .5s;                                                
+                                                                         
+ 6  }                                                                    
+                                                                         
+ 7                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -10788,99 +10432,99 @@ the left, however only when hovering over the stage.
 <b>HTML**
 
 +---+----------------------------------------------------------------------+
-| 1 | &lt;div class=&quot;stage&quot;&gt;                                              |
-|   |                                                                      |
-| 2 | &lt;figure class=&quot;ball&quot;&gt;&lt;/figure&gt;                                 |
-|   |                                                                      |
-| 3 | &lt;/div&gt;                                                             |
-|   |                                                                      |
-| 4 |                                                                      |
+ 1  &lt;div class=&quot;stage&quot;&gt;                                              
+                                                                         
+ 2  &lt;figure class=&quot;ball&quot;&gt;&lt;/figure&gt;                                 
+                                                                         
+ 3  &lt;/div&gt;                                                             
+                                                                         
+ 4                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 <b>CSS**
 
 +---+----------------------------------------------------------------------+
-| 1 | &#0064;keyframes slide {                                                  |
-|   |                                                                      |
-| 2 | 0% {                                                                 |
-|   |                                                                      |
-| 3 | left: 0;                                                             |
-|   |                                                                      |
-| 4 | top: 0;                                                              |
-|   |                                                                      |
-| 5 | }                                                                    |
-|   |                                                                      |
-| 6 | 50% {                                                                |
-|   |                                                                      |
-| 7 | left: 244px;                                                         |
-|   |                                                                      |
-| 8 | top: 100px;                                                          |
-|   |                                                                      |
-| 9 | }                                                                    |
-|   |                                                                      |
-| 1 | 100% {                                                               |
-| 0 |                                                                      |
-|   | left: 488px;                                                         |
-| 1 |                                                                      |
-| 1 | top: 0;                                                              |
-|   |                                                                      |
-| 1 | }                                                                    |
-| 2 |                                                                      |
-|   | }                                                                    |
-| 1 |                                                                      |
-| 3 | .stage {                                                             |
-|   |                                                                      |
-| 1 | height: 150px;                                                       |
-| 4 |                                                                      |
-|   | position: relative;                                                  |
-| 1 |                                                                      |
-| 5 | }                                                                    |
-|   |                                                                      |
-| 1 | .ball {                                                              |
-| 6 |                                                                      |
-|   | height: 50px;                                                        |
-| 1 |                                                                      |
-| 7 | position: absolute;                                                  |
-|   |                                                                      |
-| 1 | width: 50px;                                                         |
-| 8 |                                                                      |
-|   | }                                                                    |
-| 1 |                                                                      |
-| 9 | .stage:hover .ball {                                                 |
-|   |                                                                      |
-| 2 | animation-name: slide;                                               |
-| 0 |                                                                      |
-|   | animation-duration: 2s;                                              |
-| 2 |                                                                      |
-| 1 | animation-timing-function: ease-in-out;                              |
-|   |                                                                      |
-| 2 | animation-delay: .5s;                                                |
-| 2 |                                                                      |
-|   | }                                                                    |
-| 2 |                                                                      |
-| 3 |                                                                      |
-|   |                                                                      |
-| 2 |                                                                      |
-| 4 |                                                                      |
-|   |                                                                      |
-| 2 |                                                                      |
-| 5 |                                                                      |
-|   |                                                                      |
-| 2 |                                                                      |
-| 6 |                                                                      |
-|   |                                                                      |
-| 2 |                                                                      |
-| 7 |                                                                      |
-|   |                                                                      |
-| 2 |                                                                      |
-| 8 |                                                                      |
-|   |                                                                      |
-| 2 |                                                                      |
-| 9 |                                                                      |
-|   |                                                                      |
-| 3 |                                                                      |
-| 0 |                                                                      |
+ 1  &#0064;keyframes slide {                                                  
+                                                                         
+ 2  0% {                                                                 
+                                                                         
+ 3  left: 0;                                                             
+                                                                         
+ 4  top: 0;                                                              
+                                                                         
+ 5  }                                                                    
+                                                                         
+ 6  50% {                                                                
+                                                                         
+ 7  left: 244px;                                                         
+                                                                         
+ 8  top: 100px;                                                          
+                                                                         
+ 9  }                                                                    
+                                                                         
+ 1  100% {                                                               
+ 0                                                                       
+    left: 488px;                                                         
+ 1                                                                       
+ 1  top: 0;                                                              
+                                                                         
+ 1  }                                                                    
+ 2                                                                       
+    }                                                                    
+ 1                                                                       
+ 3  .stage {                                                             
+                                                                         
+ 1  height: 150px;                                                       
+ 4                                                                       
+    position: relative;                                                  
+ 1                                                                       
+ 5  }                                                                    
+                                                                         
+ 1  .ball {                                                              
+ 6                                                                       
+    height: 50px;                                                        
+ 1                                                                       
+ 7  position: absolute;                                                  
+                                                                         
+ 1  width: 50px;                                                         
+ 8                                                                       
+    }                                                                    
+ 1                                                                       
+ 9  .stage:hover .ball {                                                 
+                                                                         
+ 2  animation-name: slide;                                               
+ 0                                                                       
+    animation-duration: 2s;                                              
+ 2                                                                       
+ 1  animation-timing-function: ease-in-out;                              
+                                                                         
+ 2  animation-delay: .5s;                                                
+ 2                                                                       
+    }                                                                    
+ 2                                                                       
+ 3                                                                       
+                                                                         
+ 2                                                                       
+ 4                                                                       
+                                                                         
+ 2                                                                       
+ 5                                                                       
+                                                                         
+ 2                                                                       
+ 6                                                                       
+                                                                         
+ 2                                                                       
+ 7                                                                       
+                                                                         
+ 2                                                                       
+ 8                                                                       
+                                                                         
+ 2                                                                       
+ 9                                                                       
+                                                                         
+ 3                                                                       
+ 0                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -10906,21 +10550,21 @@ times as specified, while the infinite keyword will repeat the animation
 indefinitely in a never ending fashion.
 
 +---+----------------------------------------------------------------------+
-| 1 | .stage:hover .ball {                                                 |
-|   |                                                                      |
-| 2 | animation-name: slide;                                               |
-|   |                                                                      |
-| 3 | animation-duration: 2s;                                              |
-|   |                                                                      |
-| 4 | animation-timing-function: ease-in-out;                              |
-|   |                                                                      |
-| 5 | animation-delay: .5s;                                                |
-|   |                                                                      |
-| 6 | animation-iteration-count: infinite;                                 |
-|   |                                                                      |
-| 7 | }                                                                    |
-|   |                                                                      |
-| 8 |                                                                      |
+ 1  .stage:hover .ball {                                                 
+                                                                         
+ 2  animation-name: slide;                                               
+                                                                         
+ 3  animation-duration: 2s;                                              
+                                                                         
+ 4  animation-timing-function: ease-in-out;                              
+                                                                         
+ 5  animation-delay: .5s;                                                
+                                                                         
+ 6  animation-iteration-count: infinite;                                 
+                                                                         
+ 7  }                                                                    
+                                                                         
+ 8                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -10958,23 +10602,23 @@ forwards. The alternate-reverse value starts at 100% running to 0% and
 then back to 100% again.
 
 +---+----------------------------------------------------------------------+
-| 1 | .stage:hover .ball {                                                 |
-|   |                                                                      |
-| 2 | animation-name: slide;                                               |
-|   |                                                                      |
-| 3 | animation-duration: 2s;                                              |
-|   |                                                                      |
-| 4 | animation-timing-function: ease-in-out;                              |
-|   |                                                                      |
-| 5 | animation-delay: .5s;                                                |
-|   |                                                                      |
-| 6 | animation-iteration-count: infinite;                                 |
-|   |                                                                      |
-| 7 | animation-direction: alternate;                                      |
-|   |                                                                      |
-| 8 | }                                                                    |
-|   |                                                                      |
-| 9 |                                                                      |
+ 1  .stage:hover .ball {                                                 
+                                                                         
+ 2  animation-name: slide;                                               
+                                                                         
+ 3  animation-duration: 2s;                                              
+                                                                         
+ 4  animation-timing-function: ease-in-out;                              
+                                                                         
+ 5  animation-delay: .5s;                                                
+                                                                         
+ 6  animation-iteration-count: infinite;                                 
+                                                                         
+ 7  animation-direction: alternate;                                      
+                                                                         
+ 8  }                                                                    
+                                                                         
+ 9                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -10995,32 +10639,32 @@ animation will temporarily pause until you let up on the mouse.
 
 ```
 +---+----------------------------------------------------------------------+
-| 1 | .stage:hover .ball {                                                 |
-|   |                                                                      |
-| 2 | animation-name: slide;                                               |
-|   |                                                                      |
-| 3 | animation-duration: 2s;                                              |
-|   |                                                                      |
-| 4 | animation-timing-function: ease-in-out;                              |
-|   |                                                                      |
-| 5 | animation-delay: .5s;                                                |
-|   |                                                                      |
-| 6 | animation-iteration-count: infinite;                                 |
-|   |                                                                      |
-| 7 | animation-direction: alternate;                                      |
-|   |                                                                      |
-| 8 | }                                                                    |
-|   |                                                                      |
-| 9 | .stage:active .ball {                                                |
-|   |                                                                      |
-| 1 | animation-play-state: paused;                                        |
-| 0 |                                                                      |
-|   | }                                                                    |
-| 1 |                                                                      |
-| 1 |                                                                      |
-|   |                                                                      |
-| 1 |                                                                      |
-| 2 |                                                                      |
+ 1  .stage:hover .ball {                                                 
+                                                                         
+ 2  animation-name: slide;                                               
+                                                                         
+ 3  animation-duration: 2s;                                              
+                                                                         
+ 4  animation-timing-function: ease-in-out;                              
+                                                                         
+ 5  animation-delay: .5s;                                                
+                                                                         
+ 6  animation-iteration-count: infinite;                                 
+                                                                         
+ 7  animation-direction: alternate;                                      
+                                                                         
+ 8  }                                                                    
+                                                                         
+ 9  .stage:active .ball {                                                
+                                                                         
+ 1  animation-play-state: paused;                                        
+ 0                                                                       
+    }                                                                    
+ 1                                                                       
+ 1                                                                       
+                                                                         
+ 1                                                                       
+ 2                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 ```
@@ -11056,29 +10700,29 @@ the forwards and backwards values.
 
 ```
 +---+----------------------------------------------------------------------+
-| 1 | .stage:hover .ball {                                                 |
-|   |                                                                      |
-| 2 | animation-name: slide;                                               |
-|   |                                                                      |
-| 3 | animation-duration: 2s;                                              |
-|   |                                                                      |
-| 4 | animation-timing-function: ease-in-out;                              |
-|   |                                                                      |
-| 5 | animation-delay: .5s;                                                |
-|   |                                                                      |
-| 6 | animation-fill-mode: forwards;                                       |
-|   |                                                                      |
-| 7 | }                                                                    |
-|   |                                                                      |
-| 8 | .stage:active .ball {                                                |
-|   |                                                                      |
-| 9 | animation-play-state: paused;                                        |
-|   |                                                                      |
-| 1 | }                                                                    |
-| 0 |                                                                      |
-|   |                                                                      |
-| 1 |                                                                      |
-| 1 |                                                                      |
+ 1  .stage:hover .ball {                                                 
+                                                                         
+ 2  animation-name: slide;                                               
+                                                                         
+ 3  animation-duration: 2s;                                              
+                                                                         
+ 4  animation-timing-function: ease-in-out;                              
+                                                                         
+ 5  animation-delay: .5s;                                                
+                                                                         
+ 6  animation-fill-mode: forwards;                                       
+                                                                         
+ 7  }                                                                    
+                                                                         
+ 8  .stage:active .ball {                                                
+                                                                         
+ 9  animation-play-state: paused;                                        
+                                                                         
+ 1  }                                                                    
+ 0                                                                       
+                                                                         
+ 1                                                                       
+ 1                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 ```
@@ -11098,19 +10742,19 @@ be animation-name, animation-duration, animation-timing-function, animation-
 
 ```
 +---+----------------------------------------------------------------------+
-| 1 | .stage:hover .ball {                                                 |
-|   |                                                                      |
-| 2 | animation: slide 2s ease-in-out .5s infinite alternate;              |
-|   |                                                                      |
-| 3 | }                                                                    |
-|   |                                                                      |
-| 4 | .stage:active .ball {                                                |
-|   |                                                                      |
-| 5 | animation-play-state: paused;                                        |
-|   |                                                                      |
-| 6 | }                                                                    |
-|   |                                                                      |
-| 7 |                                                                      |
+ 1  .stage:hover .ball {                                                 
+                                                                         
+ 2  animation: slide 2s ease-in-out .5s infinite alternate;              
+                                                                         
+ 3  }                                                                    
+                                                                         
+ 4  .stage:active .ball {                                                
+                                                                         
+ 5  animation-play-state: paused;                                        
+                                                                         
+ 6  }                                                                    
+                                                                         
+ 7                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 ```
@@ -11206,13 +10850,13 @@ In this case the conditional comment looks like &lt;!&#45;&#45;&lbrack;if lt IE
 
 ```
 +---+----------------------------------------------------------------------+
-| 1 | &lt;!&#45;&#45;&lbrack;if lt IE 9&rbrack;&gt;                                               |
-|   |                                                                      |
-| 2 | &lt;script src=&quot;html5shiv.js&quot;&gt;&lt;/script&gt;                           |
-|   |                                                                      |
-| 3 | &lt;&#0033;[endif&rbrack;&#45;&#45;&gt;                                                    |
-|   |                                                                      |
-| 4 |                                                                      |
+ 1  &lt;!&#45;&#45;&lbrack;if lt IE 9&rbrack;&gt;                                               
+                                                                         
+ 2  &lt;script src=&quot;html5shiv.js&quot;&gt;&lt;/script&gt;                           
+                                                                         
+ 3  &lt;&#0033;[endif&rbrack;&#45;&#45;&gt;                                                    
+                                                                         
+ 4                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 ```
@@ -11231,38 +10875,38 @@ the display: block; declaration.
 
 ```
 +---+----------------------------------------------------------------------+
-| 1 | article,                                                             |
-|   |                                                                      |
-| 2 | aside,                                                               |
-|   |                                                                      |
-| 3 | details,                                                             |
-|   |                                                                      |
-| 4 | figcaption,                                                          |
-|   |                                                                      |
-| 5 | figure,                                                              |
-|   |                                                                      |
-| 6 | footer,                                                              |
-|   |                                                                      |
-| 7 | header,                                                              |
-|   |                                                                      |
-| 8 | hgroup,                                                              |
-|   |                                                                      |
-| 9 | nav,                                                                 |
-|   |                                                                      |
-| 1 | section,                                                             |
-| 0 |                                                                      |
-|   | summary {                                                            |
-| 1 |                                                                      |
-| 1 | display: block;                                                      |
-|   |                                                                      |
-| 1 | }                                                                    |
-| 2 |                                                                      |
-|   |                                                                      |
-| 1 |                                                                      |
-| 3 |                                                                      |
-|   |                                                                      |
-| 1 |                                                                      |
-| 4 |                                                                      |
+ 1  article,                                                             
+                                                                         
+ 2  aside,                                                               
+                                                                         
+ 3  details,                                                             
+                                                                         
+ 4  figcaption,                                                          
+                                                                         
+ 5  figure,                                                              
+                                                                         
+ 6  footer,                                                              
+                                                                         
+ 7  header,                                                              
+                                                                         
+ 8  hgroup,                                                              
+                                                                         
+ 9  nav,                                                                 
+                                                                         
+ 1  section,                                                             
+ 0                                                                       
+    summary {                                                            
+ 1                                                                       
+ 1  display: block;                                                      
+                                                                         
+ 1  }                                                                    
+ 2                                                                       
+                                                                         
+ 1                                                                       
+ 3                                                                       
+                                                                         
+ 1                                                                       
+ 4                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 ```
@@ -11274,17 +10918,17 @@ should be good to go using any new HTML5 elements.
 
 ```
 +---+----------------------------------------------------------------------+
-| 1 | audio,                                                               |
-|   |                                                                      |
-| 2 | canvas,                                                              |
-|   |                                                                      |
-| 3 | video {                                                              |
-|   |                                                                      |
-| 4 | display: inline-block;                                               |
-|   |                                                                      |
-| 5 | }                                                                    |
-|   |                                                                      |
-| 6 |                                                                      |
+ 1  audio,                                                               
+                                                                         
+ 2  canvas,                                                              
+                                                                         
+ 3  video {                                                              
+                                                                         
+ 4  display: inline-block;                                               
+                                                                         
+ 5  }                                                                    
+                                                                         
+ 6                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 ```
@@ -11319,9 +10963,9 @@ Modernizr.
 
 ```
 +---+----------------------------------------------------------------------+
-| 1 | <script src="modernizr.js"></script>                                 |
-|   |                                                                      |
-| 2 |                                                                      |
+ 1  <script src="modernizr.js"></script>                                 
+                                                                         
+ 2                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 ```
@@ -11341,110 +10985,110 @@ organized and performance in mind. Avoid duplicating any code or making
 additional HTTP requests when possible.
 
 +---+----------------------------------------------------------------------+
-| 1 | button {                                                             |
-|   |                                                                      |
-| 2 | border: 0;                                                           |
-|   |                                                                      |
-| 3 | color: #fff;                                                         |
-|   |                                                                      |
-| 4 | cursor: pointer;                                                     |
-|   |                                                                      |
-| 5 | font-size: 14px;                                                     |
-|   |                                                                      |
-| 6 | font-weight: 600;                                                    |
-|   |                                                                      |
-| 7 | margin: 0;                                                           |
-|   |                                                                      |
-| 8 | outline: 0;                                                          |
-|   |                                                                      |
-| 9 | }                                                                    |
-|   |                                                                      |
-| 1 | /&ast; With CSS Gradient Styles &ast;/                                     |
-| 0 |                                                                      |
-|   | .cssgradients button {                                               |
-| 1 |                                                                      |
-| 1 | border: 1px solid #0080c2;                                           |
-|   |                                                                      |
-| 1 | background: linear-gradient(#00a2f5, #0087cc);                       |
-| 2 |                                                                      |
-|   | border-radius: 6px;                                                  |
-| 1 |                                                                      |
-| 3 | padding: 15px 30px;                                                  |
-|   |                                                                      |
-| 1 | }                                                                    |
-| 4 |                                                                      |
-|   | .cssgradients button:hover {                                         |
-| 1 |                                                                      |
-| 5 | background: linear-gradient(#1ab1ff, #009beb);                       |
-|   |                                                                      |
-| 1 | }                                                                    |
-| 6 |                                                                      |
-|   | .cssgradients button:active {                                        |
-| 1 |                                                                      |
-| 7 | box-shadow: inset 0 1px 10px rgba(255, 255, 255, .5);                |
-|   |                                                                      |
-| 1 | }                                                                    |
-| 8 |                                                                      |
-|   | /&ast; Without CSS Gradient Styles &ast;/                                  |
-| 1 |                                                                      |
-| 9 | .no-cssgradients button {                                            |
-|   |                                                                      |
-| 2 | background: transparent url(&quot;button.png&quot;) 0 0 no-repeat;           |
-| 0 |                                                                      |
-|   | padding: 16px 31px;                                                  |
-| 2 |                                                                      |
-| 1 | }                                                                    |
-|   |                                                                      |
-| 2 | .no-cssgradients button:hover {                                      |
-| 2 |                                                                      |
-|   | background-position: 0 -49px;                                        |
-| 2 |                                                                      |
-| 3 | }                                                                    |
-|   |                                                                      |
-| 2 | .no-cssgradients button:active {                                     |
-| 4 |                                                                      |
-|   | background-position: 0 -98px;                                        |
-| 2 |                                                                      |
-| 5 | }                                                                    |
-|   |                                                                      |
-| 2 |                                                                      |
-| 6 |                                                                      |
-|   |                                                                      |
-| 2 |                                                                      |
-| 7 |                                                                      |
-|   |                                                                      |
-| 2 |                                                                      |
-| 8 |                                                                      |
-|   |                                                                      |
-| 2 |                                                                      |
-| 9 |                                                                      |
-|   |                                                                      |
-| 3 |                                                                      |
-| 0 |                                                                      |
-|   |                                                                      |
-| 3 |                                                                      |
-| 1 |                                                                      |
-|   |                                                                      |
-| 3 |                                                                      |
-| 2 |                                                                      |
-|   |                                                                      |
-| 3 |                                                                      |
-| 3 |                                                                      |
-|   |                                                                      |
-| 3 |                                                                      |
-| 4 |                                                                      |
-|   |                                                                      |
-| 3 |                                                                      |
-| 5 |                                                                      |
-|   |                                                                      |
-| 3 |                                                                      |
-| 6 |                                                                      |
-|   |                                                                      |
-| 3 |                                                                      |
-| 7 |                                                                      |
-|   |                                                                      |
-| 3 |                                                                      |
-| 8 |                                                                      |
+ 1  button {                                                             
+                                                                         
+ 2  border: 0;                                                           
+                                                                         
+ 3  color: #fff;                                                         
+                                                                         
+ 4  cursor: pointer;                                                     
+                                                                         
+ 5  font-size: 14px;                                                     
+                                                                         
+ 6  font-weight: 600;                                                    
+                                                                         
+ 7  margin: 0;                                                           
+                                                                         
+ 8  outline: 0;                                                          
+                                                                         
+ 9  }                                                                    
+                                                                         
+ 1  /&ast; With CSS Gradient Styles &ast;/                                     
+ 0                                                                       
+    .cssgradients button {                                               
+ 1                                                                       
+ 1  border: 1px solid #0080c2;                                           
+                                                                         
+ 1  background: linear-gradient(#00a2f5, #0087cc);                       
+ 2                                                                       
+    border-radius: 6px;                                                  
+ 1                                                                       
+ 3  padding: 15px 30px;                                                  
+                                                                         
+ 1  }                                                                    
+ 4                                                                       
+    .cssgradients button:hover {                                         
+ 1                                                                       
+ 5  background: linear-gradient(#1ab1ff, #009beb);                       
+                                                                         
+ 1  }                                                                    
+ 6                                                                       
+    .cssgradients button:active {                                        
+ 1                                                                       
+ 7  box-shadow: inset 0 1px 10px rgba(255, 255, 255, .5);                
+                                                                         
+ 1  }                                                                    
+ 8                                                                       
+    /&ast; Without CSS Gradient Styles &ast;/                                  
+ 1                                                                       
+ 9  .no-cssgradients button {                                            
+                                                                         
+ 2  background: transparent url(&quot;button.png&quot;) 0 0 no-repeat;           
+ 0                                                                       
+    padding: 16px 31px;                                                  
+ 2                                                                       
+ 1  }                                                                    
+                                                                         
+ 2  .no-cssgradients button:hover {                                      
+ 2                                                                       
+    background-position: 0 -49px;                                        
+ 2                                                                       
+ 3  }                                                                    
+                                                                         
+ 2  .no-cssgradients button:active {                                     
+ 4                                                                       
+    background-position: 0 -98px;                                        
+ 2                                                                       
+ 5  }                                                                    
+                                                                         
+ 2                                                                       
+ 6                                                                       
+                                                                         
+ 2                                                                       
+ 7                                                                       
+                                                                         
+ 2                                                                       
+ 8                                                                       
+                                                                         
+ 2                                                                       
+ 9                                                                       
+                                                                         
+ 3                                                                       
+ 0                                                                       
+                                                                         
+ 3                                                                       
+ 1                                                                       
+                                                                         
+ 3                                                                       
+ 2                                                                       
+                                                                         
+ 3                                                                       
+ 3                                                                       
+                                                                         
+ 3                                                                       
+ 4                                                                       
+                                                                         
+ 3                                                                       
+ 5                                                                       
+                                                                         
+ 3                                                                       
+ 6                                                                       
+                                                                         
+ 3                                                                       
+ 7                                                                       
+                                                                         
+ 3                                                                       
+ 8                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -11485,26 +11129,26 @@ the storage.js file using the getScript method, and if local storage is not 
 is used the storage-polyfill.js file using the getScript method.
 
 +---+----------------------------------------------------------------------+
-| 1 | &#36;(document).ready(function() {                                      |
-|   |                                                                      |
-| 2 | if (Modernizr.localstorage) {                                        |
-|   |                                                                      |
-| 3 | // Local storage is available                                        |
-|   |                                                                      |
-| 4 | jQuery.getScript(&#39;storage.js&#39;);                                    |
-|   |                                                                      |
-| 5 | } else {                                                             |
-|   |                                                                      |
-| 6 | // Local storage is not available                                    |
-|   |                                                                      |
-| 7 | jQuery.getScript(&#39;storage-polyfill.js&#39;);                           |
-|   |                                                                      |
-| 8 | }                                                                    |
-|   |                                                                      |
-| 9 | });                                                                  |
-|   |                                                                      |
-| 1 |                                                                      |
-| 0 |                                                                      |
+ 1  &#36;(document).ready(function() {                                      
+                                                                         
+ 2  if (Modernizr.localstorage) {                                        
+                                                                         
+ 3  // Local storage is available                                        
+                                                                         
+ 4  jQuery.getScript(&#39;storage.js&#39;);                                    
+                                                                         
+ 5  } else {                                                             
+                                                                         
+ 6  // Local storage is not available                                    
+                                                                         
+ 7  jQuery.getScript(&#39;storage-polyfill.js&#39;);                           
+                                                                         
+ 8  }                                                                    
+                                                                         
+ 9  });                                                                  
+                                                                         
+ 1                                                                       
+ 0                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -11516,17 +11160,17 @@ media query conditions. Not loading unnecessary files can be extremely
 beneficial for performance.
 
 +---+----------------------------------------------------------------------+
-| 1 | &#36;(document).ready(function() {                                      |
-|   |                                                                      |
-| 2 | if (Modernizr.mq(&#39;screen and (min-width: 640px)&#39;)) {               |
-|   |                                                                      |
-| 3 | jQuery.getScript(&#39;tabs.js&#39;);                                       |
-|   |                                                                      |
-| 4 | }                                                                    |
-|   |                                                                      |
-| 5 | });                                                                  |
-|   |                                                                      |
-| 6 |                                                                      |
+ 1  &#36;(document).ready(function() {                                      
+                                                                         
+ 2  if (Modernizr.mq(&#39;screen and (min-width: 640px)&#39;)) {               
+                                                                         
+ 3  jQuery.getScript(&#39;tabs.js&#39;);                                       
+                                                                         
+ 4  }                                                                    
+                                                                         
+ 5  });                                                                  
+                                                                         
+ 6                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -11547,17 +11191,17 @@ calling these tooltips could be wrapped in a Modernizr condition,
 preventing the script from loading on smaller screens.
 
 +---+----------------------------------------------------------------------+
-| 1 | &#36;(document).ready(function() {                                      |
-|   |                                                                      |
-| 2 | if (Modernizr.mq(&#39;screen and (max-width: 400px)&#39;)) {               |
-|   |                                                                      |
-| 3 | &#36;(&#39;.size&#39;).text(&#39;small&#39;);                                       |
-|   |                                                                      |
-| 4 | }                                                                    |
-|   |                                                                      |
-| 5 | });                                                                  |
-|   |                                                                      |
-| 6 |                                                                      |
+ 1  &#36;(document).ready(function() {                                      
+                                                                         
+ 2  if (Modernizr.mq(&#39;screen and (max-width: 400px)&#39;)) {               
+                                                                         
+ 3  &#36;(&#39;.size&#39;).text(&#39;small&#39;);                                       
+                                                                         
+ 4  }                                                                    
+                                                                         
+ 5  });                                                                  
+                                                                         
+ 6                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -11752,17 +11396,17 @@ being. Screen readers and other devices will recognize this, temporarily
 skipping it, where they may not done so with the CSS declaration.
 
 +---+----------------------------------------------------------------------+
-| 1 | &lt;!&#45;&#45; Good &#45;&#45;&gt;                                                    |
-|   |                                                                      |
-| 2 | &lt;div hidden&gt;&#8230;&lt;/div&gt;                                           |
-|   |                                                                      |
-| 3 | &lt;!&#45;&#45; Not good &#45;&#45;&gt;                                                |
-|   |                                                                      |
-| 4 | &lt;div style=&quot;display: none;&quot;&gt;&#8230;&lt;/div&gt;                         |
-|   |                                                                      |
-| 5 |                                                                      |
-|   |                                                                      |
-| 6 |                                                                      |
+ 1  &lt;!&#45;&#45; Good &#45;&#45;&gt;                                                    
+                                                                         
+ 2  &lt;div hidden&gt;&#8230;&lt;/div&gt;                                           
+                                                                         
+ 3  &lt;!&#45;&#45; Not good &#45;&#45;&gt;                                                
+                                                                         
+ 4  &lt;div style=&quot;display: none;&quot;&gt;&#8230;&lt;/div&gt;                         
+                                                                         
+ 5                                                                       
+                                                                         
+ 6                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -11796,17 +11440,17 @@ presentation of an element, where the strong element should be used to
 identify significantly important text.
 
 +---+----------------------------------------------------------------------+
-| 1 | &lt;!&#45;&#45; Strong importance &#45;&#45;&gt;                                       |
-|   |                                                                      |
-| 2 | &lt;strong&gt;Caution:&lt;/strong&gt; Falling rocks.                         |
-|   |                                                                      |
-| 3 | &lt;!&#45;&#45; Stylistically offset &#45;&#45;&gt;                                    |
-|   |                                                                      |
-| 4 | This recipe calls for &lt;b&gt;bacon&lt;/b&gt; and &lt;b&gt;baconnaise&lt;/b&gt;.    |
-|   |                                                                      |
-| 5 |                                                                      |
-|   |                                                                      |
-| 6 |                                                                      |
+ 1  &lt;!&#45;&#45; Strong importance &#45;&#45;&gt;                                       
+                                                                         
+ 2  &lt;strong&gt;Caution:&lt;/strong&gt; Falling rocks.                         
+                                                                         
+ 3  &lt;!&#45;&#45; Stylistically offset &#45;&#45;&gt;                                    
+                                                                         
+ 4  This recipe calls for &lt;b&gt;bacon&lt;/b&gt; and &lt;b&gt;baconnaise&lt;/b&gt;.    
+                                                                         
+ 5                                                                       
+                                                                         
+ 6                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -11829,17 +11473,17 @@ dialog or prose, offsetting text without any added emphasis or
 importance.
 
 +---+----------------------------------------------------------------------+
-| 1 | &lt;!&#45;&#45; Stressed emphasis &#45;&#45;&gt;                                       |
-|   |                                                                      |
-| 2 | I &lt;em&gt;love&lt;/em&gt; Chicago!                                         |
-|   |                                                                      |
-| 3 | &lt;!&#45;&#45; Alternative voice or tone &#45;&#45;&gt;                               |
-|   |                                                                      |
-| 4 | The name &lt;i&gt;Shay&lt;/i&gt; means a gift.                               |
-|   |                                                                      |
-| 5 |                                                                      |
-|   |                                                                      |
-| 6 |                                                                      |
+ 1  &lt;!&#45;&#45; Stressed emphasis &#45;&#45;&gt;                                       
+                                                                         
+ 2  I &lt;em&gt;love&lt;/em&gt; Chicago!                                         
+                                                                         
+ 3  &lt;!&#45;&#45; Alternative voice or tone &#45;&#45;&gt;                               
+                                                                         
+ 4  The name &lt;i&gt;Shay&lt;/i&gt; means a gift.                               
+                                                                         
+ 5                                                                       
+                                                                         
+ 6                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -11884,21 +11528,21 @@ not a hyperlink can confuse users and cause quite a bit of frustration.
 Use underlines with caution.
 
 +---+----------------------------------------------------------------------+
-| 1 | &lt;!&#45;&#45; Added to the document &#45;&#45;&gt;                                   |
-|   |                                                                      |
-| 2 | &lt;ins cite=&quot;http://learn.shayhowe.com&quot; datetime=&quot;2012-07-01&quot;&gt;   |
-|   |                                                                      |
-| 3 | Updated: This website now contains an advanced guide.                |
-|   |                                                                      |
-| 4 | &lt;/ins&gt;                                                             |
-|   |                                                                      |
-| 5 | &lt;!&#45;&#45; Unarticulated annotation &#45;&#45;&gt;                                |
-|   |                                                                      |
-| 6 | &lt;u&gt;Urushihara Yuuji&lt;/u&gt; won &lt;u&gt;Sasuke 27&lt;/u&gt;.                |
-|   |                                                                      |
-| 7 |                                                                      |
-|   |                                                                      |
-| 8 |                                                                      |
+ 1  &lt;!&#45;&#45; Added to the document &#45;&#45;&gt;                                   
+                                                                         
+ 2  &lt;ins cite=&quot;http://learn.shayhowe.com&quot; datetime=&quot;2012-07-01&quot;&gt;   
+                                                                         
+ 3  Updated: This website now contains an advanced guide.                
+                                                                         
+ 4  &lt;/ins&gt;                                                             
+                                                                         
+ 5  &lt;!&#45;&#45; Unarticulated annotation &#45;&#45;&gt;                                
+                                                                         
+ 6  &lt;u&gt;Urushihara Yuuji&lt;/u&gt; won &lt;u&gt;Sasuke 27&lt;/u&gt;.                
+                                                                         
+ 7                                                                       
+                                                                         
+ 8                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -11921,17 +11565,17 @@ document.
 The s element identifies text that is no longer accurate or relevant.
 
 +---+----------------------------------------------------------------------+
-| 1 | &lt;!&#45;&#45; Deleted from the document &#45;&#45;&gt;                               |
-|   |                                                                      |
-| 2 | I am an avid cyclist, &lt;del cite=&quot;http://shayhowe.com&quot;             |
-|   | datetime=&quot;2012-07-01&quot;&gt;                                            |
-| 3 |                                                                      |
-|   | skateboarder&lt;/del&gt; and designer.                                   |
-| 4 |                                                                      |
-|   | &lt;!&#45;&#45; No longer accurate or relevant &#45;&#45;&gt;                          |
-| 5 |                                                                      |
-|   | &lt;s&gt;&#36;24.99&lt;/s&gt; &#36;19.99                                           |
-| 6 |                                                                      |
+ 1  &lt;!&#45;&#45; Deleted from the document &#45;&#45;&gt;                               
+                                                                         
+ 2  I am an avid cyclist, &lt;del cite=&quot;http://shayhowe.com&quot;             
+    datetime=&quot;2012-07-01&quot;&gt;                                            
+ 3                                                                       
+    skateboarder&lt;/del&gt; and designer.                                   
+ 4                                                                       
+    &lt;!&#45;&#45; No longer accurate or relevant &#45;&#45;&gt;                          
+ 5                                                                       
+    &lt;s&gt;&#36;24.99&lt;/s&gt; &#36;19.99                                           
+ 6                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -11945,11 +11589,11 @@ identify text, specifically for reference purposes without having to use
 an un-semantic text level element.
 
 +---+----------------------------------------------------------------------+
-| 1 | &lt;!&#45;&#45; Highlighted for reference purposes &#45;&#45;&gt;                      |
-|   |                                                                      |
-| 2 | Search results for &lt;mark&gt;&#39;chicago&#39;&lt;/mark&gt;.                     |
-|   |                                                                      |
-| 3 |                                                                      |
+ 1  &lt;!&#45;&#45; Highlighted for reference purposes &#45;&#45;&gt;                      
+                                                                         
+ 2  Search results for &lt;mark&gt;&#39;chicago&#39;&lt;/mark&gt;.                     
+                                                                         
+ 3                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -11965,11 +11609,11 @@ distinguish acronyms from abbreviations but has since been deprecated,
 and shouldn't be used.
 
 +---+----------------------------------------------------------------------+
-| 1 | &lt;abbr title=&quot;HyperText Markup Language&quot;&gt;HTML&lt;/abbr&gt;            |
-|   |                                                                      |
-| 2 | &lt;abbr title=&quot;Cascading Style Sheets&quot;&gt;CSS&lt;/abbr&gt;                |
-|   |                                                                      |
-| 3 |                                                                      |
+ 1  &lt;abbr title=&quot;HyperText Markup Language&quot;&gt;HTML&lt;/abbr&gt;            
+                                                                         
+ 2  &lt;abbr title=&quot;Cascading Style Sheets&quot;&gt;CSS&lt;/abbr&gt;                
+                                                                         
+ 3                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -11983,17 +11627,17 @@ these elements should be reserved for typographical conventions, not for
 presentational purposes.
 
 +---+----------------------------------------------------------------------+
-| 1 | &lt;!&#45;&#45; Subscript &#45;&#45;&gt;                                               |
-|   |                                                                      |
-| 2 | H&lt;sub&gt;2&lt;/sub&gt;O                                                   |
-|   |                                                                      |
-| 3 | &lt;!&#45;&#45; Superscripts &#45;&#45;&gt;                                            |
-|   |                                                                      |
-| 4 | 1&lt;sup&gt;st&lt;/sup&gt; Place                                             |
-|   |                                                                      |
-| 5 |                                                                      |
-|   |                                                                      |
-| 6 |                                                                      |
+ 1  &lt;!&#45;&#45; Subscript &#45;&#45;&gt;                                               
+                                                                         
+ 2  H&lt;sub&gt;2&lt;/sub&gt;O                                                   
+                                                                         
+ 3  &lt;!&#45;&#45; Superscripts &#45;&#45;&gt;                                            
+                                                                         
+ 4  1&lt;sup&gt;st&lt;/sup&gt; Place                                             
+                                                                         
+ 5                                                                       
+                                                                         
+ 6                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -12022,24 +11666,24 @@ The value attributes indicates where the progress currently stands and
 the max attribute indicates what progress needs to be reached.
 
 +---+----------------------------------------------------------------------+
-| 1 | &lt;!&#45;&#45; Meter &#45;&#45;&gt;                                                   |
-|   |                                                                      |
-| 2 | &lt;meter value=&quot;7&quot; max=&quot;10&quot;&gt;7 stars&lt;/meter&gt;                    |
-|   |                                                                      |
-| 3 | &lt;meter value=&quot;47&quot; min=&quot;0&quot; max=&quot;105&quot; low=&quot;5&quot; high=&quot;65&quot;     |
-|   | optimum=&quot;45&quot;&gt;The car                                              |
-| 4 |                                                                      |
-|   | is moving at a decent average mile per hour.&lt;/meter&gt;               |
-| 5 |                                                                      |
-|   | &lt;!&#45;&#45; Progress &#45;&#45;&gt;                                                |
-| 6 |                                                                      |
-|   | You are &lt;progress value=&quot;50&quot; max=&quot;100&quot;&gt;50%&lt;/progress&gt;        |
-| 7 | complete.                                                            |
-|   |                                                                      |
-| 8 | &lt;progress value=&quot;50&quot; min=&quot;0&quot; max=&quot;100&quot;&gt;Hold tight,           |
-|   | you&#8217;re getting                                                 |
-|   |                                                                      |
-|   | there.&lt;/progress&gt;                                                  |
+ 1  &lt;!&#45;&#45; Meter &#45;&#45;&gt;                                                   
+                                                                         
+ 2  &lt;meter value=&quot;7&quot; max=&quot;10&quot;&gt;7 stars&lt;/meter&gt;                    
+                                                                         
+ 3  &lt;meter value=&quot;47&quot; min=&quot;0&quot; max=&quot;105&quot; low=&quot;5&quot; high=&quot;65&quot;     
+    optimum=&quot;45&quot;&gt;The car                                              
+ 4                                                                       
+    is moving at a decent average mile per hour.&lt;/meter&gt;               
+ 5                                                                       
+    &lt;!&#45;&#45; Progress &#45;&#45;&gt;                                                
+ 6                                                                       
+    You are &lt;progress value=&quot;50&quot; max=&quot;100&quot;&gt;50%&lt;/progress&gt;        
+ 7  complete.                                                            
+                                                                         
+ 8  &lt;progress value=&quot;50&quot; min=&quot;0&quot; max=&quot;100&quot;&gt;Hold tight,           
+    you&#8217;re getting                                                 
+                                                                         
+    there.&lt;/progress&gt;                                                  
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -12061,47 +11705,47 @@ should not include any further information than the contact information,
 and other content needs to be placed outside of the address element.
 
 +---+----------------------------------------------------------------------+
-| 1 | &lt;!&#45;&#45; Time &#45;&#45;&gt;                                                    |
-|   |                                                                      |
-| 2 | &lt;time&gt;2011-08-24&lt;/time&gt;                                          |
-|   |                                                                      |
-| 3 | &lt;time datetime=&quot;2011-08-24&quot; pubdate&gt;August 24th, 2011&lt;/time&gt;   |
-|   |                                                                      |
-| 4 | &lt;time datetime=&quot;15:00&quot;&gt;3pm&lt;/time&gt;                              |
-|   |                                                                      |
-| 5 | &lt;time datetime=&quot;2011-08-24T15:00&quot;&gt;August 24th, 2011 at           |
-|   | 3pm&lt;/time&gt;                                                         |
-| 6 |                                                                      |
-|   | &lt;!&#45;&#45; Address &#45;&#45;&gt;                                                 |
-| 7 |                                                                      |
-|   | &lt;address&gt;                                                          |
-| 8 |                                                                      |
-|   | &lt;strong&gt;Shay Howe&lt;/strong&gt;&lt;br&gt;                                 |
-| 9 |                                                                      |
-|   | &lt;a                                                                  |
-| 1 | href=                                                                |
-| 0 | &quot;http://learn.shayhowe.com&quot;&gt;http://learn.shayhowe.com&lt;/a&gt;&lt;br&gt; |
-|   |                                                                      |
-| 1 | &lt;a href=&quot;mailto:hello@awesome.com&quot;&gt;hello@awesome.com&lt;/a&gt;&lt;br&gt; |
-| 1 |                                                                      |
-|   | 600 W. Chicago Ave.&lt;br&gt;                                            |
-| 1 |                                                                      |
-| 2 | Suite 620&lt;br&gt;                                                      |
-|   |                                                                      |
-| 1 | Chicago, IL 60654&lt;br&gt;                                              |
-| 3 |                                                                      |
-|   | USA                                                                  |
-| 1 |                                                                      |
-| 4 | &lt;/address&gt;                                                         |
-|   |                                                                      |
-| 1 |                                                                      |
-| 5 |                                                                      |
-|   |                                                                      |
-| 1 |                                                                      |
-| 6 |                                                                      |
-|   |                                                                      |
-| 1 |                                                                      |
-| 7 |                                                                      |
+ 1  &lt;!&#45;&#45; Time &#45;&#45;&gt;                                                    
+                                                                         
+ 2  &lt;time&gt;2011-08-24&lt;/time&gt;                                          
+                                                                         
+ 3  &lt;time datetime=&quot;2011-08-24&quot; pubdate&gt;August 24th, 2011&lt;/time&gt;   
+                                                                         
+ 4  &lt;time datetime=&quot;15:00&quot;&gt;3pm&lt;/time&gt;                              
+                                                                         
+ 5  &lt;time datetime=&quot;2011-08-24T15:00&quot;&gt;August 24th, 2011 at           
+    3pm&lt;/time&gt;                                                         
+ 6                                                                       
+    &lt;!&#45;&#45; Address &#45;&#45;&gt;                                                 
+ 7                                                                       
+    &lt;address&gt;                                                          
+ 8                                                                       
+    &lt;strong&gt;Shay Howe&lt;/strong&gt;&lt;br&gt;                                 
+ 9                                                                       
+    &lt;a                                                                  
+ 1  href=                                                                
+ 0  &quot;http://learn.shayhowe.com&quot;&gt;http://learn.shayhowe.com&lt;/a&gt;&lt;br&gt; 
+                                                                         
+ 1  &lt;a href=&quot;mailto:hello@awesome.com&quot;&gt;hello@awesome.com&lt;/a&gt;&lt;br&gt; 
+ 1                                                                       
+    600 W. Chicago Ave.&lt;br&gt;                                            
+ 1                                                                       
+ 2  Suite 620&lt;br&gt;                                                      
+                                                                         
+ 1  Chicago, IL 60654&lt;br&gt;                                              
+ 3                                                                       
+    USA                                                                  
+ 1                                                                       
+ 4  &lt;/address&gt;                                                         
+                                                                         
+ 1                                                                       
+ 5                                                                       
+                                                                         
+ 1                                                                       
+ 6                                                                       
+                                                                         
+ 1                                                                       
+ 7                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -12124,23 +11768,23 @@ samples of code, which include whitepsace, displayed in a block level
 manner.
 
 +---+----------------------------------------------------------------------+
-| 1 | &lt;!&#45;&#45; Inline code samples &#45;&#45;&gt;                                     |
-|   |                                                                      |
-| 2 | Use the &lt;code&gt;article&lt;/code&gt; element.                            |
-|   |                                                                      |
-| 3 | &lt;!&#45;&#45; Larger, block level code snippets &#45;&#45;&gt;                       |
-|   |                                                                      |
-| 4 | &lt;pre&gt;&lt;code&gt;body {                                                |
-|   |                                                                      |
-| 5 | color: #666;                                                         |
-|   |                                                                      |
-| 6 | font: 14px/20px Arial, sans-serif;                                   |
-|   |                                                                      |
-| 7 | }&lt;/code&gt;&lt;/pre&gt;                                                   |
-|   |                                                                      |
-| 8 |                                                                      |
-|   |                                                                      |
-| 9 |                                                                      |
+ 1  &lt;!&#45;&#45; Inline code samples &#45;&#45;&gt;                                     
+                                                                         
+ 2  Use the &lt;code&gt;article&lt;/code&gt; element.                            
+                                                                         
+ 3  &lt;!&#45;&#45; Larger, block level code snippets &#45;&#45;&gt;                       
+                                                                         
+ 4  &lt;pre&gt;&lt;code&gt;body {                                                
+                                                                         
+ 5  color: #666;                                                         
+                                                                         
+ 6  font: 14px/20px Arial, sans-serif;                                   
+                                                                         
+ 7  }&lt;/code&gt;&lt;/pre&gt;                                                   
+                                                                         
+ 8                                                                       
+                                                                         
+ 9                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -12164,21 +11808,21 @@ of a word ensures that, should the word need to wrap two lines, it does
 in a legible fashion.
 
 +---+----------------------------------------------------------------------+
-| 1 | &lt;!&#45;&#45; Line break &#45;&#45;&gt;                                              |
-|   |                                                                      |
-| 2 | 600 W. Chicago Ave.&lt;br&gt;                                            |
-|   |                                                                      |
-| 3 | Chicago, IL 60654&lt;br&gt;                                              |
-|   |                                                                      |
-| 4 | USA                                                                  |
-|   |                                                                      |
-| 5 | &lt;!&#45;&#45; Word break &#45;&#45;&gt;                                              |
-|   |                                                                      |
-| 6 | http://shay&lt;wbr&gt;howe.com                                           |
-|   |                                                                      |
-| 7 |                                                                      |
-|   |                                                                      |
-| 8 |                                                                      |
+ 1  &lt;!&#45;&#45; Line break &#45;&#45;&gt;                                              
+                                                                         
+ 2  600 W. Chicago Ave.&lt;br&gt;                                            
+                                                                         
+ 3  Chicago, IL 60654&lt;br&gt;                                              
+                                                                         
+ 4  USA                                                                  
+                                                                         
+ 5  &lt;!&#45;&#45; Word break &#45;&#45;&gt;                                              
+                                                                         
+ 6  http://shay&lt;wbr&gt;howe.com                                           
+                                                                         
+ 7                                                                       
+                                                                         
+ 8                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -12195,11 +11839,11 @@ rendered as a side comments or small print. This often includes
 copyright information or legal print.
 
 +---+----------------------------------------------------------------------+
-| 1 | &lt;!&#45;&#45; Side comments or small print &#45;&#45;&gt;                            |
-|   |                                                                      |
-| 2 | &lt;small&gt;&copy; 2012 Shay Howe&lt;/small&gt;                             |
-|   |                                                                      |
-| 3 |                                                                      |
+ 1  &lt;!&#45;&#45; Side comments or small print &#45;&#45;&gt;                            
+                                                                         
+ 2  &lt;small&gt;&copy; 2012 Shay Howe&lt;/small&gt;                             
+                                                                         
+ 3                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -12237,17 +11881,17 @@ you wish on your server while still providing users with a meaningful
 name.
 
 +---+----------------------------------------------------------------------+
-| 1 | &lt;!&#45;&#45; Boolean &#45;&#45;&gt;                                                 |
-|   |                                                                      |
-| 2 | &lt;a href=&quot;twitter-logo.png&quot; download&gt;Twitter Logo&lt;/a&gt;           |
-|   |                                                                      |
-| 3 | &lt;!&#45;&#45; With a value &#45;&#45;&gt;                                            |
-|   |                                                                      |
-| 4 | &lt;a href=&quot;twitter-logo.png&quot; download=&quot;Logo&quot;&gt;Twitter Logo&lt;/a&gt;  |
-|   |                                                                      |
-| 5 |                                                                      |
-|   |                                                                      |
-| 6 |                                                                      |
+ 1  &lt;!&#45;&#45; Boolean &#45;&#45;&gt;                                                 
+                                                                         
+ 2  &lt;a href=&quot;twitter-logo.png&quot; download&gt;Twitter Logo&lt;/a&gt;           
+                                                                         
+ 3  &lt;!&#45;&#45; With a value &#45;&#45;&gt;                                            
+                                                                         
+ 4  &lt;a href=&quot;twitter-logo.png&quot; download=&quot;Logo&quot;&gt;Twitter Logo&lt;/a&gt;  
+                                                                         
+ 5                                                                       
+                                                                         
+ 6                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -12262,11 +11906,11 @@ referenced. For example, when linking to a copyright statement
 the rel attribute value of copyright should be used.
 
 +---+----------------------------------------------------------------------+
-| 1 | &lt;a href=&quot;legal.html&quot; rel=&quot;copyright&quot;&gt;Terms of Use&lt;/a&gt;        |
-|   |                                                                      |
-| 2 | &lt;a href=&quot;toc.html&quot; rel=&quot;contents&quot;&gt;Table of Contents&lt;/a&gt;      |
-|   |                                                                      |
-| 3 |                                                                      |
+ 1  &lt;a href=&quot;legal.html&quot; rel=&quot;copyright&quot;&gt;Terms of Use&lt;/a&gt;        
+                                                                         
+ 2  &lt;a href=&quot;toc.html&quot; rel=&quot;contents&quot;&gt;Table of Contents&lt;/a&gt;      
+                                                                         
+ 3                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -12364,13 +12008,13 @@ different, item types. You may also write your own item types should you
 find the need.
 
 +---+----------------------------------------------------------------------+
-| 1 | &lt;section itemscope itemtype=&quot;http://schema.org/Person&quot;&gt;          |
-|   |                                                                      |
-| 2 | &#8230;                                                                 |
-|   |                                                                      |
-| 3 | &lt;/section&gt;                                                         |
-|   |                                                                      |
-| 4 |                                                                      |
+ 1  &lt;section itemscope itemtype=&quot;http://schema.org/Person&quot;&gt;          
+                                                                         
+ 2  &#8230;                                                                 
+                                                                         
+ 3  &lt;/section&gt;                                                         
+                                                                         
+ 4                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -12381,13 +12025,13 @@ what property is being referenced, and the content within the element
 itself most commonly determines the value of the property.
 
 +---+----------------------------------------------------------------------+
-| 1 | &lt;section itemscope itemtype=&quot;http://schema.org/Person&quot;&gt;          |
-|   |                                                                      |
-| 2 | &lt;h1 itemprop=&quot;name&quot;&gt;Shay Howe&lt;/h1&gt;                             |
-|   |                                                                      |
-| 3 | &lt;/section&gt;                                                         |
-|   |                                                                      |
-| 4 |                                                                      |
+ 1  &lt;section itemscope itemtype=&quot;http://schema.org/Person&quot;&gt;          
+                                                                         
+ 2  &lt;h1 itemprop=&quot;name&quot;&gt;Shay Howe&lt;/h1&gt;                             
+                                                                         
+ 3  &lt;/section&gt;                                                         
+                                                                         
+ 4                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -12420,41 +12064,41 @@ postal address item type within it. Also, please notice the different
 item properties and their corresponding values.
 
 +---+----------------------------------------------------------------------+
-| 1 | &lt;section itemscope itemtype=&quot;http://schema.org/Person&quot;&gt;          |
-|   |                                                                      |
-| 2 | &lt;strong itemprop=&quot;name&quot;&gt;Shay Howe&lt;/strong&gt;                     |
-|   |                                                                      |
-| 3 | &lt;img src=&quot;shay.jpg&quot; itemprop=&quot;image&quot; alt=&quot;Shay Howe&quot;&gt;        |
-|   |                                                                      |
-| 4 | &lt;div itemprop=&quot;jobTitle&quot;&gt;Designer and Front-end                  |
-|   | Developer&lt;/div&gt;                                                    |
-| 5 |                                                                      |
-|   | &lt;a href=&quot;http://www.shayhowe.com&quot;                                 |
-| 6 | itemprop=&quot;url&quot;&gt;shayhowe.com&lt;/a&gt;                                 |
-|   |                                                                      |
-| 7 | &lt;div itemprop=&quot;telephone&quot;&gt;(555) 123-4567&lt;/div&gt;                 |
-|   |                                                                      |
-| 8 | &lt;a href=&quot;mailto:shay@awesome.com&quot;                                 |
-|   | itemprop=&quot;email&quot;&gt;shay@awesome.com&lt;/a&gt;                           |
-| 9 |                                                                      |
-|   | &lt;address itemprop=&quot;address&quot; itemscope                             |
-| 1 | itemtype=&quot;http://schema.org/PostalAddress&quot;&gt;                       |
-| 0 |                                                                      |
-|   | &lt;span itemprop=&quot;streetAddress&quot;&gt;600 W. Chicago Ave.&lt;/span&gt;      |
-| 1 |                                                                      |
-| 1 | &lt;span itemprop=&quot;addressLocality&quot;&gt;Chicago&lt;/span&gt;,               |
-|   |                                                                      |
-| 1 | &lt;abbr itemprop=&quot;addressRegion&quot; title=&quot;Illinois&quot;&gt;IL&lt;/abbr&gt;    |
-| 2 |                                                                      |
-|   | &lt;span itemprop=&quot;postalCode&quot;&gt;60654&lt;/span&gt;                       |
-| 1 |                                                                      |
-| 3 | &lt;/address&gt;                                                         |
-|   |                                                                      |
-| 1 | &lt;/section&gt;                                                         |
-| 4 |                                                                      |
-|   |                                                                      |
-| 1 |                                                                      |
-| 5 |                                                                      |
+ 1  &lt;section itemscope itemtype=&quot;http://schema.org/Person&quot;&gt;          
+                                                                         
+ 2  &lt;strong itemprop=&quot;name&quot;&gt;Shay Howe&lt;/strong&gt;                     
+                                                                         
+ 3  &lt;img src=&quot;shay.jpg&quot; itemprop=&quot;image&quot; alt=&quot;Shay Howe&quot;&gt;        
+                                                                         
+ 4  &lt;div itemprop=&quot;jobTitle&quot;&gt;Designer and Front-end                  
+    Developer&lt;/div&gt;                                                    
+ 5                                                                       
+    &lt;a href=&quot;http://www.shayhowe.com&quot;                                 
+ 6  itemprop=&quot;url&quot;&gt;shayhowe.com&lt;/a&gt;                                 
+                                                                         
+ 7  &lt;div itemprop=&quot;telephone&quot;&gt;(555) 123-4567&lt;/div&gt;                 
+                                                                         
+ 8  &lt;a href=&quot;mailto:shay@awesome.com&quot;                                 
+    itemprop=&quot;email&quot;&gt;shay@awesome.com&lt;/a&gt;                           
+ 9                                                                       
+    &lt;address itemprop=&quot;address&quot; itemscope                             
+ 1  itemtype=&quot;http://schema.org/PostalAddress&quot;&gt;                       
+ 0                                                                       
+    &lt;span itemprop=&quot;streetAddress&quot;&gt;600 W. Chicago Ave.&lt;/span&gt;      
+ 1                                                                       
+ 1  &lt;span itemprop=&quot;addressLocality&quot;&gt;Chicago&lt;/span&gt;,               
+                                                                         
+ 1  &lt;abbr itemprop=&quot;addressRegion&quot; title=&quot;Illinois&quot;&gt;IL&lt;/abbr&gt;    
+ 2                                                                       
+    &lt;span itemprop=&quot;postalCode&quot;&gt;60654&lt;/span&gt;                       
+ 1                                                                       
+ 3  &lt;/address&gt;                                                         
+                                                                         
+ 1  &lt;/section&gt;                                                         
+ 4                                                                       
+                                                                         
+ 1                                                                       
+ 5                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -12474,44 +12118,44 @@ instead. Common property similarities between the two can be identified,
 as can some of the nested item types.
 
 +---+----------------------------------------------------------------------+
-| 1 | &lt;section itemscope itemtype=&quot;http://schema.org/Event&quot;&gt;           |
-|   |                                                                      |
-| 2 | &lt;a itemprop=&quot;url&quot; href=&quot;#&quot;&gt;                                    |
-|   |                                                                      |
-| 3 | &lt;span itemprop=&quot;name&quot;&gt;Styles Conference&lt;/span&gt;                 |
-|   |                                                                      |
-| 4 | &lt;/a&gt;                                                               |
-|   |                                                                      |
-| 5 | &lt;time itemprop=&quot;startDate&quot; datetime=&quot;2014-08-2409:00&quot;&gt;Sunday,  |
-|   | August 24,                                                           |
-| 6 |                                                                      |
-|   | 2014 at 9:00 a.m.&lt;/time&gt;                                           |
-| 7 |                                                                      |
-|   | &lt;div itemprop=&quot;location&quot; itemscope                                |
-| 8 | itemtype=&quot;http://schema.org/Place&quot;&gt;                               |
-|   |                                                                      |
-| 9 | &lt;a itemprop=&quot;url&quot;                                                 |
-|   | href=&quot;http://www.thechicagotheatre.com/&quot;&gt;Chicago Theatre&lt;/a&gt;    |
-| 1 |                                                                      |
-| 0 | &lt;address itemprop=&quot;address&quot; itemscope                             |
-|   | itemtype=&quot;http://schema.org/PostalAddress&quot;&gt;                       |
-| 1 |                                                                      |
-| 1 | &lt;div itemprop=&quot;streetAddress&quot;&gt;175 N. State St.&lt;/div&gt;           |
-|   |                                                                      |
-| 1 | &lt;span itemprop=&quot;addressLocality&quot;&gt;Chicago&lt;/span&gt;,               |
-| 2 |                                                                      |
-|   | &lt;abbr itemprop=&quot;addressRegion&quot; title=&quot;Illinois&quot;&gt;IL&lt;/abbr&gt;    |
-| 1 |                                                                      |
-| 3 | &lt;span itemprop=&quot;postalCode&quot;&gt;60601&lt;/span&gt;                       |
-|   |                                                                      |
-| 1 | &lt;/address&gt;                                                         |
-| 4 |                                                                      |
-|   | &lt;/div&gt;                                                             |
-| 1 |                                                                      |
-| 5 | &lt;/section&gt;                                                         |
-|   |                                                                      |
-| 1 |                                                                      |
-| 6 |                                                                      |
+ 1  &lt;section itemscope itemtype=&quot;http://schema.org/Event&quot;&gt;           
+                                                                         
+ 2  &lt;a itemprop=&quot;url&quot; href=&quot;#&quot;&gt;                                    
+                                                                         
+ 3  &lt;span itemprop=&quot;name&quot;&gt;Styles Conference&lt;/span&gt;                 
+                                                                         
+ 4  &lt;/a&gt;                                                               
+                                                                         
+ 5  &lt;time itemprop=&quot;startDate&quot; datetime=&quot;2014-08-2409:00&quot;&gt;Sunday,  
+    August 24,                                                           
+ 6                                                                       
+    2014 at 9:00 a.m.&lt;/time&gt;                                           
+ 7                                                                       
+    &lt;div itemprop=&quot;location&quot; itemscope                                
+ 8  itemtype=&quot;http://schema.org/Place&quot;&gt;                               
+                                                                         
+ 9  &lt;a itemprop=&quot;url&quot;                                                 
+    href=&quot;http://www.thechicagotheatre.com/&quot;&gt;Chicago Theatre&lt;/a&gt;    
+ 1                                                                       
+ 0  &lt;address itemprop=&quot;address&quot; itemscope                             
+    itemtype=&quot;http://schema.org/PostalAddress&quot;&gt;                       
+ 1                                                                       
+ 1  &lt;div itemprop=&quot;streetAddress&quot;&gt;175 N. State St.&lt;/div&gt;           
+                                                                         
+ 1  &lt;span itemprop=&quot;addressLocality&quot;&gt;Chicago&lt;/span&gt;,               
+ 2                                                                       
+    &lt;abbr itemprop=&quot;addressRegion&quot; title=&quot;Illinois&quot;&gt;IL&lt;/abbr&gt;    
+ 1                                                                       
+ 3  &lt;span itemprop=&quot;postalCode&quot;&gt;60601&lt;/span&gt;                       
+                                                                         
+ 1  &lt;/address&gt;                                                         
+ 4                                                                       
+    &lt;/div&gt;                                                             
+ 1                                                                       
+ 5  &lt;/section&gt;                                                         
+                                                                         
+ 1                                                                       
+ 6                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -12541,9 +12185,9 @@ accomplished using the role attribute. These roles then specify what
 certain elements and blocks of content do on a page.
 
 +---+----------------------------------------------------------------------+
-| 1 | &lt;header role=&quot;banner&quot;&gt;&#8230;&lt;/header&gt;                            |
-|   |                                                                      |
-| 2 |                                                                      |
+ 1  &lt;header role=&quot;banner&quot;&gt;&#8230;&lt;/header&gt;                            
+                                                                         
+ 2                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -12622,54 +12266,54 @@ directly tied to the document from a top level perspective, not elements
 nested within other regions of the document structure.
 
 +------+-----------+---------------------------------------------------+
-|      | *         | <b>[Acceptable Roles]{.mark}</b>                  |
-|      |           |                                                   |
-|      |           |                                                   |
-|      |           |                                                   |
-|      |           |                                                   |
+       *          <b>[Acceptable Roles]{.mark}</b>                  
+                                                                    
+                                                                    
+                                                                    
+                                                                    
 +======+===========+===================================================+
-| art  | article   | application, article, document, or main           |
-| icle |           |                                                   |
+ art   article    application, article, document, or main           
+ icle                                                               
 +------+-----------+---------------------------------------------------+
-| a    | comp      | complementary, note, or search                    |
-| side | lementary |                                                   |
+ a     comp       complementary, note, or search                    
+ side  lementary                                                    
 +------+-----------+---------------------------------------------------+
-| fo   | ---       | contentinfo (Only once per page)                  |
-| oter |           |                                                   |
+ fo    ---        contentinfo (Only once per page)                  
+ oter                                                               
 +------+-----------+---------------------------------------------------+
-| he   | ---       | banner (Only once per page)                       |
-| ader |           |                                                   |
+ he    ---        banner (Only once per page)                       
+ ader                                                               
 +------+-----------+---------------------------------------------------+
-| nav  | n         | navigation                                        |
-|      | avigation |                                                   |
+ nav   n          navigation                                        
+       avigation                                                    
 +------+-----------+---------------------------------------------------+
-| sec  | region    | alert, alertdialog,                               |
-| tion |           | application, contentinfo, dialog, document, log,  |
-|      |           |                                                   |
-|      |           | main, marquee, region, search, or status          |
+ sec   region     alert, alertdialog,                               
+ tion             application, contentinfo, dialog, document, log,  
+                                                                    
+                  main, marquee, region, search, or status          
 +------+-----------+---------------------------------------------------+
 
 Combining the elements with their matched roles in HTML5 would look like
 the following code snippet.
 
 +---+----------------------------------------------------------------------+
-| 1 | &lt;header role=&quot;banner&quot;&gt;                                           |
-|   |                                                                      |
-| 2 | &lt;nav role=&quot;navigation&quot;&gt;&#8230;&lt;/nav&gt;                              |
-|   |                                                                      |
-| 3 | &lt;/header&gt;                                                          |
-|   |                                                                      |
-| 4 | &lt;article role=&quot;article&quot;&gt;                                         |
-|   |                                                                      |
-| 5 | &lt;section role=&quot;region&quot;&gt;&#8230;&lt;/section&gt;                          |
-|   |                                                                      |
-| 6 | &lt;/article&gt;                                                         |
-|   |                                                                      |
-| 7 | &lt;aside role=&quot;complementary&quot;&gt;&#8230;&lt;/aside&gt;                       |
-|   |                                                                      |
-| 8 | &lt;footer role=&quot;contentinfo&quot;&gt;&#8230;&lt;/footer&gt;                       |
-|   |                                                                      |
-| 9 |                                                                      |
+ 1  &lt;header role=&quot;banner&quot;&gt;                                           
+                                                                         
+ 2  &lt;nav role=&quot;navigation&quot;&gt;&#8230;&lt;/nav&gt;                              
+                                                                         
+ 3  &lt;/header&gt;                                                          
+                                                                         
+ 4  &lt;article role=&quot;article&quot;&gt;                                         
+                                                                         
+ 5  &lt;section role=&quot;region&quot;&gt;&#8230;&lt;/section&gt;                          
+                                                                         
+ 6  &lt;/article&gt;                                                         
+                                                                         
+ 7  &lt;aside role=&quot;complementary&quot;&gt;&#8230;&lt;/aside&gt;                       
+                                                                         
+ 8  &lt;footer role=&quot;contentinfo&quot;&gt;&#8230;&lt;/footer&gt;                       
+                                                                         
+ 9                                                                       
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
