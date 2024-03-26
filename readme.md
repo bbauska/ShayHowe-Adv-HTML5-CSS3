@@ -9,9 +9,9 @@ output:
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h1 align="center" width="100%">Advanced HTML &amp; CSS</h1>
 
-<h1 style="text-align: center;">Advanced HTML &amp; CSS</h1>
-<h6 style="text-align: center;">by Shay-Howe</h6>
+<h6 align="center">by Shay-Howe</h6>
 
 <h2>[Lesson 1] Performance & Organization</h2>
 
