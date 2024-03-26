@@ -121,6 +121,7 @@ interface components, and business logic modules.
 | 8 |                                                                      |
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
+```
 
 The architecture outlined above includes three directories, all with
 individual groups of styles. The goal here is to <b>start thinking of
@@ -177,6 +178,7 @@ multiple classes as necessary.
 
 ### <b>HTML</b>
 
+```
 +---+----------------------------------------------------------------------+
 | 1 | &lt;div class=&quot;alert alert-error&quot;&gt;                                  |
 |   |                                                                      |
@@ -187,6 +189,7 @@ multiple classes as necessary.
 | 4 |                                                                      |
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
+```
 
 ### <b>CSS</b>
 
