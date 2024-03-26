@@ -12747,14 +12747,14 @@ the following code snippet.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-### States & Properties
+<h3>States & Properties</h3>
 
-In combination with WAI-ARIA roles there are also [[states and
-properties]{.underline}](https://www.w3.org/TR/wai-aria/#states_and_properties) which
-help inform assistive technologies how content is configured. Like
-roles, the states and properties are broken into four categories,
+In combination with WAI-ARIA roles there are also 
+<a href="https://www.w3.org/TR/wai-aria/#states_and_properties">states and
+properties</a> which help inform assistive technologies how content is configured. 
+Like roles, the states and properties are broken into four categories,
 including widget attributes, live region attributes, drag-and-drop
-attributes, and relationship attributes
+attributes, and relationship attributes 
 
 The **widget attributes** support widget roles and are specific to the
 user interface and where users take actions. The **live region
@@ -12766,22 +12766,29 @@ behaviors to assistive technologies. Lastly, **relationship
 attributes** outline the relationship between elements when the document
 structure cannot be determined.
 
-### Resources & Links
+<details>
+  <summary>Resources</summary>
 
--   [Text-Level Semantics](https://developers.whatwg.org/text-level-semantics.html) 
-  via WHATWG
+  <h3>Resources & Links</h3>
 
--   [Existing rel Values](http://microformats.org/wiki/existing-rel-values) via Microformats.org
+  <ul>
+    <li><a href="https://developers.whatwg.org/text-level-semantics.html">
+      Text-Level Semantics</a> via WHATWG</li>
+    <li><a href="http://microformats.org/wiki/existing-rel-values">
+      Existing rel Values</a> via Microformats.org</li>
+    <li><a href="http://schema.org/docs/schemas.html">
+      Organization of Schemas</a> via Schema.org</li>
+    <li><a href="http://diveintohtml5.info/extensibility.html">
+      Microdata</a> via Dive Into HTML5</li>
+    <li><a href="http://www.w3.org/WAI/intro/aria">
+      WAI-ARIA Overview</a>) via W3.org</li>
+    <li><a href="https://www.w3.org/TR/wai-aria/#roles">
+      The Roles Model</a> via W3.org</li>
+  </ul>
 
--   [Organization of Schemas](http://schema.org/docs/schemas.html) via Schema.org
+</details>
 
--   [Microdata](http://diveintohtml5.info/extensibility.html) via Dive Into HTML5
-
--   [WAI-ARIA Overview](http://www.w3.org/WAI/intro/aria) via W3.org
-
--   [The Roles Model](https://www.w3.org/TR/wai-aria/#roles) via W3.org
-
-[**Lesson 9** 
-[Feature Support & Polyfills](https://learn.shayhowe.com/advanced-html-css/feature-support-polyfills/)
+[**Lesson 9**] <a href="https://learn.shayhowe.com/advanced-html-css/feature-support-polyfills/">
+  Feature Support & Polyfills</a>
 
 ...the end.
