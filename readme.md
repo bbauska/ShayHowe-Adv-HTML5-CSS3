@@ -1,4 +1,4 @@
----
+ ---
 title: "Shay & Howe's Advanced HTML and CSS"
 author: "Brian Bauska (bbauska)"
 date last editted: "3/25/2024 5 +pm"
@@ -223,8 +223,8 @@ of these categories are then inherited as necessary.
 
 ### Choosing a Methodology
 
-Choosing which methodology to use, if any, is completely [[up to
-you]{.underline}](http://viget.com/inspire/css-squareoff) and what you
+Choosing which methodology to use, if any, is completely [up to
+you](http://viget.com/inspire/css-squareoff) and what you
 feel is best for a given website. Generally speaking, a solid mix of
 both OOCSS and SMACSS works well, borrowing principles from each
 methodology as you prefer.
@@ -232,7 +232,7 @@ methodology as you prefer.
 ### Performance Driven Selectors
 
 One functionality of CSS often abused without awareness
-are [[selectors]{.underline}](http://csswizardry.com/2011/09/writing-efficient-css-selectors/).
+are [selectors](http://csswizardry.com/2011/09/writing-efficient-css-selectors/).
 Much of the attention within CSS is given to properties and values. So
 long as these styles are applied to the correct element, everything
 looks to be fine. This is a very poor assumption. How elements are
@@ -600,193 +600,75 @@ be shown accordingly.
     Text</span></a></li>                                           
  3                                                                       
     <li><a href="#"><span class="italic">Italicize             
- 4  Text</span></a></li>                                           
-                                                                         
- 5  <li><a href="#"><span class="underline">Underline          
-    Text</span></a></li>                                           
- 6                                                                       
-    <li><a href="#"><span class="size">Size                    
- 7  Text</span></a></li>                                           
-                                                                         
- 8  <li><a href="#"><span class="bullet">Bullet                
-    Text</span></a></li>                                           
- 9                                                                       
-    <li><a href="#"><span class="number">Number                
- 1  Text</span></a></li>                                           
- 0                                                                       
-    <li><a href="#"><span class="quote">Quote                  
- 1  Text</span></a></li>                                           
- 1                                                                       
-    <li><a href="#"><span class="left">Left Align              
- 1  Text</span></a></li>                                           
- 2                                                                       
-    <li><a href="#"><span class="center">Center Align          
- 1  Text</span></a></li>                                           
- 3                                                                       
-    <li><a href="#"><span class="right">Right Align            
-    Text</span></a></li>                                           
-                                                                         
-    </ul>                                                              
-``
+ 4  Text</span></a></li>
+ 5  <li><a href="#"><span class="underline">Underline Text</span></a></li>
+ 6  <li><a href="#"><span class="size">Size 7  Text</span></a></li>
+ 8  <li><a href="#"><span class="bullet">Bullet Text</span></a></li>
+ 9  <li><a href="#"><span class="number">Number 1  Text</span></a></li>
+ 10 <li><a href="#"><span class="quote">Quote 1  Text</span></a></li>
+ 11 <li><a href="#"><span class="left">Left Align 1  Text</span></a></li>
+ 12 <li><a href="#"><span class="center">Center Align 1  Text</span></a></li>
+ 13 <li><a href="#"><span class="right">Right Align Text</span></a></li>
+ 14 </ul>
+```
 
 <b>CSS</b>
 
 ```
- 1  ul {                                                                 
-                                                                         
- 2  margin: 0;                                                           
-                                                                         
- 3  padding: 0;                                                          
-                                                                         
- 4  }                                                                    
-                                                                         
- 5  li {                                                                 
-                                                                         
- 6  float: left;                                                         
-                                                                         
- 7  list-style: none;                                                    
-                                                                         
- 8  margin: 2px;                                                         
-                                                                         
- 9  }                                                                    
-                                                                         
- 1  li a {                                                               
- 0                                                                       
-    background: linear-gradient(#fff, #eee);                             
- 1                                                                       
- 1  border: 1px solid #ccc;                                              
-                                                                         
- 1  border-radius: 3px;                                                  
- 2                                                                       
-    display: block;                                                      
- 1                                                                       
- 3  padding: 3px;                                                        
-                                                                         
- 1  }                                                                    
- 4                                                                       
-    li a:hover {                                                         
- 1                                                                       
- 5  border-color: #999;                                                  
-                                                                         
- 1  }                                                                    
- 6                                                                       
-    li span {                                                            
- 1                                                                       
- 7  background: url("sprite.png") 0 0 no-repeat;                       
-                                                                         
- 1  color: transparent;                                                  
- 8                                                                       
-    display: block;                                                      
- 1                                                                       
- 9  font: 0/0 a;                                                         
-                                                                         
- 2  height: 16px;                                                        
- 0                                                                       
-    width: 16px;                                                         
- 2                                                                       
- 1  }                                                                    
-                                                                         
- 2  .italic {                                                            
- 2                                                                       
-    background-position: -16px 0;                                        
- 2                                                                       
- 3  }                                                                    
-                                                                         
+ 1  ul {
+ 2  margin: 0;
+ 3  padding: 0;
+ 4  }
+ 5  li {
+ 6  float: left;
+ 7  list-style: none;
+ 8  margin: 2px;
+ 9  }
+ 1  li a {
+    background: linear-gradient(#fff, #eee);
+ 1  border: 1px solid #ccc;
+ 1  border-radius: 3px;
+    display: block;
+ 3  padding: 3px;
+ 1  }
+    li a:hover {
+ 5  border-color: #999;
+ 1  }
+    li span {
+ 7  background: url("sprite.png") 0 0 no-repeat;
+ 1  color: transparent;
+    display: block;
+ 9  font: 0/0 a;
+ 2  height: 16px;
+ 0  
+    width: 16px;
+ 1  }
+ 2  .italic {
+    background-position: -16px 0;
+ 3  }
  2  .underline {                                                         
- 4                                                                       
-    background-position: -32px 0;                                        
- 2                                                                       
- 5  }                                                                    
-                                                                         
+    background-position: -32px 0;
+ 5  }
  2  .size {                                                              
- 6                                                                       
-    background-position: -48px 0;                                        
- 2                                                                       
- 7  }                                                                    
-                                                                         
- 2  .bullet {                                                            
- 8                                                                       
-    background-position: -64px 0;                                        
- 2                                                                       
- 9  }                                                                    
-                                                                         
- 3  .number {                                                            
- 0                                                                       
-    background-position: -80px 0;                                        
- 3                                                                       
- 1  }                                                                    
-                                                                         
- 3  .quote {                                                             
- 2                                                                       
-    background-position: -96px 0;                                        
- 3                                                                       
- 3  }                                                                    
-                                                                         
- 3  .left {                                                              
- 4                                                                       
-    background-position: -112px 0;                                       
- 3                                                                       
- 5  }                                                                    
-                                                                         
- 3  .center {                                                            
- 6                                                                       
-    background-position: -128px 0;                                       
- 3                                                                       
- 7  }                                                                    
-                                                                         
- 3  .right {                                                             
- 8                                                                       
-    background-position: -144px 0;                                       
- 3                                                                       
- 9  }                                                                    
-                                                                         
- 4                                                                       
- 0                                                                       
-                                                                         
- 4                                                                       
- 1                                                                       
-                                                                         
- 4                                                                       
- 2                                                                       
-                                                                         
- 4                                                                       
- 3                                                                       
-                                                                         
- 4                                                                       
- 4                                                                       
-                                                                         
- 4                                                                       
- 5                                                                       
-                                                                         
- 4                                                                       
- 6                                                                       
-                                                                         
- 4                                                                       
- 7                                                                       
-                                                                         
- 4                                                                       
- 8                                                                       
-                                                                         
- 4                                                                       
- 9                                                                       
-                                                                         
- 5                                                                       
- 0                                                                       
-                                                                         
- 5                                                                       
- 1                                                                       
-                                                                         
- 5                                                                       
- 2                                                                       
-                                                                         
- 5                                                                       
- 3                                                                       
-                                                                         
- 5                                                                       
- 4                                                                       
-                                                                         
- 5                                                                       
- 5                                                                       
+    background-position: -48px 0;
+ 7  }
+ 2  .bullet {
+    background-position: -64px 0;
+ 9  }
+ 3  .number {
+    background-position: -80px 0;
+ 1  }
+ 3  .quote {
+    background-position: -96px 0;
+ 3  }
+ 3  .left {
+    background-position: -112px 0;
+ 5  }
+ 3  .center {
+    background-position: -128px 0;
+ 7  }
+ 3  .right {
+    background-position: -144px 0;
 ```
 
 ### Image Sprites Demo
@@ -814,26 +696,23 @@ than the actual image.
 <h5>HTML</h5>
 
 ```
- 1  <img height="100" width="660" alt="Rigged Pattern"            
-    src="data:image/png;base64,                                         
-                                                                       
- 2  iVBORw0KGg                                                           
+ 1  <img height="100" width="660" alt="Rigged Pattern"
+    src="data:image/png;base64,
+ 2  iVBORw0KGg
      oAAAANSUhEUgAAAAoAAAAICAYAAADA+m62AAAAPUlEQVQYV2NkQAO6m73+X/bdxoguji 
-                                                                         
-    IAU4RNMVwhuiQ6H6wQl3XI4oy4FMHcCJPHcDS6J2A2EqUQpJ                     
-                                                                         
-    hohQAyIyYy0nBAGgAAAABJRU5ErkJggg==">                               
+    IAU4RNMVwhuiQ6H6wQl3XI4oy4FMHcCJPHcDS6J2A2EqUQpJ
+    hohQAyIyYy0nBAGgAAAABJRU5ErkJggg==">
 ```
 
 <h5>CSS</h5>
 
 ```
- 1  div {                                                                
- 2  background:                                                          
-    url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAI         
-    CAYAA                                                                
- 4  ADA+m62AAAAPUlEQVQYV2NkQAO6m73+X/bdxogujiIAU4RNMVwhuiQ6H6wQl3XI4oy4F 
-    MHcCJPHcDS6J2A2EqUQpJhohQAyIyYy0nBAGgAAAABJRU5ErkJggg==") repeat;   
+ 1  div {
+ 2  background:          
+    url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAI
+    CAYAA 
+ 4  ADA+m62AAAAPUlEQVQYV2NkQAO6m73+X/bdxogujiIAU4RNMVwhuiQ6H6wQl3XI4oy4F
+    MHcCJPHcDS6J2A2EqUQpJhohQAyIyYy0nBAGgAAAABJRU5ErkJggg==") repeat;
 ```
 
 ### Image Data URI Demo
@@ -860,9 +739,9 @@ be loaded. Alternatively, the expires headers can be changed to a
 smaller period of time.
 
 ```
- 1  ExpiresByType text/css "access plus 1 year"                        
- 2  ExpiresByType application/javascript "access plus 1 year"          
- 3                                                                       
+ 1  ExpiresByType text/css "access plus 1 year"
+ 2  ExpiresByType application/javascript "access plus 1 year"
+ 3  
 ```
 
 Changing the "access plus 1 year" value to "access plus 1 week" is
@@ -982,27 +861,27 @@ the .box-set division you will see it has a height of 0.
 <b>HTML</b>
 
 ```
- 1  <div class="box-set">                                            
- 2  <figure class="box">Box 1</figure>                             
- 3  <figure class="box">Box 2</figure>                             
- 4  <figure class="box">Box 3</figure>                             
- 5  </div>                                                             
+ 1  <div class="box-set">
+ 2  <figure class="box">Box 1</figure>
+ 3  <figure class="box">Box 2</figure>
+ 4  <figure class="box">Box 3</figure>
+ 5  </div>
  6                                                                       
 ```
 
 <b>CSS</b>
 
 ```
- 1  .box-set {                                                           
- 2  background: #eaeaed;                                                 
- 3  }                                                                    
- 4  .box {                                                               
- 5  background: #2db34a;                                                 
- 6  float: left;                                                         
- 7  margin: 1.858736059%;                                                
- 8  width: 29.615861214%;                                                
- 9  }                                                                    
- 10                                                                       
+ 1  .box-set {
+ 2  background: #eaeaed;
+ 3  }
+ 4  .box {
+ 5  background: #2db34a;
+ 6  float: left;
+ 7  margin: 1.858736059%;
+ 8  width: 29.615861214%;
+ 9  }
+ 10 
 ```
 
 ### Containing Floats Demo
@@ -1034,10 +913,10 @@ Explorer on an Apple computer will also add scrollbars to the parent
 element, in which it is better to use the overflow: hidden; declaration.
 
 ```
- 1  .box-set {                                                           
- 2  overflow: auto;                                                      
- 3  }                                                                    
- 4                                                                       
+ 1  .box-set {
+ 2  overflow: auto;
+ 3  }
+ 4  
 ```
 
 ### Overflow Technique Demo
@@ -1084,19 +963,19 @@ contained and the elements are able to live outside of the parent
 element.
 
 ```
- 1  .box-set:before,                                                     
- 2  .box-set:after {                                                     
- 3  content: "";                                                       
- 4  display: table;                                                      
- 5  }                                                                    
- 6  .box-set:after {                                                     
- 7  clear: both;                                                         
- 8  }                                                                    
- 9  .box-set {                                                           
- 10  &ast;zoom: 1;                                                           
- 11  }                                                                    
- 12                                                                       
- 13                                                                       
+ 1  .box-set:before,
+ 2  .box-set:after {
+ 3  content: "";
+ 4  display: table;
+ 5  }
+ 6  .box-set:after {
+ 7  clear: both;
+ 8  }
+ 9  .box-set {
+ 10  &ast;zoom: 1;
+ 11  }
+ 12  
+ 13  
 ```
 
 ### Clearfix Technique Demo
@@ -1117,18 +996,18 @@ The group class name can then be applied to any parent element needing
 to contain floats.
 
 ```
- 1  .group:before,                                                       
- 2  .group:after {                                                       
- 3  content: "";                                                       
- 4  display: table;                                                      
- 5  }                                                                    
- 6  .group:after {                                                       
- 7  clear: both;                                                         
- 8  }                                                                    
- 9  .group {                                                             
- 10                                                                        
- 11  &ast;zoom: 1;                                                           
- 12  }                                                                    
+ 1  .group:before,
+ 2  .group:after {
+ 3  content: "";
+ 4  display: table;
+ 5  }
+ 6  .group:after {
+ 7  clear: both;
+ 8  }
+ 9  .group {
+ 10 
+ 11  &ast;zoom: 1;
+ 12  }
 ```
 
 ### Single Pseudo-Elements
@@ -1166,27 +1045,27 @@ specific direction.
 <b>HTML</b>
 
 ```
- 1  <div class="box-set">                                            
- 2  <figure class="box box-1">Box 1</figure>                       
- 3  <figure class="box box-2">Box 2</figure>                       
- 4  <figure class="box box-3">Box 3</figure>                       
- 5  <figure class="box box-4">Box 4</figure>                       
- 6  </div>                                                             
- 7                                                                       
+ 1  <div class="box-set">
+ 2  <figure class="box box-1">Box 1</figure>
+ 3  <figure class="box box-2">Box 2</figure>
+ 4  <figure class="box box-3">Box 3</figure>
+ 5  <figure class="box box-4">Box 4</figure>
+ 6  </div>
+ 7  
 ```
 
 <b>CSS</b>
 
 ```
- 1  .box-set {                                                           
- 2  background: #eaeaed;                                                 
- 3  }                                                                    
- 4  .box {                                                               
- 5  background: #2db34a;                                                 
- 6  height: 80px;                                                        
- 7  width: 80px;                                                         
- 8  }                                                                    
- 9                                                                       
+ 1  .box-set {
+ 2  background: #eaeaed;
+ 3  }
+ 4  .box {
+ 5  background: #2db34a;
+ 6  height: 80px;
+ 7  width: 80px;
+ 8  }
+ 9  
 ```
 
 ### Position Static Demo
@@ -1239,13 +1118,13 @@ positioned elements default position.
 <b>HTML</b>
 
 ```
- 1  <div class="box-set">                                            
- 2  <figure class="box box-1">Box 1</figure>                       
- 3  <figure class="box box-2">Box 2</figure>                       
- 4  <figure class="box box-3">Box 3</figure>                       
- 5  <figure class="box box-4">Box 4</figure>                       
- 6  </div>                                                             
- 7                                                                       
+ 1  <div class="box-set">
+ 2  <figure class="box box-1">Box 1</figure>
+ 3  <figure class="box box-2">Box 2</figure>
+ 4  <figure class="box box-3">Box 3</figure>
+ 5  <figure class="box box-4">Box 4</figure>
+ 6  </div>
+ 7  
 ```
 
 <b>CSS</b>
@@ -1329,32 +1208,32 @@ value.
 <b>CSS</b>
 
 ```
- 1  .box-set {                                                           
- 2  background: #eaeaed;                                                 
- 3  height: 200px;                                                       
- 4  position: relative;                                                  
- 5  }                                                                    
- 6  .box {                                                               
- 7  background: #2db34a;                                                 
- 8  height: 80px;                                                        
- 9  position: absolute;                                                  
- 10  width: 80px;                                                         
- 11   }                                                                    
- 12  .box-1 {                                                             
- 13  top: 6%;                                                             
- 14   left: 2%;                                                            
- 15                                                                        
- 16  .box-2 {                                                             
- 17   top: 0;                                                              
- 18 right: -40px;                                                        
- 19  }                                                                    
- 20   .box-3 {                                                             
- 21  bottom: -10px;                                                       
- 22  right: 20px;                                                         
- 23   }                                                                    
- 24  .box-4 {                                                             
- 25  bottom: 0;                                                           
- 26  }     
+ 1  .box-set {
+ 2  background: #eaeaed;
+ 3  height: 200px;
+ 4  position: relative;
+ 5  }
+ 6  .box {
+ 7  background: #2db34a;
+ 8  height: 80px;
+ 9  position: absolute;
+ 10  width: 80px;
+ 11   }
+ 12  .box-1 {
+ 13  top: 6%;
+ 14   left: 2%;
+ 15  
+ 16  .box-2 {
+ 17   top: 0;
+ 18 right: -40px;
+ 19  }
+ 20   .box-3 {
+ 21  bottom: -10px;
+ 22  right: 20px;
+ 23   }
+ 24  .box-4 {
+ 25  bottom: 0;
+ 26  }
  27  
 ```
 
@@ -1395,22 +1274,15 @@ and not the containing, relatively positioned parent.
 
 <b>HTML</b>
 
-+---+----------------------------------------------------------------------+
+```
  1  <div class="box-set">                                            
-                                                                         
  2  <figure class="box box-1">Box 1</figure>                       
-                                                                         
  3  <figure class="box box-2">Box 2</figure>                       
-                                                                         
  4  <figure class="box box-3">Box 3</figure>                       
-                                                                         
  5  <figure class="box box-4">Box 4</figure>                       
-                                                                         
  6  </div>                                                             
-                                                                         
  7                                                                       
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 <b>CSS</b>
 
@@ -1486,8 +1358,8 @@ borders, and padding to be applied freely.
 By nature web pages are often considered to be two dimensional,
 displaying elements upon a x and y axis. However when you begin to
 position elements they are occasionally placed on top of one another. To
-change the order of [[how these elements are
-stacked]{.underline}](http://www.impressivewebs.com/a-detailed-look-at-the-z-index-css-property/),
+change the order of [how these elements are
+stacked](http://www.impressivewebs.com/a-detailed-look-at-the-z-index-css-property/),
 also known as the z-axis, the z-index property is to be used.
 
 Generally, elements are positioned upon the z-axis as they appear within
@@ -1511,19 +1383,12 @@ box three.
 <b>HTML</b>
 
 ```
-+---+----------------------------------------------------------------------+
  1  <div class="box-set">                                            
-                                                                         
  2  <figure class="box box-1">Box 1</figure>                       
-                                                                         
  3  <figure class="box box-2">Box 2</figure>                       
-                                                                         
  4  <figure class="box box-3">Box 3</figure>                       
-                                                                         
  5  <figure class="box box-4">Box 4</figure>                       
-                                                                         
  6  </div>                                                             
-                                                                         
  7                                                                       
 ```
 
@@ -1634,36 +1499,28 @@ be used once per page.
 
 <b>CSS</b>
 
-+---+----------------------------------------------------------------------+
+```
  1  h1 {&#8230;}                                                            
-                                                                         
  2  .tagline {&#8230;}                                                      
-                                                                         
  3  #intro {&#8230;}                                                        
-                                                                         
  4                                                                       
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 <b>HTML</b>
 
-+---+----------------------------------------------------------------------+
+```
  1  <section id="intro">                                             
-                                                                         
  2  <h1>&#8230;</h1>                                                    
-                                                                         
  3  <h2 class="tagline">&#8230;</h2>                                  
-                                                                         
  4  </section>                                                         
-                                                                         
  5                                                                       
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 ### Common Selectors Overview
 
+```
   ----------------------------------------------------------------------------------------------------------
-  <b>[Example]{.mark}</b>   <b>[Classification]{.mark}</b>   <b>[Explanation]{.mark}</b>
+  <b>[Example]</b>   <b>[Classification]</b>   <b>[Explanation]</b>
   ---------------------- ----------------------------- -----------------------------------------------------
   h1                     Type Selector                 Selects an element by its type
 
@@ -10006,8 +9863,8 @@ slows down throughout the transition. The ease-in-out value identifies a
 transition that starts slowly, speeds up in the middle, then slows down
 again before ending.
 
-Each timing function has a [[cubic-bezier
-curve]{.underline}](http://www.roblaplaca.com/examples/bezierBuilder/) behind
+Each timing function has a [cubic-bezier
+curve](http://www.roblaplaca.com/examples/bezierBuilder/) behind
 it, which can be specifically set using the cubic-bezier(x1, y1, x2,
 y2) value. Additional values include step-start, step-stop, and a
 uniquely identified steps(number_of_steps, direction) value.
@@ -10016,35 +9873,20 @@ When transitioning multiple properties, you can identify multiple timing
 functions. These timing function values, as with other transition
 property values, may be declared as comma separated values.
 
-+---+----------------------------------------------------------------------+
- 1  .box {                                                               
-                                                                         
- 2  background: #2db34a;                                                 
-                                                                         
- 3  border-radius: 6px;                                                  
-                                                                         
- 4  transition-property: background, border-radius;                      
-                                                                         
- 5  transition-duration: .2s, 1s;                                        
-                                                                         
- 6  transition-timing-function: linear, ease-in;                         
-                                                                         
- 7  }                                                                    
-                                                                         
- 8  .box:hover {                                                         
-                                                                         
- 9  background: #ff7b29;                                                 
-                                                                         
- 1  border-radius: 50%;                                                  
- 0                                                                       
-    }                                                                    
- 1                                                                       
- 1                                                                       
-                                                                         
- 1                                                                       
- 2                                                                       
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
+ 1  .box {
+ 2  background: #2db34a;
+ 3  border-radius: 6px;
+ 4  transition-property: background, border-radius;
+ 5  transition-duration: .2s, 1s;
+ 6  transition-timing-function: linear, ease-in;
+ 7  }
+ 8  .box:hover {
+ 9  background: #ff7b29;
+ 10 border-radius: 50%;
+ 11 }
+ 12 
+```
 
 ### Transition Timing Demo
 
@@ -10057,38 +9899,21 @@ how long a transition should be stalled before executing. As with all
 other transition properties, to delay numerous transitions, each delay
 can be declared as comma separated values.
 
-+---+----------------------------------------------------------------------+
- 1  .box {                                                               
-                                                                         
- 2  background: #2db34a;                                                 
-                                                                         
- 3  border-radius: 6px                                                   
-                                                                         
- 4  transition-property: background, border-radius;                      
-                                                                         
- 5  transition-duration: .2s, 1s;                                        
-                                                                         
- 6  transition-timing-function: linear, ease-in;                         
-                                                                         
- 7  transition-delay: 0s, 1s;                                            
-                                                                         
- 8  }                                                                    
-                                                                         
- 9  .box:hover {                                                         
-                                                                         
- 1  background: #ff7b29;                                                 
- 0                                                                       
-    border-radius: 50%;                                                  
- 1                                                                       
- 1  }                                                                    
-                                                                         
- 1                                                                       
- 2                                                                       
-                                                                         
- 1                                                                       
- 3                                                                       
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
+ 1  .box {
+ 2  background: #2db34a;
+ 3  border-radius: 6px
+ 4  transition-property: background, border-radius;
+ 5  transition-duration: .2s, 1s;
+ 6  transition-timing-function: linear, ease-in;
+ 7  transition-delay: 0s, 1s;
+ 8  }
+ 9  .box:hover {
+ 10 background: #ff7b29;
+ 11 border-radius: 50%;
+ 12 }
+ 13  
+```
 
 ### Transition Delay Demo
 
@@ -10107,29 +9932,18 @@ To set numerous transitions at once, set each individual group of
 transition values, then use a comma to separate each additional group of
 transition values.
 
-+---+----------------------------------------------------------------------+
+```
  1  .box {                                                               
-                                                                         
  2  background: #2db34a;                                                 
-                                                                         
  3  border-radius: 6px;                                                  
-                                                                         
  4  transition: background .2s linear, border-radius 1s ease-in 1s;      
-                                                                         
  5  }                                                                    
-                                                                         
  6  .box:hover {                                                         
-                                                                         
  7  color: #ff7b29;                                                      
-                                                                         
  8  border-radius: 50%;                                                  
-                                                                         
  9  }                                                                    
-                                                                         
  1                                                                       
- 0                                                                       
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 ### Shorthand Transitions Demo
 
@@ -10137,62 +9951,33 @@ transition values.
 
 <b>HTML**
 
-+---+--------------------------------------------------------------------+
+```
  1  <button>Awesome Button</button>                                
-                                                                       
  2                                                                     
-+===+====================================================================+
-+---+--------------------------------------------------------------------+
+```
 
 <b>CSS**
 
-+---+--------------------------------------------------------------------+
+```
  1  button {                                                           
-                                                                       
  2  border: 0;                                                         
-                                                                       
  3  background: #0087cc;                                               
-                                                                       
  4  border-radius: 4px;                                                
-                                                                       
  5  box-shadow: 0 5px 0 #006599;                                       
-                                                                       
  6  color: #fff;                                                       
-                                                                       
  7  cursor: pointer;                                                   
-                                                                       
  8  font: inherit;                                                     
-                                                                       
  9  margin: 0;                                                         
-                                                                       
  1  outline: 0;                                                        
- 0                                                                     
     padding: 12px 20px;                                                
- 1                                                                     
  1  transition: all .1s linear;                                        
-                                                                       
  1  }                                                                  
- 2                                                                     
     button:active {                                                    
- 1                                                                     
  3  box-shadow: 0 2px 0 #006599;                                       
-                                                                       
  1  transform: translateY(3px);                                        
- 4                                                                     
     }                                                                  
- 1                                                                     
  5                                                                     
-                                                                       
- 1                                                                     
- 6                                                                     
-                                                                       
- 1                                                                     
- 7                                                                     
-                                                                       
- 1                                                                     
- 8                                                                     
-+===+====================================================================+
-+---+--------------------------------------------------------------------+
+```
 
 ### Demo
 
@@ -10200,6 +9985,7 @@ transition values.
 
 <b>HTML**
 
+```
 +---+--------------------------------------------------------------------+
  1  <div class="card-container">                                   
                                                                        
@@ -10214,12 +10000,11 @@ transition values.
  6  </div>                                                           
                                                                        
  7                                                                     
-+===+====================================================================+
-+---+--------------------------------------------------------------------+
+```
 
 <b>CSS**
 
-+---+--------------------------------------------------------------------+
+```
  1  .card-container {                                                  
                                                                        
  2  height: 150px;                                                     
@@ -10270,26 +10055,7 @@ transition values.
                                                                        
  2  }                                                                  
  0                                                                     
-                                                                       
- 2                                                                     
- 1                                                                     
-                                                                       
- 2                                                                     
- 2                                                                     
-                                                                       
- 2                                                                     
- 3                                                                     
-                                                                       
- 2                                                                     
- 4                                                                     
-                                                                       
- 2                                                                     
- 5                                                                     
-                                                                       
- 2                                                                     
- 6                                                                     
-+===+====================================================================+
-+---+--------------------------------------------------------------------+
+```
 
 ### Demo
 
@@ -10299,7 +10065,7 @@ Transitions do a great job of building out visual interactions from one
 state to another, and are perfect for these kinds of single state
 changes. However, when more control is required, transitions need to
 have multiple states. In return, this is
-where [[animations]{.underline}](http://coding.smashingmagazine.com/2011/09/14/the-guide-to-css-animation-principles-and-examples/) pick
+where [animations](http://coding.smashingmagazine.com/2011/09/14/the-guide-to-css-animation-principles-and-examples/) pick
 up where transitions leave off.
 
 ### Animations Keyframes
@@ -10309,7 +10075,7 @@ use the @keyframes rule. The @keyframes rule includes the animation
 name, any animation breakpoints, and the properties intended to be
 animated.
 
-+---+----------------------------------------------------------------------+
+```
  1  &#0064;keyframes slide {                                                  
                                                                          
  2  0% {                                                                 
@@ -10339,14 +10105,7 @@ animated.
     }                                                                    
  1                                                                       
  3                                                                       
-                                                                         
- 1                                                                       
- 4                                                                       
-                                                                         
- 1                                                                       
- 5                                                                       
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 ### Vendor Prefixing the Keyframe Rule
 
@@ -11238,8 +10997,8 @@ even opinionated. While this may have some validity, you still need to
 retain integrity and continue to write the best code possible, for
 semantics provide a larger meaning in writing code.
 
-The fact of the matter is, [[semantics largely benefit
-everyone]{.underline}](http://www.vanseodesign.com/web-design/semantic-html/).
+The fact of the matter is, [semantics largely benefit
+everyone](http://www.vanseodesign.com/web-design/semantic-html/).
 For starters, semantics provide a shared and unambiguous meaning to
 content. Semantics give content solid structure and value, while also
 favoring accessibility, providing better user interfaces and more
@@ -11262,8 +11021,8 @@ recap, semantics provide:
 
 ### Structural Semantics
 
-Within the beginner's guide we discuss the use of [[structural
-semantics]{.underline}](https://learn.shayhowe.com/html-css/getting-to-know-html/),
+Within the beginner's guide we discuss the use of [structural
+semantics](https://learn.shayhowe.com/html-css/getting-to-know-html/),
 specifically using the header, nav, article, section, aside,
 and footer elements. These elements are used to provide additional
 background context to the content within them, communicating their core
@@ -11313,15 +11072,15 @@ semantics.
 
 The majority of content on the web lives within text, and we primarily
 browse the Internet looking for this content. Using the
-proper [[semantic
-markup]{.underline}](https://developers.whatwg.org/text-level-semantics.html) for
+proper [semantic
+markup](https://developers.whatwg.org/text-level-semantics.html) for
 text makes it easier for users to find what they need.
 
 ### Bolding Text
 
 There are a few different ways to make text bold, including multiple
-elements and the [[font
-weight]{.underline}](https://learn.shayhowe.com/html-css/working-with-typography/) CSS
+elements and the [font
+weight](https://learn.shayhowe.com/html-css/working-with-typography/) CSS
 property. The two main elements used in this case include strong and b.
 While these two elements have the same presentation they have completely
 different semantic meanings.
@@ -11347,8 +11106,8 @@ identify significantly important text.
 ### Italicizing Text
 
 Italicizing text falls in line with that of bolding text, where we can
-use multiple elements or the [[font
-style]{.underline}](https://learn.shayhowe.com/html-css/working-with-typography/) CSS
+use multiple elements or the [font
+style](https://learn.shayhowe.com/html-css/working-with-typography/) CSS
 property to achieve a desired presentation. When italicizing text, the
 two elements most commonly used are em and i. Again, these share the
 same presentation, yet have completely different semantic meanings.
@@ -11375,7 +11134,7 @@ importance.
 
 Recently there has been a small movement of front end programmers using
 the i element for including icons on a page, specifically as seen
-within [[Bootstrap]{.underline}](https://getbootstrap.com/).
+within [Bootstrap](https://getbootstrap.com/).
 The i element is used as a hook, to which a class then determines which
 icon background image to apply to the element. Depending on how closely
 you wish to follow semantics this may or may not be an acceptable
@@ -11385,8 +11144,8 @@ practices.
 
 Continuing the pattern of having multiple elements with the same
 presentation, underlining text is no different. There are a couple of
-different elements we can use as well as the [[text
-decoration]{.underline}](https://learn.shayhowe.com/html-css/working-with-typography/) CSS
+different elements we can use as well as the [text
+decoration](https://learn.shayhowe.com/html-css/working-with-typography/) CSS
 property. In this case, the two primary elements used to underline text
 are ins and u.
 
@@ -11425,8 +11184,8 @@ Use underlines with caution.
 ### Striking Text
 
 Striking text follows the same pattern as before where different
-elements may be used, as may the [[text
-decoration]{.underline}](https://learn.shayhowe.com/html-css/working-with-typography/) CSS
+elements may be used, as may the [text
+decoration](https://learn.shayhowe.com/html-css/working-with-typography/) CSS
 property. The two properties most commonly used include del and s.
 
 The del element is used to identify text <b>deleted or removed from the
@@ -11665,8 +11424,8 @@ copyright information or legal print.
 
 ### Citations & Quotes
 
-The beginner's guide discusses [[citations and
-quotes]{.underline}](https://learn.shayhowe.com/html-css/working-with-typography/),
+The beginner's guide discusses [citations and
+quotes](https://learn.shayhowe.com/html-css/working-with-typography/),
 and when to use the cite, q, and blockquote elements accordingly. As a
 quick reminder, the cite element refers to a title of work,
 the q element identifies dialog or prose, and the blockquote element is
@@ -11675,7 +11434,7 @@ used to code longer formed quotes, commonly from external sources.
 ### Hyperlink Attributes
 
 The beginner's guide also
-outlines [[hyperlinks]{.underline}](https://learn.shayhowe.com/html-css/getting-to-know-html/),
+outlines [hyperlinks](https://learn.shayhowe.com/html-css/getting-to-know-html/),
 and some of their different behaviors. What is not covered, however, is
 some of the semantic benefits to hyperlinks, specifically with the use
 of the download and rel attributes.
@@ -11777,7 +11536,7 @@ information, hours, pricing, ratings, and more.
 ### Microdata vs. Microformats vs. RDFa
 
 There are actually a handful of rich, structured data standards,
-including [microdata](http://www.w3.org/TR/microdata/), [[microformats]{.underline}](http://microformats.org/wiki/Main_Page),
+including [microdata](http://www.w3.org/TR/microdata/), [microformats](http://microformats.org/wiki/Main_Page),
 and [RDFa](http://www.w3.org/TR/xhtml-rdfa-primer/). All
 of these have their pros and cons, and all of which are still viable to
 practice.
@@ -11853,48 +11612,32 @@ elements and what attribute is used for their property value.
 ### Person Microdata
 
 When referring to a person
-the [[person]{.underline}](http://schema.org/Person) microdata library
+the [person](http://schema.org/Person) microdata library
 should be used. Below is an example of what a person microdata item
 might look like. Please notice, the person item type is used, as is the
 postal address item type within it. Also, please notice the different
 item properties and their corresponding values.
 
 ```
-+---+----------------------------------------------------------------------+
  1  <section itemscope itemtype="http://schema.org/Person">          
-                                                                         
  2  <strong itemprop="name">Shay Howe</strong>                     
-                                                                         
  3  <img src="shay.jpg" itemprop="image" alt="Shay Howe">        
-                                                                         
  4  <div itemprop="jobTitle">Designer and Front-end                  
     Developer</div>                                                    
- 5                                                                       
     <a href="http://www.shayhowe.com"                                 
  6  itemprop="url">shayhowe.com</a>                                 
-                                                                         
  7  <div itemprop="telephone">(555) 123-4567</div>                 
-                                                                         
  8  <a href="mailto:shay@awesome.com"                                 
     itemprop="email">shay@awesome.com</a>                           
- 9                                                                       
     <address itemprop="address" itemscope                             
  1  itemtype="http://schema.org/PostalAddress">                       
- 0                                                                       
     <span itemprop="streetAddress">600 W. Chicago Ave.</span>      
- 1                                                                       
  1  <span itemprop="addressLocality">Chicago</span>,               
-                                                                         
  1  <abbr itemprop="addressRegion" title="Illinois">IL</abbr>    
  2                                                                       
     <span itemprop="postalCode">60654</span>                       
- 1                                                                       
  3  </address>                                                         
-                                                                         
  1  </section>                                                         
- 4                                                                       
-                                                                         
- 1                                                                       
  5                                                                       
 ```
 
@@ -11902,14 +11645,14 @@ item properties and their corresponding values.
 
 Please keep in mind, this code is for an individual person. Should you
 wish to refer to an organization, a more
-specific [[organization]{.underline}](http://schema.org/Organization) microdata
+specific [organization](http://schema.org/Organization) microdata
 library should be followed.
 
 ### Event Microdata
 
 The event microdata is very similar to that of the person microdata,
 however it uses
-the [[event]{.underline}](http://schema.org/Event) microdata library
+the [event](http://schema.org/Event) microdata library
 instead. Common property similarities between the two can be identified,
 as can some of the nested item types.
 
@@ -11954,13 +11697,13 @@ as can some of the nested item types.
 
 Microdata provides a lot of ways to further extend the content of a
 page. We have only touched the surface here. Further information on
-microdata may be found at [[Dive Into HTML5
-Microdata]{.underline}](http://diveintohtml5.info/extensibility.html) and [[WHATWG
-Microdata]{.underline}](https://developers.whatwg.org/links.html#microdata).
+microdata may be found at [Dive Into HTML5
+Microdata](http://diveintohtml5.info/extensibility.html) and [WHATWG
+Microdata](https://developers.whatwg.org/links.html#microdata).
 
 ### WAI-ARIA
 
-[[WAI-ARIA]{.underline}](http://www.w3.org/WAI/intro/aria), also know as
+[WAI-ARIA](http://www.w3.org/WAI/intro/aria), also know as
 Web Accessibility Initiative --- Accessible Rich Internet Applications,
 is a specification that helps make web pages and applications more
 accessible to those with disabilities. Specifically, WAI-ARIA helps
@@ -11970,8 +11713,8 @@ technologies.
 
 ### Roles
 
-Setting [[WAI-ARIA
-roles]{.underline}](https://www.w3.org/TR/wai-aria/#roles) is
+Setting [WAI-ARIA
+roles](https://www.w3.org/TR/wai-aria/#roles) is
 accomplished using the role attribute. These roles then specify what
 certain elements and blocks of content do on a page.
 
