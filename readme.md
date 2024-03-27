@@ -3797,7 +3797,6 @@ following @viewport rule in CSS.
  5  
 ```
 
-
 <h4>Flexible Media</h4>
 
 The final, equally important aspect to responsive web design involves
@@ -5418,6 +5417,7 @@ operators. Relational operators looks at the relationship between two
 entities, while comparison operators determine equality or different
 between to entities.
 
+```
 -<\
  Less than
 
@@ -5435,33 +5435,20 @@ between to entities.
 
 -!=\
  Not equal to
+```
 
-+---+----------------------------------------------------------------------+
+```
  1  // Relational Operators  
-
  2  6 < 10 // true 
-
  3  4 <= 60 // true
-
  4  8 > 2 // true  
-
  5  10 >= 10 // true  
-
  6  // Comparison Operators  
-
  7  #fff == white // true 
-
  8  10 + 30 == 40 // true 
-
  9  normal != bold // true
-
- 1 
- 0 
-
- 1 
- 1 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+ 10 
+```
 
 <h4>If Function</h4>
 
@@ -5473,42 +5460,26 @@ directly tied to it will be applied.
 
 **Sass**
 
-+---+----------------------------------------------------------------------+
+```
  1  $shay: awesome 
-
  2  .shay
-
  3  &#0064;if $shay == awesome
-
  4  background: #ff7b29
-
  5  &#0064;else if $shay == cool 
-
  6  background: #0087cc
-
  7  &#0064;else  
-
  8  background: #333
-
  9 
-
- 1 
- 0 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 **Compiled CSS**
 
-+---+----------------------------------------------------------------------+
+```
  1  .shay { 
-
  2  background: #ff7b29;  
-
  3  } 
-
  4 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 <h4>For Loop</h4>
 
@@ -5520,60 +5491,33 @@ output styles up to, but not including, 3. The other form, @for $i from
 
 **Sass**
 
-+---+----------------------------------------------------------------------+
+```
  1  &#0064;for $col from 1 to 6  
-
  2  .col-#{$col}
-
  3  width: 40px * $col  
-
  4 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 **Compiled CSS**
 
-+---+----------------------------------------------------------------------+
+```
  1  .col-1 {
-
  2  width: 40px; 
-
  3  } 
-
  4  .col-2 {
-
  5  width: 80px; 
-
  6  } 
-
  7  .col-3 {
-
  8  width: 120px;
-
  9  } 
-
  1  .col-4 {
- 0 
- width: 160px;
- 1 
+ 0  width: 160px;
  1  } 
-
  1  .col-5 {
- 2 
- width: 200px;
- 1 
+ 2  width: 200px;
  3  } 
-
  1 
- 4 
-
- 1 
- 5 
-
- 1 
- 6 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 <h4>Each Loop</h4>
 
@@ -5582,51 +5526,30 @@ List may include multiple comma separated items.
 
 **Sass**
 
-+---+----------------------------------------------------------------------+
+```
  1  &#0064;each $class in uxd, rails, html, css 
-
  2  .#{$class}-logo
-
  3  background: url("/img/#{$class}.jpg")
-
  4 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 **Compiled CSS**
 
-+---+----------------------------------------------------------------------+
+```
  1  .uxd-logo {
-
  2  background: url("/img/uxd.jpg");
-
  3  } 
-
  4  .rails-logo {
-
  5  background: url("/img/rails.jpg"); 
-
  6  } 
-
  7  .html-logo { 
-
  8  background: url("/img/html.jpg");  
-
  9  } 
-
- 1  .css-logo {
- 0 
- background: url("/img/css.jpg");
- 1 
- 1  } 
-
- 1 
- 2 
-
- 1 
- 3 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+ 10  .css-logo {
+ 11  background: url("/img/css.jpg");
+ 12  } 
+ 13  
+```
 
 <h4>While Loop</h4>
 
@@ -5636,73 +5559,36 @@ counter variable can be finely controlled allowing for precise looping.
 
 **Sass**
 
-+---+----------------------------------------------------------------------+
+```
  1  $heading: 1 
-
  2  &#0064;while $heading <= 6  
-
  3  h#{$heading}
-
  4  font-size: 2em - ($heading * .25em)
-
  5  $heading: $heading + 1 
-
  6 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 **Compiled CSS**
 
-+---+----------------------------------------------------------------------+
+```
  1  h1 { 
-
  2  font-size: 1.75em; 
-
  3  } 
-
  4  h2 { 
-
  5  font-size: 1.5em;  
-
  6  } 
-
  7  h3 { 
-
  8  font-size: 1.25em; 
-
  9  } 
-
- 1  h4 { 
- 0 
- font-size: 1em; 
- 1 
- 1  } 
-
- 1  h5 { 
- 2 
- font-size: 0.75em; 
- 1 
- 3  } 
-
- 1  h6 { 
- 4 
- font-size: 0.5em;  
- 1 
+ 10  h4 { 
+ 11 font-size: 1em; 
+ 12  } 
+ 13  h5 { font-size: 0.75em; 
+ 14  } 
+ 15  h6 { 16 font-size: 0.5em;  
  5  } 
-
  1 
- 6 
-
- 1 
- 7 
-
- 1 
- 8 
-
- 1 
- 9 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 <h4>Other Preprocessors</h4>
 
@@ -5805,12 +5691,10 @@ the HTML has been parsed. However, at times, JavaScript is needed to
 help render HTML and determine it's behavior, thus may be referenced
 within a documents head.
 
-+---+----------------------------------------------------------------------+
+```
  1  <script src="script.js"></script> 
-
  2 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 <h4>Values & Variables</h4>
 
@@ -5837,18 +5721,13 @@ combining words while removing spaces, capitalizing the beginning of
 each new word except for the initial word. For
 example, shay_is_awesome would more commonly named shayIsAwesome.
 
-+---+----------------------------------------------------------------------+
+```
  1  var theStarterLeague = 125; 
-
  2  var food_truck = 'Coffee';
-
  3  var mixtape01 = true; 
-
  4  var vinyl = ]'Miles Davis', 'Frank Sinatra', 'Ray Charles'[; 
-
  5 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 <h4>Statements</h4>
 
@@ -5860,16 +5739,12 @@ separated with semicolons, ;. New statements should begin on a new line,
 and indentation should be used when nesting statements for better
 legibility, but is not required.
 
-+---+----------------------------------------------------------------------+
+```
  1  log(polaroid);  
-
  2  return('bicycle lane');
-
  3  alert('Congratulations, you ' + outcome);  
-
  4 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 <h4>Functions</h4>
 
@@ -5883,16 +5758,12 @@ function name, a list of commas separated arguments wrapped in
 parentheses, if necessary, and then the JavaScript statement, or
 statements, that defines the function enclosed in curly braces, {}.
 
-+---+----------------------------------------------------------------------+
+```
  1  function sayHello(name) {
-
  2  return('Hello ' + name);  
-
  3  } 
-
  4 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 <h4>Arrays</h4>
 
@@ -5903,10 +5774,10 @@ different methods and operators. Additionally, depending on the
 situation, arrays can be used to store, and return, a variety of
 different values.
 
-Generally speaking arrays are identified within square brackets, ][,
+Generally speaking arrays are identified within square brackets, [],
 with comma separated items. The items start at 0 and increase from
 there. When identifying the third item in a list it is actually
-identified as ]2[.
+identified as [2].
 
 <h4>Objects</h4>
 
@@ -5920,32 +5791,18 @@ multiple properties. Each property has a key and value. The entire
 object is wrapped inside of curly braces, {}, with comma separated
 properties, each having a key followed by a colon and value.
 
-+---+----------------------------------------------------------------------+
+```
  1  // Object  
-
  2  var school = {  
-
  3  name: 'The Starter League',  
-
  4  location: 'Merchandise Mart',
-
  5  students: 120,  
-
  6  teachers: ]'Jeff', 'Raghu', 'Carolyn', 'Shay'[ 
-
  7  };
-
  8  // Array
-
  9  var school = ]'Austin', 'Chicago', 'Portland'[;  
-
  1 
- 0 
-
- 1 
- 1 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 ![Web Inspector Console](./images/image013.png){width="5.0in"
 height="3.201388888888889in"}
@@ -6082,12 +5939,10 @@ custom [filters](http://api.jquery.com/category/selectors/jquery-selector-exten
 into jQuery to help out. These filters are an extension to CSS3 and
 provide more control over selecting an element or its relatives.
 
-+---+--------------------------------------------------------------------+
+```
  1  $('div:has(strong)');  
- 
  2  
-+===+====================================================================+
-+---+--------------------------------------------------------------------+
+```
 
 As they stand these filters may be used inside of the selector, however
 not being native to the DOM they are a bit slow. The best results with
@@ -6216,20 +6071,13 @@ to determine what piece of information is to be retrieved. Additionally,
 the same selector and method may also be used to set a piece of
 information.
 
-+---+----------------------------------------------------------------------+
+```
  1  // Gets the value of the alt attribute  
-
  2  $('img').attr('alt');  
-
  3  // Sets the value of the alt attribute  
-
  4  $('img').attr('alt', 'Wild kangaroo');
-
  5 
-
- 6 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 In the examples and snippets to follow methods will primarily be used in
 a setting mode, however they may also be able to be used in a getting
@@ -6245,16 +6093,12 @@ is used to remove all classes from any paragraphs, and lastly
 the .attr() method is used to find the value of the title attribute of
 any abbr element and set it to Hello World.
 
-+---+----------------------------------------------------------------------+
+```
  1  $('li:even').addClass('even-item');
-
  2  $('p').removeClass(); 
-
  3  $('abbr').attr('title', 'Hello World');  
-
  4 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 <h4>Attribute Manipulation Methods</h4>
 
@@ -6297,24 +6141,16 @@ values, however other units of measurement may be used. As seen below,
 to change the unit of measurement identify the value then use a plus
 sign followed by the quoted unit of measurement.
 
-+---+----------------------------------------------------------------------+
+```
  1  $('h1 span').css('font-size', 'normal'); 
-
  2  $('div').css({  
-
  3  fontSize: '13px',
-
  4  background: '#f60'  
-
  5  });  
-
  6  $('header').height(200); 
-
  7  $('.extend').height(30 + 'em'); 
-
  8 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 <h4>Style Manipulation Methods</h4>
 
@@ -6353,16 +6189,12 @@ new h3 element just inside any section, the .after() method is adding a
 new em element just after the link, and the .text() method is replacing
 the text of any h1 elements with the text Hello World.
 
-+---+----------------------------------------------------------------------+
+```
  1  $('section').prepend('<h3>Featured</h3>');
-
  2  $('a]target="&#0095;blank"[').after('<em>New window.</em>'); 
-
  3  $('h1').text('Hello World'); 
-
  4 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 <h4>DOM Manipulation Methods</h4>
 
@@ -6426,16 +6258,12 @@ Inside of the function is another selector with the .addClass() method
 bound to it. Now, when a list item is clicked on that list item, via
 the this keyword, receives the class of saved-item.
 
-+---+----------------------------------------------------------------------+
+```
  1  $('li').click(function(event){ 
-
  2  $(this).addClass('saved-item');
-
  3  });  
-
  4 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 <h4>Event Flexibility</h4>
 
@@ -6452,16 +6280,12 @@ in place of the .click() method. Now the click event name is passed in
 as the first argument inside the .on() method with the event handler
 function staying the same as before.
 
-+---+----------------------------------------------------------------------+
+```
  1  $('li').on('click', function(event){ 
-
  2  $(this).addClass('saved-item');
-
  3  });  
-
  4 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 <h4>Nesting Events</h4>
 
@@ -6471,16 +6295,12 @@ the hover argument, thus being called when hovering over any element
 with the class of pagination. Upon calling the .on() event
 the .click() event is called on the anchor with the up ID.
 
-+---+----------------------------------------------------------------------+
+```
  1  $('.pagination').on('hover', function(event){ 
-
  2  $('a#up').click(); 
-
  3  });  
-
  4 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 <h4>Event Demo</h4>
 
@@ -6490,31 +6310,22 @@ clicking the close icon.
 
 <h4>HTML</h4>
 
-+---+--------------------------------------------------------------------+
+```
  1  <div class="notice-warning">
- 
  2  <div class="notice-close">x</div>  
- 
  3  <strong>Warning!</strong> I"m about to lose my cool.  
- 
  4  </div> 
- 
  5  
-+===+====================================================================+
-+---+--------------------------------------------------------------------+
+```
 
 **JavaScript**
 
-+---+--------------------------------------------------------------------+
+```
  1  $('.notice-close').on('click', function(event){
- 
  2  $('.notice-warning').remove();  
- 
  3  });
- 
  4  
-+===+====================================================================+
-+---+--------------------------------------------------------------------+
+```
 
 <h4>Demo</h4>
 
@@ -6828,41 +6639,21 @@ Tabs Demo
 
 **JavaScript**
 
-+---+--------------------------------------------------------------------+
+```
  1  // Show the first tab by default
- 
  2  $('.tabs-stage div').hide(); 
- 
  3  $('.tabs-stage div:first').show(); 
- 
  4  $('.tabs-nav li:first').addClass('tab-active');
- 
  5  // Change tab class and display content 
- 
  6  $('.tabs-nav a').on('click', function(event){  
- 
  7  event.preventDefault();
- 
  8  $('.tabs-nav li').removeClass('tab-active');
- 
  9  $(this).parent().addClass('tab-active');
- 
- 1  $('.tabs-stage div').hide(); 
- 0  
- $($(this).attr('href')).show();
- 1  
- 1  });
- 
- 1  
- 2  
- 
- 1  
- 3  
- 
- 1  
- 4  
-+===+====================================================================+
-+---+--------------------------------------------------------------------+
+ 10  $('.tabs-stage div').hide(); 
+ 11  $($(this).attr('href')).show();
+ 12  });
+ 13  
+```
 
 <h4>Demo</h4>
 
@@ -6892,7 +6683,6 @@ Tabs Demo
 [Preprocessors](https://learn.shayhowe.com/advanced-html-css/preprocessors/)
 [**Lesson 7**]
 [Transforms](https://learn.shayhowe.com/advanced-html-css/css-transforms/)
-
 
 <h2 align="center">[Lesson 7] Transforms</h2>
 
@@ -7072,29 +6862,18 @@ comma, and then the y axis value.
 
 <h4>CSS</h4>
 
-+---+----------------------------------------------------------------------+
+```
  1  .box-1 {
-
  2  transform: scaleX(.5);
-
  3  } 
-
  4  .box-2 {
-
  5  transform: scaleY(1.15); 
-
  6  } 
-
  7  .box-3 {
-
  8  transform: scale(.5, 1.15); 
-
  9  } 
-
- 1 
- 0 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+ 10  
+```
 
 <h4>Multiple Scaling Demo</h4>
 
@@ -7119,42 +6898,27 @@ position.
 
 <h4>HTML</h4>
 
-+---+----------------------------------------------------------------------+
+```
  1  <figure class="box-1">Box 1</figure>
-
  2  <figure class="box-2">Box 2</figure>
-
  3  <figure class="box-3">Box 3</figure>
-
  4 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 <h4>CSS</h4>
 
-+---+----------------------------------------------------------------------+
+```
  1  .box-1 {
-
  2  transform: translateX(-10px);  
-
  3  } 
-
  4  .box-2 {
-
  5  transform: translateY(25%); 
-
  6  } 
-
  7  .box-3 {
-
  8  transform: translate(-10px, 25%); 
-
  9  } 
-
- 1 
- 0 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+ 10 
+```
 
 <h4>Translate Demo</h4>
 
@@ -7174,42 +6938,27 @@ apply here.
 
 <h4>HTML</h4>
 
-+---+----------------------------------------------------------------------+
+```
  1  <figure class="box-1">Box 1</figure>
-
  2  <figure class="box-2">Box 2</figure>
-
  3  <figure class="box-3">Box 3</figure>
-
  4 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 <h4>CSS</h4>
 
-+---+----------------------------------------------------------------------+
+```
  1  .box-1 {
-
  2  transform: skewX(5deg);  
-
  3  } 
-
  4  .box-2 {
-
  5  transform: skewY(-20deg);
-
  6  } 
-
  7  .box-3 {
-
  8  transform: skew(5deg, -20deg); 
-
  9  } 
-
- 1 
- 0 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+ 10 
+```
 
 <h4>Skew Demo</h4>
 
@@ -7227,33 +6976,23 @@ same as if you were to set the height of an element numerous times.
 
 <h4>HTML</h4>
 
-+---+----------------------------------------------------------------------+
+```
  1  <figure class="box-1">Box 1</figure>
-
  2  <figure class="box-2">Box 2</figure>
-
  3 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 <h4>CSS</h4>
 
-+---+----------------------------------------------------------------------+
+```
  1  .box-1 {
-
  2  transform: rotate(25deg) scale(.75); 
-
  3  } 
-
  4  .box-2 {
-
  5  transform: skew(10deg, 20deg) translateX(20px); 
-
  6  } 
-
  7 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 <h4>Combining Transforms Demo</h4>
 
@@ -7268,79 +7007,41 @@ transforms, try your hand at using the matrix property.
 
 <h4>HTML</h4>
 
-+---+--------------------------------------------------------------------+
+```
  1  <div class="cube"> 
- 
  2  <figure class="side top">1</figure>  
- 
  3  <figure class="side left">2</figure> 
- 
  4  <figure class="side right">3</figure>
- 
  5  </div> 
- 
  6  
-+===+====================================================================+
-+---+--------------------------------------------------------------------+
+```
 
 <h4>CSS</h4>
 
-+---+--------------------------------------------------------------------+
+```
  1  .cube {  
- 
  2  position: relative; 
- 
  3  }  
- 
  4  .side {  
- 
  5  height: 95px; 
- 
  6  position: absolute; 
- 
  7  width: 95px;  
- 
  8  }  
- 
  9  .top {
- 
- 1  background: #9acc53;
- 0  
- transform: rotate(-45deg) skew(15deg, 15deg); 
- 1  
- 1  }  
- 
- 1  .left {  
- 2  
- background: #8ec63f;
- 1  
- 3  transform: rotate(15deg) skew(15deg, 15deg) translate(-50%, 100%); 
- 
- 1  }  
- 4  
- .right { 
- 1  
- 5  background: #80b239;
- 
- 1  transform: rotate(-15deg) skew(-15deg, -15deg) translate(50%,
- 6  100%);
- 
- 1  }  
- 7  
- 
- 1  
- 8  
- 
- 1  
- 9  
- 
- 2  
- 0  
- 
- 2  
- 1  
-+===+====================================================================+
-+---+--------------------------------------------------------------------+
+ 10  background: #9acc53;
+ 11  transform: rotate(-45deg) skew(15deg, 15deg); 
+ 12  }  
+ 13  .left {  
+ 14  background: #8ec63f;
+ 15  transform: rotate(15deg) skew(15deg, 15deg) translate(-50%, 100%); 
+ 16  }  
+ 17  .right { 
+ 18  background: #80b239;
+ 19  transform: rotate(-15deg) skew(-15deg, -15deg) translate(50%,
+ 10  100%);
+ 21  }  
+ 22  
+```
 
 <h4>Demo</h4>
 
@@ -7363,65 +7064,35 @@ the origin to 20 pixels across and 50 pixels down the element.
 
 <h4>HTML</h4>
 
-+---+----------------------------------------------------------------------+
+```
  1  <figure class="box-1">Box 1</figure>
-
  2  <figure class="box-2">Box 2</figure>
-
  3  <figure class="box-3">Box 3</figure>
-
  4  <figure class="box-4">Box 3</figure>
-
  5 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 <h4>CSS</h4>
 
-+---+----------------------------------------------------------------------+
+```
  1  .box-1 {
-
  2  transform: rotate(15deg);
-
  3  transform-origin: 0 0;
-
  4  } 
-
  5  .box-2 {
-
  6  transform: scale(.5); 
-
  7  transform-origin: 100% 100%;
-
  8  } 
-
  9  .box-3 {
-
  1  transform: skewX(20deg); 
- 0 
- transform-origin: top left; 
- 1 
+ 0  transform-origin: top left; 
  1  } 
-
  1  .box-4 {
- 2 
- transform: scale(.75) translate(-10px, -10px);  
- 1 
+ 2  transform: scale(.75) translate(-10px, -10px);  
  3  transform-origin: 20px 50px;
-
  1  } 
  4 
-
- 1 
- 5 
-
- 1 
- 6 
-
- 1 
- 7 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 <h4>Transform Origin Demo</h4>
 
