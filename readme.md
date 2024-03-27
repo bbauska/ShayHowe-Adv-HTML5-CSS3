@@ -20,31 +20,39 @@ output:
 <h4>HTML</h4>
 
 <ul>
-  <li><a href="https://learn.shayhowe.com/advanced-html-css/performance-organization/#minify-compress-files">
- Minify & Compress Files</a></li>
-  <li><a href="https://learn.shayhowe.com/advanced-html-css/performance-organization/#cache-common-files">
- Cache Common Files</a></li>
+  <li><a href="https://learn.shayhowe.com/advanced-html-css/performance-organization/#minify-compress-files"
+    rel="noopener noreferrer" target="_blank">
+	Minify & Compress Files</a></li>
+  <li><a href="https://learn.shayhowe.com/advanced-html-css/performance-organization/#cache-common-files"
+   rel="noopener noreferrer" target="_blank">
+   Cache Common Files</a></li>
 </ul>
 
 <h4>CSS</h4>
 
 <ul>
-  <li><a href="https://learn.shayhowe.com/advanced-html-css/performance-organization/#strategy-structure">
- Strategy &amp; Structure</a></li>
-  <li><a href="https://learn.shayhowe.com/advanced-html-css/performance-organization/#performance-driven-selectors">
- Performance Driven Selectors</a></li>
-  <li><a href="https://learn.shayhowe.com/advanced-html-css/performance-organization/#reusable-code">
- Reusable Code</a></li>
-  <li><a href="https://learn.shayhowe.com/advanced-html-css/performance-organization/#reduce-http-requests">
- Reduce HTTP Requests</a></li>
+  <li><a href="https://learn.shayhowe.com/advanced-html-css/performance-organization/#strategy-structure" 
+    rel="noopener noreferrer" target="_blank">
+    Strategy &amp; Structure</a></li>
+  <li><a href="https://learn.shayhowe.com/advanced-html-css/performance-organization/#performance-driven-selectors" 
+    rel="noopener noreferrer" target="_blank">
+	Performance Driven Selectors</a></li>
+  <li><a href="https://learn.shayhowe.com/advanced-html-css/performance-organization/#reusable-code" 
+    rel="noopener noreferrer" target="_blank">
+	Reusable Code</a></li>
+  <li><a href="https://learn.shayhowe.com/advanced-html-css/performance-organization/#reduce-http-requests" 
+    rel="noopener noreferrer" target="_blank">
+	Reduce HTTP Requests</a></li>
 </ul>
 
-Having the ability to <a href="https://learn.shayhowe.com/html-css/writing-your-best-code/">
-write HTML and CSS</a> with a solid understanding is a great expertise to have. As a 
-website's code base and traffic grows, a new skill set comes into play, one that is
-extremely important to both development time and user experience. Knowing the fundamentals of
-website <a href="http://developer.yahoo.com/performance/rules.html">performance</a> and
-organization can go a long way.
+Having the ability to <a href="https://learn.shayhowe.com/html-css/writing-your-best-code/" 
+rel="noopener noreferrer" target="_blank">write HTML and CSS</a> with a solid 
+understanding is a great expertise to have. As a website's code base and traffic 
+grows, a new skill set comes into play, one that is extremely important to both 
+development time and user experience. Knowing the fundamentals of website 
+<a href="http://developer.yahoo.com/performance/rules.html" 
+rel="noopener noreferrer" target="_blank">performance</a> 
+and organization can go a long way.
 
 The organization and architecture of a code base can greatly affect not
 only the speed of development, but also the speed at which pages render.
@@ -54,8 +62,9 @@ and identify how all of the different components will work together, can
 speed up production and make for a better experience all around.
 
 Additionally, taking a few small steps to improve the performance of a
-website can pay off in dividends. <a href="https://www.stevesouders.com/blog/2012/02/10/the-performance-golden-rule/">
-Website performance</a> greatly resembles the 80/20 rule, where 20% of the optimizations will speed up
+website can pay off in dividends. <a href="https://www.stevesouders.com/blog/2012/02/10/the-performance-golden-rule/" 
+rel="noopener noreferrer" target="_blank">Website performance</a> 
+greatly resembles the 80/20 rule, where 20% of the optimizations will speed up
 roughly 80% of the website.
 
 <h4>Strategy & Structure</h4>
@@ -125,11 +134,11 @@ structure, as well as on how to use styles.
 
 <h4>Object Oriented CSS</h4>
 
-The <a href="http://oocss.org/">Object Oriented CSS</a> methodology
-was pioneered by Nicole Sullivan in her work with writing styles for
-larger websites. Object Oriented CSS identifies two principles that will
-help build scalable websites with a strong architecture and a reasonable
-amount of code. These two principles include:
+The <a href="http://oocss.org/" rel="noopener noreferrer" target="_blank">
+Object Oriented CSS</a> methodology was pioneered by Nicole Sullivan in her 
+work with writing styles for larger websites. Object Oriented CSS identifies 
+two principles that will help build scalable websites with a strong architecture 
+and a reasonable amount of code. These two principles include:
 
 <ul>
   <li>Separate structure from skin</li>
@@ -173,9 +182,11 @@ a new page or feature to a website.
 
 <h4>Scalable & Modular Architecture for CSS</h4>
 
-Along the same line of Object Oriented CSS is the <a href="http://smacss.com/">Scalable and Modular
-Architecture for CSS</a> methodology developed by Jonathan Snook. The Scalable and Modular Architecture for
-CSS promotes breaking up styles into <b>five</b> core categories, including:
+Along the same line of Object Oriented CSS is the <a href="http://smacss.com/" 
+rel="noopener noreferrer" target="_blank">Scalable and Modular Architecture for 
+CSS</a> methodology developed by Jonathan Snook. The Scalable and Modular 
+Architecture for CSS promotes breaking up styles into <b>five</b> core categories, 
+including:
 
 <ul>
   <li>Base</li>
@@ -196,7 +207,7 @@ for example. Lastly, the <b>theme</b> category may be added which could
 include styles based around the skin, or look and feel, of different
 modules.
 
-<b>HTML</b>
+<h4>HTML</h4>
 
 ```
  1  <div class="alert is-error">
@@ -205,7 +216,7 @@ modules.
  4  
 ```
 
-<b>CSS</b>
+<h4>CSS</h4>
 
 ```
  1  .alert {...}
@@ -222,21 +233,21 @@ of these categories are then inherited as necessary.
 <h4>Choosing a Methodology</h4>
 
 Choosing which methodology to use, if any, is completely 
-<a href="http://viget.com/inspire/css-squareoff">up to you</a> and what you
-feel is best for a given website. Generally speaking, a solid mix of
-both OOCSS and SMACSS works well, borrowing principles from each
-methodology as you prefer.
+<a href="http://viget.com/inspire/css-squareoff" rel="noopener noreferrer" 
+target="_blank">up to you</a> and what you feel is best for a given website. 
+Generally speaking, a solid mix of both OOCSS and SMACSS works well, borrowing 
+principles from each methodology as you prefer.
 
 <h4>Performance Driven Selectors</h4>
 
 One functionality of CSS often abused without awareness
-are <a href="http://csswizardry.com/2011/09/writing-efficient-css-selectors/">selectors</a>.
-Much of the attention within CSS is given to properties and values. So
-long as these styles are applied to the correct element, everything
-looks to be fine. This is a very poor assumption. How elements are
-selected within CSS affects performance, including how fast a page
-renders as well as how practical and modular the styles are in the
-overall site architecture.
+are <a href="http://csswizardry.com/2011/09/writing-efficient-css-selectors/" 
+rel="noopener noreferrer" target="_blank">selectors</a>. Much of the attention 
+within CSS is given to properties and values. So long as these styles are applied 
+to the correct element, everything looks to be fine. This is a very poor assumption. 
+How elements are selected within CSS affects performance, including how fast a page
+renders as well as how practical and modular the styles are in the overall site 
+architecture.
 
 <h4>Keep Selectors Short</h4>
 
@@ -336,6 +347,9 @@ Another approach, often seen within the OOCSS and SMACSS methodologies
 previously mentioned, includes binding styles to one class, then using
 multiple classes on the same element.
 
+<details>
+  <summary>CSS Examples</summary>
+  
 ```
  1  /* Bad */
  2  .news { 
@@ -366,17 +380,19 @@ multiple classes on the same element.
  27 
 ```
 
+</details>
+
 Which approach you take doesn't make a huge difference, so long as code
 is being shared and reused, and the overall file size is reduced.
 
 <h4>Minify & Compress Files</h4>
 
 Simply removing duplicate and unnecessary code is the best way to cut
-down on file size, however there are additional ways. One way
-includes <a href="http://www.hanselman.com/blog/TheImportanceAndEaseOfMinifyingYourCSSAndJavaScriptAndOptimizingPNGsForYourBlogOrWebsite.aspx">
-minifying</a> and compressing files, such as HTML, CSS, and JavaScript files.
-Additionally, images may be compressed, removing any unnecessary
-comments and color profiles.
+down on file size, however there are additional ways. One way includes 
+<a href="http://www.hanselman.com/blog/TheImportanceAndEaseOfMinifyingYourCSSAndJavaScriptAndOptimizingPNGsForYourBlogOrWebsite.aspx" 
+rel="noopener noreferrer" target="_blank">minifying</a> and compressing 
+files, such as HTML, CSS, and JavaScript files. Additionally, images may be 
+compressed, removing any unnecessary comments and color profiles.
 
 <h4>gzip Compression</h4>
 
@@ -386,12 +402,12 @@ forth, and identifies similar strings to compress down. The more
 matching strings identified, the smaller the file can be compressed,
 thus sending a smaller file from the server to the browser.
 
-Setting up gzip is fairly painless, and the <a href="http://html5boilerplate.com/">HTML5
-Boilerplate</a> team has done a
-great job of getting this going. To gzip files an .htaccess file needs
-to be added to the root directory of the web server, labeling the
-specific files to be gzipped. The dot at the beginning of the file name
-is correct, as the .htaccess file is a hidden file.
+Setting up gzip is fairly painless, and the <a href="http://html5boilerplate.com/" 
+rel="noopener noreferrer" target="_blank">HTML5 Boilerplate</a> team has done a 
+great job of getting this going. To gzip files an .htaccess file needs to be added 
+to the root directory of the web server, labeling the specific files to be gzipped. 
+The dot at the beginning of the file name is correct, as the .htaccess file is a 
+hidden file.
 
 Within the HTML5 Boilerplate Apache Server Configs, they instruct which
 files gzip compression should be applied to. Keep in mind, the code for
@@ -430,9 +446,8 @@ compression is enabled.
 
 <h6>Fig. 1</h6>
 
-The Network tab identifies each file loaded within the browser and
-displays the file size and load time. Notice how gzipping has reduced
-the file sizes by around 60%.
+The Network tab identifies each file loaded within the browser and displays the 
+file size and load time. Notice how gzipping has reduced the file sizes by around 60%.
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~ 02. gzip detail screenshot (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="center" width="100%">
@@ -443,31 +458,32 @@ the file sizes by around 60%.
 
 <h6>Fig. 1</h6>
 
-Looking at a file specifically identifies what type of compression
-encoding the browser supports. In this case gzip, deflate, and sdch are
-all supported as noted within the request headers.
+Looking at a file specifically identifies what type of compression encoding the 
+browser supports. In this case gzip, deflate, and sdch are all supported as noted 
+within the request headers.
 
-Looking at the response headers identifies that the file was sent using
-the gzip compression encoding.
+Looking at the response headers identifies that the file was sent using the gzip 
+compression encoding.
 
 <h4>Image Compression</h4>
 
-Cutting down the size of a text file helps, but you get even better
-results by compressing the file size of images. The total file size of
-all the images across a website can quickly add up, and compressing
-images will greatly help keep the file size under control.
+Cutting down the size of a text file helps, but you get even better results by 
+compressing the file size of images. The total file size of all the images across 
+a website can quickly add up, and compressing images will greatly help keep the 
+file size under control.
 
-Many people steer away from compressing images in fear that compression
-involves reducing the quality of the image itself. For the most part
-this is incorrect, and images can be compressed in a lossless fashion,
-allowing unnecessary color profiles and comments to be removed from the
-image without changing the quality of the image at all.
+Many people steer away from compressing images in fear that compression involves 
+reducing the quality of the image itself. For the most part this is incorrect, 
+and images can be compressed in a lossless fashion, allowing unnecessary color 
+profiles and comments to be removed from the image without changing the quality 
+of the image at all.
 
 There are a handful of tools to help compress images, two of the best
-are <a href="http://imageoptim.com/">ImageOptim</a> for Mac
-and <a href="http://pnggauntlet.com/">PNGGauntlet</a> for Windows.  
-Both of these services compress the most commonly used image formats,
-specifically JPG and PNG files.
+are <a href="http://imageoptim.com/" rel="noopener noreferrer" target="_blank">
+ImageOptim</a> for Mac and <a href="http://pnggauntlet.com/" 
+rel="noopener noreferrer" target="_blank">PNGGauntlet</a> for Windows. Both of 
+these services compress the most commonly used image formats, specifically JPG 
+and PNG files.
 
 <h4>Image Compression Demo</h4>
 
@@ -604,7 +620,7 @@ be shown accordingly.
  13 
 ```
 
-<b>CSS</b>
+<h4>CSS</h4>
 
 ```
  1  ul {
@@ -670,19 +686,20 @@ be shown accordingly.
 
 Additionally, instead of spriting images, the encoded data for an image
 can be included within HTML and CSS directly by way of the 
-<a href="https://css-tricks.com/data-uris/">data URI</a>, removing the need
-for a HTTP request all together. Using the image data URI works great
-for small images, likely to never change, and where the HTML and CSS can
-be heavily cached. There are, however, a couple of problems with data
-URIs. They can be difficult to change and maintain, leading to having to
-generate another encoding. And, they don't work in older browsers,
-specifically Internet Explorer 7 and below.
+<a href="https://css-tricks.com/data-uris/" rel="noopener noreferrer" target="_blank">
+data URI</a>, removing the need for a HTTP request all together. Using the image 
+data URI works great for small images, likely to never change, and where the HTML 
+and CSS can be heavily cached. There are, however, a couple of problems with data
+URIs. They can be difficult to change and maintain, leading to having to generate 
+another encoding. And, they don't work in older browsers, specifically Internet 
+Explorer 7 and below.
 
-If using data URIs helps cut down a few HTTP requests, and the HTML or
-CSS can be heavily cached, the benefits tend to outweigh the risk. A few
-tools to help generate data URIs include 
-<a href="http://websemantics.co.uk/online_tools/image_to_data_uri_convertor/">
-converters</a> and <a href="http://www.patternify.com/">
+If using data URIs helps cut down a few HTTP requests, and the HTML or CSS can 
+be heavily cached, the benefits tend to outweigh the risk. A few tools to help 
+generate data URIs include 
+<a href="http://websemantics.co.uk/online_tools/image_to_data_uri_convertor/" 
+rel="noopener noreferrer" target="_blank">converters</a> and 
+<a href="http://www.patternify.com/" rel="noopener noreferrer" target="_blank">
 pattern generators</a>. Be careful though, and always double check to see that 
 the actual data URI is less weight than the actual image.
 
@@ -739,7 +756,8 @@ Changing the "access plus 1 year" value to "access plus 1 week" is
 better suited for CSS and JavaScript files that are changing weekly but
 are not version controlled with separate file names. For accepted
 expires header values reference the mod_expires 
-<a href="http://httpd.apache.org/docs/current/mod/mod_expires.html">syntax</a>.
+<a href="http://httpd.apache.org/docs/current/mod/mod_expires.html" 
+rel="noopener noreferrer" target="_blank">syntax</a>.
 
 <h4>Resources & Links</h4>
 
@@ -767,8 +785,10 @@ expires header values reference the mod_expires 
 -[Data URIs](https://css-tricks.com/data-uris/) via
  CSS-Tricks
 
-<b>Lesson 1</b> <a href="https://learn.shayhowe.com/advanced-html-css/performance-organization/">Performance &amp; Organization</a>
-<b>Lesson 3</b> <a href="https://learn.shayhowe.com/advanced-html-css/complex-selectors/">Complex Selectors</a>
+<b>Lesson 1</b> <a href="https://learn.shayhowe.com/advanced-html-css/performance-organization/" 
+rel="noopener noreferrer" target="_blank">Performance &amp; Organization</a>
+<b>Lesson 3</b> <a href="https://learn.shayhowe.com/advanced-html-css/complex-selectors/" 
+rel="noopener noreferrer" target="_blank">Complex Selectors</a>
 
 
 
@@ -776,14 +796,17 @@ expires header values reference the mod_expires 
 
 <h3>In this Lesson 2</h3>
 
-<b>CSS</b>
+<h4>CSS</h4>
 
 <ul>
-  <li><a href="https://learn.shayhowe.com/advanced-html-css/detailed-css-positioning/#containing-floats">
+  <li><a href="https://learn.shayhowe.com/advanced-html-css/detailed-css-positioning/#containing-floats" 
+    rel="noopener noreferrer" target="_blank">
     Containing Floats</a></li>
-  <li><a href="https://learn.shayhowe.com/advanced-html-css/detailed-css-positioning/#position-property">
+  <li><a href="https://learn.shayhowe.com/advanced-html-css/detailed-css-positioning/#position-property" 
+    rel="noopener noreferrer" target="_blank">
     Position Property</a></li>
-  <li><a href="https://learn.shayhowe.com/advanced-html-css/detailed-css-positioning/#z-index-property">
+  <li><a href="https://learn.shayhowe.com/advanced-html-css/detailed-css-positioning/#z-index-property" 
+    rel="noopener noreferrer" target="_blank">
     Z-Index Property</a></li>
 </ul>
 
@@ -830,17 +853,17 @@ having a different relationship with those around it. Elements nested
 inside others have a parent and child relationship while elements that
 share the same parent have a sibling relationship.
 
-While <a href="https://css-tricks.com/all-about-floats/">floats</a> do
-provide quite a bit of fire power, they do come with a few of their own
-problems. The most popular problem involves a parent element that
-contains numerous floated elements. Content on the page will respect the
-size and placement of the floated children element, but these floated
-elements no longer impact the outer edges of the parent container. In
-this event the parent element loses context of exactly what it contains
-and collapses, thus giving the parent element a height of 0 and ignoring
-various other properties. A lot of times this may go unnoticed,
-specifically when the parent element doesn't have any styles tied to it
-and the nested elements look to have aligned correctly.
+While <a href="https://css-tricks.com/all-about-floats/" 
+rel="noopener noreferrer" target="_blank">floats</a> do provide quite a bit of 
+fire power, they do come with a few of their own problems. The most popular 
+problem involves a parent element that contains numerous floated elements. 
+Content on the page will respect the size and placement of the floated children 
+element, but these floated elements no longer impact the outer edges of the 
+parent container. In this event the parent element loses context of exactly what 
+it contains and collapses, thus giving the parent element a height of 0 and 
+ignoring various other properties. A lot of times this may go unnoticed, 
+specifically when the parent element doesn't have any styles tied to it and the 
+nested elements look to have aligned correctly.
 
 Should the nested elements not line up correctly, styling errors may
 appear. Taking a look at the demo below, the .box-set division should
@@ -848,7 +871,7 @@ have a light gray background, however the background is not seen as all
 of the elements nested within it are floated. Upon inspecting
 the .box-set division you will see it has a height of 0.
 
-<b>HTML</b>
+<h4>HTML</h4>
 
 ```
  1  <div class="box-set">
@@ -859,7 +882,7 @@ the .box-set division you will see it has a height of 0.
  6  
 ```
 
-<b>CSS</b>
+<h4>CSS</h4>
 
 ```
  1  .box-set {
@@ -1031,7 +1054,7 @@ In the demonstration below, all the boxes are stacked one on top of the
 other as they are block level elements and are not floated in any
 specific direction.
 
-<b>HTML</b>
+<h4>HTML</h4>
 
 ```
  1  <div class="box-set">
@@ -1043,7 +1066,7 @@ specific direction.
  7  
 ```
 
-<b>CSS</b>
+<h4>CSS</h4>
 
 ```
  1  .box-set {
@@ -1104,7 +1127,7 @@ push each other in different directions. When an element is positioned
 relatively the surrounding elements will observe the relatively
 positioned elements default position.
 
-<b>HTML</b>
+<h4>HTML</h4>
 
 ```
  1  <div class="box-set">
@@ -1116,7 +1139,7 @@ positioned elements default position.
  7  
 ```
 
-<b>CSS</b>
+<h4>CSS</h4>
 
 ```
  1  .box-set {
@@ -1181,7 +1204,7 @@ positioned. Each individual box is moved in from a specific side with a
 positive value, or pulled out from a specific side with a negative
 value.
 
-<b>HTML</b>
+<h4>HTML</h4>
 
 ```
  1  <div class="box-set">
@@ -1193,7 +1216,7 @@ value.
  7  
 ```
 
-<b>CSS</b>
+<h4>CSS</h4>
 
 ```
  1  .box-set {
@@ -1260,7 +1283,7 @@ Keeping the same box offset properties from the previous demonstration,
 watch how the boxes are positioned in relation to the browser's viewport
 and not the containing, relatively positioned parent.
 
-<b>HTML</b>
+<h4>HTML</h4>
 
 ```
  1  <div class="box-set">
@@ -1272,7 +1295,7 @@ and not the containing, relatively positioned parent.
  7 
 ```
 
-<b>CSS</b>
+<h4>CSS</h4>
 
 ```
  1  .box {
@@ -1314,14 +1337,14 @@ allows the footer to span the entire width of the bottom of the page,
 and it does so without disrupting the box model, allowing margins,
 borders, and padding to be applied freely.
 
-<b>HTML</b>
+<h4>HTML</h4>
 
 ```
  1  <footer>Fixed Footer</footer>
  2  
 ```
 
-<b>CSS</b>
+<h4>CSS</h4>
 
 ```
  1  body {
@@ -1345,9 +1368,9 @@ By nature web pages are often considered to be two dimensional,
 displaying elements upon a x and y axis. However when you begin to
 position elements they are occasionally placed on top of one another. To
 change the order of 
-<a href="http://www.impressivewebs.com/a-detailed-look-at-the-z-index-css-property/">
-how these elements are stacked</a>, also known as the z-axis, the z-index 
-property is to be used.
+<a href="http://www.impressivewebs.com/a-detailed-look-at-the-z-index-css-property/" 
+rel="noopener noreferrer" target="_blank">how these elements are stacked</a>, 
+also known as the z-axis, the z-index property is to be used.
 
 Generally, elements are positioned upon the z-axis as they appear within
 the DOM. Elements coming at the top of the DOM are positioned behind
@@ -1367,7 +1390,7 @@ stacking with the z-index property now positions box two on top of every
 other box, followed by box three underneath it, and box four underneath
 box three.
 
-<b>HTML</b>
+<h4>HTML</h4>
 
 ```
  1  <div class="box-set">
@@ -1379,7 +1402,7 @@ box three.
  7 
 ```
 
-<b>CSS</b>
+<h4>CSS</h4>
 
 ```
  1  .box-set {
@@ -1419,36 +1442,51 @@ box three.
 <h4>Resources & Links</h4>
 
 <ul>
-  <li><a href="https://css-tricks.com/all-about-floats/">All About Floats</a> via CSS-Tricks</li>
-  <li><a href="http://nicolasgallagher.com/micro-clearfix-hack/">A New Micro Clearfix Hack</a> via Nicolas Gallagher</li>
-  <li><a href="http://www.alistapart.com/articles/css-positioning-101/">CSS Positioning 101</a> via A List Apart</li>
-  <li><a href="http://www.impressivewebs.com/a-detailed-look-at-the-z-index-css-property/">A Detailed Look at the z-index CSS Property</a> via
- Impressive Webs</li>
+  <li><a href="https://css-tricks.com/all-about-floats/" 
+    rel="noopener noreferrer" target="_blank">
+	All About Floats</a> via CSS-Tricks</li>
+  <li><a href="http://nicolasgallagher.com/micro-clearfix-hack/" 
+    rel="noopener noreferrer" target="_blank">
+	A New Micro Clearfix Hack</a> via Nicolas Gallagher</li>
+  <li><a href="http://www.alistapart.com/articles/css-positioning-101/" 
+    rel="noopener noreferrer" target="_blank">
+	CSS Positioning 101</a> via A List Apart</li>
+  <li><a href="http://www.impressivewebs.com/a-detailed-look-at-the-z-index-css-property/"
+    rel="noopener noreferrer" target="_blank">
+	A Detailed Look at the z-index CSS Property</a> via Impressive Webs</li>
 </ul>
 
-<b>Lesson 1</b> <a href="https://learn.shayhowe.com/advanced-html-css/performance-organization/">
+<b>Lesson 1</b> <a href="https://learn.shayhowe.com/advanced-html-css/performance-organization/"
+  rel="noopener noreferrer" target="_blank">
   Performance & Organization</a>
-<b>Lesson 3</b> <a href="https://learn.shayhowe.com/advanced-html-css/complex-selectors/">
+<b>Lesson 3</b> <a href="https://learn.shayhowe.com/advanced-html-css/complex-selectors/" 
+  rel="noopener noreferrer" target="_blank">
   Complex Selectors</a>
 
 <h2 align="center">[Lesson 3] Complex Selectors</h2>
 
 <h3>In this Lesson 3</h3>
 
-<b>CSS</b>
+<h4>CSS</h4>
 
 <ul>
-  <li><a href="https://learn.shayhowe.com/advanced-html-css/complex-selectors/#common-selectors">
+  <li><a href="https://learn.shayhowe.com/advanced-html-css/complex-selectors/#common-selectors"
+    rel="noopener noreferrer" target="_blank">
     Common Selectors</a></li>
-  <li><a href="https://learn.shayhowe.com/advanced-html-css/complex-selectors/#child-selectors">
+  <li><a href="https://learn.shayhowe.com/advanced-html-css/complex-selectors/#child-selectors"
+    rel="noopener noreferrer" target="_blank">
     Child Selectors</a></li>
-  <li><a href="https://learn.shayhowe.com/advanced-html-css/complex-selectors/#sibling-selectors">
+  <li><a href="https://learn.shayhowe.com/advanced-html-css/complex-selectors/#sibling-selectors"
+    rel="noopener noreferrer" target="_blank">
     Sibling Selectors</a></li>
-  <li><a href="https://learn.shayhowe.com/advanced-html-css/complex-selectors/#attribute-selectors">
+  <li><a href="https://learn.shayhowe.com/advanced-html-css/complex-selectors/#attribute-selectors"
+    rel="noopener noreferrer" target="_blank">
     Attribute Selectors</a></li>
-  <li><a href="https://learn.shayhowe.com/advanced-html-css/complex-selectors/#pseudo-classes">
+  <li><a href="https://learn.shayhowe.com/advanced-html-css/complex-selectors/#pseudo-classes"
+    rel="noopener noreferrer" target="_blank">
     Pseudo-classes</a></li>
-  <li><a href="https://learn.shayhowe.com/advanced-html-css/complex-selectors/#pseudo-elements">
+  <li><a href="https://learn.shayhowe.com/advanced-html-css/complex-selectors/#pseudo-elements"
+    rel="noopener noreferrer" target="_blank">
     Pseudo-elements</a></li>
 </ul>
 
@@ -1485,7 +1523,7 @@ to help share popular styles. Lastly, the <b>ID</b> selector identifies an
 element based on its ID attribute value, which is unique and should only
 be used once per page.
 
-<b>CSS</b>
+<h4>CSS</h4>
 
 ```
  1  h1 {...}
@@ -1494,7 +1532,7 @@ be used once per page.
  4  
 ```
 
-<b>HTML</b>
+<h4>HTML</h4>
 
 ```
  1  <section id="intro">
@@ -1543,14 +1581,14 @@ any h2 element outside of the article element is not selected.
 
 Below, the headings on lines 3 and 5 are selected.
 
-<b>CSS</b>
+<h4>CSS</h4>
 
 ```
  1  article h2 {...}  
  2 
 ```
 
-<b>HTML</b>
+<h4>HTML</h4>
 
 ```
  1  <h2>...</h2>  
@@ -1580,14 +1618,14 @@ another element other than the article element, will not be selected.
 Below, the paragraph on line 3 is the only direct child of its parent
 article, thus selected.
 
-<b>CSS</b>
+<h4>CSS</h4>
 
 ```
  1  article > p {...}
  2 
 ```
 
-<b>HTML</b>
+<h4>HTML</h4>
 
 ```
  1  <p>...</p> 
@@ -1639,14 +1677,14 @@ The paragraphs on lines 5 and 9 are selected as they come after the
 heading within the document tree and share the same parent as their
 sibling heading.
 
-<b>CSS</b>
+<h4>CSS</h4>
 
 ```
  1  h2 ~ p {...}  
  2 
 ```
 
-<b>HTML</b>
+<h4>HTML</h4>
 
 ```
  1  <p>...</p> 
@@ -1683,14 +1721,14 @@ The paragraph on line 5 is selected as it directly follows after its
 sibling heading along with sharing the same parent element, thus
 selected.
 
-<b>CSS</b>
+<h4>CSS</h4>
 
 ```
  1  h2 + p {...}
  2 
 ```
 
-<b>HTML</b>
+<h4>HTML</h4>
 
 ```
  1  <p>...</p>
@@ -1708,7 +1746,7 @@ selected.
 
 <h4>Sibling Selectors Example</h4>
 
-<b>HTML</b>
+<h4>HTML</h4>
 
 ```
  1  <input type="checkbox" id="toggle"> 
@@ -1821,14 +1859,14 @@ attribute name in square brackets, &lbrack;&rbrack;, within a selector.
 The square brackets may or may not follow any qualifier such as an element 
 type or class, all depending on the level of specificity desired.
 
-<b>CSS</b>
+<h4>CSS</h4>
 
 ```
  1  a[target] {...} 
  2 
 ```
 
-<b>HTML</b>
+<h4>HTML</h4>
 
 ```
  1  <a href="#" target="_blank">...</a>
@@ -1844,14 +1882,14 @@ desired matching value. Inside the square brackets should be the
 attribute name followed by an equals sign, =, quotations, "", and
 inside of the quotations should be the desired matching attribute value.
 
-<b>CSS</b>
+<h4>CSS</h4>
 
 ```
  1  a]href="http://google.com/"[ {...} 
  2 
 ```
 
-<b>HTML</b>
+<h4>HTML</h4>
 
 ```
  1  <a href="http://google.com/">...</a>  
@@ -1867,14 +1905,14 @@ attribute name, directly before the equals sign. Doing so denotes that
 the value to follow only needs to appear, or be contained, within the
 attribute value.
 
-<b>CSS</b>
+<h4>CSS</h4>
 
 ```
  1  a]href*="login"[ {...}
  2 
 ```
 
-<b>HTML</b>
+<h4>HTML</h4>
 
 ```
  1  <a href="/login.php">...</a>  
@@ -1890,14 +1928,14 @@ within the square brackets of a selector between the attribute name and
 equals sign denotes that the attribute value should begin with the
 stated value.
 
-<b>CSS</b>
+<h4>CSS</h4>
 
 ```
  1  a]href&Hat;="https://"[ {...}
  2 
 ```
 
-<b>HTML</b>
+<h4>HTML</h4>
 
 ```
  1  <a href="https://chase.com/">...</a>  
@@ -1913,14 +1951,14 @@ brackets of a selector between the attribute name and equals sign. Using
 the dollar sign denotes that the attribute value needs to end with the
 stated value.
 
-<b>CSS</b>
+<h4>CSS</h4>
 
 ```
  1  a]href$=".pdf"[ {...} 
  2 
 ```
 
-<b>HTML</b>
+<h4>HTML</h4>
 
 ```
  1  <a href="/docs/menu.pdf">...</a> 
@@ -1936,14 +1974,14 @@ between the attribute name and equals sign denotes an attribute value
 that should be whitespace-separated, with one word matching the exact
 stated value.
 
-<b>CSS</b>
+<h4>CSS</h4>
 
 ```
  1  a]rel&tilde;="tag"[ {...}
  2 
 ```
 
-<b>HTML</b>
+<h4>HTML</h4>
 
 ```
  1  <a href="#" rel="tag nofollow">...</a> 
@@ -1959,14 +1997,14 @@ equals sign. The vertical line denotes that the attribute value may be
 hyphen-separated however the hyphen-separated words must begin with the
 stated value.
 
-**CSS**
+<h4>CSS</h4>
 
 ```
  1  a]lang&#0124;="en"[ {...}
  2 
 ```
 
-**HTML**
+<h4>HTML</h4>
 
 ```
  1  <a href="#" lang="en-US">...</a> 
@@ -1975,7 +2013,7 @@ stated value.
 
 <h4>Attribute Selectors Example</h4>
 
-**HTML**
+<h4>HTML</h4>
 
 ```
  1  <ul>  
@@ -1988,7 +2026,7 @@ stated value.
  8 
 ```
 
-**CSS**
+<h4>CSS</h4>
 
 ```
  1  ul { 
@@ -2028,37 +2066,23 @@ stated value.
 
 <h4>Attribute Selectors Overview</h4>
 
-  ----------------------------------------------------------------------------------------------------
-  **[Example]****[Classification]****[Explanation]**
-  ---------------------------------- ----------------------------- -----------------------------------
-  a]target[Attribute Present Selector Selects an element if the given
-attribute is present
-
-  a]href="http://google.com/"[Attribute Equals Selector  Selects an element if the given
-attribute value exactly matches the
-value stated
-
-  a]href*="login"[  Attribute Contains SelectorSelects an element if the given
-attribute value contains at least
-once instance of the value stated
-
-  a]href&Hat;="https://"[  Attribute Begins WithSelects an element if the given
-  Selector attribute value begins with the
-value stated
-
-  a]href$=".pdf"[Attribute Ends With Selector  Selects an element if the given
-attribute value ends with the value
-stated
-
-  a]rel&tilde;="tag"[  Attribute Spaced Selector  Selects an element if the given
-attribute value is
-whitespace-separated with one word
-being exactly as stated
-
-  a]lang&#0124;="en"[  Attribute Hyphenated Selector Selects an element if the given
-attribute value is hyphen-separated
-and begins with the word stated
-  ----------------------------------------------------------------------------------------------------
+  | **[Example]** | **[Classification]** | **[Explanation]**                            |
+  |---------------|----------------------|----------------------------------------------|
+  | a[target]     | Attribute Present    | Selects an element if the given attribute is
+  |               | Selector             | present.
+  | a[href="http://google.com/"] | Attribute Equals | Selects an element if the given attribute value |
+  |                              | Selector         | exactly matches the value stated. |
+  | a[href*="login"]             | Attribute Contains           | Selects an element if the given attribute value |
+  |                              | Selector                     | contains at least one instance of the value stated |
+  | a[href&Hat;="https://"] | Attribute Begins | Selects an element if the given attribute value |
+  |                         | with Selector    | begins with the value stated.                   |
+  | a[href$=".pdf"]         | Attribute Ends   | Selects an element if the given attribute value |
+  |                         | With Selector    | ends with the value stated.                     |
+  | a[rel&tilde;="tag"]     | Attribute Spaced | Selects an element if the given attribute value |
+  |                         | Selector         | is whitespace-separated with one word being     |
+  |                         |                  | exactly as stated.                              |
+  | a[lang&#0124;="en"]     | Attribute        | Selects an element if the given attribute value |
+  |                         | Hyphenated       | is hyphen-separated and begins with the word stated. |
 
 <h4>Pseudo-classes</h4>
 
@@ -2170,7 +2194,7 @@ child of a parent element, without any other other siblings. In this
 case line 4 is selected as it is the only division within the specific
 list item.
 
-**CSS**
+<h4>CSS</h4>
 
 ```
  1  li:first-child {...} 
@@ -2179,7 +2203,7 @@ list item.
  4 
 ```
 
-**HTML**
+<h4>HTML</h4>
 
 ```
  1  <ul>  
@@ -2220,7 +2244,7 @@ are actually the first or last children within the article. Lines 3 and
 The img:only-of-type selector identifies the image on line 5 as it is
 the only image to appear within the article, thus also selected.
 
-**CSS**
+<h4>CSS</h4>
 
 ```
  1  p:first-of-type {...}
@@ -2229,7 +2253,7 @@ the only image to appear within the article, thus also selected.
  4 
 ```
 
-**HTML**
+<h4>HTML</h4>
 
 ```
  1  <article>
@@ -2333,13 +2357,13 @@ Using the :nth-child(n) pseudo-class, let's look at
 the li:nth-child(3n) selector. The selector here will identify every
 third list item, thus lines 4 and 7 are selected.
 
-**CSS**
+<h4>CSS</h4>
 
 ```
  1  li:nth-child(3n) {...}  
 ```
 
-**HTML**
+<h4>HTML</h4>
 
 ```
  1  <ul>  
@@ -2357,13 +2381,13 @@ yield a different selection. The li:nth-child(2n+3) selector, for
 example, will identify every second list item starting with the third
 and then onward. As a result, the list items lines 4 and 6 are selected.
 
-**CSS**
+<h4>CSS</h4>
 
 ```
  1  li:nth-child(2n+3) {...}
 ```
 
-**HTML**
+<h4>HTML</h4>
 
 ```
  1  <ul>  
@@ -2382,14 +2406,14 @@ new selection. Here the li:nth-child(-n+4) selector is identifying the
 top four list items, leaving the rest of the list items unselected, thus
 lines 2 through 5 are selected.
 
-**CSS**
+<h4>CSS</h4>
 
 ```
  1  li:nth-child(-n+4) {...}
  2 
 ```
 
-**HTML**
+<h4>HTML</h4>
 
 ```
  1  <ul>  
@@ -2408,13 +2432,13 @@ again. Here the li:nth-child(-2n+5) selector identifies every second
 list item within the first five list items starting with the first list
 item, thus the list items on lines 2, 4, and 6 are selected.
 
-**CSS**
+<h4>CSS</h4>
 
 ```
  1  li:nth-child(-2n+5) {...}  
 ```
 
-**HTML**
+<h4>HTML</h4>
 
 ```
  1  <ul>  
@@ -2489,15 +2513,15 @@ the parent. Here the paragraphs on lines 5 and 9 are selected.
 
 ```
  1  <article>
- 2  <h1>...</h1>  
- 3  <p>...</p> 
- 4  <p>...</p> 
- 5  <p>This paragraph will be selected</p>
- 6  <h2>...</h2>  
- 7  <p>...</p> 
- 8  <p>...</p> 
- 9  <p>This paragraph will be selected</p>
- 10  </article> 
+ 2    <h1>...</h1>  
+ 3    <p>...</p> 
+ 4    <p>...</p> 
+ 5    <p>This paragraph will be selected</p>
+ 6    <h2>...</h2>  
+ 7    <p>...</p> 
+ 8    <p>...</p> 
+ 9    <p>This paragraph will be selected</p>
+ 10 </article> 
  11 
 ```
 
@@ -2936,7 +2960,7 @@ added to ensure the best support for all browsers.
  2  
 ```
 
-**CSS**
+<h4>CSS</h4>
 
 ```
  1  .arrow {
@@ -3078,7 +3102,7 @@ Positioning](https://learn.shayhowe.com/advanced-html-css/detailed-css-positioni
 
 -[Viewport](https://learn.shayhowe.com/advanced-html-css/responsive-web-design/#viewport)
 
-**CSS**
+<h4>CSS</h4>
 
 -[Flexible
  Layouts](https://learn.shayhowe.com/advanced-html-css/responsive-web-design/#flexible-layouts)
@@ -3119,26 +3143,22 @@ providing an intuitive and gratifying experience for everyone. Desktop
 computer and cell phone users alike all benefit from responsive
 websites.
 
-The [[responsive web
-design]{.underline}](http://www.alistapart.com/articles/responsive-web-design/) term
+The [responsive web design](http://www.alistapart.com/articles/responsive-web-design/) term
 itself was coined, and largely developed, by Ethan Marcotte. A lot of
 what is covered in this lesson was first talked about by Ethan online
-and in his book [*[Responsive Web
-Design]{.underline}*](http://www.abookapart.com/products/responsive-web-design/),
-which is worth a read.
+and in his book <i><a href="http://www.abookapart.com/products/responsive-web-design/"></i>
+Responsive Web Design</a>, which is worth a read.
 
-![Food Sense Responsive
-Layout](./3-25-24/media/image007.png){width="5.0159722222222225in"
-height="9.0in"}
+![Food Sense Responsive Layout](./images/image007.png)
 
 Fig. 4
 
-[[Food Sense]{.underline}](http://foodsense.is/) has a beautiful
+<a href="http://foodsense.is/">Food Sense</a> has a beautiful
 website, responsive to all different viewport sizes. No matter how large
 or small the viewport may be the Food Sense website adjust, creating a
 natural user experience.
 
-Responsive vs. Adaptive vs. Mobile
+<h4>Responsive vs. Adaptive vs. Mobile</h4>
 
 For some the term *responsive* may not be new, and others might be even
 more acquainted with the terms *adaptive* or *mobile*. Which may leave
@@ -3222,64 +3242,36 @@ left and the aside on the right, with equal margins between the two.
 Normally the markup and styles for this layout would look a bit like the
 following.
 
-**HTML**
+<h4>HTML</h4>
 
-+---+----------------------------------------------------------------------+
+```
  1  <div class="container"> 
-
  2  <section>...</section> 
-
  3  <aside>...</aside>  
-
  4  </div>
-
  5 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
-**CSS**
+<h4>CSS</h4>
 
-+---+----------------------------------------------------------------------+
+```
  1  .container { 
-
- 2  width: 538px;
-
- 3  } 
-
+ 2    width: 538px;
+ 3  }
  4  section,
-
- 5  aside { 
-
- 6  margin: 10px;
-
- 7  } 
-
- 8  section {  
-
- 9  float: left; 
-
- 1  width: 340px;
- 0 
- } 
- 1 
- 1  aside { 
-
- 1  float: right;
- 2 
- width: 158px;
- 1 
- 3  } 
-
- 1 
- 4 
-
- 1 
- 5 
-
- 1 
- 6 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+ 5  aside {
+ 6    margin: 10px;
+ 7  }
+ 8  section {
+ 9    float: left;
+ 10   width: 340px;
+ 11 }
+ 12 aside {
+ 13   float: right;
+ 14   width: 158px;
+ 15 }
+ 16 
+```
 
 <h4>Fixed Grid Demo</h4>
 
@@ -3289,38 +3281,21 @@ percentages but em units would work equally as well. Notice, no matter
 how wide the parent container becomes, the section and aside margins and
 widths scale proportionally.
 
-+---+----------------------------------------------------------------------+
+```
  1  section,
-
- 2  aside { 
-
- 3  margin: 1.858736059%; /* 10px ÷ 538px = .018587361 */  
-
- 4  } 
-
- 5  section {  
-
- 6  float: left; 
-
- 7  width: 63.197026%; /* 340px ÷ 538px = .63197026 */  
-
- 8  } 
-
- 9  aside { 
-
- 1  float: right;
- 0 
- width: 29.3680297%; /* 158px ÷ 538px = .293680297 */
- 1 
- 1  } 
-
- 1 
- 2 
-
- 1 
- 3 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+ 2  aside {
+ 3    margin: 1.858736059%; /* 10px ÷ 538px = .018587361 */
+ 4  }
+ 5  section {
+ 6    float: left;
+ 7    width: 63.197026%; /* 340px ÷ 538px = .63197026 */
+ 8  }
+ 9  aside {
+ 10   float: right;
+ 11   width: 29.3680297%; /* 158px ÷ 538px = .293680297 */
+ 12 }
+ 13 
+```
 
 <h4>Flexible Grid Demo</h4>
 
@@ -3356,7 +3331,7 @@ from within the HTML document. Generally speaking it is recommend to use
 the @media rule inside of an existing style sheet to avoid any
 additional HTTP requests.
 
-**HTML**
+<h4>HTML</h4>
 
 ```
  1  <!&#45;&#45; Separate CSS File &#45;&#45;>
@@ -3364,7 +3339,7 @@ additional HTTP requests.
  3 
 ```
 
-**CSS**
+<h4>CSS</h4>
 
 ```
  1  /* &#0064;media Rule */  
@@ -3398,24 +3373,20 @@ both a, b, c, and so forth. Multiple individual media queries can be
 comma separated, acting as an unspoken or operator. The example below
 selects all media types between 800 and 1024 pixels wide.
 
-+---+----------------------------------------------------------------------+
+```
  1  &#0064;media all and (min-width: 800px) and (max-width: 1024px) {...} 
-
  2 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 The not logical operator negates the query, specifying any query but the
 one identified. In the example below the expression applies to any
 device that does not have a color screen. Black and white or monochrome
 screens would apply here for example.
 
-+---+----------------------------------------------------------------------+
+```
  1  &#0064;media not screen and (color) {...}
-
  2 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 The only logical operator is a new operator and is not recognized by
 user agents using the HTML4 algorithm, thus hiding the styles from
@@ -3423,12 +3394,10 @@ devices or browsers that don't support media queries. Below, the
 expression selects only screens in a portrait orientation that have a
 user agent capable of rending media queries.
 
-+---+----------------------------------------------------------------------+
+```
  1  &#0064;media only screen and (orientation: portrait) {...}
-
  2 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 <h4>Omitting a Media Type</h4>
 
@@ -3455,12 +3424,10 @@ viewport rendering area, the browser window for example. Values for
 these height and width media features may be any length unit, relative
 or absolute.
 
-+---+----------------------------------------------------------------------+
+```
  1  &#0064;media all and (min-width: 320px) and (max-width: 780px) {...}  
-
  2 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 Within responsive design the most commonly used features
 include min-width and max-width. These help build responsive websites on
@@ -3483,12 +3450,10 @@ when the display is wider than taller, and the portrait mode is
 triggered when the display is taller than wider. This media feature
 plays a large part with mobile devices.
 
-+---+----------------------------------------------------------------------+
+```
  1  &#0064;media all and (orientation: landscape) {...} 
-
  2 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 <h4>Aspect Ratio Media Features</h4>
 
@@ -3502,12 +3467,10 @@ The value for the aspect ratio feature consist of two positive integers
 separated by a forward slash. The first integer identifies the width in
 pixels while the second integer identifies the height in pixels.
 
-+---+----------------------------------------------------------------------+
+```
  1  &#0064;media all and (min-device-aspect-ratio: 16/9) {...}
-
  2 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 <h4>Pixel Ratio Media Features</h4>
 
@@ -3518,12 +3481,11 @@ Specifically, the pixel ratio feature is great for identifying high
 definition devices, including retina displays. Media queries for doing
 so look like the following.
 
-+---+-------------------------------------------------------------------+
+```
  1  &#0064;media only screen and (-webkit-min-device-pixel-ratio: 1.3), 
- only screen and (min-device-pixel-ratio: 1.3) {...}  
+    only screen and (min-device-pixel-ratio: 1.3) {...}
  2 
-+===+===================================================================+
-+---+-------------------------------------------------------------------+
+```
 
 <h4>Resolution Media Feature</h4>
 
@@ -3534,12 +3496,10 @@ Additionally, the resolution media feature will accept dots per pixel
 (1.3dppx), dots per centimeter (118dpcm), and other length based
 resolution values.
 
-+---+----------------------------------------------------------------------+
+```
  1  &#0064;media print and (min-resolution: 300dpi) {...}  
-
  2 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 <h4>Other Media Features</h4>
 
@@ -3575,7 +3535,6 @@ by turning off the floats and changing the widths of
 the section and aside.
 
 ```
-+---+----------------------------------------------------------------------+
  1  &#0064;media all and (max-width: 420px) { 
  2  section, aside {
  3  float: none; 
@@ -3670,53 +3629,26 @@ wide. Rewriting this code to use the mobile styles first by default then
 adding media queries to adjust for viewports over 420 pixels wide we
 build the following:
 
-+---+----------------------------------------------------------------------+
+```
  1  section,
-
  2  aside { 
-
  3  margin: 1.858736059%; 
-
  4  } 
-
  5  &#0064;media all and (min-width: 420px) { 
-
  6  .container { 
-
  7  max-width: 538px;  
-
  8  } 
-
  9  section {  
-
- 1  float: left; 
- 0 
- width: 63.197026%; 
- 1 
- 1  } 
-
- 1  aside { 
- 2 
- float: right;
- 1 
- 3  width: 29.3680297%;
-
- 1  } 
- 4 
- } 
- 1 
- 5 
-
- 1 
- 6 
-
- 1 
- 7 
-
- 1 
- 8 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+ 10  float: left; 
+ 11  width: 63.197026%; 
+ 12  } 
+ 13  aside { 
+ 14 float: right;
+ 15  width: 29.3680297%;
+ 16  } 
+ 17 } 
+ 18 
+```
 
 <h4>Mobile First Demo</h4>
 
@@ -3734,9 +3666,7 @@ the [[viewport]{.underline}](http://dev.opera.com/articles/view/an-introduction
 scale, and resolution of a website. To remedy this, Apple invented
 the viewport meta tag.
 
-![Website without Viewport Meta
-Tag](./3-25-24/media/image010.png){width="3.3368055555555554in"
-height="4.336805555555555in"}
+![Website without Viewport Meta Tag](./images/image010.png)
 
 **Fig. 4.** Although this demo has media queries, many mobile devices
 still do not know the initial width or scale of the website. Therefore,
@@ -3755,16 +3685,12 @@ For the best results, and the best looking website, it is recommend that
 you use the device defaults by applying
 the device-height and device-width values.
 
-+---+----------------------------------------------------------------------+
+```
  1  <meta name="viewport" content="width=device-width">
-
  2 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
-![Website with Viewport Meta
-Tag](./3-25-24/media/image011.png){width="3.3368055555555554in"
-height="4.336805555555555in"}
+![Website with Viewport Meta Tag](./images/image011.png)
 
 **Fig. 4.** Letting devices know the intended width of the
 website, device-width in this case, allows the website to be sized
@@ -3783,16 +3709,12 @@ the viewport size. Should a device be in landscape mode this would be
 the ratio between the device width and the viewport size. Values
 for initial-scale should always be a positive integer between 0 and 10.
 
-+---+----------------------------------------------------------------------+
+```
  1  <meta name="viewport" content="initial-scale=2">
-
  2 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
-![Viewport Scale Meta
-Tag](./3-25-24/media/image012.png){width="3.3368055555555554in"
-height="4.336805555555555in"}
+![Viewport Scale Meta Tag](./images/image012.png)
 
 **Fig. 4.** Using an integer above 1 will zoom the website to be larger
 than the default scale. Generally speaking, this value will most
@@ -3805,12 +3727,10 @@ Using the same reasoning, the maximum-scale value should be a positive
 integer greater than or equal to the initial-scale. Values for both of
 these must also be between 0 and 10.
 
-+---+----------------------------------------------------------------------+
+```
  1  <meta name="viewport" content="minimum-scale=0">
-
  2 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 Generally speaking, these values should not be set to the same value as
 the initial-scale. This would disable any zooming, which can be
@@ -3822,12 +3742,10 @@ Turning off the ability to scale a website is a **bad idea**. It harms
 accessibility and usability, preventing those with disabilities from
 viewing a website as desired.
 
-+---+----------------------------------------------------------------------+
+```
  1  <meta name="viewport" content="user-scalable=yes"> 
-
  2 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 <h4>Viewport Resolution</h4>
 
@@ -3842,12 +3760,10 @@ number.
 Using the target-densitydpi viewport value is rare, but extremely
 helpful when pixel by pixel control is needed.
 
-+---+----------------------------------------------------------------------+
+```
  1  <meta name="viewport" content="target-densitydpi=device-dpi">  
-
  2 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 <h4>Combining Viewport Values</h4>
 
@@ -3857,16 +3773,12 @@ multiple values requires comma separating them within
 the content attribute value. One of the recommended viewport values is
 outlined below, using both the width and initial-scale properties.
 
-+---+----------------------------------------------------------------------+
- 1  <meta name="viewport" content="width=device-width,
- initial-scale=1">
+```
+ 1  <meta name="viewport" content="width=device-width, initial-scale=1">
  2 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
-![Website with Viewport Meta
-Tag](./3-25-24/media/image011.png){width="3.3368055555555554in"
-height="4.336805555555555in"}
+![Website with Viewport Meta Tag](./images/image011.png)
 
 **Fig. 4** A combination
 of width=device-width and initial-scale=1 provide the initial size and
@@ -3885,18 +3797,14 @@ however support isn't great across the board. The previously
 recommended viewport meta tag would look like the
 following @viewport rule in CSS.
 
-+---+--------------------------------------------------------------------+
+```
  1  &#0064;viewport {  
- 
  2  width: device-width;
- 
  3  zoom: 1; 
- 
  4  }  
- 
  5  
-+===+====================================================================+
-+---+--------------------------------------------------------------------+
+```
+
 
 <h4>Flexible Media</h4>
 
@@ -3909,16 +3817,12 @@ One quick way to make media scalable is by using the max-width property
 with a value of 100%. Doing so ensures that as the viewport gets smaller
 any media will scale down according to its containers width.
 
-+---+----------------------------------------------------------------------+
+```
  1  img, video, canvas {  
-
  2  max-width: 100%;
-
  3  } 
-
  4 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 <h4>Flexible Media Demo</h4>
 
@@ -3945,7 +3849,7 @@ bottom padding of 56.25%. Padding on the bottom and not the top is
 specifically used to prevent Internet Explorer 5.5 from breaking, and
 treating the parent element as an absolutely positioned element.
 
-**HTML**
+<h4>HTML</h4>
 
 ```
  1  <figure> 
@@ -3954,7 +3858,7 @@ treating the parent element as an absolutely positioned element.
  4 
 ```
 
-**CSS**
+<h4>CSS</h4>
 
 ```
  1  figure {
@@ -4007,14 +3911,14 @@ on their website.
 
 <h3>In this Lesson 5</h3>
 
-**HTML**
+<h4>HTML</h4>
 
 <ul>
   <li><a href="https://learn.shayhowe.com/advanced-html-css/preprocessors/#haml">
     Haml</a></li>
 </ul>
 
-**CSS**
+<h4>CSS</h4>
 
 <ul>
   <li><a href="https://learn.shayhowe.com/advanced-html-css/preprocessors/#scss-sass">
@@ -7077,7 +6981,7 @@ Using an alert message as a demo, the following code snippets show how
 to create an alert message and then removing that message based upon
 clicking the close icon.
 
-**HTML**
+<h4>HTML</h4>
 
 +---+--------------------------------------------------------------------+
  1  <div class="notice-warning">
@@ -7316,7 +7220,7 @@ the .fadeOut() method allows for the alert message to gradually fade out
 rather than quickly disappearing, then be removed from the DOM after the
 animation is complete.
 
-**HTML**
+<h4>HTML</h4>
 
 ```
  1  <div class="notice-warning">
@@ -7385,7 +7289,7 @@ animation is complete.
 
 <h4>Slide Demo</h4>
 
-**HTML**
+<h4>HTML</h4>
 
 ```
  1  <div class="panel">  
@@ -7415,7 +7319,7 @@ Demo
 
 Tabs Demo
 
-**HTML**
+<h4>HTML</h4>
 
 ```
  1  <ul class="tabs-nav"> 
@@ -7504,7 +7408,7 @@ Tabs Demo
 GitlabGitLab is the most comprehensive AI-powered DevSecOps Platform.
 Software. Faster.
 
-**CSS**
+<h4>CSS</h4>
 
 -[Transform
  Syntax](https://learn.shayhowe.com/advanced-html-css/css-transforms/#transform-syntax)
@@ -7605,7 +7509,7 @@ counterclockwise. The default point of rotation is the center of the
 element, 50% 50%, both horizontally and vertically. Later we will
 discuss how you can change this default point of rotation.
 
-**HTML**
+<h4>HTML</h4>
 
 +---+----------------------------------------------------------------------+
  1  <figure class="box-1">Box 1</figure>
@@ -7616,7 +7520,7 @@ discuss how you can change this default point of rotation.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-**CSS**
+<h4>CSS</h4>
 
 +---+----------------------------------------------------------------------+
  1  .box-1 {
@@ -7651,7 +7555,7 @@ the appeared size of an element. The default scale value is 1, therefore
 any value between .99 and .01 makes an element appear smaller while any
 value greater than or equal to 1.01 makes an element appear larger.
 
-**HTML**
+<h4>HTML</h4>
 
 +---+----------------------------------------------------------------------+
  1  <figure class="box-1">Box 1</figure>
@@ -7662,7 +7566,7 @@ value greater than or equal to 1.01 makes an element appear larger.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-**CSS**
+<h4>CSS</h4>
 
 +---+----------------------------------------------------------------------+
  1  .box-1 {
@@ -7691,7 +7595,7 @@ the x and y axis values may be set simultaneously. To do so, use
 the scale transform declaring the x axis value first, followed by a
 comma, and then the y axis value.
 
-**HTML**
+<h4>HTML</h4>
 
 +---+----------------------------------------------------------------------+
  1  <figure class="box-1">Box 1</figure>
@@ -7704,7 +7608,7 @@ comma, and then the y axis value.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-**CSS**
+<h4>CSS</h4>
 
 +---+----------------------------------------------------------------------+
  1  .box-1 {
@@ -7751,7 +7655,7 @@ will push an element down and to the right of its default position while
 negative values will pull an element up and to the left of its default
 position.
 
-**HTML**
+<h4>HTML</h4>
 
 +---+----------------------------------------------------------------------+
  1  <figure class="box-1">Box 1</figure>
@@ -7764,7 +7668,7 @@ position.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-**CSS**
+<h4>CSS</h4>
 
 +---+----------------------------------------------------------------------+
  1  .box-1 {
@@ -7806,7 +7710,7 @@ The distance calculation of the skew value is measured in units of
 degrees. Length measurements, such as pixels or percentages, do not
 apply here.
 
-**HTML**
+<h4>HTML</h4>
 
 +---+----------------------------------------------------------------------+
  1  <figure class="box-1">Box 1</figure>
@@ -7819,7 +7723,7 @@ apply here.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-**CSS**
+<h4>CSS</h4>
 
 +---+----------------------------------------------------------------------+
  1  .box-1 {
@@ -7859,7 +7763,7 @@ Using multiple transform declarations will not work, as each declaration
 will overwrite the one above it. The behavior in that case would be the
 same as if you were to set the height of an element numerous times.
 
-**HTML**
+<h4>HTML</h4>
 
 +---+----------------------------------------------------------------------+
  1  <figure class="box-1">Box 1</figure>
@@ -7870,7 +7774,7 @@ same as if you were to set the height of an element numerous times.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-**CSS**
+<h4>CSS</h4>
 
 +---+----------------------------------------------------------------------+
  1  .box-1 {
@@ -7900,7 +7804,7 @@ transforms, try your hand at using the matrix property.
 
 <h4>2D Cube Demo</h4>
 
-**HTML**
+<h4>HTML</h4>
 
 +---+--------------------------------------------------------------------+
  1  <div class="cube"> 
@@ -7917,7 +7821,7 @@ transforms, try your hand at using the matrix property.
 +===+====================================================================+
 +---+--------------------------------------------------------------------+
 
-**CSS**
+<h4>CSS</h4>
 
 +---+--------------------------------------------------------------------+
  1  .cube {  
@@ -7995,7 +7899,7 @@ same value as top left, and 100% 100% is the same value as bottom right.
 More specific values can also be set, for example 20px 50px would set
 the origin to 20 pixels across and 50 pixels down the element.
 
-**HTML**
+<h4>HTML</h4>
 
 +---+----------------------------------------------------------------------+
  1  <figure class="box-1">Box 1</figure>
@@ -8010,7 +7914,7 @@ the origin to 20 pixels across and 50 pixels down the element.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-**CSS**
+<h4>CSS</h4>
 
 +---+----------------------------------------------------------------------+
  1  .box-1 {
@@ -8086,7 +7990,7 @@ vanishing point, apply the perspective property to their parent element.
 The example below shows a handful of elements all transformed using
 their individual perspectives with the perspective value.
 
-**HTML**
+<h4>HTML</h4>
 
 +---+----------------------------------------------------------------------+
  1  <figure class="box">Box 1</figure>
@@ -8099,7 +8003,7 @@ their individual perspectives with the perspective value.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-**CSS**
+<h4>CSS</h4>
 
 +---+----------------------------------------------------------------------+
  1  .box {  
@@ -8118,7 +8022,7 @@ The following example shows a handful of elements, side by side, all
 transformed using the same perspective, accomplished by using
 the perspective property on their direct parent element.
 
-**HTML**
+<h4>HTML</h4>
 
 +---+----------------------------------------------------------------------+
  1  <div class="group">  
@@ -8135,7 +8039,7 @@ the perspective property on their direct parent element.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-**CSS**
+<h4>CSS</h4>
 
 +---+----------------------------------------------------------------------+
  1  .group {
@@ -8174,7 +8078,7 @@ feet, where the dimensions of the cube are only one one-hundredth of
 your distance to the cube. The same thinking applies to perspective
 depth values.
 
-**HTML**
+<h4>HTML</h4>
 
 +---+----------------------------------------------------------------------+
  1  <figure class="box-1">Box 1</figure>
@@ -8185,7 +8089,7 @@ depth values.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-**CSS**
+<h4>CSS</h4>
 
 +---+----------------------------------------------------------------------+
  1  .box-1 {
@@ -8217,7 +8121,7 @@ of a transform determines the coordinates used to calculate the change
 of a transform, while the origin of a perspective identifies the
 coordinates of the vanishing point of a transform.
 
-**HTML**
+<h4>HTML</h4>
 
 +---+----------------------------------------------------------------------+
  1  <div class="original original-1">
@@ -8243,7 +8147,7 @@ coordinates of the vanishing point of a transform.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-**CSS**
+<h4>CSS</h4>
 
 +---+----------------------------------------------------------------------+
  1  .original {
@@ -8315,7 +8219,7 @@ As with the general rotate value before, positive values will rotate the
 element around its dedicated axis clockwise, while negative values will
 rotate the element counterclockwise.
 
-**HTML**
+<h4>HTML</h4>
 
 +---+----------------------------------------------------------------------+
  1  <figure class="box-1">Box 1</figure>
@@ -8328,7 +8232,7 @@ rotate the element counterclockwise.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-**CSS**
+<h4>CSS</h4>
 
 +---+----------------------------------------------------------------------+
  1  .box-1 {
@@ -8366,7 +8270,7 @@ scaled up and down on the z axis, however the rotateX value is added in
 order to see the behavior of the scaleZ value. When removing
 the rotateX in this case, the elements will appear to be unchanged.
 
-**HTML**
+<h4>HTML</h4>
 
 +---+----------------------------------------------------------------------+
  1  <figure class="box-1">Box 1</figure>
@@ -8377,7 +8281,7 @@ the rotateX in this case, the elements will appear to be unchanged.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-**CSS**
+<h4>CSS</h4>
 
 +---+----------------------------------------------------------------------+
  1  .box-1 {
@@ -8413,7 +8317,7 @@ three-dimensional transforms, being able to move an element on
 the z axis does have great benefits, like when building the cube below
 for example.
 
-**HTML**
+<h4>HTML</h4>
 
 +---+----------------------------------------------------------------------+
  1  <figure class="box-1">Box 1</figure>
@@ -8424,7 +8328,7 @@ for example.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-**CSS**
+<h4>CSS</h4>
 
 +---+----------------------------------------------------------------------+
  1  .box-1 {
@@ -8477,7 +8381,7 @@ transformed children elements to appear in their own three-dimensional
 plane while the flat value forces the transformed children elements to
 lie flat on the two-dimensional plane.
 
-**HTML**
+<h4>HTML</h4>
 
 +---+----------------------------------------------------------------------+
  1  <div class="rotate three-d">  
@@ -8496,7 +8400,7 @@ lie flat on the two-dimensional plane.
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-**CSS**
+<h4>CSS</h4>
 
 +---+----------------------------------------------------------------------+
  1  .rotate {  
@@ -8549,7 +8453,7 @@ because backface-visibility: hidden; declaration has been set.
 The backface-visibility property takes even more significance when
 using [[animations]{.underline}](https://css-tricks.com/almanac/properties/b/backface-visibility/).
 
-**HTML**
+<h4>HTML</h4>
 
 +---+----------------------------------------------------------------------+
  1  <figure class="box-1">Box 1</figure>
@@ -8560,7 +8464,7 @@ using [[animations]{.underline}](https://css-tricks.com/almanac/properties/b/ba
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
-**CSS**
+<h4>CSS</h4>
 
 +---+----------------------------------------------------------------------+
  1  .box-1 {
@@ -8585,7 +8489,7 @@ using [[animations]{.underline}](https://css-tricks.com/almanac/properties/b/ba
 
 <h4>3D Cube Demo</h4>
 
-**HTML**
+<h4>HTML</h4>
 
 +---+--------------------------------------------------------------------+
  1  <div class="cube-container">
@@ -8614,7 +8518,7 @@ using [[animations]{.underline}](https://css-tricks.com/almanac/properties/b/ba
 +===+====================================================================+
 +---+--------------------------------------------------------------------+
 
-**CSS**
+<h4>CSS</h4>
 
 +---+-------------------------------------------------------------------+
  1  .cube-container {  
@@ -9177,14 +9081,14 @@ transition values.
 
 <h4>Transitional Button</h4>
 
-**HTML**
+<h4>HTML</h4>
 
 ```
  1  <button>Awesome Button</button>
  2  
 ```
 
-**CSS**
+<h4>CSS</h4>
 
 ```
  1  button { 
@@ -9385,7 +9289,7 @@ they do with transitions.
 The animation below should cause the ball to bounce once while moving to
 the left, however only when hovering over the stage.
 
-<b>HTML</b>
+<h4>HTML</h4>
 
 ```
  1  <div class="stage">  
@@ -9394,7 +9298,7 @@ the left, however only when hovering over the stage.
  4 
 ```
 
-<b>CSS</b>
+<h4>CSS</h4>
 
 ```
  1  &#0064;keyframes slide {
@@ -9631,7 +9535,7 @@ the animation.
 
 <h3>In this Lesson 9</h3>
 
-<b>HTML</b>
+<h4>HTML</h4>
 
 -[HTML5
  Shiv](https://learn.shayhowe.com/advanced-html-css/feature-support-polyfills/#html5-shiv)
@@ -9639,7 +9543,7 @@ the animation.
 -[Cross Browser
  Testing](https://learn.shayhowe.com/advanced-html-css/feature-support-polyfills/#cross-browser-testing)
 
-<b>CSS</b>
+<h4>CSS</h4>
 
 -[Detecting Browser
  Features](https://learn.shayhowe.com/advanced-html-css/feature-support-polyfills/#detecting-browser-features)
