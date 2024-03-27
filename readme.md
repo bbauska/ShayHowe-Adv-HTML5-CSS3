@@ -13,7 +13,7 @@ output:
 <h1 align="center" width="100%">Advanced HTML &amp; CSS</h1>
 <h6 align="center">by Shay-Howe</h6>
 
-<h2 align="center">[Lesson 1] Performance &amp; Organization</h2>
+<h2 align="center">Lesson 1: Performance &amp; Organization</h2>
 
 <h3>In this Lesson 1</h3>
 
@@ -24,8 +24,8 @@ output:
     rel="noopener noreferrer" target="_blank">
 	Minify & Compress Files</a></li>
   <li><a href="https://learn.shayhowe.com/advanced-html-css/performance-organization/#cache-common-files"
-   rel="noopener noreferrer" target="_blank">
-   Cache Common Files</a></li>
+    rel="noopener noreferrer" target="_blank">
+    Cache Common Files</a></li>
 </ul>
 
 <h4>CSS</h4>
@@ -761,29 +761,22 @@ rel="noopener noreferrer" target="_blank">syntax</a>.
 
 <h4>Resources & Links</h4>
 
--[Best Practices for Speeding Up Your Web
- Site](http://developer.yahoo.com/performance/rules.html) via
- Yahoo! Developer Network
-
--[Rules for Faster-Loading Web
- Sites](https://www.stevesouders.com/blog/2012/02/10/the-performance-golden-rule/) via
- Steve Sounders
-
--[CSS Strategy
- Square-off](http://viget.com/inspire/css-squareoff) via
- Viget Labs
-
--[Writing Efficient CSS
- Selectors](http://csswizardry.com/2011/09/writing-efficient-css-selectors/) via
- Harry Roberts
-
--[Minifying and Optimizing  Files](http://www.hanselman.com/blog/TheImportanceAndEaseOfMinifyingYourCSSAndJavaScriptAndOptimizingPNGsForYourBlogOrWebsite.aspx) via
- Scott Hanselman
-
--[HTML5 Boilerplate](http://html5boilerplate.com/)
-
--[Data URIs](https://css-tricks.com/data-uris/) via
- CSS-Tricks
+<ul>
+  <li><a href="http://developer.yahoo.com/performance/rules.html" 
+    rel="noopener noreferrer" target="_blank">
+	Best Practices for Speeding Up Your Web Site</a> via Yahoo! Developer Network</li>
+  <li><a href="https://www.stevesouders.com/blog/2012/02/10/the-performance-golden-rule/">
+    Rules for Faster-Loading Web  Sites</a> via Steve Sounders</li>
+  <li><a href="http://viget.com/inspire/css-squareoff">
+    CSS Strategy Square-off</a> via Viget Labs</li>
+  <li><a href="http://csswizardry.com/2011/09/writing-efficient-css-selectors/">
+    Writing Efficient CSS Selectors</a> via Harry Roberts</li>
+  <li><a href="http://www.hanselman.com/blog/TheImportanceAndEaseOfMinifyingYourCSSAndJavaScriptAndOptimizingPNGsForYourBlogOrWebsite.aspx">
+    Minifying and Optimizing Files</a> via Scott Hanselman</li>
+  <li><a href="http://html5boilerplate.com/">HTML5 Boilerplate</a></li>
+  <li><a href="https://css-tricks.com/data-uris/">
+    Data URIs</a> via CSS-Tricks</li>
+</ul>
 
 <b>Lesson 1</b> <a href="https://learn.shayhowe.com/advanced-html-css/performance-organization/" 
 rel="noopener noreferrer" target="_blank">Performance &amp; Organization</a>
