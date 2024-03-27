@@ -1,10 +1,10 @@
----
+ ---
 title: "Shay & Howe's Advanced HTML and CSS"
 author: "Brian Bauska (bbauska)"
-date last editted: "3/25/2024 5 +pm"
+date last editted: "3/26/2024 7+pm"
 output: 
   markdown:
-    with some style
+ with some style
 ---
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -20,22 +20,22 @@ output:
 
 <ul>
   <li><a href="https://learn.shayhowe.com/advanced-html-css/performance-organization/#minify-compress-files">
-    Minify & Compress Files</a></li>
+ Minify & Compress Files</a></li>
   <li><a href="https://learn.shayhowe.com/advanced-html-css/performance-organization/#cache-common-files">
-    Cache Common Files</a></li>
+ Cache Common Files</a></li>
 </ul>
 
 <h5>CSS</h5>
 
 <ul>
   <li><a href="https://learn.shayhowe.com/advanced-html-css/performance-organization/#strategy-structure">
-    Strategy &amp; Structure</a></li>
+ Strategy &amp; Structure</a></li>
   <li><a href="https://learn.shayhowe.com/advanced-html-css/performance-organization/#performance-driven-selectors">
-    Performance Driven Selectors</a></li>
+ Performance Driven Selectors</a></li>
   <li><a href="https://learn.shayhowe.com/advanced-html-css/performance-organization/#reusable-code">
-    Reusable Code</a></li>
+ Reusable Code</a></li>
   <li><a href="https://learn.shayhowe.com/advanced-html-css/performance-organization/#reduce-http-requests">
-    Reduce HTTP Requests</a></li>
+ Reduce HTTP Requests</a></li>
 </ul>
 
 Having the ability to <a href="https://learn.shayhowe.com/html-css/writing-your-best-code/">
@@ -73,23 +73,23 @@ intent, which includes creating directories for common base styles, user
 interface components, and business logic modules.
 
 ```
- 1   # Base
- 2     -- normalize.css
- 3     -- layout.css
- 4     -- typography.css
+ 1  # Base
+ 2  -- normalize.css
+ 3  -- layout.css
+ 4  -- typography.css
  5  
- 6   # Components
- 7     -- alerts.css
- 8     -- buttons.css
- 9     -- forms.css
- 10    -- list.css
- 11    -- nav.css
- 12    -- tables.css
+ 6  # Components
+ 7  -- alerts.css
+ 8  -- buttons.css
+ 9  -- forms.css
+ 10 -- list.css
+ 11 -- nav.css
+ 12 -- tables.css
  13  
  14  # Modules
- 15    -- aside.css
- 16    -- footer.css
- 17    -- header.css
+ 15 -- aside.css
+ 16 -- footer.css
+ 17 -- header.css
  18 
 ```
 
@@ -124,15 +124,16 @@ structure, as well as on how to use styles.
 
 <h4>Object Oriented CSS</h4>
 
-The [Object Oriented CSS](http://oocss.org/) methodology
+The <a href="http://oocss.org/">Object Oriented CSS</a> methodology
 was pioneered by Nicole Sullivan in her work with writing styles for
 larger websites. Object Oriented CSS identifies two principles that will
 help build scalable websites with a strong architecture and a reasonable
 amount of code. These two principles include:
 
--   Separate structure from skin
-
--   Separate content from container
+<ul>
+  <li>Separate structure from skin</li>
+  <li>Separate content from container</li>
+</ul>
 
 Overall <b>separating structure from skin</b> includes abstracting the
 layout of an element away from the theme of a website. The structure of
@@ -150,7 +151,7 @@ multiple classes as necessary.
 
 ```
  1  <div class="alert alert-error">
- 2    <p class="msg">...</p>
+ 2 <p class="msg">...</p>
  3  </div>
  4 
 ```
@@ -171,21 +172,17 @@ a new page or feature to a website.
 
 <h4>Scalable & Modular Architecture for CSS</h4>
 
-Along the same line of Object Oriented CSS is the [Scalable and Modular
-Architecture for CSS]](http://smacss.com/) methodology
-developed by Jonathan Snook. The Scalable and Modular Architecture for
-CSS promotes breaking up styles into <b>five</b> core categories,
-including:
+Along the same line of Object Oriented CSS is the <a href="(http://smacss.com/">Scalable and Modular
+Architecture for CSS</a> methodology developed by Jonathan Snook. The Scalable and Modular Architecture for
+CSS promotes breaking up styles into <b>five</b> core categories, including:
 
--   Base
-
--   Layout
-
--   Module
-
--   State
-
--   Theme
+<ul>
+  <li>Base</li>
+  <li>Layout</li>
+  <li>Module</li>
+  <li>State</li>
+  <li>Theme</li>
+</ul>
 
 The <b>base</b> category includes core element styles, covering the general
 defaults. The <b>layout</b> category then identifies the sizing and grid
@@ -202,7 +199,7 @@ modules.
 
 ```
  1  <div class="alert is-error">
- 2    <p>...</p>
+ 2 <p>...</p>
  3  </div>
  4  
 ```
@@ -223,8 +220,8 @@ of these categories are then inherited as necessary.
 
 <h4>Choosing a Methodology</h4>
 
-Choosing which methodology to use, if any, is completely [up to
-you](http://viget.com/inspire/css-squareoff) and what you
+Choosing which methodology to use, if any, is completely 
+<a href="http://viget.com/inspire/css-squareoff">up to you</a> and what you
 feel is best for a given website. Generally speaking, a solid mix of
 both OOCSS and SMACSS works well, borrowing principles from each
 methodology as you prefer.
@@ -232,7 +229,7 @@ methodology as you prefer.
 <h4>Performance Driven Selectors</h4>
 
 One functionality of CSS often abused without awareness
-are [selectors](http://csswizardry.com/2011/09/writing-efficient-css-selectors/).
+are <a href="http://csswizardry.com/2011/09/writing-efficient-css-selectors/">selectors</a>.
 Much of the attention within CSS is given to properties and values. So
 long as these styles are applied to the correct element, everything
 looks to be fine. This is a very poor assumption. How elements are
@@ -312,7 +309,7 @@ and increases the overall specificity of the selector.
  9 
  10 /* Good */
  11 .feat-post {...}
- 12                                                                      
+ 12
 ```
 
 It is also worth noting, stay away from ID selectors where possible as
@@ -340,10 +337,10 @@ multiple classes on the same element.
 
 ```
  1  /* Bad */
- 2  .news {                                                              
- 3  background: #eee;                                                    
- 4  border-radius: 5px;                                                  
- 5  box-shadow: inset 0 1px 2px rgba(0, 0, 0, .25);                      
+ 2  .news { 
+ 3  background: #eee;  
+ 4  border-radius: 5px;
+ 5  box-shadow: inset 0 1px 2px rgba(0, 0, 0, .25); 
  6  }
  7  .social {
  8  background: #eee;
@@ -375,8 +372,8 @@ is being shared and reused, and the overall file size is reduced.
 
 Simply removing duplicate and unnecessary code is the best way to cut
 down on file size, however there are additional ways. One way
-includes [minifying](http://www.hanselman.com/blog/TheImportanceAndEaseOfMinifyingYourCSSAndJavaScriptAndOptimizingPNGsForYourBlogOrWebsite.aspx) and
-compressing files, such as HTML, CSS, and JavaScript files.
+includes <a href="http://www.hanselman.com/blog/TheImportanceAndEaseOfMinifyingYourCSSAndJavaScriptAndOptimizingPNGsForYourBlogOrWebsite.aspx">
+minifying</a> and compressing files, such as HTML, CSS, and JavaScript files.
 Additionally, images may be compressed, removing any unnecessary
 comments and color profiles.
 
@@ -388,8 +385,8 @@ forth, and identifies similar strings to compress down. The more
 matching strings identified, the smaller the file can be compressed,
 thus sending a smaller file from the server to the browser.
 
-Setting up gzip is fairly painless, and the [HTML5
-Boilerplate](http://html5boilerplate.com/) team has done a
+Setting up gzip is fairly painless, and the <a href="http://html5boilerplate.com/">HTML5
+Boilerplate</a> team has done a
 great job of getting this going. To gzip files an .htaccess file needs
 to be added to the root directory of the web server, labeling the
 specific files to be gzipped. The dot at the beginning of the file name
@@ -402,17 +399,14 @@ directory of the web server. Additionally, it is worth noting
 that .htaccess files only work on Apache web servers, which need to have
 the following modules enabled.
 
--   mod_setenvif.c
-
--   mod_headers.c
-
--   mod_deflate.c
-
--   mod_filter.c
-
--   mod_expires.c
-
--   mod_rewrite.c
+<ul>
+  <li>mod_setenvif.c</li>
+  <li>mod_headers.c</li>
+  <li>mod_deflate.c</li>
+  <li>mod_filter.c</li>
+  <li>mod_expires.c</li>
+  <li>mod_rewrite.c</li>
+</ul>
 
 Generally speaking this isn't an issue, and some web servers may even
 set up compression for you. After all, it is in the web server's best
@@ -469,8 +463,8 @@ allowing unnecessary color profiles and comments to be removed from the
 image without changing the quality of the image at all.
 
 There are a handful of tools to help compress images, two of the best
-are [ImageOptim](http://imageoptim.com/) for Mac
-and [PNGGauntlet](http://pnggauntlet.com/) for Windows.
+are <a href="http://imageoptim.com/">ImageOptim</a> for Mac
+and <a href="http://pnggauntlet.com/">PNGGauntlet</a> for Windows.  
 Both of these services compress the most commonly used image formats,
 specifically JPG and PNG files.
 
@@ -517,7 +511,7 @@ data than necessary.
 
 ```
  1  <img src="ocean.jpg" height="440" width="660" 
- 2    alt="Oceanview">
+ 2 alt="Oceanview">
  3  
 ```
 
@@ -595,80 +589,78 @@ be shown accordingly.
 <h5>HTML</h5>
 
 ```
- 1  <ul>                                                               
- 2  <li><a href="#"><span class="bold">Bold                    
-    Text</span></a></li>                                           
- 3                                                                       
-    <li><a href="#"><span class="italic">Italicize             
- 4  Text</span></a></li>
- 5  <li><a href="#"><span class="underline">Underline Text</span></a></li>
- 6  <li><a href="#"><span class="size">Size 7  Text</span></a></li>
- 8  <li><a href="#"><span class="bullet">Bullet Text</span></a></li>
- 9  <li><a href="#"><span class="number">Number 1  Text</span></a></li>
- 10 <li><a href="#"><span class="quote">Quote 1  Text</span></a></li>
- 11 <li><a href="#"><span class="left">Left Align 1  Text</span></a></li>
- 12 <li><a href="#"><span class="center">Center Align 1  Text</span></a></li>
- 13 <li><a href="#"><span class="right">Right Align Text</span></a></li>
- 14 </ul>
+ 1  <ul>
+ 2    <li><a href="#"><span class="bold">Bold Text</span></a></li>
+ 3    <li><a href="#"><span class="italic">Italicize 4 Text</span></a></li>
+ 4    <li><a href="#"><span class="underline">Underline Text</span></a></li>
+ 5    <li><a href="#"><span class="size">Size 7  Text</span></a></li>
+ 6    <li><a href="#"><span class="bullet">Bullet Text</span></a></li>
+ 7    <li><a href="#"><span class="number">Number 1  Text</span></a></li>
+ 8    <li><a href="#"><span class="quote">Quote 1  Text</span></a></li>
+ 9    <li><a href="#"><span class="left">Left Align 1  Text</span></a></li>
+ 10   <li><a href="#"><span class="center">Center Align 1  Text</span></a></li>
+ 11   <li><a href="#"><span class="right">Right Align Text</span></a></li>
+ 12 </ul>
+ 13 
 ```
 
 <b>CSS</b>
 
 ```
  1  ul {
- 2  margin: 0;
- 3  padding: 0;
+ 2    margin: 0;
+ 3    padding: 0;
  4  }
  5  li {
- 6  float: left;
- 7  list-style: none;
- 8  margin: 2px;
+ 6    float: left;
+ 7    list-style: none;
+ 8    margin: 2px;
  9  }
- 1  li a {
-    background: linear-gradient(#fff, #eee);
- 1  border: 1px solid #ccc;
- 1  border-radius: 3px;
-    display: block;
- 3  padding: 3px;
- 1  }
-    li a:hover {
- 5  border-color: #999;
- 1  }
-    li span {
- 7  background: url("sprite.png") 0 0 no-repeat;
- 1  color: transparent;
-    display: block;
- 9  font: 0/0 a;
- 2  height: 16px;
- 0  
-    width: 16px;
- 1  }
- 2  .italic {
-    background-position: -16px 0;
- 3  }
- 2  .underline {                                                         
-    background-position: -32px 0;
- 5  }
- 2  .size {                                                              
-    background-position: -48px 0;
- 7  }
- 2  .bullet {
-    background-position: -64px 0;
- 9  }
- 3  .number {
-    background-position: -80px 0;
- 1  }
- 3  .quote {
-    background-position: -96px 0;
- 3  }
- 3  .left {
-    background-position: -112px 0;
- 5  }
- 3  .center {
-    background-position: -128px 0;
- 7  }
- 3  .right {
-    background-position: -144px 0;
+ 10  li a {
+ 11  background: linear-gradient(#fff, #eee);
+ 12  border: 1px solid #ccc;
+ 13  border-radius: 3px;
+ 14  display: block;
+ 15  padding: 3px;
+ 16  }
+ 17  li a:hover {
+ 18  border-color: #999;
+ 19  }
+ 20  li span {
+ 21  background: url("sprite.png") 0 0 no-repeat;
+ 22  color: transparent;
+ 23  display: block;
+ 24  font: 0/0 a;
+ 25  height: 16px;
+ 26  width: 16px;
+ 27  }
+ 28  .italic {
+ 29  background-position: -16px 0;
+ 30  }
+ 31  .underline { 
+ 32  background-position: -32px 0;
+ 33  }
+ 34  .size { 
+ 35  background-position: -48px 0;
+ 36  }
+ 37  .bullet {
+ 38  background-position: -64px 0;
+ 39  }
+ 40  .number {
+ 41  background-position: -80px 0;
+ 42  }
+ 43  .quote {
+ 44  background-position: -96px 0;
+ 45  }
+ 46  .left {
+ 47  background-position: -112px 0;
+ 48  }
+ 49   .center {
+ 50  background-position: -128px 0;
+ 51  }
+ 52  .right {
+ 53  background-position: -144px 0;
+ 54 
 ```
 
 <h4>Image Sprites Demo</h4>
@@ -676,8 +668,8 @@ be shown accordingly.
 <h4>Image Data URI</h4>
 
 Additionally, instead of spriting images, the encoded data for an image
-can be included within HTML and CSS directly by way of the [data
-URI](https://css-tricks.com/data-uris/), removing the need
+can be included within HTML and CSS directly by way of the 
+<a href="https://css-tricks.com/data-uris/"> data URI</a>, removing the need
 for a HTTP request all together. Using the image data URI works great
 for small images, likely to never change, and where the HTML and CSS can
 be heavily cached. There are, however, a couple of problems with data
@@ -687,32 +679,31 @@ specifically Internet Explorer 7 and below.
 
 If using data URIs helps cut down a few HTTP requests, and the HTML or
 CSS can be heavily cached, the benefits tend to outweigh the risk. A few
-tools to help generate data URIs
-include [converters](http://websemantics.co.uk/online_tools/image_to_data_uri_convertor/) and [pattern
-generators](http://www.patternify.com/). Be careful though,
-and always double check to see that the actual data URI is less weight
-than the actual image.
+tools to help generate data URIs include 
+<a href="http://websemantics.co.uk/online_tools/image_to_data_uri_convertor/">
+converters</a> and <a href="http://www.patternify.com/">
+pattern generators</a>. Be careful though, and always double check to see that 
+the actual data URI is less weight than the actual image.
 
 <h5>HTML</h5>
 
 ```
- 1  <img height="100" width="660" alt="Rigged Pattern"
-    src="data:image/png;base64,
- 2  iVBORw0KGg
-     oAAAANSUhEUgAAAAoAAAAICAYAAADA+m62AAAAPUlEQVQYV2NkQAO6m73+X/bdxoguji 
-    IAU4RNMVwhuiQ6H6wQl3XI4oy4FMHcCJPHcDS6J2A2EqUQpJ
-    hohQAyIyYy0nBAGgAAAABJRU5ErkJggg==">
+ 1  <img height="100" width="660" alt="Rigged Pattern" src="data:image/png;base64,
+ 2  iVBORw0KGgoAAAANSUhEUgAAAAoAAAAICAYAAADA+m62AAAAPUlEQVQYV2NkQAO6m73+X/bdxoguji 
+ 3  IAU4RNMVwhuiQ6H6wQl3XI4oy4FMHcCJPHcDS6J2A2EqUQpJ
+ 4  hohQAyIyYy0nBAGgAAAABJRU5ErkJggg==">
+ 5  
 ```
 
 <h5>CSS</h5>
 
 ```
  1  div {
- 2  background:          
-    url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAI
-    CAYAA 
+ 2  background: 
+ 3  url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAICAYAA 
  4  ADA+m62AAAAPUlEQVQYV2NkQAO6m73+X/bdxogujiIAU4RNMVwhuiQ6H6wQl3XI4oy4F
-    MHcCJPHcDS6J2A2EqUQpJhohQAyIyYy0nBAGgAAAABJRU5ErkJggg==") repeat;
+ 5  MHcCJPHcDS6J2A2EqUQpJhohQAyIyYy0nBAGgAAAABJRU5ErkJggg==") repeat;
+ 6 
 ```
 
 <h4>Image Data URI Demo</h4>
@@ -747,55 +738,54 @@ smaller period of time.
 Changing the "access plus 1 year" value to "access plus 1 week" is
 better suited for CSS and JavaScript files that are changing weekly but
 are not version controlled with separate file names. For accepted
-expires header values reference
-the mod_expires [syntax](http://httpd.apache.org/docs/current/mod/mod_expires.html).
+expires header values reference the mod_expires 
+<a href="http://httpd.apache.org/docs/current/mod/mod_expires.html">syntax</a>.
 
 <h4>Resources & Links</h4>
 
--   [Best Practices for Speeding Up Your Web
-    Site](http://developer.yahoo.com/performance/rules.html) via
-    Yahoo! Developer Network
+-[Best Practices for Speeding Up Your Web
+ Site](http://developer.yahoo.com/performance/rules.html) via
+ Yahoo! Developer Network
 
--   [Rules for Faster-Loading Web
-    Sites](https://www.stevesouders.com/blog/2012/02/10/the-performance-golden-rule/) via
-    Steve Sounders
+-[Rules for Faster-Loading Web
+ Sites](https://www.stevesouders.com/blog/2012/02/10/the-performance-golden-rule/) via
+ Steve Sounders
 
--   [CSS Strategy
-    Square-off](http://viget.com/inspire/css-squareoff) via
-    Viget Labs
+-[CSS Strategy
+ Square-off](http://viget.com/inspire/css-squareoff) via
+ Viget Labs
 
--   [Writing Efficient CSS
-    Selectors](http://csswizardry.com/2011/09/writing-efficient-css-selectors/) via
-    Harry Roberts
+-[Writing Efficient CSS
+ Selectors](http://csswizardry.com/2011/09/writing-efficient-css-selectors/) via
+ Harry Roberts
 
--   [Minifying and Optimizing     Files](http://www.hanselman.com/blog/TheImportanceAndEaseOfMinifyingYourCSSAndJavaScriptAndOptimizingPNGsForYourBlogOrWebsite.aspx) via
-    Scott Hanselman
+-[Minifying and Optimizing  Files](http://www.hanselman.com/blog/TheImportanceAndEaseOfMinifyingYourCSSAndJavaScriptAndOptimizingPNGsForYourBlogOrWebsite.aspx) via
+ Scott Hanselman
 
--   [HTML5 Boilerplate](http://html5boilerplate.com/)
+-[HTML5 Boilerplate](http://html5boilerplate.com/)
 
--   [Data URIs](https://css-tricks.com/data-uris/) via
-    CSS-Tricks
+-[Data URIs](https://css-tricks.com/data-uris/) via
+ CSS-Tricks
 
-[<b>Lesson 1</b>] [Performance &
-Organization](https://learn.shayhowe.com/advanced-html-css/performance-organization/)
-[<b>Lesson 3</b>] [Complex
-Selectors](https://learn.shayhowe.com/advanced-html-css/complex-selectors/)
+<b>Lesson 1</b> <a href="https://learn.shayhowe.com/advanced-html-css/performance-organization/">Performance &amp; Organization</a>
+<b>Lesson 3</b> <a href="https://learn.shayhowe.com/advanced-html-css/complex-selectors/">Complex Selectors</a>
 
 
-[Lesson 2] Detailed Positioning
 
-In this Lesson 2
+<h2>[Lesson 2] Detailed Positioning</h2>
+
+<h3>In this Lesson 2</h3>
 
 <b>CSS</b>
 
--   [Containing
-    Floats](https://learn.shayhowe.com/advanced-html-css/detailed-css-positioning/#containing-floats)
+-[Containing
+ Floats](https://learn.shayhowe.com/advanced-html-css/detailed-css-positioning/#containing-floats)
 
--   [Position
-    Property](https://learn.shayhowe.com/advanced-html-css/detailed-css-positioning/#position-property)
+-[Position
+ Property](https://learn.shayhowe.com/advanced-html-css/detailed-css-positioning/#position-property)
 
--   [Z-Index
-    Property](https://learn.shayhowe.com/advanced-html-css/detailed-css-positioning/#z-index-property)
+-[Z-Index
+ Property](https://learn.shayhowe.com/advanced-html-css/detailed-css-positioning/#z-index-property)
 
 <b>SHARE</b>
 
@@ -866,7 +856,7 @@ the .box-set division you will see it has a height of 0.
  3  <figure class="box">Box 2</figure>
  4  <figure class="box">Box 3</figure>
  5  </div>
- 6                                                                       
+ 6 
 ```
 
 <b>CSS</b>
@@ -1131,26 +1121,26 @@ positioned elements default position.
 
 ```
  1  .box-set {
- 2  background: #eaeaed;
+ 2    background: #eaeaed;
  3  }
  4  .box {
  5    background: #2db34a;
  6    height: 80px;
  7    position: relative;
- 8  width: 80px;
+ 8    width: 80px;
  9  }
  10 .box-1 {
- 11 
- 12 top: 20px;
+ 12   top: 20px;
  13 }
- 14  .box-2 {
+ 14 .box-2 {
  15   left: 40px;
  16 }
- 17  .box-3 {
- 18 bottom: -10px;
- 19 
- 20  right: 20px;
- 21 }
+ 17 .box-3 {
+ 18   bottom: -10px;
+ 19   right: 20px;
+ 20 }
+ 21 
+ 
 ```
 
 <h4>Position Relative Demo</h4>
@@ -1209,31 +1199,31 @@ value.
 
 ```
  1  .box-set {
- 2  background: #eaeaed;
- 3  height: 200px;
- 4  position: relative;
+ 2    background: #eaeaed;
+ 3    height: 200px;
+ 4    position: relative;
  5  }
  6  .box {
- 7  background: #2db34a;
- 8  height: 80px;
- 9  position: absolute;
- 10  width: 80px;
- 11   }
- 12  .box-1 {
- 13  top: 6%;
+ 7    background: #2db34a;
+ 8    height: 80px;
+ 9    position: absolute;
+ 10   width: 80px;
+ 11 }
+ 12 .box-1 {
+ 13   top: 6%;
  14   left: 2%;
- 15  
- 16  .box-2 {
+ 15  }
+ 16 .box-2 {
  17   top: 0;
- 18 right: -40px;
- 19  }
- 20   .box-3 {
- 21  bottom: -10px;
- 22  right: 20px;
- 23   }
- 24  .box-4 {
- 25  bottom: 0;
- 26  }
+ 18   right: -40px;
+ 19 }
+ 20 .box-3 {
+ 21   bottom: -10px;
+ 22   right: 20px;
+ 23 }
+ 24 .box-4 {
+ 25   bottom: 0;
+ 26 }
  27  
 ```
 
@@ -1275,42 +1265,40 @@ and not the containing, relatively positioned parent.
 <b>HTML</b>
 
 ```
- 1  <div class="box-set">                                            
- 2  <figure class="box box-1">Box 1</figure>                       
- 3  <figure class="box box-2">Box 2</figure>                       
- 4  <figure class="box box-3">Box 3</figure>                       
- 5  <figure class="box box-4">Box 4</figure>                       
- 6  </div>                                                             
- 7                                                                       
+ 1  <div class="box-set">
+ 2  <figure class="box box-1">Box 1</figure>
+ 3  <figure class="box box-2">Box 2</figure>
+ 4  <figure class="box box-3">Box 3</figure>
+ 5  <figure class="box box-4">Box 4</figure>
+ 6  </div>
+ 7 
 ```
 
 <b>CSS</b>
 
 ```
  1  .box {
- 2  background: #2db34a;
- 3  height: 80px;
- 4  position: fixed;
- 5  width: 80px;
+ 2    background: #2db34a;
+ 3    height: 80px;
+ 4    position: fixed;
+ 5    width: 80px;
  6  }
  7  .box-1 {
- 8  top: 6%;
- 9  left: 2%;
- 1  }
-    .box-2 {
- 1  top: 0;
- 1  right: -40px;
-    }
- 1  
- 3  .box-3 {
- 1  bottom: -10px;
- 4  
-    right: 20px;                                                         
- 5  }                                                                    
- 1  .box-4 {                                                             
-    bottom: 0;
- 7  }
- 
+ 8    top: 6%;
+ 9    left: 2%;
+ 10 }
+ 11 .box-2 {
+ 12   top: 0;
+ 13   right: -40px;
+ 14 }
+ 15 .box-3 {
+ 16   bottom: -10px;
+ 17   right: 20px; 
+ 18 } 
+ 19 .box-4 {
+ 20   bottom: 0;
+ 21 }
+ 22  
 ```
 
 <h4>Position Fixed Demo</h4>
@@ -1339,14 +1327,14 @@ borders, and padding to be applied freely.
 
 ```
  1  body {
- 2  background: #eaeaed;
+ 2    background: #eaeaed;
  3  }
  4  footer {
- 5  background: #2db34a;
- 6  bottom: 0;
- 7  left: 0;
- 8  position: fixed;
- 9  right: 0;
+ 5    background: #2db34a;
+ 6    bottom: 0;
+ 7    left: 0;
+ 8    position: fixed;
+ 9    right: 0;
  10 }
  11 
 ```
@@ -1383,48 +1371,48 @@ box three.
 <b>HTML</b>
 
 ```
- 1  <div class="box-set">                                            
- 2  <figure class="box box-1">Box 1</figure>                       
- 3  <figure class="box box-2">Box 2</figure>                       
- 4  <figure class="box box-3">Box 3</figure>                       
- 5  <figure class="box box-4">Box 4</figure>                       
- 6  </div>                                                             
- 7                                                                       
+ 1  <div class="box-set">
+ 2  <figure class="box box-1">Box 1</figure>  
+ 3  <figure class="box box-2">Box 2</figure>  
+ 4  <figure class="box box-3">Box 3</figure>  
+ 5  <figure class="box box-4">Box 4</figure>  
+ 6  </div>
+ 7 
 ```
 
 <b>CSS</b>
 
 ```
  1  .box-set {
- 2  background: #eaeaed;
- 3  height: 160px;
- 4  position: relative;
+ 2    background: #eaeaed;
+ 3    height: 160px;
+ 4    position: relative;
  5  }
  6  .box {
- 7  background: #2db34a;
- 8  border: 2px solid #ff7b29;
- 9  position: absolute;
- 1  }
-    .box-1 {
- 1  left: 10px;
- 1  top: 10px;
-    }
- 3  .box-2 {
- 1  bottom: 10px;
-    left: 70px;
- 5  z-index: 3;
- 1  }
-    .box-3 {
- 7  left: 130px;
- 1  top: 10px;
-    z-index: 2;
- 9  }
- 2  .box-4 {
-    bottom: 10px;
- 1  left: 190px;
- 2  z-index: 1;
-    }
- 2  
+ 7    background: #2db34a;
+ 8    border: 2px solid #ff7b29;
+ 9    position: absolute;
+ 10  }
+ 11 .box-1 {
+ 12   left: 10px;
+ 13   top: 10px;
+ 14 }
+ 15 .box-2 {
+ 16   bottom: 10px;
+ 17   left: 70px;
+ 18   z-index: 3;
+ 19 }
+ 20 .box-3 {
+ 21   left: 130px;
+ 22   top: 10px;
+ 23   z-index: 2;
+ 24 }
+ 25 .box-4 {
+ 26   bottom: 10px;
+ 27   left: 190px;
+ 28   z-index: 1;
+ 29 }
+ 30  
 ```
 
 <h4>Z-Index Demo</h4>
@@ -1436,11 +1424,13 @@ box three.
   <li><a href="http://nicolasgallagher.com/micro-clearfix-hack/">A New Micro Clearfix Hack</a> via Nicolas Gallagher</li>
   <li><a href="http://www.alistapart.com/articles/css-positioning-101/">CSS Positioning 101</a> via A List Apart</li>
   <li><a href="http://www.impressivewebs.com/a-detailed-look-at-the-z-index-css-property/">A Detailed Look at the z-index CSS Property</a> via
-    Impressive Webs</li>
+ Impressive Webs</li>
 </ul>
 
-<b>Lesson 1</b> [Performance & Organization](https://learn.shayhowe.com/advanced-html-css/performance-organization/)
-<b>Lesson 3</b> [Complex Selectors](https://learn.shayhowe.com/advanced-html-css/complex-selectors/)
+<b>Lesson 1</b> <a href="https://learn.shayhowe.com/advanced-html-css/performance-organization/">
+  Performance & Organization</a>
+<b>Lesson 3</b> <a href="https://learn.shayhowe.com/advanced-html-css/complex-selectors/">
+  Complex Selectors</a>
 
 [Lesson 3] Complex Selectors
 
@@ -1448,21 +1438,20 @@ In this Lesson 3
 
 <b>CSS</b>
 
--   [Common
-    Selectors](https://learn.shayhowe.com/advanced-html-css/complex-selectors/#common-selectors)
-
--   [Child
-    Selectors](https://learn.shayhowe.com/advanced-html-css/complex-selectors/#child-selectors)
-
--   [Sibling
-    Selectors](https://learn.shayhowe.com/advanced-html-css/complex-selectors/#sibling-selectors)
-
--   [Attribute
-    Selectors](https://learn.shayhowe.com/advanced-html-css/complex-selectors/#attribute-selectors)
-
--   [Pseudo-classes](https://learn.shayhowe.com/advanced-html-css/complex-selectors/#pseudo-classes)
-
--   [Pseudo-elements](https://learn.shayhowe.com/advanced-html-css/complex-selectors/#pseudo-elements)
+<ul>
+  <li><a href="https://learn.shayhowe.com/advanced-html-css/complex-selectors/#common-selectors">
+    Common Selectors</a></li>
+  <li><a href="https://learn.shayhowe.com/advanced-html-css/complex-selectors/#child-selectors">
+    Child Selectors</a></li>
+  <li><a href="https://learn.shayhowe.com/advanced-html-css/complex-selectors/#sibling-selectors">
+    Sibling Selectors</a></li>
+  <li><a href="https://learn.shayhowe.com/advanced-html-css/complex-selectors/#attribute-selectors">
+    Attribute Selectors</a></li>
+  <li><a href="https://learn.shayhowe.com/advanced-html-css/complex-selectors/#pseudo-classes">
+    Pseudo-classes</a></li>
+  <li><a href="https://learn.shayhowe.com/advanced-html-css/complex-selectors/#pseudo-elements">
+    Pseudo-elements</a></li>
+</ul>
 
 <b>SHARE</b>
 
@@ -1500,35 +1489,35 @@ be used once per page.
 <b>CSS</b>
 
 ```
- 1  h1 {&#8230;}                                                            
- 2  .tagline {&#8230;}                                                      
- 3  #intro {&#8230;}                                                        
- 4                                                                       
+ 1  h1 {&#8230;}
+ 2  .tagline {&#8230;}
+ 3  #intro {&#8230;}
+ 4  
 ```
 
 <b>HTML</b>
 
 ```
- 1  <section id="intro">                                             
- 2  <h1>&#8230;</h1>                                                    
- 3  <h2 class="tagline">&#8230;</h2>                                  
- 4  </section>                                                         
- 5                                                                       
+ 1  <section id="intro">
+ 2    <h1>&#8230;</h1>
+ 3    <h2 class="tagline">&#8230;</h2>
+ 4  </section>
+ 5  
 ```
 
 <h4>Common Selectors Overview</h4>
 
 ```
   ----------------------------------------------------------------------------------------------------------
-  <b>[Example]</b>   <b>[Classification]</b>   <b>[Explanation]</b>
+  <b>[Example]</b><b>[Classification]</b><b>[Explanation]</b>
   ---------------------- ----------------------------- -----------------------------------------------------
-  h1                     Type Selector                 Selects an element by its type
+  h1Type Selector  Selects an element by its type
 
-  .tagline               Class Selector                Selects an element by the class attribute value,
-                                                       which may be reused multiple times per page
+  .taglineClass Selector Selects an element by the class attribute value,
+  which may be reused multiple times per page
 
-  #intro                 ID Selector                   Selects an element by the ID attribute value, which
-                                                       is unique and to only be used once per page
+  #intro  ID Selector Selects an element by the ID attribute value, which
+  is unique and to only be used once per page
   ----------------------------------------------------------------------------------------------------------
 
 <h4>Child Selectors</h4>
@@ -1558,33 +1547,23 @@ Below, the headings on lines 3 and 5 are selected.
 
 <b>CSS</b>
 
-+---+----------------------------------------------------------------------+
- 1  article h2 {&#8230;}                                                    
-                                                                         
- 2                                                                       
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
+ 1  article h2 {&#8230;}  
+ 2 
+```
 
 <b>HTML</b>
 
-+---+----------------------------------------------------------------------+
- 1  <h2>&#8230;</h2>                                                    
-                                                                         
- 2  <article>                                                          
-                                                                         
- 3  <h2>This heading will be selected</h2>                           
-                                                                         
- 4  <div>                                                              
-                                                                         
- 5  <h2>This heading will be selected</h2>                           
-                                                                         
- 6  </div>                                                             
-                                                                         
- 7  </article>                                                         
-                                                                         
- 8                                                                       
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
+ 1  <h2>&#8230;</h2>  
+ 2  <article>
+ 3  <h2>This heading will be selected</h2>
+ 4  <div> 
+ 5  <h2>This heading will be selected</h2>
+ 6  </div>
+ 7  </article> 
+ 8 
+```
 
 <h4>Direct Child Selector</h4>
 
@@ -1605,45 +1584,35 @@ article, thus selected.
 
 <b>CSS</b>
 
-+---+----------------------------------------------------------------------+
- 1  article > p {&#8230;}                                                  
-                                                                         
- 2                                                                       
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
+ 1  article > p {&#8230;}
+ 2 
+```
 
 <b>HTML</b>
 
-+---+----------------------------------------------------------------------+
- 1  <p>&#8230;</p>                                                      
-                                                                         
- 2  <article>                                                          
-                                                                         
- 3  <p>This paragraph will be selected</p>                           
-                                                                         
- 4  <div>                                                              
-                                                                         
- 5  <p>&#8230;</p>                                                      
-                                                                         
- 6  </div>                                                             
-                                                                         
- 7  </article>                                                         
-                                                                         
- 8                                                                       
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
+ 1  <p>&#8230;</p> 
+ 2  <article>
+ 3  <p>This paragraph will be selected</p>
+ 4  <div> 
+ 5  <p>&#8230;</p> 
+ 6  </div>
+ 7  </article> 
+ 8 
+```
 
 <h4>Child Selectors Overview</h4>
 
   -----------------------------------------------------------------------------------------------
-  <b>[Example]{.mark}</b>   <b>[Classification]{.mark}</b>   <b>[Explanation]{.mark}</b>
+  <b>[Example]{.mark}</b><b>[Classification]{.mark}</b><b>[Explanation]{.mark}</b>
   ---------------------- ----------------------------- ------------------------------------------
-  article h2             Descendant Selector           Selects an element that resides anywhere
-                                                       within an identified ancestor element
+  article h2 Descendant Selector  Selects an element that resides anywhere
+  within an identified ancestor element
 
-  article > p           Direct Child Selector         Selects an element that resides
-                                                       immediately inside an identified parent
-                                                       element
+  article > p  Direct Child SelectorSelects an element that resides
+  immediately inside an identified parent
+  element
   -----------------------------------------------------------------------------------------------
 
 <h4>Sibling Selectors</h4>
@@ -1674,41 +1643,26 @@ sibling heading.
 
 <b>CSS</b>
 
-+---+----------------------------------------------------------------------+
- 1  h2 &tilde; p {&#8230;}                                                       
-                                                                         
- 2                                                                       
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
+ 1  h2 ~ p {&#8230;}  
+ 2 
+```
 
 <b>HTML</b>
 
-+---+----------------------------------------------------------------------+
- 1  <p>&#8230;</p>                                                      
-                                                                         
- 2  <section>                                                          
-                                                                         
- 3  <p>&#8230;</p>                                                      
-                                                                         
- 4  <h2>&#8230;</h2>                                                    
-                                                                         
- 5  <p>This paragraph will be selected</p>                           
-                                                                         
- 6  <div>                                                              
-                                                                         
- 7  <p>&#8230;</p>                                                      
-                                                                         
- 8  </div>                                                             
-                                                                         
- 9  <p>This paragraph will be selected</p>                           
-                                                                         
- 1  </section>                                                         
- 0                                                                       
-                                                                         
- 1                                                                       
- 1                                                                       
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
+ 1  <p>&#8230;</p> 
+ 2  <section>
+ 3  <p>&#8230;</p> 
+ 4  <h2>&#8230;</h2>  
+ 5  <p>This paragraph will be selected</p>
+ 6  <div> 
+ 7  <p>&#8230;</p> 
+ 8  </div>
+ 9  <p>This paragraph will be selected</p>
+ 1  </section> 
+ 0 
+```
 
 <h4>Adjacent Sibling Selector</h4>
 
@@ -1733,242 +1687,117 @@ selected.
 
 <b>CSS</b>
 
-+---+----------------------------------------------------------------------+
- 1  h2 + p {&#8230;}                                                        
-                                                                         
- 2                                                                       
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
+ 1  h2 + p {&#8230;}
+ 2 
+```
 
 <b>HTML</b>
 
-+---+----------------------------------------------------------------------+
- 1  <p>&#8230;</p>                                                      
-                                                                         
- 2  <section>                                                          
-                                                                         
- 3  <p>&#8230;</p>                                                      
-                                                                         
- 4  <h2>&#8230;</h2>                                                    
-                                                                         
- 5  <p>This paragraph will be selected</p>                           
-                                                                         
- 6  <div>                                                              
-                                                                         
- 7  <p>&#8230;</p>                                                      
-                                                                         
- 8  </div>                                                             
-                                                                         
- 9  <p>&#8230;</p>                                                      
-                                                                         
- 1  </section>                                                         
- 0                                                                       
-                                                                         
- 1                                                                       
- 1                                                                       
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
+ 1  <p>&#8230;</p>
+ 2  <section>
+ 3  <p>&#8230;</p> 
+ 4  <h2>&#8230;</h2>  
+ 5  <p>This paragraph will be selected</p>
+ 6  <div> 
+ 7  <p>&#8230;</p> 
+ 8  </div>
+ 9  <p>&#8230;</p> 
+ 1  </section> 
+ 0 
+```
 
 <h4>Sibling Selectors Example</h4>
 
 <b>HTML</b>
 
-+---+-------------------------------------------------------------------+
- 1  <input type="checkbox" id="toggle">                         
-                                                                      
- 2  <label for="toggle">&#9776;</label>                         
-                                                                      
- 3  <nav>                                                           
-                                                                      
- 4  <ul>                                                            
-                                                                      
- 5  <li><a href="#">Home</a></li>                           
-                                                                      
- 6  <li><a href="#">About</a></li>                          
-                                                                      
- 7  <li><a href="#">Services</a></li>                       
-                                                                      
- 8  <li><a href="#">Contact</a></li>                        
-                                                                      
- 9  </ul>                                                           
-                                                                      
- 1  </nav>                                                          
- 0                                                                    
-                                                                      
- 1                                                                    
- 1                                                                    
-+===+===================================================================+
-+---+-------------------------------------------------------------------+
+```
+ 1  <input type="checkbox" id="toggle"> 
+ 2  <label for="toggle">&#9776;</label> 
+ 3  <nav> 
+ 4  <ul>  
+ 5  <li><a href="#">Home</a></li>
+ 6  <li><a href="#">About</a></li>  
+ 7  <li><a href="#">Services</a></li>  
+ 8  <li><a href="#">Contact</a></li>
+ 9  </ul> 
+ 1  </nav>
+ 0 
+```
 
 <b>CSS</b>
 
-+---+-------------------------------------------------------------------+
- 1  input {                                                           
-                                                                      
- 2  display: none;                                                    
-                                                                      
- 3  }                                                                 
-                                                                      
- 4  label,                                                            
-                                                                      
- 5  ul {                                                              
-                                                                      
- 6  border: 1px solid #cecfd5;                                        
-                                                                      
- 7  border-radius: 6px;                                               
-                                                                      
- 8  }                                                                 
-                                                                      
- 9  label {                                                           
-                                                                      
- 1  color: #0087cc;                                                   
- 0                                                                    
-    cursor: pointer;                                                  
- 1                                                                    
- 1  display: inline-block;                                            
-                                                                      
- 1  font-size: 18px;                                                  
- 2                                                                    
-    padding: 5px 9px;                                                 
- 1                                                                    
- 3  transition: all .15s ease;                                        
-                                                                      
- 1  }                                                                 
- 4                                                                    
-    label:hover {                                                     
- 1                                                                    
- 5  color: #ff7b29;                                                   
-                                                                      
- 1  }                                                                 
- 6                                                                    
-    input:checked + label {                                           
- 1                                                                    
- 7  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15);                  
-                                                                      
- 1  color: #9799a7;                                                   
- 8                                                                    
-    }                                                                 
- 1                                                                    
- 9  nav {                                                             
-                                                                      
- 2  max-height: 0;                                                    
- 0                                                                    
-    overflow: hidden;                                                 
- 2                                                                    
- 1  transition: all .15s ease;                                        
-                                                                      
- 2  }                                                                 
- 2                                                                    
-    input:checked &tilde; nav {                                            
- 2                                                                    
- 3  max-height: 500px;                                                
-                                                                      
- 2  }                                                                 
- 4                                                                    
-    ul {                                                              
- 2                                                                    
- 5  list-style: none;                                                 
-                                                                      
- 2  margin: 8px 0 0 0;                                                
- 6                                                                    
-    padding: 0;                                                       
- 2                                                                    
- 7  width: 100px;                                                     
-                                                                      
- 2  }                                                                 
- 8                                                                    
-    li {                                                              
- 2                                                                    
- 9  border-bottom: 1px solid #cecfd5;                                 
-                                                                      
- 3  }                                                                 
- 0                                                                    
-    li:last-child {                                                   
- 3                                                                    
- 1  border-bottom: 0;                                                 
-                                                                      
- 3  }                                                                 
- 2                                                                    
-    a {                                                               
- 3                                                                    
- 3  color: #0087cc;                                                   
-                                                                      
- 3  display: block;                                                   
- 4                                                                    
-    padding: 6px 12px;                                                
- 3                                                                    
- 5  text-decoration: none;                                            
-                                                                      
- 3  }                                                                 
- 6                                                                    
-    a:hover {                                                         
- 3                                                                    
- 7  color: #ff7b29;                                                   
-                                                                      
- 3  }                                                                 
- 8                                                                    
-                                                                      
- 3                                                                    
- 9                                                                    
-                                                                      
- 4                                                                    
- 0                                                                    
-                                                                      
- 4                                                                    
- 1                                                                    
-                                                                      
- 4                                                                    
- 2                                                                    
-                                                                      
- 4                                                                    
- 3                                                                    
-                                                                      
- 4                                                                    
- 4                                                                    
-                                                                      
- 4                                                                    
- 5                                                                    
-                                                                      
- 4                                                                    
- 6                                                                    
-                                                                      
- 4                                                                    
- 7                                                                    
-                                                                      
- 4                                                                    
- 8                                                                    
-                                                                      
- 4                                                                    
- 9                                                                    
-                                                                      
- 5                                                                    
- 0                                                                    
-                                                                      
- 5                                                                    
- 1                                                                    
-                                                                      
- 5                                                                    
- 2                                                                    
-                                                                      
- 5                                                                    
- 3                                                                    
-+===+===================================================================+
-+---+-------------------------------------------------------------------+
+```
+ 1  input { 
+ 2  display: none;  
+ 3  } 
+ 4  label,  
+ 5  ul { 
+ 6  border: 1px solid #cecfd5;  
+ 7  border-radius: 6px;
+ 8  } 
+ 9  label { 
+ 10  color: #0087cc; 
+ 11 cursor: pointer;
+ 12  display: inline-block;
+ 13  font-size: 18px; 
+ 14  padding: 5px 9px;  
+ 16  transition: all .15s ease;  
+ 1  } 
+    label:hover {
+ 5  color: #ff7b29; 
+ 1  } 
+    input:checked + label {  
+ 7  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15);
+ 1  color: #9799a7; 
+    }
+ 9  nav {
+ 2  max-height: 0;  
+   overflow: hidden;  
+ 1  transition: all .15s ease;  
+ 2  } 
+   input:checked &tilde; nav {
+ 3  max-height: 500px; 
+ 2  } 
+ ul { 
+ 5  list-style: none;  
+ 2  margin: 8px 0 0 0; 
+ padding: 0;  
+ 7  width: 100px;
+ 2  } 
+ li { 
+ 9  border-bottom: 1px solid #cecfd5; 
+ 3  } 
+ li:last-child { 
+ 1  border-bottom: 0;  
+ 3  } 
+ a {  
+ 3  color: #0087cc; 
+ 3  display: block; 
+ padding: 6px 12px; 
+ 5  text-decoration: none;
+ 3  } 
+   a:hover { 
+ 7  color: #ff7b29; 
+ 3  } 
+ 8 
+```
 
 <h4>Demo</h4>
 
 <h4>Sibling Selectors Overview</h4>
 
   ------------------------------------------------------------------------------------------------------
-  <b>[Example]{.mark}</b>   <b>[Classification]{.mark}</b>   <b>[Explanation]{.mark}</b>
+  <b>[Example]{.mark}</b><b>[Classification]{.mark}</b><b>[Explanation]{.mark}</b>
   ---------------------- ----------------------------- -------------------------------------------------
-  h2 &tilde; p                General Sibling Selector      Selects an element that follows anywhere after
-                                                       the prior element, in which both elements share
-                                                       the same parent
+  h2 &tilde; p General Sibling SelectorSelects an element that follows anywhere after
+  the prior element, in which both elements share
+  the same parent
 
-  h2 + p                 Adjacent Sibling Selector     Selects an element that follows directly after
-                                                       the prior element, in which both elements share
-                                                       the same parent
+  h2 + p  Adjacent Sibling Selector  Selects an element that follows directly after
+  the prior element, in which both elements share
+  the same parent
   ------------------------------------------------------------------------------------------------------
 
 <h4>Attribute Selectors</h4>
@@ -1993,21 +1822,17 @@ class, all depending on the level of specificity desired.
 
 <b>CSS</b>
 
-+---+----------------------------------------------------------------------+
- 1  a&lbrack;target&rbrack; {&#8230;}                                                   
-                                                                         
- 2                                                                       
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
+ 1  a&lbrack;target&rbrack; {&#8230;} 
+ 2 
+```
 
 <b>HTML</b>
 
-+---+----------------------------------------------------------------------+
- 1  <a href="#" target="&#0095;blank">&#8230;</a>                        
-                                                                         
- 2                                                                       
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
+ 1  <a href="#" target="&#0095;blank">&#8230;</a>
+ 2 
+```
 
 <h4>Attribute Equals Selector</h4>
 
@@ -2020,21 +1845,17 @@ inside of the quotations should be the desired matching attribute value.
 
 <b>CSS</b>
 
-+---+----------------------------------------------------------------------+
- 1  a&lbrack;href="http://google.com/"&rbrack; {&#8230;}                              
-                                                                         
- 2                                                                       
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
+ 1  a&lbrack;href="http://google.com/"&rbrack; {&#8230;} 
+ 2 
+```
 
 <b>HTML</b>
 
-+---+----------------------------------------------------------------------+
- 1  <a href="http://google.com/">&#8230;</a>                          
-                                                                         
- 2                                                                       
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
+ 1  <a href="http://google.com/">&#8230;</a>  
+ 2 
+```
 
 <h4>Attribute Contains Selector</h4>
 
@@ -2047,21 +1868,17 @@ attribute value.
 
 <b>CSS</b>
 
-+---+----------------------------------------------------------------------+
- 1  a&lbrack;href&ast;="login"&rbrack; {&#8230;}                                         
-                                                                         
- 2                                                                       
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
+ 1  a&lbrack;href&ast;="login"&rbrack; {&#8230;}
+ 2 
+```
 
 <b>HTML</b>
 
-+---+----------------------------------------------------------------------+
- 1  <a href="/login.php">&#8230;</a>                                  
-                                                                         
- 2                                                                       
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
+ 1  <a href="/login.php">&#8230;</a>  
+ 2 
+```
 
 <h4>Attribute Begins With Selector</h4>
 
@@ -2074,21 +1891,17 @@ stated value.
 
 <b>CSS</b>
 
-+---+----------------------------------------------------------------------+
- 1  a&lbrack;href&Hat;="https://"&rbrack; {&#8230;}                                      
-                                                                         
- 2                                                                       
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
+ 1  a&lbrack;href&Hat;="https://"&rbrack; {&#8230;}
+ 2 
+```
 
 <b>HTML</b>
 
-+---+----------------------------------------------------------------------+
- 1  <a href="https://chase.com/">&#8230;</a>                          
-                                                                         
- 2                                                                       
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
+ 1  <a href="https://chase.com/">&#8230;</a>  
+ 2 
+```
 
 <h4>Attribute Ends With Selector</h4>
 
@@ -2101,21 +1914,17 @@ stated value.
 
 <b>CSS</b>
 
-+---+----------------------------------------------------------------------+
- 1  a&lbrack;href&#36;=".pdf"&rbrack; {&#8230;}                                          
-                                                                         
- 2                                                                       
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
+ 1  a&lbrack;href&#36;=".pdf"&rbrack; {&#8230;} 
+ 2 
+```
 
 <b>HTML</b>
 
-+---+----------------------------------------------------------------------+
- 1  <a href="/docs/menu.pdf">&#8230;</a>                              
-                                                                         
- 2                                                                       
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
+ 1  <a href="/docs/menu.pdf">&#8230;</a> 
+ 2 
+```
 
 <h4>Attribute Spaced Selector</h4>
 
@@ -2128,21 +1937,17 @@ stated value.
 
 <b>CSS</b>
 
-+---+----------------------------------------------------------------------+
- 1  a&lbrack;rel&tilde;="tag"&rbrack; {&#8230;}                                            
-                                                                         
- 2                                                                       
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
+ 1  a&lbrack;rel&tilde;="tag"&rbrack; {&#8230;}
+ 2 
+```
 
 <b>HTML</b>
 
-+---+----------------------------------------------------------------------+
- 1  <a href="#" rel="tag nofollow">&#8230;</a>                      
-                                                                         
- 2                                                                       
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
+ 1  <a href="#" rel="tag nofollow">&#8230;</a> 
+ 2 
+```
 
 <h4>Attribute Hyphenated Selector</h4>
 
@@ -2155,168 +1960,103 @@ stated value.
 
 **CSS**
 
-+---+----------------------------------------------------------------------+
- 1  a&lbrack;lang&#0124;="en"&rbrack; {&#8230;}                                            
-                                                                         
- 2                                                                       
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
+ 1  a&lbrack;lang&#0124;="en"&rbrack; {&#8230;}
+ 2 
+```
 
 **HTML**
 
-+---+----------------------------------------------------------------------+
- 1  <a href="#" lang="en-US">&#8230;</a>                            
-                                                                         
- 2                                                                       
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
+ 1  <a href="#" lang="en-US">&#8230;</a> 
+ 2 
+```
 
 <h4>Attribute Selectors Example</h4>
 
 **HTML**
 
-+---+-------------------------------------------------------------------+
- 1  <ul>                                                            
-                                                                      
- 2  <li><a href="#.pdf">PDF Document</a></li>               
-                                                                      
- 3  <li><a href="#.doc">Word Document</a></li>              
-                                                                      
- 4  <li><a href="#.jpg">Image File</a></li>                 
-                                                                      
- 5  <li><a href="#.mp3">Audio File</a></li>                 
-                                                                      
- 6  <li><a href="#.mp4">Video File</a></li>                 
-                                                                      
- 7  </ul>                                                           
-                                                                      
- 8                                                                    
-+===+===================================================================+
-+---+-------------------------------------------------------------------+
+```
+ 1  <ul>  
+ 2  <li><a href="#.pdf">PDF Document</a></li>
+ 3  <li><a href="#.doc">Word Document</a></li>  
+ 4  <li><a href="#.jpg">Image File</a></li>  
+ 5  <li><a href="#.mp3">Audio File</a></li>  
+ 6  <li><a href="#.mp4">Video File</a></li>  
+ 7  </ul>
+ 8 
+```
 
 **CSS**
 
-+---+-------------------------------------------------------------------+
- 1  ul {                                                              
-                                                                      
- 2  list-style: none;                                                 
-                                                                      
- 3  margin: 0;                                                        
-                                                                      
- 4  padding: 0;                                                       
-                                                                      
- 5  }                                                                 
-                                                                      
- 6  a {                                                               
-                                                                      
- 7  background-position: 0 50%;                                       
-                                                                      
- 8  background-repeat: no-repeat;                                     
-                                                                      
- 9  color: #0087cc;                                                   
-                                                                      
- 1  padding-left: 22px;                                               
- 0                                                                    
-    text-decoration: none;                                            
- 1                                                                    
- 1  }                                                                 
-                                                                      
- 1  a:hover {                                                         
- 2                                                                    
-    color: #ff7b29;                                                   
- 1                                                                    
- 3  }                                                                 
-                                                                      
- 1  a&lbrack;href&#36;=".pdf"&rbrack; {                                            
- 4                                                                    
-    background-image: url("images/pdf.png");                        
- 1                                                                    
- 5  }                                                                 
-                                                                      
- 1  a&lbrack;href&#36;=".doc"&rbrack; {                                            
- 6                                                                    
-    background-image: url("images/doc.png");                        
- 1                                                                    
- 7  }                                                                 
-                                                                      
- 1  a&lbrack;href&#36;=".jpg"&rbrack; {                                            
- 8                                                                    
-    background-image: url("images/image.png");                      
- 1                                                                    
- 9  }                                                                 
-                                                                      
- 2  a&lbrack;href&#36;=".mp3"&rbrack; {                                            
- 0                                                                    
-    background-image: url("images/audio.png");                      
- 2                                                                    
- 1  }                                                                 
-                                                                      
- 2  a&lbrack;href&#36;=".mp4"&rbrack; {                                            
- 2                                                                    
-    background-image: url("images/video.png");                      
- 2                                                                    
- 3  }                                                                 
-                                                                      
- 2                                                                    
- 4                                                                    
-                                                                      
- 2                                                                    
- 5                                                                    
-                                                                      
- 2                                                                    
- 6                                                                    
-                                                                      
- 2                                                                    
- 7                                                                    
-                                                                      
- 2                                                                    
- 8                                                                    
-                                                                      
- 2                                                                    
- 9                                                                    
-                                                                      
- 3                                                                    
- 0                                                                    
-                                                                      
- 3                                                                    
- 1                                                                    
-+===+===================================================================+
-+---+-------------------------------------------------------------------+
+```
+ 1  ul { 
+ 2  list-style: none;  
+ 3  margin: 0;
+ 4  padding: 0;  
+ 5  } 
+ 6  a {  
+ 7  background-position: 0 50%; 
+ 8  background-repeat: no-repeat;  
+ 9  color: #0087cc; 
+ 10  padding-left: 22px;
+ 11 text-decoration: none;
+ 12  } 
+ 13  a:hover { 
+ 14 color: #ff7b29; 
+ 15  } 
+ 16  a&lbrack;href&#36;=".pdf"&rbrack; {
+ 17 background-image: url("images/pdf.png");
+ 18  } 
+ 19  a&lbrack;href&#36;=".doc"&rbrack; {
+ 20 background-image: url("images/doc.png");
+ 21  } 
+ 22  a&lbrack;href&#36;=".jpg"&rbrack; {
+ 23  background-image: url("images/image.png"); 
+ 24  } 
+ 25  a&lbrack;href&#36;=".mp3"&rbrack; {
+ 26 background-image: url("images/audio.png"); 
+ 27  } 
+ 28  a&lbrack;href&#36;=".mp4"&rbrack; {
+ 29  background-image: url("images/video.png"); 
+ 30  } 
+ 31 
+```
 
 <h4>Demo</h4>
 
 <h4>Attribute Selectors Overview</h4>
 
   ----------------------------------------------------------------------------------------------------
-  **[Example]{.mark}**               **[Classification]{.mark}**   **[Explanation]{.mark}**
+  **[Example]{.mark}****[Classification]{.mark}****[Explanation]{.mark}**
   ---------------------------------- ----------------------------- -----------------------------------
-  a&lbrack;target&rbrack;                        Attribute Present Selector    Selects an element if the given
-                                                                   attribute is present
+  a&lbrack;target&rbrack;Attribute Present Selector Selects an element if the given
+attribute is present
 
-  a&lbrack;href="http://google.com/"&rbrack;   Attribute Equals Selector     Selects an element if the given
-                                                                   attribute value exactly matches the
-                                                                   value stated
+  a&lbrack;href="http://google.com/"&rbrack;Attribute Equals Selector  Selects an element if the given
+attribute value exactly matches the
+value stated
 
-  a&lbrack;href&ast;="login"&rbrack;              Attribute Contains Selector   Selects an element if the given
-                                                                   attribute value contains at least
-                                                                   once instance of the value stated
+  a&lbrack;href&ast;="login"&rbrack;  Attribute Contains SelectorSelects an element if the given
+attribute value contains at least
+once instance of the value stated
 
-  a&lbrack;href&Hat;="https://"&rbrack;           Attribute Begins With         Selects an element if the given
-                                     Selector                      attribute value begins with the
-                                                                   value stated
+  a&lbrack;href&Hat;="https://"&rbrack;  Attribute Begins WithSelects an element if the given
+  Selector attribute value begins with the
+value stated
 
-  a&lbrack;href&#36;=".pdf"&rbrack;               Attribute Ends With Selector  Selects an element if the given
-                                                                   attribute value ends with the value
-                                                                   stated
+  a&lbrack;href&#36;=".pdf"&rbrack;Attribute Ends With Selector  Selects an element if the given
+attribute value ends with the value
+stated
 
-  a&lbrack;rel&tilde;="tag"&rbrack;                 Attribute Spaced Selector     Selects an element if the given
-                                                                   attribute value is
-                                                                   whitespace-separated with one word
-                                                                   being exactly as stated
+  a&lbrack;rel&tilde;="tag"&rbrack;  Attribute Spaced Selector  Selects an element if the given
+attribute value is
+whitespace-separated with one word
+being exactly as stated
 
-  a&lbrack;lang&#0124;="en"&rbrack;                 Attribute Hyphenated Selector Selects an element if the given
-                                                                   attribute value is hyphen-separated
-                                                                   and begins with the word stated
+  a&lbrack;lang&#0124;="en"&rbrack;  Attribute Hyphenated Selector Selects an element if the given
+attribute value is hyphen-separated
+and begins with the word stated
   ----------------------------------------------------------------------------------------------------
 
 <h4>Pseudo-classes</h4>
@@ -2339,9 +2079,9 @@ styles links that a user has already visited based on their browsing
 history.
 
 ```
- 1  a:link {&#8230;}                                                        
- 2  a:visited {&#8230;}                                                     
- 3                                                                       
+ 1  a:link {&#8230;}
+ 2  a:visited {&#8230;}
+ 3 
 ```
 
 <h4>User Action Pseudo-classes</h4>
@@ -2357,10 +2097,10 @@ made an element the focus point of the page, often by using the keyboard
 to tab from one element to another.
 
 ```
- 1  a:hover {&#8230;}                                                       
- 2  a:active {&#8230;}                                                      
- 3  a:focus {&#8230;}                                                       
- 4                                                                       
+ 1  a:hover {&#8230;}  
+ 2  a:active {&#8230;} 
+ 3  a:focus {&#8230;}  
+ 4 
 ```
 
 <h4>User Interface State Pseudo-classes</h4>
@@ -2378,9 +2118,9 @@ the input is not available for interaction, however those styles may be
 adjusted as wished with the :disabled pseudo-class.
 
 ```
- 1  input:enabled {&#8230;}                                                 
- 2  input:disabled {&#8230;}                                                
- 3                                                                       
+ 1  input:enabled {&#8230;}  
+ 2  input:disabled {&#8230;} 
+ 3 
 ```
 
 The last two user interface element state pseudo-classes
@@ -2392,8 +2132,8 @@ indeterminate state, from which the :indeterminate pseudo-class can be
 used to target these elements.
 
 ```
- 1  input:checked {&#8230;}                                                 
- 2  input:indeterminate {&#8230;}                                           
+ 1  input:checked {&#8230;}  
+ 2  input:indeterminate {&#8230;}  
 ```
 
 <h4>Structural & Position Pseudo-classes</h4>
@@ -2432,27 +2172,27 @@ list item.
 **CSS**
 
 ```
- 1  li:first-child {&#8230;}                                                
- 2  li:last-child {&#8230;}                                                 
- 3  div:only-child {&#8230;}                                                
- 4                                                                       
+ 1  li:first-child {&#8230;} 
+ 2  li:last-child {&#8230;}  
+ 3  div:only-child {&#8230;} 
+ 4 
 ```
 
 **HTML**
 
 ```
- 1  <ul>                                                               
- 2  <li>This list item will be selected</li>                         
- 3  <li>                                                               
- 4  <div>This div will be selected</div>                             
- 5  </li>                                                              
- 6  <li>                                                               
- 7  <div>&#8230;</div>                                                  
- 8  <div>&#8230;</div>                                                  
- 9  </li>                                                              
- 1  <li>This list item will be selected</li>                         
-    </ul>                                                              
- 2                                                                       
+ 1  <ul>  
+ 2  <li>This list item will be selected</li> 
+ 3  <li>  
+ 4  <div>This div will be selected</div>
+ 5  </li> 
+ 6  <li>  
+ 7  <div>&#8230;</div>
+ 8  <div>&#8230;</div>
+ 9  </li> 
+ 1  <li>This list item will be selected</li> 
+ </ul> 
+ 2 
 ```
 
 <h3>:first-of-type, :last-of-type, &amp; :only-of-type</h3>
@@ -2482,24 +2222,24 @@ the only image to appear within the article, thus also selected.
 **CSS**
 
 ```
- 1  p:first-of-type {&#8230;}                                               
- 2  p:last-of-type {&#8230;}                                                
- 3  img:only-of-type {&#8230;}                                              
- 4                                                                       
+ 1  p:first-of-type {&#8230;}
+ 2  p:last-of-type {&#8230;} 
+ 3  img:only-of-type {&#8230;}  
+ 4 
 ```
 
 **HTML**
 
 ```
- 1  <article>                                                          
- 2  <h1>&#8230;</h1>                                                    
- 3  <p>This paragraph will be selected</p>                           
- 4  <p>&#8230;</p>                                                      
- 5  <img src="#"><!&#45;&#45; This image will be selected &#45;&#45;>            
- 6  <p>This paragraph will be selected</p>                           
- 7  <h6>&#8230;</h6>                                                    
- 8  </article>                                                         
- 9                                                                       
+ 1  <article>
+ 2  <h1>&#8230;</h1>  
+ 3  <p>This paragraph will be selected</p>
+ 4  <p>&#8230;</p> 
+ 5  <img src="#"><!&#45;&#45; This image will be selected &#45;&#45;>
+ 6  <p>This paragraph will be selected</p>
+ 7  <h6>&#8230;</h6>  
+ 8  </article> 
+ 9 
 ```
 
 Lastly there are a few structural and position based pseudo-classes that
@@ -2595,20 +2335,20 @@ third list item, thus lines 4 and 7 are selected.
 **CSS**
 
 ```
- 1  li:nth-child(3n) {&#8230;}                                              
+ 1  li:nth-child(3n) {&#8230;}  
 ```
 
 **HTML**
 
 ```
- 1  <ul>                                                               
- 2  <li>&#8230;</li>                                                    
- 3  <li>&#8230;</li>                                                    
- 4  <li>This list item will be selected</li>                         
- 5  <li>&#8230;</li>                                                    
- 6  <li>&#8230;</li>                                                    
- 7  <li>This list item will be selected</li>                         
- 8  </ul>                                                              
+ 1  <ul>  
+ 2  <li>&#8230;</li>  
+ 3  <li>&#8230;</li>  
+ 4  <li>This list item will be selected</li> 
+ 5  <li>&#8230;</li>  
+ 6  <li>&#8230;</li>  
+ 7  <li>This list item will be selected</li> 
+ 8  </ul> 
 ```
 
 Using a different expression within the :nth-child(n) pseudo-class will
@@ -2619,21 +2359,21 @@ and then onward. As a result, the list items lines 4 and 6 are selected.
 **CSS**
 
 ```
- 1  li:nth-child(2n+3) {&#8230;}                                            
+ 1  li:nth-child(2n+3) {&#8230;}
 ```
 
 **HTML**
 
 ```
- 1  <ul>                                                               
- 2  <li>&#8230;</li>                                                    
- 3  <li>&#8230;</li>                                                    
- 4  <li>This list item will be selected</li>                         
- 5  <li>&#8230;</li>                                                    
- 6  <li>This list item will be selected</li>                         
- 7  <li>&#8230;</li>                                                    
- 8  </ul>                                                              
- 9                                                                       
+ 1  <ul>  
+ 2  <li>&#8230;</li>  
+ 3  <li>&#8230;</li>  
+ 4  <li>This list item will be selected</li> 
+ 5  <li>&#8230;</li>  
+ 6  <li>This list item will be selected</li> 
+ 7  <li>&#8230;</li>  
+ 8  </ul> 
+ 9 
 ```
 
 Changing the expression again, this time with a negative value, yields
@@ -2644,22 +2384,22 @@ lines 2 through 5 are selected.
 **CSS**
 
 ```
- 1  li:nth-child(-n+4) {&#8230;}                                            
+ 1  li:nth-child(-n+4) {&#8230;}
  2 
 ```
 
 **HTML**
 
 ```
- 1  <ul>                                                               
- 2  <li>This list item will be selected</li>                         
- 3  <li>This list item will be selected</li>                         
- 4  <li>This list item will be selected</li>                         
- 5  <li>This list item will be selected</li>                         
- 6  <li>&#8230;</li>                                                    
- 7  <li>&#8230;</li>                                                    
- 8  </ul>                                                              
- 9                                                                       
+ 1  <ul>  
+ 2  <li>This list item will be selected</li> 
+ 3  <li>This list item will be selected</li> 
+ 4  <li>This list item will be selected</li> 
+ 5  <li>This list item will be selected</li> 
+ 6  <li>&#8230;</li>  
+ 7  <li>&#8230;</li>  
+ 8  </ul> 
+ 9 
 ```
 
 Adding a negative integer before the n argument changes the selection
@@ -2670,20 +2410,20 @@ item, thus the list items on lines 2, 4, and 6 are selected.
 **CSS**
 
 ```
- 1  li:nth-child(-2n+5) {&#8230;}                                           
+ 1  li:nth-child(-2n+5) {&#8230;}  
 ```
 
 **HTML**
 
 ```
- 1  <ul>                                                               
- 2  <li>This list item will be selected</li>                         
- 3  <li>&#8230;</li>                                                    
- 4  <li>This list item will be selected</li>                         
- 5  <li>&#8230;</li>                                                    
- 6  <li>This list item will be selected</li>                         
- 7  <li>&#8230;</li>                                                    
- 8  </ul>                                                              
+ 1  <ul>  
+ 2  <li>This list item will be selected</li> 
+ 3  <li>&#8230;</li>  
+ 4  <li>This list item will be selected</li> 
+ 5  <li>&#8230;</li>  
+ 6  <li>This list item will be selected</li> 
+ 7  <li>&#8230;</li>  
+ 8  </ul> 
 ```
 
 Changing from the :nth-child(n) pseudo-class to
@@ -2698,21 +2438,21 @@ are selected.
 <h4>CSS</h4>
 
 ```
- 1  li:nth-last-child(3n+2) {&#8230;}                                       
-                                                                         
+ 1  li:nth-last-child(3n+2) {&#8230;} 
+
 ```
 
 <h4>HTML</h4>
 
 ```
- 1  <ul>                                                               
- 2  <li>&#8230;</li>                                                    
- 3  <li>This list item will be selected</li>                         
- 4  <li>&#8230;</li>                                                    
- 5  <li>&#8230;</li>                                                    
- 6  <li>This list item will be selected</li>                         
- 7  <li>&#8230;</li>                                                    
- 8  </ul>                                                              
+ 1  <ul>  
+ 2  <li>&#8230;</li>  
+ 3  <li>This list item will be selected</li> 
+ 4  <li>&#8230;</li>  
+ 5  <li>&#8230;</li>  
+ 6  <li>This list item will be selected</li> 
+ 7  <li>&#8230;</li>  
+ 8  </ul> 
 ```
 
 <h4>:nth-of-type(n) & :nth-last-of-type(n)
@@ -2741,22 +2481,22 @@ the parent. Here the paragraphs on lines 5 and 9 are selected.
 <h4>CSS</h4>
 
 ```
- 1  p:nth-of-type(3n) {&#8230;}                                             
+ 1  p:nth-of-type(3n) {&#8230;} 
 ```
 
 <h4>HTML</h4>
 
 ```
- 1  <article>                                                          
- 2  <h1>&#8230;</h1>                                                    
- 3  <p>&#8230;</p>                                                      
- 4  <p>&#8230;</p>                                                      
- 5  <p>This paragraph will be selected</p>                           
- 6  <h2>&#8230;</h2>                                                    
- 7  <p>&#8230;</p>                                                      
- 8  <p>&#8230;</p>                                                      
- 9  <p>This paragraph will be selected</p>                           
- 10  </article>                                                         
+ 1  <article>
+ 2  <h1>&#8230;</h1>  
+ 3  <p>&#8230;</p> 
+ 4  <p>&#8230;</p> 
+ 5  <p>This paragraph will be selected</p>
+ 6  <h2>&#8230;</h2>  
+ 7  <p>&#8230;</p> 
+ 8  <p>&#8230;</p> 
+ 9  <p>This paragraph will be selected</p>
+ 10  </article> 
  11 
 ```
 
@@ -2782,17 +2522,17 @@ paragraph. Here the paragraphs on lines 4, 7, and 9 are selected.
 <h4>HTML</h4>
 
 ```
- 1  <article>                                                          
- 2  <h1>&#8230;</h1>                                                    
- 3  <p>&#8230;</p>                                                      
- 4  <p>This paragraph will be selected</p>                           
- 5  <p>&#8230;</p>                                                      
- 6  <h2>&#8230;</h2>                                                    
- 7  <p>This paragraph will be selected</p>                           
- 8  <p>&#8230;</p>                                                      
- 9  <p>This paragraph will be selected</p>                           
- 10 </article>                                                         
- 11                                                                       
+ 1  <article>
+ 2  <h1>&#8230;</h1>  
+ 3  <p>&#8230;</p> 
+ 4  <p>This paragraph will be selected</p>
+ 5  <p>&#8230;</p> 
+ 6  <h2>&#8230;</h2>  
+ 7  <p>This paragraph will be selected</p>
+ 8  <p>&#8230;</p> 
+ 9  <p>This paragraph will be selected</p>
+ 10 </article> 
+ 11 
 ```
 
 <h4>Target Pseudo-class</h4>
@@ -2848,19 +2588,19 @@ selected.
 <h4>CSS</h4>
 
 ```
- 1  div:empty {&#8230;}                                                     
- 2                                                                       
+ 1  div:empty {&#8230;}
+ 2 
 ```
 
 <h4>HTML</h4>
 
 ```
- 1  <div>Hello</div>                                                 
- 2  <div><!&#45;&#45; Coming soon &#45;&#45;></div><!&#45;&#45; This div will be       
-    selected &#45;&#45;>                                                       
-    <div></div><!&#45;&#45; This div will be selected &#45;&#45;>                
-    <div> </div>                                                     
-    <div><strong></strong></div>                                 
+ 1  <div>Hello</div>  
+ 2  <div><!&#45;&#45; Coming soon &#45;&#45;></div><!&#45;&#45; This div will be 
+ selected &#45;&#45;>  
+ <div></div><!&#45;&#45; This div will be selected &#45;&#45;> 
+ <div> </div>
+ <div><strong></strong></div> 
  6  
 ```
 
@@ -2894,12 +2634,12 @@ pseudo-classes.
 <h4>HTML</h4>
 
 ```
- 1  <div>This div will be selected</div>                             
- 2  <div class="awesome">&#8230;</div>                                
- 3  <section>This section will be selected</section>                 
- 4  <section class="awesome">This section will be                    
-    selected</section>                                                 
- 5                                                                       
+ 1  <div>This div will be selected</div>
+ 2  <div class="awesome">&#8230;</div>
+ 3  <section>This section will be selected</section>  
+ 4  <section class="awesome">This section will be  
+ selected</section>  
+ 5 
 ```
 
 <h4>Pseudo-classes Example</h4>
@@ -2917,22 +2657,22 @@ pseudo-classes.
  8  <th>Weight</th>
  9  </tr>
  10  </thead>
- 11   <tbody>
+ 11<tbody>
  12  <tr>
  13  <td>8</td>
- 14   <td>Marco Belinelli</td>
+ 14<td>Marco Belinelli</td>
  15  <td>G</td>
  16  <td>6-5</td>
- 17   <td>195</td>
+ 17<td>195</td>
  18  </tr>
  19  <tr>
- 20   <td>5</td>
+ 20<td>5</td>
  21  <td>Carlos Boozer</td>
  22  <td>F</td>
- 23   <td>6-9</td>
+ 23<td>6-9</td>
  24  <td>266</td>
  25  </tr>
- 26   &#8230;
+ 26&#8230;
  27  </tbody>
  28  </table>
  29  
@@ -2943,127 +2683,127 @@ pseudo-classes.
 
 ```
  1  table {
- 2  border-collapse: separate;                                        
- 3  border-spacing: 0;                                                
- 4  width: 100%;                                                      
+ 2  border-collapse: separate;  
+ 3  border-spacing: 0; 
+ 4  width: 100%; 
  5  }
  6  th,
  7  td {
- 8  padding: 6px 15px;                                                
+ 8  padding: 6px 15px; 
  9  }
  10  th {
- 11   background: #42444e;                                              
- 12  color: #fff;                                                      
- 13  text-align: left;                                                 
- 14   }
- 15  tr:first-child th:first-child {                                   
- 16  border-top-left-radius: 6px;                                      
- 17   }
- 18  tr:first-child th:last-child {                                    
- 19  border-top-right-radius: 6px;                                     
- 20   }
+ 11background: #42444e;  
+ 12  color: #fff; 
+ 13  text-align: left;  
+ 14}
+ 15  tr:first-child th:first-child {
+ 16  border-top-left-radius: 6px;
+ 17}
+ 18  tr:first-child th:last-child { 
+ 19  border-top-right-radius: 6px;  
+ 20}
  21  td {
- 22  border-right: 1px solid #c6c9cc;                                  
- 23   border-bottom: 1px solid #c6c9cc;                                 
+ 22  border-right: 1px solid #c6c9cc;  
+ 23border-bottom: 1px solid #c6c9cc; 
  24  }
- 25  td:first-child {                                                  
- 26   border-left: 1px solid #c6c9cc;                                   
+ 25  td:first-child {
+ 26border-left: 1px solid #c6c9cc;
  27  }
- 28  tr:nth-child(even) td {                                           
- 29   background: #eaeaed;                                              
+ 28  tr:nth-child(even) td {  
+ 29background: #eaeaed;  
  30  }
- 31  tr:last-child td:first-child {                                    
- 32   border-bottom-left-radius: 6px;                                   
+ 31  tr:last-child td:first-child { 
+ 32border-bottom-left-radius: 6px;
  33  }
  34  tr:last-child td:last-child {
- 35   border-bottom-right-radius: 6px;
+ 35border-bottom-right-radius: 6px;
  36  }
  37  
 ```
-                                                                      
+
 
 <h4>Demo</h4>
 
 <h4>Pseudo-classes Overview</h4>
 
   --------------------------------------------------------------------------------------------------
-  **[Example]{.mark}**       **[Classification]{.mark}**   **[Explanation]{.mark}**
+  **[Example]{.mark}** **[Classification]{.mark}****[Explanation]{.mark}**
   -------------------------- ----------------------------- -----------------------------------------
-  a:link                     Link Pseudo-class             Selects a link that has not been visited
-                                                           by a user
+  a:linkLink Pseudo-class Selects a link that has not been visited
+ by a user
 
-  a:visited                  Link Pseudo-class             Selects a link that has been visited by a
-                                                           user
+  a:visitedLink Pseudo-class Selects a link that has been visited by a
+ user
 
-  a:hover                    Action Pseudo-class           Selects an element when a user has
-                                                           hovered their cursor over it
+  a:hover  Action Pseudo-class  Selects an element when a user has
+ hovered their cursor over it
 
-  a:active                   Action Pseudo-class           Selects an element when a user has
-                                                           engaged it
+  a:active Action Pseudo-class  Selects an element when a user has
+ engaged it
 
-  a:focus                    Action Pseudo-class           Selects an element when a user has made
-                                                           it their focus point
+  a:focus  Action Pseudo-class  Selects an element when a user has made
+ it their focus point
 
-  input:enabled              State Pseudo-class            Selects an element in the default enabled
-                                                           state
+  input:enabled  State Pseudo-classSelects an element in the default enabled
+ state
 
-  input:disabled             State Pseudo-class            Selects an element in the disabled state,
-                                                           by way of the disabled attribute
+  input:disabled State Pseudo-classSelects an element in the disabled state,
+ by way of the disabled attribute
 
-  input:checked              State Pseudo-class            Selects a checkbox or radio button that
-                                                           has been checked
+  input:checked  State Pseudo-classSelects a checkbox or radio button that
+ has been checked
 
-  input:indeterminate        State Pseudo-class            Selects a checkbox or radio button that
-                                                           neither been checked or unchecked,
-                                                           leaving it in an indeterminate state
+  input:indeterminate  State Pseudo-classSelects a checkbox or radio button that
+ neither been checked or unchecked,
+ leaving it in an indeterminate state
 
-  li:first-child             Structural Pseudo-class       Selects an element that is the first
-                                                           within a parent
+  li:first-child Structural Pseudo-class Selects an element that is the first
+ within a parent
 
-  li:last-child              Structural Pseudo-class       Selects an element that is the last
-                                                           within a parent
+  li:last-child  Structural Pseudo-class Selects an element that is the last
+ within a parent
 
-  div:only-child             Structural Pseudo-class       Selects an element that is the only
-                                                           element within a parent
+  div:only-child Structural Pseudo-class Selects an element that is the only
+ element within a parent
 
-  p:first-of-type            Structural Pseudo-class       Selects an element that is the first of
-                                                           its type within a parent
+  p:first-of-typeStructural Pseudo-class Selects an element that is the first of
+ its type within a parent
 
-  p:last-of-type             Structural Pseudo-class       Selects an element that is the last of
-                                                           its type within a parent
+  p:last-of-type Structural Pseudo-class Selects an element that is the last of
+ its type within a parent
 
-  img:only-of-type           Structural Pseudo-class       Selects an element that is the only of
-                                                           its type within a parent
+  img:only-of-type  Structural Pseudo-class Selects an element that is the only of
+ its type within a parent
 
-  li:nth-child(2n+3)         Structural Pseudo-class       Selects an element that matches the given
-                                                           number or expression, counting all
-                                                           elements from the beginning of the
-                                                           document tree
+  li:nth-child(2n+3)Structural Pseudo-class Selects an element that matches the given
+ number or expression, counting all
+ elements from the beginning of the
+ document tree
 
-  li:nth-last-child(3n+2)    Structural Pseudo-class       Selects an element that matches the given
-                                                           number or expression, counting all
-                                                           elements from the end of the document
-                                                           tree
+  li:nth-last-child(3n+2) Structural Pseudo-class Selects an element that matches the given
+ number or expression, counting all
+ elements from the end of the document
+ tree
 
-  p:nth-of-type(3n)          Structural Pseudo-class       Selects an element that matches the given
-                                                           number or expression, counting only
-                                                           elements of its type from the beginning
-                                                           of the document tree
+  p:nth-of-type(3n) Structural Pseudo-class Selects an element that matches the given
+ number or expression, counting only
+ elements of its type from the beginning
+ of the document tree
 
-  p:nth-last-of-type(2n+1)   Structural Pseudo-class       Selects an element that matches the given
-                                                           number or expression, counting only
-                                                           elements of its type from the end of the
-                                                           document tree
+  p:nth-last-of-type(2n+1)Structural Pseudo-class Selects an element that matches the given
+ number or expression, counting only
+ elements of its type from the end of the
+ document tree
 
-  section:target             Target Pseudo-class           Selects an element whose ID attribute
-                                                           value matches that of the URI fragment
-                                                           identifier
+  section:target Target Pseudo-class  Selects an element whose ID attribute
+ value matches that of the URI fragment
+ identifier
 
-  div:empty                  Empty Pseudo-class            Selects an element that does not contain
-                                                           any children or text nodes
+  div:emptyEmpty Pseudo-classSelects an element that does not contain
+ any children or text nodes
 
-  div:not(.awesome)          Negation Pseudo-class         Selects an element not represented by the
-                                                           stated argument
+  div:not(.awesome) Negation Pseudo-classSelects an element not represented by the
+ stated argument
   --------------------------------------------------------------------------------------------------
 
 Pseudo-elements
@@ -3091,20 +2831,20 @@ pseudo-elements respectively.
 <h4>CSS</h4>
 
 ```
- 1  .alpha:first-letter,                                                 
- 2  .bravo:first-line {                                                  
- 3  color: #ff7b29;                                                      
- 4  font-size: 18px;                                                     
- 5  }                                                                    
- 6                                                                       
+ 1  .alpha:first-letter,  
+ 2  .bravo:first-line {
+ 3  color: #ff7b29; 
+ 4  font-size: 18px;
+ 5  } 
+ 6 
 ```
 
 <h4>HTML</h4>
 
 ```
- 1  <p class="alpha">Lorem ipsum dolor&#8230;</p>                     
- 2  <p class="bravo">Integer eget enim&#8230;</p>                     
- 3                                                                       
+ 1  <p class="alpha">Lorem ipsum dolor&#8230;</p>
+ 2  <p class="bravo">Integer eget enim&#8230;</p>
+ 3 
 ```
 
 <h4>Textual Pseudo-elements Demo</h4>
@@ -3131,21 +2871,21 @@ necessary should a browser not support these pseudo-elements.
 <h4>CSS</h4>
 
 ```
- 1  a:after {                                                            
- 2  color: #9799a7;                                                      
- 3  content: " (" attr(href) ")";                                    
- 4  font-size: 11px;                                                     
- 5  }                                                                    
- 6                                                                       
+ 1  a:after {  
+ 2  color: #9799a7; 
+ 3  content: " (" attr(href) ")"; 
+ 4  font-size: 11px;
+ 5  } 
+ 6 
 ```
 
 <h4>HTML</h4>
 
 ```
- 1  <a href="http://google.com/">Search the Web</a>                
- 2  <a href="http://learn.shayhowe.com/">Learn How to Build          
-    Websites</a>                                                       
- 3                                                                       
+ 1  <a href="http://google.com/">Search the Web</a> 
+ 2  <a href="http://learn.shayhowe.com/">Learn How to Build 
+ Websites</a>  
+ 3 
 ```
 
 <h4>Generated Content Pseudo-elements Demo</h4>
@@ -3175,13 +2915,13 @@ the ::-moz-selection Mozilla prefixed fragment pseudo-element has been
 added to ensure the best support for all browsers.
 
 ```
- 1  ::-moz-selection {                                                   
- 2  background: #ff7b29;                                                 
- 3  }                                                                    
- 4  ::selection {                                                        
- 5  background: #ff7b29;                                                 
- 6  }                                                                    
- 7                                                                       
+ 1  ::-moz-selection { 
+ 2  background: #ff7b29;  
+ 3  } 
+ 4  ::selection {
+ 5  background: #ff7b29;  
+ 6  } 
+ 7 
 ```
 
 <h4>Fragment Pseudo-element Demo</h4>
@@ -3198,46 +2938,46 @@ added to ensure the best support for all browsers.
 **CSS**
 
 ```
- 1  .arrow {                                                          
- 2  background: #2db34a;                                              
- 3  color: #fff;                                                      
- 4  display: inline-block;                                            
- 5  height: 30px;                                                     
- 6  line-height: 30px;                                                
- 7  padding: 0 12px;                                                  
- 8  position: relative;                                               
- 9  text-decoration: none;                                            
- 10  }                                                                 
- 11   .arrow:before,                                                    
- 12  .arrow:after {                                                    
- 13  content: "";                                                    
- 14   height: 0;                                                        
- 15  position: absolute;                                               
- 16  width: 0;                                                         
- 17   }                                                                 
- 18  .arrow:before {                                                   
- 19  border-bottom: 15px solid #2db34a;                                
- 20   border-left: 15px solid transparent;                              
- 21  border-top: 15px solid #2db34a;                                   
- 22  left: -15px;                                                      
- 23   }                                                                 
- 24  .arrow:after {                                                    
- 25  border-bottom: 15px solid transparent;                            
- 26   border-left: 15px solid #2db34a;                                  
- 27  border-top: 15px solid transparent;                               
- 28  right: -15px;                                                     
- 29   }                                                                 
- 30  .arrow:hover {                                                    
- 31  background: #ff7b29;                                              
- 32   }                                                                 
- 33  .arrow:hover:before {                                             
- 34  border-bottom: 15px solid #ff7b29;                                
- 35   border-top: 15px solid #ff7b29;                                   
- 36  }                                                                 
- 37  .arrow:hover:after {                                              
+ 1  .arrow {
+ 2  background: #2db34a;  
+ 3  color: #fff; 
+ 4  display: inline-block;
+ 5  height: 30px;
+ 6  line-height: 30px; 
+ 7  padding: 0 12px;
+ 8  position: relative;
+ 9  text-decoration: none;
+ 10  } 
+ 11.arrow:before,  
+ 12  .arrow:after {  
+ 13  content: "";  
+ 14height: 0;
+ 15  position: absolute;
+ 16  width: 0; 
+ 17} 
+ 18  .arrow:before { 
+ 19  border-bottom: 15px solid #2db34a;
+ 20border-left: 15px solid transparent; 
+ 21  border-top: 15px solid #2db34a;
+ 22  left: -15px; 
+ 23} 
+ 24  .arrow:after {  
+ 25  border-bottom: 15px solid transparent; 
+ 26border-left: 15px solid #2db34a;  
+ 27  border-top: 15px solid transparent;  
+ 28  right: -15px;
+ 29} 
+ 30  .arrow:hover {  
+ 31  background: #ff7b29;  
+ 32} 
+ 33  .arrow:hover:before { 
+ 34  border-bottom: 15px solid #ff7b29;
+ 35border-top: 15px solid #ff7b29;
+ 36  } 
+ 37  .arrow:hover:after {  
  38  
- 39  border-left: 15px solid #ff7b29;                                  
- 40                                                                    
+ 39  border-left: 15px solid #ff7b29;  
+ 40 
  41  }
  42 
 ```
@@ -3247,23 +2987,23 @@ added to ensure the best support for all browsers.
 <h4>Pseudo-elements Overview</h4>
 
   ------------------------------------------------------------------------------------------------
-  **[Example]{.mark}**   **[Classification]{.mark}**   **[Explanation]{.mark}**
+  **[Example]{.mark}****[Classification]{.mark}****[Explanation]{.mark}**
   ---------------------- ----------------------------- -------------------------------------------
-  .alpha:first-letter    Textual Pseudo-elements       Selects the first letter of text within an
-                                                       element
+  .alpha:first-letter Textual Pseudo-elements Selects the first letter of text within an
+  element
 
-  .bravo:first-line      Textual Pseudo-elements       Selects the first line of text within an
-                                                       element
+  .bravo:first-lineTextual Pseudo-elements Selects the first line of text within an
+  element
 
-  div:before             Generated Content             Creates a pseudo-element inside the
-                                                       selected element at the beginning
+  div:before Generated Content Creates a pseudo-element inside the
+  selected element at the beginning
 
-  a:after                Generated Content             Creates a pseudo-element inside the
-                                                       selected element at the end
+  a:after Generated Content Creates a pseudo-element inside the
+  selected element at the end
 
-  ::selection            Fragment Pseudo-element       Selects the part of a document which has
-                                                       been selected, or highlighted, by a users'
-                                                       actions
+  ::selectionFragment Pseudo-element Selects the part of a document which has
+  been selected, or highlighted, by a users'
+  actions
   ------------------------------------------------------------------------------------------------
 
 <h4>Selector Browser Support</h4>
@@ -3296,29 +3036,29 @@ think about revisiting it, and seeing if a better solution can be found.
 
 <h4>Resources & Links</h4>
 
--   [[The 30 CSS Selectors you Must
-    Memorize]{.underline}](http://net.tutsplus.com/tutorials/html-css-techniques/the-30-css-selectors-you-must-memorize/) via
-    Nettuts+
+-[[The 30 CSS Selectors you Must
+ Memorize]{.underline}](http://net.tutsplus.com/tutorials/html-css-techniques/the-30-css-selectors-you-must-memorize/) via
+ Nettuts+
 
--   [[Child and Sibling
-    Selectors]{.underline}](https://css-tricks.com/child-and-sibling-selectors/) via
-    CSS-Tricks
+-[[Child and Sibling
+ Selectors]{.underline}](https://css-tricks.com/child-and-sibling-selectors/) via
+ CSS-Tricks
 
--   [[CSS3 Substring Matching Attribute
-    Selectors]{.underline}](http://www.css3.info/preview/attribute-selectors/) via
-    CSS3.info
+-[[CSS3 Substring Matching Attribute
+ Selectors]{.underline}](http://www.css3.info/preview/attribute-selectors/) via
+ CSS3.info
 
--   [[How To Use CSS3
-    Pseudo-Classes]{.underline}](http://coding.smashingmagazine.com/2011/03/30/how-to-use-css3-pseudo-classes/) via
-    Smashing Magazine
+-[[How To Use CSS3
+ Pseudo-Classes]{.underline}](http://coding.smashingmagazine.com/2011/03/30/how-to-use-css3-pseudo-classes/) via
+ Smashing Magazine
 
--   [[Understanding :nth-child Pseudo-class
-    Expressions]{.underline}](http://reference.sitepoint.com/css/understandingnthchildexpressions) via
-    SitePoint
+-[[Understanding :nth-child Pseudo-class
+ Expressions]{.underline}](http://reference.sitepoint.com/css/understandingnthchildexpressions) via
+ SitePoint
 
--   [[Taming Advanced CSS
-    Selectors]{.underline}](http://coding.smashingmagazine.com/2009/08/17/taming-advanced-css-selectors/) via
-    Smashing Magazine
+-[[Taming Advanced CSS
+ Selectors]{.underline}](http://coding.smashingmagazine.com/2009/08/17/taming-advanced-css-selectors/) via
+ Smashing Magazine
 
  
 
@@ -3333,24 +3073,24 @@ In this Lesson 4
 
 <h4>HTML</h4>
 
--   [[Responsive
-    Overview]{.underline}](https://learn.shayhowe.com/advanced-html-css/responsive-web-design/#responsive-web-design)
+-[[Responsive
+ Overview]{.underline}](https://learn.shayhowe.com/advanced-html-css/responsive-web-design/#responsive-web-design)
 
--   [[Viewport]{.underline}](https://learn.shayhowe.com/advanced-html-css/responsive-web-design/#viewport)
+-[[Viewport]{.underline}](https://learn.shayhowe.com/advanced-html-css/responsive-web-design/#viewport)
 
 **CSS**
 
--   [[Flexible
-    Layouts]{.underline}](https://learn.shayhowe.com/advanced-html-css/responsive-web-design/#flexible-layouts)
+-[[Flexible
+ Layouts]{.underline}](https://learn.shayhowe.com/advanced-html-css/responsive-web-design/#flexible-layouts)
 
--   [[Media
-    Queries]{.underline}](https://learn.shayhowe.com/advanced-html-css/responsive-web-design/#media-queries)
+-[[Media
+ Queries]{.underline}](https://learn.shayhowe.com/advanced-html-css/responsive-web-design/#media-queries)
 
--   [[Mobile
-    First]{.underline}](https://learn.shayhowe.com/advanced-html-css/responsive-web-design/#mobile-first)
+-[[Mobile
+ First]{.underline}](https://learn.shayhowe.com/advanced-html-css/responsive-web-design/#mobile-first)
 
--   [[Flexible
-    Media]{.underline}](https://learn.shayhowe.com/advanced-html-css/responsive-web-design/#flexible-media)
+-[[Flexible
+ Media]{.underline}](https://learn.shayhowe.com/advanced-html-css/responsive-web-design/#flexible-media)
 
 **SHARE**
 
@@ -3445,17 +3185,17 @@ the browser or device. These new units include vw, vh, vmin, and vmax.
 Overall support for these new units isn't great, but it is growing. In
 time they look to play a large roll in building responsive websites.
 
--   vw\
-    Viewports width
+-vw\
+ Viewports width
 
--   vh\
-    Viewports height
+-vh\
+ Viewports height
 
--   vmin\
-    Minimum of the viewport's height and width
+-vmin\
+ Minimum of the viewport's height and width
 
--   vmax\
-    Maximum of the viewport's height and width
+-vmax\
+ Maximum of the viewport's height and width
 
 Flexible layouts do not advocate the use of fixed measurement units,
 such as pixels or inches. Reason being, the viewport height and width
@@ -3485,59 +3225,59 @@ following.
 **HTML**
 
 +---+----------------------------------------------------------------------+
- 1  <div class="container">                                          
-                                                                         
- 2  <section>&#8230;</section>                                          
-                                                                         
- 3  <aside>&#8230;</aside>                                              
-                                                                         
- 4  </div>                                                             
-                                                                         
- 5                                                                       
+ 1  <div class="container"> 
+
+ 2  <section>&#8230;</section> 
+
+ 3  <aside>&#8230;</aside>  
+
+ 4  </div>
+
+ 5 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **CSS**
 
 +---+----------------------------------------------------------------------+
- 1  .container {                                                         
-                                                                         
- 2  width: 538px;                                                        
-                                                                         
- 3  }                                                                    
-                                                                         
- 4  section,                                                             
-                                                                         
- 5  aside {                                                              
-                                                                         
- 6  margin: 10px;                                                        
-                                                                         
- 7  }                                                                    
-                                                                         
- 8  section {                                                            
-                                                                         
- 9  float: left;                                                         
-                                                                         
- 1  width: 340px;                                                        
- 0                                                                       
-    }                                                                    
- 1                                                                       
- 1  aside {                                                              
-                                                                         
- 1  float: right;                                                        
- 2                                                                       
-    width: 158px;                                                        
- 1                                                                       
- 3  }                                                                    
-                                                                         
- 1                                                                       
- 4                                                                       
-                                                                         
- 1                                                                       
- 5                                                                       
-                                                                         
- 1                                                                       
- 6                                                                       
+ 1  .container { 
+
+ 2  width: 538px;
+
+ 3  } 
+
+ 4  section,
+
+ 5  aside { 
+
+ 6  margin: 10px;
+
+ 7  } 
+
+ 8  section {  
+
+ 9  float: left; 
+
+ 1  width: 340px;
+ 0 
+ } 
+ 1 
+ 1  aside { 
+
+ 1  float: right;
+ 2 
+ width: 158px;
+ 1 
+ 3  } 
+
+ 1 
+ 4 
+
+ 1 
+ 5 
+
+ 1 
+ 6 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -3550,35 +3290,35 @@ how wide the parent container becomes, the section and aside margins and
 widths scale proportionally.
 
 +---+----------------------------------------------------------------------+
- 1  section,                                                             
-                                                                         
- 2  aside {                                                              
-                                                                         
- 3  margin: 1.858736059%; /&ast; 10px ÷ 538px = .018587361 &ast;/              
-                                                                         
- 4  }                                                                    
-                                                                         
- 5  section {                                                            
-                                                                         
- 6  float: left;                                                         
-                                                                         
- 7  width: 63.197026%; /&ast; 340px ÷ 538px = .63197026 &ast;/                 
-                                                                         
- 8  }                                                                    
-                                                                         
- 9  aside {                                                              
-                                                                         
- 1  float: right;                                                        
- 0                                                                       
-    width: 29.3680297%; /&ast; 158px ÷ 538px = .293680297 &ast;/               
- 1                                                                       
- 1  }                                                                    
-                                                                         
- 1                                                                       
- 2                                                                       
-                                                                         
- 1                                                                       
- 3                                                                       
+ 1  section,
+
+ 2  aside { 
+
+ 3  margin: 1.858736059%; /&ast; 10px ÷ 538px = .018587361 &ast;/  
+
+ 4  } 
+
+ 5  section {  
+
+ 6  float: left; 
+
+ 7  width: 63.197026%; /&ast; 340px ÷ 538px = .63197026 &ast;/  
+
+ 8  } 
+
+ 9  aside { 
+
+ 1  float: right;
+ 0 
+ width: 29.3680297%; /&ast; 158px ÷ 538px = .293680297 &ast;/
+ 1 
+ 1  } 
+
+ 1 
+ 2 
+
+ 1 
+ 3 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -3619,28 +3359,28 @@ additional HTTP requests.
 **HTML**
 
 +---+----------------------------------------------------------------------+
- 1  <!&#45;&#45; Separate CSS File &#45;&#45;>                                       
-                                                                         
- 2  <link href="styles.css" rel="stylesheet" media="all and        
-    (max-width: 1024px)">                                              
- 3                                                                       
+ 1  <!&#45;&#45; Separate CSS File &#45;&#45;> 
+
+ 2  <link href="styles.css" rel="stylesheet" media="all and  
+ (max-width: 1024px)">  
+ 3 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **CSS**
 
 +---+----------------------------------------------------------------------+
- 1  /&ast; &#0064;media Rule &ast;/                                                 
-                                                                         
- 2  &#0064;media all and (max-width: 1024px) {&#8230;}                           
-                                                                         
- 3  /&ast; &#0064;import Rule &ast;/                                                
-                                                                         
- 4  &#0064;import url(styles.css) all and (max-width: 1024px) {&#8230;}          
-                                                                         
- 5                                                                       
-                                                                         
- 6                                                                       
+ 1  /&ast; &#0064;media Rule &ast;/  
+
+ 2  &#0064;media all and (max-width: 1024px) {&#8230;}
+
+ 3  /&ast; &#0064;import Rule &ast;/ 
+
+ 4  &#0064;import url(styles.css) all and (max-width: 1024px) {&#8230;} 
+
+ 5 
+
+ 6 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -3669,9 +3409,9 @@ comma separated, acting as an unspoken or operator. The example below
 selects all media types between 800 and 1024 pixels wide.
 
 +---+----------------------------------------------------------------------+
- 1  &#0064;media all and (min-width: 800px) and (max-width: 1024px) {&#8230;}    
-                                                                         
- 2                                                                       
+ 1  &#0064;media all and (min-width: 800px) and (max-width: 1024px) {&#8230;} 
+
+ 2 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -3681,9 +3421,9 @@ device that does not have a color screen. Black and white or monochrome
 screens would apply here for example.
 
 +---+----------------------------------------------------------------------+
- 1  &#0064;media not screen and (color) {&#8230;}                                
-                                                                         
- 2                                                                       
+ 1  &#0064;media not screen and (color) {&#8230;}
+
+ 2 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -3694,9 +3434,9 @@ expression selects only screens in a portrait orientation that have a
 user agent capable of rending media queries.
 
 +---+----------------------------------------------------------------------+
- 1  &#0064;media only screen and (orientation: portrait) {&#8230;}               
-                                                                         
- 2                                                                       
+ 1  &#0064;media only screen and (orientation: portrait) {&#8230;}
+
+ 2 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -3726,9 +3466,9 @@ these height and width media features may be any length unit, relative
 or absolute.
 
 +---+----------------------------------------------------------------------+
- 1  &#0064;media all and (min-width: 320px) and (max-width: 780px) {&#8230;}     
-                                                                         
- 2                                                                       
+ 1  &#0064;media all and (min-width: 320px) and (max-width: 780px) {&#8230;}  
+
+ 2 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -3754,9 +3494,9 @@ triggered when the display is taller than wider. This media feature
 plays a large part with mobile devices.
 
 +---+----------------------------------------------------------------------+
- 1  &#0064;media all and (orientation: landscape) {&#8230;}                      
-                                                                         
- 2                                                                       
+ 1  &#0064;media all and (orientation: landscape) {&#8230;} 
+
+ 2 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -3773,9 +3513,9 @@ separated by a forward slash. The first integer identifies the width in
 pixels while the second integer identifies the height in pixels.
 
 +---+----------------------------------------------------------------------+
- 1  &#0064;media all and (min-device-aspect-ratio: 16/9) {&#8230;}               
-                                                                         
- 2                                                                       
+ 1  &#0064;media all and (min-device-aspect-ratio: 16/9) {&#8230;}
+
+ 2 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -3789,9 +3529,9 @@ definition devices, including retina displays. Media queries for doing
 so look like the following.
 
 +---+-------------------------------------------------------------------+
- 1  &#0064;media only screen and (-webkit-min-device-pixel-ratio: 1.3),    
-    only screen and (min-device-pixel-ratio: 1.3) {&#8230;}              
- 2                                                                    
+ 1  &#0064;media only screen and (-webkit-min-device-pixel-ratio: 1.3), 
+ only screen and (min-device-pixel-ratio: 1.3) {&#8230;}  
+ 2 
 +===+===================================================================+
 +---+-------------------------------------------------------------------+
 
@@ -3805,9 +3545,9 @@ Additionally, the resolution media feature will accept dots per pixel
 resolution values.
 
 +---+----------------------------------------------------------------------+
- 1  &#0064;media print and (min-resolution: 300dpi) {&#8230;}                    
-                                                                         
- 2                                                                       
+ 1  &#0064;media print and (min-resolution: 300dpi) {&#8230;}  
+
+ 2 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -3845,19 +3585,19 @@ by turning off the floats and changing the widths of
 the section and aside.
 
 +---+----------------------------------------------------------------------+
- 1  &#0064;media all and (max-width: 420px) {                                 
-                                                                         
- 2  section, aside {                                                     
-                                                                         
- 3  float: none;                                                         
-                                                                         
- 4  width: auto;                                                         
-                                                                         
- 5  }                                                                    
-                                                                         
- 6  }                                                                    
-                                                                         
- 7                                                                       
+ 1  &#0064;media all and (max-width: 420px) { 
+
+ 2  section, aside {
+
+ 3  float: none; 
+
+ 4  width: auto; 
+
+ 5  } 
+
+ 6  } 
+
+ 7 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -3915,17 +3655,17 @@ A breakout of mobile first media queries might look abit like the
 following.
 
 +---+----------------------------------------------------------------------+
- 1  /&ast; Default styles first then media queries &ast;/                      
-                                                                         
- 2  &#0064;media screen and (min-width: 400px) {&#8230;}                         
-                                                                         
- 3  &#0064;media screen and (min-width: 600px) {&#8230;}                         
-                                                                         
- 4  &#0064;media screen and (min-width: 1000px) {&#8230;}                        
-                                                                         
- 5  &#0064;media screen and (min-width: 1400px) {&#8230;}                        
-                                                                         
- 6                                                                       
+ 1  /&ast; Default styles first then media queries &ast;/ 
+
+ 2  &#0064;media screen and (min-width: 400px) {&#8230;} 
+
+ 3  &#0064;media screen and (min-width: 600px) {&#8230;} 
+
+ 4  &#0064;media screen and (min-width: 1000px) {&#8230;}
+
+ 5  &#0064;media screen and (min-width: 1400px) {&#8230;}
+
+ 6 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -3936,29 +3676,29 @@ idea either. When used excessively, they cause heavy loading and can
 even reduce a device's battery life.
 
 +---+----------------------------------------------------------------------+
- 1  /&ast; Default media &ast;/                                                
-                                                                         
- 2  body {                                                               
-                                                                         
- 3  background: #ddd;                                                    
-                                                                         
- 4  }                                                                    
-                                                                         
- 5  /&ast; Media for larger devices &ast;/                                     
-                                                                         
- 6  &#0064;media screen and (min-width: 800px) {                              
-                                                                         
- 7  body {                                                               
-                                                                         
- 8  background-image: url("bg.png") 50% 50% no-repeat;                 
-                                                                         
- 9  }                                                                    
-                                                                         
- 1  }                                                                    
- 0                                                                       
-                                                                         
- 1                                                                       
- 1                                                                       
+ 1  /&ast; Default media &ast;/ 
+
+ 2  body {  
+
+ 3  background: #ddd;  
+
+ 4  } 
+
+ 5  /&ast; Media for larger devices &ast;/  
+
+ 6  &#0064;media screen and (min-width: 800px) { 
+
+ 7  body {  
+
+ 8  background-image: url("bg.png") 50% 50% no-repeat;  
+
+ 9  } 
+
+ 1  } 
+ 0 
+
+ 1 
+ 1 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -3971,50 +3711,50 @@ adding media queries to adjust for viewports over 420 pixels wide we
 build the following:
 
 +---+----------------------------------------------------------------------+
- 1  section,                                                             
-                                                                         
- 2  aside {                                                              
-                                                                         
- 3  margin: 1.858736059%;                                                
-                                                                         
- 4  }                                                                    
-                                                                         
- 5  &#0064;media all and (min-width: 420px) {                                 
-                                                                         
- 6  .container {                                                         
-                                                                         
- 7  max-width: 538px;                                                    
-                                                                         
- 8  }                                                                    
-                                                                         
- 9  section {                                                            
-                                                                         
- 1  float: left;                                                         
- 0                                                                       
-    width: 63.197026%;                                                   
- 1                                                                       
- 1  }                                                                    
-                                                                         
- 1  aside {                                                              
- 2                                                                       
-    float: right;                                                        
- 1                                                                       
- 3  width: 29.3680297%;                                                  
-                                                                         
- 1  }                                                                    
- 4                                                                       
-    }                                                                    
- 1                                                                       
- 5                                                                       
-                                                                         
- 1                                                                       
- 6                                                                       
-                                                                         
- 1                                                                       
- 7                                                                       
-                                                                         
- 1                                                                       
- 8                                                                       
+ 1  section,
+
+ 2  aside { 
+
+ 3  margin: 1.858736059%; 
+
+ 4  } 
+
+ 5  &#0064;media all and (min-width: 420px) { 
+
+ 6  .container { 
+
+ 7  max-width: 538px;  
+
+ 8  } 
+
+ 9  section {  
+
+ 1  float: left; 
+ 0 
+ width: 63.197026%; 
+ 1 
+ 1  } 
+
+ 1  aside { 
+ 2 
+ float: right;
+ 1 
+ 3  width: 29.3680297%;
+
+ 1  } 
+ 4 
+ } 
+ 1 
+ 5 
+
+ 1 
+ 6 
+
+ 1 
+ 7 
+
+ 1 
+ 8 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -4056,9 +3796,9 @@ you use the device defaults by applying
 the device-height and device-width values.
 
 +---+----------------------------------------------------------------------+
- 1  <meta name="viewport" content="width=device-width">            
-                                                                         
- 2                                                                       
+ 1  <meta name="viewport" content="width=device-width">
+
+ 2 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -4084,9 +3824,9 @@ the ratio between the device width and the viewport size. Values
 for initial-scale should always be a positive integer between 0 and 10.
 
 +---+----------------------------------------------------------------------+
- 1  <meta name="viewport" content="initial-scale=2">               
-                                                                         
- 2                                                                       
+ 1  <meta name="viewport" content="initial-scale=2">
+
+ 2 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -4106,9 +3846,9 @@ integer greater than or equal to the initial-scale. Values for both of
 these must also be between 0 and 10.
 
 +---+----------------------------------------------------------------------+
- 1  <meta name="viewport" content="minimum-scale=0">               
-                                                                         
- 2                                                                       
+ 1  <meta name="viewport" content="minimum-scale=0">
+
+ 2 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -4123,9 +3863,9 @@ accessibility and usability, preventing those with disabilities from
 viewing a website as desired.
 
 +---+----------------------------------------------------------------------+
- 1  <meta name="viewport" content="user-scalable=yes">             
-                                                                         
- 2                                                                       
+ 1  <meta name="viewport" content="user-scalable=yes"> 
+
+ 2 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -4144,8 +3884,8 @@ helpful when pixel by pixel control is needed.
 
 +---+----------------------------------------------------------------------+
  1  <meta name="viewport" content="target-densitydpi=device-dpi">  
-                                                                         
- 2                                                                       
+
+ 2 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -4158,9 +3898,9 @@ the content attribute value. One of the recommended viewport values is
 outlined below, using both the width and initial-scale properties.
 
 +---+----------------------------------------------------------------------+
- 1  <meta name="viewport" content="width=device-width,               
-    initial-scale=1">                                                  
- 2                                                                       
+ 1  <meta name="viewport" content="width=device-width,
+ initial-scale=1">
+ 2 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -4186,15 +3926,15 @@ recommended viewport meta tag would look like the
 following @viewport rule in CSS.
 
 +---+--------------------------------------------------------------------+
- 1  &#0064;viewport {                                                       
-                                                                       
- 2  width: device-width;                                               
-                                                                       
- 3  zoom: 1;                                                           
-                                                                       
- 4  }                                                                  
-                                                                       
- 5                                                                     
+ 1  &#0064;viewport {  
+ 
+ 2  width: device-width;
+ 
+ 3  zoom: 1; 
+ 
+ 4  }  
+ 
+ 5  
 +===+====================================================================+
 +---+--------------------------------------------------------------------+
 
@@ -4210,13 +3950,13 @@ with a value of 100%. Doing so ensures that as the viewport gets smaller
 any media will scale down according to its containers width.
 
 +---+----------------------------------------------------------------------+
- 1  img, video, canvas {                                                 
-                                                                         
- 2  max-width: 100%;                                                     
-                                                                         
- 3  }                                                                    
-                                                                         
- 4                                                                       
+ 1  img, video, canvas {  
+
+ 2  max-width: 100%;
+
+ 3  } 
+
+ 4 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -4248,51 +3988,51 @@ treating the parent element as an absolutely positioned element.
 **HTML**
 
 +---+----------------------------------------------------------------------+
- 1  <figure>                                                           
-                                                                         
- 2  <iframe                                                             
-    src="https://www.youtube.com/embed/Sv3xVOs7_No"></iframe>       
- 3                                                                       
-    </figure>                                                          
- 4                                                                       
+ 1  <figure> 
+
+ 2  <iframe
+ src="https://www.youtube.com/embed/Sv3xVOs7_No"></iframe> 
+ 3 
+ </figure>
+ 4 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **CSS**
 
 +---+----------------------------------------------------------------------+
- 1  figure {                                                             
-                                                                         
- 2  height: 0;                                                           
-                                                                         
- 3  padding-bottom: 56.25%; /&ast; 16:9 &ast;/                                 
-                                                                         
- 4  position: relative;                                                  
-                                                                         
- 5  width: 100%;                                                         
-                                                                         
- 6  }                                                                    
-                                                                         
- 7  iframe {                                                             
-                                                                         
- 8  height: 100%;                                                        
-                                                                         
- 9  left: 0;                                                             
-                                                                         
- 1  position: absolute;                                                  
- 0                                                                       
-    top: 0;                                                              
- 1                                                                       
- 1  width: 100%;                                                         
-                                                                         
- 1  }                                                                    
- 2                                                                       
-                                                                         
- 1                                                                       
- 3                                                                       
-                                                                         
- 1                                                                       
- 4                                                                       
+ 1  figure {
+
+ 2  height: 0; 
+
+ 3  padding-bottom: 56.25%; /&ast; 16:9 &ast;/ 
+
+ 4  position: relative;
+
+ 5  width: 100%; 
+
+ 6  } 
+
+ 7  iframe {
+
+ 8  height: 100%;
+
+ 9  left: 0;
+
+ 1  position: absolute;
+ 0 
+ top: 0; 
+ 1 
+ 1  width: 100%; 
+
+ 1  } 
+ 2 
+
+ 1 
+ 3 
+
+ 1 
+ 4 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -4311,45 +4051,42 @@ website.
 
 <h4>Resources & Links</h4>
 
--   [[Responsive Web
-    Design]{.underline}](http://www.alistapart.com/articles/responsive-web-design/) via
-    A List Apart
+<ul>
+  <li><a href="http://www.alistapart.com/articles/responsive-web-design/">
+    Responsive Web Design</a> via A List Apart</li>
+  <li><a href="http://dev.w3.org/csswg/css3-values/#viewport-relative-lengths">
+    Viewport Percentage Lengths</a> via W3C</li>
+  <li><a href="https://css-tricks.com/css-media-queries/">
+    CSS Media Queries</a> via CSS-Tricks</li>
+  <li><a href="https://abookapart.com/products/mobile-first">
+    Mobile First</a> via Luke Wroblewski></li>
+  <li><a href="http://dev.opera.com/articles/view/an-introduction-to-meta-viewport-and-viewport/">
+    An Introduction to Meta Viewport and  &#0064;viewport</a> via Dev. Opera</li>
+</ul>
 
--   [[Viewport Percentage
-    Lengths]{.underline}](http://dev.w3.org/csswg/css3-values/#viewport-relative-lengths) via
-    W3C
+**Lesson 3** <a href="https://learn.shayhowe.com/advanced-html-css/complex-selectors/">Complex Selectors</a>
+**Lesson 5** <a href="https://learn.shayhowe.com/advanced-html-css/preprocessors/">Preprocessors</a>
 
--   [[CSS Media
-    Queries]{.underline}](https://css-tricks.com/css-media-queries/) via
-    CSS-Tricks
-
--   [[Mobile
-    First]{.underline}](https://abookapart.com/products/mobile-first) via
-    Luke Wroblewski
-
--   [[An Introduction to Meta Viewport and
-    &#0064;viewport]{.underline}](http://dev.opera.com/articles/view/an-introduction-to-meta-viewport-and-viewport/) via
-    Dev.Opera
-
- [**Lesson 3** [Complex
-Selectors]{.underline}](https://learn.shayhowe.com/advanced-html-css/complex-selectors/)
-[**Lesson 5**
-[Preprocessors]{.underline}](https://learn.shayhowe.com/advanced-html-css/preprocessors/)
-
-[Lesson 5]{.mark} Preprocessors
+[Lesson 5] Preprocessors
 
 In this Lesson 5
 
 **HTML**
 
--   [[Haml]{.underline}](https://learn.shayhowe.com/advanced-html-css/preprocessors/#haml)
+<ul>
+  <li><a href="https://learn.shayhowe.com/advanced-html-css/preprocessors/#haml">
+    Haml</a></li>
+</ul>
 
 **CSS**
 
--   [[SCSS & Sass]{.underline}](https://learn.shayhowe.com/advanced-html-css/preprocessors/#scss-sass)
+<ul>
+  <li><a href="https://learn.shayhowe.com/advanced-html-css/preprocessors/#scss-sass">
+    SCSS & Sass</a></li>
+</ul>
 
--   [[Other
-    Preprocessors]{.underline}](https://learn.shayhowe.com/advanced-html-css/preprocessors/#other-preprocessors)
+-[[Other
+ Preprocessors]{.underline}](https://learn.shayhowe.com/advanced-html-css/preprocessors/#other-preprocessors)
 
 **SHARE**
 
@@ -4396,23 +4133,19 @@ directions. Upon confirming Ruby is installed the gem install
 haml command needs to be run from the command line, using Terminal or
 the alike command line program, to install Haml.
 
-+---+----------------------------------------------------------------------+
- 1  gem install haml                                                     
-                                                                         
- 2                                                                       
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
+ 1  gem install haml
+ 2 
+```
 
 Files written in the Haml markup should be saved with the file extension
 of .haml. To then convert these files from Haml to HTML the haml command
 below needs to be run to compile each individual file.
 
-+---+----------------------------------------------------------------------+
- 1  haml index.haml index.html                                           
-                                                                         
- 2                                                                       
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
+ 1  haml index.haml index.html  
+ 2 
+```
 
 In the example above, the file index.haml is converted to HTML and saved
 as index.html within the same directory. This command has to be run
@@ -4450,18 +4183,18 @@ passed in after the exclamation points, !!! 5.
 **Haml**
 
 +---+----------------------------------------------------------------------+
- 1  !!! 5                                                                
-                                                                         
- 2                                                                       
+ 1  !!! 5
+
+ 2 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **Compiled HTML**
 
 +---+----------------------------------------------------------------------+
- 1  <!DOCTYPE html>                                                    
-                                                                         
- 2                                                                       
+ 1  <!DOCTYPE html>  
+
+ 2 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -4486,40 +4219,40 @@ struggle.
 **Haml**
 
 +---+----------------------------------------------------------------------+
- 1  %body                                                                
-                                                                         
- 2  %header                                                              
-                                                                         
- 3  %h1 Hello World                                                      
-                                                                         
- 4  %section                                                             
-                                                                         
- 5  %p Lorem ipsum dolor sit amet.                                       
-                                                                         
- 6                                                                       
+ 1  %body
+
+ 2  %header 
+
+ 3  %h1 Hello World 
+
+ 4  %section
+
+ 5  %p Lorem ipsum dolor sit amet. 
+
+ 6 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **Compiled HTML**
 
 +---+----------------------------------------------------------------------+
- 1  <body>                                                             
-                                                                         
- 2  <header>                                                           
-                                                                         
- 3  <h1>Hello World</h1>                                             
-                                                                         
- 4  </header>                                                          
-                                                                         
- 5  <section>                                                          
-                                                                         
- 6  <p>Lorem ipsum dolor sit amet.</p>                               
-                                                                         
- 7  </section>                                                         
-                                                                         
- 8  </body>                                                            
-                                                                         
- 9                                                                       
+ 1  <body>
+
+ 2  <header> 
+
+ 3  <h1>Hello World</h1> 
+
+ 4  </header>
+
+ 5  <section>
+
+ 6  <p>Lorem ipsum dolor sit amet.</p>  
+
+ 7  </section> 
+
+ 8  </body>  
+
+ 9 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -4530,24 +4263,16 @@ or indented below the element. Text cannot be both on the same line as
 the declared element and nested below it, it has to be either or. The
 example from above could be rewritten as the following:
 
-+---+--------------------------------------------------------------------+
- 1  %body                                                              
-                                                                       
- 2  %header                                                            
-                                                                       
- 3  %h1                                                                
-                                                                       
- 4  Hello World                                                        
-                                                                       
- 5  %section                                                           
-                                                                       
- 6  %p                                                                 
-                                                                       
- 7  Lorem ipsum dolor sit amet.                                        
-                                                                       
- 8                                                                     
-+===+====================================================================+
-+---+--------------------------------------------------------------------+
+```
+ 1  %body 
+ 2  %header  
+ 3  %h1
+ 4  Hello World
+ 5  %section 
+ 6  %p 
+ 7  Lorem ipsum dolor sit amet.  
+ 8  
+```
 
 <h4>Attributes</h4>
 
@@ -4559,25 +4284,19 @@ style attributes will use standard HTML syntax inside of ().
 
 **Haml**
 
-+---+----------------------------------------------------------------------+
- 1  %img{:src => "shay.jpg", :alt => "Shay Howe"}                  
-                                                                         
- 2  %img{src: "shay.jpg", alt: "Shay Howe"}                          
-                                                                         
- 3  %img(src="shay.jpg" alt="Shay Howe")                             
-                                                                         
- 4                                                                       
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
+ 1  %img{:src => "shay.jpg", :alt => "Shay Howe"}
+ 2  %img{src: "shay.jpg", alt: "Shay Howe"}  
+ 3  %img(src="shay.jpg" alt="Shay Howe")
+ 4 
+```
 
 **Compiled HTML**
 
-+---+----------------------------------------------------------------------+
- 1  <img src="shay.jpg" alt="Shay Howe">                           
-                                                                         
- 2                                                                       
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
+ 1  <img src="shay.jpg" alt="Shay Howe">
+ 2 
+```
 
 <h4>Classes &amp; IDs</h4>
 
@@ -4595,33 +4314,23 @@ outlined formats.
 
 <h4>Haml</h4>
 
-+---+----------------------------------------------------------------------+
- 1  %section.feature                                                     
-                                                                         
- 2  %section.feature.special                                             
-                                                                         
- 3  %section#hello                                                       
-                                                                         
- 4  %section#hello.feature(role="region")                              
-                                                                         
- 5                                                                       
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
+ 1  %section.feature
+ 2  %section.feature.special 
+ 3  %section#hello  
+ 4  %section#hello.feature(role="region") 
+ 5 
+```
 
 **Compiled HTML**
 
-+---+----------------------------------------------------------------------+
- 1  <section class="feature"></section>                            
-                                                                         
- 2  <section class="feature special"></section>                    
-                                                                         
- 3  <section id="hello"></section>                                 
-                                                                         
- 4  <section class="feature" id="hello"                             
-    role="region"></section>                                        
- 5                                                                       
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
+ 1  <section class="feature"></section> 
+ 2  <section class="feature special"></section>  
+ 3  <section id="hello"></section> 
+ 4  <section class="feature" id="hello" role="region"></section>  
+ 5 
+```
 
 <h4>Division Classes &amp; IDs</h4>
 
@@ -4631,29 +4340,21 @@ identified with a . and IDs are to be identified with a #.
 
 **Haml**
 
-+---+----------------------------------------------------------------------+
- 1  .awesome                                                             
-                                                                         
- 2  .awesome.lesson                                                      
-                                                                         
- 3  #getting-started.lesson                                              
-                                                                         
- 4                                                                       
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
+ 1  .awesome
+ 2  .awesome.lesson 
+ 3  #getting-started.lesson  
+ 4 
+```
 
 **Compiled HTML**
 
-+---+----------------------------------------------------------------------+
- 1  <div class="awesome"></div>                                    
-                                                                         
- 2  <div class="awesome lesson"></div>                             
-                                                                         
- 3  <div class="lesson" id="getting-started"></div>              
-                                                                         
- 4                                                                       
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
+ 1  <div class="awesome"></div> 
+ 2  <div class="awesome lesson"></div>
+ 3  <div class="lesson" id="getting-started"></div>  
+ 4 
+```
 
 <h4>Boolean Attributes</h4>
 
@@ -4662,25 +4363,19 @@ HTML, all depending on the syntax being used.
 
 **Haml**
 
-+---+----------------------------------------------------------------------+
- 1  %input{:type => "checkbox", :checked => true}                    
-                                                                         
- 2  %input(type="checkbox" checked=true)                               
-                                                                         
- 3  %input(type="checkbox" checked)                                    
-                                                                         
- 4                                                                       
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
+ 1  %input{:type => "checkbox", :checked => true}  
+ 2  %input(type="checkbox" checked=true)  
+ 3  %input(type="checkbox" checked) 
+ 4 
+```
 
 **Compiled HTML**
 
-+---+----------------------------------------------------------------------+
- 1  <input type="checkbox" checked>                                  
-                                                                         
- 2                                                                       
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
+ 1  <input type="checkbox" checked>  
+ 2 
+```
 
 <h4>Escaping Text</h4>
 
@@ -4697,28 +4392,28 @@ execution.
 **Haml**
 
 +---+----------------------------------------------------------------------+
- 1  .author                                                              
-                                                                         
- 2  = &#0064;author                                                           
-                                                                         
- 3  \\= &#0064;author                                                         
-                                                                         
- 4                                                                       
+ 1  .author 
+
+ 2  = &#0064;author 
+
+ 3  \\= &#0064;author 
+
+ 4 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **Compiled HTML**
 
 +---+----------------------------------------------------------------------+
- 1  <div class="author">                                             
-                                                                         
- 2  Shay Howe                                                            
-                                                                         
- 3  = &#0064;author                                                           
-                                                                         
- 4  </div>                                                             
-                                                                         
- 5                                                                       
+ 1  <div class="author"> 
+
+ 2  Shay Howe  
+
+ 3  = &#0064;author 
+
+ 4  </div>
+
+ 5 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -4740,24 +4435,24 @@ outside of the anchor text.
 **Haml**
 
 +---+----------------------------------------------------------------------+
- 1  %p                                                                   
-                                                                         
- 2  Shay is                                                              
-                                                                         
- 3  = succeed "." do                                                   
-                                                                         
- 4  %a{:href => "#"} awesome                                          
-                                                                         
- 5                                                                       
+ 1  %p
+
+ 2  Shay is 
+
+ 3  = succeed "." do 
+
+ 4  %a{:href => "#"} awesome 
+
+ 5 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **Compiled HTML**
 
 +---+----------------------------------------------------------------------+
- 1  <p>Shay is <a href="#">awesome</a>.</p>                    
-                                                                         
- 2                                                                       
+ 1  <p>Shay is <a href="#">awesome</a>.</p>  
+
+ 2 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -4772,50 +4467,50 @@ code can be commented out by being nested underneath a forward slash.
 **Haml**
 
 +---+----------------------------------------------------------------------+
- 1  %div                                                                 
-                                                                         
- 2  / Commented line                                                     
-                                                                         
- 3  Actual line                                                          
-                                                                         
- 4  /                                                                    
-                                                                         
- 5  %div                                                                 
-                                                                         
- 6  Commented block                                                      
-                                                                         
- 7                                                                       
-                                                                         
- 8                                                                       
+ 1  %div 
+
+ 2  / Commented line
+
+ 3  Actual line
+
+ 4  / 
+
+ 5  %div 
+
+ 6  Commented block 
+
+ 7 
+
+ 8 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **Compiled HTML**
 
 +---+----------------------------------------------------------------------+
- 1  <div>                                                              
-                                                                         
- 2  <!&#45;&#45; Commented line &#45;&#45;>                                          
-                                                                         
- 3  Actual line                                                          
-                                                                         
- 4  </div>                                                             
-                                                                         
- 5  <!&#45;&#45;                                                               
-                                                                         
- 6  <div>                                                              
-                                                                         
- 7  Commented block                                                      
-                                                                         
- 8  </div>                                                             
-                                                                         
- 9  &#45;&#45;>                                                                
-                                                                         
- 1                                                                       
- 0                                                                       
-                                                                         
- 1                                                                       
- 1                                                                       
+ 1  <div> 
+
+ 2  <!&#45;&#45; Commented line &#45;&#45;> 
+
+ 3  Actual line
+
+ 4  </div>
+
+ 5  <!&#45;&#45;  
+
+ 6  <div> 
+
+ 7  Commented block 
+
+ 8  </div>
+
+ 9  &#45;&#45;>
+
+ 1 
+ 0 
+
+ 1 
+ 1 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -4829,24 +4524,24 @@ slash.
 **Haml**
 
 +---+----------------------------------------------------------------------+
- 1  /&lbrack;if lt IE 9&rbrack;                                                      
-                                                                         
- 2  %script{:src => "html5shiv.js"}                                   
-                                                                         
- 3                                                                       
+ 1  /&lbrack;if lt IE 9&rbrack; 
+
+ 2  %script{:src => "html5shiv.js"}
+
+ 3 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **Compiled HTML**
 
 +---+----------------------------------------------------------------------+
- 1  <!&#45;&#45;&lbrack;if lt IE 9&rbrack;>                                               
-                                                                         
- 2  <script src="html5shiv.js"></script>                           
-                                                                         
- 3  <&#0033;[endif&rbrack;&#45;&#45;>                                                    
-                                                                         
- 4                                                                       
+ 1  <!&#45;&#45;&lbrack;if lt IE 9&rbrack;>
+
+ 2  <script src="html5shiv.js"></script>
+
+ 3  <&#0033;[endif&rbrack;&#45;&#45;>  
+
+ 4 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -4863,26 +4558,26 @@ multiple lines with the use of nesting.
 **Haml**
 
 +---+----------------------------------------------------------------------+
- 1  %div                                                                 
-                                                                         
- 2  -# Removed line                                                      
-                                                                         
- 3  Actual line                                                          
-                                                                         
- 4                                                                       
+ 1  %div 
+
+ 2  -# Removed line 
+
+ 3  Actual line
+
+ 4 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **Compiled HTML**
 
 +---+----------------------------------------------------------------------+
- 1  <div>                                                              
-                                                                         
- 2  Actual line                                                          
-                                                                         
- 3  </div>                                                             
-                                                                         
- 4                                                                       
+ 1  <div> 
+
+ 2  Actual line
+
+ 3  </div>
+
+ 4 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -4898,67 +4593,67 @@ to be filtered nested underneath.
 Below are some of the more common filters, with the more popular ones of
 the group being :css and :javascript.
 
--   :cdata
+-:cdata
 
--   :coffee
+-:coffee
 
--   :css
+-:css
 
--   :erb
+-:erb
 
--   :escaped
+-:escaped
 
--   :javascript
+-:javascript
 
--   :less
+-:less
 
--   :markdown
+-:markdown
 
--   :maruku
+-:maruku
 
--   :plain
+-:plain
 
--   :preserve
+-:preserve
 
--   :ruby
+-:ruby
 
--   :sass
+-:sass
 
--   :scss
+-:scss
 
--   :textile
+-:textile
 
 <h4>Javascript Filter</h4>
 
 **Haml**
 
 +---+----------------------------------------------------------------------+
- 1  :javascript                                                          
-                                                                         
- 2  &#36;(&#39;button&#39;).on(&#39;click&#39;, function(event) {                       
-                                                                         
- 3  &#36;(&#39;p&#39;).hide(&#39;slow&#39;);                                            
-                                                                         
- 4  });                                                                  
-                                                                         
- 5                                                                       
+ 1  :javascript
+
+ 2  &#36;(&#39;button&#39;).on(&#39;click&#39;, function(event) {  
+
+ 3  &#36;(&#39;p&#39;).hide(&#39;slow&#39;);
+
+ 4  });  
+
+ 5 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **Compiled HTML**
 
 +---+----------------------------------------------------------------------+
- 1  <script>                                                           
-                                                                         
- 2  &#36;(&#39;button&#39;).on(&#39;click&#39;, function(event) {                       
-                                                                         
- 3  &#36;(&#39;p&#39;).hide(&#39;slow&#39;);                                            
-                                                                         
- 4  });                                                                  
-                                                                         
- 5  </script>                                                          
-                                                                         
- 6                                                                       
+ 1  <script> 
+
+ 2  &#36;(&#39;button&#39;).on(&#39;click&#39;, function(event) {  
+
+ 3  &#36;(&#39;p&#39;).hide(&#39;slow&#39;);
+
+ 4  });  
+
+ 5  </script>
+
+ 6 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -4967,48 +4662,48 @@ the group being :css and :javascript.
 **Haml**
 
 +---+----------------------------------------------------------------------+
- 1  :css                                                                 
-                                                                         
- 2  .container {                                                         
-                                                                         
- 3  margin: 0 auto;                                                      
-                                                                         
- 4  width: 960px;                                                        
-                                                                         
- 5  }                                                                    
-                                                                         
- 6  :sass                                                                
-                                                                         
- 7  .container                                                           
-                                                                         
- 8  margin: 0 auto                                                       
-                                                                         
- 9  width: 960px                                                         
-                                                                         
- 1                                                                       
- 0                                                                       
-                                                                         
- 1                                                                       
- 1                                                                       
+ 1  :css 
+
+ 2  .container { 
+
+ 3  margin: 0 auto; 
+
+ 4  width: 960px;
+
+ 5  } 
+
+ 6  :sass
+
+ 7  .container 
+
+ 8  margin: 0 auto  
+
+ 9  width: 960px 
+
+ 1 
+ 0 
+
+ 1 
+ 1 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **Compiled HTML**
 
 +---+----------------------------------------------------------------------+
- 1  <style>                                                            
-                                                                         
- 2  .container {                                                         
-                                                                         
- 3  margin: 0 auto;                                                      
-                                                                         
- 4  width: 960px;                                                        
-                                                                         
- 5  }                                                                    
-                                                                         
- 6  </style>                                                           
-                                                                         
- 7                                                                       
+ 1  <style>  
+
+ 2  .container { 
+
+ 3  margin: 0 auto; 
+
+ 4  width: 960px;
+
+ 5  } 
+
+ 6  </style> 
+
+ 7 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -5024,18 +4719,18 @@ Below is an example of Ruby being interpolated as part of a class name.
 **Haml**
 
 +---+----------------------------------------------------------------------+
- 1  %div{:class => "student-#{@student.name}"}                        
-                                                                         
- 2                                                                       
+ 1  %div{:class => "student-#{@student.name}"}
+
+ 2 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **Compiled HTML**
 
 +---+----------------------------------------------------------------------+
- 1  <div class="student-shay">                                       
-                                                                         
- 2                                                                       
+ 1  <div class="student-shay"> 
+
+ 2 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -5063,9 +4758,9 @@ Once Ruby is installed the gem install sass command needs to be run from
 the command line to install SCSS and Sass.
 
 +---+----------------------------------------------------------------------+
- 1  gem install sass                                                     
-                                                                         
- 2                                                                       
+ 1  gem install sass
+
+ 2 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -5074,9 +4769,9 @@ extensions respectively. To convert either of these file types
 to .css the following sass command needs to be run.
 
 +---+----------------------------------------------------------------------+
- 1  sass styles.sass styles.css                                          
-                                                                         
- 2                                                                       
+ 1  sass styles.sass styles.css 
+
+ 2 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -5092,9 +4787,9 @@ recompile the CSS every time a change takes place. To watch a Sass file
 the following sass command may be run.
 
 +---+----------------------------------------------------------------------+
- 1  sass &#45;&#45;watch styles.sass:styles.css                                 
-                                                                         
- 2                                                                       
+ 1  sass &#45;&#45;watch styles.sass:styles.css 
+
+ 2 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -5104,9 +4799,9 @@ example, to watch an entire directory of Sass files and convert them to
 CSS the sass command below may be run.
 
 +---+----------------------------------------------------------------------+
- 1  sass &#45;&#45;watch assets/sass:public/css                                 
-                                                                         
- 2                                                                       
+ 1  sass &#45;&#45;watch assets/sass:public/css 
+
+ 2 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -5118,17 +4813,17 @@ the sass commands below may be used to convert a SCSS file to Sass, and
 then a Sass file to SCSS respectively.
 
 +---+--------------------------------------------------------------------+
- 1  &#0035; Convert Sass to SCSS                                            
-                                                                       
- 2  sass-convert styles.sass styles.scss                               
-                                                                       
- 3  &#0035; Convert SCSS to Sass                                            
-                                                                       
- 4  sass-convert styles.scss styles.sass                               
-                                                                       
- 5                                                                     
-                                                                       
- 6                                                                     
+ 1  &#0035; Convert Sass to SCSS
+ 
+ 2  sass-convert styles.sass styles.scss  
+ 
+ 3  &#0035; Convert SCSS to Sass
+ 
+ 4  sass-convert styles.scss styles.sass  
+ 
+ 5  
+ 
+ 6  
 +===+====================================================================+
 +---+--------------------------------------------------------------------+
 
@@ -5145,59 +4840,59 @@ indentation and clear line breaks for formatting.
 **SCSS**
 
 +---+----------------------------------------------------------------------+
- 1  .new {                                                               
-                                                                         
- 2  color: #ff7b29;                                                      
-                                                                         
- 3  font-weight: bold;                                                   
-                                                                         
- 4  span {                                                               
-                                                                         
- 5  text-transform: uppercase;                                           
-                                                                         
- 6  }                                                                    
-                                                                         
- 7  }                                                                    
-                                                                         
- 8                                                                       
+ 1  .new {  
+
+ 2  color: #ff7b29; 
+
+ 3  font-weight: bold; 
+
+ 4  span {  
+
+ 5  text-transform: uppercase;  
+
+ 6  } 
+
+ 7  } 
+
+ 8 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **Sass**
 
 +---+----------------------------------------------------------------------+
- 1  .new                                                                 
-                                                                         
- 2  color: #ff7b29                                                       
-                                                                         
- 3  font-weight: bold                                                    
-                                                                         
- 4  span                                                                 
-                                                                         
- 5  text-transform: uppercase                                            
-                                                                         
- 6                                                                       
+ 1  .new 
+
+ 2  color: #ff7b29  
+
+ 3  font-weight: bold  
+
+ 4  span 
+
+ 5  text-transform: uppercase
+
+ 6 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **Compiled CSS**
 
 +---+----------------------------------------------------------------------+
- 1  .new {                                                               
-                                                                         
- 2  color: #ff7b29;                                                      
-                                                                         
- 3  font-weight: bold;                                                   
-                                                                         
- 4  }                                                                    
-                                                                         
- 5  .new span {                                                          
-                                                                         
- 6  text-transform: uppercase;                                           
-                                                                         
- 7  }                                                                    
-                                                                         
- 8                                                                       
+ 1  .new {  
+
+ 2  color: #ff7b29; 
+
+ 3  font-weight: bold; 
+
+ 4  } 
+
+ 5  .new span {
+
+ 6  text-transform: uppercase;  
+
+ 7  } 
+
+ 8 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -5229,45 +4924,45 @@ selectors without raising specificity is important.
 **Sass**
 
 +---+----------------------------------------------------------------------+
- 1  .portfolio                                                           
-                                                                         
- 2  border: 1px solid #9799a7                                            
-                                                                         
- 3  ul                                                                   
-                                                                         
- 4  list-style: none                                                     
-                                                                         
- 5  li                                                                   
-                                                                         
- 6  float: left                                                          
-                                                                         
- 7                                                                       
+ 1  .portfolio 
+
+ 2  border: 1px solid #9799a7
+
+ 3  ul
+
+ 4  list-style: none
+
+ 5  li
+
+ 6  float: left
+
+ 7 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **Compiled CSS**
 
 +---+----------------------------------------------------------------------+
- 1  .portfolio {                                                         
-                                                                         
- 2  border: 1px solid #9799a7;                                           
-                                                                         
- 3  }                                                                    
-                                                                         
- 4  .portfolio ul {                                                      
-                                                                         
- 5  list-style: none;                                                    
-                                                                         
- 6  }                                                                    
-                                                                         
- 7  .portfolio li {                                                      
-                                                                         
- 8  float: left;                                                         
-                                                                         
- 9  }                                                                    
-                                                                         
- 1                                                                       
- 0                                                                       
+ 1  .portfolio { 
+
+ 2  border: 1px solid #9799a7;  
+
+ 3  } 
+
+ 4  .portfolio ul { 
+
+ 5  list-style: none;  
+
+ 6  } 
+
+ 7  .portfolio li { 
+
+ 8  float: left; 
+
+ 9  } 
+
+ 1 
+ 0 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -5283,34 +4978,34 @@ your decision is up to personal preference.
 **Sass**
 
 +---+----------------------------------------------------------------------+
- 1  div                                                                  
-                                                                         
- 2  font:                                                                
-                                                                         
- 3  family: Baskerville, Palatino, serif                                 
-                                                                         
- 4  style: italic                                                        
-                                                                         
- 5  weight: normal                                                       
-                                                                         
- 6                                                                       
+ 1  div  
+
+ 2  font:
+
+ 3  family: Baskerville, Palatino, serif 
+
+ 4  style: italic
+
+ 5  weight: normal  
+
+ 6 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **Compiled CSS**
 
 +---+----------------------------------------------------------------------+
- 1  div {                                                                
-                                                                         
- 2  font-family: Baskerville, Palatino, serif;                           
-                                                                         
- 3  font-style: italic;                                                  
-                                                                         
- 4  font-weight: normal;                                                 
-                                                                         
- 5  }                                                                    
-                                                                         
- 6                                                                       
+ 1  div {
+
+ 2  font-family: Baskerville, Palatino, serif;
+
+ 3  font-style: italic;
+
+ 4  font-weight: normal;  
+
+ 5  } 
+
+ 6 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -5322,38 +5017,38 @@ changing property values based off a media condition.
 **Sass**
 
 +---+----------------------------------------------------------------------+
- 1  .container                                                           
-                                                                         
- 2  width: 960px                                                         
-                                                                         
- 3  &#0064;media screen and (max-width: 960px)                                
-                                                                         
- 4  width: 100%                                                          
-                                                                         
- 5                                                                       
+ 1  .container 
+
+ 2  width: 960px 
+
+ 3  &#0064;media screen and (max-width: 960px)
+
+ 4  width: 100%
+
+ 5 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **Compiled CSS**
 
 +---+----------------------------------------------------------------------+
- 1  .container {                                                         
-                                                                         
- 2  width: 960px;                                                        
-                                                                         
- 3  }                                                                    
-                                                                         
- 4  &#0064;media screen and (max-width: 960px) {                              
-                                                                         
- 5  .container {                                                         
-                                                                         
- 6  width: 100%;                                                         
-                                                                         
- 7  }                                                                    
-                                                                         
- 8  }                                                                    
-                                                                         
- 9                                                                       
+ 1  .container { 
+
+ 2  width: 960px;
+
+ 3  } 
+
+ 4  &#0064;media screen and (max-width: 960px) { 
+
+ 5  .container { 
+
+ 6  width: 100%; 
+
+ 7  } 
+
+ 8  } 
+
+ 9 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -5369,34 +5064,34 @@ as &.featured.
 **Sass**
 
 +---+----------------------------------------------------------------------+
- 1  a                                                                    
-                                                                         
- 2  color: #0087cc                                                       
-                                                                         
- 3  &:hover                                                              
-                                                                         
- 4  color: #ff7b29                                                       
-                                                                         
- 5                                                                       
+ 1  a 
+
+ 2  color: #0087cc  
+
+ 3  &:hover 
+
+ 4  color: #ff7b29  
+
+ 5 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **Compiled CSS**
 
 +---+----------------------------------------------------------------------+
- 1  a {                                                                  
-                                                                         
- 2  color: #0087cc;                                                      
-                                                                         
- 3  }                                                                    
-                                                                         
- 4  a:hover {                                                            
-                                                                         
- 5  color: #ff7b29;                                                      
-                                                                         
- 6  }                                                                    
-                                                                         
- 7                                                                       
+ 1  a {  
+
+ 2  color: #0087cc; 
+
+ 3  } 
+
+ 4  a:hover {  
+
+ 5  color: #ff7b29; 
+
+ 6  } 
+
+ 7 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -5410,34 +5105,34 @@ of the most beneficial is inside of feature detection.
 **Sass**
 
 +---+----------------------------------------------------------------------+
- 1  .btn                                                                 
-                                                                         
- 2  background: linear-gradient(#fff, #9799a7)                           
-                                                                         
- 3  .no-cssgradients &                                                   
-                                                                         
- 4  background: url("gradient.png") 0 0 repeat-x                       
-                                                                         
- 5                                                                       
+ 1  .btn 
+
+ 2  background: linear-gradient(#fff, #9799a7)
+
+ 3  .no-cssgradients & 
+
+ 4  background: url("gradient.png") 0 0 repeat-x  
+
+ 5 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **Compiled CSS**
 
 +---+----------------------------------------------------------------------+
- 1  .btn {                                                               
-                                                                         
- 2  background: linear-gradient(#fff, #9799a7);                          
-                                                                         
- 3  }                                                                    
-                                                                         
- 4  .no-cssgradients .btn {                                              
-                                                                         
- 5  background: url("gradient.png") 0 0 repeat-x;                      
-                                                                         
- 6  }                                                                    
-                                                                         
- 7                                                                       
+ 1  .btn {  
+
+ 2  background: linear-gradient(#fff, #9799a7);  
+
+ 3  } 
+
+ 4  .no-cssgradients .btn {  
+
+ 5  background: url("gradient.png") 0 0 repeat-x; 
+
+ 6  } 
+
+ 7 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -5456,42 +5151,42 @@ is not rendered in the compiled CSS.
 **Sass**
 
 +---+----------------------------------------------------------------------+
- 1  /&ast; Normal comment &ast;/                                               
-                                                                         
- 2  div                                                                  
-                                                                         
- 3  background: #333                                                     
-                                                                         
- 4  // Omitted comment                                                   
-                                                                         
- 5  strong                                                               
-                                                                         
- 6  display: block                                                       
-                                                                         
- 7                                                                       
+ 1  /&ast; Normal comment &ast;/
+
+ 2  div  
+
+ 3  background: #333
+
+ 4  // Omitted comment 
+
+ 5  strong  
+
+ 6  display: block  
+
+ 7 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **Compiled CSS**
 
 +---+----------------------------------------------------------------------+
- 1  /&ast; Normal comment &ast;/                                               
-                                                                         
- 2  div {                                                                
-                                                                         
- 3  background: #333;                                                    
-                                                                         
- 4  }                                                                    
-                                                                         
- 5  strong {                                                             
-                                                                         
- 6  display: block;                                                      
-                                                                         
- 7  }                                                                    
-                                                                         
- 8                                                                       
-                                                                         
- 9                                                                       
+ 1  /&ast; Normal comment &ast;/
+
+ 2  div {
+
+ 3  background: #333;  
+
+ 4  } 
+
+ 5  strong {
+
+ 6  display: block; 
+
+ 7  } 
+
+ 8 
+
+ 9 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -5510,30 +5205,30 @@ separated by spaces or commas.
 <h4>Sass</h4>
 
 +---+----------------------------------------------------------------------+
- 1  &#36;font-base: 1em                                                     
-                                                                         
- 2  &#36;serif: "Helvetica Neue", Arial, "Lucida Grande", sans-serif    
-                                                                         
- 3  p                                                                    
-                                                                         
- 4  font: &#36;font-base &#36;serif                                            
-                                                                         
- 5                                                                       
-                                                                         
- 6                                                                       
+ 1  &#36;font-base: 1em
+
+ 2  &#36;serif: "Helvetica Neue", Arial, "Lucida Grande", sans-serif 
+
+ 3  p 
+
+ 4  font: &#36;font-base &#36;serif
+
+ 5 
+
+ 6 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **Compiled CSS**
 
 +---+----------------------------------------------------------------------+
- 1  p {                                                                  
-                                                                         
+ 1  p {  
+
  2  font: 1em "Helvetica Neue", Arial, "Lucida Grande", sans-serif;  
-                                                                         
- 3  }                                                                    
-                                                                         
- 4                                                                       
+
+ 3  } 
+
+ 4 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -5548,30 +5243,30 @@ string of plain text.
 <h4>Sass</h4>
 
 +---+----------------------------------------------------------------------+
- 1  &#36;location: chicago                                                  
-                                                                         
- 2  &#36;offset: left                                                       
-                                                                         
- 3  .#{&#36;location}                                                       
-                                                                         
- 4  #{&#36;offset}: 20px                                                    
-                                                                         
- 5                                                                       
-                                                                         
- 6                                                                       
+ 1  &#36;location: chicago
+
+ 2  &#36;offset: left  
+
+ 3  .#{&#36;location}  
+
+ 4  #{&#36;offset}: 20px  
+
+ 5 
+
+ 6 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **Compiled CSS**
 
 +---+----------------------------------------------------------------------+
- 1  .chicago {                                                           
-                                                                         
- 2  left: 20px;                                                          
-                                                                         
- 3  }                                                                    
-                                                                         
- 4                                                                       
+ 1  .chicago { 
+
+ 2  left: 20px;
+
+ 3  } 
+
+ 4 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -5597,30 +5292,30 @@ have a unit.
 <h4>Sass</h4>
 
 +---+----------------------------------------------------------------------+
- 1  width: 40px + 6                                                      
-                                                                         
- 2  width: 40px - 6                                                      
-                                                                         
- 3  width: 40px &ast; 6                                                     
-                                                                         
- 4  width: 40px % 6                                                      
-                                                                         
- 5                                                                       
+ 1  width: 40px + 6 
+
+ 2  width: 40px - 6 
+
+ 3  width: 40px &ast; 6
+
+ 4  width: 40px % 6 
+
+ 5 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **Compiled CSS**
 
 +---+----------------------------------------------------------------------+
- 1  width: 46px;                                                         
-                                                                         
- 2  width: 34px;                                                         
-                                                                         
- 3  width: 240px;                                                        
-                                                                         
- 4  width: 4px;                                                          
-                                                                         
- 5                                                                       
+ 1  width: 46px; 
+
+ 2  width: 34px; 
+
+ 3  width: 240px;
+
+ 4  width: 4px;
+
+ 5 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -5639,36 +5334,36 @@ value will be unitless.
 **Sass**
 
 +---+----------------------------------------------------------------------+
- 1  width: 100px / 10                                                    
-                                                                         
- 2  width: (100px / 10)                                                  
-                                                                         
- 3  width: (100px / 10px)                                                
-                                                                         
- 4  &#36;width: 100px                                                       
-                                                                         
- 5  width: &#36;width / 10                                                  
-                                                                         
- 6  width: 5px - 100px / 10                                              
-                                                                         
- 7                                                                       
+ 1  width: 100px / 10  
+
+ 2  width: (100px / 10)
+
+ 3  width: (100px / 10px) 
+
+ 4  &#36;width: 100px  
+
+ 5  width: &#36;width / 10
+
+ 6  width: 5px - 100px / 10  
+
+ 7 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **Compiled CSS**
 
 +---+----------------------------------------------------------------------+
- 1  width: 100px/10;                                                     
-                                                                         
- 2  width: 10px;                                                         
-                                                                         
- 3  width: 10;                                                           
-                                                                         
- 4  width: 10px;                                                         
-                                                                         
- 5  width: -5px;                                                         
-                                                                         
- 6                                                                       
+ 1  width: 100px/10;
+
+ 2  width: 10px; 
+
+ 3  width: 10; 
+
+ 4  width: 10px; 
+
+ 5  width: -5px; 
+
+ 6 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -5681,28 +5376,28 @@ on the use of parentheses.
 **Sass**
 
 +---+----------------------------------------------------------------------+
- 1  &#36;grid: 16                                                           
-                                                                         
- 2  &#36;column: 40px                                                       
-                                                                         
- 3  &#36;gutter: 20px                                                       
-                                                                         
- 4  &#36;container: (&#36;column &ast; &#36;grid) + (&#36;gutter &ast; &#36;grid)             
-                                                                         
- 5  width: &#36;container                                                   
-                                                                         
- 6                                                                       
-                                                                         
- 7                                                                       
+ 1  &#36;grid: 16 
+
+ 2  &#36;column: 40px  
+
+ 3  &#36;gutter: 20px  
+
+ 4  &#36;container: (&#36;column &ast; &#36;grid) + (&#36;gutter &ast; &#36;grid) 
+
+ 5  width: &#36;container 
+
+ 6 
+
+ 7 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **Compiled CSS**
 
 +---+----------------------------------------------------------------------+
- 1  width: 960px;                                                        
-                                                                         
- 2                                                                       
+ 1  width: 960px;
+
+ 2 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -5719,47 +5414,47 @@ value up to the closest whole number, and the floor() function rounds a
 value down to the closest whole number. Lastly, the abs() function finds
 the absolute value of a given number.
 
--   percentage()
+-percentage()
 
--   round()
+-round()
 
--   ceil()
+-ceil()
 
--   floor()
+-floor()
 
--   abs()
+-abs()
 
 **Sass**
 
 +---+----------------------------------------------------------------------+
- 1  width: percentage(2.5)                                               
-                                                                         
- 2  width: round(2.5px)                                                  
-                                                                         
- 3  width: ceil(2.5px)                                                   
-                                                                         
- 4  width: floor(2.5px)                                                  
-                                                                         
- 5  width: abs(-2.5px)                                                   
-                                                                         
- 6                                                                       
+ 1  width: percentage(2.5)
+
+ 2  width: round(2.5px)
+
+ 3  width: ceil(2.5px) 
+
+ 4  width: floor(2.5px)
+
+ 5  width: abs(-2.5px) 
+
+ 6 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **Compiled CSS**
 
 +---+----------------------------------------------------------------------+
- 1  width: 250%;                                                         
-                                                                         
- 2  width: 3px;                                                          
-                                                                         
- 3  width: 3px;                                                          
-                                                                         
- 4  width: 2px;                                                          
-                                                                         
- 5  width: 2.5px;                                                        
-                                                                         
- 6                                                                       
+ 1  width: 250%; 
+
+ 2  width: 3px;
+
+ 3  width: 3px;
+
+ 4  width: 2px;
+
+ 5  width: 2.5px;
+
+ 6 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -5774,24 +5469,24 @@ value.
 **Sass**
 
 +---+----------------------------------------------------------------------+
- 1  color: rgba(#8ec63f, .25)                                            
-                                                                         
- 2  &#36;green: #8ec63f                                                     
-                                                                         
- 3  color: rgba(&#36;green, .25)                                            
-                                                                         
- 4                                                                       
-                                                                         
- 5                                                                       
+ 1  color: rgba(#8ec63f, .25)
+
+ 2  &#36;green: #8ec63f
+
+ 3  color: rgba(&#36;green, .25)
+
+ 4 
+
+ 5 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **Compiled CSS**
 
 +---+----------------------------------------------------------------------+
- 1  color: rgba(142, 198, 63, .25);                                      
-                                                                         
- 2                                                                       
+ 1  color: rgba(142, 198, 63, .25);
+
+ 2 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -5805,26 +5500,26 @@ intended.
 **Sass**
 
 +---+----------------------------------------------------------------------+
- 1  color: #8ec63f + #666                                                
-                                                                         
- 2  color: #8ec63f &ast; 2                                                  
-                                                                         
- 3  color: rgba(142, 198, 63, .75) / rgba(255, 255, 255, .75)            
-                                                                         
- 4                                                                       
+ 1  color: #8ec63f + #666 
+
+ 2  color: #8ec63f &ast; 2
+
+ 3  color: rgba(142, 198, 63, .75) / rgba(255, 255, 255, .75)
+
+ 4 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **Compiled CSS**
 
 +---+----------------------------------------------------------------------+
- 1  color: #f4ffa5;                                                      
-                                                                         
- 2  color: #ffff7e;                                                      
-                                                                         
- 3  color: rgba(0, 0, 0, .75);                                           
-                                                                         
- 4                                                                       
+ 1  color: #f4ffa5; 
+
+ 2  color: #ffff7e; 
+
+ 3  color: rgba(0, 0, 0, .75);  
+
+ 4 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -5836,45 +5531,45 @@ option. Color alterations provide the ability to inverse colors, find
 complementary colors, mix colors together, or find the grayscale value
 of a color.
 
--   invert()
+-invert()
 
--   complement()
+-complement()
 
--   mix()
+-mix()
 
--   grayscale()
+-grayscale()
 
 **Sass**
 
 +---+----------------------------------------------------------------------+
- 1  color: invert(#8ec63f)                                               
-                                                                         
- 2  color: complement(#8ec63f)                                           
-                                                                         
- 3  color: mix(#8ec63f, #fff)                                            
-                                                                         
- 4  color: mix(#8ec63f, #fff, 10%)                                       
-                                                                         
- 5  color: grayscale(#8ec63f)                                            
-                                                                         
- 6                                                                       
+ 1  color: invert(#8ec63f)
+
+ 2  color: complement(#8ec63f)  
+
+ 3  color: mix(#8ec63f, #fff)
+
+ 4  color: mix(#8ec63f, #fff, 10%) 
+
+ 5  color: grayscale(#8ec63f)
+
+ 6 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **Compiled CSS**
 
 +---+----------------------------------------------------------------------+
- 1  color: #7139c0;                                                      
-                                                                         
- 2  color: #773fc6;                                                      
-                                                                         
- 3  color: #c6e29f;                                                      
-                                                                         
- 4  color: #f3f9eb;                                                      
-                                                                         
- 5  color: #838383;                                                      
-                                                                         
- 6                                                                       
+ 1  color: #7139c0; 
+
+ 2  color: #773fc6; 
+
+ 3  color: #c6e29f; 
+
+ 4  color: #f3f9eb; 
+
+ 5  color: #838383; 
+
+ 6 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -5884,63 +5579,63 @@ HSLa color alterations take things a step further, adding in even more
 alterations. Some of the more popular HSLa color alterations
 include lighten(), darken(), saturate(), and desaturate().
 
--   lighten()
+-lighten()
 
--   darken()
+-darken()
 
--   saturate()
+-saturate()
 
--   desaturate()
+-desaturate()
 
--   adjust-hue()
+-adjust-hue()
 
--   fade-in()
+-fade-in()
 
--   fade-out()
+-fade-out()
 
 **Sass**
 
 +---+----------------------------------------------------------------------+
- 1  color: lighten(#8ec63f, 50%)                                         
-                                                                         
- 2  color: darken(#8ec63f, 30%)                                          
-                                                                         
- 3  color: saturate(#8ec63f, 75%)                                        
-                                                                         
- 4  color: desaturate(#8ec63f, 25%)                                      
-                                                                         
- 5  color: adjust-hue(#8ec63f, 30)                                       
-                                                                         
- 6  color: adjust-hue(#8ec63f, -30)                                      
-                                                                         
- 7  color: fade-in(rgba(142, 198, 63, 0), .4)                            
-                                                                         
- 8  color: fade-out(#8ec63f, .4)                                         
-                                                                         
- 9                                                                       
+ 1  color: lighten(#8ec63f, 50%)
+
+ 2  color: darken(#8ec63f, 30%) 
+
+ 3  color: saturate(#8ec63f, 75%)  
+
+ 4  color: desaturate(#8ec63f, 25%)
+
+ 5  color: adjust-hue(#8ec63f, 30) 
+
+ 6  color: adjust-hue(#8ec63f, -30)
+
+ 7  color: fade-in(rgba(142, 198, 63, 0), .4) 
+
+ 8  color: fade-out(#8ec63f, .4)
+
+ 9 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **Compiled CSS**
 
 +---+----------------------------------------------------------------------+
- 1  color: white;                                                        
-                                                                         
- 2  color: #3b5319;                                                      
-                                                                         
- 3  color: #98ff06;                                                      
-                                                                         
- 4  color: #89a75e;                                                      
-                                                                         
- 5  color: #4ac63f;                                                      
-                                                                         
- 6  color: #c6bb3f;                                                      
-                                                                         
- 7  color: rgba(142, 198, 63, 0.4);                                      
-                                                                         
- 8  color: rgba(142, 198, 63, 0.6);                                      
-                                                                         
- 9                                                                       
+ 1  color: white;
+
+ 2  color: #3b5319; 
+
+ 3  color: #98ff06; 
+
+ 4  color: #89a75e; 
+
+ 5  color: #4ac63f; 
+
+ 6  color: #c6bb3f; 
+
+ 7  color: rgba(142, 198, 63, 0.4);
+
+ 8  color: rgba(142, 198, 63, 0.6);
+
+ 9 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -5952,42 +5647,42 @@ specific color properties. With this control also comes complexity,
 which is why color manipulations are a bit less common than color
 alterations.
 
--   change-color() --- Set any property of a color\
-    &#36;color, &lbrack;&#36;red&rbrack;, &lbrack;&#36;green&rbrack;, &lbrack;&#36;blue&rbrack;, &lbrack;&#36;hue&rbrack;,
-    &lbrack;&#36;saturation&rbrack;, &lbrack;&#36;lightness&rbrack;, &lbrack;&#36;alpha&rbrack;
+-change-color() --- Set any property of a color\
+ &#36;color, &lbrack;&#36;red&rbrack;, &lbrack;&#36;green&rbrack;, &lbrack;&#36;blue&rbrack;, &lbrack;&#36;hue&rbrack;,
+ &lbrack;&#36;saturation&rbrack;, &lbrack;&#36;lightness&rbrack;, &lbrack;&#36;alpha&rbrack;
 
--   adjust-color() --- Incrementally manipulate any property of a color\
-    &#36;color, &lbrack;&#36;red&rbrack;, &lbrack;&#36;green&rbrack;, &lbrack;&#36;blue&rbrack;, &lbrack;&#36;hue&rbrack;,
-    &lbrack;&#36;saturation&rbrack;, &lbrack;&#36;lightness&rbrack;, &lbrack;&#36;alpha&rbrack;
+-adjust-color() --- Incrementally manipulate any property of a color\
+ &#36;color, &lbrack;&#36;red&rbrack;, &lbrack;&#36;green&rbrack;, &lbrack;&#36;blue&rbrack;, &lbrack;&#36;hue&rbrack;,
+ &lbrack;&#36;saturation&rbrack;, &lbrack;&#36;lightness&rbrack;, &lbrack;&#36;alpha&rbrack;
 
--   scale-color() --- Fluidly scale any percentage based on property of
-    a color\
-    &#36;color, &lbrack;&#36;red&rbrack;, &lbrack;&#36;green&rbrack;, &lbrack;&#36;blue&rbrack;, &lbrack;&#36;saturation&rbrack;,
-    &lbrack;&#36;lightness&rbrack;, &lbrack;&#36;alpha&rbrack;
+-scale-color() --- Fluidly scale any percentage based on property of
+ a color\
+ &#36;color, &lbrack;&#36;red&rbrack;, &lbrack;&#36;green&rbrack;, &lbrack;&#36;blue&rbrack;, &lbrack;&#36;saturation&rbrack;,
+ &lbrack;&#36;lightness&rbrack;, &lbrack;&#36;alpha&rbrack;
 
 **Sass**
 
 +---+----------------------------------------------------------------------+
- 1  color: change-color(#8ec63f, &#36;red: 60, &#36;green: 255)                
-                                                                         
- 2  color: adjust-color(#8ec63f, &#36;hue: 300, &#36;lightness: 50%)           
-                                                                         
- 3  color: scale-color(#8ec63f, &#36;lightness: 25%, &#36;alpha: 30%)          
-                                                                         
- 4                                                                       
+ 1  color: change-color(#8ec63f, &#36;red: 60, &#36;green: 255) 
+
+ 2  color: adjust-color(#8ec63f, &#36;hue: 300, &#36;lightness: 50%)  
+
+ 3  color: scale-color(#8ec63f, &#36;lightness: 25%, &#36;alpha: 30%) 
+
+ 4 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **Compiled CSS**
 
 +---+----------------------------------------------------------------------+
- 1  color: #3cff3f;                                                      
-                                                                         
- 2  color: white;                                                        
-                                                                         
- 3  color: #aad46f;                                                      
-                                                                         
- 4                                                                       
+ 1  color: #3cff3f; 
+
+ 2  color: white;
+
+ 3  color: #aad46f; 
+
+ 4 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -6010,49 +5705,49 @@ code weight. Additionally, extends parley nicely with OOCSS and SMACSS.
 **Sass**
 
 +---+----------------------------------------------------------------------+
- 1  .alert                                                               
-                                                                         
- 2  border-radius: 10px                                                  
-                                                                         
- 3  padding: 10px 20px                                                   
-                                                                         
- 4  .alert-error                                                         
-                                                                         
- 5  &#0064;extend .alert                                                      
-                                                                         
- 6  background: #f2dede                                                  
-                                                                         
- 7  color: #b94a48                                                       
-                                                                         
- 8                                                                       
-                                                                         
- 9                                                                       
+ 1  .alert  
+
+ 2  border-radius: 10px
+
+ 3  padding: 10px 20px 
+
+ 4  .alert-error 
+
+ 5  &#0064;extend .alert 
+
+ 6  background: #f2dede
+
+ 7  color: #b94a48  
+
+ 8 
+
+ 9 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **Compiled CSS**
 
 +---+----------------------------------------------------------------------+
- 1  .alert,                                                              
-                                                                         
- 2  .alert-error {                                                       
-                                                                         
- 3  border-radius: 10px;                                                 
-                                                                         
- 4  padding: 10px 20px;                                                  
-                                                                         
- 5  }                                                                    
-                                                                         
- 6  .alert-error {                                                       
-                                                                         
- 7  background: #f2dede;                                                 
-                                                                         
- 8  color: #b94a48;                                                      
-                                                                         
- 9  }                                                                    
-                                                                         
- 1                                                                       
- 0                                                                       
+ 1  .alert, 
+
+ 2  .alert-error {  
+
+ 3  border-radius: 10px;  
+
+ 4  padding: 10px 20px;
+
+ 5  } 
+
+ 6  .alert-error {  
+
+ 7  background: #f2dede;  
+
+ 8  color: #b94a48; 
+
+ 9  } 
+
+ 1 
+ 0 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -6068,46 +5763,46 @@ the .alert selector never makes its way into the CSS.
 **Sass**
 
 +---+----------------------------------------------------------------------+
- 1  %alert                                                               
-                                                                         
- 2  border-radius: 10px                                                  
-                                                                         
- 3  padding: 10px 20px                                                   
-                                                                         
- 4  .alert-error                                                         
-                                                                         
- 5  &#0064;extend %alert                                                      
-                                                                         
- 6  background: #f2dede                                                  
-                                                                         
- 7  color: #b94a48                                                       
-                                                                         
- 8                                                                       
-                                                                         
- 9                                                                       
+ 1  %alert  
+
+ 2  border-radius: 10px
+
+ 3  padding: 10px 20px 
+
+ 4  .alert-error 
+
+ 5  &#0064;extend %alert 
+
+ 6  background: #f2dede
+
+ 7  color: #b94a48  
+
+ 8 
+
+ 9 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **Compiled CSS**
 
 +---+----------------------------------------------------------------------+
- 1  .alert-error {                                                       
-                                                                         
- 2  border-radius: 10px;                                                 
-                                                                         
- 3  padding: 10px 20px;                                                  
-                                                                         
- 4  }                                                                    
-                                                                         
- 5  .alert-error {                                                       
-                                                                         
- 6  background: #f2dede;                                                 
-                                                                         
- 7  color: #b94a48;                                                      
-                                                                         
- 8  }                                                                    
-                                                                         
- 9                                                                       
+ 1  .alert-error {  
+
+ 2  border-radius: 10px;  
+
+ 3  padding: 10px 20px;
+
+ 4  } 
+
+ 5  .alert-error {  
+
+ 6  background: #f2dede;  
+
+ 7  color: #b94a48; 
+
+ 8  } 
+
+ 9 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -6118,40 +5813,40 @@ As with classes, extends also work with standard element selectors too.
 **Sass**
 
 +---+----------------------------------------------------------------------+
- 1  h2                                                                   
-                                                                         
- 2  color: #9c6                                                          
-                                                                         
- 3  span                                                                 
-                                                                         
- 4  text-decoration: underline                                           
-                                                                         
- 5  .sub-heading                                                         
-                                                                         
- 6  &#0064;extend h2                                                          
-                                                                         
- 7                                                                       
-                                                                         
- 8                                                                       
+ 1  h2
+
+ 2  color: #9c6
+
+ 3  span 
+
+ 4  text-decoration: underline  
+
+ 5  .sub-heading 
+
+ 6  &#0064;extend h2
+
+ 7 
+
+ 8 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **Compiled CSS**
 
 +---+----------------------------------------------------------------------+
- 1  h2, .sub-heading {                                                   
-                                                                         
- 2  color: #9c6;                                                         
-                                                                         
- 3  }                                                                    
-                                                                         
- 4  h2 span, .sub-heading span {                                         
-                                                                         
- 5  text-decoration: underline;                                          
-                                                                         
- 6  }                                                                    
-                                                                         
- 7                                                                       
+ 1  h2, .sub-heading { 
+
+ 2  color: #9c6; 
+
+ 3  } 
+
+ 4  h2 span, .sub-heading span {
+
+ 5  text-decoration: underline; 
+
+ 6  } 
+
+ 7 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -6172,40 +5867,40 @@ using a plus sign to call a mixin SCSS use an @include rule.
 **Sass**
 
 +---+----------------------------------------------------------------------+
- 1  &#0064;mixin btn(&#36;color, &#36;color-hover)                                  
-                                                                         
- 2  color: &#36;color                                                       
-                                                                         
- 3  &:hover                                                              
-                                                                         
- 4  color: &#36;color-hover                                                 
-                                                                         
- 5  .btn                                                                 
-                                                                         
- 6  +btn(&#36;color: #fff, &#36;color-hover: #9799a7)                          
-                                                                         
- 7                                                                       
-                                                                         
- 8                                                                       
+ 1  &#0064;mixin btn(&#36;color, &#36;color-hover)  
+
+ 2  color: &#36;color  
+
+ 3  &:hover 
+
+ 4  color: &#36;color-hover  
+
+ 5  .btn 
+
+ 6  +btn(&#36;color: #fff, &#36;color-hover: #9799a7)  
+
+ 7 
+
+ 8 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **Compiled CSS**
 
 +---+----------------------------------------------------------------------+
- 1  .btn {                                                               
-                                                                         
- 2  color: #fff;                                                         
-                                                                         
- 3  }                                                                    
-                                                                         
- 4  .btn:hover {                                                         
-                                                                         
- 5  color: #9799a7;                                                      
-                                                                         
- 6  }                                                                    
-                                                                         
- 7                                                                       
+ 1  .btn {  
+
+ 2  color: #fff; 
+
+ 3  } 
+
+ 4  .btn:hover { 
+
+ 5  color: #9799a7; 
+
+ 6  } 
+
+ 7 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -6217,40 +5912,40 @@ values, which may be over written if wished.
 **Sass**
 
 +---+----------------------------------------------------------------------+
- 1  &#0064;mixin btn(&#36;color: #fff, &#36;color-hover: #9799a7)                   
-                                                                         
- 2  color: &#36;color                                                       
-                                                                         
- 3  &:hover                                                              
-                                                                         
- 4  color: &#36;color-hover                                                 
-                                                                         
- 5  .btn                                                                 
-                                                                         
- 6  +btn(&#36;color-hover: #9799a7)                                         
-                                                                         
- 7                                                                       
-                                                                         
- 8                                                                       
+ 1  &#0064;mixin btn(&#36;color: #fff, &#36;color-hover: #9799a7) 
+
+ 2  color: &#36;color  
+
+ 3  &:hover 
+
+ 4  color: &#36;color-hover  
+
+ 5  .btn 
+
+ 6  +btn(&#36;color-hover: #9799a7)
+
+ 7 
+
+ 8 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **Compiled CSS**
 
 +---+----------------------------------------------------------------------+
- 1  .btn {                                                               
-                                                                         
- 2  color: #fff;                                                         
-                                                                         
- 3  }                                                                    
-                                                                         
- 4  .btn:hover {                                                         
-                                                                         
- 5  color: #9799a7;                                                      
-                                                                         
- 6  }                                                                    
-                                                                         
- 7                                                                       
+ 1  .btn {  
+
+ 2  color: #fff; 
+
+ 3  } 
+
+ 4  .btn:hover { 
+
+ 5  color: #9799a7; 
+
+ 6  } 
+
+ 7 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -6261,38 +5956,38 @@ name may end with &#8230; inside of the mixin. In the example below with
 box shadows we can pass in comma separated values to the mixin.
 
 +---+----------------------------------------------------------------------+
- 1  &#0064;mixin box-shadow(&#36;shadow&#8230;)                                     
-                                                                         
- 2  -webkit-box-shadow: &#36;shadow                                         
-                                                                         
- 3  -moz-box-shadow: &#36;shadow                                            
-                                                                         
- 4  box-shadow: &#36;shadow                                                 
-                                                                         
- 5  .shadows                                                             
-                                                                         
- 6  +box-shadow(0 1px 2px #cecfd5, inset 0 0 5px #cecfd5)                
-                                                                         
- 7                                                                       
-                                                                         
- 8                                                                       
+ 1  &#0064;mixin box-shadow(&#36;shadow&#8230;)  
+
+ 2  -webkit-box-shadow: &#36;shadow
+
+ 3  -moz-box-shadow: &#36;shadow
+
+ 4  box-shadow: &#36;shadow  
+
+ 5  .shadows
+
+ 6  +box-shadow(0 1px 2px #cecfd5, inset 0 0 5px #cecfd5) 
+
+ 7 
+
+ 8 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **Compiled CSS**
 
 +---+----------------------------------------------------------------------+
- 1  .shadows {                                                           
-                                                                         
- 2  -moz-box-shadow: 0 1px 2px #cecfd5, inset 0 0 5px #cecfd5;           
-                                                                         
- 3  -webkit-box-shadow: 0 1px 2px #cecfd5, inset 0 0 5px #cecfd5;        
-                                                                         
- 4  box-shadow: 0 1px 2px #cecfd5, inset 0 0 5px #cecfd5;                
-                                                                         
- 5  }                                                                    
-                                                                         
- 6                                                                       
+ 1  .shadows { 
+
+ 2  -moz-box-shadow: 0 1px 2px #cecfd5, inset 0 0 5px #cecfd5;  
+
+ 3  -webkit-box-shadow: 0 1px 2px #cecfd5, inset 0 0 5px #cecfd5;  
+
+ 4  box-shadow: 0 1px 2px #cecfd5, inset 0 0 5px #cecfd5; 
+
+ 5  } 
+
+ 6 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -6318,20 +6013,20 @@ HTML document.
 **Sass**
 
 +---+----------------------------------------------------------------------+
- 1  &#0064;import "normalize"                                               
-                                                                         
- 2  &#0064;import "grid", "typography"                                    
-                                                                         
- 3                                                                       
+ 1  &#0064;import "normalize"
+
+ 2  &#0064;import "grid", "typography" 
+
+ 3 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **Compiled HTML**
 
 +---+----------------------------------------------------------------------+
- 1  <link href="styles.css" rel="stylesheet">                      
-                                                                         
- 2                                                                       
+ 1  <link href="styles.css" rel="stylesheet"> 
+
+ 2 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -6351,48 +6046,48 @@ operators. Relational operators looks at the relationship between two
 entities, while comparison operators determine equality or different
 between to entities.
 
--   <\
-    Less than
+-<\
+ Less than
 
--   >\
-    Greater than
+->\
+ Greater than
 
--   ==\
-    Equal to
+-==\
+ Equal to
 
--   <=\
-    Less than or equal to
+-<=\
+ Less than or equal to
 
--   >=\
-    Greather than or equal to
+->=\
+ Greather than or equal to
 
--   !=\
-    Not equal to
+-!=\
+ Not equal to
 
 +---+----------------------------------------------------------------------+
- 1  // Relational Operators                                              
-                                                                         
- 2  6 < 10 // true                                                      
-                                                                         
- 3  4 <= 60 // true                                                     
-                                                                         
- 4  8 > 2 // true                                                       
-                                                                         
- 5  10 >= 10 // true                                                    
-                                                                         
- 6  // Comparison Operators                                              
-                                                                         
- 7  #fff == white // true                                                
-                                                                         
- 8  10 + 30 == 40 // true                                                
-                                                                         
- 9  normal != bold // true                                               
-                                                                         
- 1                                                                       
- 0                                                                       
-                                                                         
- 1                                                                       
- 1                                                                       
+ 1  // Relational Operators  
+
+ 2  6 < 10 // true 
+
+ 3  4 <= 60 // true
+
+ 4  8 > 2 // true  
+
+ 5  10 >= 10 // true  
+
+ 6  // Comparison Operators  
+
+ 7  #fff == white // true 
+
+ 8  10 + 30 == 40 // true 
+
+ 9  normal != bold // true
+
+ 1 
+ 0 
+
+ 1 
+ 1 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -6407,39 +6102,39 @@ directly tied to it will be applied.
 **Sass**
 
 +---+----------------------------------------------------------------------+
- 1  &#36;shay: awesome                                                      
-                                                                         
- 2  .shay                                                                
-                                                                         
- 3  &#0064;if &#36;shay == awesome                                               
-                                                                         
- 4  background: #ff7b29                                                  
-                                                                         
- 5  &#0064;else if &#36;shay == cool                                             
-                                                                         
- 6  background: #0087cc                                                  
-                                                                         
- 7  &#0064;else                                                               
-                                                                         
- 8  background: #333                                                     
-                                                                         
- 9                                                                       
-                                                                         
- 1                                                                       
- 0                                                                       
+ 1  &#36;shay: awesome 
+
+ 2  .shay
+
+ 3  &#0064;if &#36;shay == awesome
+
+ 4  background: #ff7b29
+
+ 5  &#0064;else if &#36;shay == cool 
+
+ 6  background: #0087cc
+
+ 7  &#0064;else  
+
+ 8  background: #333
+
+ 9 
+
+ 1 
+ 0 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **Compiled CSS**
 
 +---+----------------------------------------------------------------------+
- 1  .shay {                                                              
-                                                                         
- 2  background: #ff7b29;                                                 
-                                                                         
- 3  }                                                                    
-                                                                         
- 4                                                                       
+ 1  .shay { 
+
+ 2  background: #ff7b29;  
+
+ 3  } 
+
+ 4 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -6454,57 +6149,57 @@ output styles up to, but not including, 3. The other form, @for &#36;i from
 **Sass**
 
 +---+----------------------------------------------------------------------+
- 1  &#0064;for &#36;col from 1 to 6                                              
-                                                                         
- 2  .col-#{&#36;col}                                                        
-                                                                         
- 3  width: 40px &ast; &#36;col                                                 
-                                                                         
- 4                                                                       
+ 1  &#0064;for &#36;col from 1 to 6  
+
+ 2  .col-#{&#36;col}
+
+ 3  width: 40px &ast; &#36;col  
+
+ 4 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **Compiled CSS**
 
 +---+----------------------------------------------------------------------+
- 1  .col-1 {                                                             
-                                                                         
- 2  width: 40px;                                                         
-                                                                         
- 3  }                                                                    
-                                                                         
- 4  .col-2 {                                                             
-                                                                         
- 5  width: 80px;                                                         
-                                                                         
- 6  }                                                                    
-                                                                         
- 7  .col-3 {                                                             
-                                                                         
- 8  width: 120px;                                                        
-                                                                         
- 9  }                                                                    
-                                                                         
- 1  .col-4 {                                                             
- 0                                                                       
-    width: 160px;                                                        
- 1                                                                       
- 1  }                                                                    
-                                                                         
- 1  .col-5 {                                                             
- 2                                                                       
-    width: 200px;                                                        
- 1                                                                       
- 3  }                                                                    
-                                                                         
- 1                                                                       
- 4                                                                       
-                                                                         
- 1                                                                       
- 5                                                                       
-                                                                         
- 1                                                                       
- 6                                                                       
+ 1  .col-1 {
+
+ 2  width: 40px; 
+
+ 3  } 
+
+ 4  .col-2 {
+
+ 5  width: 80px; 
+
+ 6  } 
+
+ 7  .col-3 {
+
+ 8  width: 120px;
+
+ 9  } 
+
+ 1  .col-4 {
+ 0 
+ width: 160px;
+ 1 
+ 1  } 
+
+ 1  .col-5 {
+ 2 
+ width: 200px;
+ 1 
+ 3  } 
+
+ 1 
+ 4 
+
+ 1 
+ 5 
+
+ 1 
+ 6 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -6516,48 +6211,48 @@ List may include multiple comma separated items.
 **Sass**
 
 +---+----------------------------------------------------------------------+
- 1  &#0064;each &#36;class in uxd, rails, html, css                              
-                                                                         
- 2  .#{&#36;class}-logo                                                     
-                                                                         
- 3  background: url("/img/#{&#36;class}.jpg")                             
-                                                                         
- 4                                                                       
+ 1  &#0064;each &#36;class in uxd, rails, html, css 
+
+ 2  .#{&#36;class}-logo
+
+ 3  background: url("/img/#{&#36;class}.jpg")
+
+ 4 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **Compiled CSS**
 
 +---+----------------------------------------------------------------------+
- 1  .uxd-logo {                                                          
-                                                                         
- 2  background: url("/img/uxd.jpg");                                   
-                                                                         
- 3  }                                                                    
-                                                                         
- 4  .rails-logo {                                                        
-                                                                         
- 5  background: url("/img/rails.jpg");                                 
-                                                                         
- 6  }                                                                    
-                                                                         
- 7  .html-logo {                                                         
-                                                                         
- 8  background: url("/img/html.jpg");                                  
-                                                                         
- 9  }                                                                    
-                                                                         
- 1  .css-logo {                                                          
- 0                                                                       
-    background: url("/img/css.jpg");                                   
- 1                                                                       
- 1  }                                                                    
-                                                                         
- 1                                                                       
- 2                                                                       
-                                                                         
- 1                                                                       
- 3                                                                       
+ 1  .uxd-logo {
+
+ 2  background: url("/img/uxd.jpg");
+
+ 3  } 
+
+ 4  .rails-logo {
+
+ 5  background: url("/img/rails.jpg"); 
+
+ 6  } 
+
+ 7  .html-logo { 
+
+ 8  background: url("/img/html.jpg");  
+
+ 9  } 
+
+ 1  .css-logo {
+ 0 
+ background: url("/img/css.jpg");
+ 1 
+ 1  } 
+
+ 1 
+ 2 
+
+ 1 
+ 3 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -6570,70 +6265,70 @@ counter variable can be finely controlled allowing for precise looping.
 **Sass**
 
 +---+----------------------------------------------------------------------+
- 1  &#36;heading: 1                                                         
-                                                                         
- 2  &#0064;while &#36;heading <= 6                                              
-                                                                         
- 3  h#{&#36;heading}                                                        
-                                                                         
- 4  font-size: 2em - (&#36;heading &ast; .25em)                                
-                                                                         
- 5  &#36;heading: &#36;heading + 1                                             
-                                                                         
- 6                                                                       
+ 1  &#36;heading: 1 
+
+ 2  &#0064;while &#36;heading <= 6  
+
+ 3  h#{&#36;heading}
+
+ 4  font-size: 2em - (&#36;heading &ast; .25em)
+
+ 5  &#36;heading: &#36;heading + 1 
+
+ 6 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **Compiled CSS**
 
 +---+----------------------------------------------------------------------+
- 1  h1 {                                                                 
-                                                                         
- 2  font-size: 1.75em;                                                   
-                                                                         
- 3  }                                                                    
-                                                                         
- 4  h2 {                                                                 
-                                                                         
- 5  font-size: 1.5em;                                                    
-                                                                         
- 6  }                                                                    
-                                                                         
- 7  h3 {                                                                 
-                                                                         
- 8  font-size: 1.25em;                                                   
-                                                                         
- 9  }                                                                    
-                                                                         
- 1  h4 {                                                                 
- 0                                                                       
-    font-size: 1em;                                                      
- 1                                                                       
- 1  }                                                                    
-                                                                         
- 1  h5 {                                                                 
- 2                                                                       
-    font-size: 0.75em;                                                   
- 1                                                                       
- 3  }                                                                    
-                                                                         
- 1  h6 {                                                                 
- 4                                                                       
-    font-size: 0.5em;                                                    
- 1                                                                       
- 5  }                                                                    
-                                                                         
- 1                                                                       
- 6                                                                       
-                                                                         
- 1                                                                       
- 7                                                                       
-                                                                         
- 1                                                                       
- 8                                                                       
-                                                                         
- 1                                                                       
- 9                                                                       
+ 1  h1 { 
+
+ 2  font-size: 1.75em; 
+
+ 3  } 
+
+ 4  h2 { 
+
+ 5  font-size: 1.5em;  
+
+ 6  } 
+
+ 7  h3 { 
+
+ 8  font-size: 1.25em; 
+
+ 9  } 
+
+ 1  h4 { 
+ 0 
+ font-size: 1em; 
+ 1 
+ 1  } 
+
+ 1  h5 { 
+ 2 
+ font-size: 0.75em; 
+ 1 
+ 3  } 
+
+ 1  h6 { 
+ 4 
+ font-size: 0.5em;  
+ 1 
+ 5  } 
+
+ 1 
+ 6 
+
+ 1 
+ 7 
+
+ 1 
+ 8 
+
+ 1 
+ 9 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -6658,24 +6353,24 @@ your research for each project and make the most educated decision.
 
 <h4>Resources & Links</h4>
 
--   [Haml](http://haml.info/) --- HTML Abstraction Markup
-    Language
+-[Haml](http://haml.info/) --- HTML Abstraction Markup
+ Language
 
--   [Sass](http://sass-lang.com/) --- Syntactically
-    Awesome Stylesheets
+-[Sass](http://sass-lang.com/) --- Syntactically
+ Awesome Stylesheets
 
--   [Haml Documentation
-    Reference](http://haml.info/docs/yardoc/file.REFERENCE.html)
+-[Haml Documentation
+ Reference](http://haml.info/docs/yardoc/file.REFERENCE.html)
 
--   [Sass Documentation
-    Reference](https://sass-lang.com/documentation/)
+-[Sass Documentation
+ Reference](https://sass-lang.com/documentation/)
 
--   [Sass Playground](http://sassmeister.com/) via
-    SassMeister
+-[Sass Playground](http://sassmeister.com/) via
+ SassMeister
 
--   [SassScript
-    Function](https://sass-lang.com/documentation/modules) via
-    Sass Documentation
+-[SassScript
+ Function](https://sass-lang.com/documentation/modules) via
+ Sass Documentation
 
 [**Lesson 4** [Responsive Web
 Design](https://learn.shayhowe.com/advanced-html-css/responsive-web-design/)
@@ -6688,21 +6383,21 @@ In this Lesson 6
 
 **JAVASCRIPT**
 
--   [JavaScript
-    Intro](https://learn.shayhowe.com/advanced-html-css/jquery/#javascript)
+-[JavaScript
+ Intro](https://learn.shayhowe.com/advanced-html-css/jquery/#javascript)
 
--   [jQuery
-    Intro](https://learn.shayhowe.com/advanced-html-css/jquery/#jquery)
+-[jQuery
+ Intro](https://learn.shayhowe.com/advanced-html-css/jquery/#jquery)
 
--   [Selectors](https://learn.shayhowe.com/advanced-html-css/jquery/#selectors)
+-[Selectors](https://learn.shayhowe.com/advanced-html-css/jquery/#selectors)
 
--   [Traversing](https://learn.shayhowe.com/advanced-html-css/jquery/#traversing)
+-[Traversing](https://learn.shayhowe.com/advanced-html-css/jquery/#traversing)
 
--   [Manipulation](https://learn.shayhowe.com/advanced-html-css/jquery/#manipulation)
+-[Manipulation](https://learn.shayhowe.com/advanced-html-css/jquery/#manipulation)
 
--   [Events](https://learn.shayhowe.com/advanced-html-css/jquery/#events)
+-[Events](https://learn.shayhowe.com/advanced-html-css/jquery/#events)
 
--   [Effects](https://learn.shayhowe.com/advanced-html-css/jquery/#effects)
+-[Effects](https://learn.shayhowe.com/advanced-html-css/jquery/#effects)
 
 **SHARE**
 
@@ -6738,9 +6433,9 @@ help render HTML and determine it's behavior, thus may be referenced
 within a documents head.
 
 +---+----------------------------------------------------------------------+
- 1  <script src="script.js"></script>                              
-                                                                         
- 2                                                                       
+ 1  <script src="script.js"></script> 
+
+ 2 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -6770,15 +6465,15 @@ each new word except for the initial word. For
 example, shay_is_awesome would more commonly named shayIsAwesome.
 
 +---+----------------------------------------------------------------------+
- 1  var theStarterLeague = 125;                                          
-                                                                         
- 2  var food_truck = &#39;Coffee&#39;;                                         
-                                                                         
- 3  var mixtape01 = true;                                                
-                                                                         
+ 1  var theStarterLeague = 125; 
+
+ 2  var food_truck = &#39;Coffee&#39;;
+
+ 3  var mixtape01 = true; 
+
  4  var vinyl = &lbrack;&#39;Miles Davis&#39;, &#39;Frank Sinatra&#39;, &#39;Ray Charles&#39;&rbrack;; 
-                                                                         
- 5                                                                       
+
+ 5 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -6793,13 +6488,13 @@ and indentation should be used when nesting statements for better
 legibility, but is not required.
 
 +---+----------------------------------------------------------------------+
- 1  log(polaroid);                                                       
-                                                                         
- 2  return(&#39;bicycle lane&#39;);                                            
-                                                                         
- 3  alert(&#39;Congratulations, you &#39; + outcome);                          
-                                                                         
- 4                                                                       
+ 1  log(polaroid);  
+
+ 2  return(&#39;bicycle lane&#39;);
+
+ 3  alert(&#39;Congratulations, you &#39; + outcome);  
+
+ 4 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -6816,13 +6511,13 @@ parentheses, if necessary, and then the JavaScript statement, or
 statements, that defines the function enclosed in curly braces, {}.
 
 +---+----------------------------------------------------------------------+
- 1  function sayHello(name) {                                            
-                                                                         
- 2  return(&#39;Hello &#39; + name);                                           
-                                                                         
- 3  }                                                                    
-                                                                         
- 4                                                                       
+ 1  function sayHello(name) {
+
+ 2  return(&#39;Hello &#39; + name);  
+
+ 3  } 
+
+ 4 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -6853,29 +6548,29 @@ object is wrapped inside of curly braces, {}, with comma separated
 properties, each having a key followed by a colon and value.
 
 +---+----------------------------------------------------------------------+
- 1  // Object                                                            
-                                                                         
- 2  var school = {                                                       
-                                                                         
- 3  name: &#39;The Starter League&#39;,                                        
-                                                                         
- 4  location: &#39;Merchandise Mart&#39;,                                      
-                                                                         
- 5  students: 120,                                                       
-                                                                         
- 6  teachers: &lbrack;&#39;Jeff&#39;, &#39;Raghu&#39;, &#39;Carolyn&#39;, &#39;Shay&#39;&rbrack;             
-                                                                         
- 7  };                                                                   
-                                                                         
- 8  // Array                                                             
-                                                                         
- 9  var school = &lbrack;&#39;Austin&#39;, &#39;Chicago&#39;, &#39;Portland&#39;&rbrack;;              
-                                                                         
- 1                                                                       
- 0                                                                       
-                                                                         
- 1                                                                       
- 1                                                                       
+ 1  // Object  
+
+ 2  var school = {  
+
+ 3  name: &#39;The Starter League&#39;,  
+
+ 4  location: &#39;Merchandise Mart&#39;,
+
+ 5  students: 120,  
+
+ 6  teachers: &lbrack;&#39;Jeff&#39;, &#39;Raghu&#39;, &#39;Carolyn&#39;, &#39;Shay&#39;&rbrack; 
+
+ 7  };
+
+ 8  // Array
+
+ 9  var school = &lbrack;&#39;Austin&#39;, &#39;Chicago&#39;, &#39;Portland&#39;&rbrack;;  
+
+ 1 
+ 0 
+
+ 1 
+ 1 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -6920,11 +6615,11 @@ Additionally, using a CDN like Google also helps with loading time, and
 potential caching benefits.
 
 +---+----------------------------------------------------------------------+
- 1  <script                                                             
-    src="//aja                                                          
+ 1  <script
+ src="//aja
  2  x.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script> 
-                                                                         
- 3  <script src="script.js"></script>                              
+
+ 3  <script src="script.js"></script> 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -6952,11 +6647,11 @@ selections and actions should be written in a new file, referenced
 outside of the actual jQuery library.
 
 +---+----------------------------------------------------------------------+
- 1  &#36;();                                                                
-                                                                         
- 2  jQuery();                                                            
-                                                                         
- 3                                                                       
+ 1  &#36;();
+
+ 2  jQuery();  
+
+ 3 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -6970,13 +6665,13 @@ inside of this function we can guarantee that it will not be executed
 until the page has loaded and the DOM is ready.
 
 +---+----------------------------------------------------------------------+
- 1  &#36;(document).ready(function(event){                                  
-                                                                         
- 2  // jQuery code                                                       
-                                                                         
- 3  });                                                                  
-                                                                         
- 4                                                                       
+ 1  &#36;(document).ready(function(event){  
+
+ 2  // jQuery code  
+
+ 3  });  
+
+ 4 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -6996,17 +6691,17 @@ DOM node to manipulate it. The selector falls within the
 parentheses, (&#39;&#8230;&#39;), and may select elements just like that of CSS.
 
 +---+----------------------------------------------------------------------+
- 1  &#36;(&#39;.feature&#39;); // Class selector                                  
-                                                                         
- 2  &#36;(&#39;li strong&#39;); // Descendant selector                            
-                                                                         
- 3  &#36;(&#39;em, i&#39;); // Multiple selector                                  
-                                                                         
- 4  &#36;(&#39;a&lbrack;target="&#0095;blank"&rbrack;&#39;); // Attribute selector               
-                                                                         
- 5  &#36;(&#39;p:nth-child(2)&#39;); // Pseudo-class selector                     
-                                                                         
- 6                                                                       
+ 1  &#36;(&#39;.feature&#39;); // Class selector  
+
+ 2  &#36;(&#39;li strong&#39;); // Descendant selector 
+
+ 3  &#36;(&#39;em, i&#39;); // Multiple selector  
+
+ 4  &#36;(&#39;a&lbrack;target="&#0095;blank"&rbrack;&#39;); // Attribute selector
+
+ 5  &#36;(&#39;p:nth-child(2)&#39;); // Pseudo-class selector
+
+ 6 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -7018,13 +6713,13 @@ event the this keyword may be used to refer to the element selected in
 the current handler.
 
 +---+----------------------------------------------------------------------+
- 1  &#36;(&#39;div&#39;).click(function(event){                                   
-                                                                         
- 2  &#36;(this);                                                            
-                                                                         
- 3  });                                                                  
-                                                                         
- 4                                                                       
+ 1  &#36;(&#39;div&#39;).click(function(event){
+
+ 2  &#36;(this);  
+
+ 3  });  
+
+ 4 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -7036,9 +6731,9 @@ into jQuery to help out. These filters are an extension to CSS3 and
 provide more control over selecting an element or its relatives.
 
 +---+--------------------------------------------------------------------+
- 1  &#36;(&#39;div:has(strong)&#39;);                                           
-                                                                       
- 2                                                                     
+ 1  &#36;(&#39;div:has(strong)&#39;);  
+ 
+ 2  
 +===+====================================================================+
 +---+--------------------------------------------------------------------+
 
@@ -7062,9 +6757,9 @@ the .not() method. With this specific method all of the div elements
 without a class of type or collection will be selected.
 
 +---+----------------------------------------------------------------------+
- 1  &#36;(&#39;div&#39;).not(&#39;.type, .collection&#39;);                             
-                                                                         
- 2                                                                       
+ 1  &#36;(&#39;div&#39;).not(&#39;.type, .collection&#39;);
+
+ 2 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -7079,9 +6774,9 @@ the .parent() method. Combined together this will only select the parent
 elements of div elements without a class of type or collection.
 
 +---+----------------------------------------------------------------------+
- 1  &#36;(&#39;div&#39;).not(&#39;.type, .collection&#39;).parent();                    
-                                                                         
- 2                                                                       
+ 1  &#36;(&#39;div&#39;).not(&#39;.type, .collection&#39;).parent();  
+
+ 2 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -7095,63 +6790,63 @@ specific methods within each category may be seen below.
 
 <h4>Filtering</h4>
 
--   .eq()
+-.eq()
 
--   .filter()
+-.filter()
 
--   .first()
+-.first()
 
--   .has()
+-.has()
 
--   .is()
+-.is()
 
--   .last()
+-.last()
 
--   .map()
+-.map()
 
--   .not()
+-.not()
 
--   .slice()
+-.slice()
 
 <h4>Miscellaneous Traversing</h4>
 
--   .add()
+-.add()
 
--   .andSelf()
+-.andSelf()
 
--   .contents()
+-.contents()
 
--   .end()
+-.end()
 
 <h4>DOM Tree Traversal</h4>
 
--   .children()
+-.children()
 
--   .closest()
+-.closest()
 
--   .find()
+-.find()
 
--   .next()
+-.next()
 
--   .nextAll()
+-.nextAll()
 
--   .nextUntil()
+-.nextUntil()
 
--   .offsetParent()
+-.offsetParent()
 
--   .parent()
+-.parent()
 
--   .parents()
+-.parents()
 
--   .parentsUntil()
+-.parentsUntil()
 
--   .prev()
+-.prev()
 
--   .prevAll()
+-.prevAll()
 
--   .prevUntil()
+-.prevUntil()
 
--   .siblings()
+-.siblings()
 
 <h4>Manipulation</h4>
 
@@ -7174,17 +6869,17 @@ the same selector and method may also be used to set a piece of
 information.
 
 +---+----------------------------------------------------------------------+
- 1  // Gets the value of the alt attribute                               
-                                                                         
- 2  &#36;(&#39;img&#39;).attr(&#39;alt&#39;);                                           
-                                                                         
- 3  // Sets the value of the alt attribute                               
-                                                                         
- 4  &#36;(&#39;img&#39;).attr(&#39;alt&#39;, &#39;Wild kangaroo&#39;);                        
-                                                                         
- 5                                                                       
-                                                                         
- 6                                                                       
+ 1  // Gets the value of the alt attribute  
+
+ 2  &#36;(&#39;img&#39;).attr(&#39;alt&#39;);  
+
+ 3  // Sets the value of the alt attribute  
+
+ 4  &#36;(&#39;img&#39;).attr(&#39;alt&#39;, &#39;Wild kangaroo&#39;);
+
+ 5 
+
+ 6 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -7203,35 +6898,35 @@ the .attr() method is used to find the value of the title attribute of
 any abbr element and set it to Hello World.
 
 +---+----------------------------------------------------------------------+
- 1  &#36;(&#39;li:even&#39;).addClass(&#39;even-item&#39;);                             
-                                                                         
- 2  &#36;(&#39;p&#39;).removeClass();                                             
-                                                                         
- 3  &#36;(&#39;abbr&#39;).attr(&#39;title&#39;, &#39;Hello World&#39;);                       
-                                                                         
- 4                                                                       
+ 1  &#36;(&#39;li:even&#39;).addClass(&#39;even-item&#39;);
+
+ 2  &#36;(&#39;p&#39;).removeClass(); 
+
+ 3  &#36;(&#39;abbr&#39;).attr(&#39;title&#39;, &#39;Hello World&#39;);  
+
+ 4 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 <h4>Attribute Manipulation Methods</h4>
 
--   .addClass()
+-.addClass()
 
--   .attr()
+-.attr()
 
--   .hasClass()
+-.hasClass()
 
--   .prop()
+-.prop()
 
--   .removeAttr()
+-.removeAttr()
 
--   .removeClass()
+-.removeClass()
 
--   .removeProp()
+-.removeProp()
 
--   .toggleClass()
+-.toggleClass()
 
--   .val()
+-.val()
 
 <h4>Style Manipulation</h4>
 
@@ -7255,47 +6950,47 @@ to change the unit of measurement identify the value then use a plus
 sign followed by the quoted unit of measurement.
 
 +---+----------------------------------------------------------------------+
- 1  &#36;(&#39;h1 span&#39;).css(&#39;font-size&#39;, &#39;normal&#39;);                      
-                                                                         
- 2  &#36;(&#39;div&#39;).css({                                                    
-                                                                         
- 3  fontSize: &#39;13px&#39;,                                                  
-                                                                         
- 4  background: &#39;#f60&#39;                                                 
-                                                                         
- 5  });                                                                  
-                                                                         
- 6  &#36;(&#39;header&#39;).height(200);                                          
-                                                                         
- 7  &#36;(&#39;.extend&#39;).height(30 + &#39;em&#39;);                                 
-                                                                         
- 8                                                                       
+ 1  &#36;(&#39;h1 span&#39;).css(&#39;font-size&#39;, &#39;normal&#39;); 
+
+ 2  &#36;(&#39;div&#39;).css({  
+
+ 3  fontSize: &#39;13px&#39;,
+
+ 4  background: &#39;#f60&#39;  
+
+ 5  });  
+
+ 6  &#36;(&#39;header&#39;).height(200); 
+
+ 7  &#36;(&#39;.extend&#39;).height(30 + &#39;em&#39;); 
+
+ 8 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 <h4>Style Manipulation Methods</h4>
 
--   .css()
+-.css()
 
--   .height()
+-.height()
 
--   .innerHeight()
+-.innerHeight()
 
--   .innerWidth()
+-.innerWidth()
 
--   .offset()
+-.offset()
 
--   .outerHeight()
+-.outerHeight()
 
--   .outerWidth()
+-.outerWidth()
 
--   .position()
+-.position()
 
--   .scrollLeft()
+-.scrollLeft()
 
--   .scrollTop()
+-.scrollTop()
 
--   .width()
+-.width()
 
 <h4>DOM Manipulation</h4>
 
@@ -7311,57 +7006,57 @@ new em element just after the link, and the .text() method is replacing
 the text of any h1 elements with the text Hello World.
 
 +---+----------------------------------------------------------------------+
- 1  &#36;(&#39;section&#39;).prepend(&#39;<h3>Featured</h3>&#39;);                  
-                                                                         
+ 1  &#36;(&#39;section&#39;).prepend(&#39;<h3>Featured</h3>&#39;);
+
  2  &#36;(&#39;a&lbrack;target="&#0095;blank"&rbrack;&#39;).after(&#39;<em>New window.</em>&#39;); 
-                                                                         
- 3  &#36;(&#39;h1&#39;).text(&#39;Hello World&#39;);                                    
-                                                                         
- 4                                                                       
+
+ 3  &#36;(&#39;h1&#39;).text(&#39;Hello World&#39;); 
+
+ 4 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 <h4>DOM Manipulation Methods</h4>
 
--   .after()
+-.after()
 
--   .append()
+-.append()
 
--   .appendTo()
+-.appendTo()
 
--   .before()
+-.before()
 
--   .clone()
+-.clone()
 
--   .detach()
+-.detach()
 
--   .empty()
+-.empty()
 
--   .html()
+-.html()
 
--   .insertAfter()
+-.insertAfter()
 
--   .insertBefore()
+-.insertBefore()
 
--   .prepend()
+-.prepend()
 
--   .prependTo()
+-.prependTo()
 
--   .remove()
+-.remove()
 
--   .replaceAll()
+-.replaceAll()
 
--   .replaceWith()
+-.replaceWith()
 
--   .text()
+-.text()
 
--   .unwrap()
+-.unwrap()
 
--   .wrap()
+-.wrap()
 
--   .wrapAll()
+-.wrapAll()
 
--   .wrapInner()
+-.wrapInner()
 
 <h4>Events</h4>
 
@@ -7384,13 +7079,13 @@ bound to it. Now, when a list item is clicked on that list item, via
 the this keyword, receives the class of saved-item.
 
 +---+----------------------------------------------------------------------+
- 1  &#36;(&#39;li&#39;).click(function(event){                                    
-                                                                         
- 2  &#36;(this).addClass(&#39;saved-item&#39;);                                   
-                                                                         
- 3  });                                                                  
-                                                                         
- 4                                                                       
+ 1  &#36;(&#39;li&#39;).click(function(event){ 
+
+ 2  &#36;(this).addClass(&#39;saved-item&#39;);
+
+ 3  });  
+
+ 4 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -7411,13 +7106,13 @@ as the first argument inside the .on() method with the event handler
 function staying the same as before.
 
 +---+----------------------------------------------------------------------+
- 1  &#36;(&#39;li&#39;).on(&#39;click&#39;, function(event){                            
-                                                                         
- 2  &#36;(this).addClass(&#39;saved-item&#39;);                                   
-                                                                         
- 3  });                                                                  
-                                                                         
- 4                                                                       
+ 1  &#36;(&#39;li&#39;).on(&#39;click&#39;, function(event){ 
+
+ 2  &#36;(this).addClass(&#39;saved-item&#39;);
+
+ 3  });  
+
+ 4 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -7430,13 +7125,13 @@ with the class of pagination. Upon calling the .on() event
 the .click() event is called on the anchor with the up ID.
 
 +---+----------------------------------------------------------------------+
- 1  &#36;(&#39;.pagination&#39;).on(&#39;hover&#39;, function(event){                   
-                                                                         
- 2  &#36;(&#39;a#up&#39;).click();                                                
-                                                                         
- 3  });                                                                  
-                                                                         
- 4                                                                       
+ 1  &#36;(&#39;.pagination&#39;).on(&#39;hover&#39;, function(event){ 
+
+ 2  &#36;(&#39;a#up&#39;).click(); 
+
+ 3  });  
+
+ 4 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -7449,28 +7144,28 @@ clicking the close icon.
 **HTML**
 
 +---+--------------------------------------------------------------------+
- 1  <div class="notice-warning">                                   
-                                                                       
- 2  <div class="notice-close">&#215;</div>                       
-                                                                       
- 3  <strong>Warning!</strong> I&#8217;m about to lose my cool.     
-                                                                       
- 4  </div>                                                           
-                                                                       
- 5                                                                     
+ 1  <div class="notice-warning">
+ 
+ 2  <div class="notice-close">&#215;</div>  
+ 
+ 3  <strong>Warning!</strong> I&#8217;m about to lose my cool.  
+ 
+ 4  </div> 
+ 
+ 5  
 +===+====================================================================+
 +---+--------------------------------------------------------------------+
 
 **JavaScript**
 
 +---+--------------------------------------------------------------------+
- 1  &#36;(&#39;.notice-close&#39;).on(&#39;click&#39;, function(event){               
-                                                                       
- 2  &#36;(&#39;.notice-warning&#39;).remove();                                  
-                                                                       
- 3  });                                                                
-                                                                       
- 4                                                                     
+ 1  &#36;(&#39;.notice-close&#39;).on(&#39;click&#39;, function(event){
+ 
+ 2  &#36;(&#39;.notice-warning&#39;).remove();  
+ 
+ 3  });
+ 
+ 4  
 +===+====================================================================+
 +---+--------------------------------------------------------------------+
 
@@ -7486,93 +7181,93 @@ methods include:
 
 <h4>Browser Events</h4>
 
--   .resize()
+-.resize()
 
--   .scroll()
+-.scroll()
 
 <h4>Document Loading</h4>
 
--   .ready()
+-.ready()
 
 <h4>Event Handler Attachment</h4>
 
--   .off()
+-.off()
 
--   .on()
+-.on()
 
--   .one()
+-.one()
 
--   jQuery.proxy()
+-jQuery.proxy()
 
--   .trigger()
+-.trigger()
 
--   .triggerHandler()
+-.triggerHandler()
 
--   .unbind()
+-.unbind()
 
--   .undelegate()
+-.undelegate()
 
 <h4>Event Object</h4>
 
--   event.currentTarget
+-event.currentTarget
 
--   event.preventDefault()
+-event.preventDefault()
 
--   event.stopPropagation()
+-event.stopPropagation()
 
--   event.target
+-event.target
 
--   event.type
+-event.type
 
 <h4>Form Events</h4>
 
--   .blur()
+-.blur()
 
--   .change()
+-.change()
 
--   .focus()
+-.focus()
 
--   .select()
+-.select()
 
--   .submit()
+-.submit()
 
 <h4>Keyboard Events</h4>
 
--   .focusin()
+-.focusin()
 
--   .focusout()
+-.focusout()
 
--   .keydown()
+-.keydown()
 
--   .keypress()
+-.keypress()
 
--   .keyup()
+-.keyup()
 
 <h4>Mouse Events</h4>
 
--   .click()
+-.click()
 
--   .dblclick()
+-.dblclick()
 
--   .focusin()
+-.focusin()
 
--   .focusout()
+-.focusout()
 
--   .hover()
+-.hover()
 
--   .mousedown()
+-.mousedown()
 
--   .mouseenter()
+-.mouseenter()
 
--   .mouseleave()
+-.mouseleave()
 
--   .mousemove()
+-.mousemove()
 
--   .mouseout()
+-.mouseout()
 
--   .mouseover()
+-.mouseover()
 
--   .mouseup()
+-.mouseup()
 
 <h4>Effects</h4>
 
@@ -7609,13 +7304,13 @@ fine, but millisecond values may also be passed in directly. Keyword
 values must be quoted while millisecond values do not.
 
 +---+----------------------------------------------------------------------+
- 1  &#36;(&#39;.error&#39;).show();                                               
-                                                                         
- 2  &#36;(&#39;.error&#39;).show(&#39;slow&#39;);                                       
-                                                                         
- 3  &#36;(&#39;.error&#39;).show(500);                                            
-                                                                         
- 4                                                                       
+ 1  &#36;(&#39;.error&#39;).show();
+
+ 2  &#36;(&#39;.error&#39;).show(&#39;slow&#39;); 
+
+ 3  &#36;(&#39;.error&#39;).show(500);
+
+ 4 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -7631,11 +7326,11 @@ then slows down again before completion. The linear value runs the
 animation at one constant pace for the entire duration.
 
 +---+----------------------------------------------------------------------+
- 1  &#36;(&#39;.error&#39;).show(&#39;slow&#39;, &#39;linear&#39;);                           
-                                                                         
- 2  &#36;(&#39;.error&#39;).show(500, &#39;linear&#39;);                                
-                                                                         
- 3                                                                       
+ 1  &#36;(&#39;.error&#39;).show(&#39;slow&#39;, &#39;linear&#39;);
+
+ 2  &#36;(&#39;.error&#39;).show(500, &#39;linear&#39;);
+
+ 3 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -7658,13 +7353,13 @@ the duration or easing, if either exist. Inside this function new events
 or effects may be placed, each following their own required syntax.
 
 +---+----------------------------------------------------------------------+
- 1  &#36;(&#39;.error&#39;).show(&#39;slow&#39;, &#39;linear&#39;, function(event){           
-                                                                         
- 2  &#36;(&#39;.error .status&#39;).text(&#39;Continue&#39;);                           
-                                                                         
- 3  });                                                                  
-                                                                         
- 4                                                                       
+ 1  &#36;(&#39;.error&#39;).show(&#39;slow&#39;, &#39;linear&#39;, function(event){  
+
+ 2  &#36;(&#39;.error .status&#39;).text(&#39;Continue&#39;);
+
+ 3  });  
+
+ 4 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -7688,32 +7383,32 @@ animation is complete.
 **HTML**
 
 +---+--------------------------------------------------------------------+
- 1  <div class="notice-warning">                                   
-                                                                       
- 2  <div class="notice-close">&#215;</div>                       
-                                                                       
- 3  <strong>Warning!</strong> I&#8217;m about to lose my cool.     
-                                                                       
- 4  </div>                                                           
-                                                                       
- 5                                                                     
+ 1  <div class="notice-warning">
+ 
+ 2  <div class="notice-close">&#215;</div>  
+ 
+ 3  <strong>Warning!</strong> I&#8217;m about to lose my cool.  
+ 
+ 4  </div> 
+ 
+ 5  
 +===+====================================================================+
 +---+--------------------------------------------------------------------+
 
 **JavaScript**
 
 +---+-------------------------------------------------------------------+
- 1  &#36;(&#39;.notice-close&#39;).on(&#39;click&#39;, function(event){              
-                                                                      
- 2  &#36;(&#39;.notice-warning&#39;).fadeOut(&#39;slow&#39;, function(event){        
-                                                                      
- 3  &#36;(this).remove();                                                
-                                                                      
- 4  });                                                               
-                                                                      
- 5  });                                                               
-                                                                      
- 6                                                                    
+ 1  &#36;(&#39;.notice-close&#39;).on(&#39;click&#39;, function(event){  
+
+ 2  &#36;(&#39;.notice-warning&#39;).fadeOut(&#39;slow&#39;, function(event){  
+
+ 3  &#36;(this).remove(); 
+
+ 4  });  
+
+ 5  });  
+
+ 6 
 +===+===================================================================+
 +---+-------------------------------------------------------------------+
 
@@ -7721,91 +7416,91 @@ animation is complete.
 
 <h4>Basic Effects
 
--   .hide()
+-.hide()
 
--   .show()
+-.show()
 
--   .toggle()
+-.toggle()
 
 <h4>Custom Effects</h4>
 
--   .animate()
+-.animate()
 
--   .clearQueue()
+-.clearQueue()
 
--   .delay()
+-.delay()
 
--   .dequeue()
+-.dequeue()
 
--   jQuery.fx.interval
+-jQuery.fx.interval
 
--   jQuery.fx.off
+-jQuery.fx.off
 
--   .queue()
+-.queue()
 
--   .stop()
+-.stop()
 
 <h4>Fading Effects</h4>
 
--   .fadeIn()
+-.fadeIn()
 
--   .fadeOut()
+-.fadeOut()
 
--   .fadeTo()
+-.fadeTo()
 
--   .fadeToggle()
+-.fadeToggle()
 
 <h4>Sliding Effects</h4>
 
--   .slideDown()
+-.slideDown()
 
--   .slideToggle()
+-.slideToggle()
 
--   .slideUp()
+-.slideUp()
 
 <h4>Slide Demo</h4>
 
 **HTML**
 
 +---+-------------------------------------------------------------------+
- 1  <div class="panel">                                           
-                                                                      
- 2  <div class="panel-stage"></div>                             
-                                                                      
- 3  <a href="#" class="panel-tab">Open                          
-    <span>&#9660;</span></a>                                    
- 4                                                                    
-    </div>                                                          
- 5                                                                    
+ 1  <div class="panel">  
+
+ 2  <div class="panel-stage"></div>
+
+ 3  <a href="#" class="panel-tab">Open  
+ <span>&#9660;</span></a> 
+ 4 
+ </div>
+ 5 
 +===+===================================================================+
 +---+-------------------------------------------------------------------+
 
 **JavaScript**
 
 +---+-------------------------------------------------------------------+
- 1  &#36;(&#39;.panel-tab&#39;).on(&#39;click&#39;, function(event){                 
-                                                                      
- 2  event.preventDefault();                                           
-                                                                      
- 3  &#36;(&#39;.panel-stage&#39;).slideToggle(&#39;slow&#39;, function(event){       
-                                                                      
- 4  if(&#36;(this).is(&#39;:visible&#39;)){                                    
-                                                                      
- 5  &#36;(&#39;.panel-tab&#39;).html(&#39;Close <span>&#9650;</span>&#39;);      
-                                                                      
- 6  } else {                                                          
-                                                                      
- 7  &#36;(&#39;.panel-tab&#39;).html(&#39;Open <span>&#9660;</span>&#39;);       
-                                                                      
- 8  }                                                                 
-                                                                      
- 9  });                                                               
-                                                                      
- 1  });                                                               
- 0                                                                    
-                                                                      
- 1                                                                    
- 1                                                                    
+ 1  &#36;(&#39;.panel-tab&#39;).on(&#39;click&#39;, function(event){  
+
+ 2  event.preventDefault();  
+
+ 3  &#36;(&#39;.panel-stage&#39;).slideToggle(&#39;slow&#39;, function(event){ 
+
+ 4  if(&#36;(this).is(&#39;:visible&#39;)){ 
+
+ 5  &#36;(&#39;.panel-tab&#39;).html(&#39;Close <span>&#9650;</span>&#39;);
+
+ 6  } else {
+
+ 7  &#36;(&#39;.panel-tab&#39;).html(&#39;Open <span>&#9660;</span>&#39;); 
+
+ 8  } 
+
+ 9  });  
+
+ 1  });  
+ 0 
+
+ 1 
+ 1 
 +===+===================================================================+
 +---+-------------------------------------------------------------------+
 
@@ -7816,61 +7511,61 @@ Tabs Demo
 **HTML**
 
 +---+--------------------------------------------------------------------+
- 1  <ul class="tabs-nav">                                          
-                                                                       
- 2  <li><a href="#tab-1">Features</a></li>                   
-                                                                       
- 3  <li><a href="#tab-2">Details</a></li>                    
-                                                                       
- 4  </ul>                                                            
-                                                                       
- 5  <div class="tabs-stage">                                       
-                                                                       
- 6  <div id="tab-1">&#8230;</div>                                   
-                                                                       
- 7  <div id="tab-2">&#8230;</div>                                   
-                                                                       
- 8  </div>                                                           
-                                                                       
- 9                                                                     
+ 1  <ul class="tabs-nav"> 
+ 
+ 2  <li><a href="#tab-1">Features</a></li> 
+ 
+ 3  <li><a href="#tab-2">Details</a></li>  
+ 
+ 4  </ul>  
+ 
+ 5  <div class="tabs-stage"> 
+ 
+ 6  <div id="tab-1">&#8230;</div>
+ 
+ 7  <div id="tab-2">&#8230;</div>
+ 
+ 8  </div> 
+ 
+ 9  
 +===+====================================================================+
 +---+--------------------------------------------------------------------+
 
 **JavaScript**
 
 +---+--------------------------------------------------------------------+
- 1  // Show the first tab by default                                   
-                                                                       
- 2  &#36;(&#39;.tabs-stage div&#39;).hide();                                    
-                                                                       
- 3  &#36;(&#39;.tabs-stage div:first&#39;).show();                              
-                                                                       
- 4  &#36;(&#39;.tabs-nav li:first&#39;).addClass(&#39;tab-active&#39;);               
-                                                                       
- 5  // Change tab class and display content                            
-                                                                       
- 6  &#36;(&#39;.tabs-nav a&#39;).on(&#39;click&#39;, function(event){                 
-                                                                       
- 7  event.preventDefault();                                            
-                                                                       
- 8  &#36;(&#39;.tabs-nav li&#39;).removeClass(&#39;tab-active&#39;);                  
-                                                                       
- 9  &#36;(this).parent().addClass(&#39;tab-active&#39;);                        
-                                                                       
- 1  &#36;(&#39;.tabs-stage div&#39;).hide();                                    
- 0                                                                     
-    &#36;(&#36;(this).attr(&#39;href&#39;)).show();                                
- 1                                                                     
- 1  });                                                                
-                                                                       
- 1                                                                     
- 2                                                                     
-                                                                       
- 1                                                                     
- 3                                                                     
-                                                                       
- 1                                                                     
- 4                                                                     
+ 1  // Show the first tab by default
+ 
+ 2  &#36;(&#39;.tabs-stage div&#39;).hide(); 
+ 
+ 3  &#36;(&#39;.tabs-stage div:first&#39;).show(); 
+ 
+ 4  &#36;(&#39;.tabs-nav li:first&#39;).addClass(&#39;tab-active&#39;);
+ 
+ 5  // Change tab class and display content 
+ 
+ 6  &#36;(&#39;.tabs-nav a&#39;).on(&#39;click&#39;, function(event){  
+ 
+ 7  event.preventDefault();
+ 
+ 8  &#36;(&#39;.tabs-nav li&#39;).removeClass(&#39;tab-active&#39;);
+ 
+ 9  &#36;(this).parent().addClass(&#39;tab-active&#39;);
+ 
+ 1  &#36;(&#39;.tabs-stage div&#39;).hide(); 
+ 0  
+ &#36;(&#36;(this).attr(&#39;href&#39;)).show();
+ 1  
+ 1  });
+ 
+ 1  
+ 2  
+ 
+ 1  
+ 3  
+ 
+ 1  
+ 4  
 +===+====================================================================+
 +---+--------------------------------------------------------------------+
 
@@ -7878,25 +7573,25 @@ Tabs Demo
 
 <h4>Resources &amp; Links</h4>
 
--   [JavaScript For Cats](http://jsforcats.com/)
+-[JavaScript For Cats](http://jsforcats.com/)
 
--   [A Re-introduction to
-    JavaScript](https://developer.mozilla.org/en-US/docs/JavaScript/A_re-introduction_to_JavaScript) via
-    Mozilla Developer Network
+-[A Re-introduction to
+ JavaScript](https://developer.mozilla.org/en-US/docs/JavaScript/A_re-introduction_to_JavaScript) via
+ Mozilla Developer Network
 
--   [30 Days to Learn
-    jQuery](https://tutsplus.com/course/30-days-to-learn-jquery/) via
-    Tuts+ Premium
+-[30 Days to Learn
+ jQuery](https://tutsplus.com/course/30-days-to-learn-jquery/) via
+ Tuts+ Premium
 
--   [Google Hosted
-    Libraries](https://developers.google.com/speed/libraries/devguide)
+-[Google Hosted
+ Libraries](https://developers.google.com/speed/libraries/devguide)
 
--   [jQuery Documentation](http://docs.jquery.com/)
+-[jQuery Documentation](http://docs.jquery.com/)
 
--   [jQuery Fundamentals](http://jqfundamentals.com/) via
-    Bocoup
+-[jQuery Fundamentals](http://jqfundamentals.com/) via
+ Bocoup
 
--   [jQuery UI](http://jqueryui.com/)
+-[jQuery UI](http://jqueryui.com/)
 
 [**Lesson 5**]
 [Preprocessors](https://learn.shayhowe.com/advanced-html-css/preprocessors/)
@@ -7912,28 +7607,28 @@ Software. Faster.
 
 **CSS**
 
--   [Transform
-    Syntax](https://learn.shayhowe.com/advanced-html-css/css-transforms/#transform-syntax)
+-[Transform
+ Syntax](https://learn.shayhowe.com/advanced-html-css/css-transforms/#transform-syntax)
 
--   [2D
-    Transforms](https://learn.shayhowe.com/advanced-html-css/css-transforms/#two-dimensional-transforms)
+-[2D
+ Transforms](https://learn.shayhowe.com/advanced-html-css/css-transforms/#two-dimensional-transforms)
 
--   [Combining
-    Transforms](https://learn.shayhowe.com/advanced-html-css/css-transforms/#combining-transforms)
+-[Combining
+ Transforms](https://learn.shayhowe.com/advanced-html-css/css-transforms/#combining-transforms)
 
--   [Transform
-    Origin](https://learn.shayhowe.com/advanced-html-css/css-transforms/#transform-origin)
+-[Transform
+ Origin](https://learn.shayhowe.com/advanced-html-css/css-transforms/#transform-origin)
 
--   [Perspective](https://learn.shayhowe.com/advanced-html-css/css-transforms/#perspective)
+-[Perspective](https://learn.shayhowe.com/advanced-html-css/css-transforms/#perspective)
 
--   [3D
-    Transforms](https://learn.shayhowe.com/advanced-html-css/css-transforms/#three-dimensional-transforms)
+-[3D
+ Transforms](https://learn.shayhowe.com/advanced-html-css/css-transforms/#three-dimensional-transforms)
 
--   [Transform
-    Style](https://learn.shayhowe.com/advanced-html-css/css-transforms/#transform-style)
+-[Transform
+ Style](https://learn.shayhowe.com/advanced-html-css/css-transforms/#transform-style)
 
--   [Backface
-    Visibility](https://learn.shayhowe.com/advanced-html-css/css-transforms/#backface-visibility)
+-[Backface
+ Visibility](https://learn.shayhowe.com/advanced-html-css/css-transforms/#backface-visibility)
 
 **SHARE**
 
@@ -7961,19 +7656,19 @@ the transform property followed by the value. The value specifies the
 transform type followed by a specific amount inside parentheses.
 
 +---+----------------------------------------------------------------------+
- 1  div {                                                                
-                                                                         
- 2  -webkit-transform: scale(1.5);                                       
-                                                                         
- 3  -moz-transform: scale(1.5);                                          
-                                                                         
- 4  -o-transform: scale(1.5);                                            
-                                                                         
- 5  transform: scale(1.5);                                               
-                                                                         
- 6  }                                                                    
-                                                                         
- 7                                                                       
+ 1  div {
+
+ 2  -webkit-transform: scale(1.5); 
+
+ 3  -moz-transform: scale(1.5); 
+
+ 4  -o-transform: scale(1.5);
+
+ 5  transform: scale(1.5);
+
+ 6  } 
+
+ 7 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -8014,30 +7709,30 @@ discuss how you can change this default point of rotation.
 **HTML**
 
 +---+----------------------------------------------------------------------+
- 1  <figure class="box-1">Box 1</figure>                           
-                                                                         
- 2  <figure class="box-2">Box 2</figure>                           
-                                                                         
- 3                                                                       
+ 1  <figure class="box-1">Box 1</figure>
+
+ 2  <figure class="box-2">Box 2</figure>
+
+ 3 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **CSS**
 
 +---+----------------------------------------------------------------------+
- 1  .box-1 {                                                             
-                                                                         
- 2  transform: rotate(20deg);                                            
-                                                                         
- 3  }                                                                    
-                                                                         
- 4  .box-2 {                                                             
-                                                                         
- 5  transform: rotate(-55deg);                                           
-                                                                         
- 6  }                                                                    
-                                                                         
- 7                                                                       
+ 1  .box-1 {
+
+ 2  transform: rotate(20deg);
+
+ 3  } 
+
+ 4  .box-2 {
+
+ 5  transform: rotate(-55deg);  
+
+ 6  } 
+
+ 7 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -8060,30 +7755,30 @@ value greater than or equal to 1.01 makes an element appear larger.
 **HTML**
 
 +---+----------------------------------------------------------------------+
- 1  <figure class="box-1">Box 1</figure>                           
-                                                                         
- 2  <figure class="box-2">Box 2</figure>                           
-                                                                         
- 3                                                                       
+ 1  <figure class="box-1">Box 1</figure>
+
+ 2  <figure class="box-2">Box 2</figure>
+
+ 3 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **CSS**
 
 +---+----------------------------------------------------------------------+
- 1  .box-1 {                                                             
-                                                                         
- 2  transform: scale(.75);                                               
-                                                                         
- 3  }                                                                    
-                                                                         
- 4  .box-2 {                                                             
-                                                                         
- 5  transform: scale(1.25);                                              
-                                                                         
- 6  }                                                                    
-                                                                         
- 7                                                                       
+ 1  .box-1 {
+
+ 2  transform: scale(.75);
+
+ 3  } 
+
+ 4  .box-2 {
+
+ 5  transform: scale(1.25);  
+
+ 6  } 
+
+ 7 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -8100,39 +7795,39 @@ comma, and then the y axis value.
 **HTML**
 
 +---+----------------------------------------------------------------------+
- 1  <figure class="box-1">Box 1</figure>                           
-                                                                         
- 2  <figure class="box-2">Box 2</figure>                           
-                                                                         
- 3  <figure class="box-3">Box 3</figure>                           
-                                                                         
- 4                                                                       
+ 1  <figure class="box-1">Box 1</figure>
+
+ 2  <figure class="box-2">Box 2</figure>
+
+ 3  <figure class="box-3">Box 3</figure>
+
+ 4 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **CSS**
 
 +---+----------------------------------------------------------------------+
- 1  .box-1 {                                                             
-                                                                         
- 2  transform: scaleX(.5);                                               
-                                                                         
- 3  }                                                                    
-                                                                         
- 4  .box-2 {                                                             
-                                                                         
- 5  transform: scaleY(1.15);                                             
-                                                                         
- 6  }                                                                    
-                                                                         
- 7  .box-3 {                                                             
-                                                                         
- 8  transform: scale(.5, 1.15);                                          
-                                                                         
- 9  }                                                                    
-                                                                         
- 1                                                                       
- 0                                                                       
+ 1  .box-1 {
+
+ 2  transform: scaleX(.5);
+
+ 3  } 
+
+ 4  .box-2 {
+
+ 5  transform: scaleY(1.15); 
+
+ 6  } 
+
+ 7  .box-3 {
+
+ 8  transform: scale(.5, 1.15); 
+
+ 9  } 
+
+ 1 
+ 0 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -8160,39 +7855,39 @@ position.
 **HTML**
 
 +---+----------------------------------------------------------------------+
- 1  <figure class="box-1">Box 1</figure>                           
-                                                                         
- 2  <figure class="box-2">Box 2</figure>                           
-                                                                         
- 3  <figure class="box-3">Box 3</figure>                           
-                                                                         
- 4                                                                       
+ 1  <figure class="box-1">Box 1</figure>
+
+ 2  <figure class="box-2">Box 2</figure>
+
+ 3  <figure class="box-3">Box 3</figure>
+
+ 4 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **CSS**
 
 +---+----------------------------------------------------------------------+
- 1  .box-1 {                                                             
-                                                                         
- 2  transform: translateX(-10px);                                        
-                                                                         
- 3  }                                                                    
-                                                                         
- 4  .box-2 {                                                             
-                                                                         
- 5  transform: translateY(25%);                                          
-                                                                         
- 6  }                                                                    
-                                                                         
- 7  .box-3 {                                                             
-                                                                         
- 8  transform: translate(-10px, 25%);                                    
-                                                                         
- 9  }                                                                    
-                                                                         
- 1                                                                       
- 0                                                                       
+ 1  .box-1 {
+
+ 2  transform: translateX(-10px);  
+
+ 3  } 
+
+ 4  .box-2 {
+
+ 5  transform: translateY(25%); 
+
+ 6  } 
+
+ 7  .box-3 {
+
+ 8  transform: translate(-10px, 25%); 
+
+ 9  } 
+
+ 1 
+ 0 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -8215,39 +7910,39 @@ apply here.
 **HTML**
 
 +---+----------------------------------------------------------------------+
- 1  <figure class="box-1">Box 1</figure>                           
-                                                                         
- 2  <figure class="box-2">Box 2</figure>                           
-                                                                         
- 3  <figure class="box-3">Box 3</figure>                           
-                                                                         
- 4                                                                       
+ 1  <figure class="box-1">Box 1</figure>
+
+ 2  <figure class="box-2">Box 2</figure>
+
+ 3  <figure class="box-3">Box 3</figure>
+
+ 4 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **CSS**
 
 +---+----------------------------------------------------------------------+
- 1  .box-1 {                                                             
-                                                                         
- 2  transform: skewX(5deg);                                              
-                                                                         
- 3  }                                                                    
-                                                                         
- 4  .box-2 {                                                             
-                                                                         
- 5  transform: skewY(-20deg);                                            
-                                                                         
- 6  }                                                                    
-                                                                         
- 7  .box-3 {                                                             
-                                                                         
- 8  transform: skew(5deg, -20deg);                                       
-                                                                         
- 9  }                                                                    
-                                                                         
- 1                                                                       
- 0                                                                       
+ 1  .box-1 {
+
+ 2  transform: skewX(5deg);  
+
+ 3  } 
+
+ 4  .box-2 {
+
+ 5  transform: skewY(-20deg);
+
+ 6  } 
+
+ 7  .box-3 {
+
+ 8  transform: skew(5deg, -20deg); 
+
+ 9  } 
+
+ 1 
+ 0 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -8268,30 +7963,30 @@ same as if you were to set the height of an element numerous times.
 **HTML**
 
 +---+----------------------------------------------------------------------+
- 1  <figure class="box-1">Box 1</figure>                           
-                                                                         
- 2  <figure class="box-2">Box 2</figure>                           
-                                                                         
- 3                                                                       
+ 1  <figure class="box-1">Box 1</figure>
+
+ 2  <figure class="box-2">Box 2</figure>
+
+ 3 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **CSS**
 
 +---+----------------------------------------------------------------------+
- 1  .box-1 {                                                             
-                                                                         
- 2  transform: rotate(25deg) scale(.75);                                 
-                                                                         
- 3  }                                                                    
-                                                                         
- 4  .box-2 {                                                             
-                                                                         
- 5  transform: skew(10deg, 20deg) translateX(20px);                      
-                                                                         
- 6  }                                                                    
-                                                                         
- 7                                                                       
+ 1  .box-1 {
+
+ 2  transform: rotate(25deg) scale(.75); 
+
+ 3  } 
+
+ 4  .box-2 {
+
+ 5  transform: skew(10deg, 20deg) translateX(20px); 
+
+ 6  } 
+
+ 7 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -8309,76 +8004,76 @@ transforms, try your hand at using the matrix property.
 **HTML**
 
 +---+--------------------------------------------------------------------+
- 1  <div class="cube">                                             
-                                                                       
- 2  <figure class="side top">1</figure>                          
-                                                                       
- 3  <figure class="side left">2</figure>                         
-                                                                       
- 4  <figure class="side right">3</figure>                        
-                                                                       
- 5  </div>                                                           
-                                                                       
- 6                                                                     
+ 1  <div class="cube"> 
+ 
+ 2  <figure class="side top">1</figure>  
+ 
+ 3  <figure class="side left">2</figure> 
+ 
+ 4  <figure class="side right">3</figure>
+ 
+ 5  </div> 
+ 
+ 6  
 +===+====================================================================+
 +---+--------------------------------------------------------------------+
 
 **CSS**
 
 +---+--------------------------------------------------------------------+
- 1  .cube {                                                            
-                                                                       
- 2  position: relative;                                                
-                                                                       
- 3  }                                                                  
-                                                                       
- 4  .side {                                                            
-                                                                       
- 5  height: 95px;                                                      
-                                                                       
- 6  position: absolute;                                                
-                                                                       
- 7  width: 95px;                                                       
-                                                                       
- 8  }                                                                  
-                                                                       
- 9  .top {                                                             
-                                                                       
- 1  background: #9acc53;                                               
- 0                                                                     
-    transform: rotate(-45deg) skew(15deg, 15deg);                      
- 1                                                                     
- 1  }                                                                  
-                                                                       
- 1  .left {                                                            
- 2                                                                     
-    background: #8ec63f;                                               
- 1                                                                     
+ 1  .cube {  
+ 
+ 2  position: relative; 
+ 
+ 3  }  
+ 
+ 4  .side {  
+ 
+ 5  height: 95px; 
+ 
+ 6  position: absolute; 
+ 
+ 7  width: 95px;  
+ 
+ 8  }  
+ 
+ 9  .top {
+ 
+ 1  background: #9acc53;
+ 0  
+ transform: rotate(-45deg) skew(15deg, 15deg); 
+ 1  
+ 1  }  
+ 
+ 1  .left {  
+ 2  
+ background: #8ec63f;
+ 1  
  3  transform: rotate(15deg) skew(15deg, 15deg) translate(-50%, 100%); 
-                                                                       
- 1  }                                                                  
- 4                                                                     
-    .right {                                                           
- 1                                                                     
- 5  background: #80b239;                                               
-                                                                       
- 1  transform: rotate(-15deg) skew(-15deg, -15deg) translate(50%,      
- 6  100%);                                                             
-                                                                       
- 1  }                                                                  
- 7                                                                     
-                                                                       
- 1                                                                     
- 8                                                                     
-                                                                       
- 1                                                                     
- 9                                                                     
-                                                                       
- 2                                                                     
- 0                                                                     
-                                                                       
- 2                                                                     
- 1                                                                     
+ 
+ 1  }  
+ 4  
+ .right { 
+ 1  
+ 5  background: #80b239;
+ 
+ 1  transform: rotate(-15deg) skew(-15deg, -15deg) translate(50%,
+ 6  100%);
+ 
+ 1  }  
+ 7  
+ 
+ 1  
+ 8  
+ 
+ 1  
+ 9  
+ 
+ 2  
+ 0  
+ 
+ 2  
+ 1  
 +===+====================================================================+
 +---+--------------------------------------------------------------------+
 
@@ -8404,62 +8099,62 @@ the origin to 20 pixels across and 50 pixels down the element.
 **HTML**
 
 +---+----------------------------------------------------------------------+
- 1  <figure class="box-1">Box 1</figure>                           
-                                                                         
- 2  <figure class="box-2">Box 2</figure>                           
-                                                                         
- 3  <figure class="box-3">Box 3</figure>                           
-                                                                         
- 4  <figure class="box-4">Box 3</figure>                           
-                                                                         
- 5                                                                       
+ 1  <figure class="box-1">Box 1</figure>
+
+ 2  <figure class="box-2">Box 2</figure>
+
+ 3  <figure class="box-3">Box 3</figure>
+
+ 4  <figure class="box-4">Box 3</figure>
+
+ 5 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **CSS**
 
 +---+----------------------------------------------------------------------+
- 1  .box-1 {                                                             
-                                                                         
- 2  transform: rotate(15deg);                                            
-                                                                         
- 3  transform-origin: 0 0;                                               
-                                                                         
- 4  }                                                                    
-                                                                         
- 5  .box-2 {                                                             
-                                                                         
- 6  transform: scale(.5);                                                
-                                                                         
- 7  transform-origin: 100% 100%;                                         
-                                                                         
- 8  }                                                                    
-                                                                         
- 9  .box-3 {                                                             
-                                                                         
- 1  transform: skewX(20deg);                                             
- 0                                                                       
-    transform-origin: top left;                                          
- 1                                                                       
- 1  }                                                                    
-                                                                         
- 1  .box-4 {                                                             
- 2                                                                       
-    transform: scale(.75) translate(-10px, -10px);                       
- 1                                                                       
- 3  transform-origin: 20px 50px;                                         
-                                                                         
- 1  }                                                                    
- 4                                                                       
-                                                                         
- 1                                                                       
- 5                                                                       
-                                                                         
- 1                                                                       
- 6                                                                       
-                                                                         
- 1                                                                       
- 7                                                                       
+ 1  .box-1 {
+
+ 2  transform: rotate(15deg);
+
+ 3  transform-origin: 0 0;
+
+ 4  } 
+
+ 5  .box-2 {
+
+ 6  transform: scale(.5); 
+
+ 7  transform-origin: 100% 100%;
+
+ 8  } 
+
+ 9  .box-3 {
+
+ 1  transform: skewX(20deg); 
+ 0 
+ transform-origin: top left; 
+ 1 
+ 1  } 
+
+ 1  .box-4 {
+ 2 
+ transform: scale(.75) translate(-10px, -10px);  
+ 1 
+ 3  transform-origin: 20px 50px;
+
+ 1  } 
+ 4 
+
+ 1 
+ 5 
+
+ 1 
+ 6 
+
+ 1 
+ 7 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -8495,26 +8190,26 @@ their individual perspectives with the perspective value.
 **HTML**
 
 +---+----------------------------------------------------------------------+
- 1  <figure class="box">Box 1</figure>                             
-                                                                         
- 2  <figure class="box">Box 2</figure>                             
-                                                                         
- 3  <figure class="box">Box 3</figure>                             
-                                                                         
- 4                                                                       
+ 1  <figure class="box">Box 1</figure>
+
+ 2  <figure class="box">Box 2</figure>
+
+ 3  <figure class="box">Box 3</figure>
+
+ 4 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **CSS**
 
 +---+----------------------------------------------------------------------+
- 1  .box {                                                               
-                                                                         
- 2  transform: perspective(200px) rotateX(45deg);                        
-                                                                         
- 3  }                                                                    
-                                                                         
- 4                                                                       
+ 1  .box {  
+
+ 2  transform: perspective(200px) rotateX(45deg);
+
+ 3  } 
+
+ 4 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -8527,36 +8222,36 @@ the perspective property on their direct parent element.
 **HTML**
 
 +---+----------------------------------------------------------------------+
- 1  <div class="group">                                              
-                                                                         
- 2  <figure class="box">Box 1</figure>                             
-                                                                         
- 3  <figure class="box">Box 2</figure>                             
-                                                                         
- 4  <figure class="box">Box 3</figure>                             
-                                                                         
- 5  </div>                                                             
-                                                                         
- 6                                                                       
+ 1  <div class="group">  
+
+ 2  <figure class="box">Box 1</figure>
+
+ 3  <figure class="box">Box 2</figure>
+
+ 4  <figure class="box">Box 3</figure>
+
+ 5  </div>
+
+ 6 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **CSS**
 
 +---+----------------------------------------------------------------------+
- 1  .group {                                                             
-                                                                         
- 2  perspective: 200px;                                                  
-                                                                         
- 3  }                                                                    
-                                                                         
- 4  .box {                                                               
-                                                                         
- 5  transform: rotateX(45deg);                                           
-                                                                         
- 6  }                                                                    
-                                                                         
- 7                                                                       
+ 1  .group {
+
+ 2  perspective: 200px;
+
+ 3  } 
+
+ 4  .box {  
+
+ 5  transform: rotateX(45deg);  
+
+ 6  } 
+
+ 7 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -8583,30 +8278,30 @@ depth values.
 **HTML**
 
 +---+----------------------------------------------------------------------+
- 1  <figure class="box-1">Box 1</figure>                           
-                                                                         
- 2  <figure class="box-2">Box 2</figure>                           
-                                                                         
- 3                                                                       
+ 1  <figure class="box-1">Box 1</figure>
+
+ 2  <figure class="box-2">Box 2</figure>
+
+ 3 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **CSS**
 
 +---+----------------------------------------------------------------------+
- 1  .box-1 {                                                             
-                                                                         
- 2  transform: perspective(100px) rotateX(45deg);                        
-                                                                         
- 3  }                                                                    
-                                                                         
- 4  .box-2 {                                                             
-                                                                         
- 5  transform: perspective(1000px) rotateX(45deg);                       
-                                                                         
- 6  }                                                                    
-                                                                         
- 7                                                                       
+ 1  .box-1 {
+
+ 2  transform: perspective(100px) rotateX(45deg);
+
+ 3  } 
+
+ 4  .box-2 {
+
+ 5  transform: perspective(1000px) rotateX(45deg);  
+
+ 6  } 
+
+ 7 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -8626,70 +8321,70 @@ coordinates of the vanishing point of a transform.
 **HTML**
 
 +---+----------------------------------------------------------------------+
- 1  <div class="original original-1">                                
-                                                                         
- 2  <figure class="box">Box 1</figure>                             
-                                                                         
- 3  </div>                                                             
-                                                                         
- 4  <div class="original original-2">                                
-                                                                         
- 5  <figure class="box">Box 2</figure>                             
-                                                                         
- 6  </div>                                                             
-                                                                         
- 7  <div class="original original-3">                                
-                                                                         
- 8  <figure class="box">Box 3</figure>                             
-                                                                         
- 9  </div>                                                             
-                                                                         
- 1                                                                       
- 0                                                                       
+ 1  <div class="original original-1">
+
+ 2  <figure class="box">Box 1</figure>
+
+ 3  </div>
+
+ 4  <div class="original original-2">
+
+ 5  <figure class="box">Box 2</figure>
+
+ 6  </div>
+
+ 7  <div class="original original-3">
+
+ 8  <figure class="box">Box 3</figure>
+
+ 9  </div>
+
+ 1 
+ 0 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **CSS**
 
 +---+----------------------------------------------------------------------+
- 1  .original {                                                          
-                                                                         
- 2  perspective: 200px;                                                  
-                                                                         
- 3  }                                                                    
-                                                                         
- 4  .box {                                                               
-                                                                         
- 5  transform: rotateX(45deg);                                           
-                                                                         
- 6  }                                                                    
-                                                                         
- 7  .original-1 {                                                        
-                                                                         
- 8  perspective-origin: 0 0;                                             
-                                                                         
- 9  }                                                                    
-                                                                         
- 1  .original-2 {                                                        
- 0                                                                       
-    perspective-origin: 75% 75%;                                         
- 1                                                                       
- 1  }                                                                    
-                                                                         
- 1  .original-3 {                                                        
- 2                                                                       
-    perspective-origin: 20px 40px;                                       
- 1                                                                       
- 3  }                                                                    
-                                                                         
- 1                                                                       
- 4                                                                       
-                                                                         
- 1                                                                       
- 5                                                                       
-                                                                         
- 1                                                                       
- 6                                                                       
+ 1  .original {
+
+ 2  perspective: 200px;
+
+ 3  } 
+
+ 4  .box {  
+
+ 5  transform: rotateX(45deg);  
+
+ 6  } 
+
+ 7  .original-1 {
+
+ 8  perspective-origin: 0 0; 
+
+ 9  } 
+
+ 1  .original-2 {
+ 0 
+ perspective-origin: 75% 75%;
+ 1 
+ 1  } 
+
+ 1  .original-3 {
+ 2 
+ perspective-origin: 20px 40px; 
+ 1 
+ 3  } 
+
+ 1 
+ 4 
+
+ 1 
+ 5 
+
+ 1 
+ 6 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -8724,39 +8419,39 @@ rotate the element counterclockwise.
 **HTML**
 
 +---+----------------------------------------------------------------------+
- 1  <figure class="box-1">Box 1</figure>                           
-                                                                         
- 2  <figure class="box-2">Box 2</figure>                           
-                                                                         
- 3  <figure class="box-3">Box 3</figure>                           
-                                                                         
- 4                                                                       
+ 1  <figure class="box-1">Box 1</figure>
+
+ 2  <figure class="box-2">Box 2</figure>
+
+ 3  <figure class="box-3">Box 3</figure>
+
+ 4 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **CSS**
 
 +---+----------------------------------------------------------------------+
- 1  .box-1 {                                                             
-                                                                         
- 2  transform: perspective(200px) rotateX(45deg);                        
-                                                                         
- 3  }                                                                    
-                                                                         
- 4  .box-2 {                                                             
-                                                                         
- 5  transform: perspective(200px) rotateY(45deg);                        
-                                                                         
- 6  }                                                                    
-                                                                         
- 7  .box-3 {                                                             
-                                                                         
- 8  transform: perspective(200px) rotateZ(45deg);                        
-                                                                         
- 9  }                                                                    
-                                                                         
- 1                                                                       
- 0                                                                       
+ 1  .box-1 {
+
+ 2  transform: perspective(200px) rotateX(45deg);
+
+ 3  } 
+
+ 4  .box-2 {
+
+ 5  transform: perspective(200px) rotateY(45deg);
+
+ 6  } 
+
+ 7  .box-3 {
+
+ 8  transform: perspective(200px) rotateZ(45deg);
+
+ 9  } 
+
+ 1 
+ 0 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -8775,30 +8470,30 @@ the rotateX in this case, the elements will appear to be unchanged.
 **HTML**
 
 +---+----------------------------------------------------------------------+
- 1  <figure class="box-1">Box 1</figure>                           
-                                                                         
- 2  <figure class="box-2">Box 2</figure>                           
-                                                                         
- 3                                                                       
+ 1  <figure class="box-1">Box 1</figure>
+
+ 2  <figure class="box-2">Box 2</figure>
+
+ 3 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **CSS**
 
 +---+----------------------------------------------------------------------+
- 1  .box-1 {                                                             
-                                                                         
- 2  transform: perspective(200px) scaleZ(1.75) rotateX(45deg);           
-                                                                         
- 3  }                                                                    
-                                                                         
- 4  .box-2 {                                                             
-                                                                         
- 5  transform: perspective(200px) scaleZ(.25) rotateX(45deg);            
-                                                                         
- 6  }                                                                    
-                                                                         
- 7                                                                       
+ 1  .box-1 {
+
+ 2  transform: perspective(200px) scaleZ(1.75) rotateX(45deg);  
+
+ 3  } 
+
+ 4  .box-2 {
+
+ 5  transform: perspective(200px) scaleZ(.25) rotateX(45deg);
+
+ 6  } 
+
+ 7 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -8822,30 +8517,30 @@ for example.
 **HTML**
 
 +---+----------------------------------------------------------------------+
- 1  <figure class="box-1">Box 1</figure>                           
-                                                                         
- 2  <figure class="box-2">Box 2</figure>                           
-                                                                         
- 3                                                                       
+ 1  <figure class="box-1">Box 1</figure>
+
+ 2  <figure class="box-2">Box 2</figure>
+
+ 3 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **CSS**
 
 +---+----------------------------------------------------------------------+
- 1  .box-1 {                                                             
-                                                                         
- 2  transform: perspective(200px) translateZ(-50px);                     
-                                                                         
- 3  }                                                                    
-                                                                         
- 4  .box-2 {                                                             
-                                                                         
- 5  transform: perspective(200px) translateZ(50px);                      
-                                                                         
- 6  }                                                                    
-                                                                         
- 7                                                                       
+ 1  .box-1 {
+
+ 2  transform: perspective(200px) translateZ(-50px);
+
+ 3  } 
+
+ 4  .box-2 {
+
+ 5  transform: perspective(200px) translateZ(50px); 
+
+ 6  } 
+
+ 7 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -8886,48 +8581,48 @@ lie flat on the two-dimensional plane.
 **HTML**
 
 +---+----------------------------------------------------------------------+
- 1  <div class="rotate three-d">                                     
-                                                                         
- 2  <figure class="box">Box 1</figure>                             
-                                                                         
- 3  </div>                                                             
-                                                                         
- 4  <div class="rotate">                                             
-                                                                         
- 5  <figure class="box">Box 2</figure>                             
-                                                                         
- 6  </div>                                                             
-                                                                         
- 7                                                                       
+ 1  <div class="rotate three-d">  
+
+ 2  <figure class="box">Box 1</figure>
+
+ 3  </div>
+
+ 4  <div class="rotate"> 
+
+ 5  <figure class="box">Box 2</figure>
+
+ 6  </div>
+
+ 7 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **CSS**
 
 +---+----------------------------------------------------------------------+
- 1  .rotate {                                                            
-                                                                         
- 2  transform: perspective(200px) rotateY(45deg);                        
-                                                                         
- 3  }                                                                    
-                                                                         
- 4  .three-d {                                                           
-                                                                         
- 5  transform-style: preserve-3d;                                        
-                                                                         
- 6  }                                                                    
-                                                                         
- 7  .box {                                                               
-                                                                         
- 8  transform: rotateX(15deg) translateZ(20px);                          
-                                                                         
- 9  transform-origin: 0 0;                                               
-                                                                         
- 1  }                                                                    
- 0                                                                       
-                                                                         
- 1                                                                       
- 1                                                                       
+ 1  .rotate {  
+
+ 2  transform: perspective(200px) rotateY(45deg);
+
+ 3  } 
+
+ 4  .three-d { 
+
+ 5  transform-style: preserve-3d;  
+
+ 6  } 
+
+ 7  .box {  
+
+ 8  transform: rotateX(15deg) translateZ(20px);  
+
+ 9  transform-origin: 0 0;
+
+ 1  } 
+ 0 
+
+ 1 
+ 1 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -8958,32 +8653,32 @@ using [[animations]{.underline}](https://css-tricks.com/almanac/properties/b/ba
 **HTML**
 
 +---+----------------------------------------------------------------------+
- 1  <figure class="box-1">Box 1</figure>                           
-                                                                         
- 2  <figure class="box-2">Box 2</figure>                           
-                                                                         
- 3                                                                       
+ 1  <figure class="box-1">Box 1</figure>
+
+ 2  <figure class="box-2">Box 2</figure>
+
+ 3 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
 **CSS**
 
 +---+----------------------------------------------------------------------+
- 1  .box-1 {                                                             
-                                                                         
- 2  transform: rotateY(180deg);                                          
-                                                                         
- 3  }                                                                    
-                                                                         
- 4  .box-2 {                                                             
-                                                                         
- 5  backface-visibility: hidden;                                         
-                                                                         
- 6  transform: rotateY(180deg);                                          
-                                                                         
- 7  }                                                                    
-                                                                         
- 8                                                                       
+ 1  .box-1 {
+
+ 2  transform: rotateY(180deg); 
+
+ 3  } 
+
+ 4  .box-2 {
+
+ 5  backface-visibility: hidden;
+
+ 6  transform: rotateY(180deg); 
+
+ 7  } 
+
+ 8 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -8994,142 +8689,142 @@ using [[animations]{.underline}](https://css-tricks.com/almanac/properties/b/ba
 **HTML**
 
 +---+--------------------------------------------------------------------+
- 1  <div class="cube-container">                                   
-                                                                       
- 2  <div class="cube">                                             
-                                                                       
- 3  <figure class="side front">1</figure>                        
-                                                                       
- 4  <figure class="side back">2</figure>                         
-                                                                       
- 5  <figure class="side left">3</figure>                         
-                                                                       
- 6  <figure class="side right">4</figure>                        
-                                                                       
- 7  <figure class="side top">5</figure>                          
-                                                                       
- 8  <figure class="side bottom">6</figure>                       
-                                                                       
- 9  </div>                                                           
-                                                                       
- 1  </div>                                                           
- 0                                                                     
-                                                                       
- 1                                                                     
- 1                                                                     
+ 1  <div class="cube-container">
+ 
+ 2  <div class="cube"> 
+ 
+ 3  <figure class="side front">1</figure>
+ 
+ 4  <figure class="side back">2</figure> 
+ 
+ 5  <figure class="side left">3</figure> 
+ 
+ 6  <figure class="side right">4</figure>
+ 
+ 7  <figure class="side top">5</figure>  
+ 
+ 8  <figure class="side bottom">6</figure>  
+ 
+ 9  </div> 
+ 
+ 1  </div> 
+ 0  
+ 
+ 1  
+ 1  
 +===+====================================================================+
 +---+--------------------------------------------------------------------+
 
 **CSS**
 
 +---+-------------------------------------------------------------------+
- 1  .cube-container {                                                 
-                                                                      
- 2  height: 200px;                                                    
-                                                                      
- 3  perspective: 300;                                                 
-                                                                      
- 4  position: relative;                                               
-                                                                      
- 5  width: 200px;                                                     
-                                                                      
- 6  }                                                                 
-                                                                      
- 7  .cube {                                                           
-                                                                      
- 8  height: 100%;                                                     
-                                                                      
- 9  position: absolute;                                               
-                                                                      
- 1  transform: translateZ(-100px);                                    
- 0                                                                    
-    transform-style: preserve-3d;                                     
- 1                                                                    
- 1  width: 100%;                                                      
-                                                                      
- 1  }                                                                 
- 2                                                                    
-    .side {                                                           
- 1                                                                    
- 3  background: rgba(45, 179, 74, .3);                                
-                                                                      
- 1  border: 2px solid #2db34a;                                        
- 4                                                                    
-    height: 196px;                                                    
- 1                                                                    
- 5  position: absolute;                                               
-                                                                      
- 1  width: 196px;                                                     
- 6                                                                    
-    }                                                                 
- 1                                                                    
- 7  .front {                                                          
-                                                                      
- 1  transform: translateZ(100px);                                     
- 8                                                                    
-    }                                                                 
- 1                                                                    
- 9  .back {                                                           
-                                                                      
- 2  transform: rotateX(180deg) translateZ(100px);                     
- 0                                                                    
-    }                                                                 
- 2                                                                    
- 1  .left {                                                           
-                                                                      
- 2  transform: rotateY(-90deg) translateZ(100px);                     
- 2                                                                    
-    }                                                                 
- 2                                                                    
- 3  .right {                                                          
-                                                                      
- 2  transform: rotateY(90deg) translateZ(100px);                      
- 4                                                                    
-    }                                                                 
- 2                                                                    
- 5  .top {                                                            
-                                                                      
- 2  transform: rotateX(90deg) translateZ(100px);                      
- 6                                                                    
-    }                                                                 
- 2                                                                    
- 7  .bottom {                                                         
-                                                                      
- 2  transform: rotateX(-90deg) translateZ(100px);                     
- 8                                                                    
-    }                                                                 
- 2                                                                    
- 9                                                                    
-                                                                      
- 3                                                                    
- 0                                                                    
-                                                                      
- 3                                                                    
- 1                                                                    
-                                                                      
- 3                                                                    
- 2                                                                    
-                                                                      
- 3                                                                    
- 3                                                                    
-                                                                      
- 3                                                                    
- 4                                                                    
-                                                                      
- 3                                                                    
- 5                                                                    
-                                                                      
- 3                                                                    
- 6                                                                    
-                                                                      
- 3                                                                    
- 7                                                                    
-                                                                      
- 3                                                                    
- 8                                                                    
-                                                                      
- 3                                                                    
- 9                                                                    
+ 1  .cube-container {  
+
+ 2  height: 200px;  
+
+ 3  perspective: 300;  
+
+ 4  position: relative;
+
+ 5  width: 200px;
+
+ 6  } 
+
+ 7  .cube { 
+
+ 8  height: 100%;
+
+ 9  position: absolute;
+
+ 1  transform: translateZ(-100px); 
+ 0 
+ transform-style: preserve-3d;  
+ 1 
+ 1  width: 100%; 
+
+ 1  } 
+ 2 
+ .side { 
+ 1 
+ 3  background: rgba(45, 179, 74, .3);
+
+ 1  border: 2px solid #2db34a;  
+ 4 
+ height: 196px;  
+ 1 
+ 5  position: absolute;
+
+ 1  width: 196px;
+ 6 
+ } 
+ 1 
+ 7  .front {
+
+ 1  transform: translateZ(100px);  
+ 8 
+ } 
+ 1 
+ 9  .back { 
+
+ 2  transform: rotateX(180deg) translateZ(100px);
+ 0 
+ } 
+ 2 
+ 1  .left { 
+
+ 2  transform: rotateY(-90deg) translateZ(100px);
+ 2 
+ } 
+ 2 
+ 3  .right {
+
+ 2  transform: rotateY(90deg) translateZ(100px); 
+ 4 
+ } 
+ 2 
+ 5  .top {  
+
+ 2  transform: rotateX(90deg) translateZ(100px); 
+ 6 
+ } 
+ 2 
+ 7  .bottom { 
+
+ 2  transform: rotateX(-90deg) translateZ(100px);
+ 8 
+ } 
+ 2 
+ 9 
+
+ 3 
+ 0 
+
+ 3 
+ 1 
+
+ 3 
+ 2 
+
+ 3 
+ 3 
+
+ 3 
+ 4 
+
+ 3 
+ 5 
+
+ 3 
+ 6 
+
+ 3 
+ 7 
+
+ 3 
+ 8 
+
+ 3 
+ 9 
 +===+===================================================================+
 +---+-------------------------------------------------------------------+
 
@@ -9139,17 +8834,17 @@ using [[animations]{.underline}](https://css-tricks.com/almanac/properties/b/ba
 
 <ul>
   <li><a href="http://www.css3files.com/transform/">
-    Transform Property</a> via CSS3 Files</li>
+ Transform Property</a> via CSS3 Files</li>
   <li><a href="http://dev.opera.com/articles/view/understanding-the-css-transforms-matrix/">
-    Understanding the CSS Transforms Matrix</a> via Dev.Opera</li>
+ Understanding the CSS Transforms Matrix</a> via Dev.Opera</li>
   <li><a href="http://24ways.org/2010/intro-to-css-3d-transforms">
-    An Introduction to CSS 3-D Transforms</a> via 24 Ways</li>
+ An Introduction to CSS 3-D Transforms</a> via 24 Ways</li>
   <li><a href="https://developer.mozilla.org/en/CSS/transform-function">
-    Transform Function</a> via Mozilla Developer Network</li>
+ Transform Function</a> via Mozilla Developer Network</li>
   <li><a href="http://www.webkit.org/blog-files/3d-transforms/transform-style.html">
-    Transform Style</a> via WebKit</li>
+ Transform Style</a> via WebKit</li>
   <li><a href="https://css-tricks.com/almanac/properties/b/backface-visibility/">
-    Backface Visibility</a> via CSS-Tricks</li>
+ Backface Visibility</a> via CSS-Tricks</li>
 </ul>
 
 [<b>Lesson 6</b>] <a href="https://learn.shayhowe.com/advanced-html-css/jquery/">jQuery</a>
@@ -9164,18 +8859,18 @@ software.
 
 <b>CSS**
 
--   [[Transitions]{.underline}](https://learn.shayhowe.com/advanced-html-css/transitions-animations/#transitions)
+-[[Transitions]{.underline}](https://learn.shayhowe.com/advanced-html-css/transitions-animations/#transitions)
 
--   [[Shorthand
-    Transitions]{.underline}](https://learn.shayhowe.com/advanced-html-css/transitions-animations/#shorthand-transitions)
+-[[Shorthand
+ Transitions]{.underline}](https://learn.shayhowe.com/advanced-html-css/transitions-animations/#shorthand-transitions)
 
--   [[Animations]{.underline}](https://learn.shayhowe.com/advanced-html-css/transitions-animations/#animations)
+-[[Animations]{.underline}](https://learn.shayhowe.com/advanced-html-css/transitions-animations/#animations)
 
--   [[Customizing
-    Animations]{.underline}](https://learn.shayhowe.com/advanced-html-css/transitions-animations/#customizing-animations)
+-[[Customizing
+ Animations]{.underline}](https://learn.shayhowe.com/advanced-html-css/transitions-animations/#customizing-animations)
 
--   [[Shorthand
-    Animations]{.underline}](https://learn.shayhowe.com/advanced-html-css/transitions-animations/#shorthand-animations)
+-[[Shorthand
+ Animations]{.underline}](https://learn.shayhowe.com/advanced-html-css/transitions-animations/#shorthand-animations)
 
 <b>SHARE**
 
@@ -9211,26 +8906,26 @@ In the example below the box will change its background color over the
 course of 1 second in a linear fashion.
 
 +---+----------------------------------------------------------------------+
- 1  .box {                                                               
-                                                                         
- 2  background: #2db34a;                                                 
-                                                                         
- 3  transition-property: background;                                     
-                                                                         
- 4  transition-duration: 1s;                                             
-                                                                         
- 5  transition-timing-function: linear;                                  
-                                                                         
- 6  }                                                                    
-                                                                         
- 7  .box:hover {                                                         
-                                                                         
- 8  background: #ff7b29;                                                 
-                                                                         
- 9  }                                                                    
-                                                                         
- 1                                                                       
- 0                                                                       
+ 1  .box {  
+
+ 2  background: #2db34a;  
+
+ 3  transition-property: background;  
+
+ 4  transition-duration: 1s; 
+
+ 5  transition-timing-function: linear;  
+
+ 6  } 
+
+ 7  .box:hover { 
+
+ 8  background: #ff7b29;  
+
+ 9  } 
+
+ 1 
+ 0 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -9247,53 +8942,53 @@ For reference, the prefixed version of the code above would look like
 the following.
 
 +---+--------------------------------------------------------------------+
- 1  .box {                                                             
-                                                                       
- 2  background: #2db34a;                                               
-                                                                       
- 3  -webkit-transition-property: background;                           
-                                                                       
- 4  -moz-transition-property: background;                              
-                                                                       
- 5  -o-transition-property: background;                                
-                                                                       
- 6  transition-property: background;                                   
-                                                                       
- 7  -webkit-transition-duration: 1s;                                   
-                                                                       
- 8  -moz-transition-duration: 1s;                                      
-                                                                       
- 9  -o-transition-duration: 1s;                                        
-                                                                       
- 1  transition-duration: 1s;                                           
- 0                                                                     
-    -webkit-transition-timing-function: linear;                        
- 1                                                                     
- 1  -moz-transition-timing-function: linear;                           
-                                                                       
- 1  -o-transition-timing-function: linear;                             
- 2                                                                     
-    transition-timing-function: linear;                                
- 1                                                                     
- 3  }                                                                  
-                                                                       
- 1  .box:hover {                                                       
- 4                                                                     
-    background: #ff7b29;                                               
- 1                                                                     
- 5  }                                                                  
-                                                                       
- 1                                                                     
- 6                                                                     
-                                                                       
- 1                                                                     
- 7                                                                     
-                                                                       
- 1                                                                     
- 8                                                                     
-                                                                       
- 1                                                                     
- 9                                                                     
+ 1  .box {
+ 
+ 2  background: #2db34a;
+ 
+ 3  -webkit-transition-property: background;
+ 
+ 4  -moz-transition-property: background; 
+ 
+ 5  -o-transition-property: background;
+ 
+ 6  transition-property: background;
+ 
+ 7  -webkit-transition-duration: 1s;
+ 
+ 8  -moz-transition-duration: 1s;
+ 
+ 9  -o-transition-duration: 1s;  
+ 
+ 1  transition-duration: 1s;  
+ 0  
+ -webkit-transition-timing-function: linear;
+ 1  
+ 1  -moz-transition-timing-function: linear;
+ 
+ 1  -o-transition-timing-function: linear;
+ 2  
+ transition-timing-function: linear;
+ 1  
+ 3  }  
+ 
+ 1  .box:hover {  
+ 4  
+ background: #ff7b29;
+ 1  
+ 5  }  
+ 
+ 1  
+ 6  
+ 
+ 1  
+ 7  
+ 
+ 1  
+ 8  
+ 
+ 1  
+ 9  
 +===+====================================================================+
 +---+--------------------------------------------------------------------+
 
@@ -9319,32 +9014,32 @@ keyword value all may be used to transition all properties of an
 element.
 
 +---+----------------------------------------------------------------------+
- 1  .box {                                                               
-                                                                         
- 2  background: #2db34a;                                                 
-                                                                         
- 3  border-radius: 6px                                                   
-                                                                         
- 4  transition-property: background, border-radius;                      
-                                                                         
- 5  transition-duration: 1s;                                             
-                                                                         
- 6  transition-timing-function: linear;                                  
-                                                                         
- 7  }                                                                    
-                                                                         
- 8  .box:hover {                                                         
-                                                                         
- 9  background: #ff7b29;                                                 
-                                                                         
- 1  border-radius: 50%;                                                  
- 0                                                                       
-    }                                                                    
- 1                                                                       
- 1                                                                       
-                                                                         
- 1                                                                       
- 2                                                                       
+ 1  .box {  
+
+ 2  background: #2db34a;  
+
+ 3  border-radius: 6px 
+
+ 4  transition-property: background, border-radius; 
+
+ 5  transition-duration: 1s; 
+
+ 6  transition-timing-function: linear;  
+
+ 7  } 
+
+ 8  .box:hover { 
+
+ 9  background: #ff7b29;  
+
+ 1  border-radius: 50%;
+ 0 
+ } 
+ 1 
+ 1 
+
+ 1 
+ 2 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -9360,73 +9055,73 @@ The display property, for example, may not be transitioned as it does
 not have any midpoint. A handful of the more popular transitional
 properties include the following.
 
--   background-color
+-background-color
 
--   background-position
+-background-position
 
--   border-color
+-border-color
 
--   border-width
+-border-width
 
--   border-spacing
+-border-spacing
 
--   bottom
+-bottom
 
--   clip
+-clip
 
--   color
+-color
 
--   crop
+-crop
 
--   font-size
+-font-size
 
--   font-weight
+-font-weight
 
--   height
+-height
 
--   left
+-left
 
--   letter-spacing
+-letter-spacing
 
--   line-height
+-line-height
 
--   margin
+-margin
 
--   max-height
+-max-height
 
--   max-width
+-max-width
 
--   min-height
+-min-height
 
--   min-width
+-min-width
 
--   opacity
+-opacity
 
--   outline-color
+-outline-color
 
--   outline-offset
+-outline-offset
 
--   outline-width
+-outline-width
 
--   padding
+-padding
 
--   right
+-right
 
--   text-indent
+-text-indent
 
--   text-shadow
+-text-shadow
 
--   top
+-top
 
--   vertical-align
+-vertical-align
 
--   visibility
+-visibility
 
--   width
+-width
 
--   word-spacing
+-word-spacing
 
--   z-index
+-z-index
 
 <h4>Transition Duration</h4>
 
@@ -9449,32 +9144,32 @@ value declared, that one value will be the duration of all the
 transitioned properties.
 
 +---+----------------------------------------------------------------------+
- 1  .box {                                                               
-                                                                         
- 2  background: #2db34a;                                                 
-                                                                         
- 3  border-radius: 6px;                                                  
-                                                                         
- 4  transition-property: background, border-radius;                      
-                                                                         
- 5  transition-duration: .2s, 1s;                                        
-                                                                         
- 6  transition-timing-function: linear;                                  
-                                                                         
- 7  }                                                                    
-                                                                         
- 8  .box:hover {                                                         
-                                                                         
- 9  background: #ff7b29;                                                 
-                                                                         
- 1  border-radius: 50%;                                                  
- 0                                                                       
-    }                                                                    
- 1                                                                       
- 1                                                                       
-                                                                         
- 1                                                                       
- 2                                                                       
+ 1  .box {  
+
+ 2  background: #2db34a;  
+
+ 3  border-radius: 6px;
+
+ 4  transition-property: background, border-radius; 
+
+ 5  transition-duration: .2s, 1s;  
+
+ 6  transition-timing-function: linear;  
+
+ 7  } 
+
+ 8  .box:hover { 
+
+ 9  background: #ff7b29;  
+
+ 1  border-radius: 50%;
+ 0 
+ } 
+ 1 
+ 1 
+
+ 1 
+ 2 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -9567,16 +9262,16 @@ transition values, then use a comma to separate each additional group of
 transition values.
 
 ```
- 1  .box {                                                               
- 2  background: #2db34a;                                                 
- 3  border-radius: 6px;                                                  
- 4  transition: background .2s linear, border-radius 1s ease-in 1s;      
- 5  }                                                                    
- 6  .box:hover {                                                         
- 7  color: #ff7b29;                                                      
- 8  border-radius: 50%;                                                  
- 9  }                                                                    
- 1                                                                       
+ 1  .box {  
+ 2  background: #2db34a;  
+ 3  border-radius: 6px;
+ 4  transition: background .2s linear, border-radius 1s ease-in 1s;
+ 5  } 
+ 6  .box:hover { 
+ 7  color: #ff7b29; 
+ 8  border-radius: 50%;
+ 9  } 
+ 1 
 ```
 
 <h4>Shorthand Transitions Demo</h4>
@@ -9586,31 +9281,31 @@ transition values.
 <b>HTML**
 
 ```
- 1  <button>Awesome Button</button>                                
- 2                                                                     
+ 1  <button>Awesome Button</button>
+ 2  
 ```
 
 <b>CSS**
 
 ```
- 1  button {                                                           
- 2  border: 0;                                                         
- 3  background: #0087cc;                                               
- 4  border-radius: 4px;                                                
- 5  box-shadow: 0 5px 0 #006599;                                       
- 6  color: #fff;                                                       
- 7  cursor: pointer;                                                   
- 8  font: inherit;                                                     
- 9  margin: 0;                                                         
- 1  outline: 0;                                                        
-    padding: 12px 20px;                                                
- 1  transition: all .1s linear;                                        
- 1  }                                                                  
-    button:active {                                                    
- 3  box-shadow: 0 2px 0 #006599;                                       
- 1  transform: translateY(3px);                                        
-    }                                                                  
- 5                                                                     
+ 1  button { 
+ 2  border: 0; 
+ 3  background: #0087cc;
+ 4  border-radius: 4px; 
+ 5  box-shadow: 0 5px 0 #006599; 
+ 6  color: #fff;  
+ 7  cursor: pointer; 
+ 8  font: inherit;
+ 9  margin: 0; 
+ 1  outline: 0;
+ padding: 12px 20px; 
+ 1  transition: all .1s linear;  
+ 1  }  
+ button:active {  
+ 3  box-shadow: 0 2px 0 #006599; 
+ 1  transform: translateY(3px);  
+ }  
+ 5  
 ```
 
 <h4>Demo</h4>
@@ -9621,74 +9316,74 @@ transition values.
 
 ```
 +---+--------------------------------------------------------------------+
- 1  <div class="card-container">                                   
-                                                                       
- 2  <div class="card">                                             
-                                                                       
- 3  <div class="side">&#8230;</div>                                 
-                                                                       
- 4  <div class="side back">&#8230;</div>                            
-                                                                       
- 5  </div>                                                           
-                                                                       
- 6  </div>                                                           
-                                                                       
- 7                                                                     
+ 1  <div class="card-container">
+ 
+ 2  <div class="card"> 
+ 
+ 3  <div class="side">&#8230;</div> 
+ 
+ 4  <div class="side back">&#8230;</div> 
+ 
+ 5  </div> 
+ 
+ 6  </div> 
+ 
+ 7  
 ```
 
 <b>CSS**
 
 ```
- 1  .card-container {                                                  
-                                                                       
- 2  height: 150px;                                                     
-                                                                       
- 3  perspective: 600;                                                  
-                                                                       
- 4  position: relative;                                                
-                                                                       
- 5  width: 150px;                                                      
-                                                                       
- 6  }                                                                  
-                                                                       
- 7  .card {                                                            
-                                                                       
- 8  height: 100%;                                                      
-                                                                       
- 9  position: absolute;                                                
-                                                                       
- 1  transform-style: preserve-3d;                                      
- 0                                                                     
-    transition: all 1s ease-in-out;                                    
- 1                                                                     
- 1  width: 100%;                                                       
-                                                                       
- 1  }                                                                  
- 2                                                                     
-    .card:hover {                                                      
- 1                                                                     
- 3  transform: rotateY(180deg);                                        
-                                                                       
- 1  }                                                                  
- 4                                                                     
-    .card .side {                                                      
- 1                                                                     
- 5  backface-visibility: hidden;                                       
-                                                                       
- 1  height: 100%;                                                      
- 6                                                                     
-    position: absolute;                                                
- 1                                                                     
- 7  width: 100%;                                                       
-                                                                       
- 1  }                                                                  
- 8                                                                     
-    .card .back {                                                      
- 1                                                                     
- 9  transform: rotateY(180deg);                                        
-                                                                       
- 2  }                                                                  
- 0                                                                     
+ 1  .card-container {
+ 
+ 2  height: 150px;
+ 
+ 3  perspective: 600;
+ 
+ 4  position: relative; 
+ 
+ 5  width: 150px; 
+ 
+ 6  }  
+ 
+ 7  .card {  
+ 
+ 8  height: 100%; 
+ 
+ 9  position: absolute; 
+ 
+ 1  transform-style: preserve-3d;
+ 0  
+ transition: all 1s ease-in-out; 
+ 1  
+ 1  width: 100%;  
+ 
+ 1  }  
+ 2  
+ .card:hover { 
+ 1  
+ 3  transform: rotateY(180deg);  
+ 
+ 1  }  
+ 4  
+ .card .side { 
+ 1  
+ 5  backface-visibility: hidden; 
+ 
+ 1  height: 100%; 
+ 6  
+ position: absolute; 
+ 1  
+ 7  width: 100%;  
+ 
+ 1  }  
+ 8  
+ .card .back { 
+ 1  
+ 9  transform: rotateY(180deg);  
+ 
+ 2  }  
+ 0  
 ```
 
 <h4>Demo</h4>
@@ -9710,35 +9405,35 @@ name, any animation breakpoints, and the properties intended to be
 animated.
 
 ```
- 1  &#0064;keyframes slide {                                                  
-                                                                         
- 2  0% {                                                                 
-                                                                         
- 3  left: 0;                                                             
-                                                                         
- 4  top: 0;                                                              
-                                                                         
- 5  }                                                                    
-                                                                         
- 6  50% {                                                                
-                                                                         
- 7  left: 244px;                                                         
-                                                                         
- 8  top: 100px;                                                          
-                                                                         
- 9  }                                                                    
-                                                                         
- 1  100% {                                                               
- 0                                                                       
-    left: 488px;                                                         
- 1                                                                       
- 1  top: 0;                                                              
-                                                                         
- 1  }                                                                    
- 2                                                                       
-    }                                                                    
- 1                                                                       
- 3                                                                       
+ 1  &#0064;keyframes slide {
+
+ 2  0% { 
+
+ 3  left: 0;
+
+ 4  top: 0; 
+
+ 5  } 
+
+ 6  50% {
+
+ 7  left: 244px; 
+
+ 8  top: 100px;
+
+ 9  } 
+
+ 1  100% {  
+ 0 
+ left: 488px; 
+ 1 
+ 1  top: 0; 
+
+ 1  } 
+ 2 
+ } 
+ 1 
+ 3 
 ```
 
 <h4>Vendor Prefixing the Keyframe Rule</h4>
@@ -9747,11 +9442,11 @@ The @keyframes rule must be vendor prefixed, just like all of the
 other transition and animation properties. The vendor prefixes for
 the @keyframes rule look like the following:
 
--   @-moz-keyframes
+-@-moz-keyframes
 
--   @-o-keyframes
+-@-o-keyframes
 
--   @-webkit-keyframes
+-@-webkit-keyframes
 
 The animation above is named slide, stated directly after the
 opening @keyframes rule. The different keyframe breakpoints are set
@@ -9781,13 +9476,13 @@ property value. The animation-name declaration is applied to the element
 in which the animation is to be applied to.
 
 +---+----------------------------------------------------------------------+
- 1  .stage:hover .ball {                                                 
-                                                                         
- 2  animation-name: slide;                                               
-                                                                         
- 3  }                                                                    
-                                                                         
- 4                                                                       
+ 1  .stage:hover .ball {  
+
+ 2  animation-name: slide;
+
+ 3  } 
+
+ 4 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 
@@ -9804,11 +9499,11 @@ duration declared using the animation-duration property. As with
 transitions, the duration may be set in seconds or milliseconds.
 
 ```
- 1  .stage:hover .ball {                                                 
- 2  animation-name: slide;                                               
- 3  animation-duration: 2s;                                              
- 4  }                                                                    
- 5                                                                       
+ 1  .stage:hover .ball {  
+ 2  animation-name: slide;
+ 3  animation-duration: 2s;  
+ 4  } 
+ 5 
 ```
 
 A timing function and delay can be declared using
@@ -9817,13 +9512,13 @@ respectively. The values for these properties mimic and behave just as
 they do with transitions.
 
 ```
- 1  .stage:hover .ball {                                                 
- 2  animation-name: slide;                                               
- 3  animation-duration: 2s;                                              
- 4  animation-timing-function: ease-in-out;                              
- 5  animation-delay: .5s;                                                
- 6  }                                                                    
- 7                                                                       
+ 1  .stage:hover .ball {  
+ 2  animation-name: slide;
+ 3  animation-duration: 2s;  
+ 4  animation-timing-function: ease-in-out; 
+ 5  animation-delay: .5s; 
+ 6  } 
+ 7 
 ```
 
 The animation below should cause the ball to bounce once while moving to
@@ -9832,45 +9527,45 @@ the left, however only when hovering over the stage.
 <b>HTML</b>
 
 ```
- 1  <div class="stage">                                              
- 2  <figure class="ball"></figure>                                 
- 3  </div>                                                             
- 4                                                                       
+ 1  <div class="stage">  
+ 2  <figure class="ball"></figure> 
+ 3  </div>
+ 4 
 ```
 
 <b>CSS</b>
 
 ```
- 1  &#0064;keyframes slide {                                                  
- 2  0% {                                                                 
- 3  left: 0;                                                             
- 4  top: 0;                                                              
- 5  }                                                                    
- 6  50% {                                                                
- 7  left: 244px;                                                         
- 8  top: 100px;                                                          
- 9  }                                                                    
- 1  100% {                                                               
-    left: 488px;                                                         
- 1  top: 0;                                                              
- 1  }                                                                    
-    }                                                                    
- 3  .stage {                                                             
- 1  height: 150px;                                                       
-    position: relative;                                                  
- 5  }                                                                    
- 1  .ball {                                                              
-    height: 50px;                                                        
- 7  position: absolute;                                                  
- 1  width: 50px;                                                         
-    }                                                                    
- 9  .stage:hover .ball {                                                 
- 2  animation-name: slide;                                               
-    animation-duration: 2s;                                              
- 1  animation-timing-function: ease-in-out;                              
- 2  animation-delay: .5s;                                                
-    }                                                                    
- 2                                                                       
+ 1  &#0064;keyframes slide {
+ 2  0% { 
+ 3  left: 0;
+ 4  top: 0; 
+ 5  } 
+ 6  50% {
+ 7  left: 244px; 
+ 8  top: 100px;
+ 9  } 
+ 1  100% {  
+ left: 488px; 
+ 1  top: 0; 
+ 1  } 
+ } 
+ 3  .stage {
+ 1  height: 150px;  
+ position: relative;
+ 5  } 
+ 1  .ball { 
+ height: 50px;
+ 7  position: absolute;
+ 1  width: 50px; 
+ } 
+ 9  .stage:hover .ball {  
+ 2  animation-name: slide;
+ animation-duration: 2s;  
+ 1  animation-timing-function: ease-in-out; 
+ 2  animation-delay: .5s; 
+ } 
+ 2 
 ```
 
 <h4>Animation Demo</h4>
@@ -9895,12 +9590,12 @@ times as specified, while the infinite keyword will repeat the animation
 indefinitely in a never ending fashion.
 
 ```
- 1  .stage:hover .ball {                                                 
- 2  animation-name: slide;                                               
- 3  animation-duration: 2s;                                              
- 4  animation-timing-function: ease-in-out;                              
- 5  animation-delay: .5s;                                                
- 6  animation-iteration-count: infinite;                                 
+ 1  .stage:hover .ball {  
+ 2  animation-name: slide;
+ 3  animation-duration: 2s;  
+ 4  animation-timing-function: ease-in-out; 
+ 5  animation-delay: .5s; 
+ 6  animation-iteration-count: infinite; 
  7  }
  8  
 ```
@@ -9939,13 +9634,13 @@ forwards. The alternate-reverse value starts at 100% running to 0% and
 then back to 100% again.
 
 ```
- 1  .stage:hover .ball {                                                 
- 2  animation-name: slide;                                               
- 3  animation-duration: 2s;                                              
- 4  animation-timing-function: ease-in-out;                              
- 5  animation-delay: .5s;                                                
- 6  animation-iteration-count: infinite;                                 
- 7  animation-direction: alternate;                                      
+ 1  .stage:hover .ball {  
+ 2  animation-name: slide;
+ 3  animation-duration: 2s;  
+ 4  animation-timing-function: ease-in-out; 
+ 5  animation-delay: .5s; 
+ 6  animation-iteration-count: infinite; 
+ 7  animation-direction: alternate;
  8  }
  9  
 ```
@@ -9966,18 +9661,18 @@ to paused when making the stage active by clicking on it. Notice how the
 animation will temporarily pause until you let up on the mouse.
 
 ```
- 1  .stage:hover .ball {                                                 
- 2  animation-name: slide;                                               
- 3  animation-duration: 2s;                                              
- 4  animation-timing-function: ease-in-out;                              
- 5  animation-delay: .5s;                                                
- 6  animation-iteration-count: infinite;                                 
- 7  animation-direction: alternate;                                      
- 8  }                                                                    
- 9  .stage:active .ball {                                                
- 10  animation-play-state: paused;                                        
- 11   }                                                                    
- 12                                                                       
+ 1  .stage:hover .ball {  
+ 2  animation-name: slide;
+ 3  animation-duration: 2s;  
+ 4  animation-timing-function: ease-in-out; 
+ 5  animation-delay: .5s; 
+ 6  animation-iteration-count: infinite; 
+ 7  animation-direction: alternate;
+ 8  } 
+ 9  .stage:active .ball { 
+ 10  animation-play-state: paused;  
+ 11} 
+ 12 
 ```
 
 <h4>Animation Play State Demo</h4>
@@ -10010,17 +9705,17 @@ Lastly, the both value will apply the behaviors from both
 the forwards and backwards values.
 
 ```
- 1  .stage:hover .ball {                                                 
- 2  animation-name: slide;                                               
- 3  animation-duration: 2s;                                              
- 4  animation-timing-function: ease-in-out;                              
- 5  animation-delay: .5s;                                                
- 6  animation-fill-mode: forwards;                                       
- 7  }                                                                    
- 8  .stage:active .ball {                                                
- 9  animation-play-state: paused;                                        
- 1  }                                                                    
- 0                                                                       
+ 1  .stage:hover .ball {  
+ 2  animation-name: slide;
+ 3  animation-duration: 2s;  
+ 4  animation-timing-function: ease-in-out; 
+ 5  animation-delay: .5s; 
+ 6  animation-fill-mode: forwards; 
+ 7  } 
+ 8  .stage:active .ball { 
+ 9  animation-play-state: paused;  
+ 1  } 
+ 0 
 ```
 
 <h4>Animation Fill Mode Demo</h4>
@@ -10037,13 +9732,13 @@ declarations. The order of values within the animation property should
 be animation-name, animation-duration, animation-timing-function, animation-delay, animation-iteration-count, animation-direction, animation-fill-mode, and lastly animation-play-state.
 
 ```
- 1  .stage:hover .ball {                                                 
- 2  animation: slide 2s ease-in-out .5s infinite alternate;              
- 3  }                                                                    
- 4  .stage:active .ball {                                                
- 5  animation-play-state: paused;                                        
- 6  }                                                                    
- 7                                                                       
+ 1  .stage:hover .ball {  
+ 2  animation: slide 2s ease-in-out .5s infinite alternate;  
+ 3  } 
+ 4  .stage:active .ball { 
+ 5  animation-play-state: paused;  
+ 6  } 
+ 7 
 ```
 
 <h4>Shorthand Animations Demo</h4>
@@ -10053,19 +9748,19 @@ the animation.
 
 <h4>Resources & Links</h4>
 
--   [Understanding CSS3 Transitions](http://www.alistapart.com/articles/understanding-css3-transitions/) 
+-[Understanding CSS3 Transitions](http://www.alistapart.com/articles/understanding-css3-transitions/) 
   via A List Apart
 
--   [CSS Cubic-Bezier Builder](http://www.roblaplaca.com/examples/bezierBuilder/) 
+-[CSS Cubic-Bezier Builder](http://www.roblaplaca.com/examples/bezierBuilder/) 
   via Rob LaPlaca
 
--   [The Guide To CSS Animation: Principles and
-    Examples](http://coding.smashingmagazine.com/2011/09/14/the-guide-to-css-animation-principles-and-examples/) via
-    Smashing Magazine
+-[The Guide To CSS Animation: Principles and
+ Examples](http://coding.smashingmagazine.com/2011/09/14/the-guide-to-css-animation-principles-and-examples/) via
+ Smashing Magazine
 
--   [Using CSS
-    Animations](https://developer.mozilla.org/en-US/docs/CSS/Using_CSS_animations) via
-    Mozilla Developer Network
+-[Using CSS
+ Animations](https://developer.mozilla.org/en-US/docs/CSS/Using_CSS_animations) via
+ Mozilla Developer Network
 
 [<b>Lesson 7</b>] [Transforms](https://learn.shayhowe.com/advanced-html-css/css-transforms/)
 [<b>Lesson 9</b>] [Feature Support & Polyfills](https://learn.shayhowe.com/advanced-html-css/feature-support-polyfills/)
@@ -10076,21 +9771,21 @@ In this Lesson 9
 
 <b>HTML</b>
 
--   [HTML5
-    Shiv](https://learn.shayhowe.com/advanced-html-css/feature-support-polyfills/#html5-shiv)
+-[HTML5
+ Shiv](https://learn.shayhowe.com/advanced-html-css/feature-support-polyfills/#html5-shiv)
 
--   [Cross Browser
-    Testing](https://learn.shayhowe.com/advanced-html-css/feature-support-polyfills/#cross-browser-testing)
+-[Cross Browser
+ Testing](https://learn.shayhowe.com/advanced-html-css/feature-support-polyfills/#cross-browser-testing)
 
 <b>CSS</b>
 
--   [Detecting Browser
-    Features](https://learn.shayhowe.com/advanced-html-css/feature-support-polyfills/#detecting-browser-features)
+-[Detecting Browser
+ Features](https://learn.shayhowe.com/advanced-html-css/feature-support-polyfills/#detecting-browser-features)
 
 <b>JAVASCRIPT</b>
 
--   [Conditionally Loading
-    Files](https://learn.shayhowe.com/advanced-html-css/feature-support-polyfills/#conditionally-loading-files)
+-[Conditionally Loading
+ Files](https://learn.shayhowe.com/advanced-html-css/feature-support-polyfills/#conditionally-loading-files)
 
 Building a website can be both extremely rewarding and frustrating.
 Common frustrations arise from trying to get a website to look and
@@ -10136,10 +9831,10 @@ In this case the conditional comment looks like <!&#45;&#45;&lbrack;if lt IE
 9&rbrack;>&#8230;<&#0033;[endif&rbrack;&#45;&#45;>.
 
 ```
- 1  <!&#45;&#45;&lbrack;if lt IE 9&rbrack;>                                               
- 2  <script src="html5shiv.js"></script>                           
- 3  <&#0033;[endif&rbrack;&#45;&#45;>                                                    
- 4                                                                       
+ 1  <!&#45;&#45;&lbrack;if lt IE 9&rbrack;>
+ 2  <script src="html5shiv.js"></script>
+ 3  <&#0033;[endif&rbrack;&#45;&#45;>  
+ 4 
 ```
 
 <h4>The Difference Between a Shiv & a Shim</h4>
@@ -10232,41 +9927,41 @@ organized and performance in mind. Avoid duplicating any code or making
 additional HTTP requests when possible.
 
 ```
- 1  button {                                                             
- 2  border: 0;                                                           
- 3  color: #fff;                                                         
- 4  cursor: pointer;                                                     
- 5  font-size: 14px;                                                     
- 6  font-weight: 600;                                                    
- 7  margin: 0;                                                           
- 8  outline: 0;                                                          
- 9  }                                                                    
- 1  /&ast; With CSS Gradient Styles &ast;/                                     
-    .cssgradients button {                                               
- 1  border: 1px solid #0080c2;                                           
- 1  background: linear-gradient(#00a2f5, #0087cc);                       
-    border-radius: 6px;                                                  
- 3  padding: 15px 30px;                                                  
- 1  }                                                                    
-    .cssgradients button:hover {                                         
- 5  background: linear-gradient(#1ab1ff, #009beb);                       
- 1  }                                                                    
-    .cssgradients button:active {                                        
- 7  box-shadow: inset 0 1px 10px rgba(255, 255, 255, .5);                
- 1  }                                                                    
-    /&ast; Without CSS Gradient Styles &ast;/                                  
- 9  .no-cssgradients button {                                            
- 2  background: transparent url("button.png") 0 0 no-repeat;           
-    padding: 16px 31px;                                                  
- 1  }                                                                    
- 2  .no-cssgradients button:hover {                                      
-    background-position: 0 -49px;                                        
- 3  }                                                                    
- 2  .no-cssgradients button:active {                                     
-    background-position: 0 -98px;                                        
- 5  }                                                                    
- 2                                                                       
-                                                                         
+ 1  button {
+ 2  border: 0; 
+ 3  color: #fff; 
+ 4  cursor: pointer;
+ 5  font-size: 14px;
+ 6  font-weight: 600;  
+ 7  margin: 0; 
+ 8  outline: 0;
+ 9  } 
+ 1  /&ast; With CSS Gradient Styles &ast;/  
+ .cssgradients button {
+ 1  border: 1px solid #0080c2;  
+ 1  background: linear-gradient(#00a2f5, #0087cc);  
+ border-radius: 6px;
+ 3  padding: 15px 30px;
+ 1  } 
+ .cssgradients button:hover {
+ 5  background: linear-gradient(#1ab1ff, #009beb);  
+ 1  } 
+ .cssgradients button:active {  
+ 7  box-shadow: inset 0 1px 10px rgba(255, 255, 255, .5); 
+ 1  } 
+ /&ast; Without CSS Gradient Styles &ast;/  
+ 9  .no-cssgradients button {
+ 2  background: transparent url("button.png") 0 0 no-repeat;  
+ padding: 16px 31px;
+ 1  } 
+ 2  .no-cssgradients button:hover {
+ background-position: 0 -49px;  
+ 3  } 
+ 2  .no-cssgradients button:active {  
+ background-position: 0 -98px;  
+ 5  } 
+ 2 
+
 ```
 
 <h4>Feature Detection Demo</h4>
@@ -10306,16 +10001,16 @@ the storage.js file using the getScript method, and if local storage is not 
 is used the storage-polyfill.js file using the getScript method.
 
 ```
- 1  &#36;(document).ready(function() {                                      
- 2  if (Modernizr.localstorage) {                                        
- 3  // Local storage is available                                        
- 4  jQuery.getScript(&#39;storage.js&#39;);                                    
- 5  } else {                                                             
- 6  // Local storage is not available                                    
- 7  jQuery.getScript(&#39;storage-polyfill.js&#39;);                           
- 8  }                                                                    
- 9  });                                                                  
- 1                                                                       
+ 1  &#36;(document).ready(function() {
+ 2  if (Modernizr.localstorage) {  
+ 3  // Local storage is available  
+ 4  jQuery.getScript(&#39;storage.js&#39;); 
+ 5  } else {
+ 6  // Local storage is not available 
+ 7  jQuery.getScript(&#39;storage-polyfill.js&#39;);
+ 8  } 
+ 9  });  
+ 1 
 ```
 
 <h4>Conditionally Loading Based on Media Queries</h4>
@@ -10326,12 +10021,12 @@ media query conditions. Not loading unnecessary files can be extremely
 beneficial for performance.
 
 ```
- 1  &#36;(document).ready(function() {                                      
- 2  if (Modernizr.mq(&#39;screen and (min-width: 640px)&#39;)) {               
- 3  jQuery.getScript(&#39;tabs.js&#39;);                                       
- 4  }                                                                    
- 5  });                                                                  
- 6                                                                       
+ 1  &#36;(document).ready(function() {
+ 2  if (Modernizr.mq(&#39;screen and (min-width: 640px)&#39;)) {
+ 3  jQuery.getScript(&#39;tabs.js&#39;); 
+ 4  } 
+ 5  });  
+ 6 
 ```
 
 Above, Modernizr looks to detect screens above 640 pixels wide,
@@ -10351,12 +10046,12 @@ calling these tooltips could be wrapped in a Modernizr condition,
 preventing the script from loading on smaller screens.
 
 ```
- 1  &#36;(document).ready(function() {                                      
- 2  if (Modernizr.mq(&#39;screen and (max-width: 400px)&#39;)) {               
- 3  &#36;(&#39;.size&#39;).text(&#39;small&#39;);                                       
- 4  }                                                                    
- 5  });                                                                  
- 6                                                                       
+ 1  &#36;(document).ready(function() {
+ 2  if (Modernizr.mq(&#39;screen and (max-width: 400px)&#39;)) {
+ 3  &#36;(&#39;.size&#39;).text(&#39;small&#39;); 
+ 4  } 
+ 5  });  
+ 6 
 ```
 
 <h4>Conditionally Running Scripts Demo</h4>
@@ -10424,24 +10119,24 @@ bookmarklet open for debugging.</h6>
 
 <h4>Resources & Links</h4>
 
--   [HTML5 Shiv](https://code.google.com/p/html5shiv/) via Remy Sharp
+-[HTML5 Shiv](https://code.google.com/p/html5shiv/) via Remy Sharp
 
--   [How To Create an IE-Only
-    Stylesheet](https://css-tricks.com/how-to-create-an-ie-only-stylesheet/) via
-    CSS-Tricks
+-[How To Create an IE-Only
+ Stylesheet](https://css-tricks.com/how-to-create-an-ie-only-stylesheet/) via
+ CSS-Tricks
 
--   [Modernizr](http://modernizr.com/)
+-[Modernizr](http://modernizr.com/)
 
--   [Loading Scripts with
-    jQuery](https://davidwalsh.name/loading-scripts-jquery) via David Walsh
+-[Loading Scripts with
+ jQuery](https://davidwalsh.name/loading-scripts-jquery) via David Walsh
 
--   [deCSS3](https://github.com/davatron5000/deCSS3) via Dave Rupert
+-[deCSS3](https://github.com/davatron5000/deCSS3) via Dave Rupert
 
--   [HTML5 Cross Browser Polyfills](https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-browser-Polyfills)
+-[HTML5 Cross Browser Polyfills](https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-browser-Polyfills)
 
--   [HTML5 Please](http://html5please.com/)
+-[HTML5 Please](http://html5please.com/)
 
--   [Microsoft IE Virtual Machines](https://github.com/xdissent/ievms) via Greg Thornton
+-[Microsoft IE Virtual Machines](https://github.com/xdissent/ievms) via Greg Thornton
 
 <b>[Lesson 8]</b> [Transitions &
 Animations](https://learn.shayhowe.com/advanced-html-css/transitions-animations/)
@@ -10454,15 +10149,15 @@ Accessibility](https://learn.shayhowe.com/advanced-html-css/semantics-accessibil
 
 <h5>HTML</h5>
 
--   [Semantic Motivation](https://learn.shayhowe.com/advanced-html-css/semantics-accessibility/#semantic-motivation)
+-[Semantic Motivation](https://learn.shayhowe.com/advanced-html-css/semantics-accessibility/#semantic-motivation)
 
--   [Structural Semantics](https://learn.shayhowe.com/advanced-html-css/semantics-accessibility/#structural-semantics)
+-[Structural Semantics](https://learn.shayhowe.com/advanced-html-css/semantics-accessibility/#structural-semantics)
 
--   [Text Level Semantics](https://learn.shayhowe.com/advanced-html-css/semantics-accessibility/#text-level-semantics)
+-[Text Level Semantics](https://learn.shayhowe.com/advanced-html-css/semantics-accessibility/#text-level-semantics)
 
--   [Microdata](https://learn.shayhowe.com/advanced-html-css/semantics-accessibility/#microdata)
+-[Microdata](https://learn.shayhowe.com/advanced-html-css/semantics-accessibility/#microdata)
 
--   [WAI-ARIA](https://learn.shayhowe.com/advanced-html-css/semantics-accessibility/#wai-aria)
+-[WAI-ARIA](https://learn.shayhowe.com/advanced-html-css/semantics-accessibility/#wai-aria)
 
 <b>SHARE</b>
 
@@ -10513,13 +10208,13 @@ exchange and use of information across different platforms and devices.
 It's safe to say semantics are important, and here to stay. To briefly
 recap, semantics provide:
 
--   Unambiguous, shared meaning within content
+-Unambiguous, shared meaning within content
 
--   Accessibility
+-Accessibility
 
--   Search and globalization
+-Search and globalization
 
--   Interoperability
+-Interoperability
 
 <h4>Structural Semantics</h4>
 
@@ -10550,17 +10245,17 @@ skipping it, where they may not done so with the CSS declaration.
 
 ```
 +---+----------------------------------------------------------------------+
- 1  <!&#45;&#45; Good &#45;&#45;>                                                    
-                                                                         
- 2  <div hidden>&#8230;</div>                                           
-                                                                         
- 3  <!&#45;&#45; Not good &#45;&#45;>                                                
-                                                                         
- 4  <div style="display: none;">&#8230;</div>                         
-                                                                         
- 5                                                                       
-                                                                         
- 6                                                                       
+ 1  <!&#45;&#45; Good &#45;&#45;>  
+
+ 2  <div hidden>&#8230;</div>  
+
+ 3  <!&#45;&#45; Not good &#45;&#45;> 
+
+ 4  <div style="display: none;">&#8230;</div> 
+
+ 5 
+
+ 6 
 +===+======================================================================+
 +---+----------------------------------------------------------------------+
 ```
@@ -10622,12 +10317,12 @@ dialog or prose, offsetting text without any added emphasis or
 importance.
 
 ```
- 1  <!&#45;&#45; Stressed emphasis &#45;&#45;>                                       
- 2  I <em>love</em> Chicago!                                         
- 3  <!&#45;&#45; Alternative voice or tone &#45;&#45;>                               
- 4  The name <i>Shay</i> means a gift.                               
- 5                                                                       
- 6                                                                       
+ 1  <!&#45;&#45; Stressed emphasis &#45;&#45;> 
+ 2  I <em>love</em> Chicago!
+ 3  <!&#45;&#45; Alternative voice or tone &#45;&#45;>  
+ 4  The name <i>Shay</i> means a gift.  
+ 5 
+ 6 
 ```
 
 <h4>Italicizing Text Demo</h4>
@@ -10671,14 +10366,14 @@ not a hyperlink can confuse users and cause quite a bit of frustration.
 Use underlines with caution.
 
 ```
- 1  <!&#45;&#45; Added to the document &#45;&#45;>                                   
- 2  <ins cite="http://learn.shayhowe.com" datetime="2012-07-01">   
- 3  Updated: This website now contains an advanced guide.                
- 4  </ins>                                                             
- 5  <!&#45;&#45; Unarticulated annotation &#45;&#45;>                                
- 6  <u>Urushihara Yuuji</u> won <u>Sasuke 27</u>.                
- 7                                                                       
- 8                                                                       
+ 1  <!&#45;&#45; Added to the document &#45;&#45;>
+ 2  <ins cite="http://learn.shayhowe.com" datetime="2012-07-01">
+ 3  Updated: This website now contains an advanced guide. 
+ 4  </ins>
+ 5  <!&#45;&#45; Unarticulated annotation &#45;&#45;>
+ 6  <u>Urushihara Yuuji</u> won <u>Sasuke 27</u>. 
+ 7 
+ 8 
 ```
 
 <h4>Underlining Text Demo</h4>
@@ -10700,12 +10395,12 @@ document.
 The s element identifies text that is no longer accurate or relevant.
 
 ```
- 1  <!&#45;&#45; Deleted from the document &#45;&#45;>                               
- 2  I am an avid cyclist, <del cite="http://shayhowe.com"             
-    datetime="2012-07-01">                                            
-    skateboarder</del> and designer.                                   
-    <!&#45;&#45; No longer accurate or relevant &#45;&#45;>                          
-    <s>&#36;24.99</s> &#36;19.99                                           
+ 1  <!&#45;&#45; Deleted from the document &#45;&#45;>  
+ 2  I am an avid cyclist, <del cite="http://shayhowe.com" 
+ datetime="2012-07-01">
+ skateboarder</del> and designer.
+ <!&#45;&#45; No longer accurate or relevant &#45;&#45;>  
+ <s>&#36;24.99</s> &#36;19.99  
 ```
 
 <h4>Striking Text Demo</h4>
@@ -10718,9 +10413,9 @@ identify text, specifically for reference purposes without having to use
 an un-semantic text level element.
 
 ```
- 1  <!&#45;&#45; Highlighted for reference purposes &#45;&#45;>                      
- 2  Search results for <mark>&#39;chicago&#39;</mark>.                     
- 3                                                                       
+ 1  <!&#45;&#45; Highlighted for reference purposes &#45;&#45;> 
+ 2  Search results for <mark>&#39;chicago&#39;</mark>.
+ 3 
 ```
 
 <h4>Highlighting Text Demo</h4>
@@ -10735,9 +10430,9 @@ distinguish acronyms from abbreviations but has since been deprecated,
 and shouldn't be used.
 
 ```
- 1  <abbr title="HyperText Markup Language">HTML</abbr>            
- 2  <abbr title="Cascading Style Sheets">CSS</abbr>                
- 3                                                                       
+ 1  <abbr title="HyperText Markup Language">HTML</abbr>
+ 2  <abbr title="Cascading Style Sheets">CSS</abbr> 
+ 3 
 ```
 
 <h4>Abbreviations Demo</h4>
@@ -10750,12 +10445,12 @@ these elements should be reserved for typographical conventions, not for
 presentational purposes.
 
 ```
- 1  <!&#45;&#45; Subscript &#45;&#45;>                                               
- 2  H<sub>2</sub>O                                                   
- 3  <!&#45;&#45; Superscripts &#45;&#45;>                                            
- 4  1<sup>st</sup> Place                                             
- 5                                                                       
- 6                                                                       
+ 1  <!&#45;&#45; Subscript &#45;&#45;>
+ 2  H<sub>2</sub>O 
+ 3  <!&#45;&#45; Superscripts &#45;&#45;>
+ 4  1<sup>st</sup> Place 
+ 5 
+ 6 
 ```
 
 <h4>Sub & Superscripts Demo</h4>
@@ -10783,20 +10478,20 @@ The value attributes indicates where the progress currently stands and
 the max attribute indicates what progress needs to be reached.
 
 ```
- 1  <!&#45;&#45; Meter &#45;&#45;>                                                   
- 2  <meter value="7" max="10">7 stars</meter>                    
- 3  <meter value="47" min="0" max="105" low="5" high="65"     
-    optimum="45">The car                                              
- 4                                                                       
-    is moving at a decent average mile per hour.</meter>               
- 5                                                                       
-    <!&#45;&#45; Progress &#45;&#45;>                                                
- 6                                                                       
-    You are <progress value="50" max="100">50%</progress>        
- 7  complete.                                                            
- 8  <progress value="50" min="0" max="100">Hold tight,           
-    you&#8217;re getting                                                 
-    there.</progress>                                                  
+ 1  <!&#45;&#45; Meter &#45;&#45;> 
+ 2  <meter value="7" max="10">7 stars</meter>  
+ 3  <meter value="47" min="0" max="105" low="5" high="65"  
+ optimum="45">The car  
+ 4 
+ is moving at a decent average mile per hour.</meter>
+ 5 
+ <!&#45;&#45; Progress &#45;&#45;> 
+ 6 
+ You are <progress value="50" max="100">50%</progress>  
+ 7  complete.  
+ 8  <progress value="50" min="0" max="100">Hold tight,  
+ you&#8217;re getting  
+ there.</progress>
 ```
 
 <h4>Meter & Progress Demo</h4>
@@ -10817,32 +10512,32 @@ should not include any further information than the contact information,
 and other content needs to be placed outside of the address element.
 
 ```
- 1  <!&#45;&#45; Time &#45;&#45;>                                                    
- 2  <time>2011-08-24</time>                                          
- 3  <time datetime="2011-08-24" pubdate>August 24th, 2011</time>   
- 4  <time datetime="15:00">3pm</time>                              
- 5  <time datetime="2011-08-24T15:00">August 24th, 2011 at           
-    3pm</time>                                                         
- 6                                                                       
-    <!&#45;&#45; Address &#45;&#45;>                                                 
-    <address>                                                          
-    <strong>Shay Howe</strong><br>                                 
-    <a                                                                  
- 1  href=                                                                
+ 1  <!&#45;&#45; Time &#45;&#45;>  
+ 2  <time>2011-08-24</time> 
+ 3  <time datetime="2011-08-24" pubdate>August 24th, 2011</time>
+ 4  <time datetime="15:00">3pm</time> 
+ 5  <time datetime="2011-08-24T15:00">August 24th, 2011 at  
+ 3pm</time> 
+ 6 
+ <!&#45;&#45; Address &#45;&#45;>  
+ <address>
+ <strong>Shay Howe</strong><br> 
+ <a  
+ 1  href=
  0  "http://learn.shayhowe.com">http://learn.shayhowe.com</a><br> 
-                                                                         
+
  1  <a href="mailto:hello@awesome.com">hello@awesome.com</a><br> 
- 1                                                                       
-    600 W. Chicago Ave.<br>                                            
- 1                                                                       
- 2  Suite 620<br>                                                      
-                                                                         
- 1  Chicago, IL 60654<br>                                              
- 3                                                                       
-    USA                                                                  
- 1                                                                       
- 4  </address>                                                         
-                                                                         
+ 1 
+ 600 W. Chicago Ave.<br>
+ 1 
+ 2  Suite 620<br> 
+
+ 1  Chicago, IL 60654<br>  
+ 3 
+ USA  
+ 1 
+ 4  </address> 
+
 ```
 
 <h4>Time & Address Demo</h4>
@@ -10864,14 +10559,14 @@ samples of code, which include whitepsace, displayed in a block level
 manner.
 
 ```
- 1  <!&#45;&#45; Inline code samples &#45;&#45;>                                     
- 2  Use the <code>article</code> element.                            
- 3  <!&#45;&#45; Larger, block level code snippets &#45;&#45;>                       
- 4  <pre><code>body {                                                
- 5  color: #666;                                                         
- 6  font: 14px/20px Arial, sans-serif;                                   
- 7  }</code></pre>                                                   
- 8                                                                       
+ 1  <!&#45;&#45; Inline code samples &#45;&#45;>  
+ 2  Use the <code>article</code> element. 
+ 3  <!&#45;&#45; Larger, block level code snippets &#45;&#45;>  
+ 4  <pre><code>body { 
+ 5  color: #666; 
+ 6  font: 14px/20px Arial, sans-serif;
+ 7  }</code></pre> 
+ 8 
 ```
 
 <h4>Presenting Code Demo</h4>
@@ -10894,14 +10589,14 @@ of a word ensures that, should the word need to wrap two lines, it does
 in a legible fashion.
 
 ```
- 1  <!&#45;&#45; Line break &#45;&#45;>                                              
- 2  600 W. Chicago Ave.<br>                                            
- 3  Chicago, IL 60654<br>                                              
- 4  USA                                                                  
- 5  <!&#45;&#45; Word break &#45;&#45;>                                              
- 6  http://shay<wbr>howe.com                                           
- 7                                                                       
- 8                                                                       
+ 1  <!&#45;&#45; Line break &#45;&#45;>  
+ 2  600 W. Chicago Ave.<br>
+ 3  Chicago, IL 60654<br>  
+ 4  USA  
+ 5  <!&#45;&#45; Word break &#45;&#45;>  
+ 6  http://shay<wbr>howe.com  
+ 7 
+ 8 
 ```
 
 <h4>Line & Word Breaks Demo</h4>
@@ -10917,9 +10612,9 @@ rendered as a side comments or small print. This often includes
 copyright information or legal print.
 
 ```
- 1  <!&#45;&#45; Side comments or small print &#45;&#45;>                            
- 2  <small>&copy; 2012 Shay Howe</small>                             
- 3                                                                       
+ 1  <!&#45;&#45; Side comments or small print &#45;&#45;> 
+ 2  <small>&copy; 2012 Shay Howe</small>
+ 3 
 ```
 
 <h4>Side Comments Demo</h4>
@@ -10956,12 +10651,12 @@ you wish on your server while still providing users with a meaningful
 name.
 
 ```
- 1  <!&#45;&#45; Boolean &#45;&#45;>                                                 
- 2  <a href="twitter-logo.png" download>Twitter Logo</a>           
- 3  <!&#45;&#45; With a value &#45;&#45;>                                            
+ 1  <!&#45;&#45; Boolean &#45;&#45;>  
+ 2  <a href="twitter-logo.png" download>Twitter Logo</a>  
+ 3  <!&#45;&#45; With a value &#45;&#45;>
  4  <a href="twitter-logo.png" download="Logo">Twitter Logo</a>  
- 5                                                                       
- 6                                                                       
+ 5 
+ 6 
 ```
 
 <h4>Download Attribute Demo</h4>
@@ -10975,37 +10670,37 @@ referenced. For example, when linking to a copyright statement
 the rel attribute value of copyright should be used.
 
 ```
- 1  <a href="legal.html" rel="copyright">Terms of Use</a>        
- 2  <a href="toc.html" rel="contents">Table of Contents</a>      
- 3                                                                       
+ 1  <a href="legal.html" rel="copyright">Terms of Use</a>  
+ 2  <a href="toc.html" rel="contents">Table of Contents</a>
+ 3 
 ```
 
 A few [popular](http://microformats.org/wiki/existing-rel-values) rel attribute
 values include:
 
--   alternate
+-alternate
 
--   author
+-author
 
--   bookmark
+-bookmark
 
--   help
+-help
 
--   license
+-license
 
--   next
+-next
 
--   nofollow
+-nofollow
 
--   noreferrer
+-noreferrer
 
--   prefetch
+-prefetch
 
--   prev
+-prev
 
--   search
+-search
 
--   tag
+-tag
 
 <h4>Microdata</h4>
 
@@ -11071,10 +10766,10 @@ different, item types. You may also write your own item types should you
 find the need.
 
 ```
- 1  <section itemscope itemtype="http://schema.org/Person">          
- 2  &#8230;                                                                 
- 3  </section>                                                         
- 4                                                                       
+ 1  <section itemscope itemtype="http://schema.org/Person"> 
+ 2  &#8230; 
+ 3  </section> 
+ 4 
 ```
 
 Once the scope and type of the item have been determined, properties may
@@ -11084,10 +10779,10 @@ what property is being referenced, and the content within the element
 itself most commonly determines the value of the property.
 
 ```
- 1  <section itemscope itemtype="http://schema.org/Person">          
- 2  <h1 itemprop="name">Shay Howe</h1>                             
- 3  </section>                                                         
- 4                                                                       
+ 1  <section itemscope itemtype="http://schema.org/Person"> 
+ 2  <h1 itemprop="name">Shay Howe</h1>
+ 3  </section> 
+ 4 
 ```
 
 Some elements, however, do not get their itemprop value from the content
@@ -11097,17 +10792,17 @@ elements and what attribute is used for their property value.
 
 ```
   ---------------------------------------------------------------------------------------
-  <b>[Element]{.mark}</b>                                               <b>[Value]{.mark}</b>
+  <b>[Element]{.mark}</b><b>[Value]{.mark}</b>
   ------------------------------------------------------------------ --------------------
-  <meta>                                                           content attribute
+  <meta> content attribute
 
-  <audio>, <embed>, <iframe>, <img>, <source>, <video>   src attribute
+  <audio>, <embed>, <iframe>, <img>, <source>, <video>src attribute
 
-  <a>, <area>, <link>                                          href attribute
+  <a>, <area>, <link> href attribute
 
-  <object>                                                         data attribute
+  <object> data attribute
 
-  <time>                                                           datetime attribute
+  <time> datetime attribute
   ---------------------------------------------------------------------------------------
 ```
 
@@ -11121,26 +10816,26 @@ postal address item type within it. Also, please notice the different
 item properties and their corresponding values.
 
 ```
- 1  <section itemscope itemtype="http://schema.org/Person">          
- 2  <strong itemprop="name">Shay Howe</strong>                     
- 3  <img src="shay.jpg" itemprop="image" alt="Shay Howe">        
- 4  <div itemprop="jobTitle">Designer and Front-end                  
-    Developer</div>                                                    
-    <a href="http://www.shayhowe.com"                                 
- 6  itemprop="url">shayhowe.com</a>                                 
- 7  <div itemprop="telephone">(555) 123-4567</div>                 
- 8  <a href="mailto:shay@awesome.com"                                 
-    itemprop="email">shay@awesome.com</a>                           
-    <address itemprop="address" itemscope                             
- 1  itemtype="http://schema.org/PostalAddress">                       
-    <span itemprop="streetAddress">600 W. Chicago Ave.</span>      
- 1  <span itemprop="addressLocality">Chicago</span>,               
- 1  <abbr itemprop="addressRegion" title="Illinois">IL</abbr>    
- 2                                                                       
-    <span itemprop="postalCode">60654</span>                       
- 3  </address>                                                         
- 1  </section>                                                         
- 5                                                                       
+ 1  <section itemscope itemtype="http://schema.org/Person"> 
+ 2  <strong itemprop="name">Shay Howe</strong>
+ 3  <img src="shay.jpg" itemprop="image" alt="Shay Howe">  
+ 4  <div itemprop="jobTitle">Designer and Front-end
+ Developer</div>  
+ <a href="http://www.shayhowe.com" 
+ 6  itemprop="url">shayhowe.com</a> 
+ 7  <div itemprop="telephone">(555) 123-4567</div>  
+ 8  <a href="mailto:shay@awesome.com" 
+ itemprop="email">shay@awesome.com</a>
+ <address itemprop="address" itemscope
+ 1  itemtype="http://schema.org/PostalAddress">  
+ <span itemprop="streetAddress">600 W. Chicago Ave.</span>
+ 1  <span itemprop="addressLocality">Chicago</span>,
+ 1  <abbr itemprop="addressRegion" title="Illinois">IL</abbr> 
+ 2 
+ <span itemprop="postalCode">60654</span>  
+ 3  </address> 
+ 1  </section> 
+ 5 
 ```
 
 <h4>Person Microdata Demo</h4>
@@ -11159,40 +10854,40 @@ instead. Common property similarities between the two can be identified,
 as can some of the nested item types.
 
 ```
- 1  <section itemscope itemtype="http://schema.org/Event">           
- 2  <a itemprop="url" href="#">                                    
- 3  <span itemprop="name">Styles Conference</span>                 
- 4  </a>                                                               
+ 1  <section itemscope itemtype="http://schema.org/Event">  
+ 2  <a itemprop="url" href="#"> 
+ 3  <span itemprop="name">Styles Conference</span>  
+ 4  </a>  
  5  <time itemprop="startDate" datetime="2014-08-2409:00">Sunday,  
-    August 24,                                                           
- 6                                                                       
-    2014 at 9:00 a.m.</time>                                           
- 7                                                                       
-    <div itemprop="location" itemscope                                
- 8  itemtype="http://schema.org/Place">                               
-                                                                         
- 9  <a itemprop="url"                                                 
-    href="http://www.thechicagotheatre.com/">Chicago Theatre</a>    
- 1                                                                       
- 0  <address itemprop="address" itemscope                             
-    itemtype="http://schema.org/PostalAddress">                       
- 1                                                                       
- 1  <div itemprop="streetAddress">175 N. State St.</div>           
-                                                                         
- 1  <span itemprop="addressLocality">Chicago</span>,               
- 2                                                                       
-    <abbr itemprop="addressRegion" title="Illinois">IL</abbr>    
- 1                                                                       
- 3  <span itemprop="postalCode">60601</span>                       
-                                                                         
- 1  </address>                                                         
- 4                                                                       
-    </div>                                                             
- 1                                                                       
- 5  </section>                                                         
-                                                                         
- 1                                                                       
- 6                                                                       
+ August 24, 
+ 6 
+ 2014 at 9:00 a.m.</time>  
+ 7 
+ <div itemprop="location" itemscope
+ 8  itemtype="http://schema.org/Place">  
+
+ 9  <a itemprop="url"  
+ href="http://www.thechicagotheatre.com/">Chicago Theatre</a> 
+ 1 
+ 0  <address itemprop="address" itemscope
+ itemtype="http://schema.org/PostalAddress">  
+ 1 
+ 1  <div itemprop="streetAddress">175 N. State St.</div>  
+
+ 1  <span itemprop="addressLocality">Chicago</span>,
+ 2 
+ <abbr itemprop="addressRegion" title="Illinois">IL</abbr> 
+ 1 
+ 3  <span itemprop="postalCode">60601</span>  
+
+ 1  </address> 
+ 4 
+ </div>
+ 1 
+ 5  </section> 
+
+ 1 
+ 6 
 ```
 
 <h4>Event Microdata Demo</h4>
@@ -11221,9 +10916,9 @@ accomplished using the role attribute. These roles then specify what
 certain elements and blocks of content do on a page.
 
 ```
- 1  <header role="banner">&#8230;</header>                            
-                                                                         
- 2                                                                       
+ 1  <header role="banner">&#8230;</header> 
+
+ 2 
 ```
 
 WAI-ARIA roles break down into four different categories, including
@@ -11236,59 +10931,59 @@ below.
 
 <h4>Document Structure Roles</h4>
 
--   article
+-article
 
--   columnheader
+-columnheader
 
--   definition
+-definition
 
--   directory
+-directory
 
--   document
+-document
 
--   group
+-group
 
--   heading
+-heading
 
--   img
+-img
 
--   list
+-list
 
--   listitem
+-listitem
 
--   math
+-math
 
--   note
+-note
 
--   presentation
+-presentation
 
--   region
+-region
 
--   row
+-row
 
--   rowheader
+-rowheader
 
--   separator
+-separator
 
--   toolbar
+-toolbar
 
 <h4>Landmark Roles</h4>
 
--   application
+-application
 
--   banner
+-banner
 
--   complementary
+-complementary
 
--   contentinfo
+-contentinfo
 
--   form
+-form
 
--   main
+-main
 
--   navigation
+-navigation
 
--   search
+-search
 
 HTML5 introduced a handful of new structural elements which commonly
 match up against the document structure and landmark roles. Exactly how
@@ -11301,31 +10996,36 @@ directly tied to the document from a top level perspective, not elements
 nested within other regions of the document structure.
 
 ```
-       *          <b>[Acceptable Roles]{.mark}</b>                  
-                                                                    
-                                                                    
-                                                                    
-                                                                    
+ * <b>[Acceptable Roles]{.mark}</b>
+ 
+ 
+ Element	Implied Role	Acceptable Roles
+article	article	application, article, document, or main
+aside	complementary	complementary, note, or search
+footer	—	contentinfo (Only once per page)
+header	—	banner (Only once per page)
+
+ 
 +======+===========+===================================================+
- art   article    application, article, document, or main           
- icle                                                               
+ artarticle application, article, document, or main  
+ icle  
 +------+-----------+---------------------------------------------------+
- a     comp       complementary, note, or search                    
- side  lementary                                                    
+ a  comp complementary, note, or search  
+ side  lementary  
 +------+-----------+---------------------------------------------------+
- fo    ---        contentinfo (Only once per page)                  
- oter                                                               
+ fo ---  contentinfo (Only once per page)
+ oter  
 +------+-----------+---------------------------------------------------+
- he    ---        banner (Only once per page)                       
- ader                                                               
+ he ---  banner (Only once per page)  
+ ader  
 +------+-----------+---------------------------------------------------+
- nav   n          navigation                                        
-       avigation                                                    
+ navn navigation  
+ avigation  
 +------+-----------+---------------------------------------------------+
- sec   region     alert, alertdialog,                               
- tion             application, contentinfo, dialog, document, log,  
-                                                                    
-                  main, marquee, region, search, or status          
+ secregion  alert, alertdialog,  
+ tion application, contentinfo, dialog, document, log,  
+ 
+main, marquee, region, search, or status 
 +------+-----------+---------------------------------------------------+
 ```
 
@@ -11333,23 +11033,15 @@ Combining the elements with their matched roles in HTML5 would look like
 the following code snippet.
 
 ```
- 1  <header role="banner">                                           
-                                                                         
- 2  <nav role="navigation">&#8230;</nav>                              
-                                                                         
- 3  </header>                                                          
-                                                                         
- 4  <article role="article">                                         
-                                                                         
- 5  <section role="region">&#8230;</section>                          
-                                                                         
- 6  </article>                                                         
-                                                                         
- 7  <aside role="complementary">&#8230;</aside>                       
-                                                                         
- 8  <footer role="contentinfo">&#8230;</footer>                       
-                                                                         
- 9                                                                       
+ 1  <header role="banner">  
+ 2    <nav role="navigation">&#8230;</nav> 
+ 3  </header>
+ 4  <article role="article">
+ 5    <section role="region">&#8230;</section>  
+ 6  </article> 
+ 7  <aside role="complementary">&#8230;</aside>  
+ 8  <footer role="contentinfo">&#8230;</footer>  
+ 9 
 ```
 
 <h3>States & Properties</h3>
@@ -11374,36 +11066,44 @@ structure cannot be determined.
 <details>
   <summary>Resources</summary>
 
-  <h3>Resources & Links</h3>
+  <h3>Resources &amp; Links</h3>
 
   <ul>
-    <li><a href="https://developers.whatwg.org/text-level-semantics.html" rel="noopener noreferrer" target="_blank">
-      Text-Level Semantics</a> via WHATWG</li>
-    <li><a href="http://microformats.org/wiki/existing-rel-values" rel="noopener noreferrer" target="_blank">
-      Existing rel Values</a> via Microformats.org</li>
-    <li><a href="http://schema.org/docs/schemas.html" rel="noopener noreferrer" target="_blank">
-      Organization of Schemas</a> via Schema.org</li>
-    <li><a href="http://diveintohtml5.info/extensibility.html" rel="noopener noreferrer" target="_blank">
-      Microdata</a> via Dive Into HTML5</li>
-    <li><a href="http://www.w3.org/WAI/intro/aria" rel="noopener noreferrer" target="_blank">
-      WAI-ARIA Overview</a>) via W3.org</li>
-    <li><a href="https://www.w3.org/TR/wai-aria/#roles" rel="noopener noreferrer" target="_blank">
-      The Roles Model</a> via W3.org</li>
-  </ul>
+ <li><a href="https://developers.whatwg.org/text-level-semantics.html" 
+   rel="noopener noreferrer" target="_blank">
+   Text-Level Semantics</a> via WHATWG</li>
+ <li><a href="http://microformats.org/wiki/existing-rel-values" 
+   rel="noopener noreferrer" target="_blank">
+   Existing rel Values</a> via Microformats.org</li>
+ <li><a href="http://schema.org/docs/schemas.html" 
+   rel="noopener noreferrer" target="_blank">
+   Organization of Schemas</a> via Schema.org</li>
+ <li><a href="http://diveintohtml5.info/extensibility.html" 
+   rel="noopener noreferrer" target="_blank">
+   Microdata</a> via Dive Into HTML5</li>
+ <li><a href="http://www.w3.org/WAI/intro/aria" 
+   rel="noopener noreferrer" target="_blank">
+   WAI-ARIA Overview</a>) via W3.org</li>
+ <li><a href="https://www.w3.org/TR/wai-aria/#roles" 
+   rel="noopener noreferrer" target="_blank">
+   The Roles Model</a> via W3.org</li>
+</ul>
 
 </details>
 
-[<b>Lesson 9</b>] <a href="https://learn.shayhowe.com/advanced-html-css/feature-support-polyfills/" rel="noopener noreferrer" target="_blank">
-  Feature Support &amp; Polyfills</a>
+[<b>Lesson 9</b>] <a href="https://learn.shayhowe.com/advanced-html-css/feature-support-polyfills/" 
+  rel="noopener noreferrer" target="_blank">Feature Support &amp; Polyfills</a>
 
 ...the end.
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~ 0x/0x.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--
 <p align="center" width="100%">
   <img src="./images/image00x.png"
-    style="width:40%"
-    alt="." />
+ style="width:40%"
+ alt="." />
   <img src="./images/image00x.png"
-    style="width:40%"
-    alt="." />
+ style="width:40%"
+ alt="." />
 </p>
+-->
