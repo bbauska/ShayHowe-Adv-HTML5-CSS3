@@ -2620,13 +2620,13 @@ selected.
 <h4>HTML</h4>
 
 ```
- 1  <div>Hello</div>  
+ 1  <div>Hello</div>
  2  <div><!&#45;&#45; Coming soon &#45;&#45;></div><!&#45;&#45; This div will be 
- selected &#45;&#45;>  
- <div></div><!&#45;&#45; This div will be selected &#45;&#45;> 
- <div> </div>
- <div><strong></strong></div> 
- 6  
+ 3  selected &#45;&#45;>
+ 4  <div></div><!&#45;&#45; This div will be selected &#45;&#45;>
+ 5  <div> </div>
+ 6  <div><strong></strong></div>
+ 7  
 ```
 
 <h4>Negation Pseudo-class</h4>
@@ -2961,47 +2961,45 @@ added to ensure the best support for all browsers.
 
 ```
  1  .arrow {
- 2  background: #2db34a;  
- 3  color: #fff; 
+ 2  background: #2db34a;
+ 3  color: #fff;
  4  display: inline-block;
  5  height: 30px;
- 6  line-height: 30px; 
+ 6  line-height: 30px;
  7  padding: 0 12px;
  8  position: relative;
  9  text-decoration: none;
- 10  } 
+ 10  }
  11  .arrow:before,  
- 12  .arrow:after {  
- 13  content: "";  
+ 12  .arrow:after {
+ 13  content: "";
  14  height: 0;
  15  position: absolute;
- 16  width: 0; 
- 17} 
- 18  .arrow:before { 
+ 16  width: 0;
+ 17  }
+ 18  .arrow:before {
  19  border-bottom: 15px solid #2db34a;
- 20  border-left: 15px solid transparent; 
+ 20  border-left: 15px solid transparent;
  21  border-top: 15px solid #2db34a;
- 22  left: -15px; 
- 23} 
- 24  .arrow:after {  
- 25  border-bottom: 15px solid transparent; 
- 26  border-left: 15px solid #2db34a;  
- 27  border-top: 15px solid transparent;  
+ 22  left: -15px;
+ 23  }
+ 24  .arrow:after {
+ 25  border-bottom: 15px solid transparent;
+ 26  border-left: 15px solid #2db34a;
+ 27  border-top: 15px solid transparent;
  28  right: -15px;
- 29} 
- 30  .arrow:hover {  
- 31  background: #ff7b29;  
- 32} 
- 33  .arrow:hover:before { 
+ 29  }
+ 30  .arrow:hover {
+ 31  background: #ff7b29;
+ 32  }
+ 33  .arrow:hover:before {
  34  border-bottom: 15px solid #ff7b29;
  35  border-top: 15px solid #ff7b29;
- 36  } 
- 37  .arrow:hover:after {  
- 38  
- 39  border-left: 15px solid #ff7b29;  
- 40 
- 41  }
- 42 
+ 36  }
+ 37  .arrow:hover:after {
+ 39  border-left: 15px solid #ff7b29;
+ 40  }
+ 41 
 ```
 
 <h4>Demo</h4>
@@ -7125,29 +7123,21 @@ their individual perspectives with the perspective value.
 
 <h4>HTML</h4>
 
-+---+----------------------------------------------------------------------+
+```
  1  <figure class="box">Box 1</figure>
-
  2  <figure class="box">Box 2</figure>
-
  3  <figure class="box">Box 3</figure>
-
  4 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 <h4>CSS</h4>
 
-+---+----------------------------------------------------------------------+
+```
  1  .box {  
-
  2  transform: perspective(200px) rotateX(45deg);
-
  3  } 
-
  4 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 <h4>Perspective Value Demo</h4>
 
@@ -7157,39 +7147,26 @@ the perspective property on their direct parent element.
 
 <h4>HTML</h4>
 
-+---+----------------------------------------------------------------------+
+```
  1  <div class="group">  
-
  2  <figure class="box">Box 1</figure>
-
  3  <figure class="box">Box 2</figure>
-
  4  <figure class="box">Box 3</figure>
-
  5  </div>
-
  6 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 <h4>CSS</h4>
 
-+---+----------------------------------------------------------------------+
+```
  1  .group {
-
  2  perspective: 200px;
-
  3  } 
-
  4  .box {  
-
  5  transform: rotateX(45deg);  
-
  6  } 
-
  7 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 <h4>Perspective Property Demo</h4>
 
@@ -7213,33 +7190,23 @@ depth values.
 
 <h4>HTML</h4>
 
-+---+----------------------------------------------------------------------+
+```
  1  <figure class="box-1">Box 1</figure>
-
  2  <figure class="box-2">Box 2</figure>
-
  3 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 <h4>CSS</h4>
 
-+---+----------------------------------------------------------------------+
+```
  1  .box-1 {
-
  2  transform: perspective(100px) rotateX(45deg);
-
  3  } 
-
  4  .box-2 {
-
  5  transform: perspective(1000px) rotateX(45deg);  
-
  6  } 
-
  7 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 <h4>Perspective Depth Value Demo</h4>
 
@@ -7256,73 +7223,39 @@ coordinates of the vanishing point of a transform.
 
 <h4>HTML</h4>
 
-+---+----------------------------------------------------------------------+
+```
  1  <div class="original original-1">
-
  2  <figure class="box">Box 1</figure>
-
  3  </div>
-
  4  <div class="original original-2">
-
  5  <figure class="box">Box 2</figure>
-
  6  </div>
-
  7  <div class="original original-3">
-
  8  <figure class="box">Box 3</figure>
-
  9  </div>
-
- 1 
- 0 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+ 10  
+```
 
 <h4>CSS</h4>
 
-+---+----------------------------------------------------------------------+
+```
  1  .original {
-
  2  perspective: 200px;
-
  3  } 
-
  4  .box {  
-
  5  transform: rotateX(45deg);  
-
  6  } 
-
  7  .original-1 {
-
  8  perspective-origin: 0 0; 
-
  9  } 
-
- 1  .original-2 {
- 0 
- perspective-origin: 75% 75%;
- 1 
- 1  } 
-
- 1  .original-3 {
- 2 
- perspective-origin: 20px 40px; 
- 1 
- 3  } 
-
- 1 
- 4 
-
- 1 
- 5 
-
- 1 
- 6 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+ 10  .original-2 {
+ 11  perspective-origin: 75% 75%;
+ 12 } 
+ 13  .original-3 {
+ 14  perspective-origin: 20px 40px; 
+ 15 } 
+ 16 
+```
 
 <h4>Perspective Origin Demo</h4>
 
@@ -7354,42 +7287,27 @@ rotate the element counterclockwise.
 
 <h4>HTML</h4>
 
-+---+----------------------------------------------------------------------+
+```
  1  <figure class="box-1">Box 1</figure>
-
  2  <figure class="box-2">Box 2</figure>
-
  3  <figure class="box-3">Box 3</figure>
-
  4 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 <h4>CSS</h4>
 
-+---+----------------------------------------------------------------------+
+```
  1  .box-1 {
-
  2  transform: perspective(200px) rotateX(45deg);
-
  3  } 
-
  4  .box-2 {
-
  5  transform: perspective(200px) rotateY(45deg);
-
  6  } 
-
  7  .box-3 {
-
  8  transform: perspective(200px) rotateZ(45deg);
-
  9  } 
-
- 1 
- 0 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+ 10 
+```
 
 <h4>3D Rotate Demo</h4>
 
@@ -7405,33 +7323,23 @@ the rotateX in this case, the elements will appear to be unchanged.
 
 <h4>HTML</h4>
 
-+---+----------------------------------------------------------------------+
+```
  1  <figure class="box-1">Box 1</figure>
-
  2  <figure class="box-2">Box 2</figure>
-
  3 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 <h4>CSS</h4>
 
-+---+----------------------------------------------------------------------+
+```
  1  .box-1 {
-
  2  transform: perspective(200px) scaleZ(1.75) rotateX(45deg);  
-
  3  } 
-
  4  .box-2 {
-
  5  transform: perspective(200px) scaleZ(.25) rotateX(45deg);
-
  6  } 
-
  7 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 <h4>3D Scale Demo</h4>
 
@@ -7452,33 +7360,23 @@ for example.
 
 <h4>HTML</h4>
 
-+---+----------------------------------------------------------------------+
+```
  1  <figure class="box-1">Box 1</figure>
-
  2  <figure class="box-2">Box 2</figure>
-
  3 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 <h4>CSS</h4>
 
-+---+----------------------------------------------------------------------+
+```
  1  .box-1 {
-
  2  transform: perspective(200px) translateZ(-50px);
-
  3  } 
-
  4  .box-2 {
-
  5  transform: perspective(200px) translateZ(50px); 
-
  6  } 
-
  7 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 <h4>3D Translate Demo</h4>
 
@@ -7516,51 +7414,31 @@ lie flat on the two-dimensional plane.
 
 <h4>HTML</h4>
 
-+---+----------------------------------------------------------------------+
+```
  1  <div class="rotate three-d">  
-
  2  <figure class="box">Box 1</figure>
-
  3  </div>
-
  4  <div class="rotate"> 
-
  5  <figure class="box">Box 2</figure>
-
  6  </div>
-
  7 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 <h4>CSS</h4>
 
-+---+----------------------------------------------------------------------+
+```
  1  .rotate {  
-
  2  transform: perspective(200px) rotateY(45deg);
-
  3  } 
-
  4  .three-d { 
-
  5  transform-style: preserve-3d;  
-
  6  } 
-
  7  .box {  
-
  8  transform: rotateX(15deg) translateZ(20px);  
-
  9  transform-origin: 0 0;
-
- 1  } 
- 0 
-
- 1 
- 1 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+ 10  } 
+ 11 
+```
 
 <h4>Transform Style Demo</h4>
 
@@ -7588,35 +7466,24 @@ using [animations](https://css-tricks.com/almanac/properties/b/backface-visibil
 
 <h4>HTML</h4>
 
-+---+----------------------------------------------------------------------+
+```
  1  <figure class="box-1">Box 1</figure>
-
  2  <figure class="box-2">Box 2</figure>
-
  3 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 <h4>CSS</h4>
 
-+---+----------------------------------------------------------------------+
+```
  1  .box-1 {
-
  2  transform: rotateY(180deg); 
-
  3  } 
-
  4  .box-2 {
-
  5  backface-visibility: hidden;
-
  6  transform: rotateY(180deg); 
-
  7  } 
-
  8 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 <h4>Backface Visibility Demo</h4>
 
@@ -7624,145 +7491,64 @@ using [animations](https://css-tricks.com/almanac/properties/b/backface-visibil
 
 <h4>HTML</h4>
 
-+---+--------------------------------------------------------------------+
+```
  1  <div class="cube-container">
- 
  2  <div class="cube"> 
- 
  3  <figure class="side front">1</figure>
- 
  4  <figure class="side back">2</figure> 
- 
  5  <figure class="side left">3</figure> 
- 
  6  <figure class="side right">4</figure>
- 
  7  <figure class="side top">5</figure>  
- 
  8  <figure class="side bottom">6</figure>  
- 
  9  </div> 
- 
- 1  </div> 
- 0  
- 
- 1  
- 1  
-+===+====================================================================+
-+---+--------------------------------------------------------------------+
+ 10  </div> 
+ 11 
+```
 
 <h4>CSS</h4>
 
-+---+-------------------------------------------------------------------+
- 1  .cube-container {  
-
- 2  height: 200px;  
-
- 3  perspective: 300;  
-
+```
+ 1  .cube-container {
+ 2  height: 200px;
+ 3  perspective: 300;
  4  position: relative;
-
  5  width: 200px;
-
- 6  } 
-
- 7  .cube { 
-
+ 6  }
+ 7  .cube {
  8  height: 100%;
-
  9  position: absolute;
+ 10  transform: translateZ(-100px);
+ 11  transform-style: preserve-3d;
+ 12  width: 100%;
+ 13  }
+ 14 .side {
+ 15 background: rgba(45, 179, 74, .3);
+ 16  border: 2px solid #2db34a;
+ 17  height: 196px;
+ 18  position: absolute;
+ 19  width: 196px;
+ 20  }
+ 21 .front {
+ 22  transform: translateZ(100px);
+ 23  }
+ 24  .back {
+ 25  transform: rotateX(180deg) translateZ(100px);
+ 26  }
+ 27 .left {
+ 28  transform: rotateY(-90deg) translateZ(100px);
+ 29 }
+ 30  .right {
+ 31  transform: rotateY(90deg) translateZ(100px); 
+ 32 } 
+ 33 .top {  
+ 34  transform: rotateX(90deg) translateZ(100px); 
+ 35  } 
+ 36  .bottom { 
+ 37  transform: rotateX(-90deg) translateZ(100px);
+ 38  } 
+ 40 
+```
 
- 1  transform: translateZ(-100px); 
- 0 
- transform-style: preserve-3d;  
- 1 
- 1  width: 100%; 
-
- 1  } 
- 2 
- .side { 
- 1 
- 3  background: rgba(45, 179, 74, .3);
-
- 1  border: 2px solid #2db34a;  
- 4 
- height: 196px;  
- 1 
- 5  position: absolute;
-
- 1  width: 196px;
- 6 
- } 
- 1 
- 7  .front {
-
- 1  transform: translateZ(100px);  
- 8 
- } 
- 1 
- 9  .back { 
-
- 2  transform: rotateX(180deg) translateZ(100px);
- 0 
- } 
- 2 
- 1  .left { 
-
- 2  transform: rotateY(-90deg) translateZ(100px);
- 2 
- } 
- 2 
- 3  .right {
-
- 2  transform: rotateY(90deg) translateZ(100px); 
- 4 
- } 
- 2 
- 5  .top {  
-
- 2  transform: rotateX(90deg) translateZ(100px); 
- 6 
- } 
- 2 
- 7  .bottom { 
-
- 2  transform: rotateX(-90deg) translateZ(100px);
- 8 
- } 
- 2 
- 9 
-
- 3 
- 0 
-
- 3 
- 1 
-
- 3 
- 2 
-
- 3 
- 3 
-
- 3 
- 4 
-
- 3 
- 5 
-
- 3 
- 6 
-
- 3 
- 7 
-
- 3 
- 8 
-
- 3 
- 9 
-+===+===================================================================+
-+---+-------------------------------------------------------------------+
 
 <h3>Demo</h3>
 
@@ -7841,29 +7627,18 @@ transition, with the first three are the most popular.
 In the example below the box will change its background color over the
 course of 1 second in a linear fashion.
 
-+---+----------------------------------------------------------------------+
- 1  .box {  
-
- 2  background: #2db34a;  
-
- 3  transition-property: background;  
-
- 4  transition-duration: 1s; 
-
- 5  transition-timing-function: linear;  
-
- 6  } 
-
- 7  .box:hover { 
-
- 8  background: #ff7b29;  
-
- 9  } 
-
- 1 
- 0 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
+ 1  .box {
+ 2    background: #2db34a;
+ 3    transition-property: background;
+ 4    transition-duration: 1s;
+ 5    transition-timing-function: linear;
+ 6  }
+ 7  .box:hover {
+ 8    background: #ff7b29;
+ 9  }
+ 10 
+```
 
 <h4>Transition Demo</h4>
 
@@ -7877,56 +7652,26 @@ support across all browsers, use vendor prefixes.
 For reference, the prefixed version of the code above would look like
 the following.
 
-+---+--------------------------------------------------------------------+
+```
  1  .box {
- 
- 2  background: #2db34a;
- 
- 3  -webkit-transition-property: background;
- 
- 4  -moz-transition-property: background; 
- 
- 5  -o-transition-property: background;
- 
- 6  transition-property: background;
- 
- 7  -webkit-transition-duration: 1s;
- 
- 8  -moz-transition-duration: 1s;
- 
- 9  -o-transition-duration: 1s;  
- 
- 1  transition-duration: 1s;  
- 0  
- -webkit-transition-timing-function: linear;
- 1  
- 1  -moz-transition-timing-function: linear;
- 
- 1  -o-transition-timing-function: linear;
- 2  
- transition-timing-function: linear;
- 1  
- 3  }  
- 
- 1  .box:hover {  
- 4  
- background: #ff7b29;
- 1  
- 5  }  
- 
- 1  
- 6  
- 
- 1  
- 7  
- 
- 1  
- 8  
- 
- 1  
- 9  
-+===+====================================================================+
-+---+--------------------------------------------------------------------+
+ 2    background: #2db34a;
+ 3    -webkit-transition-property: background;
+ 4    -moz-transition-property: background; 
+ 5    -o-transition-property: background;
+ 6    transition-property: background;
+ 7    -webkit-transition-duration: 1s;
+ 8    -moz-transition-duration: 1s;
+ 9    -o-transition-duration: 1s;  
+ 10   transition-duration: 1s;  
+ 11   -webkit-transition-timing-function: linear;
+ 12   -moz-transition-timing-function: linear;
+ 13   -o-transition-timing-function: linear;
+ 14   transition-timing-function: linear;
+ 15 } 
+ 16 .box:hover {
+ 17   background: #ff7b29;
+ 18 } 
+```
 
 <h4>Transitional Property</h4>
 
@@ -7949,35 +7694,20 @@ separated within the transition-property value. Additionally, the
 keyword value all may be used to transition all properties of an
 element.
 
-+---+----------------------------------------------------------------------+
+```
  1  .box {  
-
  2  background: #2db34a;  
-
  3  border-radius: 6px 
-
  4  transition-property: background, border-radius; 
-
  5  transition-duration: 1s; 
-
  6  transition-timing-function: linear;  
-
  7  } 
-
  8  .box:hover { 
-
  9  background: #ff7b29;  
-
- 1  border-radius: 50%;
- 0 
- } 
- 1 
- 1 
-
- 1 
- 2 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+ 10  border-radius: 50%;
+ 11 } 
+ 12 
+```
 
 <h4>Transition Property Demo</h4>
 
@@ -8079,35 +7809,20 @@ If multiple properties are being transitioned with only one duration
 value declared, that one value will be the duration of all the
 transitioned properties.
 
-+---+----------------------------------------------------------------------+
+```
  1  .box {  
-
  2  background: #2db34a;  
-
  3  border-radius: 6px;
-
  4  transition-property: background, border-radius; 
-
  5  transition-duration: .2s, 1s;  
-
  6  transition-timing-function: linear;  
-
  7  } 
-
  8  .box:hover { 
-
  9  background: #ff7b29;  
-
- 1  border-radius: 50%;
- 0 
- } 
- 1 
- 1 
-
- 1 
- 2 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+ 10  border-radius: 50%;
+ 11  } 
+ 12 
+```
 
 <h4>Transition Duration Demo</h4>
 
@@ -8233,41 +7948,34 @@ transition values.
  7  cursor: pointer; 
  8  font: inherit;
  9  margin: 0; 
- 1  outline: 0;
- padding: 12px 20px; 
- 1  transition: all .1s linear;  
- 1  }  
- button:active {  
- 3  box-shadow: 0 2px 0 #006599; 
- 1  transform: translateY(3px);  
- }  
- 5  
+ 10  outline: 0;
+ 11  padding: 12px 20px; 
+ 12  transition: all .1s linear;  
+ 13  }  
+ 14 button:active {  
+ 15  box-shadow: 0 2px 0 #006599; 
+ 16  transform: translateY(3px);  
+ 17  }  
+ 18  
 ```
 
 <h4>Demo</h4>
 
 <h4>Card Flip</h4>
 
-<b>HTML**
+<h4>HTML</h4>
 
 ```
-+---+--------------------------------------------------------------------+
  1  <div class="card-container">
- 
  2  <div class="card"> 
- 
  3  <div class="side">...</div> 
- 
  4  <div class="side back">...</div> 
- 
  5  </div> 
- 
  6  </div> 
- 
  7  
 ```
 
-<b>CSS**
+<h4>CSS</h4>
 
 ```
  1  .card-container {
@@ -8373,16 +8081,12 @@ with the animation name, identified from the @keyframes rule, as the
 property value. The animation-name declaration is applied to the element
 in which the animation is to be applied to.
 
-+---+----------------------------------------------------------------------+
+```
  1  .stage:hover .ball {  
-
  2  animation-name: slide;
-
  3  } 
-
  4 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 Using the animation-name property alone isn't enough though. You also
 need to declare an animation-duration property and value so that the
@@ -8435,35 +8139,35 @@ the left, however only when hovering over the stage.
 
 ```
  1  &#0064;keyframes slide {
- 2  0% { 
+ 2  0% {
  3  left: 0;
- 4  top: 0; 
- 5  } 
+ 4  top: 0;
+ 5  }
  6  50% {
- 7  left: 244px; 
+ 7  left: 244px;
  8  top: 100px;
- 9  } 
- 1  100% {  
- left: 488px; 
- 1  top: 0; 
- 1  } 
- } 
- 3  .stage {
- 1  height: 150px;  
- position: relative;
- 5  } 
- 1  .ball { 
- height: 50px;
- 7  position: absolute;
- 1  width: 50px; 
- } 
- 9  .stage:hover .ball {  
- 2  animation-name: slide;
- animation-duration: 2s;  
- 1  animation-timing-function: ease-in-out; 
- 2  animation-delay: .5s; 
- } 
- 2 
+ 9  }
+ 10  100% {
+ 11  left: 488px; 
+ 12  top: 0; 
+ 13  } 
+ 14   } 
+ 15  .stage {
+ 16  height: 150px;  
+ 17  position: relative;
+ 18  } 
+ 19  .ball { 
+ 20  height: 50px;
+ 21  position: absolute;
+ 22  width: 50px; 
+ 23  } 
+ 24  .stage:hover .ball {  
+ 25  animation-name: slide;
+ 26  animation-duration: 2s;  
+ 27  animation-timing-function: ease-in-out; 
+ 28  animation-delay: .5s; 
+ 29  } 
+ 30 
 ```
 
 <h4>Animation Demo</h4>
@@ -8569,7 +8273,7 @@ animation will temporarily pause until you let up on the mouse.
  8  } 
  9  .stage:active .ball { 
  10  animation-play-state: paused;  
- 11} 
+ 11 } 
  12 
 ```
 
@@ -8710,26 +8414,26 @@ supported by a specific browser.
 <h4>HTML5 Shiv</h4>
 
 Perhaps the most popular shiv, and one you may have likely used already,
-is the HTML5 Shiv. The HTML5 Shiv was [created by Remy
-Sharp](http://paulirish.com/2011/the-history-of-the-html5-shiv/) to
-provide the ability to use HTML5 elements within versions of Internet
-Explorer 8 and below. The HTML5 Shiv not only creates support for HTML5
-elements but also allows them to be properly styled with CSS.
+is the HTML5 Shiv. The HTML5 Shiv was 
+<a href="http://paulirish.com/2011/the-history-of-the-html5-shiv/">
+created by Remy Sharp</a> to provide the ability to use HTML5 elements within 
+versions of Internet Explorer 8 and below. The HTML5 Shiv not only creates 
+support for HTML5 elements but also allows them to be properly styled with CSS.
 
-The [shiv](https://code.google.com/p/html5shiv/) should be
+The <a href="https://code.google.com/p/html5shiv/">shiv</a> should be
 downloaded from Google, where Remy maintains the latest version, then
 hosted on your server. For the best performance, reference the shiv
 JavaScript file within the head of the document, after any stylesheet
 references. Additionally, you want to reference the shiv inside of
-a [conditional
-comment](https://css-tricks.com/how-to-create-an-ie-only-stylesheet/),
-making sure that the file is only loaded within versions of Internet
-Explorer 8 and below.
+a <a href="https://css-tricks.com/how-to-create-an-ie-only-stylesheet/">
+conditional comment</a>, making sure that the file is only loaded within 
+versions of Internet Explorer 8 and below.
 
+```
 In this case the conditional comment looks like <!&#45;&#45;]if lt IE
 9[>...<&#0033;[endif[&#45;&#45;>.
 
-```
+
  1  <!&#45;&#45;]if lt IE 9[>
  2  <script src="html5shiv.js"></script>
  3  <&#0033;[endif[&#45;&#45;>  
@@ -9048,15 +8752,18 @@ Accessibility](https://learn.shayhowe.com/advanced-html-css/semantics-accessibil
 
 <h5>HTML</h5>
 
--[Semantic Motivation](https://learn.shayhowe.com/advanced-html-css/semantics-accessibility/#semantic-motivation)
-
--[Structural Semantics](https://learn.shayhowe.com/advanced-html-css/semantics-accessibility/#structural-semantics)
-
--[Text Level Semantics](https://learn.shayhowe.com/advanced-html-css/semantics-accessibility/#text-level-semantics)
-
--[Microdata](https://learn.shayhowe.com/advanced-html-css/semantics-accessibility/#microdata)
-
--[WAI-ARIA](https://learn.shayhowe.com/advanced-html-css/semantics-accessibility/#wai-aria)
+<ul>
+  <li><a href="https://learn.shayhowe.com/advanced-html-css/semantics-accessibility/#semantic-motivation">
+    Semantic Motivation</a></li>
+  <li><a href="https://learn.shayhowe.com/advanced-html-css/semantics-accessibility/#structural-semantics">
+    Structural Semantics</a></li>
+  <li><a href="https://learn.shayhowe.com/advanced-html-css/semantics-accessibility/#text-level-semantics">
+    Text Level Semantics</a></li>
+  <li><a href="https://learn.shayhowe.com/advanced-html-css/semantics-accessibility/#microdata">
+    Microdata</a></li>
+  <li><a href="https://learn.shayhowe.com/advanced-html-css/semantics-accessibility/#wai-aria">
+    WAI-ARIA</a></li>
+</ul>
 
 <b>SHARE</b>
 
@@ -9093,16 +8800,16 @@ even opinionated. While this may have some validity, you still need to
 retain integrity and continue to write the best code possible, for
 semantics provide a larger meaning in writing code.
 
-The fact of the matter is, [semantics largely benefit
-everyone](http://www.vanseodesign.com/web-design/semantic-html/).
-For starters, semantics provide a shared and unambiguous meaning to
-content. Semantics give content solid structure and value, while also
-favoring accessibility, providing better user interfaces and more
-defined information to assistive technologies. Search and globalization
-is more permanent with semantics, making it easier to serve content
-internationally and making it more search engine friendly. Should that
-not be enough, semantics also promote interoperability, allowing the
-exchange and use of information across different platforms and devices.
+The fact of the matter is, 
+<a href="http://www.vanseodesign.com/web-design/semantic-html/">semantics largely 
+benefit everyone</a>. For starters, semantics provide a shared and unambiguous 
+meaning to content. Semantics give content solid structure and value, while also
+favoring accessibility, providing better user interfaces and more defined 
+information to assistive technologies. Search and globalization is more 
+permanent with semantics, making it easier to serve content internationally 
+and making it more search engine friendly. Should that not be enough, semantics 
+also promote interoperability, allowing the exchange and use of information 
+across different platforms and devices.
 
 It's safe to say semantics are important, and here to stay. To briefly
 recap, semantics provide:
@@ -9117,10 +8824,10 @@ recap, semantics provide:
 
 <h4>Structural Semantics</h4>
 
-Within the beginner's guide we discuss the use of [structural
-semantics](https://learn.shayhowe.com/html-css/getting-to-know-html/),
-specifically using the header, nav, article, section, aside,
-and footer elements. These elements are used to provide additional
+Within the beginner's guide we discuss the use of 
+<a href="https://learn.shayhowe.com/html-css/getting-to-know-html/">
+structural semantics</a>, specifically using the header, nav, article, section, 
+aside, and footer elements. These elements are used to provide additional
 background context to the content within them, communicating their core
 meaning to web browsers and other devices. This is important, as it
 provides a better way to outline and structure pages, not to mention a
@@ -9143,20 +8850,11 @@ being. Screen readers and other devices will recognize this, temporarily
 skipping it, where they may not done so with the CSS declaration.
 
 ```
-+---+----------------------------------------------------------------------+
  1  <!&#45;&#45; Good &#45;&#45;>  
-
  2  <div hidden>...</div>  
-
  3  <!&#45;&#45; Not good &#45;&#45;> 
-
  4  <div style="display: none;">...</div> 
-
  5 
-
- 6 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
 ```
 
 Imagine a blind user attempting to fill out a form and the first piece
@@ -9168,17 +8866,15 @@ semantics.
 
 The majority of content on the web lives within text, and we primarily
 browse the Internet looking for this content. Using the
-proper [semantic
-markup](https://developers.whatwg.org/text-level-semantics.html) for
-text makes it easier for users to find what they need.
+proper <a href="https://developers.whatwg.org/text-level-semantics.html">
+semantic markup</a> for text makes it easier for users to find what they need.
 
 <h4>Bolding Text</h4>
 
 There are a few different ways to make text bold, including multiple
-elements and the [font
-weight](https://learn.shayhowe.com/html-css/working-with-typography/) CSS
-property. The two main elements used in this case include strong and b.
-While these two elements have the same presentation they have completely
+elements and the <a href="https://learn.shayhowe.com/html-css/working-with-typography/">
+font weight</a> CSS property. The two main elements used in this case include strong 
+and b. While these two elements have the same presentation they have completely
 different semantic meanings.
 
 The strong element outlines text that has a <b>strong importance</b>. On
@@ -9272,7 +8968,6 @@ Use underlines with caution.
  5  <!&#45;&#45; Unarticulated annotation &#45;&#45;>
  6  <u>Urushihara Yuuji</u> won <u>Sasuke 27</u>. 
  7 
- 8 
 ```
 
 <h4>Underlining Text Demo</h4>
@@ -9296,10 +8991,11 @@ The s element identifies text that is no longer accurate or relevant.
 ```
  1  <!&#45;&#45; Deleted from the document &#45;&#45;>  
  2  I am an avid cyclist, <del cite="http://shayhowe.com" 
- datetime="2012-07-01">
- skateboarder</del> and designer.
- <!&#45;&#45; No longer accurate or relevant &#45;&#45;>  
- <s>$24.99</s> $19.99  
+ 3  datetime="2012-07-01">
+ 4  skateboarder</del> and designer.
+ 5  <!&#45;&#45; No longer accurate or relevant &#45;&#45;>  
+ 6  <s>$24.99</s> $19.99  
+ 7 
 ```
 
 <h4>Striking Text Demo</h4>
@@ -9740,49 +9436,34 @@ as can some of the nested item types.
  2  <a itemprop="url" href="#"> 
  3  <span itemprop="name">Styles Conference</span>  
  4  </a>  
- 5  <time itemprop="startDate" datetime="2014-08-2409:00">Sunday,  
- August 24, 
- 6 
- 2014 at 9:00 a.m.</time>  
- 7 
- <div itemprop="location" itemscope
+ 5  <time itemprop="startDate" datetime="2014-08-2409:00">Sunday, August 24, 
+ 6  2014 at 9:00 a.m.</time>  
+ 7  <div itemprop="location" itemscope
  8  itemtype="http://schema.org/Place">  
-
  9  <a itemprop="url"  
- href="http://www.thechicagotheatre.com/">Chicago Theatre</a> 
- 1 
- 0  <address itemprop="address" itemscope
- itemtype="http://schema.org/PostalAddress">  
- 1 
- 1  <div itemprop="streetAddress">175 N. State St.</div>  
-
- 1  <span itemprop="addressLocality">Chicago</span>,
- 2 
- <abbr itemprop="addressRegion" title="Illinois">IL</abbr> 
- 1 
- 3  <span itemprop="postalCode">60601</span>  
-
- 1  </address> 
- 4 
- </div>
- 1 
- 5  </section> 
-
- 1 
- 6 
+ 10 href="http://www.thechicagotheatre.com/">Chicago Theatre</a> 
+ 11 <address itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">  
+ 12  <div itemprop="streetAddress">175 N. State St.</div>  
+ 13  <span itemprop="addressLocality">Chicago</span>,
+ 14  <abbr itemprop="addressRegion" title="Illinois">IL</abbr> 
+ 15  <span itemprop="postalCode">60601</span>  
+ 16  </address> 
+ 17  </div>
+ 18  </section> 
+ 19 
 ```
 
 <h4>Event Microdata Demo</h4>
 
 Microdata provides a lot of ways to further extend the content of a
 page. We have only touched the surface here. Further information on
-microdata may be found at [Dive Into HTML5
-Microdata](http://diveintohtml5.info/extensibility.html) and [WHATWG
-Microdata](https://developers.whatwg.org/links.html#microdata).
+microdata may be found at <a href="http://diveintohtml5.info/extensibility.html">
+Dive Into HTML5 Microdata</a> and <a href="https://developers.whatwg.org/links.html#microdata">
+WHATWG Microdata</a>.
 
 <h4>WAI-ARIA</h4>
 
-[WAI-ARIA](http://www.w3.org/WAI/intro/aria), also know as
+<a href="http://www.w3.org/WAI/intro/aria">WAI-ARIA</a>, also know as
 Web Accessibility Initiative --- Accessible Rich Internet Applications,
 is a specification that helps make web pages and applications more
 accessible to those with disabilities. Specifically, WAI-ARIA helps
@@ -9792,14 +9473,12 @@ technologies.
 
 <h4>Roles</h4>
 
-Setting [WAI-ARIA
-roles](https://www.w3.org/TR/wai-aria/#roles) is
+Setting <a href="https://www.w3.org/TR/wai-aria/#roles">WAI-ARIA roles</a> is
 accomplished using the role attribute. These roles then specify what
 certain elements and blocks of content do on a page.
 
 ```
  1  <header role="banner">...</header> 
-
  2 
 ```
 
@@ -9879,7 +9558,7 @@ nested within other regions of the document structure.
 
 ```
  * <b>[Acceptable Roles]</b>
- 
+```
  
  Element	Implied Role	Acceptable Roles
 article	article	application, article, document, or main
@@ -9888,7 +9567,6 @@ footer	—	contentinfo (Only once per page)
 header	—	banner (Only once per page)
 
  
-+======+===========+===================================================+
  artarticle application, article, document, or main  
  icle  
 +------+-----------+---------------------------------------------------+
@@ -9908,8 +9586,7 @@ header	—	banner (Only once per page)
  tion application, contentinfo, dialog, document, log,  
  
 main, marquee, region, search, or status 
-+------+-----------+---------------------------------------------------+
-```
+
 
 Combining the elements with their matched roles in HTML5 would look like
 the following code snippet.
