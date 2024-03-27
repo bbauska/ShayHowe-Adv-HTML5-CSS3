@@ -1,4 +1,4 @@
-<!-- ---
+---
 title: "Shay & Howe's Advanced HTML and CSS"
 author: "Brian Bauska (bbauska)"
 date last editted: "3/26/2024 7+pm"
@@ -6,17 +6,17 @@ output:
   markdown:
  with some style
 ---
--->
+
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h1 align="center" width="100%">Advanced HTML &amp; CSS</h1>
 <h6 align="center">by Shay-Howe</h6>
 
-<h2>[Lesson 1] Performance & Organization</h2>
+<h2 align="center">[Lesson 1] Performance &amp; Organization</h2>
 
 <h3>In this Lesson 1</h3>
 
-<h5>HTML</h5>
+<h4>HTML</h4>
 
 <ul>
   <li><a href="https://learn.shayhowe.com/advanced-html-css/performance-organization/#minify-compress-files">
@@ -25,7 +25,7 @@ output:
  Cache Common Files</a></li>
 </ul>
 
-<h5>CSS</h5>
+<h4>CSS</h4>
 
 <ul>
   <li><a href="https://learn.shayhowe.com/advanced-html-css/performance-organization/#strategy-structure">
@@ -74,22 +74,22 @@ interface components, and business logic modules.
 
 ```
  1  # Base
- 2  -- normalize.css
- 3  -- layout.css
- 4  -- typography.css
+ 2    -- normalize.css
+ 3    -- layout.css
+ 4    -- typography.css
  5  
  6  # Components
- 7  -- alerts.css
- 8  -- buttons.css
- 9  -- forms.css
- 10 -- list.css
- 11 -- nav.css
- 12 -- tables.css
+ 7    -- alerts.css
+ 8    -- buttons.css
+ 9    -- forms.css
+ 10   -- list.css
+ 11   -- nav.css
+ 12   -- tables.css
  13  
- 14  # Modules
- 15 -- aside.css
- 16 -- footer.css
- 17 -- header.css
+ 14 # Modules
+ 15   -- aside.css
+ 16   -- footer.css
+ 17   -- header.css
  18 
 ```
 
@@ -151,7 +151,7 @@ multiple classes as necessary.
 
 ```
  1  <div class="alert alert-error">
- 2 <p class="msg">...</p>
+ 2    <p class="msg">...</p>
  3  </div>
  4 
 ```
@@ -172,7 +172,7 @@ a new page or feature to a website.
 
 <h4>Scalable & Modular Architecture for CSS</h4>
 
-Along the same line of Object Oriented CSS is the <a href="(http://smacss.com/">Scalable and Modular
+Along the same line of Object Oriented CSS is the <a href="http://smacss.com/">Scalable and Modular
 Architecture for CSS</a> methodology developed by Jonathan Snook. The Scalable and Modular Architecture for
 CSS promotes breaking up styles into <b>five</b> core categories, including:
 
@@ -199,7 +199,7 @@ modules.
 
 ```
  1  <div class="alert is-error">
- 2 <p>...</p>
+ 2    <p>...</p>
  3  </div>
  4  
 ```
@@ -338,29 +338,29 @@ multiple classes on the same element.
 ```
  1  /* Bad */
  2  .news { 
- 3  background: #eee;  
- 4  border-radius: 5px;
- 5  box-shadow: inset 0 1px 2px rgba(0, 0, 0, .25); 
+ 3    background: #eee;  
+ 4    border-radius: 5px;
+ 5    box-shadow: inset 0 1px 2px rgba(0, 0, 0, .25); 
  6  }
  7  .social {
- 8  background: #eee;
- 9  border-radius: 5px;
- 10 box-shadow: inset 0 1px 2px rgba(0, 0, 0, .25);
+ 8    background: #eee;
+ 9    border-radius: 5px;
+ 10   box-shadow: inset 0 1px 2px rgba(0, 0, 0, .25);
  11 }
  12
  13 /* Good */
  14 .news,
  15 .social {
- 16 background: #eee;
- 17 border-radius: 5px;
- 18 box-shadow: inset 0 1px 2px rgba(0, 0, 0, .25);
+ 16   background: #eee;
+ 17   border-radius: 5px;
+ 18   box-shadow: inset 0 1px 2px rgba(0, 0, 0, .25);
  19 }
  20 
  21 /* Even Better */
  22 .modal {
- 23 background: #eee;
- 24 border-radius: 5px;
- 25 box-shadow: inset 0 1px 2px rgba(0, 0, 0, .25);
+ 23   background: #eee;
+ 24   border-radius: 5px;
+ 25   box-shadow: inset 0 1px 2px rgba(0, 0, 0, .25);
  26 }
  27 
 ```
@@ -510,9 +510,8 @@ with the height and width attributes is bad practice as it loads more
 data than necessary.
 
 ```
- 1  <img src="ocean.jpg" height="440" width="660" 
- 2 alt="Oceanview">
- 3  
+ 1  <img src="ocean.jpg" height="440" width="660" alt="Oceanview">
+ 2  
 ```
 
 <h4>Reduce HTTP Requests</h4>
@@ -616,51 +615,52 @@ be shown accordingly.
  7    list-style: none;
  8    margin: 2px;
  9  }
- 10  li a {
- 11  background: linear-gradient(#fff, #eee);
- 12  border: 1px solid #ccc;
- 13  border-radius: 3px;
- 14  display: block;
- 15  padding: 3px;
- 16  }
- 17  li a:hover {
- 18  border-color: #999;
- 19  }
- 20  li span {
- 21  background: url("sprite.png") 0 0 no-repeat;
- 22  color: transparent;
- 23  display: block;
- 24  font: 0/0 a;
- 25  height: 16px;
- 26  width: 16px;
- 27  }
- 28  .italic {
- 29  background-position: -16px 0;
- 30  }
- 31  .underline { 
- 32  background-position: -32px 0;
- 33  }
- 34  .size { 
- 35  background-position: -48px 0;
- 36  }
- 37  .bullet {
- 38  background-position: -64px 0;
- 39  }
- 40  .number {
- 41  background-position: -80px 0;
- 42  }
- 43  .quote {
- 44  background-position: -96px 0;
- 45  }
- 46  .left {
- 47  background-position: -112px 0;
- 48  }
- 49   .center {
- 50  background-position: -128px 0;
- 51  }
- 52  .right {
- 53  background-position: -144px 0;
- 54 
+ 10 li a {
+ 11   background: linear-gradient(#fff, #eee);
+ 12   border: 1px solid #ccc;
+ 13   border-radius: 3px;
+ 14   display: block;
+ 15   padding: 3px;
+ 16 }
+ 17 li a:hover {
+ 18   border-color: #999;
+ 19 }
+ 20 li span {
+ 21   background: url("sprite.png") 0 0 no-repeat;
+ 22   color: transparent;
+ 23   display: block;
+ 24   font: 0/0 a;
+ 25   height: 16px;
+ 26   width: 16px;
+ 27 }
+ 28 .italic {
+ 29   background-position: -16px 0;
+ 30 }
+ 31 .underline { 
+ 32   background-position: -32px 0;
+ 33 }
+ 34 .size { 
+ 35   background-position: -48px 0;
+ 36 }
+ 37 .bullet {
+ 38   background-position: -64px 0;
+ 39 }
+ 40 .number {
+ 41   background-position: -80px 0;
+ 42 }
+ 43 .quote {
+ 44   background-position: -96px 0;
+ 45 }
+ 46 .left {
+ 47   background-position: -112px 0;
+ 48 }
+ 49 .center {
+ 50   background-position: -128px 0;
+ 51 }
+ 52 .right {
+ 53   background-position: -144px 0;
+ 54 }
+ 55 
 ```
 
 <h4>Image Sprites Demo</h4>
@@ -669,7 +669,7 @@ be shown accordingly.
 
 Additionally, instead of spriting images, the encoded data for an image
 can be included within HTML and CSS directly by way of the 
-<a href="https://css-tricks.com/data-uris/"> data URI</a>, removing the need
+<a href="https://css-tricks.com/data-uris/">data URI</a>, removing the need
 for a HTTP request all together. Using the image data URI works great
 for small images, likely to never change, and where the HTML and CSS can
 be heavily cached. There are, however, a couple of problems with data
@@ -699,11 +699,10 @@ the actual data URI is less weight than the actual image.
 
 ```
  1  div {
- 2  background: 
- 3  url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAICAYAA 
- 4  ADA+m62AAAAPUlEQVQYV2NkQAO6m73+X/bdxogujiIAU4RNMVwhuiQ6H6wQl3XI4oy4F
- 5  MHcCJPHcDS6J2A2EqUQpJhohQAyIyYy0nBAGgAAAABJRU5ErkJggg==") repeat;
- 6 
+ 2  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAICAYAA 
+ 3  ADA+m62AAAAPUlEQVQYV2NkQAO6m73+X/bdxogujiIAU4RNMVwhuiQ6H6wQl3XI4oy4F
+ 4  MHcCJPHcDS6J2A2EqUQpJhohQAyIyYy0nBAGgAAAABJRU5ErkJggg==") repeat;
+ 5 }
 ```
 
 <h4>Image Data URI Demo</h4>
@@ -772,20 +771,20 @@ expires header values reference the mod_expires 
 
 
 
-<h2>[Lesson 2] Detailed Positioning</h2>
+<h2 align="center">[Lesson 2] Detailed Positioning</h2>
 
 <h3>In this Lesson 2</h3>
 
 <b>CSS</b>
 
--[Containing
- Floats](https://learn.shayhowe.com/advanced-html-css/detailed-css-positioning/#containing-floats)
-
--[Position
- Property](https://learn.shayhowe.com/advanced-html-css/detailed-css-positioning/#position-property)
-
--[Z-Index
- Property](https://learn.shayhowe.com/advanced-html-css/detailed-css-positioning/#z-index-property)
+<ul>
+  <li><a href="https://learn.shayhowe.com/advanced-html-css/detailed-css-positioning/#containing-floats">
+    Containing Floats</a></li>
+  <li><a href="https://learn.shayhowe.com/advanced-html-css/detailed-css-positioning/#position-property">
+    Position Property</a></li>
+  <li><a href="https://learn.shayhowe.com/advanced-html-css/detailed-css-positioning/#z-index-property">
+    Z-Index Property</a></li>
+</ul>
 
 <b>SHARE</b>
 
@@ -830,7 +829,7 @@ having a different relationship with those around it. Elements nested
 inside others have a parent and child relationship while elements that
 share the same parent have a sibling relationship.
 
-While [floats](https://css-tricks.com/all-about-floats/) do
+While <a href="https://css-tricks.com/all-about-floats/">floats</a> do
 provide quite a bit of fire power, they do come with a few of their own
 problems. The most popular problem involves a parent element that
 contains numerous floated elements. Content on the page will respect the
@@ -852,24 +851,24 @@ the .box-set division you will see it has a height of 0.
 
 ```
  1  <div class="box-set">
- 2  <figure class="box">Box 1</figure>
- 3  <figure class="box">Box 2</figure>
- 4  <figure class="box">Box 3</figure>
+ 2    <figure class="box">Box 1</figure>
+ 3    <figure class="box">Box 2</figure>
+ 4    <figure class="box">Box 3</figure>
  5  </div>
- 6 
+ 6  
 ```
 
 <b>CSS</b>
 
 ```
  1  .box-set {
- 2  background: #eaeaed;
+ 2    background: #eaeaed;
  3  }
  4  .box {
- 5  background: #2db34a;
- 6  float: left;
- 7  margin: 1.858736059%;
- 8  width: 29.615861214%;
+ 5    background: #2db34a;
+ 6    float: left;
+ 7    margin: 1.858736059%;
+ 8    width: 29.615861214%;
  9  }
  10 
 ```
@@ -904,7 +903,7 @@ element, in which it is better to use the overflow: hidden; declaration.
 
 ```
  1  .box-set {
- 2  overflow: auto;
+ 2    overflow: auto;
  3  }
  4  
 ```
@@ -943,7 +942,7 @@ also helps ensure consistency within Internet Explorer 6 and 7.
 The :after pseudo-element is used to prevent the bottom margin of child
 elements from collapsing, as well as to clear the nested floats.
 
-Adding the &ast;zoom property to the parent element triggers
+Adding the *zoom property to the parent element triggers
 the hasLayout mechanism specifically within Internet Explorer 6 and 7,
 which determines how elements should draw and bound their content, as
 well as how elements should interact with and relate to other elements.
@@ -955,17 +954,16 @@ element.
 ```
  1  .box-set:before,
  2  .box-set:after {
- 3  content: "";
- 4  display: table;
+ 3    content: "";
+ 4    display: table;
  5  }
  6  .box-set:after {
- 7  clear: both;
+ 7    clear: both;
  8  }
  9  .box-set {
- 10  &ast;zoom: 1;
- 11  }
+ 10   *zoom: 1;
+ 11 }
  12  
- 13  
 ```
 
 <h4>Clearfix Technique Demo</h4>
@@ -988,16 +986,16 @@ to contain floats.
 ```
  1  .group:before,
  2  .group:after {
- 3  content: "";
- 4  display: table;
+ 3    content: "";
+ 4    display: table;
  5  }
  6  .group:after {
- 7  clear: both;
+ 7    clear: both;
  8  }
  9  .group {
- 10 
- 11  &ast;zoom: 1;
- 12  }
+ 10   *zoom: 1;
+ 11  }
+ 12 
 ```
 
 <h4>Single Pseudo-Elements</h4>
@@ -1036,10 +1034,10 @@ specific direction.
 
 ```
  1  <div class="box-set">
- 2  <figure class="box box-1">Box 1</figure>
- 3  <figure class="box box-2">Box 2</figure>
- 4  <figure class="box box-3">Box 3</figure>
- 5  <figure class="box box-4">Box 4</figure>
+ 2    <figure class="box box-1">Box 1</figure>
+ 3    <figure class="box box-2">Box 2</figure>
+ 4    <figure class="box box-3">Box 3</figure>
+ 5    <figure class="box box-4">Box 4</figure>
  6  </div>
  7  
 ```
@@ -1048,12 +1046,12 @@ specific direction.
 
 ```
  1  .box-set {
- 2  background: #eaeaed;
+ 2    background: #eaeaed;
  3  }
  4  .box {
- 5  background: #2db34a;
- 6  height: 80px;
- 7  width: 80px;
+ 5    background: #2db34a;
+ 6    height: 80px;
+ 7    width: 80px;
  8  }
  9  
 ```
@@ -1109,10 +1107,10 @@ positioned elements default position.
 
 ```
  1  <div class="box-set">
- 2  <figure class="box box-1">Box 1</figure>
- 3  <figure class="box box-2">Box 2</figure>
- 4  <figure class="box box-3">Box 3</figure>
- 5  <figure class="box box-4">Box 4</figure>
+ 2    <figure class="box box-1">Box 1</figure>
+ 3    <figure class="box box-2">Box 2</figure>
+ 4    <figure class="box box-3">Box 3</figure>
+ 5    <figure class="box box-4">Box 4</figure>
  6  </div>
  7  
 ```
@@ -1130,17 +1128,16 @@ positioned elements default position.
  8    width: 80px;
  9  }
  10 .box-1 {
- 12   top: 20px;
- 13 }
- 14 .box-2 {
- 15   left: 40px;
- 16 }
- 17 .box-3 {
- 18   bottom: -10px;
- 19   right: 20px;
- 20 }
- 21 
- 
+ 11   top: 20px;
+ 12 }
+ 13 .box-2 {
+ 14   left: 40px;
+ 15 }
+ 16 .box-3 {
+ 17   bottom: -10px;
+ 18   right: 20px;
+ 19 }
+ 20 
 ```
 
 <h4>Position Relative Demo</h4>
@@ -1187,10 +1184,10 @@ value.
 
 ```
  1  <div class="box-set">
- 2  <figure class="box box-1">Box 1</figure>
- 3  <figure class="box box-2">Box 2</figure>
- 4  <figure class="box box-3">Box 3</figure>
- 5  <figure class="box box-4">Box 4</figure>
+ 2    <figure class="box box-1">Box 1</figure>
+ 3    <figure class="box box-2">Box 2</figure>
+ 4    <figure class="box box-3">Box 3</figure>
+ 5    <figure class="box box-4">Box 4</figure>
  6  </div>
  7  
 ```
@@ -1266,10 +1263,10 @@ and not the containing, relatively positioned parent.
 
 ```
  1  <div class="box-set">
- 2  <figure class="box box-1">Box 1</figure>
- 3  <figure class="box box-2">Box 2</figure>
- 4  <figure class="box box-3">Box 3</figure>
- 5  <figure class="box box-4">Box 4</figure>
+ 2    <figure class="box box-1">Box 1</figure>
+ 3    <figure class="box box-2">Box 2</figure>
+ 4    <figure class="box box-3">Box 3</figure>
+ 5    <figure class="box box-4">Box 4</figure>
  6  </div>
  7 
 ```
@@ -1346,9 +1343,10 @@ borders, and padding to be applied freely.
 By nature web pages are often considered to be two dimensional,
 displaying elements upon a x and y axis. However when you begin to
 position elements they are occasionally placed on top of one another. To
-change the order of [how these elements are
-stacked](http://www.impressivewebs.com/a-detailed-look-at-the-z-index-css-property/),
-also known as the z-axis, the z-index property is to be used.
+change the order of 
+<a href="http://www.impressivewebs.com/a-detailed-look-at-the-z-index-css-property/">
+how these elements are stacked</a>, also known as the z-axis, the z-index 
+property is to be used.
 
 Generally, elements are positioned upon the z-axis as they appear within
 the DOM. Elements coming at the top of the DOM are positioned behind
@@ -1432,9 +1430,9 @@ box three.
 <b>Lesson 3</b> <a href="https://learn.shayhowe.com/advanced-html-css/complex-selectors/">
   Complex Selectors</a>
 
-[Lesson 3] Complex Selectors
+<h2 align="center">[Lesson 3] Complex Selectors</h2>
 
-In this Lesson 3
+<h3>In this Lesson 3</h3>
 
 <b>CSS</b>
 
@@ -1489,9 +1487,9 @@ be used once per page.
 <b>CSS</b>
 
 ```
- 1  h1 {&#8230;}
- 2  .tagline {&#8230;}
- 3  #intro {&#8230;}
+ 1  h1 {...}
+ 2  .tagline {...}
+ 3  #intro {...}
  4  
 ```
 
@@ -1499,15 +1497,14 @@ be used once per page.
 
 ```
  1  <section id="intro">
- 2    <h1>&#8230;</h1>
- 3    <h2 class="tagline">&#8230;</h2>
+ 2    <h1>...</h1>
+ 3    <h2 class="tagline">...</h2>
  4  </section>
  5  
 ```
 
 <h4>Common Selectors Overview</h4>
 
-```
   ----------------------------------------------------------------------------------------------------------
   <b>[Example]</b><b>[Classification]</b><b>[Explanation]</b>
   ---------------------- ----------------------------- -----------------------------------------------------
@@ -1548,19 +1545,19 @@ Below, the headings on lines 3 and 5 are selected.
 <b>CSS</b>
 
 ```
- 1  article h2 {&#8230;}  
+ 1  article h2 {...}  
  2 
 ```
 
 <b>HTML</b>
 
 ```
- 1  <h2>&#8230;</h2>  
+ 1  <h2>...</h2>  
  2  <article>
- 3  <h2>This heading will be selected</h2>
- 4  <div> 
- 5  <h2>This heading will be selected</h2>
- 6  </div>
+ 3    <h2>This heading will be selected</h2>
+ 4    <div> 
+ 5      <h2>This heading will be selected</h2>
+ 6    </div>
  7  </article> 
  8 
 ```
@@ -1585,19 +1582,19 @@ article, thus selected.
 <b>CSS</b>
 
 ```
- 1  article > p {&#8230;}
+ 1  article > p {...}
  2 
 ```
 
 <b>HTML</b>
 
 ```
- 1  <p>&#8230;</p> 
+ 1  <p>...</p> 
  2  <article>
- 3  <p>This paragraph will be selected</p>
- 4  <div> 
- 5  <p>&#8230;</p> 
- 6  </div>
+ 3    <p>This paragraph will be selected</p>
+ 4    <div> 
+ 5      <p>...</p> 
+ 6    </div>
  7  </article> 
  8 
 ```
@@ -1605,7 +1602,7 @@ article, thus selected.
 <h4>Child Selectors Overview</h4>
 
   -----------------------------------------------------------------------------------------------
-  <b>[Example]{.mark}</b><b>[Classification]{.mark}</b><b>[Explanation]{.mark}</b>
+  <b>[Example]</b><b>[Classification]</b><b>[Explanation]</b>
   ---------------------- ----------------------------- ------------------------------------------
   article h2 Descendant Selector  Selects an element that resides anywhere
   within an identified ancestor element
@@ -1644,24 +1641,24 @@ sibling heading.
 <b>CSS</b>
 
 ```
- 1  h2 ~ p {&#8230;}  
+ 1  h2 ~ p {...}  
  2 
 ```
 
 <b>HTML</b>
 
 ```
- 1  <p>&#8230;</p> 
+ 1  <p>...</p> 
  2  <section>
- 3  <p>&#8230;</p> 
- 4  <h2>&#8230;</h2>  
- 5  <p>This paragraph will be selected</p>
- 6  <div> 
- 7  <p>&#8230;</p> 
- 8  </div>
- 9  <p>This paragraph will be selected</p>
- 1  </section> 
- 0 
+ 3    <p>...</p> 
+ 4    <h2>...</h2>  
+ 5    <p>This paragraph will be selected</p>
+ 6    <div> 
+ 7      <p>...</p> 
+ 8    </div>
+ 9    <p>This paragraph will be selected</p>
+ 10 </section> 
+ 11 
 ```
 
 <h4>Adjacent Sibling Selector</h4>
@@ -1688,24 +1685,24 @@ selected.
 <b>CSS</b>
 
 ```
- 1  h2 + p {&#8230;}
+ 1  h2 + p {...}
  2 
 ```
 
 <b>HTML</b>
 
 ```
- 1  <p>&#8230;</p>
+ 1  <p>...</p>
  2  <section>
- 3  <p>&#8230;</p> 
- 4  <h2>&#8230;</h2>  
+ 3  <p>...</p> 
+ 4  <h2>...</h2>  
  5  <p>This paragraph will be selected</p>
  6  <div> 
- 7  <p>&#8230;</p> 
+ 7  <p>...</p> 
  8  </div>
- 9  <p>&#8230;</p> 
- 1  </section> 
- 0 
+ 9  <p>...</p> 
+ 10 </section> 
+ 11 
 ```
 
 <h4>Sibling Selectors Example</h4>
@@ -1717,79 +1714,82 @@ selected.
  2  <label for="toggle">&#9776;</label> 
  3  <nav> 
  4  <ul>  
- 5  <li><a href="#">Home</a></li>
- 6  <li><a href="#">About</a></li>  
- 7  <li><a href="#">Services</a></li>  
- 8  <li><a href="#">Contact</a></li>
+ 5    <li><a href="#">Home</a></li>
+ 6    <li><a href="#">About</a></li>  
+ 7    <li><a href="#">Services</a></li>  
+ 8    <li><a href="#">Contact</a></li>
  9  </ul> 
- 1  </nav>
- 0 
+ 10 </nav>
+ 11 
 ```
 
-<b>CSS</b>
+<details>
+  <summary>CSS</summary>
 
 ```
- 1  input { 
- 2  display: none;  
- 3  } 
- 4  label,  
- 5  ul { 
- 6  border: 1px solid #cecfd5;  
- 7  border-radius: 6px;
- 8  } 
- 9  label { 
- 10  color: #0087cc; 
- 11 cursor: pointer;
- 12  display: inline-block;
- 13  font-size: 18px; 
- 14  padding: 5px 9px;  
- 16  transition: all .15s ease;  
- 1  } 
-    label:hover {
- 5  color: #ff7b29; 
- 1  } 
-    input:checked + label {  
- 7  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15);
- 1  color: #9799a7; 
-    }
- 9  nav {
- 2  max-height: 0;  
-   overflow: hidden;  
- 1  transition: all .15s ease;  
- 2  } 
-   input:checked &tilde; nav {
- 3  max-height: 500px; 
- 2  } 
- ul { 
- 5  list-style: none;  
- 2  margin: 8px 0 0 0; 
- padding: 0;  
- 7  width: 100px;
- 2  } 
- li { 
- 9  border-bottom: 1px solid #cecfd5; 
- 3  } 
- li:last-child { 
- 1  border-bottom: 0;  
- 3  } 
- a {  
- 3  color: #0087cc; 
- 3  display: block; 
- padding: 6px 12px; 
- 5  text-decoration: none;
- 3  } 
-   a:hover { 
- 7  color: #ff7b29; 
- 3  } 
- 8 
+ 1   input { 
+ 2     display: none;  
+ 3   } 
+ 4   label,  
+ 5   ul { 
+ 6     border: 1px solid #cecfd5;  
+ 7     border-radius: 6px;
+ 8   } 
+ 9   label { 
+ 10    color: #0087cc; 
+ 11    cursor: pointer;
+ 12    display: inline-block;
+ 13    font-size: 18px; 
+ 14    padding: 5px 9px;  
+ 15    transition: all .15s ease;  
+ 16  } 
+ 17  label:hover {
+ 18    color: #ff7b29; 
+ 19  } 
+ 20  input:checked + label {  
+ 21    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15);
+ 22    color: #9799a7; 
+ 23  }
+ 24  nav {
+ 25    max-height: 0;  
+ 26    overflow: hidden;  
+ 27    transition: all .15s ease;  
+ 28  } 
+ 19    input:checked &tilde; nav {
+ 30    max-height: 500px; 
+ 31  } 
+ 32  ul { 
+ 33    list-style: none;  
+ 34    margin: 8px 0 0 0; 
+ 35    padding: 0;  
+ 36    width: 100px;
+ 37  } 
+ 38  li { 
+ 39    border-bottom: 1px solid #cecfd5; 
+ 40  } 
+ 41  li:last-child { 
+ 42    border-bottom: 0;  
+ 43  } 
+ 44  a {  
+ 45    color: #0087cc; 
+ 46    display: block; 
+ 47    padding: 6px 12px; 
+ 48    text-decoration: none;
+ 49  } 
+ 50  a:hover { 
+ 51    color: #ff7b29; 
+ 52  } 
+ 53 
 ```
+
+</details>
 
 <h4>Demo</h4>
 
 <h4>Sibling Selectors Overview</h4>
 
   ------------------------------------------------------------------------------------------------------
-  <b>[Example]{.mark}</b><b>[Classification]{.mark}</b><b>[Explanation]{.mark}</b>
+  <b>[Example]</b><b>[Classification]</b><b>[Explanation]</b>
   ---------------------- ----------------------------- -------------------------------------------------
   h2 &tilde; p General Sibling SelectorSelects an element that follows anywhere after
   the prior element, in which both elements share
@@ -1816,21 +1816,21 @@ present and what its value may contain.
 The first attribute selector identifies an element based on whether it
 includes an attribute or not, regardless of any actual value. To select
 an element based on if an attribute is present or not, include the
-attribute name in square brackets, &lbrack;&rbrack;, within a selector. The square
-brackets may or may not follow any qualifier such as an element type or
-class, all depending on the level of specificity desired.
+attribute name in square brackets, &lbrack;&rbrack;, within a selector. 
+The square brackets may or may not follow any qualifier such as an element 
+type or class, all depending on the level of specificity desired.
 
 <b>CSS</b>
 
 ```
- 1  a&lbrack;target&rbrack; {&#8230;} 
+ 1  a[target] {...} 
  2 
 ```
 
 <b>HTML</b>
 
 ```
- 1  <a href="#" target="&#0095;blank">&#8230;</a>
+ 1  <a href="#" target="_blank">...</a>
  2 
 ```
 
@@ -1846,21 +1846,21 @@ inside of the quotations should be the desired matching attribute value.
 <b>CSS</b>
 
 ```
- 1  a&lbrack;href="http://google.com/"&rbrack; {&#8230;} 
+ 1  a]href="http://google.com/"[ {...} 
  2 
 ```
 
 <b>HTML</b>
 
 ```
- 1  <a href="http://google.com/">&#8230;</a>  
+ 1  <a href="http://google.com/">...</a>  
  2 
 ```
 
 <h4>Attribute Contains Selector</h4>
 
 When looking to find an element based on part of an attribute value, but
-not an exact match, the asterisk character, &ast;, may be used within the
+not an exact match, the asterisk character, *, may be used within the
 square brackets of a selector. The asterisk should fall just after the
 attribute name, directly before the equals sign. Doing so denotes that
 the value to follow only needs to appear, or be contained, within the
@@ -1869,14 +1869,14 @@ attribute value.
 <b>CSS</b>
 
 ```
- 1  a&lbrack;href&ast;="login"&rbrack; {&#8230;}
+ 1  a]href*="login"[ {...}
  2 
 ```
 
 <b>HTML</b>
 
 ```
- 1  <a href="/login.php">&#8230;</a>  
+ 1  <a href="/login.php">...</a>  
  2 
 ```
 
@@ -1892,14 +1892,14 @@ stated value.
 <b>CSS</b>
 
 ```
- 1  a&lbrack;href&Hat;="https://"&rbrack; {&#8230;}
+ 1  a]href&Hat;="https://"[ {...}
  2 
 ```
 
 <b>HTML</b>
 
 ```
- 1  <a href="https://chase.com/">&#8230;</a>  
+ 1  <a href="https://chase.com/">...</a>  
  2 
 ```
 
@@ -1907,7 +1907,7 @@ stated value.
 
 Opposite of the begins with selector, there is also an ends with
 attribute selector. Instead of using the circumflex accent, the ends
-with attribute selector uses the dollar sign, &#36;, within the square
+with attribute selector uses the dollar sign, $, within the square
 brackets of a selector between the attribute name and equals sign. Using
 the dollar sign denotes that the attribute value needs to end with the
 stated value.
@@ -1915,14 +1915,14 @@ stated value.
 <b>CSS</b>
 
 ```
- 1  a&lbrack;href&#36;=".pdf"&rbrack; {&#8230;} 
+ 1  a]href$=".pdf"[ {...} 
  2 
 ```
 
 <b>HTML</b>
 
 ```
- 1  <a href="/docs/menu.pdf">&#8230;</a> 
+ 1  <a href="/docs/menu.pdf">...</a> 
  2 
 ```
 
@@ -1938,14 +1938,14 @@ stated value.
 <b>CSS</b>
 
 ```
- 1  a&lbrack;rel&tilde;="tag"&rbrack; {&#8230;}
+ 1  a]rel&tilde;="tag"[ {...}
  2 
 ```
 
 <b>HTML</b>
 
 ```
- 1  <a href="#" rel="tag nofollow">&#8230;</a> 
+ 1  <a href="#" rel="tag nofollow">...</a> 
  2 
 ```
 
@@ -1961,14 +1961,14 @@ stated value.
 **CSS**
 
 ```
- 1  a&lbrack;lang&#0124;="en"&rbrack; {&#8230;}
+ 1  a]lang&#0124;="en"[ {...}
  2 
 ```
 
 **HTML**
 
 ```
- 1  <a href="#" lang="en-US">&#8230;</a> 
+ 1  <a href="#" lang="en-US">...</a> 
  2 
 ```
 
@@ -2005,19 +2005,19 @@ stated value.
  13  a:hover { 
  14 color: #ff7b29; 
  15  } 
- 16  a&lbrack;href&#36;=".pdf"&rbrack; {
+ 16  a[href&$=".pdf"] {
  17 background-image: url("images/pdf.png");
  18  } 
- 19  a&lbrack;href&#36;=".doc"&rbrack; {
+ 19  a[href$=".doc"] {
  20 background-image: url("images/doc.png");
  21  } 
- 22  a&lbrack;href&#36;=".jpg"&rbrack; {
+ 22  a[href$=".jpg"] {
  23  background-image: url("images/image.png"); 
  24  } 
- 25  a&lbrack;href&#36;=".mp3"&rbrack; {
+ 25  a[href$=".mp3"] {
  26 background-image: url("images/audio.png"); 
  27  } 
- 28  a&lbrack;href&#36;=".mp4"&rbrack; {
+ 28  a[href$=".mp4"] {
  29  background-image: url("images/video.png"); 
  30  } 
  31 
@@ -2028,33 +2028,33 @@ stated value.
 <h4>Attribute Selectors Overview</h4>
 
   ----------------------------------------------------------------------------------------------------
-  **[Example]{.mark}****[Classification]{.mark}****[Explanation]{.mark}**
+  **[Example]****[Classification]****[Explanation]**
   ---------------------------------- ----------------------------- -----------------------------------
-  a&lbrack;target&rbrack;Attribute Present Selector Selects an element if the given
+  a]target[Attribute Present Selector Selects an element if the given
 attribute is present
 
-  a&lbrack;href="http://google.com/"&rbrack;Attribute Equals Selector  Selects an element if the given
+  a]href="http://google.com/"[Attribute Equals Selector  Selects an element if the given
 attribute value exactly matches the
 value stated
 
-  a&lbrack;href&ast;="login"&rbrack;  Attribute Contains SelectorSelects an element if the given
+  a]href*="login"[  Attribute Contains SelectorSelects an element if the given
 attribute value contains at least
 once instance of the value stated
 
-  a&lbrack;href&Hat;="https://"&rbrack;  Attribute Begins WithSelects an element if the given
+  a]href&Hat;="https://"[  Attribute Begins WithSelects an element if the given
   Selector attribute value begins with the
 value stated
 
-  a&lbrack;href&#36;=".pdf"&rbrack;Attribute Ends With Selector  Selects an element if the given
+  a]href$=".pdf"[Attribute Ends With Selector  Selects an element if the given
 attribute value ends with the value
 stated
 
-  a&lbrack;rel&tilde;="tag"&rbrack;  Attribute Spaced Selector  Selects an element if the given
+  a]rel&tilde;="tag"[  Attribute Spaced Selector  Selects an element if the given
 attribute value is
 whitespace-separated with one word
 being exactly as stated
 
-  a&lbrack;lang&#0124;="en"&rbrack;  Attribute Hyphenated Selector Selects an element if the given
+  a]lang&#0124;="en"[  Attribute Hyphenated Selector Selects an element if the given
 attribute value is hyphen-separated
 and begins with the word stated
   ----------------------------------------------------------------------------------------------------
@@ -2079,8 +2079,8 @@ styles links that a user has already visited based on their browsing
 history.
 
 ```
- 1  a:link {&#8230;}
- 2  a:visited {&#8230;}
+ 1  a:link {...}
+ 2  a:visited {...}
  3 
 ```
 
@@ -2097,9 +2097,9 @@ made an element the focus point of the page, often by using the keyboard
 to tab from one element to another.
 
 ```
- 1  a:hover {&#8230;}  
- 2  a:active {&#8230;} 
- 3  a:focus {&#8230;}  
+ 1  a:hover {...}  
+ 2  a:active {...} 
+ 3  a:focus {...}  
  4 
 ```
 
@@ -2118,8 +2118,8 @@ the input is not available for interaction, however those styles may be
 adjusted as wished with the :disabled pseudo-class.
 
 ```
- 1  input:enabled {&#8230;}  
- 2  input:disabled {&#8230;} 
+ 1  input:enabled {...}  
+ 2  input:disabled {...} 
  3 
 ```
 
@@ -2132,8 +2132,8 @@ indeterminate state, from which the :indeterminate pseudo-class can be
 used to target these elements.
 
 ```
- 1  input:checked {&#8230;}  
- 2  input:indeterminate {&#8230;}  
+ 1  input:checked {...}  
+ 2  input:indeterminate {...}  
 ```
 
 <h4>Structural & Position Pseudo-classes</h4>
@@ -2172,9 +2172,9 @@ list item.
 **CSS**
 
 ```
- 1  li:first-child {&#8230;} 
- 2  li:last-child {&#8230;}  
- 3  div:only-child {&#8230;} 
+ 1  li:first-child {...} 
+ 2  li:last-child {...}  
+ 3  div:only-child {...} 
  4 
 ```
 
@@ -2187,8 +2187,8 @@ list item.
  4  <div>This div will be selected</div>
  5  </li> 
  6  <li>  
- 7  <div>&#8230;</div>
- 8  <div>&#8230;</div>
+ 7  <div>...</div>
+ 8  <div>...</div>
  9  </li> 
  1  <li>This list item will be selected</li> 
  </ul> 
@@ -2222,9 +2222,9 @@ the only image to appear within the article, thus also selected.
 **CSS**
 
 ```
- 1  p:first-of-type {&#8230;}
- 2  p:last-of-type {&#8230;} 
- 3  img:only-of-type {&#8230;}  
+ 1  p:first-of-type {...}
+ 2  p:last-of-type {...} 
+ 3  img:only-of-type {...}  
  4 
 ```
 
@@ -2232,12 +2232,12 @@ the only image to appear within the article, thus also selected.
 
 ```
  1  <article>
- 2  <h1>&#8230;</h1>  
+ 2  <h1>...</h1>  
  3  <p>This paragraph will be selected</p>
- 4  <p>&#8230;</p> 
+ 4  <p>...</p> 
  5  <img src="#"><!&#45;&#45; This image will be selected &#45;&#45;>
  6  <p>This paragraph will be selected</p>
- 7  <h6>&#8230;</h6>  
+ 7  <h6>...</h6>  
  8  </article> 
  9 
 ```
@@ -2335,18 +2335,18 @@ third list item, thus lines 4 and 7 are selected.
 **CSS**
 
 ```
- 1  li:nth-child(3n) {&#8230;}  
+ 1  li:nth-child(3n) {...}  
 ```
 
 **HTML**
 
 ```
  1  <ul>  
- 2  <li>&#8230;</li>  
- 3  <li>&#8230;</li>  
+ 2  <li>...</li>  
+ 3  <li>...</li>  
  4  <li>This list item will be selected</li> 
- 5  <li>&#8230;</li>  
- 6  <li>&#8230;</li>  
+ 5  <li>...</li>  
+ 6  <li>...</li>  
  7  <li>This list item will be selected</li> 
  8  </ul> 
 ```
@@ -2359,19 +2359,19 @@ and then onward. As a result, the list items lines 4 and 6 are selected.
 **CSS**
 
 ```
- 1  li:nth-child(2n+3) {&#8230;}
+ 1  li:nth-child(2n+3) {...}
 ```
 
 **HTML**
 
 ```
  1  <ul>  
- 2  <li>&#8230;</li>  
- 3  <li>&#8230;</li>  
+ 2  <li>...</li>  
+ 3  <li>...</li>  
  4  <li>This list item will be selected</li> 
- 5  <li>&#8230;</li>  
+ 5  <li>...</li>  
  6  <li>This list item will be selected</li> 
- 7  <li>&#8230;</li>  
+ 7  <li>...</li>  
  8  </ul> 
  9 
 ```
@@ -2384,7 +2384,7 @@ lines 2 through 5 are selected.
 **CSS**
 
 ```
- 1  li:nth-child(-n+4) {&#8230;}
+ 1  li:nth-child(-n+4) {...}
  2 
 ```
 
@@ -2396,8 +2396,8 @@ lines 2 through 5 are selected.
  3  <li>This list item will be selected</li> 
  4  <li>This list item will be selected</li> 
  5  <li>This list item will be selected</li> 
- 6  <li>&#8230;</li>  
- 7  <li>&#8230;</li>  
+ 6  <li>...</li>  
+ 7  <li>...</li>  
  8  </ul> 
  9 
 ```
@@ -2410,7 +2410,7 @@ item, thus the list items on lines 2, 4, and 6 are selected.
 **CSS**
 
 ```
- 1  li:nth-child(-2n+5) {&#8230;}  
+ 1  li:nth-child(-2n+5) {...}  
 ```
 
 **HTML**
@@ -2418,11 +2418,11 @@ item, thus the list items on lines 2, 4, and 6 are selected.
 ```
  1  <ul>  
  2  <li>This list item will be selected</li> 
- 3  <li>&#8230;</li>  
+ 3  <li>...</li>  
  4  <li>This list item will be selected</li> 
- 5  <li>&#8230;</li>  
+ 5  <li>...</li>  
  6  <li>This list item will be selected</li> 
- 7  <li>&#8230;</li>  
+ 7  <li>...</li>  
  8  </ul> 
 ```
 
@@ -2438,7 +2438,7 @@ are selected.
 <h4>CSS</h4>
 
 ```
- 1  li:nth-last-child(3n+2) {&#8230;} 
+ 1  li:nth-last-child(3n+2) {...} 
 
 ```
 
@@ -2446,12 +2446,12 @@ are selected.
 
 ```
  1  <ul>  
- 2  <li>&#8230;</li>  
+ 2  <li>...</li>  
  3  <li>This list item will be selected</li> 
- 4  <li>&#8230;</li>  
- 5  <li>&#8230;</li>  
+ 4  <li>...</li>  
+ 5  <li>...</li>  
  6  <li>This list item will be selected</li> 
- 7  <li>&#8230;</li>  
+ 7  <li>...</li>  
  8  </ul> 
 ```
 
@@ -2481,20 +2481,20 @@ the parent. Here the paragraphs on lines 5 and 9 are selected.
 <h4>CSS</h4>
 
 ```
- 1  p:nth-of-type(3n) {&#8230;} 
+ 1  p:nth-of-type(3n) {...} 
 ```
 
 <h4>HTML</h4>
 
 ```
  1  <article>
- 2  <h1>&#8230;</h1>  
- 3  <p>&#8230;</p> 
- 4  <p>&#8230;</p> 
+ 2  <h1>...</h1>  
+ 3  <p>...</p> 
+ 4  <p>...</p> 
  5  <p>This paragraph will be selected</p>
- 6  <h2>&#8230;</h2>  
- 7  <p>&#8230;</p> 
- 8  <p>&#8230;</p> 
+ 6  <h2>...</h2>  
+ 7  <p>...</p> 
+ 8  <p>...</p> 
  9  <p>This paragraph will be selected</p>
  10  </article> 
  11 
@@ -2515,7 +2515,7 @@ paragraph. Here the paragraphs on lines 4, 7, and 9 are selected.
 <h4>CSS</h4>
 
 ```
- 1  p:nth-last-of-type(2n+1) {&#8230;}
+ 1  p:nth-last-of-type(2n+1) {...}
  2  
 ```
 
@@ -2523,13 +2523,13 @@ paragraph. Here the paragraphs on lines 4, 7, and 9 are selected.
 
 ```
  1  <article>
- 2  <h1>&#8230;</h1>  
- 3  <p>&#8230;</p> 
+ 2  <h1>...</h1>  
+ 3  <p>...</p> 
  4  <p>This paragraph will be selected</p>
- 5  <p>&#8230;</p> 
- 6  <h2>&#8230;</h2>  
+ 5  <p>...</p> 
+ 6  <h2>...</h2>  
  7  <p>This paragraph will be selected</p>
- 8  <p>&#8230;</p> 
+ 8  <p>...</p> 
  9  <p>This paragraph will be selected</p>
  10 </article> 
  11 
@@ -2559,14 +2559,14 @@ selector and pseudo-class from before.
 <h4>CSS</h4>
 
 ```
- 1  section:target {&#8230;}
+ 1  section:target {...}
  2  
 ```
 
 <h4>HTML</h4>
 
 ```
- 1  <section id="hello">&#8230;</section>
+ 1  <section id="hello">...</section>
  2  
 ```
 
@@ -2588,7 +2588,7 @@ selected.
 <h4>CSS</h4>
 
 ```
- 1  div:empty {&#8230;}
+ 1  div:empty {...}
  2 
 ```
 
@@ -2626,8 +2626,8 @@ pseudo-classes.
 <h4>CSS</h4>
 
 ```
- 1  div:not(.awesome) {&#8230;}
- 2  :not(div) {&#8230;}
+ 1  div:not(.awesome) {...}
+ 2  :not(div) {...}
  3  
 ```
 
@@ -2635,7 +2635,7 @@ pseudo-classes.
 
 ```
  1  <div>This div will be selected</div>
- 2  <div class="awesome">&#8230;</div>
+ 2  <div class="awesome">...</div>
  3  <section>This section will be selected</section>  
  4  <section class="awesome">This section will be  
  selected</section>  
@@ -2672,7 +2672,7 @@ pseudo-classes.
  23<td>6-9</td>
  24  <td>266</td>
  25  </tr>
- 26&#8230;
+ 26...
  27  </tbody>
  28  </table>
  29  
@@ -2727,7 +2727,7 @@ pseudo-classes.
 <h4>Pseudo-classes Overview</h4>
 
   --------------------------------------------------------------------------------------------------
-  **[Example]{.mark}** **[Classification]{.mark}****[Explanation]{.mark}**
+  **[Example]** **[Classification]****[Explanation]**
   -------------------------- ----------------------------- -----------------------------------------
   a:linkLink Pseudo-class Selects a link that has not been visited
  by a user
@@ -2842,8 +2842,8 @@ pseudo-elements respectively.
 <h4>HTML</h4>
 
 ```
- 1  <p class="alpha">Lorem ipsum dolor&#8230;</p>
- 2  <p class="bravo">Integer eget enim&#8230;</p>
+ 1  <p class="alpha">Lorem ipsum dolor...</p>
+ 2  <p class="bravo">Integer eget enim...</p>
  3 
 ```
 
@@ -2987,7 +2987,7 @@ added to ensure the best support for all browsers.
 <h4>Pseudo-elements Overview</h4>
 
   ------------------------------------------------------------------------------------------------
-  **[Example]{.mark}****[Classification]{.mark}****[Explanation]{.mark}**
+  **[Example]****[Classification]****[Explanation]**
   ---------------------- ----------------------------- -------------------------------------------
   .alpha:first-letter Textual Pseudo-elements Selects the first letter of text within an
   element
@@ -3015,8 +3015,8 @@ selectors you are wishing to use across your visitor's most common
 browsers, and then make the judgment call as to whether they are
 appropriate or not.
 
-CSS3.info provides a [[CSS3 Selectors
-Test]{.underline}](https://www.css3.info/selectors-test/) tool which
+CSS3.info provides a [CSS3 Selectors
+Test](https://www.css3.info/selectors-test/) tool which
 will inform you as to which selectors are supported by the browser in
 use. It's also never a bad idea to check browser support directly from
 the vendor.
@@ -3036,61 +3036,60 @@ think about revisiting it, and seeing if a better solution can be found.
 
 <h4>Resources & Links</h4>
 
--[[The 30 CSS Selectors you Must
- Memorize]{.underline}](http://net.tutsplus.com/tutorials/html-css-techniques/the-30-css-selectors-you-must-memorize/) via
+-[The 30 CSS Selectors you Must
+ Memorize](http://net.tutsplus.com/tutorials/html-css-techniques/the-30-css-selectors-you-must-memorize/) via
  Nettuts+
 
--[[Child and Sibling
- Selectors]{.underline}](https://css-tricks.com/child-and-sibling-selectors/) via
+-[Child and Sibling
+ Selectors](https://css-tricks.com/child-and-sibling-selectors/) via
  CSS-Tricks
 
--[[CSS3 Substring Matching Attribute
- Selectors]{.underline}](http://www.css3.info/preview/attribute-selectors/) via
+-[CSS3 Substring Matching Attribute
+ Selectors](http://www.css3.info/preview/attribute-selectors/) via
  CSS3.info
 
--[[How To Use CSS3
- Pseudo-Classes]{.underline}](http://coding.smashingmagazine.com/2011/03/30/how-to-use-css3-pseudo-classes/) via
+-[How To Use CSS3
+ Pseudo-Classes](http://coding.smashingmagazine.com/2011/03/30/how-to-use-css3-pseudo-classes/) via
  Smashing Magazine
 
--[[Understanding :nth-child Pseudo-class
- Expressions]{.underline}](http://reference.sitepoint.com/css/understandingnthchildexpressions) via
+-[Understanding :nth-child Pseudo-class
+ Expressions](http://reference.sitepoint.com/css/understandingnthchildexpressions) via
  SitePoint
 
--[[Taming Advanced CSS
- Selectors]{.underline}](http://coding.smashingmagazine.com/2009/08/17/taming-advanced-css-selectors/) via
+-[Taming Advanced CSS
+ Selectors](http://coding.smashingmagazine.com/2009/08/17/taming-advanced-css-selectors/) via
  Smashing Magazine
 
  
 
-[**Lesson 2** [Detailed
-Positioning]{.underline}](https://learn.shayhowe.com/advanced-html-css/detailed-css-positioning/)
-[**Lesson 4** [Responsive Web
-Design]{.underline}](https://learn.shayhowe.com/advanced-html-css/responsive-web-design/)
+[**Lesson 2**] Detailed
+Positioning](https://learn.shayhowe.com/advanced-html-css/detailed-css-positioning/)
+[**Lesson 4**] Responsive Web Design](https://learn.shayhowe.com/advanced-html-css/responsive-web-design/)
 
-[Lesson 4]{.mark} Responsive Web Design
+<h2 align="center">[Lesson 4] Responsive Web Design</h2>
 
-In this Lesson 4
+<h3>In this Lesson 4</h3>
 
 <h4>HTML</h4>
 
--[[Responsive
- Overview]{.underline}](https://learn.shayhowe.com/advanced-html-css/responsive-web-design/#responsive-web-design)
+-[Responsive
+ Overview](https://learn.shayhowe.com/advanced-html-css/responsive-web-design/#responsive-web-design)
 
--[[Viewport]{.underline}](https://learn.shayhowe.com/advanced-html-css/responsive-web-design/#viewport)
+-[Viewport](https://learn.shayhowe.com/advanced-html-css/responsive-web-design/#viewport)
 
 **CSS**
 
--[[Flexible
- Layouts]{.underline}](https://learn.shayhowe.com/advanced-html-css/responsive-web-design/#flexible-layouts)
+-[Flexible
+ Layouts](https://learn.shayhowe.com/advanced-html-css/responsive-web-design/#flexible-layouts)
 
--[[Media
- Queries]{.underline}](https://learn.shayhowe.com/advanced-html-css/responsive-web-design/#media-queries)
+-[Media
+ Queries](https://learn.shayhowe.com/advanced-html-css/responsive-web-design/#media-queries)
 
--[[Mobile
- First]{.underline}](https://learn.shayhowe.com/advanced-html-css/responsive-web-design/#mobile-first)
+-[Mobile
+ First](https://learn.shayhowe.com/advanced-html-css/responsive-web-design/#mobile-first)
 
--[[Flexible
- Media]{.underline}](https://learn.shayhowe.com/advanced-html-css/responsive-web-design/#flexible-media)
+-[Flexible
+ Media](https://learn.shayhowe.com/advanced-html-css/responsive-web-design/#flexible-media)
 
 **SHARE**
 
@@ -3227,9 +3226,9 @@ following.
 +---+----------------------------------------------------------------------+
  1  <div class="container"> 
 
- 2  <section>&#8230;</section> 
+ 2  <section>...</section> 
 
- 3  <aside>&#8230;</aside>  
+ 3  <aside>...</aside>  
 
  4  </div>
 
@@ -3294,7 +3293,7 @@ widths scale proportionally.
 
  2  aside { 
 
- 3  margin: 1.858736059%; /&ast; 10px ÷ 538px = .018587361 &ast;/  
+ 3  margin: 1.858736059%; /* 10px ÷ 538px = .018587361 */  
 
  4  } 
 
@@ -3302,7 +3301,7 @@ widths scale proportionally.
 
  6  float: left; 
 
- 7  width: 63.197026%; /&ast; 340px ÷ 538px = .63197026 &ast;/  
+ 7  width: 63.197026%; /* 340px ÷ 538px = .63197026 */  
 
  8  } 
 
@@ -3310,7 +3309,7 @@ widths scale proportionally.
 
  1  float: right;
  0 
- width: 29.3680297%; /&ast; 158px ÷ 538px = .293680297 &ast;/
+ width: 29.3680297%; /* 158px ÷ 538px = .293680297 */
  1 
  1  } 
 
@@ -3343,8 +3342,8 @@ Media queries were built as an extension to media types commonly found
 when targeting and including styles. Media queries provide the ability
 to specify different styles for individual browser and device
 circumstances, the width of the viewport or device orientation for
-example. Being able to apply uniquely [[targeted
-styles]{.underline}](https://css-tricks.com/css-media-queries/) opens up
+example. Being able to apply uniquely [targeted
+styles](https://css-tricks.com/css-media-queries/) opens up
 a world of opportunity and leverage to responsive web design.
 
 <h4>Initializing Media Queries</h4>
@@ -3358,31 +3357,21 @@ additional HTTP requests.
 
 **HTML**
 
-+---+----------------------------------------------------------------------+
- 1  <!&#45;&#45; Separate CSS File &#45;&#45;> 
-
- 2  <link href="styles.css" rel="stylesheet" media="all and  
- (max-width: 1024px)">  
+```
+ 1  <!&#45;&#45; Separate CSS File &#45;&#45;>
+ 2  <link href="styles.css" rel="stylesheet" media="all and (max-width: 1024px)">
  3 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 **CSS**
 
-+---+----------------------------------------------------------------------+
- 1  /&ast; &#0064;media Rule &ast;/  
-
- 2  &#0064;media all and (max-width: 1024px) {&#8230;}
-
- 3  /&ast; &#0064;import Rule &ast;/ 
-
- 4  &#0064;import url(styles.css) all and (max-width: 1024px) {&#8230;} 
-
+```
+ 1  /* &#0064;media Rule */  
+ 2  &#0064;media all and (max-width: 1024px) {...}
+ 3  /* &#0064;import Rule */ 
+ 4  &#0064;import url(styles.css) all and (max-width: 1024px) {...} 
  5 
-
- 6 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 Each media query may include a media type followed by one or more
 expressions. Common media types include all, screen, print, tv,
@@ -3409,7 +3398,7 @@ comma separated, acting as an unspoken or operator. The example below
 selects all media types between 800 and 1024 pixels wide.
 
 +---+----------------------------------------------------------------------+
- 1  &#0064;media all and (min-width: 800px) and (max-width: 1024px) {&#8230;} 
+ 1  &#0064;media all and (min-width: 800px) and (max-width: 1024px) {...} 
 
  2 
 +===+======================================================================+
@@ -3421,7 +3410,7 @@ device that does not have a color screen. Black and white or monochrome
 screens would apply here for example.
 
 +---+----------------------------------------------------------------------+
- 1  &#0064;media not screen and (color) {&#8230;}
+ 1  &#0064;media not screen and (color) {...}
 
  2 
 +===+======================================================================+
@@ -3434,7 +3423,7 @@ expression selects only screens in a portrait orientation that have a
 user agent capable of rending media queries.
 
 +---+----------------------------------------------------------------------+
- 1  &#0064;media only screen and (orientation: portrait) {&#8230;}
+ 1  &#0064;media only screen and (orientation: portrait) {...}
 
  2 
 +===+======================================================================+
@@ -3466,7 +3455,7 @@ these height and width media features may be any length unit, relative
 or absolute.
 
 +---+----------------------------------------------------------------------+
- 1  &#0064;media all and (min-width: 320px) and (max-width: 780px) {&#8230;}  
+ 1  &#0064;media all and (min-width: 320px) and (max-width: 780px) {...}  
 
  2 
 +===+======================================================================+
@@ -3494,7 +3483,7 @@ triggered when the display is taller than wider. This media feature
 plays a large part with mobile devices.
 
 +---+----------------------------------------------------------------------+
- 1  &#0064;media all and (orientation: landscape) {&#8230;} 
+ 1  &#0064;media all and (orientation: landscape) {...} 
 
  2 
 +===+======================================================================+
@@ -3513,7 +3502,7 @@ separated by a forward slash. The first integer identifies the width in
 pixels while the second integer identifies the height in pixels.
 
 +---+----------------------------------------------------------------------+
- 1  &#0064;media all and (min-device-aspect-ratio: 16/9) {&#8230;}
+ 1  &#0064;media all and (min-device-aspect-ratio: 16/9) {...}
 
  2 
 +===+======================================================================+
@@ -3530,7 +3519,7 @@ so look like the following.
 
 +---+-------------------------------------------------------------------+
  1  &#0064;media only screen and (-webkit-min-device-pixel-ratio: 1.3), 
- only screen and (min-device-pixel-ratio: 1.3) {&#8230;}  
+ only screen and (min-device-pixel-ratio: 1.3) {...}  
  2 
 +===+===================================================================+
 +---+-------------------------------------------------------------------+
@@ -3545,7 +3534,7 @@ Additionally, the resolution media feature will accept dots per pixel
 resolution values.
 
 +---+----------------------------------------------------------------------+
- 1  &#0064;media print and (min-resolution: 300dpi) {&#8230;}  
+ 1  &#0064;media print and (min-resolution: 300dpi) {...}  
 
  2 
 +===+======================================================================+
@@ -3565,10 +3554,10 @@ Unfortunately media queries do not work within Internet Explorer 8 and
 below, as well as other legacy browsers. There are, however, a couple
 suitable polyfills written in Javascript.
 
-[[Respond.js]{.underline}](https://github.com/scottjehl/Respond/) is a
+[Respond.js](https://github.com/scottjehl/Respond/) is a
 lightweight polyfill that only looks for min/max-width media types,
 which is perfect should those be the only media query types
-used. [[CSS3-MediaQueries.js]{.underline}](https://code.google.com/p/css3-mediaqueries-js/) is
+used. [CSS3-MediaQueries.js](https://code.google.com/p/css3-mediaqueries-js/) is
 a more developed, and heavier, polyfill offering support for a larger
 array of more complex media queries. Additionally, keep in mind any
 polyfill can have performance concerns, and potentially slow down
@@ -3584,33 +3573,23 @@ media query for viewports under 420 pixels wide we can change the layout
 by turning off the floats and changing the widths of
 the section and aside.
 
+```
 +---+----------------------------------------------------------------------+
  1  &#0064;media all and (max-width: 420px) { 
-
  2  section, aside {
-
  3  float: none; 
-
  4  width: auto; 
-
  5  } 
-
  6  } 
-
  7 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
-![Demo without Media
-Queries](./3-25-24/media/image008.png){width="3.4131944444444446in"
-height="1.2118055555555556in"}
+![Demo without Media Queries](./images/image008.png)
 
 **Fig. 4.**Without any media queries the section and aside become quite
 small. Perhaps too small to even contain any real content.
 
-![Demo with Media
-Queries](./3-25-24/media/image009.png){width="3.4131944444444446in"
-height="2.2881944444444446in"}
+![Demo with Media Queries](./3-25-24/media/image009.png)  <-- 3.4 width -->
 
 **Fig. 4.**Using media queries to remove the floats and change their
 widths, the section and aside are now able to span the full width of the
@@ -3634,8 +3613,7 @@ time. Trying to keep up with these changes could be an endless process.
 <h4>Mobile First</h4>
 
 One popular technique with using media queries is called *mobile first*.
-The [[mobile
-first]{.underline}](https://abookapart.com/products/mobile-first) approach
+The [mobile first](https://abookapart.com/products/mobile-first) approach
 includes using styles targeted at smaller viewports as the default
 styles for a website, then use media queries to add styles as the
 viewport grows.
@@ -3654,20 +3632,14 @@ and develop intrinsic mobile experiences.
 A breakout of mobile first media queries might look abit like the
 following.
 
-+---+----------------------------------------------------------------------+
- 1  /&ast; Default styles first then media queries &ast;/ 
-
- 2  &#0064;media screen and (min-width: 400px) {&#8230;} 
-
- 3  &#0064;media screen and (min-width: 600px) {&#8230;} 
-
- 4  &#0064;media screen and (min-width: 1000px) {&#8230;}
-
- 5  &#0064;media screen and (min-width: 1400px) {&#8230;}
-
+```
+ 1  /* Default styles first then media queries */ 
+ 2  &#0064;media screen and (min-width: 400px) {...} 
+ 3  &#0064;media screen and (min-width: 600px) {...} 
+ 4  &#0064;media screen and (min-width: 1000px) {...}
+ 5  &#0064;media screen and (min-width: 1400px) {...}
  6 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 Additionally, downloading unnecessary media assets can be stopped by
 using media queries. Generally speaking, avoiding CSS3 shadows,
@@ -3675,32 +3647,19 @@ gradients, transforms, and animations within mobile styles isn't a bad
 idea either. When used excessively, they cause heavy loading and can
 even reduce a device's battery life.
 
-+---+----------------------------------------------------------------------+
- 1  /&ast; Default media &ast;/ 
-
+```
+ 1  /* Default media */
  2  body {  
-
  3  background: #ddd;  
-
  4  } 
-
- 5  /&ast; Media for larger devices &ast;/  
-
+ 5  /* Media for larger devices */  
  6  &#0064;media screen and (min-width: 800px) { 
-
  7  body {  
-
  8  background-image: url("bg.png") 50% 50% no-repeat;  
-
  9  } 
-
  1  } 
- 0 
-
  1 
- 1 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 <h4>Mobile First Demo</h4>
 
@@ -3987,61 +3946,37 @@ treating the parent element as an absolutely positioned element.
 
 **HTML**
 
-+---+----------------------------------------------------------------------+
+```
  1  <figure> 
-
- 2  <iframe
- src="https://www.youtube.com/embed/Sv3xVOs7_No"></iframe> 
- 3 
- </figure>
+ 2    <iframe src="https://www.youtube.com/embed/Sv3xVOs7_No"></iframe> 
+ 3  </figure>
  4 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 **CSS**
 
-+---+----------------------------------------------------------------------+
+```
  1  figure {
-
  2  height: 0; 
-
- 3  padding-bottom: 56.25%; /&ast; 16:9 &ast;/ 
-
+ 3  padding-bottom: 56.25%; /* 16:9 */ 
  4  position: relative;
-
  5  width: 100%; 
-
  6  } 
-
  7  iframe {
-
  8  height: 100%;
-
  9  left: 0;
-
- 1  position: absolute;
- 0 
- top: 0; 
- 1 
- 1  width: 100%; 
-
- 1  } 
- 2 
-
- 1 
- 3 
-
- 1 
- 4 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+ 10  position: absolute;
+ 11  top: 0; 
+ 13  width: 100%; 
+ 14  } 
+ 15 
+```
 
 <h4>Flexible Embedded Media Demo</h4>
 
 For security reasons CodePen doesn't allow iframes within embedded code
-samples, however you may [[review and edit this
-code]{.underline}](https://codepen.io/shayhowe/pen/cbmsI) on their
-website.
+samples, however you may [review and edit this code](https://codepen.io/shayhowe/pen/cbmsI) 
+on their website.
 
 100% Wide Container
 
@@ -4067,9 +4002,9 @@ website.
 **Lesson 3** <a href="https://learn.shayhowe.com/advanced-html-css/complex-selectors/">Complex Selectors</a>
 **Lesson 5** <a href="https://learn.shayhowe.com/advanced-html-css/preprocessors/">Preprocessors</a>
 
-[Lesson 5] Preprocessors
+<h2 align="center">[Lesson 5] Preprocessors</h2>
 
-In this Lesson 5
+<h3>In this Lesson 5</h3>
 
 **HTML**
 
@@ -4083,10 +4018,9 @@ In this Lesson 5
 <ul>
   <li><a href="https://learn.shayhowe.com/advanced-html-css/preprocessors/#scss-sass">
     SCSS & Sass</a></li>
+  <li><a href="https://learn.shayhowe.com/advanced-html-css/preprocessors/#other-preprocessors">
+    Other Preprocessors</a></li>
 </ul>
-
--[[Other
- Preprocessors]{.underline}](https://learn.shayhowe.com/advanced-html-css/preprocessors/#other-preprocessors)
 
 **SHARE**
 
@@ -4103,7 +4037,8 @@ challenge.
 A preprocessor is a program that takes one type of data and converts it
 to another type of data. In the case of HTML and CSS, some of the more
 popular preprocessor languages
-include [[Haml]{.underline}](http://haml.info/) and [[Sass]{.underline}](http://sass-lang.com/).
+include [Haml](http://haml.info/) and [Sass](http://sass-lang.com/).
+include [Haml](http://haml.info/) and [Sass](http://sass-lang.com/).
 Haml is processed into HTML and Sass is processed into CSS.
 
 Upon setting out to solve some of the more common problems, Haml and
@@ -4115,20 +4050,19 @@ popular being Compass.
 
 <h4>Haml</h4>
 
-Haml, known as [[HTML abstraction markup
-language]{.underline}](http://haml.info/docs/yardoc/file.REFERENCE.html),
-is a markup language with the single goal of providing the ability to
-write beautiful markup. Serving as its own markup language, code written
-in Haml is later processed to HTML. Haml promotes DRY and well
-structured markup, providing a pleasing experience for anyone having to
-write or read it.
+Haml, known as <a href="http://haml.info/docs/yardoc/file.REFERENCE.html">
+HTML abstraction markup language</a>, is a markup language with the single 
+goal of providing the ability to write beautiful markup. Serving as its own 
+markup language, code written in Haml is later processed to HTML. Haml promotes 
+DRY and well structured markup, providing a pleasing experience for anyone 
+having to write or read it.
 
 <h4>Installation</h4>
 
 Haml requires Ruby to be compiled to HTML, so the first step to using it
 is to ensure that Ruby is installed. Fortunately for those on Mac OS X
 Ruby comes preinstalled, and those on a Windows machine may
-visit [[Windows Installer]{.underline}](http://rubyinstaller.org/) for
+visit <a href="http://rubyinstaller.org/">Windows Installer</a> for
 directions. Upon confirming Ruby is installed the gem install
 haml command needs to be run from the command line, using Terminal or
 the alike command line program, to install Haml.
@@ -4517,14 +4451,14 @@ code can be commented out by being nested underneath a forward slash.
 <h4>Conditional Comments</h4>
 
 Conditional comments are also handled differently in Haml. To create a
-conditional comment use square brackets, &lbrack;&rbrack;, around the condition.
+conditional comment use square brackets, ][, around the condition.
 These square brackets need to be placed directly after the forward
 slash.
 
 **Haml**
 
 +---+----------------------------------------------------------------------+
- 1  /&lbrack;if lt IE 9&rbrack; 
+ 1  /]if lt IE 9[ 
 
  2  %script{:src => "html5shiv.js"}
 
@@ -4535,11 +4469,11 @@ slash.
 **Compiled HTML**
 
 +---+----------------------------------------------------------------------+
- 1  <!&#45;&#45;&lbrack;if lt IE 9&rbrack;>
+ 1  <!&#45;&#45;]if lt IE 9[>
 
  2  <script src="html5shiv.js"></script>
 
- 3  <&#0033;[endif&rbrack;&#45;&#45;>  
+ 3  <&#0033;[endif[&#45;&#45;>  
 
  4 
 +===+======================================================================+
@@ -4630,9 +4564,9 @@ the group being :css and :javascript.
 +---+----------------------------------------------------------------------+
  1  :javascript
 
- 2  &#36;(&#39;button&#39;).on(&#39;click&#39;, function(event) {  
+ 2  $('button').on('click', function(event) {  
 
- 3  &#36;(&#39;p&#39;).hide(&#39;slow&#39;);
+ 3  $('p').hide('slow');
 
  4  });  
 
@@ -4645,9 +4579,9 @@ the group being :css and :javascript.
 +---+----------------------------------------------------------------------+
  1  <script> 
 
- 2  &#36;(&#39;button&#39;).on(&#39;click&#39;, function(event) {  
+ 2  $('button').on('click', function(event) {  
 
- 3  &#36;(&#39;p&#39;).hide(&#39;slow&#39;);
+ 3  $('p').hide('slow');
 
  4  });  
 
@@ -5139,7 +5073,7 @@ of the most beneficial is inside of feature detection.
 <h4>Comments</h4>
 
 Sass handles comments very similar to that of Haml. The standard CSS
-syntax, /&ast; &#8230; &ast;/, for comments works as intended within Sass however
+syntax, /* ... */, for comments works as intended within Sass however
 there is also a syntax for silent comments to completely remove a
 comment or lines of code from being compiled.
 
@@ -5151,7 +5085,7 @@ is not rendered in the compiled CSS.
 **Sass**
 
 +---+----------------------------------------------------------------------+
- 1  /&ast; Normal comment &ast;/
+ 1  /* Normal comment */
 
  2  div  
 
@@ -5170,7 +5104,7 @@ is not rendered in the compiled CSS.
 **Compiled CSS**
 
 +---+----------------------------------------------------------------------+
- 1  /&ast; Normal comment &ast;/
+ 1  /* Normal comment */
 
  2  div {
 
@@ -5196,22 +5130,22 @@ Variables are one of the more sought after features of CSS that Sass
 provides. With Sass you can define variables and then reuse them as
 necessary.
 
-Variables are defined with a dollar sign, &#36;, followed by the variable
+Variables are defined with a dollar sign, $, followed by the variable
 name. Between the variable name and value is a colon followed by an
-empty space, such as &#36;font-base: 1em. As for the value of the variable,
+empty space, such as $font-base: 1em. As for the value of the variable,
 it may be a number, string, color, boolean, null, or a list of values
 separated by spaces or commas.
 
 <h4>Sass</h4>
 
 +---+----------------------------------------------------------------------+
- 1  &#36;font-base: 1em
+ 1  $font-base: 1em
 
- 2  &#36;serif: "Helvetica Neue", Arial, "Lucida Grande", sans-serif 
+ 2  $serif: "Helvetica Neue", Arial, "Lucida Grande", sans-serif 
 
  3  p 
 
- 4  font: &#36;font-base &#36;serif
+ 4  font: $font-base $serif
 
  5 
 
@@ -5243,13 +5177,13 @@ string of plain text.
 <h4>Sass</h4>
 
 +---+----------------------------------------------------------------------+
- 1  &#36;location: chicago
+ 1  $location: chicago
 
- 2  &#36;offset: left  
+ 2  $offset: left  
 
- 3  .#{&#36;location}  
+ 3  .#{$location}  
 
- 4  #{&#36;offset}: 20px  
+ 4  #{$offset}: 20px  
 
  5 
 
@@ -5283,7 +5217,7 @@ in the computed value. For example, ten pixels plus one inch will equal
 106 pixels. Subtraction is handled the same way as addition but with the
 minus sign, -, instead.
 
-Multiplication is completed with the asterisk sign, &ast;, however only one
+Multiplication is completed with the asterisk sign, *, however only one
 of the numbers, if any, may include a unit of measurement. Using the
 percent sign, %, will return the remainder of the two numbers upon being
 divided, and as with multiplication, only allows one number, if any, to
@@ -5296,7 +5230,7 @@ have a unit.
 
  2  width: 40px - 6 
 
- 3  width: 40px &ast; 6
+ 3  width: 40px * 6
 
  4  width: 40px % 6 
 
@@ -5340,9 +5274,9 @@ value will be unitless.
 
  3  width: (100px / 10px) 
 
- 4  &#36;width: 100px  
+ 4  $width: 100px  
 
- 5  width: &#36;width / 10
+ 5  width: $width / 10
 
  6  width: 5px - 100px / 10  
 
@@ -5376,15 +5310,15 @@ on the use of parentheses.
 **Sass**
 
 +---+----------------------------------------------------------------------+
- 1  &#36;grid: 16 
+ 1  $grid: 16 
 
- 2  &#36;column: 40px  
+ 2  $column: 40px  
 
- 3  &#36;gutter: 20px  
+ 3  $gutter: 20px  
 
- 4  &#36;container: (&#36;column &ast; &#36;grid) + (&#36;gutter &ast; &#36;grid) 
+ 4  $container: ($column * $grid) + ($gutter * $grid) 
 
- 5  width: &#36;container 
+ 5  width: $container 
 
  6 
 
@@ -5471,9 +5405,9 @@ value.
 +---+----------------------------------------------------------------------+
  1  color: rgba(#8ec63f, .25)
 
- 2  &#36;green: #8ec63f
+ 2  $green: #8ec63f
 
- 3  color: rgba(&#36;green, .25)
+ 3  color: rgba($green, .25)
 
  4 
 
@@ -5502,7 +5436,7 @@ intended.
 +---+----------------------------------------------------------------------+
  1  color: #8ec63f + #666 
 
- 2  color: #8ec63f &ast; 2
+ 2  color: #8ec63f * 2
 
  3  color: rgba(142, 198, 63, .75) / rgba(255, 255, 255, .75)
 
@@ -5648,26 +5582,26 @@ which is why color manipulations are a bit less common than color
 alterations.
 
 -change-color() --- Set any property of a color\
- &#36;color, &lbrack;&#36;red&rbrack;, &lbrack;&#36;green&rbrack;, &lbrack;&#36;blue&rbrack;, &lbrack;&#36;hue&rbrack;,
- &lbrack;&#36;saturation&rbrack;, &lbrack;&#36;lightness&rbrack;, &lbrack;&#36;alpha&rbrack;
+ $color, ]$red[, ]$green[, ]$blue[, ]$hue[,
+ ]$saturation[, ]$lightness[, ]$alpha[
 
 -adjust-color() --- Incrementally manipulate any property of a color\
- &#36;color, &lbrack;&#36;red&rbrack;, &lbrack;&#36;green&rbrack;, &lbrack;&#36;blue&rbrack;, &lbrack;&#36;hue&rbrack;,
- &lbrack;&#36;saturation&rbrack;, &lbrack;&#36;lightness&rbrack;, &lbrack;&#36;alpha&rbrack;
+ $color, ]$red[, ]$green[, ]$blue[, ]$hue[,
+ ]$saturation[, ]$lightness[, ]$alpha[
 
 -scale-color() --- Fluidly scale any percentage based on property of
  a color\
- &#36;color, &lbrack;&#36;red&rbrack;, &lbrack;&#36;green&rbrack;, &lbrack;&#36;blue&rbrack;, &lbrack;&#36;saturation&rbrack;,
- &lbrack;&#36;lightness&rbrack;, &lbrack;&#36;alpha&rbrack;
+ $color, ]$red[, ]$green[, ]$blue[, ]$saturation[,
+ ]$lightness[, ]$alpha[
 
 **Sass**
 
 +---+----------------------------------------------------------------------+
- 1  color: change-color(#8ec63f, &#36;red: 60, &#36;green: 255) 
+ 1  color: change-color(#8ec63f, $red: 60, $green: 255) 
 
- 2  color: adjust-color(#8ec63f, &#36;hue: 300, &#36;lightness: 50%)  
+ 2  color: adjust-color(#8ec63f, $hue: 300, $lightness: 50%)  
 
- 3  color: scale-color(#8ec63f, &#36;lightness: 25%, &#36;alpha: 30%) 
+ 3  color: scale-color(#8ec63f, $lightness: 25%, $alpha: 30%) 
 
  4 
 +===+======================================================================+
@@ -5867,17 +5801,17 @@ using a plus sign to call a mixin SCSS use an @include rule.
 **Sass**
 
 +---+----------------------------------------------------------------------+
- 1  &#0064;mixin btn(&#36;color, &#36;color-hover)  
+ 1  &#0064;mixin btn($color, $color-hover)  
 
- 2  color: &#36;color  
+ 2  color: $color  
 
  3  &:hover 
 
- 4  color: &#36;color-hover  
+ 4  color: $color-hover  
 
  5  .btn 
 
- 6  +btn(&#36;color: #fff, &#36;color-hover: #9799a7)  
+ 6  +btn($color: #fff, $color-hover: #9799a7)  
 
  7 
 
@@ -5912,17 +5846,17 @@ values, which may be over written if wished.
 **Sass**
 
 +---+----------------------------------------------------------------------+
- 1  &#0064;mixin btn(&#36;color: #fff, &#36;color-hover: #9799a7) 
+ 1  &#0064;mixin btn($color: #fff, $color-hover: #9799a7) 
 
- 2  color: &#36;color  
+ 2  color: $color  
 
  3  &:hover 
 
- 4  color: &#36;color-hover  
+ 4  color: $color-hover  
 
  5  .btn 
 
- 6  +btn(&#36;color-hover: #9799a7)
+ 6  +btn($color-hover: #9799a7)
 
  7 
 
@@ -5952,17 +5886,17 @@ values, which may be over written if wished.
 <h4>Variable Arguments</h4>
 
 When one or more values need to be passed to an argument the variable
-name may end with &#8230; inside of the mixin. In the example below with
+name may end with ... inside of the mixin. In the example below with
 box shadows we can pass in comma separated values to the mixin.
 
 +---+----------------------------------------------------------------------+
- 1  &#0064;mixin box-shadow(&#36;shadow&#8230;)  
+ 1  &#0064;mixin box-shadow($shadow...)  
 
- 2  -webkit-box-shadow: &#36;shadow
+ 2  -webkit-box-shadow: $shadow
 
- 3  -moz-box-shadow: &#36;shadow
+ 3  -moz-box-shadow: $shadow
 
- 4  box-shadow: &#36;shadow  
+ 4  box-shadow: $shadow  
 
  5  .shadows
 
@@ -6102,15 +6036,15 @@ directly tied to it will be applied.
 **Sass**
 
 +---+----------------------------------------------------------------------+
- 1  &#36;shay: awesome 
+ 1  $shay: awesome 
 
  2  .shay
 
- 3  &#0064;if &#36;shay == awesome
+ 3  &#0064;if $shay == awesome
 
  4  background: #ff7b29
 
- 5  &#0064;else if &#36;shay == cool 
+ 5  &#0064;else if $shay == cool 
 
  6  background: #0087cc
 
@@ -6142,18 +6076,18 @@ directly tied to it will be applied.
 
 The @for rule outputs different sets of styles based off of a counter
 variable. There are two different forms available for for loops, those
-being to and through. The first, @for &#36;i from 1 to 3 for example, will
-output styles up to, but not including, 3. The other form, @for &#36;i from
+being to and through. The first, @for $i from 1 to 3 for example, will
+output styles up to, but not including, 3. The other form, @for $i from
 1 through 3, will output styles up to, and including, 3.
 
 **Sass**
 
 +---+----------------------------------------------------------------------+
- 1  &#0064;for &#36;col from 1 to 6  
+ 1  &#0064;for $col from 1 to 6  
 
- 2  .col-#{&#36;col}
+ 2  .col-#{$col}
 
- 3  width: 40px &ast; &#36;col  
+ 3  width: 40px * $col  
 
  4 
 +===+======================================================================+
@@ -6211,11 +6145,11 @@ List may include multiple comma separated items.
 **Sass**
 
 +---+----------------------------------------------------------------------+
- 1  &#0064;each &#36;class in uxd, rails, html, css 
+ 1  &#0064;each $class in uxd, rails, html, css 
 
- 2  .#{&#36;class}-logo
+ 2  .#{$class}-logo
 
- 3  background: url("/img/#{&#36;class}.jpg")
+ 3  background: url("/img/#{$class}.jpg")
 
  4 
 +===+======================================================================+
@@ -6265,15 +6199,15 @@ counter variable can be finely controlled allowing for precise looping.
 **Sass**
 
 +---+----------------------------------------------------------------------+
- 1  &#36;heading: 1 
+ 1  $heading: 1 
 
- 2  &#0064;while &#36;heading <= 6  
+ 2  &#0064;while $heading <= 6  
 
- 3  h#{&#36;heading}
+ 3  h#{$heading}
 
- 4  font-size: 2em - (&#36;heading &ast; .25em)
+ 4  font-size: 2em - ($heading * .25em)
 
- 5  &#36;heading: &#36;heading + 1 
+ 5  $heading: $heading + 1 
 
  6 
 +===+======================================================================+
@@ -6377,9 +6311,10 @@ Design](https://learn.shayhowe.com/advanced-html-css/responsive-web-design/)
 [**Lesson 6**
 [jQuery](https://learn.shayhowe.com/advanced-html-css/jquery/)
 
-[Lesson 6]{.mark} jQuery
 
-In this Lesson 6
+<h2 align="center">[Lesson 6] jQuery</h2>
+
+<h3>In this Lesson 6</h3>
 
 **JAVASCRIPT**
 
@@ -6452,7 +6387,7 @@ numbers, undefined, null, or other values such as functions or objects.
 One popular way variables are defined is with the var keyword, followed
 by the variable name, an equal sign (=), then the value, ending with a
 semicolon (;). The variable name must begin with a letter, underscore
-(&#0095;), or dollar sign (&#36;). Variables cannot begin with numbers, although
+(&#0095;), or dollar sign ($). Variables cannot begin with numbers, although
 they may be used subsequently, and they cannot use hyphens whatsoever.
 Additionally, JavaScript is case sensitive so letters
 include a through z in both lower and uppercase.
@@ -6467,11 +6402,11 @@ example, shay_is_awesome would more commonly named shayIsAwesome.
 +---+----------------------------------------------------------------------+
  1  var theStarterLeague = 125; 
 
- 2  var food_truck = &#39;Coffee&#39;;
+ 2  var food_truck = 'Coffee';
 
  3  var mixtape01 = true; 
 
- 4  var vinyl = &lbrack;&#39;Miles Davis&#39;, &#39;Frank Sinatra&#39;, &#39;Ray Charles&#39;&rbrack;; 
+ 4  var vinyl = ]'Miles Davis', 'Frank Sinatra', 'Ray Charles'[; 
 
  5 
 +===+======================================================================+
@@ -6490,9 +6425,9 @@ legibility, but is not required.
 +---+----------------------------------------------------------------------+
  1  log(polaroid);  
 
- 2  return(&#39;bicycle lane&#39;);
+ 2  return('bicycle lane');
 
- 3  alert(&#39;Congratulations, you &#39; + outcome);  
+ 3  alert('Congratulations, you ' + outcome);  
 
  4 
 +===+======================================================================+
@@ -6513,7 +6448,7 @@ statements, that defines the function enclosed in curly braces, {}.
 +---+----------------------------------------------------------------------+
  1  function sayHello(name) {
 
- 2  return(&#39;Hello &#39; + name);  
+ 2  return('Hello ' + name);  
 
  3  } 
 
@@ -6530,10 +6465,10 @@ different methods and operators. Additionally, depending on the
 situation, arrays can be used to store, and return, a variety of
 different values.
 
-Generally speaking arrays are identified within square brackets, &lbrack;&rbrack;,
+Generally speaking arrays are identified within square brackets, ][,
 with comma separated items. The items start at 0 and increase from
 there. When identifying the third item in a list it is actually
-identified as &lbrack;2&rbrack;.
+identified as ]2[.
 
 <h4>Objects</h4>
 
@@ -6552,19 +6487,19 @@ properties, each having a key followed by a colon and value.
 
  2  var school = {  
 
- 3  name: &#39;The Starter League&#39;,  
+ 3  name: 'The Starter League',  
 
- 4  location: &#39;Merchandise Mart&#39;,
+ 4  location: 'Merchandise Mart',
 
  5  students: 120,  
 
- 6  teachers: &lbrack;&#39;Jeff&#39;, &#39;Raghu&#39;, &#39;Carolyn&#39;, &#39;Shay&#39;&rbrack; 
+ 6  teachers: ]'Jeff', 'Raghu', 'Carolyn', 'Shay'[ 
 
  7  };
 
  8  // Array
 
- 9  var school = &lbrack;&#39;Austin&#39;, &#39;Chicago&#39;, &#39;Portland&#39;&rbrack;;  
+ 9  var school = ]'Austin', 'Chicago', 'Portland'[;  
 
  1 
  0 
@@ -6640,14 +6575,14 @@ drive.
 
 <h4>jQuery Object</h4>
 
-jQuery comes with it's own object, the dollar sign, &#36;, also known
-as jQuery. The &#36; object is specifically made for selecting an element
+jQuery comes with it's own object, the dollar sign, $, also known
+as jQuery. The $ object is specifically made for selecting an element
 and then returning that element node to perform an action on it. These
 selections and actions should be written in a new file, referenced
 outside of the actual jQuery library.
 
 +---+----------------------------------------------------------------------+
- 1  &#36;();
+ 1  $();
 
  2  jQuery();  
 
@@ -6665,7 +6600,7 @@ inside of this function we can guarantee that it will not be executed
 until the page has loaded and the DOM is ready.
 
 +---+----------------------------------------------------------------------+
- 1  &#36;(document).ready(function(event){  
+ 1  $(document).ready(function(event){  
 
  2  // jQuery code  
 
@@ -6686,20 +6621,20 @@ CSS. On top of the general CSS selectors, jQuery has support for all of
 the unique CSS3 selectors, which work regardless of which browser is
 being used.
 
-Invoking the jQuery object, &#36;(), containing a selector will return that
+Invoking the jQuery object, $(), containing a selector will return that
 DOM node to manipulate it. The selector falls within the
-parentheses, (&#39;&#8230;&#39;), and may select elements just like that of CSS.
+parentheses, ('...'), and may select elements just like that of CSS.
 
 +---+----------------------------------------------------------------------+
- 1  &#36;(&#39;.feature&#39;); // Class selector  
+ 1  $('.feature'); // Class selector  
 
- 2  &#36;(&#39;li strong&#39;); // Descendant selector 
+ 2  $('li strong'); // Descendant selector 
 
- 3  &#36;(&#39;em, i&#39;); // Multiple selector  
+ 3  $('em, i'); // Multiple selector  
 
- 4  &#36;(&#39;a&lbrack;target="&#0095;blank"&rbrack;&#39;); // Attribute selector
+ 4  $('a]target="&#0095;blank"['); // Attribute selector
 
- 5  &#36;(&#39;p:nth-child(2)&#39;); // Pseudo-class selector
+ 5  $('p:nth-child(2)'); // Pseudo-class selector
 
  6 
 +===+======================================================================+
@@ -6713,9 +6648,9 @@ event the this keyword may be used to refer to the element selected in
 the current handler.
 
 +---+----------------------------------------------------------------------+
- 1  &#36;(&#39;div&#39;).click(function(event){
+ 1  $('div').click(function(event){
 
- 2  &#36;(this);  
+ 2  $(this);  
 
  3  });  
 
@@ -6731,7 +6666,7 @@ into jQuery to help out. These filters are an extension to CSS3 and
 provide more control over selecting an element or its relatives.
 
 +---+--------------------------------------------------------------------+
- 1  &#36;(&#39;div:has(strong)&#39;);  
+ 1  $('div:has(strong)');  
  
  2  
 +===+====================================================================+
@@ -6757,7 +6692,7 @@ the .not() method. With this specific method all of the div elements
 without a class of type or collection will be selected.
 
 +---+----------------------------------------------------------------------+
- 1  &#36;(&#39;div&#39;).not(&#39;.type, .collection&#39;);
+ 1  $('div').not('.type, .collection');
 
  2 
 +===+======================================================================+
@@ -6774,7 +6709,7 @@ the .parent() method. Combined together this will only select the parent
 elements of div elements without a class of type or collection.
 
 +---+----------------------------------------------------------------------+
- 1  &#36;(&#39;div&#39;).not(&#39;.type, .collection&#39;).parent();  
+ 1  $('div').not('.type, .collection').parent();  
 
  2 
 +===+======================================================================+
@@ -6871,11 +6806,11 @@ information.
 +---+----------------------------------------------------------------------+
  1  // Gets the value of the alt attribute  
 
- 2  &#36;(&#39;img&#39;).attr(&#39;alt&#39;);  
+ 2  $('img').attr('alt');  
 
  3  // Sets the value of the alt attribute  
 
- 4  &#36;(&#39;img&#39;).attr(&#39;alt&#39;, &#39;Wild kangaroo&#39;);
+ 4  $('img').attr('alt', 'Wild kangaroo');
 
  5 
 
@@ -6898,11 +6833,11 @@ the .attr() method is used to find the value of the title attribute of
 any abbr element and set it to Hello World.
 
 +---+----------------------------------------------------------------------+
- 1  &#36;(&#39;li:even&#39;).addClass(&#39;even-item&#39;);
+ 1  $('li:even').addClass('even-item');
 
- 2  &#36;(&#39;p&#39;).removeClass(); 
+ 2  $('p').removeClass(); 
 
- 3  &#36;(&#39;abbr&#39;).attr(&#39;title&#39;, &#39;Hello World&#39;);  
+ 3  $('abbr').attr('title', 'Hello World');  
 
  4 
 +===+======================================================================+
@@ -6950,19 +6885,19 @@ to change the unit of measurement identify the value then use a plus
 sign followed by the quoted unit of measurement.
 
 +---+----------------------------------------------------------------------+
- 1  &#36;(&#39;h1 span&#39;).css(&#39;font-size&#39;, &#39;normal&#39;); 
+ 1  $('h1 span').css('font-size', 'normal'); 
 
- 2  &#36;(&#39;div&#39;).css({  
+ 2  $('div').css({  
 
- 3  fontSize: &#39;13px&#39;,
+ 3  fontSize: '13px',
 
- 4  background: &#39;#f60&#39;  
+ 4  background: '#f60'  
 
  5  });  
 
- 6  &#36;(&#39;header&#39;).height(200); 
+ 6  $('header').height(200); 
 
- 7  &#36;(&#39;.extend&#39;).height(30 + &#39;em&#39;); 
+ 7  $('.extend').height(30 + 'em'); 
 
  8 
 +===+======================================================================+
@@ -7006,11 +6941,11 @@ new em element just after the link, and the .text() method is replacing
 the text of any h1 elements with the text Hello World.
 
 +---+----------------------------------------------------------------------+
- 1  &#36;(&#39;section&#39;).prepend(&#39;<h3>Featured</h3>&#39;);
+ 1  $('section').prepend('<h3>Featured</h3>');
 
- 2  &#36;(&#39;a&lbrack;target="&#0095;blank"&rbrack;&#39;).after(&#39;<em>New window.</em>&#39;); 
+ 2  $('a]target="&#0095;blank"[').after('<em>New window.</em>'); 
 
- 3  &#36;(&#39;h1&#39;).text(&#39;Hello World&#39;); 
+ 3  $('h1').text('Hello World'); 
 
  4 
 +===+======================================================================+
@@ -7079,9 +7014,9 @@ bound to it. Now, when a list item is clicked on that list item, via
 the this keyword, receives the class of saved-item.
 
 +---+----------------------------------------------------------------------+
- 1  &#36;(&#39;li&#39;).click(function(event){ 
+ 1  $('li').click(function(event){ 
 
- 2  &#36;(this).addClass(&#39;saved-item&#39;);
+ 2  $(this).addClass('saved-item');
 
  3  });  
 
@@ -7106,9 +7041,9 @@ as the first argument inside the .on() method with the event handler
 function staying the same as before.
 
 +---+----------------------------------------------------------------------+
- 1  &#36;(&#39;li&#39;).on(&#39;click&#39;, function(event){ 
+ 1  $('li').on('click', function(event){ 
 
- 2  &#36;(this).addClass(&#39;saved-item&#39;);
+ 2  $(this).addClass('saved-item');
 
  3  });  
 
@@ -7125,9 +7060,9 @@ with the class of pagination. Upon calling the .on() event
 the .click() event is called on the anchor with the up ID.
 
 +---+----------------------------------------------------------------------+
- 1  &#36;(&#39;.pagination&#39;).on(&#39;hover&#39;, function(event){ 
+ 1  $('.pagination').on('hover', function(event){ 
 
- 2  &#36;(&#39;a#up&#39;).click(); 
+ 2  $('a#up').click(); 
 
  3  });  
 
@@ -7146,9 +7081,9 @@ clicking the close icon.
 +---+--------------------------------------------------------------------+
  1  <div class="notice-warning">
  
- 2  <div class="notice-close">&#215;</div>  
+ 2  <div class="notice-close">x</div>  
  
- 3  <strong>Warning!</strong> I&#8217;m about to lose my cool.  
+ 3  <strong>Warning!</strong> I"m about to lose my cool.  
  
  4  </div> 
  
@@ -7159,9 +7094,9 @@ clicking the close icon.
 **JavaScript**
 
 +---+--------------------------------------------------------------------+
- 1  &#36;(&#39;.notice-close&#39;).on(&#39;click&#39;, function(event){
+ 1  $('.notice-close').on('click', function(event){
  
- 2  &#36;(&#39;.notice-warning&#39;).remove();  
+ 2  $('.notice-warning').remove();  
  
  3  });
  
@@ -7304,11 +7239,11 @@ fine, but millisecond values may also be passed in directly. Keyword
 values must be quoted while millisecond values do not.
 
 +---+----------------------------------------------------------------------+
- 1  &#36;(&#39;.error&#39;).show();
+ 1  $('.error').show();
 
- 2  &#36;(&#39;.error&#39;).show(&#39;slow&#39;); 
+ 2  $('.error').show('slow'); 
 
- 3  &#36;(&#39;.error&#39;).show(500);
+ 3  $('.error').show(500);
 
  4 
 +===+======================================================================+
@@ -7326,9 +7261,9 @@ then slows down again before completion. The linear value runs the
 animation at one constant pace for the entire duration.
 
 +---+----------------------------------------------------------------------+
- 1  &#36;(&#39;.error&#39;).show(&#39;slow&#39;, &#39;linear&#39;);
+ 1  $('.error').show('slow', 'linear');
 
- 2  &#36;(&#39;.error&#39;).show(500, &#39;linear&#39;);
+ 2  $('.error').show(500, 'linear');
 
  3 
 +===+======================================================================+
@@ -7353,9 +7288,9 @@ the duration or easing, if either exist. Inside this function new events
 or effects may be placed, each following their own required syntax.
 
 +---+----------------------------------------------------------------------+
- 1  &#36;(&#39;.error&#39;).show(&#39;slow&#39;, &#39;linear&#39;, function(event){  
+ 1  $('.error').show('slow', 'linear', function(event){  
 
- 2  &#36;(&#39;.error .status&#39;).text(&#39;Continue&#39;);
+ 2  $('.error .status').text('Continue');
 
  3  });  
 
@@ -7382,35 +7317,24 @@ animation is complete.
 
 **HTML**
 
-+---+--------------------------------------------------------------------+
+```
  1  <div class="notice-warning">
- 
- 2  <div class="notice-close">&#215;</div>  
- 
- 3  <strong>Warning!</strong> I&#8217;m about to lose my cool.  
- 
+ 2  <div class="notice-close">x</div>  
+ 3  <strong>Warning!</strong> I'm about to lose my cool.  
  4  </div> 
- 
  5  
-+===+====================================================================+
-+---+--------------------------------------------------------------------+
+```
 
 **JavaScript**
 
-+---+-------------------------------------------------------------------+
- 1  &#36;(&#39;.notice-close&#39;).on(&#39;click&#39;, function(event){  
-
- 2  &#36;(&#39;.notice-warning&#39;).fadeOut(&#39;slow&#39;, function(event){  
-
- 3  &#36;(this).remove(); 
-
+```
+ 1  $('.notice-close').on('click', function(event){  
+ 2  $('.notice-warning').fadeOut('slow', function(event){  
+ 3  $(this).remove(); 
  4  });  
-
  5  });  
-
  6 
-+===+===================================================================+
-+---+-------------------------------------------------------------------+
+```
 
 <h4>Demo</h4>
 
@@ -7462,47 +7386,29 @@ animation is complete.
 
 **HTML**
 
-+---+-------------------------------------------------------------------+
+```
  1  <div class="panel">  
-
- 2  <div class="panel-stage"></div>
-
- 3  <a href="#" class="panel-tab">Open  
- <span>&#9660;</span></a> 
- 4 
- </div>
+ 2    <div class="panel-stage"></div>
+ 3    <a href="#" class="panel-tab">Open <span>&#9660;</span></a> 
+ 4  </div>
  5 
-+===+===================================================================+
-+---+-------------------------------------------------------------------+
+```
 
 **JavaScript**
 
-+---+-------------------------------------------------------------------+
- 1  &#36;(&#39;.panel-tab&#39;).on(&#39;click&#39;, function(event){  
-
- 2  event.preventDefault();  
-
- 3  &#36;(&#39;.panel-stage&#39;).slideToggle(&#39;slow&#39;, function(event){ 
-
- 4  if(&#36;(this).is(&#39;:visible&#39;)){ 
-
- 5  &#36;(&#39;.panel-tab&#39;).html(&#39;Close <span>&#9650;</span>&#39;);
-
- 6  } else {
-
- 7  &#36;(&#39;.panel-tab&#39;).html(&#39;Open <span>&#9660;</span>&#39;); 
-
- 8  } 
-
- 9  });  
-
- 1  });  
- 0 
-
- 1 
- 1 
-+===+===================================================================+
-+---+-------------------------------------------------------------------+
+```
+ 1  $('.panel-tab').on('click', function(event){  
+ 2    event.preventDefault();  
+ 3    $('.panel-stage').slideToggle('slow', function(event){ 
+ 4      if($(this).is(':visible')){ 
+ 5        $('.panel-tab').html('Close <span>&#9650;</span>');
+ 6      } else {
+ 7        $('.panel-tab').html('Open <span>&#9660;</span>'); 
+ 8      } 
+ 9    });  
+ 10 });  
+ 11 
+```
 
 Demo
 
@@ -7510,51 +7416,42 @@ Tabs Demo
 
 **HTML**
 
-+---+--------------------------------------------------------------------+
+```
  1  <ul class="tabs-nav"> 
- 
  2  <li><a href="#tab-1">Features</a></li> 
- 
  3  <li><a href="#tab-2">Details</a></li>  
- 
  4  </ul>  
- 
  5  <div class="tabs-stage"> 
- 
- 6  <div id="tab-1">&#8230;</div>
- 
- 7  <div id="tab-2">&#8230;</div>
- 
+ 6  <div id="tab-1">...</div>
+ 7  <div id="tab-2">...</div>
  8  </div> 
- 
  9  
-+===+====================================================================+
-+---+--------------------------------------------------------------------+
+```
 
 **JavaScript**
 
 +---+--------------------------------------------------------------------+
  1  // Show the first tab by default
  
- 2  &#36;(&#39;.tabs-stage div&#39;).hide(); 
+ 2  $('.tabs-stage div').hide(); 
  
- 3  &#36;(&#39;.tabs-stage div:first&#39;).show(); 
+ 3  $('.tabs-stage div:first').show(); 
  
- 4  &#36;(&#39;.tabs-nav li:first&#39;).addClass(&#39;tab-active&#39;);
+ 4  $('.tabs-nav li:first').addClass('tab-active');
  
  5  // Change tab class and display content 
  
- 6  &#36;(&#39;.tabs-nav a&#39;).on(&#39;click&#39;, function(event){  
+ 6  $('.tabs-nav a').on('click', function(event){  
  
  7  event.preventDefault();
  
- 8  &#36;(&#39;.tabs-nav li&#39;).removeClass(&#39;tab-active&#39;);
+ 8  $('.tabs-nav li').removeClass('tab-active');
  
- 9  &#36;(this).parent().addClass(&#39;tab-active&#39;);
+ 9  $(this).parent().addClass('tab-active');
  
- 1  &#36;(&#39;.tabs-stage div&#39;).hide(); 
+ 1  $('.tabs-stage div').hide(); 
  0  
- &#36;(&#36;(this).attr(&#39;href&#39;)).show();
+ $($(this).attr('href')).show();
  1  
  1  });
  
@@ -7598,9 +7495,10 @@ Tabs Demo
 [**Lesson 7**]
 [Transforms](https://learn.shayhowe.com/advanced-html-css/css-transforms/)
 
-[Lesson 7]{.mark} Transforms
 
-In this Lesson 7
+<h2 align="center">[Lesson 7] Transforms</h2>
+
+<h3>In this Lesson 7</h3>
 
 GitlabGitLab is the most comprehensive AI-powered DevSecOps Platform.
 Software. Faster.
@@ -8850,14 +8748,14 @@ using [[animations]{.underline}](https://css-tricks.com/almanac/properties/b/ba
 [<b>Lesson 6</b>] <a href="https://learn.shayhowe.com/advanced-html-css/jquery/">jQuery</a>
 [<b>Lesson 8</b>] <a href="https://learn.shayhowe.com/advanced-html-css/transitions-animations/">Transitions &amp; Animations</a>
 
-[Lesson 8] Transitions & Animations
 
-In this Lesson 8
+<h2 align="center">[Lesson 8] Transitions &amp; Animations</h2>
 
-GitlabGitLab is the only place where enterprises build mission‑critical
-software.
+<h3>In this Lesson 8</h3>
 
-<b>CSS**
+GitlabGitLab is the only place where enterprises build mission critical software.
+
+<h4>CSS</h4>
 
 -[[Transitions]{.underline}](https://learn.shayhowe.com/advanced-html-css/transitions-animations/#transitions)
 
@@ -8872,7 +8770,7 @@ software.
 -[[Shorthand
  Animations]{.underline}](https://learn.shayhowe.com/advanced-html-css/transitions-animations/#shorthand-animations)
 
-<b>SHARE**
+**SHARE**
 
 One evolution with CSS3 was the ability to write behaviors for
 transitions and animations. Front end developers have been asking for
@@ -9047,7 +8945,7 @@ element.
 
 <h4>Transitional Properties</h4>
 
-It is important to note, <b>not all properties may be transitioned**,
+It is important to note, **not all properties may be transitioned**,
 only properties that have an identifiable halfway point. Colors, font
 sizes, and the alike may be transitioned from one value to another as
 they have recognizable values in-between one another.
@@ -9278,14 +9176,14 @@ transition values.
 
 <h4>Transitional Button</h4>
 
-<b>HTML**
+**HTML**
 
 ```
  1  <button>Awesome Button</button>
  2  
 ```
 
-<b>CSS**
+**CSS**
 
 ```
  1  button { 
@@ -9320,9 +9218,9 @@ transition values.
  
  2  <div class="card"> 
  
- 3  <div class="side">&#8230;</div> 
+ 3  <div class="side">...</div> 
  
- 4  <div class="side back">&#8230;</div> 
+ 4  <div class="side back">...</div> 
  
  5  </div> 
  
@@ -9335,55 +9233,31 @@ transition values.
 
 ```
  1  .card-container {
- 
  2  height: 150px;
- 
  3  perspective: 600;
- 
  4  position: relative; 
- 
  5  width: 150px; 
- 
  6  }  
- 
  7  .card {  
- 
  8  height: 100%; 
- 
  9  position: absolute; 
- 
- 1  transform-style: preserve-3d;
- 0  
- transition: all 1s ease-in-out; 
- 1  
- 1  width: 100%;  
- 
- 1  }  
- 2  
- .card:hover { 
- 1  
- 3  transform: rotateY(180deg);  
- 
- 1  }  
- 4  
- .card .side { 
- 1  
- 5  backface-visibility: hidden; 
- 
- 1  height: 100%; 
- 6  
- position: absolute; 
- 1  
- 7  width: 100%;  
- 
- 1  }  
- 8  
- .card .back { 
- 1  
- 9  transform: rotateY(180deg);  
- 
- 2  }  
- 0  
+ 10  transform-style: preserve-3d;
+ 11  transition: all 1s ease-in-out; 
+ 12  width: 100%;  
+ 13  }  
+ 14  .card:hover { 
+ 15  transform: rotateY(180deg);  
+ 16  }  
+ 17  .card .side { 
+ 18  backface-visibility: hidden; 
+ 19  height: 100%; 
+ 20  position: absolute; 
+ 21  width: 100%;  
+ 22  }  
+ 23  .card .back { 
+ 24  transform: rotateY(180deg);  
+ 25  }  
+ 26  
 ```
 
 <h4>Demo</h4>
@@ -9405,35 +9279,21 @@ name, any animation breakpoints, and the properties intended to be
 animated.
 
 ```
- 1  &#0064;keyframes slide {
-
- 2  0% { 
-
- 3  left: 0;
-
- 4  top: 0; 
-
- 5  } 
-
- 6  50% {
-
- 7  left: 244px; 
-
- 8  top: 100px;
-
- 9  } 
-
- 1  100% {  
- 0 
- left: 488px; 
- 1 
- 1  top: 0; 
-
- 1  } 
- 2 
- } 
- 1 
- 3 
+ 1  @keyframes slide {
+ 2    0% {
+ 3      left: 0;
+ 4      top: 0;
+ 5    }
+ 6    50% {
+ 7      left: 244px;
+ 8      top: 100px;
+ 9    }
+ 10   100% {
+ 11     left: 488px;
+ 12     top: 0;
+ 13   }
+ 14 }
+ 15 
 ```
 
 <h4>Vendor Prefixing the Keyframe Rule</h4>
@@ -9442,11 +9302,11 @@ The @keyframes rule must be vendor prefixed, just like all of the
 other transition and animation properties. The vendor prefixes for
 the @keyframes rule look like the following:
 
--@-moz-keyframes
-
--@-o-keyframes
-
--@-webkit-keyframes
+<ul>
+  <li>@-moz-keyframes</li>
+  <li>@-o-keyframes</li>
+  <li>@-webkit-keyframes</li>
+</ul>
 
 The animation above is named slide, stated directly after the
 opening @keyframes rule. The different keyframe breakpoints are set
@@ -9765,9 +9625,10 @@ the animation.
 [<b>Lesson 7</b>] [Transforms](https://learn.shayhowe.com/advanced-html-css/css-transforms/)
 [<b>Lesson 9</b>] [Feature Support & Polyfills](https://learn.shayhowe.com/advanced-html-css/feature-support-polyfills/)
 
-[Lesson 9] Feature Support & Polyfills
 
-In this Lesson 9
+<h2 align="center">[Lesson 9] Feature Support &amp; Polyfills</h2>
+
+<h3>In this Lesson 9</h3>
 
 <b>HTML</b>
 
@@ -9827,13 +9688,13 @@ comment](https://css-tricks.com/how-to-create-an-ie-only-stylesheet/),
 making sure that the file is only loaded within versions of Internet
 Explorer 8 and below.
 
-In this case the conditional comment looks like <!&#45;&#45;&lbrack;if lt IE
-9&rbrack;>&#8230;<&#0033;[endif&rbrack;&#45;&#45;>.
+In this case the conditional comment looks like <!&#45;&#45;]if lt IE
+9[>...<&#0033;[endif[&#45;&#45;>.
 
 ```
- 1  <!&#45;&#45;&lbrack;if lt IE 9&rbrack;>
+ 1  <!&#45;&#45;]if lt IE 9[>
  2  <script src="html5shiv.js"></script>
- 3  <&#0033;[endif&rbrack;&#45;&#45;>  
+ 3  <&#0033;[endif[&#45;&#45;>  
  4 
 ```
 
@@ -9936,7 +9797,7 @@ additional HTTP requests when possible.
  7  margin: 0; 
  8  outline: 0;
  9  } 
- 1  /&ast; With CSS Gradient Styles &ast;/  
+ 1  /* With CSS Gradient Styles */  
  .cssgradients button {
  1  border: 1px solid #0080c2;  
  1  background: linear-gradient(#00a2f5, #0087cc);  
@@ -9949,7 +9810,7 @@ additional HTTP requests when possible.
  .cssgradients button:active {  
  7  box-shadow: inset 0 1px 10px rgba(255, 255, 255, .5); 
  1  } 
- /&ast; Without CSS Gradient Styles &ast;/  
+ /* Without CSS Gradient Styles */  
  9  .no-cssgradients button {
  2  background: transparent url("button.png") 0 0 no-repeat;  
  padding: 16px 31px;
@@ -10001,13 +9862,13 @@ the storage.js file using the getScript method, and if local storage is not 
 is used the storage-polyfill.js file using the getScript method.
 
 ```
- 1  &#36;(document).ready(function() {
+ 1  $(document).ready(function() {
  2  if (Modernizr.localstorage) {  
  3  // Local storage is available  
- 4  jQuery.getScript(&#39;storage.js&#39;); 
+ 4  jQuery.getScript('storage.js'); 
  5  } else {
  6  // Local storage is not available 
- 7  jQuery.getScript(&#39;storage-polyfill.js&#39;);
+ 7  jQuery.getScript('storage-polyfill.js');
  8  } 
  9  });  
  1 
@@ -10021,9 +9882,9 @@ media query conditions. Not loading unnecessary files can be extremely
 beneficial for performance.
 
 ```
- 1  &#36;(document).ready(function() {
- 2  if (Modernizr.mq(&#39;screen and (min-width: 640px)&#39;)) {
- 3  jQuery.getScript(&#39;tabs.js&#39;); 
+ 1  $(document).ready(function() {
+ 2  if (Modernizr.mq('screen and (min-width: 640px)')) {
+ 3  jQuery.getScript('tabs.js'); 
  4  } 
  5  });  
  6 
@@ -10046,9 +9907,9 @@ calling these tooltips could be wrapped in a Modernizr condition,
 preventing the script from loading on smaller screens.
 
 ```
- 1  &#36;(document).ready(function() {
- 2  if (Modernizr.mq(&#39;screen and (max-width: 400px)&#39;)) {
- 3  &#36;(&#39;.size&#39;).text(&#39;small&#39;); 
+ 1  $(document).ready(function() {
+ 2  if (Modernizr.mq('screen and (max-width: 400px)')) {
+ 3  $('.size').text('small'); 
  4  } 
  5  });  
  6 
@@ -10247,11 +10108,11 @@ skipping it, where they may not done so with the CSS declaration.
 +---+----------------------------------------------------------------------+
  1  <!&#45;&#45; Good &#45;&#45;>  
 
- 2  <div hidden>&#8230;</div>  
+ 2  <div hidden>...</div>  
 
  3  <!&#45;&#45; Not good &#45;&#45;> 
 
- 4  <div style="display: none;">&#8230;</div> 
+ 4  <div style="display: none;">...</div> 
 
  5 
 
@@ -10400,7 +10261,7 @@ The s element identifies text that is no longer accurate or relevant.
  datetime="2012-07-01">
  skateboarder</del> and designer.
  <!&#45;&#45; No longer accurate or relevant &#45;&#45;>  
- <s>&#36;24.99</s> &#36;19.99  
+ <s>$24.99</s> $19.99  
 ```
 
 <h4>Striking Text Demo</h4>
@@ -10414,7 +10275,7 @@ an un-semantic text level element.
 
 ```
  1  <!&#45;&#45; Highlighted for reference purposes &#45;&#45;> 
- 2  Search results for <mark>&#39;chicago&#39;</mark>.
+ 2  Search results for <mark>'chicago'</mark>.
  3 
 ```
 
@@ -10490,7 +10351,7 @@ the max attribute indicates what progress needs to be reached.
  You are <progress value="50" max="100">50%</progress>  
  7  complete.  
  8  <progress value="50" min="0" max="100">Hold tight,  
- you&#8217;re getting  
+ you"re getting  
  there.</progress>
 ```
 
@@ -10767,7 +10628,7 @@ find the need.
 
 ```
  1  <section itemscope itemtype="http://schema.org/Person"> 
- 2  &#8230; 
+ 2  ... 
  3  </section> 
  4 
 ```
@@ -10792,7 +10653,7 @@ elements and what attribute is used for their property value.
 
 ```
   ---------------------------------------------------------------------------------------
-  <b>[Element]{.mark}</b><b>[Value]{.mark}</b>
+  <b>[Element]</b><b>[Value]</b>
   ------------------------------------------------------------------ --------------------
   <meta> content attribute
 
@@ -10916,7 +10777,7 @@ accomplished using the role attribute. These roles then specify what
 certain elements and blocks of content do on a page.
 
 ```
- 1  <header role="banner">&#8230;</header> 
+ 1  <header role="banner">...</header> 
 
  2 
 ```
@@ -10996,7 +10857,7 @@ directly tied to the document from a top level perspective, not elements
 nested within other regions of the document structure.
 
 ```
- * <b>[Acceptable Roles]{.mark}</b>
+ * <b>[Acceptable Roles]</b>
  
  
  Element	Implied Role	Acceptable Roles
@@ -11034,13 +10895,13 @@ the following code snippet.
 
 ```
  1  <header role="banner">  
- 2    <nav role="navigation">&#8230;</nav> 
+ 2    <nav role="navigation">...</nav> 
  3  </header>
  4  <article role="article">
- 5    <section role="region">&#8230;</section>  
+ 5    <section role="region">...</section>  
  6  </article> 
- 7  <aside role="complementary">&#8230;</aside>  
- 8  <footer role="contentinfo">&#8230;</footer>  
+ 7  <aside role="complementary">...</aside>  
+ 8  <footer role="contentinfo">...</footer>  
  9 
 ```
 
