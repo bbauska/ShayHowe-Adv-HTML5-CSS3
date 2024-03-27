@@ -1,4 +1,4 @@
----
+<!-- ---
 title: "Shay & Howe's Advanced HTML and CSS"
 author: "Brian Bauska (bbauska)"
 date last editted: "3/26/2024 7+pm"
@@ -6,7 +6,7 @@ output:
   markdown:
  with some style
 ---
-
+-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h1 align="center" width="100%">Advanced HTML &amp; CSS</h1>
