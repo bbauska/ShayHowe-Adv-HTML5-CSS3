@@ -2207,17 +2207,17 @@ list item.
 
 ```
  1  <ul>  
- 2  <li>This list item will be selected</li> 
- 3  <li>  
- 4  <div>This div will be selected</div>
- 5  </li> 
- 6  <li>  
- 7  <div>...</div>
- 8  <div>...</div>
- 9  </li> 
- 1  <li>This list item will be selected</li> 
- </ul> 
- 2 
+ 2    <li>This list item will be selected</li> 
+ 3    <li>  
+ 4      <div>This div will be selected</div>
+ 5    </li> 
+ 6    <li>  
+ 7      <div>...</div>
+ 8      <div>...</div>
+ 9    </li> 
+ 10   <li>This list item will be selected</li> 
+ 11 </ul> 
+  
 ```
 
 <h3>:first-of-type, :last-of-type, &amp; :only-of-type</h3>
@@ -2257,12 +2257,12 @@ the only image to appear within the article, thus also selected.
 
 ```
  1  <article>
- 2  <h1>...</h1>  
- 3  <p>This paragraph will be selected</p>
- 4  <p>...</p> 
- 5  <img src="#"><!&#45;&#45; This image will be selected &#45;&#45;>
- 6  <p>This paragraph will be selected</p>
- 7  <h6>...</h6>  
+ 2    <h1>...</h1>  
+ 3    <p>This paragraph will be selected</p>
+ 4    <p>...</p> 
+ 5    <img src="#"><!&#45;&#45; This image will be selected &#45;&#45;>
+ 6    <p>This paragraph will be selected</p>
+ 7    <h6>...</h6>  
  8  </article> 
  9 
 ```
@@ -2367,12 +2367,12 @@ third list item, thus lines 4 and 7 are selected.
 
 ```
  1  <ul>  
- 2  <li>...</li>  
- 3  <li>...</li>  
- 4  <li>This list item will be selected</li> 
- 5  <li>...</li>  
- 6  <li>...</li>  
- 7  <li>This list item will be selected</li> 
+ 2    <li>...</li>  
+ 3    <li>...</li>  
+ 4    <li>This list item will be selected</li> 
+ 5    <li>...</li>  
+ 6    <li>...</li>  
+ 7    <li>This list item will be selected</li> 
  8  </ul> 
 ```
 
@@ -2391,12 +2391,12 @@ and then onward. As a result, the list items lines 4 and 6 are selected.
 
 ```
  1  <ul>  
- 2  <li>...</li>  
- 3  <li>...</li>  
- 4  <li>This list item will be selected</li> 
- 5  <li>...</li>  
- 6  <li>This list item will be selected</li> 
- 7  <li>...</li>  
+ 2    <li>...</li>  
+ 3    <li>...</li>  
+ 4    <li>This list item will be selected</li> 
+ 5    <li>...</li>  
+ 6    <li>This list item will be selected</li> 
+ 7    <li>...</li>  
  8  </ul> 
  9 
 ```
@@ -2548,14 +2548,14 @@ paragraph. Here the paragraphs on lines 4, 7, and 9 are selected.
 
 ```
  1  <article>
- 2  <h1>...</h1>  
- 3  <p>...</p> 
- 4  <p>This paragraph will be selected</p>
- 5  <p>...</p> 
- 6  <h2>...</h2>  
- 7  <p>This paragraph will be selected</p>
- 8  <p>...</p> 
- 9  <p>This paragraph will be selected</p>
+ 2    <h1>...</h1>  
+ 3    <p>...</p> 
+ 4    <p>This paragraph will be selected</p>
+ 5    <p>...</p> 
+ 6    <h2>...</h2>  
+ 7    <p>This paragraph will be selected</p>
+ 8    <p>...</p> 
+ 9    <p>This paragraph will be selected</p>
  10 </article> 
  11 
 ```
@@ -2661,9 +2661,8 @@ pseudo-classes.
 ```
  1  <div>This div will be selected</div>
  2  <div class="awesome">...</div>
- 3  <section>This section will be selected</section>  
- 4  <section class="awesome">This section will be  
- selected</section>  
+ 3  <section>This section will be selected</section>
+ 4  <section class="awesome">This section will be selected</section>
  5 
 ```
 
@@ -2673,33 +2672,33 @@ pseudo-classes.
 
 ```
  1  <table>
- 2  <thead>
- 3  <tr>
- 4  <th>Number</th>
- 5  <th>Player</th>
- 6  <th>Position</th>
- 7  <th>Height</th>
- 8  <th>Weight</th>
- 9  </tr>
- 10  </thead>
- 11<tbody>
- 12  <tr>
- 13  <td>8</td>
- 14<td>Marco Belinelli</td>
- 15  <td>G</td>
- 16  <td>6-5</td>
- 17<td>195</td>
- 18  </tr>
- 19  <tr>
- 20<td>5</td>
- 21  <td>Carlos Boozer</td>
- 22  <td>F</td>
- 23<td>6-9</td>
- 24  <td>266</td>
- 25  </tr>
- 26...
- 27  </tbody>
- 28  </table>
+ 2    <thead>
+ 3      <tr>
+ 4        <th>Number</th>
+ 5        <th>Player</th>
+ 6        <th>Position</th>
+ 7        <th>Height</th>
+ 8        <th>Weight</th>
+ 9      </tr>
+ 10   </thead>
+ 11   <tbody>
+ 12     <tr>
+ 13       <td>8</td>
+ 14       <td>Marco Belinelli</td>
+ 15       <td>G</td>
+ 16       <td>6-5</td>
+ 17       <td>195</td>
+ 18     </tr>
+ 19     <tr>
+ 20       <td>5</td>
+ 21       <td>Carlos Boozer</td>
+ 22       <td>F</td>
+ 23       <td>6-9</td>
+ 24       <td>266</td>
+ 25     </tr>
+ 26     ...
+ 27   </tbody>
+ 28 </table>
  29  
 ```
 
@@ -2707,45 +2706,44 @@ pseudo-classes.
 <h4>CSS</h4>
 
 ```
- 1  table {
- 2  border-collapse: separate;  
- 3  border-spacing: 0; 
- 4  width: 100%; 
- 5  }
- 6  th,
- 7  td {
- 8  padding: 6px 15px; 
- 9  }
+ 1   table {
+ 2     border-collapse: separate;  
+ 3     border-spacing: 0; 
+ 4     width: 100%; 
+ 5   }
+ 6   th,
+ 7   td {
+ 8     padding: 6px 15px; 
+ 9   }
  10  th {
- 11background: #42444e;  
- 12  color: #fff; 
- 13  text-align: left;  
- 14}
+ 11    background: #42444e;  
+ 12    color: #fff; 
+ 13    text-align: left;  
+ 14  }
  15  tr:first-child th:first-child {
- 16  border-top-left-radius: 6px;
- 17}
+ 16    border-top-left-radius: 6px;
+ 17  }
  18  tr:first-child th:last-child { 
- 19  border-top-right-radius: 6px;  
- 20}
+ 19    border-top-right-radius: 6px;  
+ 20  }
  21  td {
- 22  border-right: 1px solid #c6c9cc;  
- 23border-bottom: 1px solid #c6c9cc; 
+ 22    border-right: 1px solid #c6c9cc;  
+ 23    border-bottom: 1px solid #c6c9cc; 
  24  }
  25  td:first-child {
- 26border-left: 1px solid #c6c9cc;
+ 26    border-left: 1px solid #c6c9cc;
  27  }
- 28  tr:nth-child(even) td {  
- 29background: #eaeaed;  
+ 28  tr:nth-child(even) td { 
+ 29    background: #eaeaed;  
  30  }
  31  tr:last-child td:first-child { 
- 32border-bottom-left-radius: 6px;
+ 32    border-bottom-left-radius: 6px;
  33  }
  34  tr:last-child td:last-child {
- 35border-bottom-right-radius: 6px;
+ 35    border-bottom-right-radius: 6px;
  36  }
  37  
 ```
-
 
 <h4>Demo</h4>
 
@@ -2908,8 +2906,7 @@ necessary should a browser not support these pseudo-elements.
 
 ```
  1  <a href="http://google.com/">Search the Web</a> 
- 2  <a href="http://learn.shayhowe.com/">Learn How to Build 
- Websites</a>  
+ 2  <a href="http://learn.shayhowe.com/">Learn How to Build Websites</a>  
  3 
 ```
 
@@ -2973,22 +2970,22 @@ added to ensure the best support for all browsers.
  8  position: relative;
  9  text-decoration: none;
  10  } 
- 11.arrow:before,  
+ 11  .arrow:before,  
  12  .arrow:after {  
  13  content: "";  
- 14height: 0;
+ 14  height: 0;
  15  position: absolute;
  16  width: 0; 
  17} 
  18  .arrow:before { 
  19  border-bottom: 15px solid #2db34a;
- 20border-left: 15px solid transparent; 
+ 20  border-left: 15px solid transparent; 
  21  border-top: 15px solid #2db34a;
  22  left: -15px; 
  23} 
  24  .arrow:after {  
  25  border-bottom: 15px solid transparent; 
- 26border-left: 15px solid #2db34a;  
+ 26  border-left: 15px solid #2db34a;  
  27  border-top: 15px solid transparent;  
  28  right: -15px;
  29} 
@@ -2997,7 +2994,7 @@ added to ensure the best support for all browsers.
  32} 
  33  .arrow:hover:before { 
  34  border-bottom: 15px solid #ff7b29;
- 35border-top: 15px solid #ff7b29;
+ 35  border-top: 15px solid #ff7b29;
  36  } 
  37  .arrow:hover:after {  
  38  
@@ -3040,17 +3037,14 @@ selectors you are wishing to use across your visitor's most common
 browsers, and then make the judgment call as to whether they are
 appropriate or not.
 
-CSS3.info provides a [CSS3 Selectors
-Test](https://www.css3.info/selectors-test/) tool which
-will inform you as to which selectors are supported by the browser in
-use. It's also never a bad idea to check browser support directly from
-the vendor.
+CSS3.info provides a [CSS3 Selectors Test](https://www.css3.info/selectors-test/) 
+tool which will inform you as to which selectors are supported by the browser in
+use. It's also never a bad idea to check browser support directly from the vendor.
 
-Additionally, [[Selectivizr]{.underline}](http://selectivizr.com/), a
+Additionally, [Selectivizr](http://selectivizr.com/), a
 JavaScript utility, provides great support for these selectors in
 Internet Explorer 6-8. More support, should it be necessary, can also be
-provided by [[jQuery
-selectors]{.underline}](http://api.jquery.com/category/selectors/).
+provided by [jQuery selectors](http://api.jquery.com/category/selectors/).
 
 <h4>Selector Speed & Performance</h4>
 
@@ -3061,13 +3055,11 @@ think about revisiting it, and seeing if a better solution can be found.
 
 <h4>Resources & Links</h4>
 
--[The 30 CSS Selectors you Must
- Memorize](http://net.tutsplus.com/tutorials/html-css-techniques/the-30-css-selectors-you-must-memorize/) via
+-[The 30 CSS Selectors you Must Memorize](http://net.tutsplus.com/tutorials/html-css-techniques/the-30-css-selectors-you-must-memorize/) via
  Nettuts+
 
--[Child and Sibling
- Selectors](https://css-tricks.com/child-and-sibling-selectors/) via
- CSS-Tricks
+-[Child and Sibling Selectors](https://css-tricks.com/child-and-sibling-selectors/) 
+via CSS-Tricks
 
 -[CSS3 Substring Matching Attribute
  Selectors](http://www.css3.info/preview/attribute-selectors/) via
@@ -3125,8 +3117,8 @@ that of general Internet usage growth.
 
 These days it is hard to find someone who doesn't own a mobile device,
 or multiple, connected to the Internet. In the UK there are more mobile
-phones than people, and should [[trends
-continue]{.underline}](http://www.digitalbuzzblog.com/2011-mobile-statistics-stats-facts-marketing-infographic/) mobile
+phones than people, and should [trends
+continue](http://www.digitalbuzzblog.com/2011-mobile-statistics-stats-facts-marketing-infographic/) mobile
 Internet usage will surpass that of desktop Internet usage within the
 year.
 
@@ -3199,7 +3191,7 @@ or padding.
 
 <h4>Relative Viewport Lengths</h4>
 
-CSS3 [[introduced]{.underline}](http://dev.w3.org/csswg/css3-values/#viewport-relative-lengths) some
+CSS3 [introduced](http://dev.w3.org/csswg/css3-values/#viewport-relative-lengths) some
 new relative length units, specifically related to the viewport size of
 the browser or device. These new units include vw, vh, vmin, and vmax.
 Overall support for these new units isn't great, but it is growing. In
@@ -3662,7 +3654,7 @@ larger viewports and done so without overwriting any initial styles.
 Mobile devices generally do a pretty decent job of displaying websites
 these days. Sometimes they could use a little assistance though,
 particularly around identifying
-the [[viewport]{.underline}](http://dev.opera.com/articles/view/an-introduction-to-meta-viewport-and-viewport/) size,
+the [viewport](http://dev.opera.com/articles/view/an-introduction-to-meta-viewport-and-viewport/) size,
 scale, and resolution of a website. To remedy this, Apple invented
 the viewport meta tag.
 
@@ -3831,8 +3823,8 @@ any media will scale down according to its containers width.
 Unfortunately the max-width property doesn't work well for all instances
 of media, specifically around iframes and embedded media. When it comes
 to third party websites, such as YouTube, who use iframes for embedded
-media this is a huge disappointment. Fortunately, there is a [[work
-around]{.underline}](http://www.alistapart.com/articles/creating-intrinsic-ratios-for-video/).
+media this is a huge disappointment. Fortunately, there is a [work
+around](http://www.alistapart.com/articles/creating-intrinsic-ratios-for-video/).
 
 To get embedded media to be fully responsive, the embedded element needs
 to be absolutely positioned within a parent element. The parent element
@@ -4002,7 +3994,7 @@ Inside of a Rails application a Haml dependency may be added in the
 Gemfile, thus automatically compiling Haml files to HTML upon any
 changes. There are a few desktop applications available for those not
 using Rails, one of the more popular
-being [[CodeKit]{.underline}](https://codekitapp.com/).
+being [CodeKit](https://codekitapp.com/).
 
 On top of Haml CodeKit also supports other preprocessors, which may also
 come in handy.
@@ -4021,27 +4013,23 @@ passed in after the exclamation points, !!! 5.
 
 **Haml**
 
-+---+----------------------------------------------------------------------+
+```
  1  !!! 5
-
  2 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 **Compiled HTML**
 
-+---+----------------------------------------------------------------------+
+```
  1  <!DOCTYPE html>  
-
  2 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 <h4>Declaring Elements</h4>
 
-One of the defining features of Haml is its syntax, and how to [[declare
+One of the defining features of Haml is its syntax, and how to [declare
 and
-nest]{.underline}](https://coderwall.com/p/aivizg/introduction-to-haml--2) elements.
+nest](https://coderwall.com/p/aivizg/introduction-to-haml--2) elements.
 HTML elements generally have opening and closing tags, however within
 Haml elements only have one tag, the opening. Elements are initialized
 with a percent sign, %, and then indented to identify nesting.
@@ -4057,43 +4045,28 @@ struggle.
 
 **Haml**
 
-+---+----------------------------------------------------------------------+
+```
  1  %body
-
  2  %header 
-
  3  %h1 Hello World 
-
  4  %section
-
  5  %p Lorem ipsum dolor sit amet. 
-
  6 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 **Compiled HTML**
 
-+---+----------------------------------------------------------------------+
+```
  1  <body>
-
  2  <header> 
-
  3  <h1>Hello World</h1> 
-
  4  </header>
-
  5  <section>
-
  6  <p>Lorem ipsum dolor sit amet.</p>  
-
  7  </section> 
-
  8  </body>  
-
  9 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 <h4>Handling Text</h4>
 
@@ -4230,31 +4203,22 @@ execution.
 
 **Haml**
 
-+---+----------------------------------------------------------------------+
+```
  1  .author 
-
  2  = &#0064;author 
-
  3  \\= &#0064;author 
-
  4 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 **Compiled HTML**
 
-+---+----------------------------------------------------------------------+
+```
  1  <div class="author"> 
-
  2  Shay Howe  
-
  3  = &#0064;author 
-
  4  </div>
-
  5 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 <h4>Text Escaping Alternatives</h4>
 
@@ -4273,27 +4237,20 @@ outside of the anchor text.
 
 **Haml**
 
-+---+----------------------------------------------------------------------+
+```
  1  %p
-
  2  Shay is 
-
  3  = succeed "." do 
-
  4  %a{:href => "#"} awesome 
-
  5 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 **Compiled HTML**
 
-+---+----------------------------------------------------------------------+
+```
  1  <p>Shay is <a href="#">awesome</a>.</p>  
-
  2 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 <h4>Comments</h4>
 
@@ -4305,84 +4262,54 @@ code can be commented out by being nested underneath a forward slash.
 
 **Haml**
 
-+---+----------------------------------------------------------------------+
+```
  1  %div 
-
  2  / Commented line
-
  3  Actual line
-
  4  / 
-
  5  %div 
-
  6  Commented block 
-
  7 
-
- 8 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 **Compiled HTML**
 
-+---+----------------------------------------------------------------------+
+```
  1  <div> 
-
  2  <!&#45;&#45; Commented line &#45;&#45;> 
-
  3  Actual line
-
  4  </div>
-
  5  <!&#45;&#45;  
-
  6  <div> 
-
  7  Commented block 
-
  8  </div>
-
  9  &#45;&#45;>
-
- 1 
- 0 
-
- 1 
- 1 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+ 10 
+```
 
 <h4>Conditional Comments</h4>
 
 Conditional comments are also handled differently in Haml. To create a
-conditional comment use square brackets, ][, around the condition.
+conditional comment use square brackets, [], around the condition.
 These square brackets need to be placed directly after the forward
 slash.
 
 **Haml**
 
-+---+----------------------------------------------------------------------+
+```
  1  /]if lt IE 9[ 
-
  2  %script{:src => "html5shiv.js"}
-
  3 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 **Compiled HTML**
 
-+---+----------------------------------------------------------------------+
+```
  1  <!&#45;&#45;]if lt IE 9[>
-
  2  <script src="html5shiv.js"></script>
-
  3  <&#0033;[endif[&#45;&#45;>  
-
  4 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 <h4>Silent Comments</h4>
 
@@ -4396,29 +4323,21 @@ multiple lines with the use of nesting.
 
 **Haml**
 
-+---+----------------------------------------------------------------------+
+```
  1  %div 
-
  2  -# Removed line 
-
  3  Actual line
-
  4 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 **Compiled HTML**
 
-+---+----------------------------------------------------------------------+
+```
  1  <div> 
-
  2  Actual line
-
  3  </div>
-
  4 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 <h4>Filters</h4>
 
@@ -4466,85 +4385,53 @@ the group being :css and :javascript.
 
 **Haml**
 
-+---+----------------------------------------------------------------------+
+```
  1  :javascript
-
  2  $('button').on('click', function(event) {  
-
  3  $('p').hide('slow');
-
  4  });  
-
  5 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 **Compiled HTML**
 
-+---+----------------------------------------------------------------------+
+```
  1  <script> 
-
  2  $('button').on('click', function(event) {  
-
  3  $('p').hide('slow');
-
  4  });  
-
  5  </script>
-
  6 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 <h4>CSS &amp; Sass Filters</h4>
 
 **Haml**
 
-+---+----------------------------------------------------------------------+
+```
  1  :css 
-
  2  .container { 
-
  3  margin: 0 auto; 
-
  4  width: 960px;
-
  5  } 
-
  6  :sass
-
  7  .container 
-
  8  margin: 0 auto  
-
  9  width: 960px 
-
- 1 
- 0 
-
- 1 
- 1 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+ 10  
+```
 
 **Compiled HTML**
 
-+---+----------------------------------------------------------------------+
+```
  1  <style>  
-
  2  .container { 
-
  3  margin: 0 auto; 
-
  4  width: 960px;
-
  5  } 
-
  6  </style> 
-
  7 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 <h4>Ruby Interpolation</h4>
 
@@ -4557,21 +4444,17 @@ Below is an example of Ruby being interpolated as part of a class name.
 
 **Haml**
 
-+---+----------------------------------------------------------------------+
+```
  1  %div{:class => "student-#{@student.name}"}
-
  2 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 **Compiled HTML**
 
-+---+----------------------------------------------------------------------+
+```
  1  <div class="student-shay"> 
-
  2 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 <h4>SCSS &amp; Sass</h4>
 
@@ -4580,8 +4463,8 @@ resembling Haml a bit in that they make writing code easier, and provide
 quite a bit of leverage in doing so. Individually SCSS and Sass come
 from the same origin however they are technical different syntaxes.
 
-Sass, [[Syntactically Awesome
-Stylesheets]{.underline}](https://sass-lang.com/documentation/), came
+Sass, [Syntactically Awesome
+Stylesheets](https://sass-lang.com/documentation/), came
 first and is a strict indented syntax. SCSS, Sassy CSS, followed shortly
 after providing the same firing power of Sass but with a more flexible
 syntax, including the ability to write plain CSS.
@@ -4589,30 +4472,25 @@ syntax, including the ability to write plain CSS.
 <h4>Installation</h4>
 
 As with Haml, SCSS and Sass
-are [[compiled]{.underline}](http://sassmeister.com/) using Ruby
+are [compiled](http://sassmeister.com/) using Ruby
 therefore Ruby needs to be installed to produce CSS files. Please follow
 the directions from before to install, or ensure Ruby is installed.
 
 Once Ruby is installed the gem install sass command needs to be run from
 the command line to install SCSS and Sass.
 
-+---+----------------------------------------------------------------------+
+```
  1  gem install sass
-
  2 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 Files written in SCSS or Sass need to have the .scss or .sass file
 extensions respectively. To convert either of these file types
 to .css the following sass command needs to be run.
 
-+---+----------------------------------------------------------------------+
+```
  1  sass styles.sass styles.css 
-
- 2 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 The command above takes the styles.sass Sass file and compiles it to
 the styles.css file. As with Haml, these file names are paths and need
@@ -4625,24 +4503,20 @@ Should changes to a file be ongoing Sass can watch the file and
 recompile the CSS every time a change takes place. To watch a Sass file
 the following sass command may be run.
 
-+---+----------------------------------------------------------------------+
+```
  1  sass &#45;&#45;watch styles.sass:styles.css 
-
  2 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 Additionally, instead of compiling or watching individual files, Sass is
 capable of compiling and watching entire directories of files. For
 example, to watch an entire directory of Sass files and convert them to
 CSS the sass command below may be run.
 
-+---+----------------------------------------------------------------------+
+```
  1  sass &#45;&#45;watch assets/sass:public/css 
-
  2 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 <h4>Converting Files from SCSS to Sass &amp; Vice Versa</h4>
 
@@ -4651,20 +4525,13 @@ convert files from SCSS to Sass and vice versa. To do so
 the sass commands below may be used to convert a SCSS file to Sass, and
 then a Sass file to SCSS respectively.
 
-+---+--------------------------------------------------------------------+
+```
  1  &#0035; Convert Sass to SCSS
- 
  2  sass-convert styles.sass styles.scss  
- 
  3  &#0035; Convert SCSS to Sass
- 
  4  sass-convert styles.scss styles.sass  
- 
  5  
- 
- 6  
-+===+====================================================================+
-+---+--------------------------------------------------------------------+
+```
 
 <h4>Syntax</h4>
 
@@ -4678,62 +4545,40 @@ indentation and clear line breaks for formatting.
 
 **SCSS**
 
-+---+----------------------------------------------------------------------+
+```
  1  .new {  
-
  2  color: #ff7b29; 
-
  3  font-weight: bold; 
-
  4  span {  
-
  5  text-transform: uppercase;  
-
  6  } 
-
  7  } 
-
  8 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 **Sass**
 
-+---+----------------------------------------------------------------------+
+```
  1  .new 
-
  2  color: #ff7b29  
-
  3  font-weight: bold  
-
  4  span 
-
  5  text-transform: uppercase
-
  6 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 **Compiled CSS**
 
-+---+----------------------------------------------------------------------+
+```
  1  .new {  
-
  2  color: #ff7b29; 
-
  3  font-weight: bold; 
-
  4  } 
-
  5  .new span {
-
  6  text-transform: uppercase;  
-
  7  } 
-
  8 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 <h4>Using SCSS vs. Sass</h4>
 
@@ -4762,48 +4607,30 @@ selectors without raising specificity is important.
 
 **Sass**
 
-+---+----------------------------------------------------------------------+
+```
  1  .portfolio 
-
  2  border: 1px solid #9799a7
-
  3  ul
-
  4  list-style: none
-
  5  li
-
  6  float: left
-
  7 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 **Compiled CSS**
 
-+---+----------------------------------------------------------------------+
+```
  1  .portfolio { 
-
  2  border: 1px solid #9799a7;  
-
  3  } 
-
  4  .portfolio ul { 
-
  5  list-style: none;  
-
  6  } 
-
  7  .portfolio li { 
-
  8  float: left; 
-
  9  } 
-
- 1 
- 0 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+ 10 
+```
 
 <h4>Nesting Properties</h4>
 
@@ -4816,37 +4643,25 @@ your decision is up to personal preference.
 
 **Sass**
 
-+---+----------------------------------------------------------------------+
+```
  1  div  
-
  2  font:
-
  3  family: Baskerville, Palatino, serif 
-
  4  style: italic
-
  5  weight: normal  
-
  6 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 **Compiled CSS**
 
-+---+----------------------------------------------------------------------+
+```
  1  div {
-
  2  font-family: Baskerville, Palatino, serif;
-
  3  font-style: italic;
-
  4  font-weight: normal;  
-
  5  } 
-
  6 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 <h4>Nested Media Queries</h4>
 
@@ -4855,41 +4670,27 @@ changing property values based off a media condition.
 
 **Sass**
 
-+---+----------------------------------------------------------------------+
+```
  1  .container 
-
  2  width: 960px 
-
  3  &#0064;media screen and (max-width: 960px)
-
  4  width: 100%
-
  5 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 **Compiled CSS**
 
-+---+----------------------------------------------------------------------+
+```
  1  .container { 
-
  2  width: 960px;
-
  3  } 
-
  4  &#0064;media screen and (max-width: 960px) { 
-
  5  .container { 
-
  6  width: 100%; 
-
  7  } 
-
  8  } 
-
  9 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 <h4>Parent Selector</h4>
 
@@ -4902,37 +4703,25 @@ as &.featured.
 
 **Sass**
 
-+---+----------------------------------------------------------------------+
+```
  1  a 
-
  2  color: #0087cc  
-
  3  &:hover 
-
  4  color: #ff7b29  
-
  5 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 **Compiled CSS**
 
-+---+----------------------------------------------------------------------+
+```
  1  a {  
-
  2  color: #0087cc; 
-
  3  } 
-
  4  a:hover {  
-
  5  color: #ff7b29; 
-
  6  } 
-
  7 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 <h4>Parent Key Selector</h4>
 
@@ -4943,37 +4732,25 @@ of the most beneficial is inside of feature detection.
 
 **Sass**
 
-+---+----------------------------------------------------------------------+
+```
  1  .btn 
-
  2  background: linear-gradient(#fff, #9799a7)
-
  3  .no-cssgradients & 
-
  4  background: url("gradient.png") 0 0 repeat-x  
-
  5 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 **Compiled CSS**
 
-+---+----------------------------------------------------------------------+
+```
  1  .btn {  
-
  2  background: linear-gradient(#fff, #9799a7);  
-
  3  } 
-
  4  .no-cssgradients .btn {  
-
  5  background: url("gradient.png") 0 0 repeat-x; 
-
  6  } 
-
  7 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 <h4>Comments</h4>
 
@@ -4989,45 +4766,28 @@ is not rendered in the compiled CSS.
 
 **Sass**
 
-+---+----------------------------------------------------------------------+
+```
  1  /* Normal comment */
-
  2  div  
-
  3  background: #333
-
  4  // Omitted comment 
-
  5  strong  
-
  6  display: block  
-
  7 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 **Compiled CSS**
 
-+---+----------------------------------------------------------------------+
+```
  1  /* Normal comment */
-
  2  div {
-
  3  background: #333;  
-
  4  } 
-
  5  strong {
-
  6  display: block; 
-
  7  } 
-
  8 
-
- 9 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 <h4>Variables</h4>
 
@@ -5043,33 +4803,22 @@ separated by spaces or commas.
 
 <h4>Sass</h4>
 
-+---+----------------------------------------------------------------------+
+```
  1  $font-base: 1em
-
  2  $serif: "Helvetica Neue", Arial, "Lucida Grande", sans-serif 
-
  3  p 
-
  4  font: $font-base $serif
-
  5 
-
- 6 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 **Compiled CSS**
 
-+---+----------------------------------------------------------------------+
+```
  1  p {  
-
  2  font: 1em "Helvetica Neue", Arial, "Lucida Grande", sans-serif;  
-
  3  } 
-
  4 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 <h4>Variable Interpolation</h4>
 
@@ -5081,33 +4830,22 @@ string of plain text.
 
 <h4>Sass</h4>
 
-+---+----------------------------------------------------------------------+
+```
  1  $location: chicago
-
  2  $offset: left  
-
  3  .#{$location}  
-
  4  #{$offset}: 20px  
-
  5 
-
- 6 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 **Compiled CSS**
 
-+---+----------------------------------------------------------------------+
+```
  1  .chicago { 
-
  2  left: 20px;
-
  3  } 
-
  4 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 <h4>Calculations</h4>
 
@@ -5130,33 +4868,23 @@ have a unit.
 
 <h4>Sass</h4>
 
-+---+----------------------------------------------------------------------+
+```
  1  width: 40px + 6 
-
  2  width: 40px - 6 
-
  3  width: 40px * 6
-
  4  width: 40px % 6 
-
  5 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 **Compiled CSS**
 
-+---+----------------------------------------------------------------------+
+```
  1  width: 46px; 
-
  2  width: 34px; 
-
  3  width: 240px;
-
  4  width: 4px;
-
  5 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 <h4>Division</h4>
 
@@ -5172,39 +4900,26 @@ value will be unitless.
 
 **Sass**
 
-+---+----------------------------------------------------------------------+
+```
  1  width: 100px / 10  
-
  2  width: (100px / 10)
-
  3  width: (100px / 10px) 
-
  4  $width: 100px  
-
  5  width: $width / 10
-
  6  width: 5px - 100px / 10  
-
  7 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 **Compiled CSS**
 
-+---+----------------------------------------------------------------------+
+```
  1  width: 100px/10;
-
  2  width: 10px; 
-
  3  width: 10; 
-
  4  width: 10px; 
-
  5  width: -5px; 
-
  6 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 <h4>Detailed Math</h4>
 
@@ -5214,36 +4929,26 @@ on the use of parentheses.
 
 **Sass**
 
-+---+----------------------------------------------------------------------+
+```
  1  $grid: 16 
-
  2  $column: 40px  
-
  3  $gutter: 20px  
-
  4  $container: ($column * $grid) + ($gutter * $grid) 
-
  5  width: $container 
-
  6 
-
- 7 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 **Compiled CSS**
 
-+---+----------------------------------------------------------------------+
+```
  1  width: 960px;
-
  2 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 <h4>Number Functions</h4>
 
-By default Sass includes a handful of [[built in
-functions]{.underline}](https://sass-lang.com/documentation/modules/math),
+By default Sass includes a handful of [built in
+functions](https://sass-lang.com/documentation/modules/math),
 many of which are used to manipulate number values as wished.
 
 The percentage() function turns a value into a percentage.
@@ -5265,37 +4970,25 @@ the absolute value of a given number.
 
 **Sass**
 
-+---+----------------------------------------------------------------------+
+```
  1  width: percentage(2.5)
-
  2  width: round(2.5px)
-
  3  width: ceil(2.5px) 
-
  4  width: floor(2.5px)
-
  5  width: abs(-2.5px) 
-
  6 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 **Compiled CSS**
 
-+---+----------------------------------------------------------------------+
+```
  1  width: 250%; 
-
  2  width: 3px;
-
  3  width: 3px;
-
  4  width: 2px;
-
  5  width: 2.5px;
-
  6 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 <h4>Color</h4>
 
@@ -5307,27 +5000,19 @@ value.
 
 **Sass**
 
-+---+----------------------------------------------------------------------+
+```
  1  color: rgba(#8ec63f, .25)
-
  2  $green: #8ec63f
-
  3  color: rgba($green, .25)
-
  4 
-
- 5 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 **Compiled CSS**
 
-+---+----------------------------------------------------------------------+
+```
  1  color: rgba(142, 198, 63, .25);
-
  2 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 <h4>Color Operations</h4>
 
@@ -5338,29 +5023,21 @@ intended.
 
 **Sass**
 
-+---+----------------------------------------------------------------------+
+```
  1  color: #8ec63f + #666 
-
  2  color: #8ec63f * 2
-
  3  color: rgba(142, 198, 63, .75) / rgba(255, 255, 255, .75)
-
  4 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 **Compiled CSS**
 
-+---+----------------------------------------------------------------------+
+```
  1  color: #f4ffa5; 
-
  2  color: #ffff7e; 
-
  3  color: rgba(0, 0, 0, .75);  
-
  4 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 <h4>Color Alterations</h4>
 
@@ -5380,37 +5057,25 @@ of a color.
 
 **Sass**
 
-+---+----------------------------------------------------------------------+
+```
  1  color: invert(#8ec63f)
-
  2  color: complement(#8ec63f)  
-
  3  color: mix(#8ec63f, #fff)
-
  4  color: mix(#8ec63f, #fff, 10%) 
-
  5  color: grayscale(#8ec63f)
-
  6 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 **Compiled CSS**
 
-+---+----------------------------------------------------------------------+
+```
  1  color: #7139c0; 
-
  2  color: #773fc6; 
-
  3  color: #c6e29f; 
-
  4  color: #f3f9eb; 
-
  5  color: #838383; 
-
  6 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 <h4>HSLa Color Alterations</h4>
 
@@ -5434,49 +5099,31 @@ include lighten(), darken(), saturate(), and desaturate().
 
 **Sass**
 
-+---+----------------------------------------------------------------------+
+```
  1  color: lighten(#8ec63f, 50%)
-
  2  color: darken(#8ec63f, 30%) 
-
  3  color: saturate(#8ec63f, 75%)  
-
  4  color: desaturate(#8ec63f, 25%)
-
  5  color: adjust-hue(#8ec63f, 30) 
-
  6  color: adjust-hue(#8ec63f, -30)
-
  7  color: fade-in(rgba(142, 198, 63, 0), .4) 
-
  8  color: fade-out(#8ec63f, .4)
-
  9 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 **Compiled CSS**
 
-+---+----------------------------------------------------------------------+
+```
  1  color: white;
-
  2  color: #3b5319; 
-
  3  color: #98ff06; 
-
  4  color: #89a75e; 
-
  5  color: #4ac63f; 
-
  6  color: #c6bb3f; 
-
  7  color: rgba(142, 198, 63, 0.4);
-
  8  color: rgba(142, 198, 63, 0.6);
-
  9 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 <h4>Color Manipulation</h4>
 
@@ -5486,6 +5133,7 @@ specific color properties. With this control also comes complexity,
 which is why color manipulations are a bit less common than color
 alterations.
 
+```
 -change-color() --- Set any property of a color\
  $color, ]$red[, ]$green[, ]$blue[, ]$hue[,
  ]$saturation[, ]$lightness[, ]$alpha[
@@ -5498,32 +5146,25 @@ alterations.
  a color\
  $color, ]$red[, ]$green[, ]$blue[, ]$saturation[,
  ]$lightness[, ]$alpha[
+```
 
 **Sass**
 
-+---+----------------------------------------------------------------------+
+```
  1  color: change-color(#8ec63f, $red: 60, $green: 255) 
-
  2  color: adjust-color(#8ec63f, $hue: 300, $lightness: 50%)  
-
  3  color: scale-color(#8ec63f, $lightness: 25%, $alpha: 30%) 
-
  4 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 **Compiled CSS**
 
-+---+----------------------------------------------------------------------+
+```
  1  color: #3cff3f; 
-
  2  color: white;
-
  3  color: #aad46f; 
-
  4 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 <h4>Extends</h4>
 
@@ -5543,52 +5184,31 @@ code weight. Additionally, extends parley nicely with OOCSS and SMACSS.
 
 **Sass**
 
-+---+----------------------------------------------------------------------+
+```
  1  .alert  
-
  2  border-radius: 10px
-
  3  padding: 10px 20px 
-
  4  .alert-error 
-
  5  &#0064;extend .alert 
-
  6  background: #f2dede
-
  7  color: #b94a48  
-
  8 
-
- 9 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 **Compiled CSS**
 
-+---+----------------------------------------------------------------------+
+```
  1  .alert, 
-
  2  .alert-error {  
-
  3  border-radius: 10px;  
-
  4  padding: 10px 20px;
-
  5  } 
-
  6  .alert-error {  
-
  7  background: #f2dede;  
-
  8  color: #b94a48; 
-
  9  } 
-
- 1 
- 0 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+ 10 
+```
 
 <h4>Placeholder Selector Extend</h4>
 
@@ -5601,49 +5221,30 @@ the .alert selector never makes its way into the CSS.
 
 **Sass**
 
-+---+----------------------------------------------------------------------+
+```
  1  %alert  
-
  2  border-radius: 10px
-
  3  padding: 10px 20px 
-
  4  .alert-error 
-
  5  &#0064;extend %alert 
-
  6  background: #f2dede
-
  7  color: #b94a48  
-
  8 
-
- 9 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 **Compiled CSS**
 
-+---+----------------------------------------------------------------------+
+```
  1  .alert-error {  
-
  2  border-radius: 10px;  
-
  3  padding: 10px 20px;
-
  4  } 
-
  5  .alert-error {  
-
  6  background: #f2dede;  
-
  7  color: #b94a48; 
-
  8  } 
-
  9 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 <h4>Element Selector Extend</h4>
 
@@ -5651,43 +5252,27 @@ As with classes, extends also work with standard element selectors too.
 
 **Sass**
 
-+---+----------------------------------------------------------------------+
+```
  1  h2
-
  2  color: #9c6
-
  3  span 
-
  4  text-decoration: underline  
-
  5  .sub-heading 
-
  6  &#0064;extend h2
-
  7 
-
- 8 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 **Compiled CSS**
 
-+---+----------------------------------------------------------------------+
+```
  1  h2, .sub-heading { 
-
  2  color: #9c6; 
-
  3  } 
-
  4  h2 span, .sub-heading span {
-
  5  text-decoration: underline; 
-
  6  } 
-
  7 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 <h4>Mixins</h4>
 
@@ -5705,43 +5290,27 @@ using a plus sign to call a mixin SCSS use an @include rule.
 
 **Sass**
 
-+---+----------------------------------------------------------------------+
+```
  1  &#0064;mixin btn($color, $color-hover)  
-
  2  color: $color  
-
  3  &:hover 
-
  4  color: $color-hover  
-
  5  .btn 
-
  6  +btn($color: #fff, $color-hover: #9799a7)  
-
  7 
-
- 8 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 **Compiled CSS**
 
-+---+----------------------------------------------------------------------+
+```
  1  .btn {  
-
  2  color: #fff; 
-
  3  } 
-
  4  .btn:hover { 
-
  5  color: #9799a7; 
-
  6  } 
-
  7 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 <h4>Default Arguments</h4>
 
@@ -5750,43 +5319,27 @@ values, which may be over written if wished.
 
 **Sass**
 
-+---+----------------------------------------------------------------------+
+```
  1  &#0064;mixin btn($color: #fff, $color-hover: #9799a7) 
-
  2  color: $color  
-
  3  &:hover 
-
  4  color: $color-hover  
-
  5  .btn 
-
  6  +btn($color-hover: #9799a7)
-
  7 
-
- 8 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 **Compiled CSS**
 
-+---+----------------------------------------------------------------------+
+```
  1  .btn {  
-
  2  color: #fff; 
-
  3  } 
-
  4  .btn:hover { 
-
  5  color: #9799a7; 
-
  6  } 
-
  7 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 <h4>Variable Arguments</h4>
 
@@ -5794,41 +5347,26 @@ When one or more values need to be passed to an argument the variable
 name may end with ... inside of the mixin. In the example below with
 box shadows we can pass in comma separated values to the mixin.
 
-+---+----------------------------------------------------------------------+
+```
  1  &#0064;mixin box-shadow($shadow...)  
-
  2  -webkit-box-shadow: $shadow
-
  3  -moz-box-shadow: $shadow
-
  4  box-shadow: $shadow  
-
  5  .shadows
-
  6  +box-shadow(0 1px 2px #cecfd5, inset 0 0 5px #cecfd5) 
-
  7 
-
- 8 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 **Compiled CSS**
 
-+---+----------------------------------------------------------------------+
+```
  1  .shadows { 
-
  2  -moz-box-shadow: 0 1px 2px #cecfd5, inset 0 0 5px #cecfd5;  
-
  3  -webkit-box-shadow: 0 1px 2px #cecfd5, inset 0 0 5px #cecfd5;  
-
  4  box-shadow: 0 1px 2px #cecfd5, inset 0 0 5px #cecfd5; 
-
  5  } 
-
  6 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 <h4>Imports</h4>
 
@@ -5851,23 +5389,18 @@ HTML document.
 
 **Sass**
 
-+---+----------------------------------------------------------------------+
+```
  1  &#0064;import "normalize"
-
  2  &#0064;import "grid", "typography" 
-
  3 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 **Compiled HTML**
 
-+---+----------------------------------------------------------------------+
+```
  1  <link href="styles.css" rel="stylesheet"> 
-
  2 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 <h4>Loops & Conditionals</h4>
 
@@ -6298,7 +5831,7 @@ Additionally, JavaScript is case sensitive so letters
 include a through z in both lower and uppercase.
 
 The common convention around naming variables is to
-use [[camelCase]{.underline}](https://en.wikipedia.org/wiki/CamelCase),
+use [camelCase](https://en.wikipedia.org/wiki/CamelCase),
 without the use of any dashes or underscores. camelCase consist of
 combining words while removing spaces, capitalizing the beginning of
 each new word except for the initial word. For
@@ -6447,21 +5980,18 @@ JavaScript being written.
 
 When referencing jQuery there are a few options, specifically as whether
 to use the minified or uncompressed version, and as whether to use a
-content delivery network, CDN, such as [[Google hosted
-libraries]{.underline}](https://developers.google.com/speed/libraries/devguide).
+content delivery network, CDN, such as [Google hosted
+libraries](https://developers.google.com/speed/libraries/devguide).
 If the code being written is for a live, production environment it is
 encouraged to use the minified version for better loading times.
 Additionally, using a CDN like Google also helps with loading time, and
 potential caching benefits.
 
-+---+----------------------------------------------------------------------+
- 1  <script
- src="//aja
+```
+ 1  <script src="//aja
  2  x.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script> 
-
  3  <script src="script.js"></script> 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 In the code sample above, notice the second script element referencing a
 second JavaScript file. All of the custom, handwritten JavaScript and
@@ -6486,14 +6016,11 @@ and then returning that element node to perform an action on it. These
 selections and actions should be written in a new file, referenced
 outside of the actual jQuery library.
 
-+---+----------------------------------------------------------------------+
+```
  1  $();
-
  2  jQuery();  
-
  3 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 <h4>Document Ready</h4>
 
@@ -6504,22 +6031,17 @@ ready to be altered. By placing all of our other custom written jQuery
 inside of this function we can guarantee that it will not be executed
 until the page has loaded and the DOM is ready.
 
-+---+----------------------------------------------------------------------+
+```
  1  $(document).ready(function(event){  
-
  2  // jQuery code  
-
  3  });  
-
  4 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 <h4>Selectors</h4>
 
 As previously mentioned, one of the core concepts of jQuery is
-to [[select
-elements]{.underline}](http://api.jquery.com/category/selectors/) and
+to [select elements](http://api.jquery.com/category/selectors/) and
 perform an action. jQuery has done a great job of making the task of
 selecting an element, or elements, extremely easy by mimicking that of
 CSS. On top of the general CSS selectors, jQuery has support for all of
@@ -6530,20 +6052,14 @@ Invoking the jQuery object, $(), containing a selector will return that
 DOM node to manipulate it. The selector falls within the
 parentheses, ('...'), and may select elements just like that of CSS.
 
-+---+----------------------------------------------------------------------+
+```
  1  $('.feature'); // Class selector  
-
  2  $('li strong'); // Descendant selector 
-
  3  $('em, i'); // Multiple selector  
-
  4  $('a]target="&#0095;blank"['); // Attribute selector
-
  5  $('p:nth-child(2)'); // Pseudo-class selector
-
  6 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 <h4>This Selection Keyword</h4>
 
@@ -6552,21 +6068,17 @@ element in which was referenced inside of the original selector. In this
 event the this keyword may be used to refer to the element selected in
 the current handler.
 
-+---+----------------------------------------------------------------------+
+```
  1  $('div').click(function(event){
-
  2  $(this);  
-
  3  });  
-
  4 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 <h4>jQuery Selection Filters</h4>
 
 Should CSS selectors not be enough there are also
-custom [[filters]{.underline}](http://api.jquery.com/category/selectors/jquery-selector-extensions/) built
+custom [filters](http://api.jquery.com/category/selectors/jquery-selector-extensions/) built
 into jQuery to help out. These filters are an extension to CSS3 and
 provide more control over selecting an element or its relatives.
 
@@ -6596,12 +6108,10 @@ the div elements in the DOM, which are then filtered using
 the .not() method. With this specific method all of the div elements
 without a class of type or collection will be selected.
 
-+---+----------------------------------------------------------------------+
+```
  1  $('div').not('.type, .collection');
-
  2 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 <h4>Chaining Methods</h4>
 
@@ -6613,17 +6123,15 @@ The code sample below uses both the .not() method and
 the .parent() method. Combined together this will only select the parent
 elements of div elements without a class of type or collection.
 
-+---+----------------------------------------------------------------------+
+```
  1  $('div').not('.type, .collection').parent();  
-
  2 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 <h4>Traversing Methods</h4>
 
 jQuery has quite a
-few [[traversing]{.underline}](http://api.jquery.com/category/traversing/) methods
+few [traversing](http://api.jquery.com/category/traversing/) methods
 available to use. In general, they all fall into three categories,
 filtering, miscellaneous traversing, and DOM tree traversing. The
 specific methods within each category may be seen below.
@@ -6693,7 +6201,7 @@ specific methods within each category may be seen below.
 Selecting and traversing elements in the DOM is only part of what jQuery
 offers, one other major part is what is possible with those elements
 once found. One possibility is
-to [[manipulate]{.underline}](http://api.jquery.com/category/manipulation/) these
+to [manipulate](http://api.jquery.com/category/manipulation/) these
 elements, by either reading, adding, or changing attributes or styles.
 Additionally, elements may be altered in the DOM, changing their
 placement, removing them, adding new elements, and so forth. Overall the
@@ -6900,8 +6408,8 @@ the text of any h1 elements with the text Hello World.
 
 <h4>Events</h4>
 
-One of the beauties of jQuery is the ability to easily add [[event
-handlers]{.underline}](http://api.jquery.com/category/events/), which
+One of the beauties of jQuery is the ability to easily add [event
+handlers](http://api.jquery.com/category/events/), which
 are methods that are called only upon a specific event or action taking
 place. For example, the method of adding a class to an element can be
 set to only occur upon that element being clicked on.
@@ -6932,9 +6440,8 @@ the this keyword, receives the class of saved-item.
 <h4>Event Flexibility</h4>
 
 The .click() event method, along with a handful of other event methods,
-is actually a [[shorthand
-method]{.underline}](http://jqfundamentals.com/chapter/events) which
-uses the .on() method introduced in jQuery 1.7. The .on() method
+is actually a [shorthand method](http://jqfundamentals.com/chapter/events) 
+which uses the .on() method introduced in jQuery 1.7. The .on() method
 provides quite a bit of flexibility, using automatic delegation for
 elements that get added to the page dynamically.
 
@@ -7118,9 +6625,8 @@ sliding content up and down. All of these are ready to use methods and
 may be customized as best see fit.
 
 Each effect method has it's own syntax so it is best to reference the
-jQuery [[effects
-documentation]{.underline}](http://api.jquery.com/category/effects/) for
-specific syntax around each method. Most commonly though, effects
+jQuery [effects documentation](http://api.jquery.com/category/effects/) 
+for specific syntax around each method. Most commonly though, effects
 generally accept a duration, easing, and the ability to specify a
 callback function.
 
@@ -7143,16 +6649,12 @@ keyword fast defaults to 200 milliseconds. Using a keyword value is
 fine, but millisecond values may also be passed in directly. Keyword
 values must be quoted while millisecond values do not.
 
-+---+----------------------------------------------------------------------+
+```
  1  $('.error').show();
-
  2  $('.error').show('slow'); 
-
  3  $('.error').show(500);
-
  4 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 <h4>Effect Easing</h4>
 
@@ -7165,21 +6667,17 @@ animation at a slow pace, picking up speed during the animation, and
 then slows down again before completion. The linear value runs the
 animation at one constant pace for the entire duration.
 
-+---+----------------------------------------------------------------------+
+```
  1  $('.error').show('slow', 'linear');
-
  2  $('.error').show(500, 'linear');
-
  3 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 <h4>jQuery UI</h4>
 
 The two easing values that come with jQuery may be extend with the use
 of different plug-ins, of which may offer additional values. One of the
-most popular plug-ins is the [[jQuery
-UI]{.underline}](http://jqueryui.com/) suite.
+most popular plug-ins is the [jQuery UI](http://jqueryui.com/) suite.
 
 On top of new easing values jQuery UI also provides a handful other
 interactions, effects, widgets, and other helpful resources worth taking
@@ -7192,22 +6690,17 @@ called a callback function. The callback function should be placed after
 the duration or easing, if either exist. Inside this function new events
 or effects may be placed, each following their own required syntax.
 
-+---+----------------------------------------------------------------------+
+```
  1  $('.error').show('slow', 'linear', function(event){  
-
  2  $('.error .status').text('Continue');
-
  3  });  
-
  4 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 <h4>Effect Syntax</h4>
 
 As previously mentioned, each effect method has it's own syntax which
-can be found in the jQuery [[effects
-documentation]{.underline}](http://api.jquery.com/category/effects/).
+can be found in the jQuery [effects documentation](http://api.jquery.com/category/effects/).
 The duration, easing, and callback parameters outlined here are common,
 but not available on every method. It is best to review the syntax of a
 method should you have any questions around it.
@@ -7449,7 +6942,7 @@ three-dimensional transforms. Generally speaking, browser support for
 the transform property isn't great, but it is getting better every day.
 For the best support vendor prefixes are encouraged, however you may
 need to download the nightly version
-of [[Chrome]{.underline}](https://tools.google.com/dlpage/chromesxs/) to
+of [Chrome](https://tools.google.com/dlpage/chromesxs/) to
 see all of these transforms in action.
 
 <h4>Transform Syntax</h4>
@@ -7458,22 +6951,15 @@ The actual syntax for the transform property is quite simple, including
 the transform property followed by the value. The value specifies the
 transform type followed by a specific amount inside parentheses.
 
-+---+----------------------------------------------------------------------+
+```
  1  div {
-
  2  -webkit-transform: scale(1.5); 
-
  3  -moz-transform: scale(1.5); 
-
  4  -o-transform: scale(1.5);
-
  5  transform: scale(1.5);
-
  6  } 
-
  7 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 Notice how the transform property includes multiple vendor prefixes to
 gain the best support across all browsers. The un-prefixed declaration
@@ -7494,8 +6980,8 @@ the x and y axes, known as horizontal and vertical axes.
 Three-dimensional transforms work on both the x and y axes, as well as
 the z axis. These three-dimensional transforms help define not only the
 length and width of an element, but also the depth. We'll start by
-discussing how to [[transform
-elements]{.underline}](http://www.css3files.com/transform/) on a
+discussing how to [transform
+elements](http://www.css3files.com/transform/) on a
 two-dimensional plane, and then work our way into three-dimensional
 transforms.
 
@@ -7511,33 +6997,23 @@ discuss how you can change this default point of rotation.
 
 <h4>HTML</h4>
 
-+---+----------------------------------------------------------------------+
+```
  1  <figure class="box-1">Box 1</figure>
-
  2  <figure class="box-2">Box 2</figure>
-
  3 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 <h4>CSS</h4>
 
-+---+----------------------------------------------------------------------+
+```
  1  .box-1 {
-
  2  transform: rotate(20deg);
-
  3  } 
-
  4  .box-2 {
-
  5  transform: rotate(-55deg);  
-
  6  } 
-
  7 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 <h4>Rotate Demo</h4>
 
@@ -7557,33 +7033,23 @@ value greater than or equal to 1.01 makes an element appear larger.
 
 <h4>HTML</h4>
 
-+---+----------------------------------------------------------------------+
+```
  1  <figure class="box-1">Box 1</figure>
-
  2  <figure class="box-2">Box 2</figure>
-
  3 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 <h4>CSS</h4>
 
-+---+----------------------------------------------------------------------+
+```
  1  .box-1 {
-
  2  transform: scale(.75);
-
  3  } 
-
  4  .box-2 {
-
  5  transform: scale(1.25);  
-
  6  } 
-
  7 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 <h4>Scale Demo</h4>
 
@@ -7597,16 +7063,12 @@ comma, and then the y axis value.
 
 <h4>HTML</h4>
 
-+---+----------------------------------------------------------------------+
+```
  1  <figure class="box-1">Box 1</figure>
-
  2  <figure class="box-2">Box 2</figure>
-
  3  <figure class="box-3">Box 3</figure>
-
  4 
-+===+======================================================================+
-+---+----------------------------------------------------------------------+
+```
 
 <h4>CSS</h4>
 
@@ -7798,8 +7260,8 @@ same as if you were to set the height of an element numerous times.
 Behind every transform there is also a matrix explicitly defining the
 behavior of the transform. Using the rotate, scale, transition,
 and skew values provide an easy way to establish this matrix. However,
-should you be mathematically inclined, and prefer to take a [[deeper
-dive]{.underline}](http://dev.opera.com/articles/view/understanding-the-css-transforms-matrix/) into
+should you be mathematically inclined, and prefer to take a [deeper
+dive](http://dev.opera.com/articles/view/understanding-the-css-transforms-matrix/) into
 transforms, try your hand at using the matrix property.
 
 <h4>2D Cube Demo</h4>
@@ -8197,8 +7659,8 @@ coordinates of the vanishing point of a transform.
 
 Working with two-dimensional transforms we are able to alter elements on
 the horizontal and vertical axes, however there is another axis along
-which we can transform elements. Using [[three-dimensional
-transforms]{.underline}](http://24ways.org/2010/intro-to-css-3d-transforms) we
+which we can transform elements. Using [three-dimensional
+transforms](http://24ways.org/2010/intro-to-css-3d-transforms) we
 can change elements on the z axis, giving us control of depth as well as
 length and width.
 
@@ -8362,7 +7824,7 @@ As with combining two-dimensional transforms, there are also properties
 to write out shorthand three-dimensional transforms. These properties
 include rotate3d, scale3d, transition3d, and matrix3d. These properties
 do require a bit more math, as well as a
-strong [[understanding]{.underline}](https://developer.mozilla.org/en/CSS/transform-function) of
+strong [understanding](https://developer.mozilla.org/en/CSS/transform-function) of
 the matrices behind each transform. Should you be interested in looking
 a bit deeper into them, please do!
 
@@ -8433,7 +7895,7 @@ lie flat on the two-dimensional plane.
 
 To see an additional example of the transform-style property in action
 check out the
-WebKit [[explanation]{.underline}](http://www.webkit.org/blog-files/3d-transforms/transform-style.html).
+WebKit [explanation](http://www.webkit.org/blog-files/3d-transforms/transform-style.html).
 
 <h4>Backface Visibility</h4>
 
@@ -8451,7 +7913,7 @@ value, always displaying an element, no matter which direction it faces.
 In the demonstration below notice how the second box isn't displayed
 because backface-visibility: hidden; declaration has been set.
 The backface-visibility property takes even more significance when
-using [[animations]{.underline}](https://css-tricks.com/almanac/properties/b/backface-visibility/).
+using [animations](https://css-tricks.com/almanac/properties/b/backface-visibility/).
 
 <h4>HTML</h4>
 
@@ -8662,18 +8124,18 @@ GitlabGitLab is the only place where enterprises build mission critical software
 
 <h4>CSS</h4>
 
--[[Transitions]{.underline}](https://learn.shayhowe.com/advanced-html-css/transitions-animations/#transitions)
+-[Transitions](https://learn.shayhowe.com/advanced-html-css/transitions-animations/#transitions)
 
--[[Shorthand
- Transitions]{.underline}](https://learn.shayhowe.com/advanced-html-css/transitions-animations/#shorthand-transitions)
+-[Shorthand
+ Transitions](https://learn.shayhowe.com/advanced-html-css/transitions-animations/#shorthand-transitions)
 
--[[Animations]{.underline}](https://learn.shayhowe.com/advanced-html-css/transitions-animations/#animations)
+-[Animations](https://learn.shayhowe.com/advanced-html-css/transitions-animations/#animations)
 
--[[Customizing
- Animations]{.underline}](https://learn.shayhowe.com/advanced-html-css/transitions-animations/#customizing-animations)
+-[Customizing
+ Animations](https://learn.shayhowe.com/advanced-html-css/transitions-animations/#customizing-animations)
 
--[[Shorthand
- Animations]{.underline}](https://learn.shayhowe.com/advanced-html-css/transitions-animations/#shorthand-animations)
+-[Shorthand
+ Animations](https://learn.shayhowe.com/advanced-html-css/transitions-animations/#shorthand-animations)
 
 **SHARE**
 
@@ -8694,7 +8156,7 @@ transition upon different keyframes.
 <h4>Transitions</h4>
 
 As mentioned, for
-a [[transition]{.underline}](http://www.alistapart.com/articles/understanding-css3-transitions/) to
+a [transition](http://www.alistapart.com/articles/understanding-css3-transitions/) to
 take place, an element must have a change in state, and different styles
 must be identified for each state. The easiest way for determining
 styles for different states is by using the :hover, :focus, :active,
@@ -10246,18 +9708,13 @@ the max attribute indicates what progress needs to be reached.
 ```
  1  <!&#45;&#45; Meter &#45;&#45;> 
  2  <meter value="7" max="10">7 stars</meter>  
- 3  <meter value="47" min="0" max="105" low="5" high="65"  
- optimum="45">The car  
- 4 
- is moving at a decent average mile per hour.</meter>
- 5 
- <!&#45;&#45; Progress &#45;&#45;> 
- 6 
- You are <progress value="50" max="100">50%</progress>  
+ 3  <meter value="47" min="0" max="105" low="5" high="65"  optimum="45">The car  
+ 4  is moving at a decent average mile per hour.</meter>
+ 5  <!&#45;&#45; Progress &#45;&#45;> 
+ 6  You are <progress value="50" max="100">50%</progress>  
  7  complete.  
- 8  <progress value="50" min="0" max="100">Hold tight,  
- you"re getting  
- there.</progress>
+ 8  <progress value="50" min="0" max="100">Hold tight, you"re getting there.</progress>
+ 9 
 ```
 
 <h4>Meter & Progress Demo</h4>
@@ -10282,28 +9739,16 @@ and other content needs to be placed outside of the address element.
  2  <time>2011-08-24</time> 
  3  <time datetime="2011-08-24" pubdate>August 24th, 2011</time>
  4  <time datetime="15:00">3pm</time> 
- 5  <time datetime="2011-08-24T15:00">August 24th, 2011 at  
- 3pm</time> 
- 6 
- <!&#45;&#45; Address &#45;&#45;>  
- <address>
- <strong>Shay Howe</strong><br> 
- <a  
- 1  href=
- 0  "http://learn.shayhowe.com">http://learn.shayhowe.com</a><br> 
-
- 1  <a href="mailto:hello@awesome.com">hello@awesome.com</a><br> 
- 1 
- 600 W. Chicago Ave.<br>
- 1 
- 2  Suite 620<br> 
-
- 1  Chicago, IL 60654<br>  
- 3 
- USA  
- 1 
- 4  </address> 
-
+ 5  <time datetime="2011-08-24T15:00">August 24th, 2011 at 3pm</time> 
+ 6  <!-- Address -->
+ 7  <address> <strong>Shay Howe</strong><br>
+ 8    <a href="http://learn.shayhowe.com">http://learn.shayhowe.com</a><br> 
+ 9    <a href="mailto:hello@awesome.com">hello@awesome.com</a><br> 
+ 10    600 W. Chicago Ave.<br>
+ 11   Suite 620<br> 
+ 12   Chicago, IL 60654<br> USA  
+ 13 </address> 
+ 14 
 ```
 
 <h4>Time & Address Demo</h4>
