@@ -2,7 +2,7 @@
 ---
 title: "Shay & Howe's Advanced HTML and CSS"
 author: "Brian Bauska (bbauska)"
-date last editted: "3/26/2024 7+pm"
+date last editted: "3/27/2024 5+pm"
 output: 
   markdown:
  with some style
@@ -1537,17 +1537,13 @@ be used once per page.
 
 <h4>Common Selectors Overview</h4>
 
-  ----------------------------------------------------------------------------------------------------------
-  <b>[Example]</b><b>[Classification]</b><b>[Explanation]</b>
-  ---------------------- ----------------------------- -----------------------------------------------------
-  h1Type Selector  Selects an element by its type
-
-  .taglineClass Selector Selects an element by the class attribute value,
-  which may be reused multiple times per page
-
-  #intro  ID Selector Selects an element by the ID attribute value, which
-  is unique and to only be used once per page
-  ----------------------------------------------------------------------------------------------------------
+  | <b>Example</b>|<b>Classification</b> | <b>Explanation</b> |
+  -----------|-----------------------------|-----------------------------------------------------|
+  | h1       | Type Selector | Selects an element by its type.  |
+  | .tagline | Class         | Selects an element by the class attribute value, which may be reused |
+  |          | Selector      | multiple times per page.
+  | #intro   | ID Selector   | Selects an element by the ID attribute value, which is unique and to |
+  |          |               | only be used once per page.
 
 <h4>Child Selectors</h4>
 
@@ -1633,16 +1629,12 @@ article, thus selected.
 
 <h4>Child Selectors Overview</h4>
 
-  -----------------------------------------------------------------------------------------------
-  <b>[Example]</b><b>[Classification]</b><b>[Explanation]</b>
-  ---------------------- ----------------------------- ------------------------------------------
-  article h2 Descendant Selector  Selects an element that resides anywhere
-  within an identified ancestor element
-
-  article > p  Direct Child SelectorSelects an element that resides
-  immediately inside an identified parent
-  element
-  -----------------------------------------------------------------------------------------------
+  | <b>Example</b>|<b>Classification</b> | <b>Explanation</b> |
+  --------------|-----------------------------|-----------------------------------------------------|
+  | article h2  | Descendant   | Selects an element that resides anywhere within an    |
+  |             | Selector     | identified ancestor element.                          |
+  | article > p | Direct Child | Selects an element that resides immediately inside an |
+  |             | Selector     | identified parent element.                            |
 
 <h4>Sibling Selectors</h4>
 
@@ -1820,17 +1812,13 @@ selected.
 
 <h4>Sibling Selectors Overview</h4>
 
-  ------------------------------------------------------------------------------------------------------
-  <b>[Example]</b><b>[Classification]</b><b>[Explanation]</b>
-  ---------------------- ----------------------------- -------------------------------------------------
-  h2 &tilde; p General Sibling SelectorSelects an element that follows anywhere after
-  the prior element, in which both elements share
-  the same parent
+  | <b>Example</b>|<b>Classification</b> | <b>Explanation</b> |
+  --------------|-----------------------------|-----------------------------------------------------|
+  | h2 ~ p | General Sibling  | Selects an element that follows anywhere after the prior          |
+  |        | Selector         | element, in which both elements share the same parent.            |
+  | h2 + p | Adjacent Sibling | Selects an element that follows directly after the prior element, |
+  |        | Selector         | in which both elements share the same parent.                     |
 
-  h2 + p  Adjacent Sibling Selector  Selects an element that follows directly after
-  the prior element, in which both elements share
-  the same parent
-  ------------------------------------------------------------------------------------------------------
 
 <h4>Attribute Selectors</h4>
 
@@ -2059,7 +2047,7 @@ stated value.
 
 <h4>Attribute Selectors Overview</h4>
 
-  | **[Example]** | **[Classification]** | **[Explanation]**                            |
+  | **Example** | **Classification** | **Explanation**                            |
   |---------------|----------------------|----------------------------------------------|
   | a[target]     | Attribute Present    | Selects an element if the given attribute is
   |               | Selector             | present.
@@ -2742,86 +2730,58 @@ pseudo-classes.
 
 <h4>Pseudo-classes Overview</h4>
 
-  --------------------------------------------------------------------------------------------------
-  **[Example]** **[Classification]****[Explanation]**
-  -------------------------- ----------------------------- -----------------------------------------
-  a:linkLink Pseudo-class Selects a link that has not been visited
- by a user
-
-  a:visitedLink Pseudo-class Selects a link that has been visited by a
- user
-
-  a:hover  Action Pseudo-class  Selects an element when a user has
- hovered their cursor over it
-
-  a:active Action Pseudo-class  Selects an element when a user has
- engaged it
-
-  a:focus  Action Pseudo-class  Selects an element when a user has made
- it their focus point
-
-  input:enabled  State Pseudo-classSelects an element in the default enabled
- state
-
-  input:disabled State Pseudo-classSelects an element in the disabled state,
- by way of the disabled attribute
-
-  input:checked  State Pseudo-classSelects a checkbox or radio button that
- has been checked
-
-  input:indeterminate  State Pseudo-classSelects a checkbox or radio button that
- neither been checked or unchecked,
- leaving it in an indeterminate state
-
-  li:first-child Structural Pseudo-class Selects an element that is the first
- within a parent
-
-  li:last-child  Structural Pseudo-class Selects an element that is the last
- within a parent
-
-  div:only-child Structural Pseudo-class Selects an element that is the only
- element within a parent
-
-  p:first-of-typeStructural Pseudo-class Selects an element that is the first of
- its type within a parent
-
-  p:last-of-type Structural Pseudo-class Selects an element that is the last of
- its type within a parent
-
-  img:only-of-type  Structural Pseudo-class Selects an element that is the only of
- its type within a parent
-
-  li:nth-child(2n+3)Structural Pseudo-class Selects an element that matches the given
- number or expression, counting all
- elements from the beginning of the
- document tree
-
-  li:nth-last-child(3n+2) Structural Pseudo-class Selects an element that matches the given
- number or expression, counting all
- elements from the end of the document
- tree
-
-  p:nth-of-type(3n) Structural Pseudo-class Selects an element that matches the given
- number or expression, counting only
- elements of its type from the beginning
- of the document tree
-
-  p:nth-last-of-type(2n+1)Structural Pseudo-class Selects an element that matches the given
- number or expression, counting only
- elements of its type from the end of the
- document tree
-
-  section:target Target Pseudo-class  Selects an element whose ID attribute
- value matches that of the URI fragment
- identifier
-
-  div:emptyEmpty Pseudo-classSelects an element that does not contain
- any children or text nodes
-
-  div:not(.awesome) Negation Pseudo-classSelects an element not represented by the
- stated argument
-  --------------------------------------------------------------------------------------------------
-
+  | **Example** | **Classification** | **Explanation**                            |
+  |---------------|----------------------|---------------------------------------------------|
+  | a:link        | Link Pseudo-    | Selects a link that has not been visited by a user.    |
+  |               | class           |                                                        |
+  | a:visited     | Link Pseudo-    | Selects a link that has been visited by a user.        |
+  |               | class           |                                                        |
+  | a:hover       | Action Pseudo-  | Selects an element when a user has hovered their       |
+  |               | class           | cursor over it.                                        |
+  | a:active      | Action Pseudo-  | Selects an element when a user has engaged it.         |
+  |               | class           |                                                        |
+  | a:focus       | Action Pseudo-  | Selects an element when a user has made it their focus |
+  |               | class           | point.                                                 |
+  | input:enabled | State Pseudo-   | Selects an element in the default enabled state.       |
+  |               | class           |                                                        |
+  | input:disabled | State Pseudo-   | Selects an element in the disabled state, by way of the |
+  |               | class           | disabled attribute.                                    |
+  | input:checked | State Pseudo-   | Selects a checkbox or radio button that has been       |
+  |               | class           | checked.                                               |
+  | input:indeterminate | State Pseudo-  | Selects a checkbox or radio button thats neither been |
+  |                     | class          | checked or unchecked, leaving it in an indeterminate  |
+  |                     |                | state.                                                |
+  | li:first-child | Structural   | Selects an element that is the first within a parent. |
+  |                | Pseudo-class |                                                        |
+  | li:last-child  | Structural   | Selects an element that is the last within a parent. |
+  |                | Pseudo-class |                                                        |
+  | div:only-child  | Structural   | Selects an element that is the only element within a |
+  |                | Pseudo-class  | parent.                                                   |
+  | p:first-of-type | Structural   | Selects an element that is the first of its type within a |
+  |                | Pseudo-class  | parent.                                                   |
+  | p:last-of-type | Structural   | Selects an element that is the last of its type within a |
+  |                | Pseudo-class  | parent.                                                   |
+  | img:only-of-type | Structural   | Selects an element that is the only one of its type within a |
+  |                | Pseudo-class  | parent.                                                   |
+  | li:nth-child(2n+3) | Structural    | Selects an element that matches the given number or |
+  |                   | Pseudo-class  | expression, counting all elements from the beginning of |
+  |                   |               | the document tree.                                       |
+  | li:nth-last-   | Structural  | Selects an element that matches the given number or      |
+  | type(3n+2)     | Pseudo-class | expression, counting all elements from the end of the |
+  |                |              | document tree.                         |
+  | p:nth-of-type(3n) | Structural   | Selects an element that matches the given number or      |
+  |                   | Pseudo-class | expression, counting all elements of its type from the |
+  |                   |              | beginning of the document tree.                        |
+  | p:nth-last-of- | Structural  | Selects an element that matches the given number or      |
+  | type(2n+1)     | Pseudo-class | expression, counting all elements of its type from the |
+  |                |              | end of the document tree.                              |
+  | section:target  | Target Pseudo- | Selects an element whose ID attribute value matches    |
+  |                 | class          | that of the URI fragment identifier. |
+  | div:empty       | Empty Pseudo- | Selects an element that does not contain any children  |
+  |                 | class          | or text nodes. |
+  | div:not(.awesome) | Negation     | Selects an element not represented by the stated  |
+  |                   | Pseudo-class | argument. |
+  
 Pseudo-elements
 
 Pseudo-elements are dynamic elements that don't exist in the document
