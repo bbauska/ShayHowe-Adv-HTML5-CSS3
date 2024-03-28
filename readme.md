@@ -2047,10 +2047,10 @@ stated value.
 
 <h4>Attribute Selectors Overview</h4>
 
-  | **Example** | **Classification** | **Explanation**                            |
+  | **Example** | **Classification** | **Explanation** |
   |---------------|----------------------|----------------------------------------------|
   | a[target]     | Attribute Present    | Selects an element if the given attribute is
-  |               | Selector             | present.
+  |               | Selector             | present. |
   | a[href="http://google.com/"] | Attribute Equals | Selects an element if the given attribute value |
   |                              | Selector         | exactly matches the value stated. |
   | a[href*="login"]             | Attribute Contains           | Selects an element if the given attribute value |
@@ -2124,9 +2124,9 @@ the input is not available for interaction, however those styles may be
 adjusted as wished with the :disabled pseudo-class.
 
 ```
- 1  input:enabled {...}  
- 2  input:disabled {...} 
- 3 
+ 1  input:enabled {...}
+ 2  input:disabled {...}
+ 3  
 ```
 
 The last two user interface element state pseudo-classes
@@ -2138,8 +2138,9 @@ indeterminate state, from which the :indeterminate pseudo-class can be
 used to target these elements.
 
 ```
- 1  input:checked {...}  
- 2  input:indeterminate {...}  
+ 1  input:checked {...}
+ 2  input:indeterminate {...}
+ 3  
 ```
 
 <h4>Structural & Position Pseudo-classes</h4>
@@ -2178,26 +2179,26 @@ list item.
 <h4>CSS</h4>
 
 ```
- 1  li:first-child {...} 
- 2  li:last-child {...}  
- 3  div:only-child {...} 
+ 1  li:first-child {...}
+ 2  li:last-child {...}
+ 3  div:only-child {...}
  4 
 ```
 
 <h4>HTML</h4>
 
 ```
- 1  <ul>  
- 2    <li>This list item will be selected</li> 
- 3    <li>  
+ 1  <ul>
+ 2    <li>This list item will be selected</li>
+ 3    <li>
  4      <div>This div will be selected</div>
- 5    </li> 
- 6    <li>  
+ 5    </li>
+ 6    <li>
  7      <div>...</div>
  8      <div>...</div>
- 9    </li> 
- 10   <li>This list item will be selected</li> 
- 11 </ul> 
+ 9    </li>
+ 10   <li>This list item will be selected</li>
+ 11 </ul>
   
 ```
 
@@ -2229,8 +2230,8 @@ the only image to appear within the article, thus also selected.
 
 ```
  1  p:first-of-type {...}
- 2  p:last-of-type {...} 
- 3  img:only-of-type {...}  
+ 2  p:last-of-type {...}
+ 3  img:only-of-type {...}
  4 
 ```
 
@@ -2238,13 +2239,13 @@ the only image to appear within the article, thus also selected.
 
 ```
  1  <article>
- 2    <h1>...</h1>  
+ 2    <h1>...</h1>
  3    <p>This paragraph will be selected</p>
- 4    <p>...</p> 
+ 4    <p>...</p>
  5    <img src="#"><!&#45;&#45; This image will be selected &#45;&#45;>
  6    <p>This paragraph will be selected</p>
- 7    <h6>...</h6>  
- 8  </article> 
+ 7    <h6>...</h6>
+ 8  </article>
  9 
 ```
 
@@ -2341,20 +2342,20 @@ third list item, thus lines 4 and 7 are selected.
 <h4>CSS</h4>
 
 ```
- 1  li:nth-child(3n) {...}  
+ 1  li:nth-child(3n) {...}
 ```
 
 <h4>HTML</h4>
 
 ```
- 1  <ul>  
- 2    <li>...</li>  
- 3    <li>...</li>  
- 4    <li>This list item will be selected</li> 
- 5    <li>...</li>  
- 6    <li>...</li>  
- 7    <li>This list item will be selected</li> 
- 8  </ul> 
+ 1  <ul>
+ 2    <li>...</li>
+ 3    <li>...</li>
+ 4    <li>This list item will be selected</li>
+ 5    <li>...</li>
+ 6    <li>...</li>
+ 7    <li>This list item will be selected</li>
+ 8  </ul>
 ```
 
 Using a different expression within the :nth-child(n) pseudo-class will
@@ -2371,14 +2372,14 @@ and then onward. As a result, the list items lines 4 and 6 are selected.
 <h4>HTML</h4>
 
 ```
- 1  <ul>  
- 2    <li>...</li>  
- 3    <li>...</li>  
- 4    <li>This list item will be selected</li> 
- 5    <li>...</li>  
- 6    <li>This list item will be selected</li> 
- 7    <li>...</li>  
- 8  </ul> 
+ 1  <ul>
+ 2    <li>...</li>
+ 3    <li>...</li>
+ 4    <li>This list item will be selected</li>
+ 5    <li>...</li>
+ 6    <li>This list item will be selected</li>
+ 7    <li>...</li>
+ 8  </ul>
  9 
 ```
 
@@ -2397,14 +2398,14 @@ lines 2 through 5 are selected.
 <h4>HTML</h4>
 
 ```
- 1  <ul>  
- 2  <li>This list item will be selected</li> 
- 3  <li>This list item will be selected</li> 
- 4  <li>This list item will be selected</li> 
- 5  <li>This list item will be selected</li> 
- 6  <li>...</li>  
- 7  <li>...</li>  
- 8  </ul> 
+ 1  <ul>
+ 2  <li>This list item will be selected</li>
+ 3  <li>This list item will be selected</li>
+ 4  <li>This list item will be selected</li>
+ 5  <li>This list item will be selected</li>
+ 6  <li>...</li>
+ 7  <li>...</li>
+ 8  </ul>
  9 
 ```
 
@@ -2416,20 +2417,20 @@ item, thus the list items on lines 2, 4, and 6 are selected.
 <h4>CSS</h4>
 
 ```
- 1  li:nth-child(-2n+5) {...}  
+ 1  li:nth-child(-2n+5) {...}
 ```
 
 <h4>HTML</h4>
 
 ```
- 1  <ul>  
- 2  <li>This list item will be selected</li> 
- 3  <li>...</li>  
- 4  <li>This list item will be selected</li> 
- 5  <li>...</li>  
- 6  <li>This list item will be selected</li> 
- 7  <li>...</li>  
- 8  </ul> 
+ 1  <ul>
+ 2  <li>This list item will be selected</li>
+ 3  <li>...</li>
+ 4  <li>This list item will be selected</li>
+ 5  <li>...</li>
+ 6  <li>This list item will be selected</li>
+ 7  <li>...</li>
+ 8  </ul>
 ```
 
 Changing from the :nth-child(n) pseudo-class to
@@ -2444,21 +2445,21 @@ are selected.
 <h4>CSS</h4>
 
 ```
- 1  li:nth-last-child(3n+2) {...} 
+ 1  li:nth-last-child(3n+2) {...}
 
 ```
 
 <h4>HTML</h4>
 
 ```
- 1  <ul>  
- 2  <li>...</li>  
- 3  <li>This list item will be selected</li> 
- 4  <li>...</li>  
- 5  <li>...</li>  
- 6  <li>This list item will be selected</li> 
- 7  <li>...</li>  
- 8  </ul> 
+ 1  <ul>
+ 2  <li>...</li>
+ 3  <li>This list item will be selected</li>
+ 4  <li>...</li>
+ 5  <li>...</li>
+ 6  <li>This list item will be selected</li>
+ 7  <li>...</li>
+ 8  </ul>
 ```
 
 <h4>:nth-of-type(n) & :nth-last-of-type(n)
@@ -2487,22 +2488,22 @@ the parent. Here the paragraphs on lines 5 and 9 are selected.
 <h4>CSS</h4>
 
 ```
- 1  p:nth-of-type(3n) {...} 
+ 1  p:nth-of-type(3n) {...}
 ```
 
 <h4>HTML</h4>
 
 ```
  1  <article>
- 2    <h1>...</h1>  
- 3    <p>...</p> 
- 4    <p>...</p> 
+ 2    <h1>...</h1>
+ 3    <p>...</p>
+ 4    <p>...</p>
  5    <p>This paragraph will be selected</p>
- 6    <h2>...</h2>  
- 7    <p>...</p> 
- 8    <p>...</p> 
+ 6    <h2>...</h2>
+ 7    <p>...</p>
+ 8    <p>...</p>
  9    <p>This paragraph will be selected</p>
- 10 </article> 
+ 10 </article>
  11 
 ```
 
@@ -2529,15 +2530,15 @@ paragraph. Here the paragraphs on lines 4, 7, and 9 are selected.
 
 ```
  1  <article>
- 2    <h1>...</h1>  
- 3    <p>...</p> 
+ 2    <h1>...</h1>
+ 3    <p>...</p>
  4    <p>This paragraph will be selected</p>
- 5    <p>...</p> 
- 6    <h2>...</h2>  
+ 5    <p>...</p>
+ 6    <h2>...</h2>
  7    <p>This paragraph will be selected</p>
- 8    <p>...</p> 
+ 8    <p>...</p>
  9    <p>This paragraph will be selected</p>
- 10 </article> 
+ 10 </article>
  11 
 ```
 
@@ -2688,36 +2689,36 @@ pseudo-classes.
 
 ```
  1   table {
- 2     border-collapse: separate;  
- 3     border-spacing: 0; 
- 4     width: 100%; 
+ 2     border-collapse: separate;
+ 3     border-spacing: 0;
+ 4     width: 100%;
  5   }
  6   th,
  7   td {
- 8     padding: 6px 15px; 
+ 8     padding: 6px 15px;
  9   }
  10  th {
- 11    background: #42444e;  
- 12    color: #fff; 
- 13    text-align: left;  
+ 11    background: #42444e;
+ 12    color: #fff;
+ 13    text-align: left;
  14  }
  15  tr:first-child th:first-child {
  16    border-top-left-radius: 6px;
  17  }
- 18  tr:first-child th:last-child { 
- 19    border-top-right-radius: 6px;  
+ 18  tr:first-child th:last-child {
+ 19    border-top-right-radius: 6px;
  20  }
  21  td {
- 22    border-right: 1px solid #c6c9cc;  
- 23    border-bottom: 1px solid #c6c9cc; 
+ 22    border-right: 1px solid #c6c9cc;
+ 23    border-bottom: 1px solid #c6c9cc;
  24  }
  25  td:first-child {
  26    border-left: 1px solid #c6c9cc;
  27  }
- 28  tr:nth-child(even) td { 
- 29    background: #eaeaed;  
+ 28  tr:nth-child(even) td {
+ 29    background: #eaeaed;
  30  }
- 31  tr:last-child td:first-child { 
+ 31  tr:last-child td:first-child {
  32    border-bottom-left-radius: 6px;
  33  }
  34  tr:last-child td:last-child {
@@ -2807,11 +2808,11 @@ pseudo-elements respectively.
 <h4>CSS</h4>
 
 ```
- 1  .alpha:first-letter,  
+ 1  .alpha:first-letter,
  2  .bravo:first-line {
- 3  color: #ff7b29; 
+ 3  color: #ff7b29;
  4  font-size: 18px;
- 5  } 
+ 5  }
  6 
 ```
 
@@ -2847,19 +2848,19 @@ necessary should a browser not support these pseudo-elements.
 <h4>CSS</h4>
 
 ```
- 1  a:after {  
- 2  color: #9799a7; 
- 3  content: " (" attr(href) ")"; 
+ 1  a:after {
+ 2  color: #9799a7;
+ 3  content: " (" attr(href) ")";
  4  font-size: 11px;
- 5  } 
+ 5  }
  6 
 ```
 
 <h4>HTML</h4>
 
 ```
- 1  <a href="http://google.com/">Search the Web</a> 
- 2  <a href="http://learn.shayhowe.com/">Learn How to Build Websites</a>  
+ 1  <a href="http://google.com/">Search the Web</a>
+ 2  <a href="http://learn.shayhowe.com/">Learn How to Build Websites</a>
  3 
 ```
 
@@ -2890,12 +2891,12 @@ the ::-moz-selection Mozilla prefixed fragment pseudo-element has been
 added to ensure the best support for all browsers.
 
 ```
- 1  ::-moz-selection { 
- 2  background: #ff7b29;  
- 3  } 
+ 1  ::-moz-selection {
+ 2  background: #ff7b29;
+ 3  }
  4  ::selection {
- 5  background: #ff7b29;  
- 6  } 
+ 5  background: #ff7b29;
+ 6  }
  7 
 ```
 
@@ -2959,25 +2960,19 @@ added to ensure the best support for all browsers.
 
 <h4>Pseudo-elements Overview</h4>
 
-  ------------------------------------------------------------------------------------------------
-  **[Example]****[Classification]****[Explanation]**
-  ---------------------- ----------------------------- -------------------------------------------
-  .alpha:first-letter Textual Pseudo-elements Selects the first letter of text within an
-  element
-
-  .bravo:first-lineTextual Pseudo-elements Selects the first line of text within an
-  element
-
-  div:before Generated Content Creates a pseudo-element inside the
-  selected element at the beginning
-
-  a:after Generated Content Creates a pseudo-element inside the
-  selected element at the end
-
-  ::selectionFragment Pseudo-element Selects the part of a document which has
-  been selected, or highlighted, by a users'
-  actions
-  ------------------------------------------------------------------------------------------------
+  | <b>Example</b> | <b>Classification</b> | <b>Explanation</b> |
+  |------------------------------------------------------|--------------------|
+  | .alpha:first-  | Textual Pseudo-   | Selects the first letter of text within an element. |
+  | letter         | elements          |
+  | .bravo:first-  | Textual Pseudo-   | Selects the first line of text within an element. |
+  | line           | elements          |
+  | div:before     | Generated Content | Creates a pseudo-element inside the selected element at |
+  |                |                   | the beginning. |
+  | a:after        | Generated Content | Creates a pseudo-element inside the selected element at |
+  |                |                   | the end. |
+  | ::selection    | Fragment Pseudo-  | Selects the part of a document which has been selected, |
+  |                | element           | or highlighted, by a users' action. |
+  
 
 <h4>Selector Browser Support</h4>
 
