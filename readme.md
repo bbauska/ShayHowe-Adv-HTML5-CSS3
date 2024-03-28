@@ -3,7 +3,7 @@
 title: "Shay & Howe's Advanced HTML and CSS"
 author: "Brian Bauska (bbauska)"
 date last editted: "3/27/2024 5+pm"
-output: 
+output:
   markdown:
   with some style
 ---
@@ -9328,12 +9328,13 @@ elements and what attribute is used for their property value.
 
   | <b>Element</b>                                       | <b>Value</b>       |
   |------------------------------------------------------|--------------------|
-  | <meta>                                               | content attribute  |
-  | <audio>, <embed>, <iframe>, <img>, <source>, <video> | src attribute      |
-  | <a>, <area>, <link>                                  | href attribute     |
-  | <object>                                             | data attribute     |
-                                                         |--------------------|
-  | <time>                                               | datetime attribute |
+  | &lt;meta&gt;                                               | content attribute  |
+  | &lt;audio&gt;, &lt;embed&gt;, &lt;iframe&gt;, &lt;img&gt;, &lt;source&gt;, &lt;video&gt; | src attribute      |
+  | &lt;a&gt;, &lt;area&gt;, &lt;link&gt;                                  | href attribute     |
+  | &lt;object&gt;                                             | data attribute     |
+
+  |---------------------------------------------------------------------------------|
+  | &lt;time&gt;                                               | datetime attribute |
 
 <h4>Person Microdata</h4>
 
@@ -9508,7 +9509,8 @@ nested within other regions of the document structure.
 | footer  | —             | contentinfo (Only once per page)        |
 | header  | —             | banner (Only once per page)             |
 | nav     | navigation    | navigation                              |
-                          |----------------------------------------------------------------------|
+
+|------------------------------------------------------------------------------------------------|
 | section | region        | alert, alertdialog, application, contentinfo, dialog, document, log, |
 |         |               | main, marquee, region, search, or status.                            |
 
