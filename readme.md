@@ -444,7 +444,7 @@ compression is enabled.
   alt="gzip Overview Screenshot." />
 </p>
 
-<h6>Fig. 1</h6>
+<h6 style="center">Fig. 1</h6>
 
 The Network tab identifies each file loaded within the browser and displays the 
 file size and load time. Notice how gzipping has reduced the file sizes by around 60%.
@@ -456,7 +456,8 @@ file size and load time. Notice how gzipping has reduced the file sizes by aroun
   alt="gzip Detail Screenshot." />
 </p>
 
-<h6>Fig. 1</h6>
+<h6 style="center">Fig. 1</h6>
+
 
 Looking at a file specifically identifies what type of compression encoding the 
 browser supports. In this case gzip, deflate, and sdch are all supported as noted 
@@ -513,7 +514,7 @@ and PNG files.
   alt="ImageOptim Screenshot." />
 </p>
 
-<h6>Fig. 1</h6>
+<h6 style="center">Fig. 4</h6>
 
 Using ImageOptim the above image was reduced over 14% without any
 reduction or loss in quality.
@@ -592,7 +593,7 @@ background image being hidden.
   alt="Menu Sprite." />
 </p>
 
-<h6>Fig. 1</h6>
+<h6 style="center">Fig. 1</h6>
 
 Here is a sprite for a text editor menu, outlined with guides for
 reference of how the images background position will change.
@@ -3086,10 +3087,15 @@ itself was coined, and largely developed, by Ethan Marcotte. A lot of
 what is covered in this lesson was first talked about by Ethan online
 and in his book <i><a href="http://www.abookapart.com/products/responsive-web-design/"></i>
 Responsive Web Design</a>, which is worth a read.
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~ 07. food sense responsive layout (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="center" width="100%">
+  <img src="./images/image007.png"
+   style="width:40%"
+   alt="Food Sense Responsive Layout." />
+</p>
 
-![Food Sense Responsive Layout](./images/image007.png)
-
-Fig. 4
+<h6 style="center">Fig. 4</h6>
 
 <a href="http://foodsense.is/">Food Sense</a> has a beautiful
 website, responsive to all different viewport sizes. No matter how large
@@ -3482,12 +3488,22 @@ the section and aside.
  7 
 ```
 
-![Demo without Media Queries](./images/image008.png)
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~ 08.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="center" width="100%">
+  <img src="./images/image008.png"
+ style="width:40%"
+ alt="Demo Without Media Queries." />
 
 **Fig. 4.**Without any media queries the section and aside become quite
 small. Perhaps too small to even contain any real content.
 
-![Demo with Media Queries](./3-25-24/media/image009.png)  <-- 3.4 width -->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~ 09.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="center" width="100%">
+  <img src="./images/image009.png"
+ style="width:40%"
+ alt="Demo with Media Queries." />
 
 **Fig. 4.**Using media queries to remove the floats and change their
 widths, the section and aside are now able to span the full width of the
@@ -3604,7 +3620,12 @@ the [viewport](http://dev.opera.com/articles/view/an-introduction-to-meta-viewp
 scale, and resolution of a website. To remedy this, Apple invented
 the viewport meta tag.
 
-![Website without Viewport Meta Tag](./images/image010.png)
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~ 10.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="center" width="100%">
+  <img src="./images/image010.png"
+ style="width:40%"
+ alt="Website without Viewport Meta Tag." />
 
 **Fig. 4.** Although this demo has media queries, many mobile devices
 still do not know the initial width or scale of the website. Therefore,
@@ -3628,7 +3649,12 @@ the device-height and device-width values.
  2 
 ```
 
-![Website with Viewport Meta Tag](./images/image011.png)
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~ 11.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="center" width="100%">
+  <img src="./images/image011.png"
+ style="width:40%"
+ alt="Website with Viewport Meta Tag." />
 
 **Fig. 4.** Letting devices know the intended width of the
 website, device-width in this case, allows the website to be sized
@@ -3652,7 +3678,12 @@ for initial-scale should always be a positive integer between 0 and 10.
  2 
 ```
 
-![Viewport Scale Meta Tag](./images/image012.png)
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~ 12. viewport scale meta tag (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="center" width="100%">
+  <img src="./images/image012.png"
+ style="width:40%"
+ alt="Viewport Scale Meta Tag." />
 
 **Fig. 4.** Using an integer above 1 will zoom the website to be larger
 than the default scale. Generally speaking, this value will most
@@ -3716,7 +3747,12 @@ outlined below, using both the width and initial-scale properties.
  2 
 ```
 
-![Website with Viewport Meta Tag](./images/image011.png)
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~ 11.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="center" width="100%">
+  <img src="./images/image011.png"
+ style="width:40%"
+ alt="Website with Viewport Meta Tag." />
 
 **Fig. 4** A combination
 of width=device-width and initial-scale=1 provide the initial size and
@@ -4492,11 +4528,11 @@ indentation and clear line breaks for formatting.
 
 ```
  1  .new {  
- 2  color: #ff7b29; 
- 3  font-weight: bold; 
- 4  span {  
- 5  text-transform: uppercase;  
- 6  } 
+ 2    color: #ff7b29; 
+ 3    font-weight: bold; 
+ 4    span {  
+ 5      text-transform: uppercase;  
+ 6    } 
  7  } 
  8 
 ```
@@ -4903,15 +4939,13 @@ value up to the closest whole number, and the floor() function rounds a
 value down to the closest whole number. Lastly, the abs() function finds
 the absolute value of a given number.
 
--percentage()
-
--round()
-
--ceil()
-
--floor()
-
--abs()
+<ul>
+  <li>percentage()</li>
+  <li>round()</li>
+  <li>ceil()</li>
+  <li>floor()</li>
+  <li>abs()</li>
+</ul>
 
 **Sass**
 
@@ -5444,7 +5478,8 @@ output styles up to, but not including, 3. The other form, @for $i from
  4 
 ```
 
-**Compiled CSS**
+<details>
+  <summary>Compiled CSS</summary>
 
 ```
  1  .col-1 {
@@ -5465,6 +5500,8 @@ output styles up to, but not including, 3. The other form, @for $i from
  1 
 ```
 
+</details>
+
 <h4>Each Loop</h4>
 
 Simply enough, the @each rule returns styles for each item in a list.
@@ -5479,23 +5516,26 @@ List may include multiple comma separated items.
  4 
 ```
 
-**Compiled CSS**
+<details>
+  <summary>Compiled CSS</summary>
 
 ```
  1  .uxd-logo {
- 2  background: url("/img/uxd.jpg");
+ 2    background: url("/img/uxd.jpg");
  3  } 
  4  .rails-logo {
- 5  background: url("/img/rails.jpg"); 
+ 5    background: url("/img/rails.jpg"); 
  6  } 
  7  .html-logo { 
- 8  background: url("/img/html.jpg");  
+ 8    background: url("/img/html.jpg");  
  9  } 
- 10  .css-logo {
- 11  background: url("/img/css.jpg");
- 12  } 
+ 10 .css-logo {
+ 11   background: url("/img/css.jpg");
+ 12 } 
  13  
 ```
+
+</details>
 
 <h4>While Loop</h4>
 
@@ -5514,27 +5554,31 @@ counter variable can be finely controlled allowing for precise looping.
  6 
 ```
 
-**Compiled CSS**
+<details>
+  <summary>Compiled CSS</summary>
 
 ```
- 1  h1 { 
- 2  font-size: 1.75em; 
- 3  } 
- 4  h2 { 
- 5  font-size: 1.5em;  
- 6  } 
- 7  h3 { 
- 8  font-size: 1.25em; 
- 9  } 
- 10  h4 { 
- 11 font-size: 1em; 
- 12  } 
- 13  h5 { font-size: 0.75em; 
- 14  } 
- 15  h6 { 16 font-size: 0.5em;  
- 5  } 
- 1 
+ 1  h1 {
+ 2    font-size: 1.75em;
+ 3  }
+ 4  h2 {
+ 5    font-size: 1.5em;
+ 6  }
+ 7  h3 {
+ 8    font-size: 1.25em;
+ 9  }
+ 10 h4 {
+ 11   font-size: 1em;
+ 12 }
+ 13 h5 {
+ 14   font-size: 0.75em;
+ 15 }
+ 16 h6 { 16 font-size: 0.5em;
+ 17 }
+ 18 
 ```
+
+</details>
 
 <h4>Other Preprocessors</h4>
 
@@ -5557,11 +5601,9 @@ your research for each project and make the most educated decision.
 
 <h4>Resources & Links</h4>
 
--[Haml](http://haml.info/) --- HTML Abstraction Markup
- Language
+-[Haml](http://haml.info/) --- HTML Abstraction Markup Language
 
--[Sass](http://sass-lang.com/) --- Syntactically
- Awesome Stylesheets
+-[Sass](http://sass-lang.com/) --- Syntactically Awesome Stylesheets
 
 -[Haml Documentation
  Reference](http://haml.info/docs/yardoc/file.REFERENCE.html)
@@ -5737,23 +5779,31 @@ multiple properties. Each property has a key and value. The entire
 object is wrapped inside of curly braces, {}, with comma separated
 properties, each having a key followed by a colon and value.
 
+<details>
+  <summary>Example, Object</summary>
+  
 ```
  1  // Object  
  2  var school = {  
- 3  name: 'The Starter League',  
- 4  location: 'Merchandise Mart',
- 5  students: 120,  
- 6  teachers: ]'Jeff', 'Raghu', 'Carolyn', 'Shay'[ 
+ 3    name: 'The Starter League',  
+ 4    location: 'Merchandise Mart',
+ 5    students: 120,  
+ 6    teachers: ]'Jeff', 'Raghu', 'Carolyn', 'Shay'[ 
  7  };
  8  // Array
  9  var school = ]'Austin', 'Chicago', 'Portland'[;  
- 1 
+ 10 
 ```
 
-![Web Inspector Console](./images/image013.png){width="5.0in"
-height="3.201388888888889in"}
+</details>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~ 13. web inspector console (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="center" width="100%">
+  <img src="./images/image013.png"
+ style="width:50%"
+ alt="Web Inspector Console." />
 
-Fig. 6
+<h6 style="center">Fig. 6</h6>
 
 Using the developer tools built into the Chrome web browser, JavaScript
 may be run from within the console.
@@ -5844,14 +5894,14 @@ until the page has loaded and the DOM is ready.
 <h4>Selectors</h4>
 
 As previously mentioned, one of the core concepts of jQuery is
-to [select elements](http://api.jquery.com/category/selectors/) and
+to <a href="http://api.jquery.com/category/selectors/">select elements</a> and
 perform an action. jQuery has done a great job of making the task of
 selecting an element, or elements, extremely easy by mimicking that of
 CSS. On top of the general CSS selectors, jQuery has support for all of
 the unique CSS3 selectors, which work regardless of which browser is
 being used.
 
-Invoking the jQuery object, $(), containing a selector will return that
+Invoking the jQuery object, &dollar;(), containing a selector will return that
 DOM node to manipulate it. The selector falls within the
 parentheses, ('...'), and may select elements just like that of CSS.
 
@@ -5881,8 +5931,8 @@ the current handler.
 <h4>jQuery Selection Filters</h4>
 
 Should CSS selectors not be enough there are also
-custom [filters](http://api.jquery.com/category/selectors/jquery-selector-extensions/) built
-into jQuery to help out. These filters are an extension to CSS3 and
+custom <a href="http://api.jquery.com/category/selectors/jquery-selector-extensions/">
+filters</a> built into jQuery to help out. These filters are an extension to CSS3 and
 provide more control over selecting an element or its relatives.
 
 ```
@@ -5931,71 +5981,53 @@ elements of div elements without a class of type or collection.
 
 <h4>Traversing Methods</h4>
 
-jQuery has quite a
-few [traversing](http://api.jquery.com/category/traversing/) methods
+jQuery has quite a 
+few <a href="http://api.jquery.com/category/traversing/">traversing</a> methods
 available to use. In general, they all fall into three categories,
 filtering, miscellaneous traversing, and DOM tree traversing. The
 specific methods within each category may be seen below.
 
 <h4>Filtering</h4>
 
--.eq()
-
--.filter()
-
--.first()
-
--.has()
-
--.is()
-
--.last()
-
--.map()
-
--.not()
-
--.slice()
+<ul>
+  <li>.eq()</li>
+  <li>.filter()</li>
+  <li>.first()</li>
+  <li>.has()</li>
+  <li>.is()</li>
+  <li>.last()</li>
+  <li>.map()</li>
+  <li>.not()</li>
+  <li>.slice()</li>
+</ul>
 
 <h4>Miscellaneous Traversing</h4>
 
--.add()
-
--.andSelf()
-
--.contents()
-
--.end()
+<ul>
+  <li>.add()</li>
+  <li>.andSelf()</li>
+  <li>.contents()</li>
+  <li>.end()</li>
+</ul>
 
 <h4>DOM Tree Traversal</h4>
 
--.children()
-
--.closest()
-
--.find()
-
--.next()
-
--.nextAll()
-
--.nextUntil()
-
--.offsetParent()
-
--.parent()
-
--.parents()
-
--.parentsUntil()
-
--.prev()
-
--.prevAll()
-
--.prevUntil()
-
--.siblings()
+<ul>
+  <li>.children()</li>
+  <li>.closest()</li>
+  <li>.find()</li>
+  <li>.next()</li>
+  <li>.nextAll()</li>
+  <li>.nextUntil()</li>
+  <li>.offsetParent()</li>
+  <li>.parent()</li>
+  <li>.parents()</li>
+  <li>.parentsUntil()</li>
+  <li>.prev()</li>
+  <li>.prevAll()</li>
+  <li>.prevUntil()</li>
+  <li>.siblings()</li>
+</ul>
 
 <h4>Manipulation</h4>
 
@@ -6048,23 +6080,17 @@ any abbr element and set it to Hello World.
 
 <h4>Attribute Manipulation Methods</h4>
 
--.addClass()
-
--.attr()
-
--.hasClass()
-
--.prop()
-
--.removeAttr()
-
--.removeClass()
-
--.removeProp()
-
--.toggleClass()
-
--.val()
+<ul>
+  <li>.addClass()</li>
+  <li>.attr()</li>
+  <li>.hasClass()</li>
+  <li>.prop()</li>
+  <li>.removeAttr()</li>
+  <li>.removeClass()</li>
+  <li>.removeProp()</li>
+  <li>.toggleClass()</li>
+  <li>.val()</li>
+</ul>
 
 <h4>Style Manipulation</h4>
 
@@ -6100,27 +6126,19 @@ sign followed by the quoted unit of measurement.
 
 <h4>Style Manipulation Methods</h4>
 
--.css()
-
--.height()
-
--.innerHeight()
-
--.innerWidth()
-
--.offset()
-
--.outerHeight()
-
--.outerWidth()
-
--.position()
-
--.scrollLeft()
-
--.scrollTop()
-
--.width()
+<ul>
+  <li>.css()</li>
+  <li>.height()</li>
+  <li>.innerHeight()</li>
+  <li>.innerWidth()</li>
+  <li>.offset()</li>
+  <li>.outerHeight()</li>
+  <li>.outerWidth()</li>
+  <li>.position()</li>
+  <li>.scrollLeft()</li>
+  <li>.scrollTop()</li>
+  <li>.width()</li>
+</ul>
 
 <h4>DOM Manipulation</h4>
 
@@ -6144,45 +6162,28 @@ the text of any h1 elements with the text Hello World.
 
 <h4>DOM Manipulation Methods</h4>
 
--.after()
-
--.append()
-
--.appendTo()
-
--.before()
-
--.clone()
-
--.detach()
-
--.empty()
-
--.html()
-
--.insertAfter()
-
--.insertBefore()
-
--.prepend()
-
--.prependTo()
-
--.remove()
-
--.replaceAll()
-
--.replaceWith()
-
--.text()
-
--.unwrap()
-
--.wrap()
-
--.wrapAll()
-
--.wrapInner()
+<ul>
+  <li>.after()</li>
+  <li>.append()</li>
+  <li>.appendTo()</li>
+  <li>.before()</li>
+  <li>.clone()</li>
+  <li>.detach()</li>
+  <li>.empty()</li>
+  <li>.html()</li>
+  <li>.insertAfter()</li>
+  <li>.insertBefore()</li>
+  <li>.prepend()</li>
+  <li>.prependTo()</li>
+  <li>.remove()</li>
+  <li>.replaceAll()</li>
+  <li>.replaceWith()</li>
+  <li>.text()</li>
+  <li>.unwrap()</li>
+  <li>.wrap()</li>
+  <li>.wrapAll()</li>
+  <li>.wrapInner()</li>
+</ul>
 
 <h4>Events</h4>
 
@@ -6285,93 +6286,76 @@ methods include:
 
 <h4>Browser Events</h4>
 
--.resize()
-
--.scroll()
+<ul>
+  <li>.resize()</li>
+  <li>.scroll()</li>
+</ul>
 
 <h4>Document Loading</h4>
 
--.ready()
+<ul>
+  <li>.ready()</li>
+</ul>
 
 <h4>Event Handler Attachment</h4>
 
--.off()
-
--.on()
-
--.one()
-
--jQuery.proxy()
-
--.trigger()
-
--.triggerHandler()
-
--.unbind()
-
--.undelegate()
+<ul>
+  <li>.off()</li>
+  <li>.on()</li>
+  <li>.one()</li>
+  <li>jQuery.proxy()</li>
+  <li>.trigger()</li>
+  <li>.triggerHandler()</li>
+  <li>.unbind()</li>
+  <li>.undelegate()</li>
+</ul>
 
 <h4>Event Object</h4>
 
--event.currentTarget
-
--event.preventDefault()
-
--event.stopPropagation()
-
--event.target
-
--event.type
+<ul>
+  <li>event.currentTarget</li>
+  <li>event.preventDefault()</li>
+  <li>event.stopPropagation()</li>
+  <li>event.target</li>
+  <li>event.type</li>
+</ul>
 
 <h4>Form Events</h4>
 
--.blur()
-
--.change()
-
--.focus()
-
--.select()
-
--.submit()
+<ul>
+  <li>.blur()</li>
+  <li>.change()</li>
+  <li>.focus()</li>
+  <li>.select()</li>
+  <li>.submit()</li>
+</ul>
 
 <h4>Keyboard Events</h4>
 
--.focusin()
-
--.focusout()
-
--.keydown()
-
--.keypress()
-
--.keyup()
+<ul>
+  <li>.focusin()</li>
+  <li>.focusout()</li>
+  <li>.keydown()</li>
+  <li>.keypress()</li>
+  <li>.keyup()</li>
+</ul>
 
 <h4>Mouse Events</h4>
 
--.click()
-
--.dblclick()
-
--.focusin()
-
--.focusout()
-
--.hover()
-
--.mousedown()
-
--.mouseenter()
-
--.mouseleave()
-
--.mousemove()
-
--.mouseout()
-
--.mouseover()
-
--.mouseup()
+<ul>
+  <li>.click()</li>
+  <li>.dblclick()</li>
+  <li>.focusin()</li>
+  <li>.focusout()</li>
+  <li>.hover()</li>
+  <li>.mousedown()</li>
+  <li>.mouseenter()</li>
+  <li>.mouseleave()</li>
+  <li>.mousemove()</li>
+  <li>.mouseout()</li>
+  <li>.mouseover()</li>
+  <li>.mouseup()</li>
+</ul>
 
 <h4>Effects</h4>
 
@@ -6495,47 +6479,41 @@ animation is complete.
 
 <h4>Basic Effects
 
--.hide()
-
--.show()
-
--.toggle()
+<ul>
+  <li>-.hide()</li>
+  <li>-.show()</li>
+  <li>-.toggle()</li>
+</ul>
 
 <h4>Custom Effects</h4>
 
--.animate()
-
--.clearQueue()
-
--.delay()
-
--.dequeue()
-
--jQuery.fx.interval
-
--jQuery.fx.off
-
--.queue()
-
--.stop()
+<ul>
+  <li>.animate()</li>
+  <li>.clearQueue()</li>
+  <li>.delay()</li>
+  <li>.dequeue()</li>
+  <li>jQuery.fx.interval</li>
+  <li>jQuery.fx.off</li>
+  <li>.queue()</li>
+  <li>.stop()</li>
+</ul>
 
 <h4>Fading Effects</h4>
 
--.fadeIn()
-
--.fadeOut()
-
--.fadeTo()
-
--.fadeToggle()
+<ul>
+  <li>.fadeIn()</li>
+  <li>.fadeOut()</li>
+  <li>.fadeTo()</li>
+  <li>.fadeToggle()</li>
+</ul>
 
 <h4>Sliding Effects</h4>
 
--.slideDown()
-
--.slideToggle()
-
--.slideUp()
+<ul>
+  <li>-.slideDown()</li>
+  <li>-.slideToggle()</li>
+  <li>-.slideUp()</li>
+</ul>
 
 <h4>Slide Demo</h4>
 
@@ -6549,7 +6527,8 @@ animation is complete.
  5 
 ```
 
-**JavaScript**
+<details>
+  <summary>JavaScript</summary>
 
 ```
  1  $('.panel-tab').on('click', function(event){  
@@ -6565,9 +6544,11 @@ animation is complete.
  11 
 ```
 
-Demo
+</details>
 
-Tabs Demo
+<h4>Demo</h4>
+
+<h4>Tabs Demo</h4>
 
 <h4>HTML</h4>
 
@@ -6583,7 +6564,8 @@ Tabs Demo
  9  
 ```
 
-**JavaScript**
+<details>
+  <summary>JavaScript</summary>
 
 ```
  1  // Show the first tab by default
@@ -6592,14 +6574,16 @@ Tabs Demo
  4  $('.tabs-nav li:first').addClass('tab-active');
  5  // Change tab class and display content 
  6  $('.tabs-nav a').on('click', function(event){  
- 7  event.preventDefault();
- 8  $('.tabs-nav li').removeClass('tab-active');
- 9  $(this).parent().addClass('tab-active');
- 10  $('.tabs-stage div').hide(); 
- 11  $($(this).attr('href')).show();
- 12  });
+ 7    event.preventDefault();
+ 8    $('.tabs-nav li').removeClass('tab-active');
+ 9    $(this).parent().addClass('tab-active');
+ 10   $('.tabs-stage div').hide(); 
+ 11   $($(this).attr('href')).show();
+ 12 });
  13  
 ```
+
+</details>
 
 <h4>Demo</h4>
 
@@ -6743,10 +6727,10 @@ discuss how you can change this default point of rotation.
 
 ```
  1  .box-1 {
- 2  transform: rotate(20deg);
+ 2    transform: rotate(20deg);
  3  } 
  4  .box-2 {
- 5  transform: rotate(-55deg);  
+ 5    transform: rotate(-55deg);  
  6  } 
  7 
 ```
@@ -6779,10 +6763,10 @@ value greater than or equal to 1.01 makes an element appear larger.
 
 ```
  1  .box-1 {
- 2  transform: scale(.75);
+ 2    transform: scale(.75);
  3  } 
  4  .box-2 {
- 5  transform: scale(1.25);  
+ 5    transform: scale(1.25);  
  6  } 
  7 
 ```
@@ -6810,13 +6794,13 @@ comma, and then the y axis value.
 
 ```
  1  .box-1 {
- 2  transform: scaleX(.5);
+ 2    transform: scaleX(.5);
  3  } 
  4  .box-2 {
- 5  transform: scaleY(1.15); 
+ 5    transform: scaleY(1.15); 
  6  } 
  7  .box-3 {
- 8  transform: scale(.5, 1.15); 
+ 8    transform: scale(.5, 1.15); 
  9  } 
  10  
 ```
@@ -6855,13 +6839,13 @@ position.
 
 ```
  1  .box-1 {
- 2  transform: translateX(-10px);  
+ 2    transform: translateX(-10px);  
  3  } 
  4  .box-2 {
- 5  transform: translateY(25%); 
+ 5    transform: translateY(25%); 
  6  } 
  7  .box-3 {
- 8  transform: translate(-10px, 25%); 
+ 8    transform: translate(-10px, 25%); 
  9  } 
  10 
 ```
@@ -6895,13 +6879,13 @@ apply here.
 
 ```
  1  .box-1 {
- 2  transform: skewX(5deg);  
+ 2    transform: skewX(5deg);  
  3  } 
  4  .box-2 {
- 5  transform: skewY(-20deg);
+ 5    transform: skewY(-20deg);
  6  } 
  7  .box-3 {
- 8  transform: skew(5deg, -20deg); 
+ 8    transform: skew(5deg, -20deg); 
  9  } 
  10 
 ```
@@ -6955,39 +6939,42 @@ transforms, try your hand at using the matrix property.
 
 ```
  1  <div class="cube"> 
- 2  <figure class="side top">1</figure>  
- 3  <figure class="side left">2</figure> 
- 4  <figure class="side right">3</figure>
+ 2    <figure class="side top">1</figure>  
+ 3    <figure class="side left">2</figure> 
+ 4    <figure class="side right">3</figure>
  5  </div> 
  6  
 ```
 
-<h4>CSS</h4>
+<details>
+  <summary>CSS</summary>
 
 ```
  1  .cube {  
- 2  position: relative; 
+ 2    position: relative; 
  3  }  
  4  .side {  
- 5  height: 95px; 
- 6  position: absolute; 
- 7  width: 95px;  
+ 5    height: 95px; 
+ 6    position: absolute; 
+ 7    width: 95px;  
  8  }  
  9  .top {
- 10  background: #9acc53;
- 11  transform: rotate(-45deg) skew(15deg, 15deg); 
- 12  }  
- 13  .left {  
- 14  background: #8ec63f;
- 15  transform: rotate(15deg) skew(15deg, 15deg) translate(-50%, 100%); 
- 16  }  
- 17  .right { 
- 18  background: #80b239;
- 19  transform: rotate(-15deg) skew(-15deg, -15deg) translate(50%,
- 10  100%);
- 21  }  
+ 10   background: #9acc53;
+ 11   transform: rotate(-45deg) skew(15deg, 15deg); 
+ 12 }  
+ 13 .left {  
+ 14   background: #8ec63f;
+ 15   transform: rotate(15deg) skew(15deg, 15deg) translate(-50%, 100%); 
+ 16 }  
+ 17 .right { 
+ 18   background: #80b239;
+ 19   transform: rotate(-15deg) skew(-15deg, -15deg) translate(50%,
+ 10   100%);
+ 21 }  
  22  
 ```
+
+</details>
 
 <h4>Demo</h4>
 
@@ -7018,27 +7005,30 @@ the origin to 20 pixels across and 50 pixels down the element.
  5 
 ```
 
-<h4>CSS</h4>
+<details>
+  <summary>CSS</summary>
 
 ```
  1  .box-1 {
- 2  transform: rotate(15deg);
- 3  transform-origin: 0 0;
+ 2    transform: rotate(15deg);
+ 3    transform-origin: 0 0;
  4  } 
  5  .box-2 {
- 6  transform: scale(.5); 
- 7  transform-origin: 100% 100%;
+ 6    transform: scale(.5); 
+ 7    transform-origin: 100% 100%;
  8  } 
  9  .box-3 {
- 1  transform: skewX(20deg); 
- 0  transform-origin: top left; 
- 1  } 
- 1  .box-4 {
- 2  transform: scale(.75) translate(-10px, -10px);  
- 3  transform-origin: 20px 50px;
- 1  } 
- 4 
+ 10   transform: skewX(20deg); 
+ 11   transform-origin: top left; 
+ 12  } 
+ 13 .box-4 {
+ 14   transform: scale(.75) translate(-10px, -10px);  
+ 15   transform-origin: 20px 50px;
+ 16 } 
+ 17 
 ```
+
+</details>
 
 <h4>Transform Origin Demo</h4>
 
@@ -7108,10 +7098,10 @@ the perspective property on their direct parent element.
 
 ```
  1  .group {
- 2  perspective: 200px;
+ 2    perspective: 200px;
  3  } 
  4  .box {  
- 5  transform: rotateX(45deg);  
+ 5    transform: rotateX(45deg);  
  6  } 
  7 
 ```
@@ -7169,41 +7159,47 @@ of a transform determines the coordinates used to calculate the change
 of a transform, while the origin of a perspective identifies the
 coordinates of the vanishing point of a transform.
 
-<h4>HTML</h4>
+<details>
+  <summary>HTML</summary>
 
 ```
  1  <div class="original original-1">
- 2  <figure class="box">Box 1</figure>
+ 2    <figure class="box">Box 1</figure>
  3  </div>
  4  <div class="original original-2">
- 5  <figure class="box">Box 2</figure>
+ 5    <figure class="box">Box 2</figure>
  6  </div>
  7  <div class="original original-3">
- 8  <figure class="box">Box 3</figure>
+ 8    <figure class="box">Box 3</figure>
  9  </div>
  10  
 ```
 
-<h4>CSS</h4>
+</details>
+
+<details>
+  <summary>CSS</summary>
 
 ```
  1  .original {
- 2  perspective: 200px;
+ 2    perspective: 200px;
  3  } 
  4  .box {  
- 5  transform: rotateX(45deg);  
+ 5    transform: rotateX(45deg);  
  6  } 
  7  .original-1 {
- 8  perspective-origin: 0 0; 
+ 8    perspective-origin: 0 0; 
  9  } 
- 10  .original-2 {
- 11  perspective-origin: 75% 75%;
+ 10 .original-2 {
+ 11   perspective-origin: 75% 75%;
  12 } 
  13  .original-3 {
- 14  perspective-origin: 20px 40px; 
+ 14   perspective-origin: 20px 40px; 
  15 } 
  16 
 ```
+
+</details>
 
 <h4>Perspective Origin Demo</h4>
 
@@ -7242,20 +7238,23 @@ rotate the element counterclockwise.
  4 
 ```
 
-<h4>CSS</h4>
+<details>
+  <summary>CSS</summary>
 
 ```
  1  .box-1 {
- 2  transform: perspective(200px) rotateX(45deg);
+ 2    transform: perspective(200px) rotateX(45deg);
  3  } 
  4  .box-2 {
- 5  transform: perspective(200px) rotateY(45deg);
+ 5    transform: perspective(200px) rotateY(45deg);
  6  } 
  7  .box-3 {
- 8  transform: perspective(200px) rotateZ(45deg);
+ 8    transform: perspective(200px) rotateZ(45deg);
  9  } 
  10 
 ```
+
+</details>
 
 <h4>3D Rotate Demo</h4>
 
@@ -7364,29 +7363,32 @@ lie flat on the two-dimensional plane.
 
 ```
  1  <div class="rotate three-d">  
- 2  <figure class="box">Box 1</figure>
+ 2    <figure class="box">Box 1</figure>
  3  </div>
  4  <div class="rotate"> 
- 5  <figure class="box">Box 2</figure>
+ 5    <figure class="box">Box 2</figure>
  6  </div>
  7 
 ```
 
-<h4>CSS</h4>
+<details>
+  <summary>CSS</summary>
 
 ```
  1  .rotate {  
- 2  transform: perspective(200px) rotateY(45deg);
+ 2    transform: perspective(200px) rotateY(45deg);
  3  } 
  4  .three-d { 
- 5  transform-style: preserve-3d;  
+ 5    transform-style: preserve-3d;  
  6  } 
  7  .box {  
- 8  transform: rotateX(15deg) translateZ(20px);  
- 9  transform-origin: 0 0;
- 10  } 
+ 8    transform: rotateX(15deg) translateZ(20px);  
+ 9    transform-origin: 0 0;
+ 10 } 
  11 
 ```
+
+</details>
 
 <h4>Transform Style Demo</h4>
 
@@ -7437,7 +7439,8 @@ using [animations](https://css-tricks.com/almanac/properties/b/backface-visibil
 
 <h4>3D Cube Demo</h4>
 
-<h4>HTML</h4>
+<details>
+  <summary>HTML</summary>
 
 ```
  1  <div class="cube-container">
@@ -7453,7 +7456,10 @@ using [animations](https://css-tricks.com/almanac/properties/b/backface-visibil
  11 
 ```
 
-<h4>CSS</h4>
+</details>
+
+<details>
+  <summary>CSS</summary>
 
 ```
  1  .cube-container {
@@ -7497,6 +7503,7 @@ using [animations](https://css-tricks.com/almanac/properties/b/backface-visibil
  40 
 ```
 
+</details>
 
 <h3>Demo</h3>
 
@@ -7575,6 +7582,9 @@ transition, with the first three are the most popular.
 In the example below the box will change its background color over the
 course of 1 second in a linear fashion.
 
+<details>
+  <summary>CSS</summary>
+
 ```
  1  .box {
  2    background: #2db34a;
@@ -7588,6 +7598,8 @@ course of 1 second in a linear fashion.
  10 
 ```
 
+</details>
+
 <h4>Transition Demo</h4>
 
 <h4>Vendor Prefixes</h4>
@@ -7599,6 +7611,9 @@ support across all browsers, use vendor prefixes.
 
 For reference, the prefixed version of the code above would look like
 the following.
+
+<details>
+  <summary>CSS</summary>
 
 ```
  1  .box {
@@ -7621,6 +7636,8 @@ the following.
  18 } 
 ```
 
+</details>
+
 <h4>Transitional Property</h4>
 
 The transition-property property determines exactly what properties will
@@ -7642,6 +7659,9 @@ separated within the transition-property value. Additionally, the
 keyword value all may be used to transition all properties of an
 element.
 
+<details>
+  <summary>CSS</summary>
+
 ```
  1  .box {  
  2  background: #2db34a;  
@@ -7656,6 +7676,7 @@ element.
  11 } 
  12 
 ```
+</details>
 
 <h4>Transition Property Demo</h4>
 
@@ -7669,73 +7690,42 @@ The display property, for example, may not be transitioned as it does
 not have any midpoint. A handful of the more popular transitional
 properties include the following.
 
--background-color
-
--background-position
-
--border-color
-
--border-width
-
--border-spacing
-
--bottom
-
--clip
-
--color
-
--crop
-
--font-size
-
--font-weight
-
--height
-
--left
-
--letter-spacing
-
--line-height
-
--margin
-
--max-height
-
--max-width
-
--min-height
-
--min-width
-
--opacity
-
--outline-color
-
--outline-offset
-
--outline-width
-
--padding
-
--right
-
--text-indent
-
--text-shadow
-
--top
-
--vertical-align
-
--visibility
-
--width
-
--word-spacing
-
--z-index
+<ul>
+  <li>background-color</li>
+  <li>background-position</li>
+  <li>border-color</li>
+  <li>border-width</li>
+  <li>border-spacing</li>
+  <li>bottom</li>
+  <li>clip</li>
+  <li>color</li>
+  <li>crop</li>
+  <li>font-size</li>
+  <li>font-weight</li>
+  <li>height</li>
+  <li>left</li>
+  <li>letter-spacing</li>
+  <li>line-height</li>
+  <li>margin</li>
+  <li>max-height</li>
+  <li>max-width</li>
+  <li>min-height</li>
+  <li>min-width</li>
+  <li>opacity</li>
+  <li>outline-color</li>
+  <li>outline-offset</li>
+  <li>outline-width</li>
+  <li>padding</li>
+  <li>right</li>
+  <li>text-indent</li>
+  <li>text-shadow</li>
+  <li>top</li>
+  <li>vertical-align</li>
+  <li>visibility</li>
+  <li>width</li>
+  <li>word-spacing</li>
+  <li>z-index</li>
+</ul>
 
 <h4>Transition Duration</h4>
 
@@ -7757,6 +7747,9 @@ If multiple properties are being transitioned with only one duration
 value declared, that one value will be the duration of all the
 transitioned properties.
 
+<details>
+  <summary>CSS</summary>
+
 ```
  1  .box {  
  2  background: #2db34a;  
@@ -7771,6 +7764,8 @@ transitioned properties.
  11  } 
  12 
 ```
+
+</details>
 
 <h4>Transition Duration Demo</h4>
 
@@ -7801,6 +7796,9 @@ When transitioning multiple properties, you can identify multiple timing
 functions. These timing function values, as with other transition
 property values, may be declared as comma separated values.
 
+<details>
+  <summary>CSS</summary>
+
 ```
  1  .box {
  2  background: #2db34a;
@@ -7816,6 +7814,8 @@ property values, may be declared as comma separated values.
  12 
 ```
 
+</details>
+
 <h4>Transition Timing Demo</h4>
 
 <h4>Transition Delay</h4>
@@ -7826,6 +7826,9 @@ The delay sets a time value, seconds or milliseconds, that determines
 how long a transition should be stalled before executing. As with all
 other transition properties, to delay numerous transitions, each delay
 can be declared as comma separated values.
+
+<details>
+  <summary>CSS</summary>
 
 ```
  1  .box {
@@ -7842,6 +7845,8 @@ can be declared as comma separated values.
  12 }
  13  
 ```
+
+</details>
 
 <h4>Transition Delay Demo</h4>
 
@@ -7860,6 +7865,9 @@ To set numerous transitions at once, set each individual group of
 transition values, then use a comma to separate each additional group of
 transition values.
 
+<details>
+  <summary>CSS</summary>
+
 ```
  1  .box {  
  2  background: #2db34a;  
@@ -7870,8 +7878,10 @@ transition values.
  7  color: #ff7b29; 
  8  border-radius: 50%;
  9  } 
- 1 
+ 10 
 ```
+
+</details>
 
 <h4>Shorthand Transitions Demo</h4>
 
@@ -7884,7 +7894,8 @@ transition values.
  2  
 ```
 
-<h4>CSS</h4>
+<details>
+  <summary>CSS</summary>
 
 ```
  1  button { 
@@ -7907,6 +7918,8 @@ transition values.
  18  
 ```
 
+</details>
+
 <h4>Demo</h4>
 
 <h4>Card Flip</h4>
@@ -7923,7 +7936,8 @@ transition values.
  7  
 ```
 
-<h4>CSS</h4>
+<details>
+  <summary>CSS</summary>
 
 ```
  1  .card-container {
@@ -7954,6 +7968,8 @@ transition values.
  26  
 ```
 
+</details>
+
 <h4>Demo</h4>
 
 <h4>Animations</h4>
@@ -7972,6 +7988,9 @@ use the @keyframes rule. The @keyframes rule includes the animation
 name, any animation breakpoints, and the properties intended to be
 animated.
 
+<details>
+  <summary>CSS</summary>
+
 ```
  1  @keyframes slide {
  2    0% {
@@ -7989,6 +8008,8 @@ animated.
  14 }
  15 
 ```
+
+</details>
 
 <h4>Vendor Prefixing the Keyframe Rule</h4>
 
@@ -8083,40 +8104,43 @@ the left, however only when hovering over the stage.
  4 
 ```
 
-<h4>CSS</h4>
+<details>
+  <summary>CSS</summary>
 
 ```
- 1  &#0064;keyframes slide {
- 2  0% {
- 3  left: 0;
- 4  top: 0;
- 5  }
- 6  50% {
- 7  left: 244px;
- 8  top: 100px;
- 9  }
- 10  100% {
- 11  left: 488px; 
- 12  top: 0; 
- 13  } 
- 14   } 
+ 1   &#0064;keyframes slide {
+ 2     0% {
+ 3       left: 0;
+ 4       top: 0;
+ 5     }
+ 6     50% {
+ 7       left: 244px;
+ 8       top: 100px;
+ 9     }
+ 10    100% {
+ 11      left: 488px; 
+ 12      top: 0; 
+ 13    } 
+ 14  } 
  15  .stage {
- 16  height: 150px;  
- 17  position: relative;
+ 16    height: 150px;  
+ 17    position: relative;
  18  } 
  19  .ball { 
- 20  height: 50px;
- 21  position: absolute;
- 22  width: 50px; 
+ 20    height: 50px;
+ 21    position: absolute;
+ 22    width: 50px; 
  23  } 
  24  .stage:hover .ball {  
- 25  animation-name: slide;
- 26  animation-duration: 2s;  
- 27  animation-timing-function: ease-in-out; 
- 28  animation-delay: .5s; 
+ 25    animation-name: slide;
+ 26    animation-duration: 2s;  
+ 27    animation-timing-function: ease-in-out; 
+ 28    animation-delay: .5s; 
  29  } 
  30 
 ```
+
+</details>
 
 <h4>Animation Demo</h4>
 
@@ -8139,16 +8163,21 @@ the infinite keyword. Using an integer will repeat the animation as many
 times as specified, while the infinite keyword will repeat the animation
 indefinitely in a never ending fashion.
 
+<details>
+  <summary>Example, Animation Iteration</summary>
+
 ```
  1  .stage:hover .ball {  
- 2  animation-name: slide;
- 3  animation-duration: 2s;  
- 4  animation-timing-function: ease-in-out; 
- 5  animation-delay: .5s; 
- 6  animation-iteration-count: infinite; 
+ 2    animation-name: slide;
+ 3    animation-duration: 2s;  
+ 4    animation-timing-function: ease-in-out; 
+ 5    animation-delay: .5s; 
+ 6    animation-iteration-count: infinite; 
  7  }
  8  
 ```
+
+</details>
 
 <h4>Animation Iteration Demo</h4>
 
@@ -8183,17 +8212,22 @@ the alternate and reverse values, running an animation backwards then
 forwards. The alternate-reverse value starts at 100% running to 0% and
 then back to 100% again.
 
+<details>
+  <summary>Example, Alternate Reverse</summary>
+
 ```
  1  .stage:hover .ball {  
- 2  animation-name: slide;
- 3  animation-duration: 2s;  
- 4  animation-timing-function: ease-in-out; 
- 5  animation-delay: .5s; 
- 6  animation-iteration-count: infinite; 
- 7  animation-direction: alternate;
+ 2    animation-name: slide;
+ 3    animation-duration: 2s;  
+ 4    animation-timing-function: ease-in-out; 
+ 5    animation-delay: .5s; 
+ 6    animation-iteration-count: infinite; 
+ 7    animation-direction: alternate;
  8  }
  9  
 ```
+
+</details>
 
 <h4>Animation Direction Demo</h4>
 
@@ -8210,6 +8244,9 @@ In the example below the animation-play-state property is set
 to paused when making the stage active by clicking on it. Notice how the
 animation will temporarily pause until you let up on the mouse.
 
+<details>
+  <summary>Example, Animation Play State</summary>
+
 ```
  1  .stage:hover .ball {  
  2  animation-name: slide;
@@ -8224,6 +8261,8 @@ animation will temporarily pause until you let up on the mouse.
  11 } 
  12 
 ```
+
+</details>
 
 <h4>Animation Play State Demo</h4>
 
@@ -8254,19 +8293,24 @@ the animation-direction property value.
 Lastly, the both value will apply the behaviors from both
 the forwards and backwards values.
 
+<details>
+  <summary>Example, Animation</summary>
+
 ```
  1  .stage:hover .ball {  
- 2  animation-name: slide;
- 3  animation-duration: 2s;  
- 4  animation-timing-function: ease-in-out; 
- 5  animation-delay: .5s; 
- 6  animation-fill-mode: forwards; 
+ 2    animation-name: slide;
+ 3    animation-duration: 2s;  
+ 4    animation-timing-function: ease-in-out; 
+ 5    animation-delay: .5s; 
+ 6    animation-fill-mode: forwards; 
  7  } 
  8  .stage:active .ball { 
- 9  animation-play-state: paused;  
+ 9    animation-play-state: paused;  
  1  } 
  0 
 ```
+
+</details>
 
 <h4>Animation Fill Mode Demo</h4>
 
@@ -8388,7 +8432,7 @@ In this case the conditional comment looks like <!&#45;&#45;]if lt IE
  4 
 ```
 
-<h4>The Difference Between a Shiv & a Shim</h4>
+<h4>The Difference Between a Shiv &amp; a Shim</h4>
 
 Chances are you may have heard of both the HTML5 *Shiv* and
 HTML5 *Shim*, and wondered what the difference, if any, may be. Oddly
@@ -8412,10 +8456,11 @@ the display: block; declaration.
  9  nav,
  10 section,
  11 summary {
- 12 display: block;
+ 12   display: block;
  13 }
  14 
 ```
+
 Lastly, Internet Explorer 8 and 9 do not correctly define styles for a
 few HTML5 inline-block level elements. As before, these styles will need
 to be explicitly stated. After which, all versions of Internet Explorer
@@ -8477,43 +8522,47 @@ When deciding to use feature detection, it is important to keep styles
 organized and performance in mind. Avoid duplicating any code or making
 additional HTTP requests when possible.
 
-```
- 1  button {
- 2  border: 0; 
- 3  color: #fff; 
- 4  cursor: pointer;
- 5  font-size: 14px;
- 6  font-weight: 600;  
- 7  margin: 0; 
- 8  outline: 0;
- 9  } 
- 1  /* With CSS Gradient Styles */  
- .cssgradients button {
- 1  border: 1px solid #0080c2;  
- 1  background: linear-gradient(#00a2f5, #0087cc);  
- border-radius: 6px;
- 3  padding: 15px 30px;
- 1  } 
- .cssgradients button:hover {
- 5  background: linear-gradient(#1ab1ff, #009beb);  
- 1  } 
- .cssgradients button:active {  
- 7  box-shadow: inset 0 1px 10px rgba(255, 255, 255, .5); 
- 1  } 
- /* Without CSS Gradient Styles */  
- 9  .no-cssgradients button {
- 2  background: transparent url("button.png") 0 0 no-repeat;  
- padding: 16px 31px;
- 1  } 
- 2  .no-cssgradients button:hover {
- background-position: 0 -49px;  
- 3  } 
- 2  .no-cssgradients button:active {  
- background-position: 0 -98px;  
- 5  } 
- 2 
+<details>
+  <summary>Conditionally Applying CSS Styles</summary>
 
 ```
+ 1  button {
+ 2  border: 0;
+ 3  color: #fff;
+ 4  cursor: pointer;
+ 5  font-size: 14px;
+ 6  font-weight: 600;
+ 7  margin: 0;
+ 8  outline: 0;
+ 9  }
+ 10  /* With CSS Gradient Styles */
+ 11  .cssgradients button {
+ 12  border: 1px solid #0080c2;
+ 13  background: linear-gradient(#00a2f5, #0087cc);
+ 14   border-radius: 6px;
+ 15  padding: 15px 30px;
+ 16  }
+ 17  .cssgradients button:hover {
+ 18  background: linear-gradient(#1ab1ff, #009beb);
+ 19  }
+ 20  .cssgradients button:active {
+ 21  box-shadow: inset 0 1px 10px rgba(255, 255, 255, .5);
+ 22  }
+ 23  /* Without CSS Gradient Styles */
+ 24  .no-cssgradients button {
+ 25  background: transparent url("button.png") 0 0 no-repeat;
+ 26   padding: 16px 31px;
+ 27  }
+ 28  .no-cssgradients button:hover {
+ 29   background-position: 0 -49px;
+ 30  }
+ 31  .no-cssgradients button:active {
+ 32     background-position: 0 -98px;
+ 33  }
+ 34 
+```
+
+</details>
 
 <h4>Feature Detection Demo</h4>
 
@@ -8551,6 +8600,9 @@ storage support. If local storage is supported 
 the storage.js file using the getScript method, and if local storage is not supported jQuery
 is used the storage-polyfill.js file using the getScript method.
 
+<details>
+  <summary>jQuery Conditional Load</summary>
+
 ```
  1  $(document).ready(function() {
  2  if (Modernizr.localstorage) {  
@@ -8561,8 +8613,10 @@ is used the storage-polyfill.js file using the getScript method.
  7  jQuery.getScript('storage-polyfill.js');
  8  } 
  9  });  
- 1 
+ 10 
 ```
+
+</details>
 
 <h4>Conditionally Loading Based on Media Queries</h4>
 
@@ -8643,7 +8697,14 @@ debugging code. One of the best ways to boot up multiple versions of
 Internet Explorer is by using multiple virtual machines, each with a
 different version of Internet Explorer.
 
-![VirtualBox](./images/image014.png)
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~ 14. virtualbox (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--
+<p align="center" width="100%">
+  <img src="./images/image014.png"
+ style="width:40%"
+ alt="VirtualBox." />
+</p>
 
 <h6><b>Fig. 9.</b> VirtualBox running on Mac OS X with Internet Explorer
 versions 6 through 9.</h6>
@@ -8663,9 +8724,14 @@ unfortunately versions 7 and below do not. The web inspector and all of
 the other debugging tools we've grown to love are not readily available
 within Internet Explorer 7 and below.
 
-![VirtualBox](./images/image015.png)
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~ 15. virtualbox (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="center" width="100%">
+  <img src="./images/image015.png"
+ style="width:40%"
+ alt="VirtualBox." />
 
-<h6><b>Fig. 9</b> Internet Explorer 7 running inside of a virtual machine with the Firebug Lite
+<h6 style="center">Fig. 9 Internet Explorer 7 running inside of a virtual machine with the Firebug Lite
 bookmarklet open for debugging.</h6>
 
 <h4>Resources & Links</h4>
@@ -8762,13 +8828,12 @@ across different platforms and devices.
 It's safe to say semantics are important, and here to stay. To briefly
 recap, semantics provide:
 
--Unambiguous, shared meaning within content
-
--Accessibility
-
--Search and globalization
-
--Interoperability
+<ul>
+  <li>Unambiguous, shared meaning within content</li>
+  <li>Accessibility</li>
+  <li>Search and globalization</li>
+  <li>Interoperability</li>
+</ul>
 
 <h4>Structural Semantics</h4>
 
@@ -8838,7 +8903,6 @@ identify significantly important text.
  3  <!&#45;&#45; Stylistically offset &#45;&#45;>
  4  This recipe calls for <b>bacon</b> and <b>baconnaise</b>.
  5  
- 6  
 ```
 
 <h4>Bolding Text Demo</h4>
@@ -8865,7 +8929,6 @@ importance.
  3  <!&#45;&#45; Alternative voice or tone &#45;&#45;>  
  4  The name <i>Shay</i> means a gift.  
  5 
- 6 
 ```
 
 <h4>Italicizing Text Demo</h4>
@@ -8908,6 +8971,9 @@ thus have become a standard design practice. Underlining text that is
 not a hyperlink can confuse users and cause quite a bit of frustration.
 Use underlines with caution.
 
+<details>
+  <summary>Example, Underline</summary>
+
 ```
  1  <!&#45;&#45; Added to the document &#45;&#45;>
  2  <ins cite="http://learn.shayhowe.com" datetime="2012-07-01">
@@ -8917,6 +8983,8 @@ Use underlines with caution.
  6  <u>Urushihara Yuuji</u> won <u>Sasuke 27</u>. 
  7 
 ```
+
+</details>
 
 <h4>Underlining Text Demo</h4>
 
@@ -8936,6 +9004,9 @@ document.
 
 The s element identifies text that is no longer accurate or relevant.
 
+<details>
+  <summary>Example, Striking Text</summary>
+  
 ```
  1  <!&#45;&#45; Deleted from the document &#45;&#45;>  
  2  I am an avid cyclist, <del cite="http://shayhowe.com" 
@@ -8945,6 +9016,8 @@ The s element identifies text that is no longer accurate or relevant.
  6  <s>$24.99</s> $19.99  
  7 
 ```
+
+</details>
 
 <h4>Striking Text Demo</h4>
 
@@ -8996,9 +9069,9 @@ presentational purposes.
  6 
 ```
 
-<h4>Sub & Superscripts Demo</h4>
+<h4>Sub &amp; Superscripts Demo</h4>
 
-<h4>Meter & Progress</h4>
+<h4>Meter &amp; Progress</h4>
 
 To gauge scale or indicate progress the meter and progress elements
 should be used. The meter element is used to measure a fixed value, one
@@ -9020,6 +9093,9 @@ attributes that may be applied to the progress element, value and max.
 The value attributes indicates where the progress currently stands and
 the max attribute indicates what progress needs to be reached.
 
+<details>
+  <summary>Example, Meter &amp; Progress</summary>
+
 ```
  1  <!&#45;&#45; Meter &#45;&#45;> 
  2  <meter value="7" max="10">7 stars</meter>  
@@ -9032,9 +9108,11 @@ the max attribute indicates what progress needs to be reached.
  9 
 ```
 
-<h4>Meter & Progress Demo</h4>
+</details>
 
-<h4>Time & Address</h4>
+<h4>Meter &amp; Progress Demo</h4>
+
+<h4>Time &amp; Address</h4>
 
 Representing time and addresses in HTML can be accomplished using
 the time and address elements respectively. The time element may be used
@@ -9049,6 +9127,9 @@ including a physical address as well as a website or email address. It
 should not include any further information than the contact information,
 and other content needs to be placed outside of the address element.
 
+<details>
+  <summary>Example, Time &amp; Address</summary>
+  
 ```
  1  <!&#45;&#45; Time &#45;&#45;>  
  2  <time>2011-08-24</time> 
@@ -9065,6 +9146,8 @@ and other content needs to be placed outside of the address element.
  13 </address> 
  14 
 ```
+
+</details>
 
 <h4>Time & Address Demo</h4>
 
@@ -9122,7 +9205,6 @@ in a legible fashion.
  5  <!&#45;&#45; Word break &#45;&#45;>  
  6  http://shay<wbr>howe.com  
  7 
- 8 
 ```
 
 <h4>Line & Word Breaks Demo</h4>
@@ -9182,7 +9264,6 @@ name.
  3  <!&#45;&#45; With a value &#45;&#45;>
  4  <a href="twitter-logo.png" download="Logo">Twitter Logo</a>  
  5 
- 6 
 ```
 
 <h4>Download Attribute Demo</h4>
@@ -9204,29 +9285,20 @@ the rel attribute value of copyright should be used.
 A few [popular](http://microformats.org/wiki/existing-rel-values) rel attribute
 values include:
 
--alternate
-
--author
-
--bookmark
-
--help
-
--license
-
--next
-
--nofollow
-
--noreferrer
-
--prefetch
-
--prev
-
--search
-
--tag
+<ul>
+  <li>alternate</li>
+  <li>author</li>
+  <li>bookmark</li>
+  <li>help</li>
+  <li>license</li>
+  <li>next</li>
+  <li>nofollow</li>
+  <li>noreferrer</li>
+  <li>prefetch</li>
+  <li>prev</li>
+  <li>search</li>
+  <li>tag</li>
+</ul>
 
 <h4>Microdata</h4>
 
@@ -9338,6 +9410,9 @@ might look like. Please notice, the person item type is used, as is the
 postal address item type within it. Also, please notice the different
 item properties and their corresponding values.
 
+<details>
+  <summary>Example, Person Microdata</summary>
+  
 ```
  1  <section itemscope itemtype="http://schema.org/Person"> 
  2    <strong itemprop="name">Shay Howe</strong>
@@ -9356,6 +9431,8 @@ item properties and their corresponding values.
  15 
 ```
 
+</details>
+
 <h4>Person Microdata Demo</h4>
 
 Please keep in mind, this code is for an individual person. Should you
@@ -9370,6 +9447,9 @@ however it uses
 the [event](http://schema.org/Event) microdata library
 instead. Common property similarities between the two can be identified,
 as can some of the nested item types.
+
+<details>
+  <summary>Example, Event Microdata</summary>
 
 ```
  1  <section itemscope itemtype="http://schema.org/Event">  
@@ -9390,6 +9470,8 @@ as can some of the nested item types.
  16 </section> 
  17 
 ```
+
+</details>
 
 <h4>Event Microdata Demo</h4>
 
@@ -9430,59 +9512,39 @@ below.
 
 <h4>Document Structure Roles</h4>
 
--article
-
--columnheader
-
--definition
-
--directory
-
--document
-
--group
-
--heading
-
--img
-
--list
-
--listitem
-
--math
-
--note
-
--presentation
-
--region
-
--row
-
--rowheader
-
--separator
-
--toolbar
+<ul>
+  <li>article</li>
+  <li>columnheader</li>
+  <li>definition</li>
+  <li>directory</li>
+  <li>document</li>
+  <li>group</li>
+  <li>heading</li>
+  <li>img</li>
+  <li>list</li>
+  <li>listitem</li>
+  <li>math</li>
+  <li>note</li>
+  <li>presentation</li>
+  <li>region</li>
+  <li>row</li>
+  <li>rowheader</li>
+  <li>separator</li>
+  <li>toolbar</li>
+</ul>
 
 <h4>Landmark Roles</h4>
 
--application
-
--banner
-
--complementary
-
--contentinfo
-
--form
-
--main
-
--navigation
-
--search
+<ul>
+  <li>application</li>
+  <li>banner</li>
+  <li>complementary</li>
+  <li>contentinfo</li>
+  <li>form</li>
+  <li>main</li>
+  <li>navigation</li>
+  <li>search</li>
+</ul>
 
 HTML5 introduced a handful of new structural elements which commonly
 match up against the document structure and landmark roles. Exactly how
