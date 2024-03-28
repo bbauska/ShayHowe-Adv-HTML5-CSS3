@@ -1541,9 +1541,9 @@ be used once per page.
   -----------|-----------------------------|-----------------------------------------------------|
   | h1       | Type Selector | Selects an element by its type.  |
   | .tagline | Class         | Selects an element by the class attribute value, which may be reused |
-  |          | Selector      | multiple times per page.
+  |          | Selector      | multiple times per page. |
   | #intro   | ID Selector   | Selects an element by the ID attribute value, which is unique and to |
-  |          |               | only be used once per page.
+  |          |               | only be used once per page. |
 
 <h4>Child Selectors</h4>
 
@@ -9332,8 +9332,6 @@ elements and what attribute is used for their property value.
   | &lt;audio&gt;, &lt;embed&gt;, &lt;iframe&gt;, &lt;img&gt;, &lt;source&gt;, &lt;video&gt; | src attribute      |
   | &lt;a&gt;, &lt;area&gt;, &lt;link&gt;                                  | href attribute     |
   | &lt;object&gt;                                             | data attribute     |
-
-  |---------------------------------------------------------------------------------|
   | &lt;time&gt;                                               | datetime attribute |
 
 <h4>Person Microdata</h4>
@@ -9509,8 +9507,6 @@ nested within other regions of the document structure.
 | footer  | —             | contentinfo (Only once per page)        |
 | header  | —             | banner (Only once per page)             |
 | nav     | navigation    | navigation                              |
-
-|------------------------------------------------------------------------------------------------|
 | section | region        | alert, alertdialog, application, contentinfo, dialog, document, log, |
 |         |               | main, marquee, region, search, or status.                            |
 
