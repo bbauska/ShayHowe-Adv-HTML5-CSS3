@@ -1,13 +1,12 @@
-<!--
 ---
 title: "Shay & Howe's Advanced HTML and CSS"
 author: "Brian Bauska (bbauska)"
 date last editted: "3/27/2024 5+pm"
 output: 
   markdown:
- with some style
+  with some style
 ---
--->
+
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h1 align="center" width="100%">Advanced HTML &amp; CSS</h1>
@@ -9235,16 +9234,15 @@ values include:
 
 <h4>Microdata</h4>
 
-[Microdata](http://www.w3.org/TR/microdata/) is HTML
+<a href="http://www.w3.org/TR/microdata/">Microdata</a> is HTML
 extended with nested groups of name-value pairs that allow machines,
 including browsers and search engines, to pick up additional semantics
 and information for rich content. Adding microdata to your website is
 accomplished by using predetermined attributes and values. These
 attributes and values will then be interpreted, and extended, as
 intended. Currently, the more popular uses of microdata reside within
-coding contact information and calendar events, however there
-are [encoding
-models](http://schema.org/docs/schemas.html) for products,
+coding contact information and calendar events, however there are 
+<a href="http://schema.org/docs/schemas.html">encoding models</a> for products,
 reviews, and more.
 
 One example of microdata at work is within Google, where microdata is
@@ -9254,9 +9252,15 @@ address and sub sequential contact information within the results.
 Chances are this information is being pulled from microdata written on
 an existing website.
 
-![Google Microdata](.images/image016.jpeg)
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 16. google microdata (181) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="center" width="100%">
+  <img src="./images/image016.jpeg"
+   style="width:40%"
+   alt="Google Microdata." />
+</p>
 
-Fig. 10
+<h6 align="center">Fig. 10</h6>
 
 Google uses microdata to identify business locations, contact
 information, hours, pricing, ratings, and more.
@@ -9321,21 +9325,14 @@ within the element. Instead, their value is determined from the value of
 another attribute on the element. The table below outlines these one-off
 elements and what attribute is used for their property value.
 
-```
-  ---------------------------------------------------------------------------------------
-  <b>[Element]</b><b>[Value]</b>
-  ------------------------------------------------------------------ --------------------
-  <meta> content attribute
-
-  <audio>, <embed>, <iframe>, <img>, <source>, <video>src attribute
-
-  <a>, <area>, <link> href attribute
-
-  <object> data attribute
-
-  <time> datetime attribute
-  ---------------------------------------------------------------------------------------
-```
+  | <b>Element</b>                                       | <b>Value</b>       |
+  |------------------------------------------------------|--------------------|
+  | <meta>                                               | content attribute  |
+  | <audio>, <embed>, <iframe>, <img>, <source>, <video> | src attribute      |
+  | <a>, <area>, <link>                                  | href attribute     |
+  | <object>                                             | data attribute     |
+                                                         |--------------------|
+  | <time>                                               | datetime attribute |
 
 <h4>Person Microdata</h4>
 
@@ -9348,25 +9345,20 @@ item properties and their corresponding values.
 
 ```
  1  <section itemscope itemtype="http://schema.org/Person"> 
- 2  <strong itemprop="name">Shay Howe</strong>
- 3  <img src="shay.jpg" itemprop="image" alt="Shay Howe">  
- 4  <div itemprop="jobTitle">Designer and Front-end
- Developer</div>  
- <a href="http://www.shayhowe.com" 
- 6  itemprop="url">shayhowe.com</a> 
- 7  <div itemprop="telephone">(555) 123-4567</div>  
- 8  <a href="mailto:shay@awesome.com" 
- itemprop="email">shay@awesome.com</a>
- <address itemprop="address" itemscope
- 1  itemtype="http://schema.org/PostalAddress">  
- <span itemprop="streetAddress">600 W. Chicago Ave.</span>
- 1  <span itemprop="addressLocality">Chicago</span>,
- 1  <abbr itemprop="addressRegion" title="Illinois">IL</abbr> 
- 2 
- <span itemprop="postalCode">60654</span>  
- 3  </address> 
- 1  </section> 
- 5 
+ 2    <strong itemprop="name">Shay Howe</strong>
+ 3    <img src="shay.jpg" itemprop="image" alt="Shay Howe">  
+ 4    <div itemprop="jobTitle">Designer and Front-end Developer</div>  
+ 5    <a href="http://www.shayhowe.com" itemprop="url">shayhowe.com</a> 
+ 6    <div itemprop="telephone">(555) 123-4567</div>  
+ 7    <a href="mailto:shay@awesome.com" itemprop="email">shay@awesome.com</a>
+ 8    <address itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">  
+ 9      <span itemprop="streetAddress">600 W. Chicago Ave.</span>
+ 10     <span itemprop="addressLocality">Chicago</span>,
+ 11     <abbr itemprop="addressRegion" title="Illinois">IL</abbr> 
+ 12     <span itemprop="postalCode">60654</span>  
+ 13   </address> 
+ 14 </section> 
+ 15 
 ```
 
 <h4>Person Microdata Demo</h4>
@@ -9386,24 +9378,22 @@ as can some of the nested item types.
 
 ```
  1  <section itemscope itemtype="http://schema.org/Event">  
- 2  <a itemprop="url" href="#"> 
- 3  <span itemprop="name">Styles Conference</span>  
- 4  </a>  
- 5  <time itemprop="startDate" datetime="2014-08-2409:00">Sunday, August 24, 
- 6  2014 at 9:00 a.m.</time>  
- 7  <div itemprop="location" itemscope
- 8  itemtype="http://schema.org/Place">  
- 9  <a itemprop="url"  
- 10 href="http://www.thechicagotheatre.com/">Chicago Theatre</a> 
- 11 <address itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">  
- 12  <div itemprop="streetAddress">175 N. State St.</div>  
- 13  <span itemprop="addressLocality">Chicago</span>,
- 14  <abbr itemprop="addressRegion" title="Illinois">IL</abbr> 
- 15  <span itemprop="postalCode">60601</span>  
- 16  </address> 
- 17  </div>
- 18  </section> 
- 19 
+ 2    <a itemprop="url" href="#"> 
+ 3      <span itemprop="name">Styles Conference</span>  
+ 4    </a>  
+ 5    <time itemprop="startDate" datetime="2014-08-2409:00">Sunday, August 24, 
+ 6      2014 at 9:00 a.m.</time>  
+ 7    <div itemprop="location" itemscope itemtype="http://schema.org/Place">  
+ 8      <a itemprop="url" href="http://www.thechicagotheatre.com/">Chicago Theatre</a> 
+ 9      <address itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">  
+ 10       <div itemprop="streetAddress">175 N. State St.</div>  
+ 11       <span itemprop="addressLocality">Chicago</span>,
+ 12       <abbr itemprop="addressRegion" title="Illinois">IL</abbr> 
+ 13       <span itemprop="postalCode">60601</span>  
+ 14     </address> 
+ 15   </div>
+ 16 </section> 
+ 17 
 ```
 
 <h4>Event Microdata Demo</h4>
@@ -9509,37 +9499,17 @@ page the banner and contentinfo roles should be applied on the elements
 directly tied to the document from a top level perspective, not elements
 nested within other regions of the document structure.
 
-```
- * <b>[Acceptable Roles]</b>
-```
- 
- Element	Implied Role	Acceptable Roles
-article	article	application, article, document, or main
-aside	complementary	complementary, note, or search
-footer	—	contentinfo (Only once per page)
-header	—	banner (Only once per page)
 
- 
- artarticle application, article, document, or main  
- icle  
-+------+-----------+---------------------------------------------------+
- a  comp complementary, note, or search  
- side  lementary  
-+------+-----------+---------------------------------------------------+
- fo ---  contentinfo (Only once per page)
- oter  
-+------+-----------+---------------------------------------------------+
- he ---  banner (Only once per page)  
- ader  
-+------+-----------+---------------------------------------------------+
- navn navigation  
- avigation  
-+------+-----------+---------------------------------------------------+
- secregion  alert, alertdialog,  
- tion application, contentinfo, dialog, document, log,  
- 
-main, marquee, region, search, or status 
-
+| Element | Implied Role  | Acceptable Roles                        |
+|---------|---------------|-----------------------------------------|
+| article | article	      | application, article, document, or main |
+| aside   | complementary | complementary, note, or search          |
+| footer  | —             | contentinfo (Only once per page)        |
+| header  | —             | banner (Only once per page)             |
+| nav     | navigation    | navigation                              |
+                          |----------------------------------------------------------------------|
+| section | region        | alert, alertdialog, application, contentinfo, dialog, document, log, |
+|         |               | main, marquee, region, search, or status.                            |
 
 Combining the elements with their matched roles in HTML5 would look like
 the following code snippet.
