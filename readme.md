@@ -1792,12 +1792,12 @@ selected.
  1  <input type="checkbox" id="toggle"> 
  2  <label for="toggle">&#9776;</label> 
  3  <nav> 
- 4  <ul>  
- 5    <li><a href="#">Home</a></li>
- 6    <li><a href="#">About</a></li>  
- 7    <li><a href="#">Services</a></li>  
- 8    <li><a href="#">Contact</a></li>
- 9  </ul> 
+ 4    <ul>  
+ 5      <li><a href="#">Home</a></li>
+ 6      <li><a href="#">About</a></li>  
+ 7      <li><a href="#">Services</a></li>  
+ 8      <li><a href="#">Contact</a></li>
+ 9    </ul> 
  10 </nav>
  11 
 ```
@@ -2055,11 +2055,11 @@ stated value.
 
 ```
  1  <ul>  
- 2  <li><a href="#.pdf">PDF Document</a></li>
- 3  <li><a href="#.doc">Word Document</a></li>  
- 4  <li><a href="#.jpg">Image File</a></li>  
- 5  <li><a href="#.mp3">Audio File</a></li>  
- 6  <li><a href="#.mp4">Video File</a></li>  
+ 2    <li><a href="#.pdf">PDF Document</a></li>
+ 3    <li><a href="#.doc">Word Document</a></li>  
+ 4    <li><a href="#.jpg">Image File</a></li>  
+ 5    <li><a href="#.mp3">Audio File</a></li>  
+ 6    <li><a href="#.mp4">Video File</a></li>  
  7  </ul>
  8 
 ```
@@ -2069,35 +2069,35 @@ stated value.
 
 ```
  1  ul { 
- 2  list-style: none;  
- 3  margin: 0;
- 4  padding: 0;  
+ 2    list-style: none;  
+ 3    margin: 0;
+ 4    padding: 0;  
  5  } 
  6  a {  
- 7  background-position: 0 50%; 
- 8  background-repeat: no-repeat;  
- 9  color: #0087cc; 
- 10  padding-left: 22px;
- 11 text-decoration: none;
- 12  } 
- 13  a:hover { 
- 14 color: #ff7b29; 
- 15  } 
- 16  a[href&$=".pdf"] {
- 17 background-image: url("images/pdf.png");
- 18  } 
- 19  a[href$=".doc"] {
- 20 background-image: url("images/doc.png");
- 21  } 
- 22  a[href$=".jpg"] {
- 23  background-image: url("images/image.png"); 
- 24  } 
- 25  a[href$=".mp3"] {
- 26 background-image: url("images/audio.png"); 
- 27  } 
- 28  a[href$=".mp4"] {
- 29  background-image: url("images/video.png"); 
- 30  } 
+ 7    background-position: 0 50%; 
+ 8    background-repeat: no-repeat;  
+ 9    color: #0087cc; 
+ 10   padding-left: 22px;
+ 11   text-decoration: none;
+ 12 } 
+ 13 a:hover { 
+ 14   color: #ff7b29; 
+ 15 } 
+ 16 a[href&$=".pdf"] {
+ 17   background-image: url("images/pdf.png");
+ 18 } 
+ 19 a[href$=".doc"] {
+ 20   background-image: url("images/doc.png");
+ 21 } 
+ 22 a[href$=".jpg"] {
+ 23   background-image: url("images/image.png"); 
+ 24 } 
+ 25 a[href$=".mp3"] {
+ 26   background-image: url("images/audio.png"); 
+ 27 } 
+ 28 a[href$=".mp4"] {
+ 29   background-image: url("images/video.png"); 
+ 30 } 
  31 
 ```
 
@@ -2462,12 +2462,12 @@ lines 2 through 5 are selected.
 
 ```
  1  <ul>
- 2  <li>This list item will be selected</li>
- 3  <li>This list item will be selected</li>
- 4  <li>This list item will be selected</li>
- 5  <li>This list item will be selected</li>
- 6  <li>...</li>
- 7  <li>...</li>
+ 2    <li>This list item will be selected</li>
+ 3    <li>This list item will be selected</li>
+ 4    <li>This list item will be selected</li>
+ 5    <li>This list item will be selected</li>
+ 6    <li>...</li>
+ 7    <li>...</li>
  8  </ul>
  9 
 ```
@@ -2487,12 +2487,12 @@ item, thus the list items on lines 2, 4, and 6 are selected.
 
 ```
  1  <ul>
- 2  <li>This list item will be selected</li>
- 3  <li>...</li>
- 4  <li>This list item will be selected</li>
- 5  <li>...</li>
- 6  <li>This list item will be selected</li>
- 7  <li>...</li>
+ 2    <li>This list item will be selected</li>
+ 3    <li>...</li>
+ 4    <li>This list item will be selected</li>
+ 5    <li>...</li>
+ 6    <li>This list item will be selected</li>
+ 7    <li>...</li>
  8  </ul>
 ```
 
@@ -2516,12 +2516,12 @@ are selected.
 
 ```
  1  <ul>
- 2  <li>...</li>
- 3  <li>This list item will be selected</li>
- 4  <li>...</li>
- 5  <li>...</li>
- 6  <li>This list item will be selected</li>
- 7  <li>...</li>
+ 2    <li>...</li>
+ 3    <li>This list item will be selected</li>
+ 4    <li>...</li>
+ 5    <li>...</li>
+ 6    <li>This list item will be selected</li>
+ 7    <li>...</li>
  8  </ul>
 ```
 
@@ -6576,9 +6576,9 @@ animation is complete.
 <h4>Basic Effects
 
 <ul>
-  <li>-.hide()</li>
-  <li>-.show()</li>
-  <li>-.toggle()</li>
+  <li>.hide()</li>
+  <li>.show()</li>
+  <li>.toggle()</li>
 </ul>
 
 <h4>Custom Effects</h4>
@@ -6606,9 +6606,9 @@ animation is complete.
 <h4>Sliding Effects</h4>
 
 <ul>
-  <li>-.slideDown()</li>
-  <li>-.slideToggle()</li>
-  <li>-.slideUp()</li>
+  <li>.slideDown()</li>
+  <li>.slideToggle()</li>
+  <li>.slideUp()</li>
 </ul>
 
 <h4>Slide Demo</h4>
@@ -6650,12 +6650,12 @@ animation is complete.
 
 ```
  1  <ul class="tabs-nav"> 
- 2  <li><a href="#tab-1">Features</a></li> 
- 3  <li><a href="#tab-2">Details</a></li>  
+ 2    <li><a href="#tab-1">Features</a></li> 
+ 3    <li><a href="#tab-2">Details</a></li>  
  4  </ul>  
  5  <div class="tabs-stage"> 
- 6  <div id="tab-1">...</div>
- 7  <div id="tab-2">...</div>
+ 6    <div id="tab-1">...</div>
+ 7    <div id="tab-2">...</div>
  8  </div> 
  9  
 ```
@@ -6704,10 +6704,8 @@ animation is complete.
 
 -[jQuery UI](http://jqueryui.com/)
 
-**Lesson 5**
-[Preprocessors](https://learn.shayhowe.com/advanced-html-css/preprocessors/)
-**Lesson 7**
-[Transforms](https://learn.shayhowe.com/advanced-html-css/css-transforms/)
+**Lesson 5** [Preprocessors](https://learn.shayhowe.com/advanced-html-css/preprocessors/)
+**Lesson 7** [Transforms](https://learn.shayhowe.com/advanced-html-css/css-transforms/)
 
 <h2 align="center">Lesson 7: Transforms</h2>
 
@@ -6768,11 +6766,11 @@ transform type followed by a specific amount inside parentheses.
 
 ```
  1  div {
- 2  -webkit-transform: scale(1.5); 
- 3  -moz-transform: scale(1.5); 
- 4  -o-transform: scale(1.5);
- 5  transform: scale(1.5);
- 6  } 
+ 2    -webkit-transform: scale(1.5);
+ 3    -moz-transform: scale(1.5);
+ 4    -o-transform: scale(1.5);
+ 5    transform: scale(1.5);
+ 6  }
  7 
 ```
 
@@ -7011,12 +7009,12 @@ same as if you were to set the height of an element numerous times.
 
 ```
  1  .box-1 {
- 2  transform: rotate(25deg) scale(.75); 
- 3  } 
+ 2    transform: rotate(25deg) scale(.75);
+ 3  }
  4  .box-2 {
- 5  transform: skew(10deg, 20deg) translateX(20px); 
- 6  } 
- 7 
+ 5    transform: skew(10deg, 20deg) translateX(20px);
+ 6  }
+ 7  
 ```
 
 <h4>Combining Transforms Demo</h4>
@@ -7045,28 +7043,28 @@ transforms, try your hand at using the matrix property.
   <summary>CSS</summary>
 
 ```
- 1  .cube {  
- 2    position: relative; 
- 3  }  
- 4  .side {  
- 5    height: 95px; 
- 6    position: absolute; 
- 7    width: 95px;  
- 8  }  
+ 1  .cube {
+ 2    position: relative;
+ 3  }
+ 4  .side {
+ 5    height: 95px;
+ 6    position: absolute;
+ 7    width: 95px;
+ 8  }
  9  .top {
  10   background: #9acc53;
- 11   transform: rotate(-45deg) skew(15deg, 15deg); 
- 12 }  
- 13 .left {  
+ 11   transform: rotate(-45deg) skew(15deg, 15deg);
+ 12 }
+ 13 .left {
  14   background: #8ec63f;
- 15   transform: rotate(15deg) skew(15deg, 15deg) translate(-50%, 100%); 
- 16 }  
- 17 .right { 
+ 15   transform: rotate(15deg) skew(15deg, 15deg) translate(-50%, 100%);
+ 16 }
+ 17 .right {
  18   background: #80b239;
  19   transform: rotate(-15deg) skew(-15deg, -15deg) translate(50%,
  10   100%);
- 21 }  
- 22  
+ 21 }
+ 22 
 ```
 
 </details>
@@ -7107,19 +7105,19 @@ the origin to 20 pixels across and 50 pixels down the element.
  1  .box-1 {
  2    transform: rotate(15deg);
  3    transform-origin: 0 0;
- 4  } 
+ 4  }
  5  .box-2 {
- 6    transform: scale(.5); 
+ 6    transform: scale(.5);
  7    transform-origin: 100% 100%;
- 8  } 
+ 8  }
  9  .box-3 {
- 10   transform: skewX(20deg); 
- 11   transform-origin: top left; 
- 12  } 
+ 10   transform: skewX(20deg);
+ 11   transform-origin: top left;
+ 12  }
  13 .box-4 {
- 14   transform: scale(.75) translate(-10px, -10px);  
+ 14   transform: scale(.75) translate(-10px, -10px);
  15   transform-origin: 20px 50px;
- 16 } 
+ 16 }
  17 
 ```
 
@@ -7166,9 +7164,9 @@ their individual perspectives with the perspective value.
 <h4>CSS</h4>
 
 ```
- 1  .box {  
- 2  transform: perspective(200px) rotateX(45deg);
- 3  } 
+ 1  .box {
+ 2    transform: perspective(200px) rotateX(45deg);
+ 3  }
  4 
 ```
 
@@ -7182,9 +7180,9 @@ the perspective property on their direct parent element.
 
 ```
  1  <div class="group">  
- 2  <figure class="box">Box 1</figure>
- 3  <figure class="box">Box 2</figure>
- 4  <figure class="box">Box 3</figure>
+ 2    <figure class="box">Box 1</figure>
+ 3    <figure class="box">Box 2</figure>
+ 4    <figure class="box">Box 3</figure>
  5  </div>
  6 
 ```
@@ -7194,10 +7192,10 @@ the perspective property on their direct parent element.
 ```
  1  .group {
  2    perspective: 200px;
- 3  } 
- 4  .box {  
- 5    transform: rotateX(45deg);  
- 6  } 
+ 3  }
+ 4  .box {
+ 5    transform: rotateX(45deg);
+ 6  }
  7 
 ```
 
@@ -7233,11 +7231,11 @@ depth values.
 
 ```
  1  .box-1 {
- 2  transform: perspective(100px) rotateX(45deg);
- 3  } 
+ 2    transform: perspective(100px) rotateX(45deg);
+ 3  }
  4  .box-2 {
- 5  transform: perspective(1000px) rotateX(45deg);  
- 6  } 
+ 5    transform: perspective(1000px) rotateX(45deg);
+ 6  }
  7 
 ```
 
@@ -7278,19 +7276,19 @@ coordinates of the vanishing point of a transform.
 ```
  1  .original {
  2    perspective: 200px;
- 3  } 
- 4  .box {  
- 5    transform: rotateX(45deg);  
- 6  } 
+ 3  }
+ 4  .box {
+ 5    transform: rotateX(45deg);
+ 6  }
  7  .original-1 {
- 8    perspective-origin: 0 0; 
- 9  } 
+ 8    perspective-origin: 0 0;
+ 9  }
  10 .original-2 {
  11   perspective-origin: 75% 75%;
- 12 } 
+ 12 }
  13  .original-3 {
- 14   perspective-origin: 20px 40px; 
- 15 } 
+ 14   perspective-origin: 20px 40px;
+ 15 }
  16 
 ```
 
@@ -7339,13 +7337,13 @@ rotate the element counterclockwise.
 ```
  1  .box-1 {
  2    transform: perspective(200px) rotateX(45deg);
- 3  } 
+ 3  }
  4  .box-2 {
  5    transform: perspective(200px) rotateY(45deg);
- 6  } 
+ 6  }
  7  .box-3 {
  8    transform: perspective(200px) rotateZ(45deg);
- 9  } 
+ 9  }
  10 
 ```
 
@@ -7375,11 +7373,11 @@ the rotateX in this case, the elements will appear to be unchanged.
 
 ```
  1  .box-1 {
- 2  transform: perspective(200px) scaleZ(1.75) rotateX(45deg);  
- 3  } 
+ 2    transform: perspective(200px) scaleZ(1.75) rotateX(45deg);
+ 3  }
  4  .box-2 {
- 5  transform: perspective(200px) scaleZ(.25) rotateX(45deg);
- 6  } 
+ 5    transform: perspective(200px) scaleZ(.25) rotateX(45deg);
+ 6  }
  7 
 ```
 
@@ -7413,10 +7411,10 @@ for example.
 ```
  1  .box-1 {
  2    transform: perspective(200px) translateZ(-50px);
- 3  } 
+ 3  }
  4  .box-2 {
- 5    transform: perspective(200px) translateZ(50px); 
- 6  } 
+ 5    transform: perspective(200px) translateZ(50px);
+ 6  }
  7 
 ```
 
@@ -7470,16 +7468,16 @@ lie flat on the two-dimensional plane.
   <summary>CSS</summary>
 
 ```
- 1  .rotate {  
+ 1  .rotate {
  2    transform: perspective(200px) rotateY(45deg);
- 3  } 
- 4  .three-d { 
- 5    transform-style: preserve-3d;  
- 6  } 
- 7  .box {  
- 8    transform: rotateX(15deg) translateZ(20px);  
+ 3  }
+ 4  .three-d {
+ 5    transform-style: preserve-3d;
+ 6  }
+ 7  .box {
+ 8    transform: rotateX(15deg) translateZ(20px);
  9    transform-origin: 0 0;
- 10 } 
+ 10 }
  11 
 ```
 
@@ -7521,12 +7519,12 @@ using [animations](https://css-tricks.com/almanac/properties/b/backface-visibil
 
 ```
  1  .box-1 {
- 2  transform: rotateY(180deg); 
- 3  } 
+ 2    transform: rotateY(180deg);
+ 3  }
  4  .box-2 {
- 5  backface-visibility: hidden;
- 6  transform: rotateY(180deg); 
- 7  } 
+ 5    backface-visibility: hidden;
+ 6    transform: rotateY(180deg);
+ 7  }
  8 
 ```
 
@@ -7539,15 +7537,15 @@ using [animations](https://css-tricks.com/almanac/properties/b/backface-visibil
 
 ```
  1  <div class="cube-container">
- 2  <div class="cube"> 
- 3  <figure class="side front">1</figure>
- 4  <figure class="side back">2</figure> 
- 5  <figure class="side left">3</figure> 
- 6  <figure class="side right">4</figure>
- 7  <figure class="side top">5</figure>  
- 8  <figure class="side bottom">6</figure>  
- 9  </div> 
- 10  </div> 
+ 2    <div class="cube"> 
+ 3      <figure class="side front">1</figure>
+ 4      <figure class="side back">2</figure> 
+ 5      <figure class="side left">3</figure> 
+ 6      <figure class="side right">4</figure>
+ 7      <figure class="side top">5</figure>  
+ 8      <figure class="side bottom">6</figure>  
+ 9    </div> 
+ 10 </div> 
  11 
 ```
 
@@ -7558,43 +7556,43 @@ using [animations](https://css-tricks.com/almanac/properties/b/backface-visibil
 
 ```
  1  .cube-container {
- 2  height: 200px;
- 3  perspective: 300;
- 4  position: relative;
- 5  width: 200px;
+ 2    height: 200px;
+ 3    perspective: 300;
+ 4    position: relative;
+ 5    width: 200px;
  6  }
  7  .cube {
- 8  height: 100%;
- 9  position: absolute;
- 10  transform: translateZ(-100px);
- 11  transform-style: preserve-3d;
- 12  width: 100%;
- 13  }
+ 8    height: 100%;
+ 9    position: absolute;
+ 10   transform: translateZ(-100px);
+ 11   transform-style: preserve-3d;
+ 12   width: 100%;
+ 13 }
  14 .side {
- 15 background: rgba(45, 179, 74, .3);
- 16  border: 2px solid #2db34a;
- 17  height: 196px;
- 18  position: absolute;
- 19  width: 196px;
- 20  }
+ 15   background: rgba(45, 179, 74, .3);
+ 16   border: 2px solid #2db34a;
+ 17   height: 196px;
+ 18   position: absolute;
+ 19   width: 196px;
+ 20 }
  21 .front {
- 22  transform: translateZ(100px);
- 23  }
- 24  .back {
- 25  transform: rotateX(180deg) translateZ(100px);
- 26  }
+ 22   transform: translateZ(100px);
+ 23 }
+ 24 .back {
+ 25   transform: rotateX(180deg) translateZ(100px);
+ 26 }
  27 .left {
- 28  transform: rotateY(-90deg) translateZ(100px);
+ 28   transform: rotateY(-90deg) translateZ(100px);
  29 }
- 30  .right {
- 31  transform: rotateY(90deg) translateZ(100px); 
+ 30 .right {
+ 31   transform: rotateY(90deg) translateZ(100px); 
  32 } 
  33 .top {  
- 34  transform: rotateX(90deg) translateZ(100px); 
- 35  } 
- 36  .bottom { 
- 37  transform: rotateX(-90deg) translateZ(100px);
- 38  } 
+ 34   transform: rotateX(90deg) translateZ(100px); 
+ 35 } 
+ 36 .bottom { 
+ 37   transform: rotateX(-90deg) translateZ(100px);
+ 38 } 
  40 
 ```
 
@@ -7758,17 +7756,17 @@ element.
   <summary>CSS</summary>
 
 ```
- 1  .box {  
- 2  background: #2db34a;  
- 3  border-radius: 6px 
- 4  transition-property: background, border-radius; 
- 5  transition-duration: 1s; 
- 6  transition-timing-function: linear;  
- 7  } 
- 8  .box:hover { 
- 9  background: #ff7b29;  
- 10  border-radius: 50%;
- 11 } 
+ 1  .box {
+ 2    background: #2db34a;
+ 3    border-radius: 6px
+ 4    transition-property: background, border-radius;
+ 5    transition-duration: 1s;
+ 6    transition-timing-function: linear;
+ 7  }
+ 8  .box:hover {
+ 9    background: #ff7b29;
+ 10   border-radius: 50%;
+ 11 }
  12 
 ```
 </details>
@@ -7846,17 +7844,17 @@ transitioned properties.
   <summary>CSS</summary>
 
 ```
- 1  .box {  
- 2  background: #2db34a;  
- 3  border-radius: 6px;
- 4  transition-property: background, border-radius; 
- 5  transition-duration: .2s, 1s;  
- 6  transition-timing-function: linear;  
- 7  } 
- 8  .box:hover { 
- 9  background: #ff7b29;  
- 10  border-radius: 50%;
- 11  } 
+ 1  .box {
+ 2    background: #2db34a;
+ 3    border-radius: 6px;
+ 4    transition-property: background, border-radius;
+ 5    transition-duration: .2s, 1s;
+ 6    transition-timing-function: linear;
+ 7  }
+ 8  .box:hover {
+ 9    background: #ff7b29;
+ 10   border-radius: 50%;
+ 11 }
  12 
 ```
 
@@ -7896,15 +7894,15 @@ property values, may be declared as comma separated values.
 
 ```
  1  .box {
- 2  background: #2db34a;
- 3  border-radius: 6px;
- 4  transition-property: background, border-radius;
- 5  transition-duration: .2s, 1s;
- 6  transition-timing-function: linear, ease-in;
+ 2    background: #2db34a;
+ 3    border-radius: 6px;
+ 4    transition-property: background, border-radius;
+ 5    transition-duration: .2s, 1s;
+ 6    transition-timing-function: linear, ease-in;
  7  }
  8  .box:hover {
- 9  background: #ff7b29;
- 10 border-radius: 50%;
+ 9    background: #ff7b29;
+ 10   border-radius: 50%;
  11 }
  12 
 ```
@@ -7927,16 +7925,16 @@ can be declared as comma separated values.
 
 ```
  1  .box {
- 2  background: #2db34a;
- 3  border-radius: 6px
- 4  transition-property: background, border-radius;
- 5  transition-duration: .2s, 1s;
- 6  transition-timing-function: linear, ease-in;
- 7  transition-delay: 0s, 1s;
+ 2    background: #2db34a;
+ 3    border-radius: 6px
+ 4    transition-property: background, border-radius;
+ 5    transition-duration: .2s, 1s;
+ 6    transition-timing-function: linear, ease-in;
+ 7    transition-delay: 0s, 1s;
  8  }
  9  .box:hover {
- 10 background: #ff7b29;
- 11 border-radius: 50%;
+ 10   background: #ff7b29;
+ 11   border-radius: 50%;
  12 }
  13  
 ```
@@ -7964,15 +7962,15 @@ transition values.
   <summary>CSS</summary>
 
 ```
- 1  .box {  
- 2  background: #2db34a;  
- 3  border-radius: 6px;
- 4  transition: background .2s linear, border-radius 1s ease-in 1s;
- 5  } 
- 6  .box:hover { 
- 7  color: #ff7b29; 
- 8  border-radius: 50%;
- 9  } 
+ 1  .box {
+ 2    background: #2db34a;
+ 3    border-radius: 6px;
+ 4    transition: background .2s linear, border-radius 1s ease-in 1s;
+ 5  }
+ 6  .box:hover {
+ 7    color: #ff7b29;
+ 8    border-radius: 50%;
+ 9  }
  10 
 ```
 
@@ -7994,22 +7992,22 @@ transition values.
 
 ```
  1  button { 
- 2  border: 0; 
- 3  background: #0087cc;
- 4  border-radius: 4px; 
- 5  box-shadow: 0 5px 0 #006599; 
- 6  color: #fff;  
- 7  cursor: pointer; 
- 8  font: inherit;
- 9  margin: 0; 
- 10  outline: 0;
- 11  padding: 12px 20px; 
- 12  transition: all .1s linear;  
- 13  }  
+ 2    border: 0; 
+ 3    background: #0087cc;
+ 4    border-radius: 4px; 
+ 5    box-shadow: 0 5px 0 #006599; 
+ 6    color: #fff;  
+ 7    cursor: pointer; 
+ 8    font: inherit;
+ 9    margin: 0; 
+ 10   outline: 0;
+ 11   padding: 12px 20px; 
+ 12   transition: all .1s linear;  
+ 13 }  
  14 button:active {  
- 15  box-shadow: 0 2px 0 #006599; 
- 16  transform: translateY(3px);  
- 17  }  
+ 15   box-shadow: 0 2px 0 #006599; 
+ 16   transform: translateY(3px);  
+ 17 }  
  18  
 ```
 
@@ -8023,11 +8021,11 @@ transition values.
 
 ```
  1  <div class="card-container">
- 2  <div class="card"> 
- 3  <div class="side">...</div> 
- 4  <div class="side back">...</div> 
- 5  </div> 
- 6  </div> 
+ 2    <div class="card">
+ 3      <div class="side">...</div>
+ 4      <div class="side back">...</div>
+ 5    </div>
+ 6  </div>
  7  
 ```
 
@@ -8036,30 +8034,30 @@ transition values.
 
 ```
  1  .card-container {
- 2  height: 150px;
- 3  perspective: 600;
- 4  position: relative; 
- 5  width: 150px; 
- 6  }  
- 7  .card {  
- 8  height: 100%; 
- 9  position: absolute; 
- 10  transform-style: preserve-3d;
- 11  transition: all 1s ease-in-out; 
- 12  width: 100%;  
- 13  }  
- 14  .card:hover { 
- 15  transform: rotateY(180deg);  
- 16  }  
- 17  .card .side { 
- 18  backface-visibility: hidden; 
- 19  height: 100%; 
- 20  position: absolute; 
- 21  width: 100%;  
- 22  }  
- 23  .card .back { 
- 24  transform: rotateY(180deg);  
- 25  }  
+ 2    height: 150px;
+ 3    perspective: 600;
+ 4    position: relative;
+ 5    width: 150px;
+ 6  }
+ 7  .card {
+ 8    height: 100%;
+ 9    position: absolute;
+ 10   transform-style: preserve-3d;
+ 11   transition: all 1s ease-in-out;
+ 12   width: 100%;
+ 13 }
+ 14 .card:hover {
+ 15   transform: rotateY(180deg);
+ 16 }
+ 17 .card .side {
+ 18   backface-visibility: hidden;
+ 19   height: 100%;
+ 20   position: absolute;
+ 21   width: 100%;
+ 22 }
+ 23 .card .back {
+ 24   transform: rotateY(180deg);
+ 25 }
  26  
 ```
 
@@ -8146,9 +8144,9 @@ property value. The animation-name declaration is applied to the element
 in which the animation is to be applied to.
 
 ```
- 1  .stage:hover .ball {  
- 2  animation-name: slide;
- 3  } 
+ 1  .stage:hover .ball {
+ 2    animation-name: slide;
+ 3  }
  4 
 ```
 
@@ -8165,10 +8163,10 @@ duration declared using the animation-duration property. As with
 transitions, the duration may be set in seconds or milliseconds.
 
 ```
- 1  .stage:hover .ball {  
- 2  animation-name: slide;
- 3  animation-duration: 2s;  
- 4  } 
+ 1  .stage:hover .ball {
+ 2    animation-name: slide;
+ 3    animation-duration: 2s;
+ 4  }
  5 
 ```
 
@@ -8178,12 +8176,12 @@ respectively. The values for these properties mimic and behave just as
 they do with transitions.
 
 ```
- 1  .stage:hover .ball {  
- 2  animation-name: slide;
- 3  animation-duration: 2s;  
- 4  animation-timing-function: ease-in-out; 
- 5  animation-delay: .5s; 
- 6  } 
+ 1  .stage:hover .ball {
+ 2    animation-name: slide;
+ 3    animation-duration: 2s;
+ 4    animation-timing-function: ease-in-out;
+ 5    animation-delay: .5s;
+ 6  }
  7 
 ```
 
@@ -8193,10 +8191,10 @@ the left, however only when hovering over the stage.
 <h4>HTML</h4>
 
 ```
- 1  <div class="stage">  
- 2  <figure class="ball"></figure> 
+ 1  <div class="stage">
+ 2    <figure class="ball"></figure>
  3  </div>
- 4 
+ 4  
 ```
 
 <details>
@@ -8213,25 +8211,25 @@ the left, however only when hovering over the stage.
  8       top: 100px;
  9     }
  10    100% {
- 11      left: 488px; 
- 12      top: 0; 
- 13    } 
- 14  } 
+ 11      left: 488px;
+ 12      top: 0;
+ 13    }
+ 14  }
  15  .stage {
- 16    height: 150px;  
+ 16    height: 150px;
  17    position: relative;
- 18  } 
- 19  .ball { 
+ 18  }
+ 19  .ball {
  20    height: 50px;
  21    position: absolute;
- 22    width: 50px; 
- 23  } 
- 24  .stage:hover .ball {  
+ 22    width: 50px;
+ 23  }
+ 24  .stage:hover .ball {
  25    animation-name: slide;
- 26    animation-duration: 2s;  
- 27    animation-timing-function: ease-in-out; 
- 28    animation-delay: .5s; 
- 29  } 
+ 26    animation-duration: 2s;
+ 27    animation-timing-function: ease-in-out;
+ 28    animation-delay: .5s;
+ 29  }
  30 
 ```
 
@@ -8262,12 +8260,12 @@ indefinitely in a never ending fashion.
   <summary>Example, Animation Iteration</summary>
 
 ```
- 1  .stage:hover .ball {  
+ 1  .stage:hover .ball {
  2    animation-name: slide;
- 3    animation-duration: 2s;  
- 4    animation-timing-function: ease-in-out; 
- 5    animation-delay: .5s; 
- 6    animation-iteration-count: infinite; 
+ 3    animation-duration: 2s;
+ 4    animation-timing-function: ease-in-out;
+ 5    animation-delay: .5s;
+ 6    animation-iteration-count: infinite;
  7  }
  8  
 ```
@@ -8311,12 +8309,12 @@ then back to 100% again.
   <summary>Example, Alternate Reverse</summary>
 
 ```
- 1  .stage:hover .ball {  
+ 1  .stage:hover .ball {
  2    animation-name: slide;
- 3    animation-duration: 2s;  
- 4    animation-timing-function: ease-in-out; 
- 5    animation-delay: .5s; 
- 6    animation-iteration-count: infinite; 
+ 3    animation-duration: 2s;
+ 4    animation-timing-function: ease-in-out;
+ 5    animation-delay: .5s;
+ 6    animation-iteration-count: infinite;
  7    animation-direction: alternate;
  8  }
  9  
@@ -8343,17 +8341,17 @@ animation will temporarily pause until you let up on the mouse.
   <summary>Example, Animation Play State</summary>
 
 ```
- 1  .stage:hover .ball {  
- 2  animation-name: slide;
- 3  animation-duration: 2s;  
- 4  animation-timing-function: ease-in-out; 
- 5  animation-delay: .5s; 
- 6  animation-iteration-count: infinite; 
- 7  animation-direction: alternate;
- 8  } 
- 9  .stage:active .ball { 
- 10  animation-play-state: paused;  
- 11 } 
+ 1  .stage:hover .ball {
+ 2    animation-name: slide;
+ 3    animation-duration: 2s;
+ 4    animation-timing-function: ease-in-out;
+ 5    animation-delay: .5s;
+ 6    animation-iteration-count: infinite;
+ 7    animation-direction: alternate;
+ 8  }
+ 9  .stage:active .ball {
+ 10   animation-play-state: paused;
+ 11 }
  12 
 ```
 
@@ -8392,16 +8390,16 @@ the forwards and backwards values.
   <summary>Example, Animation</summary>
 
 ```
- 1  .stage:hover .ball {  
+ 1  .stage:hover .ball {
  2    animation-name: slide;
- 3    animation-duration: 2s;  
- 4    animation-timing-function: ease-in-out; 
- 5    animation-delay: .5s; 
- 6    animation-fill-mode: forwards; 
- 7  } 
- 8  .stage:active .ball { 
- 9    animation-play-state: paused;  
- 1  } 
+ 3    animation-duration: 2s;
+ 4    animation-timing-function: ease-in-out;
+ 5    animation-delay: .5s;
+ 6    animation-fill-mode: forwards;
+ 7  }
+ 8  .stage:active .ball {
+ 9    animation-play-state: paused;
+ 1  }
  0 
 ```
 
@@ -8421,12 +8419,12 @@ declarations. The order of values within the animation property should
 be animation-name, animation-duration, animation-timing-function, animation-delay, animation-iteration-count, animation-direction, animation-fill-mode, and lastly animation-play-state.
 
 ```
- 1  .stage:hover .ball {  
- 2  animation: slide 2s ease-in-out .5s infinite alternate;  
- 3  } 
- 4  .stage:active .ball { 
- 5  animation-play-state: paused;  
- 6  } 
+ 1  .stage:hover .ball {
+ 2    animation: slide 2s ease-in-out .5s infinite alternate;
+ 3  }
+ 4  .stage:active .ball {
+ 5    animation-play-state: paused;
+ 6  }
  7 
 ```
 
@@ -8524,7 +8522,7 @@ In this case the conditional comment looks like <!--[if lt IE 9]>...<![endif]--
 ```
  1  <!--[if lt IE 9]>
  2  <script src="html5shiv.js"></script>
- 3  <![endif]-->  
+ 3  <![endif]-->
  4 
 ```
 
@@ -8754,9 +8752,9 @@ preventing the script from loading on smaller screens.
 ```
  1  $(document).ready(function() {
  2    if (Modernizr.mq('screen and (max-width: 400px)')) {
- 3      $('.size').text('small'); 
- 4    } 
- 5  });  
+ 3      $('.size').text('small');
+ 4    }
+ 5  });
  6 
 ```
 
@@ -8799,7 +8797,7 @@ Internet Explorer is by using multiple virtual machines, each with a
 different version of Internet Explorer.
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~ 14. virtualbox (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 14. virtualbox (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--
 <p align="center" width="100%">
   <img src="./images/image014.png"
@@ -8857,10 +8855,8 @@ bookmarklet open for debugging.</h6>
 
 -[Microsoft IE Virtual Machines](https://github.com/xdissent/ievms) via Greg Thornton
 
-<b>Lesson 8</b> [Transitions &
-Animations](https://learn.shayhowe.com/advanced-html-css/transitions-animations/)
-<b>Lesson 10</b> [Extending Semantics &
-Accessibility](https://learn.shayhowe.com/advanced-html-css/semantics-accessibility/)
+<b>Lesson 8</b> [Transitions &amp; Animations](https://learn.shayhowe.com/advanced-html-css/transitions-animations/)
+<b>Lesson 10</b> [Extending Semantics &amp; Accessibility](https://learn.shayhowe.com/advanced-html-css/semantics-accessibility/)
 
 <h2>Lesson 10 Extending Semantics & Accessibility</h2>
 
