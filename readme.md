@@ -8524,7 +8524,7 @@ In this case the conditional comment looks like <!--[if lt IE 9]>...<![endif]--
 ```
  1  <!--[if lt IE 9]>
  2  <script src="html5shiv.js"></script>
- 3  <![endif[-->  
+ 3  <![endif]-->  
  4 
 ```
 
@@ -8571,7 +8571,7 @@ should be good to go using any new HTML5 elements.
  1  audio,
  2  canvas,
  3  video {
- 4  display: inline-block;
+ 4    display: inline-block;
  5  }
  6  
 ```
@@ -8706,14 +8706,14 @@ is used the storage-polyfill.js file using the getScript method.
 
 ```
  1  $(document).ready(function() {
- 2  if (Modernizr.localstorage) {  
- 3  // Local storage is available  
- 4  jQuery.getScript('storage.js'); 
- 5  } else {
- 6  // Local storage is not available 
- 7  jQuery.getScript('storage-polyfill.js');
- 8  } 
- 9  });  
+ 2    if (Modernizr.localstorage) {
+ 3      // Local storage is available
+ 4      jQuery.getScript('storage.js');
+ 5    } else {
+ 6      // Local storage is not available
+ 7      jQuery.getScript('storage-polyfill.js');
+ 8    }
+ 9  });
  10 
 ```
 
@@ -8728,9 +8728,9 @@ beneficial for performance.
 
 ```
  1  $(document).ready(function() {
- 2  if (Modernizr.mq('screen and (min-width: 640px)')) {
- 3  jQuery.getScript('tabs.js'); 
- 4  } 
+ 2    if (Modernizr.mq('screen and (min-width: 640px)')) {
+ 3      jQuery.getScript('tabs.js'); 
+ 4    } 
  5  });  
  6 
 ```
@@ -8753,9 +8753,9 @@ preventing the script from loading on smaller screens.
 
 ```
  1  $(document).ready(function() {
- 2  if (Modernizr.mq('screen and (max-width: 400px)')) {
- 3  $('.size').text('small'); 
- 4  } 
+ 2    if (Modernizr.mq('screen and (max-width: 400px)')) {
+ 3      $('.size').text('small'); 
+ 4    } 
  5  });  
  6 
 ```
@@ -9078,7 +9078,7 @@ Use underlines with caution.
 ```
  1  <!-- Added to the document -->
  2  <ins cite="http://learn.shayhowe.com" datetime="2012-07-01">
- 3  Updated: This website now contains an advanced guide. 
+ 3    Updated: This website now contains an advanced guide. 
  4  </ins>
  5  <!-- Unarticulated annotation -->
  6  <u>Urushihara Yuuji</u> won <u>Sasuke 27</u>. 
@@ -9202,7 +9202,7 @@ the max attribute indicates what progress needs to be reached.
  1  <!-- Meter --> 
  2  <meter value="7" max="10">7 stars</meter>  
  3  <meter value="47" min="0" max="105" low="5" high="65"  optimum="45">The car  
- 4  is moving at a decent average mile per hour.</meter>
+ 4    is moving at a decent average mile per hour.</meter>
  5  <!-- Progress --> 
  6  You are <progress value="50" max="100">50%</progress>  
  7  complete.  
@@ -9274,8 +9274,8 @@ manner.
  2  Use the <code>article</code> element. 
  3  <!-- Larger, block level code snippets -->  
  4  <pre><code>body { 
- 5  color: #666; 
- 6  font: 14px/20px Arial, sans-serif;
+ 5    color: #666; 
+ 6    font: 14px/20px Arial, sans-serif;
  7  }</code></pre> 
  8 
 ```
@@ -9470,7 +9470,7 @@ find the need.
 
 ```
  1  <section itemscope itemtype="http://schema.org/Person"> 
- 2  ... 
+ 2    ... 
  3  </section> 
  4 
 ```
@@ -9483,7 +9483,7 @@ itself most commonly determines the value of the property.
 
 ```
  1  <section itemscope itemtype="http://schema.org/Person"> 
- 2  <h1 itemprop="name">Shay Howe</h1>
+ 2    <h1 itemprop="name">Shay Howe</h1>
  3  </section> 
  4 
 ```
