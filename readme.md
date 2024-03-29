@@ -2261,7 +2261,7 @@ the only image to appear within the article, thus also selected.
  2    <h1>...</h1>
  3    <p>This paragraph will be selected</p>
  4    <p>...</p>
- 5    <img src="#"><!&#45;&#45; This image will be selected &#45;&#45;>
+ 5    <img src="#"><!-- This image will be selected -->
  6    <p>This paragraph will be selected</p>
  7    <h6>...</h6>
  8  </article>
@@ -2628,9 +2628,9 @@ selected.
 
 ```
  1  <div>Hello</div>
- 2  <div><!&#45;&#45; Coming soon &#45;&#45;></div><!&#45;&#45; This div will be 
- 3  selected &#45;&#45;>
- 4  <div></div><!&#45;&#45; This div will be selected &#45;&#45;>
+ 2  <div><!-- Coming soon --></div><!-- This div will be 
+ 3  selected -->
+ 4  <div></div><!-- This div will be selected -->
  5  <div> </div>
  6  <div><strong></strong></div>
  7  
@@ -3307,7 +3307,7 @@ additional HTTP requests.
 <h4>HTML</h4>
 
 ```
- 1  <!&#45;&#45; Separate CSS File &#45;&#45;>
+ 1  <!-- Separate CSS File -->
  2  <link href="styles.css" rel="stylesheet" media="all and (max-width: 1024px)">
  3 
 ```
@@ -3524,7 +3524,8 @@ the section and aside.
   style="width:40%"
   title="Demo Without Media Queries"
   alt="Demo Without Media Queries." />
-<h6 align="center">Fig. 4. Without any media queries the section and aside become quite
+</p>
+<h6 align="center" width="40%">Fig. 4. Without any media queries the section and aside become quite
 small. Perhaps too small to even contain any real content.</h6>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -3534,8 +3535,8 @@ small. Perhaps too small to even contain any real content.</h6>
   style="width:40%"
   title="Demo with Media Queries"
   alt="Demo with Media Queries." />
-
-<h6 align="center">Fig. 4. Using media queries to remove the floats and change their
+</p>
+<h6 align="center" width="40%">Fig. 4. Using media queries to remove the floats and change their
 widths, the section and aside are now able to span the full width of the
 viewport, allowing breathing room for any existing content.</h6>
 
@@ -3657,8 +3658,8 @@ the viewport meta tag.
   style="width:40%"
   title="Website without Viewport Meta Tag"
   alt="Website without Viewport Meta Tag." />
-
-<h6 align="center">Fig. 4. Although this demo has media queries, many mobile devices
+</p>
+<h6 align="center" width="40%">Fig. 4. Although this demo has media queries, many mobile devices
 still do not know the initial width or scale of the website. Therefore,
 they may not interrupt media queries.</h6>
 
@@ -3687,8 +3688,8 @@ the device-height and device-width values.
   style="width:40%"
   title="Website with Viewport Meta Tag"
   alt="Website with Viewport Meta Tag." />
-
-<h6 align="center">Fig. 4. Letting devices know the intended width of the
+</p>
+<h6 align="center" width="40%">Fig. 4. Letting devices know the intended width of the
 website, device-width in this case, allows the website to be sized
 properly and to pick up any qualifying media queries.</h6>
 
@@ -3717,8 +3718,8 @@ for initial-scale should always be a positive integer between 0 and 10.
   style="width:40%"
   title="Viewport Scale Meta Tag"
   alt="Viewport Scale Meta Tag." />
-
-<h6 align="center">Fig. 4. Using an integer above 1 will zoom the website to be larger
+</p>
+<h6 align="center" width="40%">Fig. 4. Using an integer above 1 will zoom the website to be larger
 than the default scale. Generally speaking, this value will most commonly be set to 1.</h6>
 
 The minimum-scale and maximum-scale values determine how small and how
@@ -3786,8 +3787,8 @@ outlined below, using both the width and initial-scale properties.
   style="width:40%"
   title="Website with Viewport Meta Tag"
   alt="Website with Viewport Meta Tag." />
-
-<h6 align="center">Fig. 4 A combination of width=device-width and initial-scale=1 
+</p>
+<h6 align="center" width="40%">Fig. 4. A combination of width=device-width and initial-scale=1 
 provide the initial size and zoom commonly required.</h6>
 
 <h4>CSS Viewport Rule</h4>
@@ -3996,7 +3997,7 @@ In the example above, the file index.haml is converted to HTML and saved
 as index.html within the same directory. This command has to be run
 within the same directory the files reside in. Should the command be run
 outside this directory the path where the files reside need to be
-included within the command. At any time the command haml &#45;&#45;help may be
+included within the command. At any time the command haml --help may be
 run to see a list of different available options.
 
 <h4>Watching a File or Directory</h4>
@@ -4319,9 +4320,9 @@ slash.
 <h4>Compiled HTML</h4>
 
 ```
- 1  <!&#45;&#45;]if lt IE 9[>
+ 1  <!--[if lt IE 9]>
  2  <script src="html5shiv.js"></script>
- 3  <&#0033;[endif]&#45;&#45;>  
+ 3  <![endif]-->  
  4 
 ```
 
@@ -4518,7 +4519,7 @@ recompile the CSS every time a change takes place. To watch a Sass file
 the following sass command may be run.
 
 ```
- 1  sass &#45;&#45;watch styles.sass:styles.css 
+ 1  sass --watch styles.sass:styles.css 
  2 
 ```
 
@@ -4528,7 +4529,7 @@ example, to watch an entire directory of Sass files and convert them to
 CSS the sass command below may be run.
 
 ```
- 1  sass &#45;&#45;watch assets/sass:public/css 
+ 1  sass --watch assets/sass:public/css 
  2 
 ```
 
@@ -8454,14 +8455,12 @@ a <a href="https://css-tricks.com/how-to-create-an-ie-only-stylesheet/">
 conditional comment</a>, making sure that the file is only loaded within 
 versions of Internet Explorer 8 and below.
 
+In this case the conditional comment looks like <!--[if lt IE 9]>...<![endif]-->.
+
 ```
-In this case the conditional comment looks like <!&#45;&#45;]if lt IE
-9[>...<&#0033;[endif[&#45;&#45;>.
-
-
- 1  <!&#45;&#45;]if lt IE 9[>
+ 1  <!--[if lt IE 9]>
  2  <script src="html5shiv.js"></script>
- 3  <&#0033;[endif[&#45;&#45;>  
+ 3  <![endif[-->  
  4 
 ```
 
@@ -8898,9 +8897,9 @@ being. Screen readers and other devices will recognize this, temporarily
 skipping it, where they may not done so with the CSS declaration.
 
 ```
- 1  <!&#45;&#45; Good &#45;&#45;>  
+ 1  <!-- Good -->  
  2  <div hidden>...</div>  
- 3  <!&#45;&#45; Not good &#45;&#45;> 
+ 3  <!-- Not good --> 
  4  <div style="display: none;">...</div> 
  5 
 ```
@@ -8933,9 +8932,9 @@ presentation of an element, where the strong element should be used to
 identify significantly important text.
 
 ```
- 1  <!&#45;&#45; Strong importance &#45;&#45;>
+ 1  <!-- Strong importance -->
  2  <strong>Caution:</strong> Falling rocks.
- 3  <!&#45;&#45; Stylistically offset &#45;&#45;>
+ 3  <!-- Stylistically offset -->
  4  This recipe calls for <b>bacon</b> and <b>baconnaise</b>.
  5  
 ```
@@ -8958,9 +8957,9 @@ dialog or prose, offsetting text without any added emphasis or
 importance.
 
 ```
- 1  <!&#45;&#45; Stressed emphasis &#45;&#45;> 
+ 1  <!-- Stressed emphasis --> 
  2  I <em>love</em> Chicago!
- 3  <!&#45;&#45; Alternative voice or tone &#45;&#45;>  
+ 3  <!-- Alternative voice or tone -->  
  4  The name <i>Shay</i> means a gift.  
  5 
 ```
@@ -9009,11 +9008,11 @@ Use underlines with caution.
   <summary>Example, Underline</summary>
 
 ```
- 1  <!&#45;&#45; Added to the document &#45;&#45;>
+ 1  <!-- Added to the document -->
  2  <ins cite="http://learn.shayhowe.com" datetime="2012-07-01">
  3  Updated: This website now contains an advanced guide. 
  4  </ins>
- 5  <!&#45;&#45; Unarticulated annotation &#45;&#45;>
+ 5  <!-- Unarticulated annotation -->
  6  <u>Urushihara Yuuji</u> won <u>Sasuke 27</u>. 
  7 
 ```
@@ -9043,11 +9042,11 @@ The s element identifies text that is no longer accurate or relevant.
   <summary>Example, Striking Text</summary>
   
 ```
- 1  <!&#45;&#45; Deleted from the document &#45;&#45;>  
+ 1  <!-- Deleted from the document -->  
  2  I am an avid cyclist, <del cite="http://shayhowe.com" 
  3  datetime="2012-07-01">
  4  skateboarder</del> and designer.
- 5  <!&#45;&#45; No longer accurate or relevant &#45;&#45;>  
+ 5  <!-- No longer accurate or relevant -->  
  6  <s>$24.99</s> $19.99  
  7 
 ```
@@ -9064,7 +9063,7 @@ identify text, specifically for reference purposes without having to use
 an un-semantic text level element.
 
 ```
- 1  <!&#45;&#45; Highlighted for reference purposes &#45;&#45;> 
+ 1  <!-- Highlighted for reference purposes --> 
  2  Search results for <mark>'chicago'</mark>.
  3 
 ```
@@ -9096,9 +9095,9 @@ these elements should be reserved for typographical conventions, not for
 presentational purposes.
 
 ```
- 1  <!&#45;&#45; Subscript &#45;&#45;>
+ 1  <!-- Subscript -->
  2  H<sub>2</sub>O 
- 3  <!&#45;&#45; Superscripts &#45;&#45;>
+ 3  <!-- Superscripts -->
  4  1<sup>st</sup> Place 
  5 
  6 
@@ -9132,11 +9131,11 @@ the max attribute indicates what progress needs to be reached.
   <summary>Example, Meter &amp; Progress</summary>
 
 ```
- 1  <!&#45;&#45; Meter &#45;&#45;> 
+ 1  <!-- Meter --> 
  2  <meter value="7" max="10">7 stars</meter>  
  3  <meter value="47" min="0" max="105" low="5" high="65"  optimum="45">The car  
  4  is moving at a decent average mile per hour.</meter>
- 5  <!&#45;&#45; Progress &#45;&#45;> 
+ 5  <!-- Progress --> 
  6  You are <progress value="50" max="100">50%</progress>  
  7  complete.  
  8  <progress value="50" min="0" max="100">Hold tight, you"re getting there.</progress>
@@ -9166,7 +9165,7 @@ and other content needs to be placed outside of the address element.
   <summary>Example, Time &amp; Address</summary>
   
 ```
- 1  <!&#45;&#45; Time &#45;&#45;>  
+ 1  <!-- Time -->  
  2  <time>2011-08-24</time> 
  3  <time datetime="2011-08-24" pubdate>August 24th, 2011</time>
  4  <time datetime="15:00">3pm</time> 
@@ -9203,9 +9202,9 @@ samples of code, which include whitepsace, displayed in a block level
 manner.
 
 ```
- 1  <!&#45;&#45; Inline code samples &#45;&#45;>  
+ 1  <!-- Inline code samples -->  
  2  Use the <code>article</code> element. 
- 3  <!&#45;&#45; Larger, block level code snippets &#45;&#45;>  
+ 3  <!-- Larger, block level code snippets -->  
  4  <pre><code>body { 
  5  color: #666; 
  6  font: 14px/20px Arial, sans-serif;
@@ -9233,11 +9232,11 @@ of a word ensures that, should the word need to wrap two lines, it does
 in a legible fashion.
 
 ```
- 1  <!&#45;&#45; Line break &#45;&#45;>  
+ 1  <!-- Line break -->  
  2  600 W. Chicago Ave.<br>
  3  Chicago, IL 60654<br>  
  4  USA  
- 5  <!&#45;&#45; Word break &#45;&#45;>  
+ 5  <!-- Word break -->  
  6  http://shay<wbr>howe.com  
  7 
 ```
@@ -9255,7 +9254,7 @@ rendered as a side comments or small print. This often includes
 copyright information or legal print.
 
 ```
- 1  <!&#45;&#45; Side comments or small print &#45;&#45;> 
+ 1  <!-- Side comments or small print --> 
  2  <small>&copy; 2012 Shay Howe</small>
  3 
 ```
@@ -9293,9 +9292,9 @@ you wish on your server while still providing users with a meaningful
 name.
 
 ```
- 1  <!&#45;&#45; Boolean &#45;&#45;>  
+ 1  <!-- Boolean -->  
  2  <a href="twitter-logo.png" download>Twitter Logo</a>  
- 3  <!&#45;&#45; With a value &#45;&#45;>
+ 3  <!-- With a value -->
  4  <a href="twitter-logo.png" download="Logo">Twitter Logo</a>  
  5 
 ```
@@ -9362,11 +9361,8 @@ an existing website.
    title="Google Microdata"
    alt="Google Microdata." />
 </p>
-
-<h6 align="center">Fig. 10</h6>
-
-Google uses microdata to identify business locations, contact
-information, hours, pricing, ratings, and more.
+<h6 align="center" width="40%">Fig. 10. Google uses microdata to identify business locations, contact
+information, hours, pricing, ratings, and more.</h6>
 
 <h4>Microdata vs. Microformats vs. RDFa</h4>
 
