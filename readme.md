@@ -258,6 +258,9 @@ qualified selectors reduce performance because they force the browser to
 render each individual selector type from right to left. They also put a
 burden on all other selectors to be more specific.
 
+<details>
+  <summary>CSS</summary>
+
 ```
  1  /* Bad */
  2  header nav ul li a {...}
@@ -274,6 +277,8 @@ burden on all other selectors to be more specific.
  13 button .callout {...}
  14 
 ```
+
+</details>
 
 In the code above, the first selector is extremely specific and could be
 identified, and rendered, much quicker with the use of a class.
@@ -309,6 +314,9 @@ Additionally, do not prefix class selectors with an element. Doing so
 prohibits those styles from easily being applied to a different element
 and increases the overall specificity of the selector.
 
+<details>
+  <summary>CSS</summary>
+
 ```
  1  /* Bad */
  2  #container header nav {...}
@@ -323,6 +331,8 @@ and increases the overall specificity of the selector.
  11 .feat-post {...}
  12
 ```
+
+</details>
 
 It is also worth noting, stay away from ID selectors where possible as
 they are overly specific and do not allow for any repetition. At the end
@@ -606,7 +616,8 @@ sprite as a background on the span element. Then, using classes to
 change the background position of the image sprite, different icons can
 be shown accordingly.
 
-<h5>HTML</h5>
+<details>
+  <summary>HTML</summary>
 
 ```
  1  <ul>
@@ -624,7 +635,10 @@ be shown accordingly.
  13 
 ```
 
-<h4>CSS</h4>
+</details>
+
+<details>
+  <summary>CSS</summary>
 
 ```
  1  ul {
@@ -683,6 +697,8 @@ be shown accordingly.
  54 }
  55 
 ```
+
+</details>
 
 <h4>Image Sprites Demo</h4>
 
@@ -971,6 +987,9 @@ Taking the same example from above you can see how the floats are
 contained and the elements are able to live outside of the parent
 element.
 
+<details>
+  <summary>CSS</summary>
+
 ```
  1  .box-set:before,
  2  .box-set:after {
@@ -985,6 +1004,8 @@ element.
  11 }
  12  
 ```
+
+</details>
 
 <h4>Clearfix Technique Demo</h4>
 
@@ -1003,6 +1024,9 @@ technique for example, Dan Cederholm helped coin the class name group.
 The group class name can then be applied to any parent element needing
 to contain floats.
 
+<details>
+  <summary>CSS</summary>
+
 ```
  1  .group:before,
  2  .group:after {
@@ -1017,6 +1041,8 @@ to contain floats.
  11  }
  12 
 ```
+
+</details>
 
 <h4>Single Pseudo-Elements</h4>
 
@@ -1135,7 +1161,8 @@ positioned elements default position.
  7  
 ```
 
-<h4>CSS</h4>
+<details>
+  <summary>CSS</summary>
 
 ```
  1  .box-set {
@@ -1159,6 +1186,8 @@ positioned elements default position.
  19 }
  20 
 ```
+
+</details>
 
 <h4>Position Relative Demo</h4>
 
@@ -1200,7 +1229,8 @@ positioned. Each individual box is moved in from a specific side with a
 positive value, or pulled out from a specific side with a negative
 value.
 
-<h4>HTML</h4>
+<details>
+  <summary>HTML</summary>
 
 ```
  1  <div class="box-set">
@@ -1212,7 +1242,10 @@ value.
  7  
 ```
 
-<h4>CSS</h4>
+</details>
+
+<details>
+  <summary>CSS</summary>
 
 ```
  1  .box-set {
@@ -1243,6 +1276,8 @@ value.
  26 }
  27  
 ```
+
+</details>
 
 <h4>Position Absolute Demo</h4>
 
@@ -1291,7 +1326,8 @@ and not the containing, relatively positioned parent.
  7 
 ```
 
-<h4>CSS</h4>
+<details>
+  <summary>CSS</summary>
 
 ```
  1  .box {
@@ -1318,6 +1354,8 @@ and not the containing, relatively positioned parent.
  22  
 ```
 
+</details>
+
 <h4>Position Fixed Demo</h4>
 
 <h4>Fixed Header or Footer</h4>
@@ -1340,7 +1378,8 @@ borders, and padding to be applied freely.
  2  
 ```
 
-<h4>CSS</h4>
+<details>
+  <summary>CSS</summary>
 
 ```
  1  body {
@@ -1355,6 +1394,8 @@ borders, and padding to be applied freely.
  10 }
  11 
 ```
+
+</details>
 
 <h4>Fixed Footer Demo</h4>
 
@@ -1398,7 +1439,8 @@ box three.
  7 
 ```
 
-<h4>CSS</h4>
+<details>
+  <summary>CSS</summary>
 
 ```
  1  .box-set {
@@ -1432,6 +1474,8 @@ box three.
  29 }
  30  
 ```
+
+</details>
 
 <h4>Z-Index Demo</h4>
 
@@ -1741,7 +1785,8 @@ selected.
 
 <h4>Sibling Selectors Example</h4>
 
-<h4>HTML</h4>
+<details>
+  <summary>HTML</summary>
 
 ```
  1  <input type="checkbox" id="toggle"> 
@@ -1756,6 +1801,8 @@ selected.
  10 </nav>
  11 
 ```
+
+</details>
 
 <details>
   <summary>CSS</summary>
@@ -1876,7 +1923,7 @@ inside of the quotations should be the desired matching attribute value.
 <h4>CSS</h4>
 
 ```
- 1  a]href="http://google.com/"[ {...} 
+ 1  a[href="http://google.com/"] {...} 
  2 
 ```
 
@@ -1922,7 +1969,7 @@ stated value.
 <h4>CSS</h4>
 
 ```
- 1  a]href&Hat;="https://"[ {...}
+ 1  a[href&Hat;="https://"] {...}
  2 
 ```
 
@@ -1945,7 +1992,7 @@ stated value.
 <h4>CSS</h4>
 
 ```
- 1  a]href$=".pdf"[ {...} 
+ 1  a[href$=".pdf"] {...} 
  2 
 ```
 
@@ -1968,7 +2015,7 @@ stated value.
 <h4>CSS</h4>
 
 ```
- 1  a]rel&tilde;="tag"[ {...}
+ 1  a[rel&tilde;="tag"] {...}
  2 
 ```
 
@@ -1991,7 +2038,7 @@ stated value.
 <h4>CSS</h4>
 
 ```
- 1  a]lang&#0124;="en"[ {...}
+ 1  a[lang&#0124;="en"] {...}
  2 
 ```
 
@@ -2706,6 +2753,7 @@ pseudo-classes.
  28 </table>
  29  
 ```
+
 </details>
 
 <details>
@@ -2937,8 +2985,9 @@ added to ensure the best support for all browsers.
  2  
 ```
 
-<h4>CSS</h4>
-
+<details>
+  <summary>CSS</summary>
+  
 ```
  1  .arrow {
  2  background: #2db34a;
@@ -2981,6 +3030,8 @@ added to ensure the best support for all browsers.
  40  }
  41 
 ```
+
+</details>
 
 <h4>Demo</h4>
 
@@ -3222,7 +3273,8 @@ following.
  5 
 ```
 
-<h4>CSS</h4>
+<details>
+  <summary>CSS</summary>
 
 ```
  1  .container { 
@@ -3243,6 +3295,8 @@ following.
  16 
 ```
 
+</details>
+
 <h4>Fixed Grid Demo</h4>
 
 Using the flexible grid formula we can take all of the fixed units of
@@ -3250,6 +3304,9 @@ length and turn them into relative units. In this example we'll use
 percentages but em units would work equally as well. Notice, no matter
 how wide the parent container becomes, the section and aside margins and
 widths scale proportionally.
+
+<details>
+  <summary>Fixed Grid Demo</summary>
 
 ```
  1  section,
@@ -3266,6 +3323,8 @@ widths scale proportionally.
  12 }
  13 
 ```
+
+</details>
 
 <h4>Flexible Grid Demo</h4>
 
@@ -3611,6 +3670,9 @@ wide. Rewriting this code to use the mobile styles first by default then
 adding media queries to adjust for viewports over 420 pixels wide we
 build the following:
 
+<details>
+  <summary>Mobile First Demo</summary>
+
 ```
  1  section,
  2  aside { 
@@ -3631,6 +3693,8 @@ build the following:
  17 } 
  18 
 ```
+
+</details>
 
 <h4>Mobile First Demo</h4>
 
@@ -3862,7 +3926,8 @@ treating the parent element as an absolutely positioned element.
  4 
 ```
 
-<h4>CSS</h4>
+<details>
+  <summary>CSS</summary>
 
 ```
  1  figure {
@@ -3880,6 +3945,8 @@ treating the parent element as an absolutely positioned element.
  14  } 
  15 
 ```
+
+</details>
 
 <h4>Flexible Embedded Media Demo</h4>
 
@@ -5143,18 +5210,18 @@ which is why color manipulations are a bit less common than color
 alterations.
 
 ```
--change-color() --- Set any property of a color
- $color, [$red], [$green], [$blue], [$hue],
- [$saturation], [$lightness], [$alpha]
+  - change-color() --- Set any property of a color
+    $color, [$red], [$green], [$blue], [$hue],
+    [$saturation], [$lightness], [$alpha]
 
--adjust-color() --- Incrementally manipulate any property of a color
- $color, [$red], [$green], [$blue], [$hue],
- [$saturation], [$lightness], [$alpha]
+  - adjust-color() --- Incrementally manipulate any property of a color
+    $color, [$red], [$green], [$blue], [$hue],
+    [$saturation], [$lightness], [$alpha]
 
--scale-color() --- Fluidly scale any percentage based on property of
- a color
- $color, [$red], [$green], [$blue], [$saturation],
- [$lightness], [$alpha]
+  - scale-color() --- Fluidly scale any percentage based on property of
+    a color
+    $color, [$red], [$green], [$blue], [$saturation],
+    [$lightness], [$alpha]
 ```
 
 <h4>Sass</h4>
@@ -5938,7 +6005,7 @@ parentheses, ('...'), and may select elements just like that of CSS.
  1  $('.feature'); // Class selector  
  2  $('li strong'); // Descendant selector 
  3  $('em, i'); // Multiple selector  
- 4  $('a]target="&#0095;blank"['); // Attribute selector
+ 4  $('a[target="&#0095;blank"]'); // Attribute selector
  5  $('p:nth-child(2)'); // Pseudo-class selector
  6 
 ```
@@ -6184,7 +6251,7 @@ the text of any h1 elements with the text Hello World.
 
 ```
  1  $('section').prepend('<h3>Featured</h3>');
- 2  $('a]target="&#0095;blank"[').after('<em>New window.</em>'); 
+ 2  $('a[target="&#0095;blank"]').after('<em>New window.</em>'); 
  3  $('h1').text('Hello World'); 
  4 
 ```
@@ -8473,6 +8540,9 @@ Additionally, once the new HTML5 elements are created using the shiv,
 any block level elements need to be identified and updated using
 the display: block; declaration.
 
+<details>
+  <summary>display: block</summary>
+
 ```
  1  article,
  2  aside,
@@ -8489,6 +8559,8 @@ the display: block; declaration.
  13 }
  14 
 ```
+
+</details>
 
 Lastly, Internet Explorer 8 and 9 do not correctly define styles for a
 few HTML5 inline-block level elements. As before, these styles will need
