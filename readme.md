@@ -445,7 +445,7 @@ compression is enabled.
   alt="gzip Overview Screenshot." />
 </p>
 
-<h6 style="center">Fig. 1</h6>
+<h6 align="center">Fig. 1</h6>
 
 The Network tab identifies each file loaded within the browser and displays the 
 file size and load time. Notice how gzipping has reduced the file sizes by around 60%.
@@ -457,9 +457,7 @@ file size and load time. Notice how gzipping has reduced the file sizes by aroun
   title="gzip Detail Screenshot"
   alt="gzip Detail Screenshot." />
 </p>
-
-<h6 style="center">Fig. 1</h6>
-
+<h6 align="center">Fig. 1</h6>
 
 Looking at a file specifically identifies what type of compression encoding the 
 browser supports. In this case gzip, deflate, and sdch are all supported as noted 
@@ -518,8 +516,7 @@ and PNG files.
   title="ImageOptim Screenshot"
   alt="ImageOptim Screenshot." />
 </p>
-
-<h6 style="center">Fig. 4</h6>
+<h6 align="center">Fig. 4</h6>
 
 Using ImageOptim the above image was reduced over 14% without any
 reduction or loss in quality.
@@ -599,7 +596,7 @@ background image being hidden.
   alt="Menu Sprite." />
 </p>
 
-<h6 style="center">Fig. 1</h6>
+<h6 align="center">Fig. 1</h6>
 
 Here is a sprite for a text editor menu, outlined with guides for
 reference of how the images background position will change.
@@ -2065,7 +2062,7 @@ stated value.
 
   | **Example** | **Classification** | **Explanation** |
   |---------------|----------------------|----------------------------------------------|
-  | a[target]     | Attribute Present    | Selects an element if the given attribute is
+  | a[target]     | Attribute Present    | Selects an element if the given attribute is |
   |               | Selector             | present. |
   | a[href="http://google.com/"] | Attribute Equals | Selects an element if the given attribute value |
   |                              | Selector         | exactly matches the value stated. |
@@ -2760,7 +2757,7 @@ pseudo-classes.
 
 <h4>Pseudo-classes Overview</h4>
 
-  | **Example** | **Classification** | **Explanation**                            |
+  | **Example** | **Classification** | **Explanation** |
   |---------------|----------------------|---------------------------------------------------|
   | a:link        | Link Pseudo-    | Selects a link that has not been visited by a user.    |
   |               | class           |                                                        |
@@ -2774,7 +2771,7 @@ pseudo-classes.
   |               | class           | point.                                                 |
   | input:enabled | State Pseudo-   | Selects an element in the default enabled state.       |
   |               | class           |                                                        |
-  | input:disabled | State Pseudo-   | Selects an element in the disabled state, by way of the |
+  | input:disabled | State Pseudo-  | Selects an element in the disabled state, by way of the |
   |               | class           | disabled attribute.                                    |
   | input:checked | State Pseudo-   | Selects a checkbox or radio button that has been       |
   |               | class           | checked.                                               |
@@ -2990,17 +2987,17 @@ added to ensure the best support for all browsers.
 <h4>Pseudo-elements Overview</h4>
 
   | <b>Example</b> | <b>Classification</b> | <b>Explanation</b> |
-  |------------------------------------------------------|--------------------|
-  | .alpha:first-  | Textual Pseudo-   | Selects the first letter of text within an element. |
-  | letter         | elements          |
-  | .bravo:first-  | Textual Pseudo-   | Selects the first line of text within an element. |
-  | line           | elements          |
+  |----------------|-------------------|---------------------------------------------------------|
+  | .alpha:first-  | Textual Pseudo-   | Selects the first letter of text within an element.     |
+  | letter         | elements          |                                                         |
+  | .bravo:first-  | Textual Pseudo-   | Selects the first line of text within an element.       |
+  | line           | elements          |                                                         |
   | div:before     | Generated Content | Creates a pseudo-element inside the selected element at |
-  |                |                   | the beginning. |
+  |                |                   | the beginning.                                          |
   | a:after        | Generated Content | Creates a pseudo-element inside the selected element at |
-  |                |                   | the end. |
+  |                |                   | the end.                                                |
   | ::selection    | Fragment Pseudo-  | Selects the part of a document which has been selected, |
-  |                | element           | or highlighted, by a users' action. |
+  |                | element           | or highlighted, by a users' action.                     |
   
 
 <h4>Selector Browser Support</h4>
@@ -3124,7 +3121,7 @@ Responsive Web Design</a>, which is worth a read.
    alt="Food Sense Responsive Layout." />
 </p>
 
-<h6 style="center">Fig. 4</h6>
+<h6 align="center">Fig. 4</h6>
 
 <a href="http://foodsense.is/">Food Sense</a> has a beautiful
 website, responsive to all different viewport sizes. No matter how large
@@ -5828,14 +5825,14 @@ properties, each having a key followed by a colon and value.
 
 </details>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~ 13. web inspector console (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 13. web inspector console (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="center" width="100%">
   <img src="./images/image013.png"
   style="width:50%"
   title="Web Inspector Console"
   alt="Web Inspector Console." />
 
-<h6 style="center">Fig. 6</h6>
+<h6 align="center">Fig. 6</h6>
 
 Using the developer tools built into the Chrome web browser, JavaScript
 may be run from within the console.
@@ -8738,8 +8735,7 @@ different version of Internet Explorer.
   title="VirtualBox"
   alt="VirtualBox" />
 </p>
-
-<h6><b>Fig. 9.</b> VirtualBox running on Mac OS X with Internet Explorer
+<h6 align="center" width="40%">Fig. 9. VirtualBox running on Mac OS X with Internet Explorer
 versions 6 through 9.</h6>
 
 Microsoft provides a handful of VirtualPCs that can be used solely for
@@ -8758,14 +8754,14 @@ the other debugging tools we've grown to love are not readily available
 within Internet Explorer 7 and below.
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~ 15. virtualbox (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 15. virtualbox (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="center" width="100%">
   <img src="./images/image015.png"
   style="width:40%"
   title="VirtualBox"
   alt="VirtualBox" />
-
-<h6 style="center">Fig. 9 Internet Explorer 7 running inside of a virtual machine with the Firebug Lite
+</p>
+<h6 align="center" width="40%">Fig. 9. Internet Explorer 7 running inside of a virtual machine with the Firebug Lite
 bookmarklet open for debugging.</h6>
 
 <h4>Resources & Links</h4>
