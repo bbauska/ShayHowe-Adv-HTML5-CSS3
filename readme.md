@@ -2,7 +2,7 @@
 ---
 title: "Shay & Howe's Advanced HTML and CSS"
 author: "Brian Bauska (bbauska)"
-date last editted: "3/27/2024 5+pm"
+date last editted: "3/28/2024 11+pm"
 output:
   markdown:
   with some style
@@ -441,6 +441,7 @@ compression is enabled.
 <p align="center" width="100%">
   <img src="./images/image001.png"
   style="width:40%"
+  title="gzip Overview Screenshot"
   alt="gzip Overview Screenshot." />
 </p>
 
@@ -453,6 +454,7 @@ file size and load time. Notice how gzipping has reduced the file sizes by aroun
 <p align="center" width="100%">
   <img src="./images/image002.png"
   style="width:40%"
+  title="gzip Detail Screenshot"
   alt="gzip Detail Screenshot." />
 </p>
 
@@ -490,27 +492,30 @@ and PNG files.
 
 <h4>Uncompressed, 455kb</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~ 03. uncompressed ocean picture (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~ 03. uncompressed ocean picture (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="center" width="100%">
   <img src="./images/image003.jpeg"
   style="width:40%"
+  title="Uncompressed Ocean Picture"
   alt="Uncompressed Ocean Picture." />
 </p>
 
 <h4>Compressed, 401kb</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~ 04. compressed ocean picture (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~ 04. compressed ocean picture (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="center" width="100%">
   <img src="./images/image004.jpeg"
   style="width:40%"
+  title="Compressed Ocean Picture"
   alt="Compressed Ocean Picture." />
 </p>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~ 05. imageoptim screenshot (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 05. imageoptim screenshot (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="center" width="100%">
   <img src="./images/image005.png"
   style="width:40%"
+  title="ImageOptim Screenshot"
   alt="ImageOptim Screenshot." />
 </p>
 
@@ -570,7 +575,7 @@ the page, as such the case with the HTML5 shiv.
 
 <h4>Image Sprites</h4>
 
-The practice of *spriting* images within CSS includes using one
+The practice of <i>spriting</i> images within CSS includes using one
 background image across multiple elements. The goal here is to cut down
 the number of HTTP requests made by using multiple background images.
 
@@ -586,10 +591,11 @@ an element is 16 pixels wide by 16 pixels tall it can only expose a
 background image of 16 pixels by 16 pixels, with the rest of the
 background image being hidden.
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~ 06. menu sprite (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 06. menu sprite (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="center" width="100%">
   <img src="./images/image006.png"
   style="width:40%"
+  title="Menu Sprite"
   alt="Menu Sprite." />
 </p>
 
@@ -786,7 +792,7 @@ rel="noopener noreferrer" target="_blank">Complex Selectors</a>
 
 
 
-<h2 align="center">[Lesson 2] Detailed Positioning</h2>
+<h2 align="center">Lesson 2: Detailed Positioning</h2>
 
 <h3>In this Lesson 2</h3>
 
@@ -945,9 +951,8 @@ display differently in each browser.
 <h4>The Clearfix Technique</h4>
 
 Depending on the context of the floated elements a better technique to
-contain floats may be
-the [clearfix](http://nicolasgallagher.com/micro-clearfix-hack/) technique.
-The clearfix technique is a bit more complex but does have better
+contain floats may be the <a href="http://nicolasgallagher.com/micro-clearfix-hack/">
+clearfix</a> technique. The clearfix technique is a bit more complex but does have better
 support as compared to the overflow technique.
 
 The clearfix technique is based off using
@@ -960,7 +965,7 @@ also helps ensure consistency within Internet Explorer 6 and 7.
 The :after pseudo-element is used to prevent the bottom margin of child
 elements from collapsing, as well as to clear the nested floats.
 
-Adding the *zoom property to the parent element triggers
+Adding the &ast;zoom property to the parent element triggers
 the hasLayout mechanism specifically within Internet Explorer 6 and 7,
 which determines how elements should draw and bound their content, as
 well as how elements should interact with and relate to other elements.
@@ -1032,15 +1037,15 @@ the parent element containing the floats.
 Occasionally you need more control over the position of an element, more
 than a float can provide, in which case the position property comes into
 play. The position property accepts five different values, each of which
-provide different ways to [uniquely
-position](http://www.alistapart.com/articles/css-positioning-101/) an
-element.
+provide different ways to <a href="http://www.alistapart.com/articles/css-positioning-101/">uniquely
+position</a> an element.
 
 <h4>Position Static</h4>
 
 Elements by default have the position value of static, meaning they
-don't have, nor will they accept, any specific [box offset
-properties](https://learn.shayhowe.com/html-css/opening-the-box-model/).
+don't have, nor will they accept, any specific 
+<a href="https://learn.shayhowe.com/html-css/opening-the-box-model/">
+box offset properties</a>.
 Furthermore, elements will be positioned as intended, with their default
 behaviors.
 
@@ -1457,7 +1462,7 @@ box three.
   rel="noopener noreferrer" target="_blank">
   Complex Selectors</a>
 
-<h2 align="center">[Lesson 3] Complex Selectors</h2>
+<h2 align="center">Lesson 3: Complex Selectors</h2>
 
 <h3>In this Lesson 3</h3>
 
@@ -1499,8 +1504,9 @@ in different states of use.
 
 CSS3 brought new selectors, opening a whole new world of opportunities
 and improvements to existing practices. Here we'll
-discuss [selectors](http://net.tutsplus.com/tutorials/html-css-techniques/the-30-css-selectors-you-must-memorize/),
-old and new, and how to best put them to use.
+discuss 
+<a href="http://net.tutsplus.com/tutorials/html-css-techniques/the-30-css-selectors-you-must-memorize/">
+selectors</a>, old and new, and how to best put them to use.
 
 <h4>Common Selectors</h4>
 
@@ -1670,8 +1676,9 @@ sibling heading.
  2 
 ```
 
-<h4>HTML</h4>
-
+<details>
+  <summary>HTML</summary>
+  
 ```
  1  <p>...</p> 
  2  <section>
@@ -1685,6 +1692,8 @@ sibling heading.
  10 </section> 
  11 
 ```
+
+</details>
 
 <h4>Adjacent Sibling Selector</h4>
 
@@ -1714,7 +1723,8 @@ selected.
  2 
 ```
 
-<h4>HTML</h4>
+<details>
+  <summary>HTML</summary>
 
 ```
  1  <p>...</p>
@@ -1729,6 +1739,8 @@ selected.
  10 </section> 
  11 
 ```
+
+</details>
 
 <h4>Sibling Selectors Example</h4>
 
@@ -1881,7 +1893,7 @@ inside of the quotations should be the desired matching attribute value.
 <h4>Attribute Contains Selector</h4>
 
 When looking to find an element based on part of an attribute value, but
-not an exact match, the asterisk character, *, may be used within the
+not an exact match, the asterisk character, &ast;, may be used within the
 square brackets of a selector. The asterisk should fall just after the
 attribute name, directly before the equals sign. Doing so denotes that
 the value to follow only needs to appear, or be contained, within the
@@ -1890,7 +1902,7 @@ attribute value.
 <h4>CSS</h4>
 
 ```
- 1  a]href*="login"[ {...}
+ 1  a[href*="login"] {...}
  2 
 ```
 
@@ -2008,7 +2020,8 @@ stated value.
  8 
 ```
 
-<h4>CSS</h4>
+<details>
+  <summary>CSS</summary>
 
 ```
  1  ul { 
@@ -2044,6 +2057,8 @@ stated value.
  31 
 ```
 
+</details>
+
 <h4>Demo</h4>
 
 <h4>Attribute Selectors Overview</h4>
@@ -2054,7 +2069,7 @@ stated value.
   |               | Selector             | present. |
   | a[href="http://google.com/"] | Attribute Equals | Selects an element if the given attribute value |
   |                              | Selector         | exactly matches the value stated. |
-  | a[href*="login"]             | Attribute Contains           | Selects an element if the given attribute value |
+  | a[href&ast;="login"]             | Attribute Contains           | Selects an element if the given attribute value |
   |                              | Selector                     | contains at least one instance of the value stated |
   | a[href&Hat;="https://"] | Attribute Begins | Selects an element if the given attribute value |
   |                         | with Selector    | begins with the value stated.                   |
@@ -2186,7 +2201,8 @@ list item.
  4 
 ```
 
-<h4>HTML</h4>
+<details>
+  <summary>HTML</summary>
 
 ```
  1  <ul>
@@ -2200,8 +2216,10 @@ list item.
  9    </li>
  10   <li>This list item will be selected</li>
  11 </ul>
-  
+ 12   
 ```
+
+</details>
 
 <h3>:first-of-type, :last-of-type, &amp; :only-of-type</h3>
 
@@ -2463,7 +2481,7 @@ are selected.
  8  </ul>
 ```
 
-<h4>:nth-of-type(n) & :nth-last-of-type(n)
+<h4>:nth-of-type(n) & :nth-last-of-type(n)</h4>
 
 The :nth-of-type(n) and :nth-last-of-type(n) pseudo-classes are very
 similar to that of
@@ -2492,7 +2510,8 @@ the parent. Here the paragraphs on lines 5 and 9 are selected.
  1  p:nth-of-type(3n) {...}
 ```
 
-<h4>HTML</h4>
+<details>
+  <summary>HTML</summary>
 
 ```
  1  <article>
@@ -2507,6 +2526,8 @@ the parent. Here the paragraphs on lines 5 and 9 are selected.
  10 </article>
  11 
 ```
+
+</details>
 
 As with the :nth-child(n) and :nth-last-child(n) pseudo-classes, the
 primary difference between
@@ -2527,7 +2548,8 @@ paragraph. Here the paragraphs on lines 4, 7, and 9 are selected.
  2  
 ```
 
-<h4>HTML</h4>
+<details>
+  <summary>HTML</summary>
 
 ```
  1  <article>
@@ -2542,6 +2564,8 @@ paragraph. Here the paragraphs on lines 4, 7, and 9 are selected.
  10 </article>
  11 
 ```
+
+</details>
 
 <h4>Target Pseudo-class</h4>
 
@@ -2651,7 +2675,8 @@ pseudo-classes.
 
 <h4>Pseudo-classes Example</h4>
 
-<h4>HTML</h4>
+<details>
+  <summary>HTML</summary>
 
 ```
  1  <table>
@@ -2684,9 +2709,10 @@ pseudo-classes.
  28 </table>
  29  
 ```
+</details>
 
-
-<h4>CSS</h4>
+<details>
+  <summary>CSS</summary>
 
 ```
  1   table {
@@ -2727,6 +2753,8 @@ pseudo-classes.
  36  }
  37  
 ```
+
+</details>
 
 <h4>Demo</h4>
 
@@ -3026,11 +3054,11 @@ via CSS-Tricks
 
  
 
-[**Lesson 2**] Detailed
+**Lesson 2** Detailed
 Positioning](https://learn.shayhowe.com/advanced-html-css/detailed-css-positioning/)
-[**Lesson 4**] Responsive Web Design](https://learn.shayhowe.com/advanced-html-css/responsive-web-design/)
+**Lesson 4** Responsive Web Design](https://learn.shayhowe.com/advanced-html-css/responsive-web-design/)
 
-<h2 align="center">[Lesson 4] Responsive Web Design</h2>
+<h2 align="center">Lesson 4: Responsive Web Design</h2>
 
 <h3>In this Lesson 4</h3>
 
@@ -3055,7 +3083,7 @@ Positioning](https://learn.shayhowe.com/advanced-html-css/detailed-css-positioni
 -[Flexible
  Media](https://learn.shayhowe.com/advanced-html-css/responsive-web-design/#flexible-media)
 
-**SHARE**
+<h4>SHARE</h4>
 
 The Internet took off quicker than anyone would have predicted, growing
 like crazy. Now, for the past few years, mobile growth has exploded onto
@@ -3092,6 +3120,7 @@ Responsive Web Design</a>, which is worth a read.
 <p align="center" width="100%">
   <img src="./images/image007.png"
    style="width:40%"
+   title="Food Sense Responsive Layout"
    alt="Food Sense Responsive Layout." />
 </p>
 
@@ -3104,8 +3133,8 @@ natural user experience.
 
 <h4>Responsive vs. Adaptive vs. Mobile</h4>
 
-For some the term *responsive* may not be new, and others might be even
-more acquainted with the terms *adaptive* or *mobile*. Which may leave
+For some the term <i>responsive</i> may not be new, and others might be even
+more acquainted with the terms <i>adaptive</i> or <i>mobile</i>. Which may leave
 you wondering what exactly is the difference between all of them.
 
 Responsive and adaptive web design are closely related, and often
@@ -3381,8 +3410,8 @@ features.
 <h4>Using Minimum & Maximum Prefixes</h4>
 
 The min and max prefixes can be used on quite a few media features.
-The min prefix indicates a values of *greater than or equal to* while
-the max prefix indicates a value of *less than or equal to*.
+The min prefix indicates a values of <i>greater than or equal to</i> while
+the max prefix indicates a value of <i>less than or equal to</i>.
 Using min and max prefixes avoid any conflict with the general HTML
 syntax, specifically not using the < and > symbols.
 
@@ -3489,32 +3518,33 @@ the section and aside.
 ```
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~ 08.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~ 08. demo without media queries (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="center" width="100%">
   <img src="./images/image008.png"
- style="width:40%"
- alt="Demo Without Media Queries." />
-
-**Fig. 4.**Without any media queries the section and aside become quite
-small. Perhaps too small to even contain any real content.
+  style="width:40%"
+  title="Demo Without Media Queries"
+  alt="Demo Without Media Queries." />
+<h6 align="center">Fig. 4. Without any media queries the section and aside become quite
+small. Perhaps too small to even contain any real content.</h6>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~ 09.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 09. demo with media queries (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="center" width="100%">
   <img src="./images/image009.png"
- style="width:40%"
- alt="Demo with Media Queries." />
+  style="width:40%"
+  title="Demo with Media Queries"
+  alt="Demo with Media Queries." />
 
-**Fig. 4.**Using media queries to remove the floats and change their
+<h6 align="center">Fig. 4. Using media queries to remove the floats and change their
 widths, the section and aside are now able to span the full width of the
-viewport, allowing breathing room for any existing content.
+viewport, allowing breathing room for any existing content.</h6>
 
 <h4>Identifying Breakpoints</h4>
 
 Your instinct might be to write media query breakpoints around common
 viewport sizes as determined by different device resolutions, such
 as 320px, 480px, 768px, 1024px, 1224px, and so forth. This is
-a **bad** idea.
+a <b>bad</b> idea.
 
 When building a responsive website it should adjust to an array of
 different viewport sizes, regardless of the device. Breakpoints should
@@ -3526,8 +3556,8 @@ time. Trying to keep up with these changes could be an endless process.
 
 <h4>Mobile First</h4>
 
-One popular technique with using media queries is called *mobile first*.
-The [mobile first](https://abookapart.com/products/mobile-first) approach
+One popular technique with using media queries is called <i>mobile first</i>.
+The <a href="https://abookapart.com/products/mobile-first">mobile first</a> approach
 includes using styles targeted at smaller viewports as the default
 styles for a website, then use media queries to add styles as the
 viewport grows.
@@ -3563,15 +3593,15 @@ even reduce a device's battery life.
 
 ```
  1  /* Default media */
- 2  body {  
- 3  background: #ddd;  
- 4  } 
- 5  /* Media for larger devices */  
- 6  &#0064;media screen and (min-width: 800px) { 
- 7  body {  
- 8  background-image: url("bg.png") 50% 50% no-repeat;  
- 9  } 
- 1  } 
+ 2  body {
+ 3    background: #ddd;
+ 4  }
+ 5  /* Media for larger devices */
+ 6  &#0064;media screen and (min-width: 800px) {
+ 7    body {
+ 8      background-image: url("bg.png") 50% 50% no-repeat;  
+ 9    }
+ 1  }
  1 
 ```
 
@@ -3607,7 +3637,7 @@ build the following:
 <h4>Mobile First Demo</h4>
 
 Notice, this is the same amount of code as before. The only exception
-here is that mobile devices only have to render only **one** CSS
+here is that mobile devices only have to render only <b>one</b> CSS
 declaration. All of the other styles are deferred, only loading on
 larger viewports and done so without overwriting any initial styles.
 
@@ -3621,15 +3651,16 @@ scale, and resolution of a website. To remedy this, Apple invented
 the viewport meta tag.
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~ 10.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~ 10. website without viewport meta tag (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="center" width="100%">
   <img src="./images/image010.png"
- style="width:40%"
- alt="Website without Viewport Meta Tag." />
+  style="width:40%"
+  title="Website without Viewport Meta Tag"
+  alt="Website without Viewport Meta Tag." />
 
-**Fig. 4.** Although this demo has media queries, many mobile devices
+<h6 align="center">Fig. 4. Although this demo has media queries, many mobile devices
 still do not know the initial width or scale of the website. Therefore,
-they may not interrupt media queries.
+they may not interrupt media queries.</h6>
 
 <h4>Viewport Height & Width</h4>
 
@@ -3650,15 +3681,16 @@ the device-height and device-width values.
 ```
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~ 11.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~ 11. website with viewport meta tag (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="center" width="100%">
   <img src="./images/image011.png"
- style="width:40%"
- alt="Website with Viewport Meta Tag." />
+  style="width:40%"
+  title="Website with Viewport Meta Tag"
+  alt="Website with Viewport Meta Tag." />
 
-**Fig. 4.** Letting devices know the intended width of the
+<h6 align="center">Fig. 4. Letting devices know the intended width of the
 website, device-width in this case, allows the website to be sized
-properly and to pick up any qualifying media queries.
+properly and to pick up any qualifying media queries.</h6>
 
 <h4>Viewport Scale</h4>
 
@@ -3679,15 +3711,15 @@ for initial-scale should always be a positive integer between 0 and 10.
 ```
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~ 12. viewport scale meta tag (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 12. viewport scale meta tag (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="center" width="100%">
   <img src="./images/image012.png"
- style="width:40%"
- alt="Viewport Scale Meta Tag." />
+  style="width:40%"
+  title="Viewport Scale Meta Tag"
+  alt="Viewport Scale Meta Tag." />
 
-**Fig. 4.** Using an integer above 1 will zoom the website to be larger
-than the default scale. Generally speaking, this value will most
-commonly be set to 1.
+<h6 align="center">Fig. 4. Using an integer above 1 will zoom the website to be larger
+than the default scale. Generally speaking, this value will most commonly be set to 1.</h6>
 
 The minimum-scale and maximum-scale values determine how small and how
 large a viewport may be scaled. When using minimum-scale the value
@@ -3707,7 +3739,7 @@ accomplished instead by using the user-scalable value. Setting
 the user-scalable value to no will disable any zooming. Alternatively,
 setting the user-scalable value to yes will turn on zooming.
 
-Turning off the ability to scale a website is a **bad idea**. It harms
+Turning off the ability to scale a website is a <b>bad idea</b>. It harms
 accessibility and usability, preventing those with disabilities from
 viewing a website as desired.
 
@@ -3748,15 +3780,15 @@ outlined below, using both the width and initial-scale properties.
 ```
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~ 11.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~ 11. website with viewport meta tag (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="center" width="100%">
   <img src="./images/image011.png"
- style="width:40%"
- alt="Website with Viewport Meta Tag." />
+  style="width:40%"
+  title="Website with Viewport Meta Tag"
+  alt="Website with Viewport Meta Tag." />
 
-**Fig. 4** A combination
-of width=device-width and initial-scale=1 provide the initial size and
-zoom commonly required.
+<h6 align="center">Fig. 4 A combination of width=device-width and initial-scale=1 
+provide the initial size and zoom commonly required.</h6>
 
 <h4>CSS Viewport Rule</h4>
 
@@ -3804,8 +3836,9 @@ any media will scale down according to its containers width.
 Unfortunately the max-width property doesn't work well for all instances
 of media, specifically around iframes and embedded media. When it comes
 to third party websites, such as YouTube, who use iframes for embedded
-media this is a huge disappointment. Fortunately, there is a [work
-around](http://www.alistapart.com/articles/creating-intrinsic-ratios-for-video/).
+media this is a huge disappointment. Fortunately, there is a 
+<a href="http://www.alistapart.com/articles/creating-intrinsic-ratios-for-video/">
+work around</a>.
 
 To get embedded media to be fully responsive, the embedded element needs
 to be absolutely positioned within a parent element. The parent element
@@ -3853,8 +3886,8 @@ treating the parent element as an absolutely positioned element.
 <h4>Flexible Embedded Media Demo</h4>
 
 For security reasons CodePen doesn't allow iframes within embedded code
-samples, however you may [review and edit this code](https://codepen.io/shayhowe/pen/cbmsI) 
-on their website.
+samples, however you may <a href="https://codepen.io/shayhowe/pen/cbmsI">
+review and edit this code</a> on their website.
 
 100% Wide Container
 
@@ -3880,7 +3913,7 @@ on their website.
 **Lesson 3** <a href="https://learn.shayhowe.com/advanced-html-css/complex-selectors/">Complex Selectors</a>
 **Lesson 5** <a href="https://learn.shayhowe.com/advanced-html-css/preprocessors/">Preprocessors</a>
 
-<h2 align="center">[Lesson 5] Preprocessors</h2>
+<h2 align="center">Lesson 5: Preprocessors</h2>
 
 <h3>In this Lesson 5</h3>
 
@@ -3900,7 +3933,7 @@ on their website.
     Other Preprocessors</a></li>
 </ul>
 
-**SHARE**
+<h4>SHARE</h4>
 
 In time writing HTML and CSS may feel a bit taxing, requiring a lot of
 the same tasks to be completed over and over again. Tasks such as
@@ -3992,14 +4025,14 @@ The default doctype in Haml is the HTML 1.0 Transitional document type
 so in order to make this the HTML5 doctype the number five has to be
 passed in after the exclamation points, !!! 5.
 
-**Haml**
+<h4>Haml</h4>
 
 ```
  1  !!! 5
  2 
 ```
 
-**Compiled HTML**
+<h4>Compiled HTML</h4>
 
 ```
  1  <!DOCTYPE html>  
@@ -4024,7 +4057,7 @@ mandating the structure with indentation creates an easy to follow
 outline. At any given time the markup can be scanned and changed without
 struggle.
 
-**Haml**
+<h4>Haml</h4>
 
 ```
  1  %body
@@ -4035,7 +4068,7 @@ struggle.
  6 
 ```
 
-**Compiled HTML**
+<h4>Compiled HTML</h4>
 
 ```
  1  <body>
@@ -4075,7 +4108,7 @@ all depending if you wish to use Ruby or HTML syntax. Ruby style
 attributes will use the standard hash syntax inside of {}, while HTML
 style attributes will use standard HTML syntax inside of ().
 
-**Haml**
+<h4>Haml</h4>
 
 ```
  1  %img{:src => "shay.jpg", :alt => "Shay Howe"}
@@ -4084,7 +4117,7 @@ style attributes will use standard HTML syntax inside of ().
  4 
 ```
 
-**Compiled HTML**
+<h4>Compiled HTML</h4>
 
 ```
  1  <img src="shay.jpg" alt="Shay Howe">
@@ -4115,7 +4148,7 @@ outlined formats.
  5 
 ```
 
-**Compiled HTML**
+<h4>Compiled HTML</h4>
 
 ```
  1  <section class="feature"></section> 
@@ -4131,7 +4164,7 @@ In the event a class or ID is used on a div the %div may be omitted, and
 the class or ID value can be used outright. Again, classes are to be
 identified with a . and IDs are to be identified with a #.
 
-**Haml**
+<h4>Haml</h4>
 
 ```
  1  .awesome
@@ -4140,7 +4173,7 @@ identified with a . and IDs are to be identified with a #.
  4 
 ```
 
-**Compiled HTML**
+<h4>Compiled HTML</h4>
 
 ```
  1  <div class="awesome"></div> 
@@ -4154,7 +4187,7 @@ identified with a . and IDs are to be identified with a #.
 Boolean attributes are handled just as they would be within Ruby or
 HTML, all depending on the syntax being used.
 
-**Haml**
+<h4>Haml</h4>
 
 ```
  1  %input{:type => "checkbox", :checked => true}  
@@ -4163,7 +4196,7 @@ HTML, all depending on the syntax being used.
  4 
 ```
 
-**Compiled HTML**
+<h4>Compiled HTML</h4>
 
 ```
  1  <input type="checkbox" checked>  
@@ -4182,7 +4215,7 @@ pulling the authors name from the application. The second instance,
 starting with the backslash, is escaped text, printing it as is, without
 execution.
 
-**Haml**
+<h4>Haml</h4>
 
 ```
  1  .author 
@@ -4191,7 +4224,7 @@ execution.
  4 
 ```
 
-**Compiled HTML**
+<h4>Compiled HTML</h4>
 
 ```
  1  <div class="author"> 
@@ -4216,7 +4249,7 @@ In these cases a Ruby helper comes in handy. In the example below, the
 helper is used to place a period directly after the last word but still
 outside of the anchor text.
 
-**Haml**
+<h4>Haml</h4>
 
 ```
  1  %p
@@ -4226,7 +4259,7 @@ outside of the anchor text.
  5 
 ```
 
-**Compiled HTML**
+<h4>Compiled HTML</h4>
 
 ```
  1  <p>Shay is <a href="#">awesome</a>.</p>  
@@ -4241,7 +4274,7 @@ of a single forward slash, /. Individual lines may be commented out with
 the use of a forward slash at the beginning of the line, and blocks of
 code can be commented out by being nested underneath a forward slash.
 
-**Haml**
+<h4>Haml</h4>
 
 ```
  1  %div 
@@ -4253,18 +4286,18 @@ code can be commented out by being nested underneath a forward slash.
  7 
 ```
 
-**Compiled HTML**
+<h4>Compiled HTML</h4>
 
 ```
  1  <div> 
- 2  <!&#45;&#45; Commented line &#45;&#45;> 
- 3  Actual line
+ 2    <!-- Commented line --> 
+ 3    Actual line
  4  </div>
- 5  <!&#45;&#45;  
+ 5    <!--  
  6  <div> 
- 7  Commented block 
+ 7    Commented block 
  8  </div>
- 9  &#45;&#45;>
+ 9  -->
  10 
 ```
 
@@ -4275,20 +4308,20 @@ conditional comment use square brackets, [], around the condition.
 These square brackets need to be placed directly after the forward
 slash.
 
-**Haml**
+<h4>Haml</h4>
 
 ```
- 1  /]if lt IE 9[ 
+ 1  [if lt IE 9] 
  2  %script{:src => "html5shiv.js"}
  3 
 ```
 
-**Compiled HTML**
+<h4>Compiled HTML</h4>
 
 ```
  1  <!&#45;&#45;]if lt IE 9[>
  2  <script src="html5shiv.js"></script>
- 3  <&#0033;[endif[&#45;&#45;>  
+ 3  <&#0033;[endif]&#45;&#45;>  
  4 
 ```
 
@@ -4302,7 +4335,7 @@ Silent comments are initialized with a dash then the number sign, -#. As
 with other comments, silent comments may be used to remove one line or
 multiple lines with the use of nesting.
 
-**Haml**
+<h4>Haml</h4>
 
 ```
  1  %div 
@@ -4311,11 +4344,11 @@ multiple lines with the use of nesting.
  4 
 ```
 
-**Compiled HTML**
+<h4>Compiled HTML</h4>
 
 ```
  1  <div> 
- 2  Actual line
+ 2    Actual line
  3  </div>
  4 
 ```
@@ -4364,7 +4397,7 @@ the group being :css and :javascript.
 
 <h4>Javascript Filter</h4>
 
-**Haml**
+<h4>Haml</h4>
 
 ```
  1  :javascript
@@ -4374,7 +4407,7 @@ the group being :css and :javascript.
  5 
 ```
 
-**Compiled HTML**
+<h4>Compiled HTML</h4>
 
 ```
  1  <script> 
@@ -4387,7 +4420,7 @@ the group being :css and :javascript.
 
 <h4>CSS &amp; Sass Filters</h4>
 
-**Haml**
+<h4>Haml</h4>
 
 ```
  1  :css 
@@ -4402,7 +4435,7 @@ the group being :css and :javascript.
  10  
 ```
 
-**Compiled HTML**
+<h4>Compiled HTML</h4>
 
 ```
  1  <style>  
@@ -4423,14 +4456,14 @@ wrapping the necessary Ruby code inside .
 
 Below is an example of Ruby being interpolated as part of a class name.
 
-**Haml**
+<h4>Haml</h4>
 
 ```
  1  %div{:class => "student-#{@student.name}"}
  2 
 ```
 
-**Compiled HTML**
+<h4>Compiled HTML</h4>
 
 ```
  1  <div class="student-shay"> 
@@ -4524,7 +4557,7 @@ indenting or character errors will prohibit the styles from compiling.
 Sass omits all curly brackets, {}, and semicolons, ;, relying on
 indentation and clear line breaks for formatting.
 
-**SCSS**
+<h4>SCSS</h4>
 
 ```
  1  .new {  
@@ -4537,7 +4570,7 @@ indentation and clear line breaks for formatting.
  8 
 ```
 
-**Sass**
+<h4>Sass</h4>
 
 ```
  1  .new 
@@ -4548,7 +4581,7 @@ indentation and clear line breaks for formatting.
  6 
 ```
 
-**Compiled CSS**
+<h4>Compiled CSS</h4>
 
 ```
  1  .new {  
@@ -4586,7 +4619,7 @@ overboard. Do **not** nest selectors for unapparent reasons or go
 overboard nesting one selector under the prior one. Using specific
 selectors without raising specificity is important.
 
-**Sass**
+<h4>Sass</h4>
 
 ```
  1  .portfolio 
@@ -4598,7 +4631,7 @@ selectors without raising specificity is important.
  7 
 ```
 
-**Compiled CSS**
+<h4>Compiled CSS</h4>
 
 ```
  1  .portfolio { 
@@ -4622,7 +4655,7 @@ very much a personal decision. Many feel that shorthand values are fine
 and breaking out values in this longer format is unnecessary. Ultimately
 your decision is up to personal preference.
 
-**Sass**
+<h4>Sass</h4>
 
 ```
  1  div  
@@ -4633,7 +4666,7 @@ your decision is up to personal preference.
  6 
 ```
 
-**Compiled CSS**
+<h4>Compiled CSS</h4>
 
 ```
  1  div {
@@ -4649,7 +4682,7 @@ your decision is up to personal preference.
 Individual media queries may also be nested inside of a selector,
 changing property values based off a media condition.
 
-**Sass**
+<h4>Sass</h4>
 
 ```
  1  .container 
@@ -4659,7 +4692,7 @@ changing property values based off a media condition.
  5 
 ```
 
-**Compiled CSS**
+<h4>Compiled CSS</h4>
 
 ```
  1  .container { 
@@ -4676,13 +4709,13 @@ changing property values based off a media condition.
 <h4>Parent Selector</h4>
 
 Sass provides a way to add styles to a previous selector with the use of
-the parent selector, implemented by using an ampersand, &. Most commonly
+the parent selector, implemented by using an ampersand, &amp;. Most commonly
 the parent selector is used in conjunction with a pseudo class, such
 as :hover, however it doesn't have to be. Additionally the parent
 selector could be used to bind additional selectors to its parent, such
-as &.featured.
+as &amp;.featured.
 
-**Sass**
+<h4>Sass</h4>
 
 ```
  1  a 
@@ -4692,7 +4725,7 @@ as &.featured.
  5 
 ```
 
-**Compiled CSS**
+<h4>Compiled CSS</h4>
 
 ```
  1  a {  
@@ -4711,7 +4744,7 @@ qualifying selectors to make compound selectors. There are an abundance
 of ways to use the parent selector as the key selector but perhaps one
 of the most beneficial is inside of feature detection.
 
-**Sass**
+<h4>Sass</h4>
 
 ```
  1  .btn 
@@ -4721,7 +4754,7 @@ of the most beneficial is inside of feature detection.
  5 
 ```
 
-**Compiled CSS**
+<h4>Compiled CSS</h4>
 
 ```
  1  .btn {  
@@ -4745,7 +4778,7 @@ content on that line or nested below it will be omitted from
 computation. Notice in the example below how the // Omitted comment line
 is not rendered in the compiled CSS.
 
-**Sass**
+<h4>Sass</h4>
 
 ```
  1  /* Normal comment */
@@ -4757,7 +4790,7 @@ is not rendered in the compiled CSS.
  7 
 ```
 
-**Compiled CSS**
+<h4>Compiled CSS</h4>
 
 ```
  1  /* Normal comment */
@@ -4792,7 +4825,7 @@ separated by spaces or commas.
  5 
 ```
 
-**Compiled CSS**
+<h4>Compiled CSS</h4>
 
 ```
  1  p {  
@@ -4819,7 +4852,7 @@ string of plain text.
  5 
 ```
 
-**Compiled CSS**
+<h4>Compiled CSS</h4>
 
 ```
  1  .chicago { 
@@ -4857,7 +4890,7 @@ have a unit.
  5 
 ```
 
-**Compiled CSS**
+<h4>Compiled CSS</h4>
 
 ```
  1  width: 46px; 
@@ -4879,7 +4912,7 @@ When using one unit of measurement in division the value will reside in
 that unit. When using two units of measurement, however, the resulting
 value will be unitless.
 
-**Sass**
+<h4>Sass</h4>
 
 ```
  1  width: 100px / 10  
@@ -4891,7 +4924,7 @@ value will be unitless.
  7 
 ```
 
-**Compiled CSS**
+<h4>Compiled CSS</h4>
 
 ```
  1  width: 100px/10;
@@ -4908,7 +4941,7 @@ As one may expect, Sass is also capable of combining multiple math
 operations. Sass also recognizes which operations to execute first based
 on the use of parentheses.
 
-**Sass**
+<h4>Sass</h4>
 
 ```
  1  $grid: 16 
@@ -4919,7 +4952,7 @@ on the use of parentheses.
  6 
 ```
 
-**Compiled CSS**
+<h4>Compiled CSS</h4>
 
 ```
  1  width: 960px;
@@ -4947,7 +4980,7 @@ the absolute value of a given number.
   <li>abs()</li>
 </ul>
 
-**Sass**
+<h4>Sass</h4>
 
 ```
  1  width: percentage(2.5)
@@ -4958,7 +4991,7 @@ the absolute value of a given number.
  6 
 ```
 
-**Compiled CSS**
+<h4>Compiled CSS</h4>
 
 ```
  1  width: 250%; 
@@ -4977,7 +5010,7 @@ colors. One of the more popular color features in Sass is the ability to
 change a hexadecimal color, or variable, and convert it into an RGBa
 value.
 
-**Sass**
+<h4>Sass</h4>
 
 ```
  1  color: rgba(#8ec63f, .25)
@@ -4986,7 +5019,7 @@ value.
  4 
 ```
 
-**Compiled CSS**
+<h4>Compiled CSS</h4>
 
 ```
  1  color: rgba(142, 198, 63, .25);
@@ -5000,7 +5033,7 @@ addition, subtraction, multiplication, and division. These computations
 are performed on the red, green, and blue components, changing them as
 intended.
 
-**Sass**
+<h4>Sass</h4>
 
 ```
  1  color: #8ec63f + #666 
@@ -5009,7 +5042,7 @@ intended.
  4 
 ```
 
-**Compiled CSS**
+<h4>Compiled CSS</h4>
 
 ```
  1  color: #f4ffa5; 
@@ -5026,15 +5059,14 @@ option. Color alterations provide the ability to inverse colors, find
 complementary colors, mix colors together, or find the grayscale value
 of a color.
 
--invert()
+<ul>
+  <li>invert()</li>
+  <li>complement()</li>
+  <li>mix()</li>
+  <li>grayscale()</li>
+</ul>
 
--complement()
-
--mix()
-
--grayscale()
-
-**Sass**
+<h4>Sass</h4>
 
 ```
  1  color: invert(#8ec63f)
@@ -5045,7 +5077,7 @@ of a color.
  6 
 ```
 
-**Compiled CSS**
+<h4>Compiled CSS</h4>
 
 ```
  1  color: #7139c0; 
@@ -5076,7 +5108,7 @@ include lighten(), darken(), saturate(), and desaturate().
 
 -fade-out()
 
-**Sass**
+<h4>Sass</h4>
 
 ```
  1  color: lighten(#8ec63f, 50%)
@@ -5090,7 +5122,7 @@ include lighten(), darken(), saturate(), and desaturate().
  9 
 ```
 
-**Compiled CSS**
+<h4>Compiled CSS</h4>
 
 ```
  1  color: white;
@@ -5113,21 +5145,21 @@ which is why color manipulations are a bit less common than color
 alterations.
 
 ```
--change-color() --- Set any property of a color\
- $color, ]$red[, ]$green[, ]$blue[, ]$hue[,
- ]$saturation[, ]$lightness[, ]$alpha[
+-change-color() --- Set any property of a color
+ $color, [$red], [$green], [$blue], [$hue],
+ [$saturation], [$lightness], [$alpha]
 
--adjust-color() --- Incrementally manipulate any property of a color\
- $color, ]$red[, ]$green[, ]$blue[, ]$hue[,
- ]$saturation[, ]$lightness[, ]$alpha[
+-adjust-color() --- Incrementally manipulate any property of a color
+ $color, [$red], [$green], [$blue], [$hue],
+ [$saturation], [$lightness], [$alpha]
 
 -scale-color() --- Fluidly scale any percentage based on property of
- a color\
- $color, ]$red[, ]$green[, ]$blue[, ]$saturation[,
- ]$lightness[, ]$alpha[
+ a color
+ $color, [$red], [$green], [$blue], [$saturation],
+ [$lightness], [$alpha]
 ```
 
-**Sass**
+<h4>Sass</h4>
 
 ```
  1  color: change-color(#8ec63f, $red: 60, $green: 255) 
@@ -5136,7 +5168,7 @@ alterations.
  4 
 ```
 
-**Compiled CSS**
+<h4>Compiled CSS</h4>
 
 ```
  1  color: #3cff3f; 
@@ -5161,7 +5193,7 @@ from the selector calling the extend.
 In all, this provides a way to quickly reuse code without driving up
 code weight. Additionally, extends parley nicely with OOCSS and SMACSS.
 
-**Sass**
+<h4>Sass</h4>
 
 ```
  1  .alert  
@@ -5174,7 +5206,7 @@ code weight. Additionally, extends parley nicely with OOCSS and SMACSS.
  8 
 ```
 
-**Compiled CSS**
+<h4>Compiled CSS</h4>
 
 ```
  1  .alert, 
@@ -5198,7 +5230,7 @@ into CSS. Instead, it is used to attach selectors to when it is called
 with an extend. In the refined example below notice how
 the .alert selector never makes its way into the CSS.
 
-**Sass**
+<h4>Sass</h4>
 
 ```
  1  %alert  
@@ -5211,7 +5243,7 @@ the .alert selector never makes its way into the CSS.
  8 
 ```
 
-**Compiled CSS**
+<h4>Compiled CSS</h4>
 
 ```
  1  .alert-error {  
@@ -5229,7 +5261,7 @@ the .alert selector never makes its way into the CSS.
 
 As with classes, extends also work with standard element selectors too.
 
-**Sass**
+<h4>Sass</h4>
 
 ```
  1  h2
@@ -5241,7 +5273,7 @@ As with classes, extends also work with standard element selectors too.
  7 
 ```
 
-**Compiled CSS**
+<h4>Compiled CSS</h4>
 
 ```
  1  h2, .sub-heading { 
@@ -5267,7 +5299,7 @@ mixin and any desired argument values if needed.
 It is worth nothing that SCSS handles mixins a bit different. Instead of
 using a plus sign to call a mixin SCSS use an @include rule.
 
-**Sass**
+<h4>Sass</h4>
 
 ```
  1  &#0064;mixin btn($color, $color-hover)  
@@ -5279,7 +5311,7 @@ using a plus sign to call a mixin SCSS use an @include rule.
  7 
 ```
 
-**Compiled CSS**
+<h4>Compiled CSS</h4>
 
 ```
  1  .btn {  
@@ -5296,7 +5328,7 @@ using a plus sign to call a mixin SCSS use an @include rule.
 Using the same example from above we can also specify default argument
 values, which may be over written if wished.
 
-**Sass**
+<h4>Sass</h4>
 
 ```
  1  &#0064;mixin btn($color: #fff, $color-hover: #9799a7) 
@@ -5308,14 +5340,14 @@ values, which may be over written if wished.
  7 
 ```
 
-**Compiled CSS**
+<h4>Compiled CSS</h4>
 
 ```
  1  .btn {  
- 2  color: #fff; 
+ 2    color: #fff; 
  3  } 
  4  .btn:hover { 
- 5  color: #9799a7; 
+ 5    color: #9799a7; 
  6  } 
  7 
 ```
@@ -5336,7 +5368,7 @@ box shadows we can pass in comma separated values to the mixin.
  7 
 ```
 
-**Compiled CSS**
+<h4>Compiled CSS</h4>
 
 ```
  1  .shadows { 
@@ -5366,7 +5398,7 @@ the other files is named styles.sass, and it is compiled
 into styles.css, then only styles.css needs to be referenced within the
 HTML document.
 
-**Sass**
+<h4>Sass</h4>
 
 ```
  1  &#0064;import "normalize"
@@ -5374,14 +5406,14 @@ HTML document.
  3 
 ```
 
-**Compiled HTML**
+<h4>Compiled HTML</h4>
 
 ```
  1  <link href="styles.css" rel="stylesheet"> 
  2 
 ```
 
-<h4>Loops & Conditionals</h4>
+<h4>Loops &amp; Conditionals</h4>
 
 For a bit more intricate styling Sass supports different control
 directives. Its important to understand these directives are not
@@ -5398,22 +5430,22 @@ entities, while comparison operators determine equality or different
 between to entities.
 
 ```
--<\
+- <
  Less than
 
-->\
+- >
  Greater than
 
--==\
+- ==
  Equal to
 
--<=\
+- <=
  Less than or equal to
 
-->=\
+- >=
  Greather than or equal to
 
--!=\
+-!=
  Not equal to
 ```
 
@@ -5438,7 +5470,7 @@ initial if statement may be proceeded by several else if statements and
 one else statement. Once a statement is successful identified the styles
 directly tied to it will be applied.
 
-**Sass**
+<h4>Sass</h4>
 
 ```
  1  $shay: awesome 
@@ -5452,7 +5484,7 @@ directly tied to it will be applied.
  9 
 ```
 
-**Compiled CSS**
+<h4>Compiled CSS</h4>
 
 ```
  1  .shay { 
@@ -5469,7 +5501,7 @@ being to and through. The first, @for $i from 1 to 3 for example, will
 output styles up to, but not including, 3. The other form, @for $i from
 1 through 3, will output styles up to, and including, 3.
 
-**Sass**
+<h4>Sass</h4>
 
 ```
  1  &#0064;for $col from 1 to 6  
@@ -5507,7 +5539,7 @@ output styles up to, but not including, 3. The other form, @for $i from
 Simply enough, the @each rule returns styles for each item in a list.
 List may include multiple comma separated items.
 
-**Sass**
+<h4>Sass</h4>
 
 ```
  1  &#0064;each $class in uxd, rails, html, css 
@@ -5543,7 +5575,7 @@ The @while rule repeatedly returns styles until the statement becomes
 false. The directive accepts a handful of different operators and the
 counter variable can be finely controlled allowing for precise looping.
 
-**Sass**
+<h4>Sass</h4>
 
 ```
  1  $heading: 1 
@@ -5618,17 +5650,15 @@ your research for each project and make the most educated decision.
  Function](https://sass-lang.com/documentation/modules) via
  Sass Documentation
 
-[**Lesson 4** [Responsive Web
-Design](https://learn.shayhowe.com/advanced-html-css/responsive-web-design/)
-[**Lesson 6**
-[jQuery](https://learn.shayhowe.com/advanced-html-css/jquery/)
+**Lesson 4** [Responsive Web Design](https://learn.shayhowe.com/advanced-html-css/responsive-web-design/)
+**Lesson 6** [jQuery](https://learn.shayhowe.com/advanced-html-css/jquery/)
 
 
-<h2 align="center">[Lesson 6] jQuery</h2>
+<h2 align="center">Lesson 6: jQuery</h2>
 
 <h3>In this Lesson 6</h3>
 
-**JAVASCRIPT**
+<h4>JAVASCRIPT</h4>
 
 -[JavaScript
  Intro](https://learn.shayhowe.com/advanced-html-css/jquery/#javascript)
@@ -5646,7 +5676,7 @@ Design](https://learn.shayhowe.com/advanced-html-css/responsive-web-design/)
 
 -[Effects](https://learn.shayhowe.com/advanced-html-css/jquery/#effects)
 
-**SHARE**
+<h4>SHARE</h4>
 
 In part of being a web designer or front end developer you will commonly
 run into JavaScript, often referred to as JS, and jQuery. Within the top
@@ -5662,12 +5692,12 @@ If you are asking what exactly are JavaScript and jQuery fear not, this
 lesson gives a brief overview of JavaScript and then takes a look at
 jQuery.
 
-JavaScript Intro
+<h3>JavaScript Intro</h3>
 
 [JavaScript](https://developer.mozilla.org/en-US/docs/JavaScript/A_re-introduction_to_JavaScript) provides
 the ability to add interactivity to a website, and help enrich the user
-experience. HTML provides a page with **structure** and CSS provides a
-page with **appearance**, JavaScript provide a page with **behavior**.
+experience. HTML provides a page with <b>structure</b> and CSS provides a
+page with <b>appearance</b>, JavaScript provide a page with <b>behavior</b>.
 
 Like CSS, JavaScript should be saved in an external file with
 the .js file extension, and then referenced within an HTML document
@@ -5800,8 +5830,9 @@ properties, each having a key followed by a colon and value.
 <!--~~~~~~~~~~~~~~~~~~~~~~~ 13. web inspector console (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="center" width="100%">
   <img src="./images/image013.png"
- style="width:50%"
- alt="Web Inspector Console." />
+  style="width:50%"
+  title="Web Inspector Console"
+  alt="Web Inspector Console." />
 
 <h6 style="center">Fig. 6</h6>
 
@@ -6043,7 +6074,7 @@ options to manipulate elements are fairly vast.
 <h4>Getting & Setting</h4>
 
 The manipulation methods to follow are most commonly used in one of two
-directives, that being *getting* or *setting* information. Getting
+directives, that being <i>getting</i> or <i>setting</i> information. Getting
 information revolves around using a selector in addition with a method
 to determine what piece of information is to be retrieved. Additionally,
 the same selector and method may also be used to set a piece of
@@ -6259,17 +6290,17 @@ clicking the close icon.
 
 ```
  1  <div class="notice-warning">
- 2  <div class="notice-close">x</div>  
- 3  <strong>Warning!</strong> I"m about to lose my cool.  
+ 2    <div class="notice-close">x</div>  
+ 3    <strong>Warning!</strong> I"m about to lose my cool.  
  4  </div> 
  5  
 ```
 
-**JavaScript**
+<h4JavaScript</h4>
 
 ```
  1  $('.notice-close').on('click', function(event){
- 2  $('.notice-warning').remove();  
+ 2    $('.notice-warning').remove();  
  3  });
  4  
 ```
@@ -6458,19 +6489,19 @@ animation is complete.
 
 ```
  1  <div class="notice-warning">
- 2  <div class="notice-close">x</div>  
- 3  <strong>Warning!</strong> I'm about to lose my cool.  
+ 2    <div class="notice-close">x</div>  
+ 3    <strong>Warning!</strong> I'm about to lose my cool.  
  4  </div> 
  5  
 ```
 
-**JavaScript**
+<h4>JavaScript</h4>
 
 ```
  1  $('.notice-close').on('click', function(event){  
- 2  $('.notice-warning').fadeOut('slow', function(event){  
- 3  $(this).remove(); 
- 4  });  
+ 2    $('.notice-warning').fadeOut('slow', function(event){  
+ 3      $(this).remove(); 
+ 4    });  
  5  });  
  6 
 ```
@@ -6604,17 +6635,16 @@ animation is complete.
 
 -[jQuery Documentation](http://docs.jquery.com/)
 
--[jQuery Fundamentals](http://jqfundamentals.com/) via
- Bocoup
+-[jQuery Fundamentals](http://jqfundamentals.com/) via Bocoup
 
 -[jQuery UI](http://jqueryui.com/)
 
-[**Lesson 5**]
+**Lesson 5**
 [Preprocessors](https://learn.shayhowe.com/advanced-html-css/preprocessors/)
-[**Lesson 7**]
+**Lesson 7**
 [Transforms](https://learn.shayhowe.com/advanced-html-css/css-transforms/)
 
-<h2 align="center">[Lesson 7] Transforms</h2>
+<h2 align="center">Lesson 7: Transforms</h2>
 
 <h3>In this Lesson 7</h3>
 
@@ -6646,7 +6676,7 @@ Software. Faster.
 -[Backface
  Visibility](https://learn.shayhowe.com/advanced-html-css/css-transforms/#backface-visibility)
 
-**SHARE**
+<h4>SHARE</h4>
 
 With CSS3 came new ways to position and alter elements. Now general
 layout techniques can be revisited with alternative ways to size,
@@ -7042,7 +7072,7 @@ outcome is achieved.
 
 In order for three-dimensional transforms to work the elements need a
 perspective from which to transform. The perspective for each element
-can be thought of as a *vanishing point*, similar to that which can be
+can be thought of as a <i>vanishing point</i>, similar to that which can be
 seen in three-dimensional drawings.
 
 The perspective of an element can be set in two different ways. One way
@@ -7317,10 +7347,10 @@ for example.
 
 ```
  1  .box-1 {
- 2  transform: perspective(200px) translateZ(-50px);
+ 2    transform: perspective(200px) translateZ(-50px);
  3  } 
  4  .box-2 {
- 5  transform: perspective(200px) translateZ(50px); 
+ 5    transform: perspective(200px) translateZ(50px); 
  6  } 
  7 
 ```
@@ -7329,7 +7359,7 @@ for example.
 
 <h4>3D Skew</h4>
 
-Skew is the one two-dimensional transform that **cannot** be transformed
+Skew is the one two-dimensional transform that <b>cannot</b> be transformed
 on a three-dimensional scale. Elements may be skewed on
 the x and y axis, then transformed three-dimensionally as wished, but
 they cannot be skewed on the z axis.
@@ -7524,11 +7554,11 @@ using [animations](https://css-tricks.com/almanac/properties/b/backface-visibil
  Backface Visibility</a> via CSS-Tricks</li>
 </ul>
 
-[<b>Lesson 6</b>] <a href="https://learn.shayhowe.com/advanced-html-css/jquery/">jQuery</a>
-[<b>Lesson 8</b>] <a href="https://learn.shayhowe.com/advanced-html-css/transitions-animations/">Transitions &amp; Animations</a>
+<b>Lesson 6</b> <a href="https://learn.shayhowe.com/advanced-html-css/jquery/">jQuery</a>
+<b>Lesson 8</b> <a href="https://learn.shayhowe.com/advanced-html-css/transitions-animations/">Transitions &amp; Animations</a>
 
 
-<h2 align="center">[Lesson 8] Transitions &amp; Animations</h2>
+<h2 align="center">Lesson 8: Transitions &amp; Animations</h2>
 
 <h3>In this Lesson 8</h3>
 
@@ -7549,7 +7579,7 @@ GitlabGitLab is the only place where enterprises build mission critical software
 -[Shorthand
  Animations](https://learn.shayhowe.com/advanced-html-css/transitions-animations/#shorthand-animations)
 
-**SHARE**
+<h4>SHARE</h4>
 
 One evolution with CSS3 was the ability to write behaviors for
 transitions and animations. Front end developers have been asking for
@@ -7682,7 +7712,7 @@ element.
 
 <h4>Transitional Properties</h4>
 
-It is important to note, **not all properties may be transitioned**,
+It is important to note, <b>not all properties may be transitioned</b>,
 only properties that have an identifiable halfway point. Colors, font
 sizes, and the alike may be transitioned from one value to another as
 they have recognizable values in-between one another.
@@ -8356,26 +8386,29 @@ the animation.
  Animations](https://developer.mozilla.org/en-US/docs/CSS/Using_CSS_animations) via
  Mozilla Developer Network
 
-[<b>Lesson 7</b>] [Transforms](https://learn.shayhowe.com/advanced-html-css/css-transforms/)
-[<b>Lesson 9</b>] [Feature Support & Polyfills](https://learn.shayhowe.com/advanced-html-css/feature-support-polyfills/)
+<b>Lesson 7</b> [Transforms](https://learn.shayhowe.com/advanced-html-css/css-transforms/)
+<b>Lesson 9</b> [Feature Support & Polyfills](https://learn.shayhowe.com/advanced-html-css/feature-support-polyfills/)
 
 
-<h2 align="center">[Lesson 9] Feature Support &amp; Polyfills</h2>
+<h2 align="center">Lesson 9: Feature Support &amp; Polyfills</h2>
 
 <h3>In this Lesson 9</h3>
 
 <h4>HTML</h4>
 
--[HTML5
- Shiv](https://learn.shayhowe.com/advanced-html-css/feature-support-polyfills/#html5-shiv)
-
--[Cross Browser
- Testing](https://learn.shayhowe.com/advanced-html-css/feature-support-polyfills/#cross-browser-testing)
+<ul>
+  <li><a href="https://learn.shayhowe.com/advanced-html-css/feature-support-polyfills/#html5-shiv">
+    HTML5 Shiv</a></li>
+  <li><a href="https://learn.shayhowe.com/advanced-html-css/feature-support-polyfills/#cross-browser-testing">
+    Cross Browser  Testing</a></li>
+</ul>
 
 <h4>CSS</h4>
 
--[Detecting Browser
- Features](https://learn.shayhowe.com/advanced-html-css/feature-support-polyfills/#detecting-browser-features)
+<ul>
+  <li><a href="https://learn.shayhowe.com/advanced-html-css/feature-support-polyfills/#detecting-browser-features">
+    Detecting Browser Features</a></li>
+</ul>
 
 <b>JAVASCRIPT</b>
 
@@ -8434,8 +8467,8 @@ In this case the conditional comment looks like <!&#45;&#45;]if lt IE
 
 <h4>The Difference Between a Shiv &amp; a Shim</h4>
 
-Chances are you may have heard of both the HTML5 *Shiv* and
-HTML5 *Shim*, and wondered what the difference, if any, may be. Oddly
+Chances are you may have heard of both the HTML5 <i>Shiv</i> and
+HTML5 <i>Shim</i>, and wondered what the difference, if any, may be. Oddly
 enough, there is <b>no</b> difference between the HTML5 Shiv and HTML5
 Shim. The two words are often used interchangeably and are commonly
 transposed.
@@ -8484,7 +8517,7 @@ support for specific HTML5 and CSS3 features, regardless of which
 browser is being used.
 
 Feature detection, as provided
-by [Modernizr](http://modernizr.com/), provides a way to
+by <a href="http://modernizr.com/">Modernizr</a>, provides a way to
 write conditional CSS and JavaScript based on whether or not a browser
 supports a specific feature. For example, if a browser supports rounded
 corners Modernizr will add the class of borderradius to
@@ -8494,7 +8527,7 @@ Modernizr will add the class of no-borderradius to the html element.
 <h4>Loading Modernizr</h4>
 
 To get feature detection with Modernizr up and running, visit
-their [download](http://modernizr.com/download/) page and
+their <a href="http://modernizr.com/download/">download</a> page and
 customize what features you are looking to detect. Once downloaded,
 upload the JavaScript file on your server and reference it within
 the head of your HTML document, below any referenced style sheets.
@@ -8526,38 +8559,38 @@ additional HTTP requests when possible.
   <summary>Conditionally Applying CSS Styles</summary>
 
 ```
- 1  button {
- 2  border: 0;
- 3  color: #fff;
- 4  cursor: pointer;
- 5  font-size: 14px;
- 6  font-weight: 600;
- 7  margin: 0;
- 8  outline: 0;
- 9  }
+ 1   button {
+ 2     border: 0;
+ 3     color: #fff;
+ 4     cursor: pointer;
+ 5     font-size: 14px;
+ 6     font-weight: 600;
+ 7     margin: 0;
+ 8     outline: 0;
+ 9   }
  10  /* With CSS Gradient Styles */
  11  .cssgradients button {
- 12  border: 1px solid #0080c2;
- 13  background: linear-gradient(#00a2f5, #0087cc);
- 14   border-radius: 6px;
- 15  padding: 15px 30px;
+ 12    border: 1px solid #0080c2;
+ 13    background: linear-gradient(#00a2f5, #0087cc);
+ 14    border-radius: 6px;
+ 15    padding: 15px 30px;
  16  }
  17  .cssgradients button:hover {
- 18  background: linear-gradient(#1ab1ff, #009beb);
+ 18    background: linear-gradient(#1ab1ff, #009beb);
  19  }
  20  .cssgradients button:active {
- 21  box-shadow: inset 0 1px 10px rgba(255, 255, 255, .5);
+ 21    box-shadow: inset 0 1px 10px rgba(255, 255, 255, .5);
  22  }
  23  /* Without CSS Gradient Styles */
  24  .no-cssgradients button {
- 25  background: transparent url("button.png") 0 0 no-repeat;
- 26   padding: 16px 31px;
+ 25    background: transparent url("button.png") 0 0 no-repeat;
+ 26    padding: 16px 31px;
  27  }
  28  .no-cssgradients button:hover {
- 29   background-position: 0 -49px;
+ 29    background-position: 0 -49px;
  30  }
  31  .no-cssgradients button:active {
- 32     background-position: 0 -98px;
+ 32    background-position: 0 -98px;
  33  }
  34 
 ```
@@ -8671,11 +8704,11 @@ swapped for 'large' based off of the executed JavaScript.
 
 Currently there are polyfills for nearly all of the different HTML5 and
 CSS3 features. The team over at Modernizr has put together quite an
-exhaustive [list of polyfills](https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-browser-Polyfills).
-These polyfills can be dropped in as needed.
+exhaustive <a href="https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-browser-Polyfills">
+list of polyfills</a>. These polyfills can be dropped in as needed.
 
 The same people behind Modernizr have also put together
-a [list](http://html5please.com/) of all of the new HTML5
+a <a href="http://html5please.com/">list</a> of all of the new HTML5
 and CSS3 features, including instructions on how to use them
 responsibly. Understand, not all of these features need polyfills. Quite
 a few of them can be used outright or with the use of a fallback.
@@ -8689,8 +8722,8 @@ Safari, all perform pretty well. The largest pitfalls live within
 Internet Explorer, and testing different versions of Internet Explorer
 can be difficult.
 
-There are a [handful](http://www.smashingmagazine.com/2011/08/07/a-dozen-cross-browser-testing-tools/) of
-services out there that do help with cross browser testing, some are
+There are a <a href="http://www.smashingmagazine.com/2011/08/07/a-dozen-cross-browser-testing-tools/">
+handful</a> of services out there that do help with cross browser testing, some are
 interactive while others are not. Being able to interact with a browser,
 rather than seeing a rendered screenshot, is far more helpful for
 debugging code. One of the best ways to boot up multiple versions of
@@ -8702,8 +8735,9 @@ different version of Internet Explorer.
 <!--
 <p align="center" width="100%">
   <img src="./images/image014.png"
- style="width:40%"
- alt="VirtualBox." />
+  style="width:40%"
+  title="VirtualBox"
+  alt="VirtualBox" />
 </p>
 
 <h6><b>Fig. 9.</b> VirtualBox running on Mac OS X with Internet Explorer
@@ -8711,11 +8745,11 @@ versions 6 through 9.</h6>
 
 Microsoft provides a handful of VirtualPCs that can be used solely for
 testing. Setting all of these up can be a herculean task. Fortunately,
-Greg Thornton has built an [automated installer](https://github.com/xdissent/ievms) for all of
-these virtual machines. The installation takes a while to download all
-of the different virtual machines, and requires a decent amount of disk
-space. Prepare adequately by only installing the necessary virtual
-machines and by clearing up the necessary disk space ahead of time.
+Greg Thornton has built an <a href="https://github.com/xdissent/ievms">
+automated installer</a> for all of these virtual machines. The installation 
+takes a while to download all of the different virtual machines, and requires 
+a decent amount of disk space. Prepare adequately by only installing the necessary 
+virtual machines and by clearing up the necessary disk space ahead of time.
 Depending on how often the virtual machines are used, it may be worth
 installing them on an external hard drive.
 
@@ -8728,8 +8762,9 @@ within Internet Explorer 7 and below.
 <!--~~~~~~~~~~~~~~~~~~~~~~~ 15. virtualbox (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="center" width="100%">
   <img src="./images/image015.png"
- style="width:40%"
- alt="VirtualBox." />
+  style="width:40%"
+  title="VirtualBox"
+  alt="VirtualBox" />
 
 <h6 style="center">Fig. 9 Internet Explorer 7 running inside of a virtual machine with the Firebug Lite
 bookmarklet open for debugging.</h6>
@@ -8755,12 +8790,12 @@ bookmarklet open for debugging.</h6>
 
 -[Microsoft IE Virtual Machines](https://github.com/xdissent/ievms) via Greg Thornton
 
-<b>[Lesson 8]</b> [Transitions &
+<b>Lesson 8</b> [Transitions &
 Animations](https://learn.shayhowe.com/advanced-html-css/transitions-animations/)
-<b>[Lesson 10]</b> [Extending Semantics &
+<b>Lesson 10</b> [Extending Semantics &
 Accessibility](https://learn.shayhowe.com/advanced-html-css/semantics-accessibility/)
 
-<h2>[Lesson 10] Extending Semantics & Accessibility</h2>
+<h2>Lesson 10 Extending Semantics & Accessibility</h2>
 
 <h3>In this Lesson 10</h3>
 
@@ -8910,9 +8945,8 @@ identify significantly important text.
 <h4>Italicizing Text</h4>
 
 Italicizing text falls in line with that of bolding text, where we can
-use multiple elements or the [font
-style](https://learn.shayhowe.com/html-css/working-with-typography/) CSS
-property to achieve a desired presentation. When italicizing text, the
+use multiple elements or the <a href="https://learn.shayhowe.com/html-css/working-with-typography/">
+font style</a> CSS property to achieve a desired presentation. When italicizing text, the
 two elements most commonly used are em and i. Again, these share the
 same presentation, yet have completely different semantic meanings.
 
@@ -8937,7 +8971,7 @@ importance.
 
 Recently there has been a small movement of front end programmers using
 the i element for including icons on a page, specifically as seen
-within [Bootstrap](https://getbootstrap.com/).
+within <a href="https://getbootstrap.com/">Bootstrap</a>.
 The i element is used as a hook, to which a class then determines which
 icon background image to apply to the element. Depending on how closely
 you wish to follow semantics this may or may not be an acceptable
@@ -8947,10 +8981,10 @@ practices.
 
 Continuing the pattern of having multiple elements with the same
 presentation, underlining text is no different. There are a couple of
-different elements we can use as well as the [text
-decoration](https://learn.shayhowe.com/html-css/working-with-typography/) CSS
-property. In this case, the two primary elements used to underline text
-are ins and u.
+different elements we can use as well as the 
+<a href="https://learn.shayhowe.com/html-css/working-with-typography/">
+text decoration</a> CSS property. In this case, the two primary elements 
+used to underline text are ins and u.
 
 The ins element is used to identify text that has been recently <b>added
 to the document</b>, and the u element simply refers to an <b>unarticulated
@@ -8991,9 +9025,10 @@ Use underlines with caution.
 <h4>Striking Text</h4>
 
 Striking text follows the same pattern as before where different
-elements may be used, as may the [text
-decoration](https://learn.shayhowe.com/html-css/working-with-typography/) CSS
-property. The two properties most commonly used include del and s.
+elements may be used, as may the 
+<a href="https://learn.shayhowe.com/html-css/working-with-typography/">
+text decoration</a> CSS property. The two properties most commonly used 
+include del and s.
 
 The del element is used to identify text <b>deleted or removed from the
 document</b>. As with the ins element, it may be used with
@@ -9229,20 +9264,19 @@ copyright information or legal print.
 
 <h4>Citations & Quotes</h4>
 
-The beginner's guide discusses [citations and
-quotes](https://learn.shayhowe.com/html-css/working-with-typography/),
-and when to use the cite, q, and blockquote elements accordingly. As a
-quick reminder, the cite element refers to a title of work,
-the q element identifies dialog or prose, and the blockquote element is
-used to code longer formed quotes, commonly from external sources.
+The beginner's guide discusses <a href="https://learn.shayhowe.com/html-css/working-with-typography/">
+citations and quotes</a>, and when to use the cite, q, and blockquote elements accordingly. As a
+quick reminder, the cite element refers to a title of work, the q element identifies dialog or 
+prose, and the blockquote element is used to code longer formed quotes, commonly from external 
+sources.
 
 <h4>Hyperlink Attributes</h4>
 
 The beginner's guide also
-outlines [hyperlinks](https://learn.shayhowe.com/html-css/getting-to-know-html/),
-and some of their different behaviors. What is not covered, however, is
-some of the semantic benefits to hyperlinks, specifically with the use
-of the download and rel attributes.
+outlines <a href="https://learn.shayhowe.com/html-css/getting-to-know-html/">
+hyperlinks</a>, and some of their different behaviors. What is not covered, 
+however, is some of the semantic benefits to hyperlinks, specifically with 
+the use of the download and rel attributes.
 
 <h4>Download Attribute</h4>
 
@@ -9282,8 +9316,8 @@ the rel attribute value of copyright should be used.
  3 
 ```
 
-A few [popular](http://microformats.org/wiki/existing-rel-values) rel attribute
-values include:
+A few <a href="http://microformats.org/wiki/existing-rel-values">
+popular</a> rel attribute values include:
 
 <ul>
   <li>alternate</li>
@@ -9325,6 +9359,7 @@ an existing website.
 <p align="center" width="100%">
   <img src="./images/image016.jpeg"
    style="width:40%"
+   title="Google Microdata"
    alt="Google Microdata." />
 </p>
 
@@ -9336,14 +9371,15 @@ information, hours, pricing, ratings, and more.
 <h4>Microdata vs. Microformats vs. RDFa</h4>
 
 There are actually a handful of rich, structured data standards,
-including [microdata](http://www.w3.org/TR/microdata/), [microformats](http://microformats.org/wiki/Main_Page),
-and [RDFa](http://www.w3.org/TR/xhtml-rdfa-primer/). All
+including <a href="http://www.w3.org/TR/microdata/">microdata</a>,
+<a href="http://microformats.org/wiki/Main_Page">microformats</a>, and 
+<a href="http://www.w3.org/TR/xhtml-rdfa-primer/">RDFa</a>. All
 of these have their pros and cons, and all of which are still viable to
 practice.
 
-Microdata is the recommended format
-from [Google](https://support.google.com/webmasters/bin/answer.py?hl=en&answer=99170),
-and other search engines, as well as part of the HTML5 specification. It
+Microdata is the recommended format from 
+<a href="https://support.google.com/webmasters/bin/answer.py?hl=en&answer=99170">
+Google</a>, and other search engines, as well as part of the HTML5 specification. It
 uses findings from both microformats and RDFa to base it's design
 around, thus looking to be a solid choice, and the one covered here. It
 is, however, recommended you do your research, take the pulse of the
@@ -9363,7 +9399,7 @@ microdata information pertaining to this item should reside.
 Once you have determined the scope, use the itemtype attribute to
 identify what microdata vocabulary should be used. Generally speaking,
 some of the more popular microdata item types have been outlined
-at [Schema.org](http://schema.org/docs/schemas.html).
+at <a href="http://schema.org/docs/schemas.html">Schema.org</a>.
 There are, however, other websites which outline additional, and
 different, item types. You may also write your own item types should you
 find the need.
@@ -9404,7 +9440,7 @@ elements and what attribute is used for their property value.
 <h4>Person Microdata</h4>
 
 When referring to a person
-the [person](http://schema.org/Person) microdata library
+the <a href="http://schema.org/Person">person</a> microdata library
 should be used. Below is an example of what a person microdata item
 might look like. Please notice, the person item type is used, as is the
 postal address item type within it. Also, please notice the different
@@ -9436,15 +9472,14 @@ item properties and their corresponding values.
 <h4>Person Microdata Demo</h4>
 
 Please keep in mind, this code is for an individual person. Should you
-wish to refer to an organization, a more
-specific [organization](http://schema.org/Organization) microdata
+wish to refer to an organization, a more specific 
+<a href="http://schema.org/Organization">organization</a> microdata
 library should be followed.
 
 <h4>Event Microdata</h4>
 
 The event microdata is very similar to that of the person microdata,
-however it uses
-the [event](http://schema.org/Event) microdata library
+however it uses the <a href="http://schema.org/Event">event</a> microdata library
 instead. Common property similarities between the two can be identified,
 as can some of the nested item types.
 
@@ -9629,7 +9664,7 @@ structure cannot be determined.
 
 </details>
 
-[<b>Lesson 9</b>] <a href="https://learn.shayhowe.com/advanced-html-css/feature-support-polyfills/" 
+<b>Lesson 9</b> <a href="https://learn.shayhowe.com/advanced-html-css/feature-support-polyfills/" 
   rel="noopener noreferrer" target="_blank">Feature Support &amp; Polyfills</a>
 
 ...the end.
