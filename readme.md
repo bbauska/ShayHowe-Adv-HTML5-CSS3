@@ -785,16 +785,23 @@ rel="noopener noreferrer" target="_blank">syntax</a>.
   <li><a href="http://developer.yahoo.com/performance/rules.html" 
     rel="noopener noreferrer" target="_blank">
 	Best Practices for Speeding Up Your Web Site</a> via Yahoo! Developer Network</li>
-  <li><a href="https://www.stevesouders.com/blog/2012/02/10/the-performance-golden-rule/">
+  <li><a href="https://www.stevesouders.com/blog/2012/02/10/the-performance-golden-rule/"
+    rel="noopener noreferrer" target="_blank">
     Rules for Faster-Loading Web  Sites</a> via Steve Sounders</li>
-  <li><a href="http://viget.com/inspire/css-squareoff">
+  <li><a href="http://viget.com/inspire/css-squareoff"
+    rel="noopener noreferrer" target="_blank">
     CSS Strategy Square-off</a> via Viget Labs</li>
-  <li><a href="http://csswizardry.com/2011/09/writing-efficient-css-selectors/">
+  <li><a href="http://csswizardry.com/2011/09/writing-efficient-css-selectors/"
+    rel="noopener noreferrer" target="_blank">
     Writing Efficient CSS Selectors</a> via Harry Roberts</li>
-  <li><a href="http://www.hanselman.com/blog/TheImportanceAndEaseOfMinifyingYourCSSAndJavaScriptAndOptimizingPNGsForYourBlogOrWebsite.aspx">
+  <li><a href="http://www.hanselman.com/blog/TheImportanceAndEaseOfMinifyingYourCSSAndJavaScriptAndOptimizingPNGsForYourBlogOrWebsite.aspx"
+    rel="noopener noreferrer" target="_blank">
     Minifying and Optimizing Files</a> via Scott Hanselman</li>
-  <li><a href="http://html5boilerplate.com/">HTML5 Boilerplate</a></li>
-  <li><a href="https://css-tricks.com/data-uris/">
+  <li><a href="http://html5boilerplate.com/"
+    rel="noopener noreferrer" target="_blank">
+	HTML5 Boilerplate</a></li>
+  <li><a href="https://css-tricks.com/data-uris/"
+    rel="noopener noreferrer" target="_blank">
     Data URIs</a> via CSS-Tricks</li>
 </ul>
 
@@ -964,9 +971,9 @@ display differently in each browser.
 <h4>The Clearfix Technique</h4>
 
 Depending on the context of the floated elements a better technique to
-contain floats may be the <a href="http://nicolasgallagher.com/micro-clearfix-hack/">
-clearfix</a> technique. The clearfix technique is a bit more complex but does have better
-support as compared to the overflow technique.
+contain floats may be the <a href="http://nicolasgallagher.com/micro-clearfix-hack/"
+rel="noopener noreferrer" target="_blank">clearfix</a> technique. The clearfix technique 
+is a bit more complex but does have better support as compared to the overflow technique.
 
 The clearfix technique is based off using
 the :before and :after pseudo-elements on the parent element. Using
@@ -1060,8 +1067,8 @@ the parent element containing the floats.
 Occasionally you need more control over the position of an element, more
 than a float can provide, in which case the position property comes into
 play. The position property accepts five different values, each of which
-provide different ways to <a href="http://www.alistapart.com/articles/css-positioning-101/">uniquely
-position</a> an element.
+provide different ways to <a href="http://www.alistapart.com/articles/css-positioning-101/" 
+rel="noopener noreferrer" target="_blank">uniquely position</a> an element.
 
 <h4>Position Static</h4>
 
@@ -1546,7 +1553,8 @@ in different states of use.
 CSS3 brought new selectors, opening a whole new world of opportunities
 and improvements to existing practices. Here we'll
 discuss 
-<a href="http://net.tutsplus.com/tutorials/html-css-techniques/the-30-css-selectors-you-must-memorize/">
+<a href="http://net.tutsplus.com/tutorials/html-css-techniques/the-30-css-selectors-you-must-memorize/" 
+rel="noopener noreferrer" target="_blank">
 selectors</a>, old and new, and how to best put them to use.
 
 <h4>Common Selectors</h4>
@@ -1686,9 +1694,8 @@ article, thus selected.
 
 <h4>Sibling Selectors</h4>
 
-Knowing how to [select
-children](https://css-tricks.com/child-and-sibling-selectors/) of
-an element is largely beneficial, and quite commonly seen. However
+Knowing how to <a href="https://css-tricks.com/child-and-sibling-selectors/">
+select children</a> of an element is largely beneficial, and quite commonly seen. However
 sibling elements, those elements that share a common parent, may also
 need to be selected. These sibling selections can be made by way of the
 general sibling and adjacent sibling selectors.
@@ -1882,11 +1889,11 @@ selected.
 Some of the common selectors looked at early may also be defined as
 attribute selectors, in which an element is selected based upon its
 class or ID value. These class and ID attribute selectors are widely
-used and extremely powerful but only the beginning. Other [attribute
-selectors](http://www.css3.info/preview/attribute-selectors/) have
-emerged over the years, specifically taking a large leap forward with
-CSS3. Now elements can be selected based on whether an attribute is
-present and what its value may contain.
+used and extremely powerful but only the beginning. Other 
+<a href="http://www.css3.info/preview/attribute-selectors/">attribute
+selectors</a> have emerged over the years, specifically taking a large 
+leap forward with CSS3. Now elements can be selected based on whether an 
+attribute is present and what its value may contain.
 
 <h4>Attribute Present Selector</h4>
 
@@ -2337,10 +2344,9 @@ and increases by one for each list item, until finally locating and
 selecting the fourth item. When using a number outright it must be a
 positive number.
 
-[Expressions for
-pseudo-classes](http://reference.sitepoint.com/css/understandingnthchildexpressions) fall
-in the format of *a*n, *a*n+*b*, *a*n-*b*, n+*b*, *-*n+*b*,
-and *-a*n+*b*. The same expression may be translated and read
+<a href="http://reference.sitepoint.com/css/understandingnthchildexpressions">
+Expressions for pseudo-classes</a> fall in the format of *a*n, *a*n+*b*, *a*n-*b*, 
+n+*b*, *-*n+*b*, and *-a*n+*b*. The same expression may be translated and read
 as (a×n)±b. The a variable stands for the multiplier in which elements
 will be counted in while the b variable stands for where the counting
 will begin or take place.
@@ -2621,9 +2627,9 @@ URL http://example.com/index.html#hello includes the fragment identifier
 of hello. When this identifier matches the ID attribute value of an
 element on the page, <section id="hello"> for example, that element
 may be identified and stylized using the :target pseudo-class. Fragment
-identifiers are most commonly seen when using [on page
-links](https://learn.shayhowe.com/html-css/getting-to-know-html/#hyperlinks),
-or linking to another part of the same page.
+identifiers are most commonly seen when using 
+<a href="https://learn.shayhowe.com/html-css/getting-to-know-html/#hyperlinks">
+on page links</a>, or linking to another part of the same page.
 
 Looking at the code below, if a user would visit a page with the URI
 fragment identifier of #hello, the section with that same ID attribute
@@ -2861,8 +2867,8 @@ Pseudo-elements
 
 Pseudo-elements are dynamic elements that don't exist in the document
 tree, and when used within selectors
-these [pseudo-elements](http://coding.smashingmagazine.com/2009/08/17/taming-advanced-css-selectors/) allow
-unique parts of the page to be stylized. One important point to note,
+these <a href="http://coding.smashingmagazine.com/2009/08/17/taming-advanced-css-selectors/">
+pseudo-elements</a> allow unique parts of the page to be stylized. One important point to note,
 only one pseudo-element may be used within a selector at a given time.
 
 Textual Pseudo-elements
@@ -3060,14 +3066,15 @@ selectors you are wishing to use across your visitor's most common
 browsers, and then make the judgment call as to whether they are
 appropriate or not.
 
-CSS3.info provides a [CSS3 Selectors Test](https://www.css3.info/selectors-test/) 
-tool which will inform you as to which selectors are supported by the browser in
-use. It's also never a bad idea to check browser support directly from the vendor.
+CSS3.info provides a <a href="https://www.css3.info/selectors-test/">
+CSS3 Selectors Test</a> tool which will inform you as to which selectors 
+are supported by the browser in use. It's also never a bad idea to check 
+browser support directly from the vendor.
 
-Additionally, [Selectivizr](http://selectivizr.com/), a
+Additionally, <a href="http://selectivizr.com/">Selectivizr</a>, a
 JavaScript utility, provides great support for these selectors in
 Internet Explorer 6-8. More support, should it be necessary, can also be
-provided by [jQuery selectors](http://api.jquery.com/category/selectors/).
+provided by <a href="http://api.jquery.com/category/selectors/">jQuery selectors</a>.
 
 <h4>Selector Speed & Performance</h4>
 
