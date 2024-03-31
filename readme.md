@@ -1,14 +1,14 @@
-<!--
 ---
 title: "Shay & Howe's Advanced HTML and CSS"
 author: "Brian Bauska (bbauska)"
-date last editted: "3/28/2024 11+pm"
+date last editted: "3/30/2024 10+pm"
 output:
   markdown:
   with some style
 ---
--->
+
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!---~~~~~~~~~~~~~~~~~~~~~~~~~~ readme.md of shayhowe-Adv-HTML-CSS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h1 align="center" width="100%">Advanced HTML &amp; CSS</h1>
 <h6 align="center">by Shay-Howe</h6>
@@ -45,42 +45,42 @@ output:
 	Reduce HTTP Requests</a></li>
 </ul>
 
-Having the ability to <a href="https://learn.shayhowe.com/html-css/writing-your-best-code/" 
+<p>Having the ability to <a href="https://learn.shayhowe.com/html-css/writing-your-best-code/" 
 rel="noopener noreferrer" target="_blank">write HTML and CSS</a> with a solid 
 understanding is a great expertise to have. As a website's code base and traffic 
 grows, a new skill set comes into play, one that is extremely important to both 
 development time and user experience. Knowing the fundamentals of website 
 <a href="http://developer.yahoo.com/performance/rules.html" 
-rel="noopener noreferrer" target="_blank">performance</a> 
-and organization can go a long way.
+rel="noopener noreferrer" target="_blank">performance</a> and organization can 
+go a long way.</p>
 
-The organization and architecture of a code base can greatly affect not
-only the speed of development, but also the speed at which pages render.
-Both of which can be sizeable concerns not only for developers but also
-users. Taking the time to design the right structure for a code base,
-and identify how all of the different components will work together, can
-speed up production and make for a better experience all around.
+<p>The organization and architecture of a code base can greatly affect not only 
+the speed of development, but also the speed at which pages render. Both of which 
+can be sizeable concerns not only for developers but also users. Taking the time 
+to design the right structure for a code base, and identify how all of the different 
+components will work together, can speed up production and make for a better 
+experience all around.</p>
 
-Additionally, taking a few small steps to improve the performance of a
-website can pay off in dividends. <a href="https://www.stevesouders.com/blog/2012/02/10/the-performance-golden-rule/" 
-rel="noopener noreferrer" target="_blank">Website performance</a> 
-greatly resembles the 80/20 rule, where 20% of the optimizations will speed up
-roughly 80% of the website.
+<p>Additionally, taking a few small steps to improve the performance of a website 
+can pay off in dividends. <a href="https://www.stevesouders.com/blog/2012/02/10/the-performance-golden-rule/" 
+rel="noopener noreferrer" target="_blank">Website performance</a> greatly resembles 
+the 80/20 rule, where 20% of the optimizations will speed up roughly 80% of the 
+website.</p>
 
 <h4>Strategy & Structure</h4>
 
-The first part to improving a website's performance and organization
-revolves around identifying a good strategy and structure for developing
-the code base. Specifically, building a strong directory architecture,
-outlining design patterns, and finding ways to reuse common code.
+<p>The first part to improving a website's performance and organization revolves 
+around identifying a good strategy and structure for developing the code base. 
+Specifically, building a strong directory architecture, outlining design patterns, 
+and finding ways to reuse common code.</p>
 
 <h4>Style Architecture</h4>
 
-Exactly how to organize styles boils down to personal preference and
-what is best for a given website but generally speaking there are best
-practices to follow. One practice includes separating styles based on
-intent, which includes creating directories for common base styles, user
-interface components, and business logic modules.
+<p>Exactly how to organize styles boils down to personal preference and what is 
+best for a given website but generally speaking there are best practices to follow. 
+One practice includes separating styles based on intent, which includes creating 
+directories for common base styles, user interface components, and business logic 
+modules.</p>
 
 ```
  1  # Base
@@ -103,59 +103,56 @@ interface components, and business logic modules.
  18 
 ```
 
-The architecture outlined above includes three directories, all with
-individual groups of styles. The goal here is to <b>start thinking of
-websites as systems</b> rather than individual pages, and the code
-architecture should reflect this mindset. Notice how there aren't any
-page specific styles here.
+<p>The architecture outlined above includes three directories, all with individual 
+groups of styles. The goal here is to <b>start thinking of websites as systems</b> 
+rather than individual pages, and the code architecture should reflect this mindset. 
+Notice how there aren't any page specific styles here.</p>
 
-The base directory includes common styles and variables to be used
-across the entire website, layout and typography styles for example.
-The components directory includes styles for specific user interface
-elements which are broken down into different component files such as
-alerts and buttons. Lastly, the modules directory includes styles for
-different sections of a page, which are determined by business needs.
+<p>The base directory includes common styles and variables to be used across the 
+entire website, layout and typography styles for example. The components directory 
+includes styles for specific user interface elements which are broken down into 
+different component files such as alerts and buttons. Lastly, the modules directory 
+includes styles for different sections of a page, which are determined by business 
+needs.</p>
 
-The component styles are purely interface driven and have nothing to do
-with the core business logic of the website. Modules then include styles
-specific to the business logic. When marking up a module in HTML it is
-common to use different user interface components within it. For
-example, the sidebar of a page may have list and button styles that are
-defined within component styles while other styles needed for the
-sidebar are inherited from the module style. The separation of style
-encourages well thought out presets and the ability for styles to be
-widely shared and reused.
+<p>The component styles are purely interface driven and have nothing to do with 
+the core business logic of the website. Modules then include styles specific to 
+the business logic. When marking up a module in HTML it is common to use different 
+user interface components within it. For example, the sidebar of a page may have 
+list and button styles that are defined within component styles while other styles 
+needed for the sidebar are inherited from the module style. The separation of style
+encourages well thought out presets and the ability for styles to be widely shared 
+and reused.</p>
 
-The strategy of organizing styles this way isn't exactly new, and has
-been previously mentioned in different CSS methodologies including
-Object Oriented CSS, OOCSS, and the Scalable and Modular Architecture
-for CSS, SMACSS. These methodologies have their own opinions on
-structure, as well as on how to use styles.
+<p>The strategy of organizing styles this way isn't exactly new, and has been 
+previously mentioned in different CSS methodologies including Object Oriented 
+CSS, OOCSS, and the Scalable and Modular Architecture for CSS, SMACSS. These 
+methodologies have their own opinions on structure, as well as on how to use 
+styles.</p>
 
 <h4>Object Oriented CSS</h4>
 
-The <a href="http://oocss.org/" rel="noopener noreferrer" target="_blank">
+<p>The <a href="http://oocss.org/" rel="noopener noreferrer" target="_blank">
 Object Oriented CSS</a> methodology was pioneered by Nicole Sullivan in her 
 work with writing styles for larger websites. Object Oriented CSS identifies 
 two principles that will help build scalable websites with a strong architecture 
-and a reasonable amount of code. These two principles include:
+and a reasonable amount of code. These two principles include:</p>
 
 <ul>
   <li>Separate structure from skin</li>
   <li>Separate content from container</li>
 </ul>
 
-Overall <b>separating structure from skin</b> includes abstracting the
-layout of an element away from the theme of a website. The structure of
-a module should be transparent, allowing other styles to be inherited
-and displayed without conflict. Most commonly this requires a solid grid
-and layout structure, along with well crafted modules.
+<p>Overall <b>separating structure from skin</b> includes abstracting the layout 
+of an element away from the theme of a website. The structure of a module should 
+be transparent, allowing other styles to be inherited and displayed without conflict. 
+Most commonly this requires a solid grid and layout structure, along with well 
+crafted modules.</p>
 
-<b>Separating content from the container</b> involves removing the
-dependency of a parent element nesting children elements. A heading
-should look the same regardless of its parent container. To accomplish
-this, elements need to inherit default styles, then be extended with
-multiple classes as necessary.
+/p><b>Separating content from the container</b> involves removing the dependency 
+of a parent element nesting children elements. A heading should look the same 
+regardless of its parent container. To accomplish this, elements need to inherit 
+default styles, then be extended with multiple classes as necessary.</p>
 
 <h5>HTML</h5>
 
@@ -175,18 +172,18 @@ multiple classes as necessary.
  4 
 ```
 
-Object Oriented CSS advocates building a component library, staying
-flexible, and utilizing a grid. These are good ground rules, and they
-can help you avoid the need to add additional styles every time you add
-a new page or feature to a website.
+<p>Object Oriented CSS advocates building a component library, staying flexible, 
+and utilizing a grid. These are good ground rules, and they can help you avoid 
+the need to add additional styles every time you add a new page or feature to a 
+website.</p>
 
 <h4>Scalable & Modular Architecture for CSS</h4>
 
-Along the same line of Object Oriented CSS is the <a href="http://smacss.com/" 
+</p>Along the same line of Object Oriented CSS is the <a href="http://smacss.com/" 
 rel="noopener noreferrer" target="_blank">Scalable and Modular Architecture for 
 CSS</a> methodology developed by Jonathan Snook. The Scalable and Modular 
 Architecture for CSS promotes breaking up styles into <b>five</b> core categories, 
-including:
+including:</p>
 
 <ul>
   <li>Base</li>
@@ -196,16 +193,14 @@ including:
   <li>Theme</li>
 </ul>
 
-The <b>base</b> category includes core element styles, covering the general
-defaults. The <b>layout</b> category then identifies the sizing and grid
-styles of different elements, determining their
-layout. <b>Module</b> styles are more specific styles targeting individual
-parts of the page, such as navigation or feature styles.
-The <b>state</b> styles are then used to augment or override other styles
-in the event that a module includes an alternate state, an active tab
-for example. Lastly, the <b>theme</b> category may be added which could
-include styles based around the skin, or look and feel, of different
-modules.
+<p>The <b>base</b> category includes core element styles, covering the general
+defaults. The <b>layout</b> category then identifies the sizing and grid styles 
+of different elements, determining their layout. <b>Module</b> styles are more 
+specific styles targeting individual parts of the page, such as navigation or 
+feature styles. The <b>state</b> styles are then used to augment or override 
+other styles in the event that a module includes an alternate state, an active 
+tab for example. Lastly, the <b>theme</b> category may be added which could
+include styles based around the skin, or look and feel, of different modules.</p>
 
 <h4>HTML</h4>
 
@@ -226,37 +221,37 @@ modules.
  5  
 ```
 
-In the example above the alert class falls into the module category
-while the is-error class falls into the state category. Styles from each
-of these categories are then inherited as necessary.
+<p>In the example above the alert class falls into the module category while the 
+is-error class falls into the state category. Styles from each of these categories 
+are then inherited as necessary.</p>
 
 <h4>Choosing a Methodology</h4>
 
-Choosing which methodology to use, if any, is completely 
+<p>Choosing which methodology to use, if any, is completely 
 <a href="http://viget.com/inspire/css-squareoff" rel="noopener noreferrer" 
 target="_blank">up to you</a> and what you feel is best for a given website. 
 Generally speaking, a solid mix of both OOCSS and SMACSS works well, borrowing 
-principles from each methodology as you prefer.
+principles from each methodology as you prefer.</p>
 
 <h4>Performance Driven Selectors</h4>
 
-One functionality of CSS often abused without awareness
+<p>One functionality of CSS often abused without awareness
 are <a href="http://csswizardry.com/2011/09/writing-efficient-css-selectors/" 
 rel="noopener noreferrer" target="_blank">selectors</a>. Much of the attention 
 within CSS is given to properties and values. So long as these styles are applied 
 to the correct element, everything looks to be fine. This is a very poor assumption. 
 How elements are selected within CSS affects performance, including how fast a page
 renders as well as how practical and modular the styles are in the overall site 
-architecture.
+architecture.</p>
 
 <h4>Keep Selectors Short</h4>
 
-There are a handful of benefits to keeping CSS selectors as short as
+<p>There are a handful of benefits to keeping CSS selectors as short as
 possible. These include minimizing specificity, allowing for better
 inheritance and portability, and improving efficiency. Long, over
 qualified selectors reduce performance because they force the browser to
 render each individual selector type from right to left. They also put a
-burden on all other selectors to be more specific.
+burden on all other selectors to be more specific.</p>
 
 <details>
   <summary>CSS</summary>
@@ -280,39 +275,39 @@ burden on all other selectors to be more specific.
 
 </details>
 
-In the code above, the first selector is extremely specific and could be
+<p>In the code above, the first selector is extremely specific and could be
 identified, and rendered, much quicker with the use of a class.
 Additionally, using a class in this case greatly reduces the need to
 identify an element's parent, allowing that elements location to change
-over time without breaking any styles.
+over time without breaking any styles.</p>
 
-The second example includes selectors shorter than the first example but
+<p>The second example includes selectors shorter than the first example but
 it can be improved by providing the same level of specificity to each
 selector. Avoid using overly specific selectors, in return they are less
 likely to break should the order of elements change. Cutting out some of
 the individual selector units, and giving all of the selectors the same
-strength, allows them to better cooperate.
+strength, allows them to better cooperate.</p>
 
-The overall goal with short selectors is to decrease specificity,
-creating cleaner, more charitable code.
+<p>The overall goal with short selectors is to decrease specificity, creating 
+cleaner, more charitable code.</p>
 
 <h4>Favor Classes</h4>
 
-Classes are great, they render quickly, allow for styles to be reused,
+<p>Classes are great, they render quickly, allow for styles to be reused,
 and are already commonly used in building a website. When using classes
 though, there are common practices to observe in order to see that they
-are leveraged properly.
+are leveraged properly.</p>
 
-Since selectors are rendered from right to left it is important to keep
+<p>Since selectors are rendered from right to left it is important to keep
 an eye on the <b>key selector</b>. The key selector is the selector unit at
 the end, furthest to the right. The key selector is crucial as it
 identifies the first element a browser is going to find. Having a poor
 key selector can send the browser on a wild goose hunt. Don't be afraid
-to use a class to be more unique simply for the benefit of performance.
+to use a class to be more unique simply for the benefit of performance.</p>
 
-Additionally, do not prefix class selectors with an element. Doing so
+<p>Additionally, do not prefix class selectors with an element. Doing so
 prohibits those styles from easily being applied to a different element
-and increases the overall specificity of the selector.
+and increases the overall specificity of the selector.</p>
 
 <details>
   <summary>CSS</summary>
@@ -334,28 +329,27 @@ and increases the overall specificity of the selector.
 
 </details>
 
-It is also worth noting, stay away from ID selectors where possible as
+<p>It is also worth noting, stay away from ID selectors where possible as
 they are overly specific and do not allow for any repetition. At the end
-of the day using an ID isn't a whole lot different than
-using !important.
+of the day using an ID isn't a whole lot different than using !important.</p>
 
 <h4>Reusable Code</h4>
 
-One of the largest performance drawbacks comes with bloated file sizes
+<p>One of the largest performance drawbacks comes with bloated file sizes
 and unnecessary browser rendering. One quick way to help largely cut
 down on CSS file sizes is to reuse styles as much as possible. Any
 repeating styles or interface patterns should be combined, allowing code
 to be shared. If two modules share a background, rounded corners, and a
 box shadow there is no reason to explicitly state those same styles
 twice. Instead they can be combined, within a single class, allowing the
-styles to be written once and then shared.
+styles to be written once and then shared.</p>
 
-Reusing code doesn't have to come at the cost of semantics either. One
+<p>Reusing code doesn't have to come at the cost of semantics either. One
 technique would be to pair selectors together, separating them with a
 comma, allowing the same styles to be inherited across two selectors.
 Another approach, often seen within the OOCSS and SMACSS methodologies
 previously mentioned, includes binding styles to one class, then using
-multiple classes on the same element.
+multiple classes on the same element.</p>
 
 <details>
   <summary>CSS Examples</summary>
@@ -392,39 +386,38 @@ multiple classes on the same element.
 
 </details>
 
-Which approach you take doesn't make a huge difference, so long as code
-is being shared and reused, and the overall file size is reduced.
+<p>Which approach you take doesn't make a huge difference, so long as code
+is being shared and reused, and the overall file size is reduced.</p>
 
 <h4>Minify & Compress Files</h4>
 
-Simply removing duplicate and unnecessary code is the best way to cut
+<p>Simply removing duplicate and unnecessary code is the best way to cut
 down on file size, however there are additional ways. One way includes 
 <a href="http://www.hanselman.com/blog/TheImportanceAndEaseOfMinifyingYourCSSAndJavaScriptAndOptimizingPNGsForYourBlogOrWebsite.aspx" 
 rel="noopener noreferrer" target="_blank">minifying</a> and compressing 
 files, such as HTML, CSS, and JavaScript files. Additionally, images may be 
-compressed, removing any unnecessary comments and color profiles.
+compressed, removing any unnecessary comments and color profiles.</p>
 
 <h4>gzip Compression</h4>
 
-One of the more popular types of file compression is called gzip. gzip
+<p>One of the more popular types of file compression is called gzip. gzip
 compression takes common files, including HTML, CSS, JavaScript, and so
 forth, and identifies similar strings to compress down. The more
 matching strings identified, the smaller the file can be compressed,
-thus sending a smaller file from the server to the browser.
+thus sending a smaller file from the server to the browser.</p>
 
-Setting up gzip is fairly painless, and the <a href="http://html5boilerplate.com/" 
+<p>Setting up gzip is fairly painless, and the <a href="http://html5boilerplate.com/" 
 rel="noopener noreferrer" target="_blank">HTML5 Boilerplate</a> team has done a 
 great job of getting this going. To gzip files an .htaccess file needs to be added 
 to the root directory of the web server, labeling the specific files to be gzipped. 
 The dot at the beginning of the file name is correct, as the .htaccess file is a 
-hidden file.
+hidden file.</p>
 
-Within the HTML5 Boilerplate Apache Server Configs, they instruct which
-files gzip compression should be applied to. Keep in mind, the code for
-this compression should live within a .htaccess file in the root
-directory of the web server. Additionally, it is worth noting
-that .htaccess files only work on Apache web servers, which need to have
-the following modules enabled.
+<p>Within the HTML5 Boilerplate Apache Server Configs, they instruct which files 
+gzip compression should be applied to. Keep in mind, the code for this compression 
+should live within a .htaccess file in the root directory of the web server. 
+Additionally, it is worth noting that .htaccess files only work on Apache web 
+servers, which need to have the following modules enabled.</p>
 
 <ul>
   <li>mod_setenvif.c</li>
@@ -435,17 +428,16 @@ the following modules enabled.
   <li>mod_rewrite.c</li>
 </ul>
 
-Generally speaking this isn't an issue, and some web servers may even
-set up compression for you. After all, it is in the web server's best
-interest to compress files too.
+<p>Generally speaking this isn't an issue, and some web servers may even set up 
+compression for you. After all, it is in the web server's best interest to compress 
+files too.</p>
 
 <h4>Measuring Compression</h4>
 
-Within the Google Chrome web browser the web inspector gives a plethora
+<p>Within the Google Chrome web browser the web inspector gives a plethora
 of data around performance, particularly within the Network tab.
 Additionally, there are a few websites that help identify if gzip
-compression is enabled.
-
+compression is enabled.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~ 01. gzip overview screenshot (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="center" width="100%">
@@ -457,10 +449,10 @@ compression is enabled.
 
 <h6 align="center">Fig. 1</h6>
 
-The Network tab identifies each file loaded within the browser and displays the 
-file size and load time. Notice how gzipping has reduced the file sizes by around 60%.
+<p>The Network tab identifies each file loaded within the browser and displays the 
+file size and load time. Notice how gzipping has reduced the file sizes by around 60%.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~ 02. gzip detail screenshot (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 02. gzip detail screenshot (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="center" width="100%">
   <img src="./images/image002.png"
   style="width:40%"
@@ -469,32 +461,32 @@ file size and load time. Notice how gzipping has reduced the file sizes by aroun
 </p>
 <h6 align="center">Fig. 1</h6>
 
-Looking at a file specifically identifies what type of compression encoding the 
+<p>Looking at a file specifically identifies what type of compression encoding the 
 browser supports. In this case gzip, deflate, and sdch are all supported as noted 
-within the request headers.
+within the request headers.</p>
 
-Looking at the response headers identifies that the file was sent using the gzip 
-compression encoding.
+<p>Looking at the response headers identifies that the file was sent using the gzip 
+compression encoding.</p>
 
 <h4>Image Compression</h4>
 
-Cutting down the size of a text file helps, but you get even better results by 
+<p>Cutting down the size of a text file helps, but you get even better results by 
 compressing the file size of images. The total file size of all the images across 
 a website can quickly add up, and compressing images will greatly help keep the 
-file size under control.
+file size under control.</p>
 
-Many people steer away from compressing images in fear that compression involves 
+<p>Many people steer away from compressing images in fear that compression involves 
 reducing the quality of the image itself. For the most part this is incorrect, 
 and images can be compressed in a lossless fashion, allowing unnecessary color 
 profiles and comments to be removed from the image without changing the quality 
-of the image at all.
+of the image at all.</p>
 
-There are a handful of tools to help compress images, two of the best
+<p>There are a handful of tools to help compress images, two of the best
 are <a href="http://imageoptim.com/" rel="noopener noreferrer" target="_blank">
 ImageOptim</a> for Mac and <a href="http://pnggauntlet.com/" 
 rel="noopener noreferrer" target="_blank">PNGGauntlet</a> for Windows. Both of 
 these services compress the most commonly used image formats, specifically JPG 
-and PNG files.
+and PNG files.</p>
 
 <h4>Image Compression Demo</h4>
 
@@ -528,16 +520,16 @@ and PNG files.
 </p>
 <h6 align="center">Fig. 4</h6>
 
-Using ImageOptim the above image was reduced over 14% without any
-reduction or loss in quality.
+<p>Using ImageOptim the above image was reduced over 14% without any reduction 
+or loss in quality.</p>
 
-It should also be noted, setting an image's dimensions in HTML by way of
+<p>It should also be noted, setting an image's dimensions in HTML by way of
 the height and width attributes <b>does help</b> render the page quicker,
 setting aside the appropriate space for the image. Understand, these
 attributes are to only be used to identify the exact image dimensions
 and not to shrink an image. Using a larger image, then scaling it down
 with the height and width attributes is bad practice as it loads more
-data than necessary.
+data than necessary.</p>
 
 ```
  1  <img src="ocean.jpg" height="440" width="660" alt="Oceanview">
@@ -546,17 +538,17 @@ data than necessary.
 
 <h4>Reduce HTTP Requests</h4>
 
-Next to file size, the number of HTTP requests a website makes is one of
+<p>Next to file size, the number of HTTP requests a website makes is one of
 the largest performance pitfalls. Each time a request is made to the
 server the page load time increases. Some request have to finish before
-others can start, and too many request can bloat the server.
+others can start, and too many request can bloat the server.</p>
 
 <h4>Combine Like Files</h4>
 
-One way, and perhaps the easiest way, to reduce the number of HTTP
+<p>One way, and perhaps the easiest way, to reduce the number of HTTP
 requests is to combine like files. Specifically, combine all of the CSS
 files into one and all of the JavaScript files into one. Combining these
-files then compressing them creates one, hopefully small, HTTP request.
+files then compressing them creates one, hopefully small, HTTP request.</p>
 
 ```
  1  <!-- Bad -->
@@ -569,7 +561,7 @@ files then compressing them creates one, hopefully small, HTTP request.
  8  
 ```
 
-In general, the CSS for a web page should be loaded at
+<p>In general, the CSS for a web page should be loaded at
 the <b>beginning</b> of the document within the head, while the JavaScript
 for a web page should be loaded at the <b>end</b>, just before the
 closing body tag. The reason for these unique placements is because CSS
@@ -578,25 +570,25 @@ JavaScript, on the other hand, can only render one file at a time, thus
 prohibiting anything else from loading. One caveat here is when
 JavaScript files are asynchronously loaded after the page itself is done
 rendering. Another caveat is when JavaScript is needed in helping render
-the page, as such the case with the HTML5 shiv.
+the page, as such the case with the HTML5 shiv.</p>
 
 <h4>Image Sprites</h4>
 
-The practice of <i>spriting</i> images within CSS includes using one
+<p>The practice of <i>spriting</i> images within CSS includes using one
 background image across multiple elements. The goal here is to cut down
-the number of HTTP requests made by using multiple background images.
+the number of HTTP requests made by using multiple background images.</p>
 
-To create a sprite take a handful of background images, ones that are
+<p>To create a sprite take a handful of background images, ones that are
 commonly used, and arrange them into one single image. Then using CSS
 add the sprite as a background image to an element, and use
 the background-position property to display the correct background
-image.
+image.</p>
 
-Think of the background image sliding around behind elements, only to
+<p>Think of the background image sliding around behind elements, only to
 expose the proper background image on a given element. For example, if
 an element is 16 pixels wide by 16 pixels tall it can only expose a
 background image of 16 pixels by 16 pixels, with the rest of the
-background image being hidden.
+background image being hidden.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 06. menu sprite (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="center" width="100%">
@@ -608,13 +600,13 @@ background image being hidden.
 
 <h6 align="center">Fig. 1</h6>
 
-Here is a sprite for a text editor menu, outlined with guides for
-reference of how the images background position will change.
+<p>Here is a sprite for a text editor menu, outlined with guides for
+reference of how the images background position will change.</p>
 
-Using the image sprite above, a menu can be created by using the image
+<p>Using the image sprite above, a menu can be created by using the image
 sprite as a background on the span element. Then, using classes to
 change the background position of the image sprite, different icons can
-be shown accordingly.
+be shown accordingly.</p>
 
 <details>
   <summary>HTML</summary>
@@ -704,7 +696,7 @@ be shown accordingly.
 
 <h4>Image Data URI</h4>
 
-Additionally, instead of spriting images, the encoded data for an image
+<p>Additionally, instead of spriting images, the encoded data for an image
 can be included within HTML and CSS directly by way of the 
 <a href="https://css-tricks.com/data-uris/" rel="noopener noreferrer" target="_blank">
 data URI</a>, removing the need for a HTTP request all together. Using the image 
@@ -712,16 +704,16 @@ data URI works great for small images, likely to never change, and where the HTM
 and CSS can be heavily cached. There are, however, a couple of problems with data
 URIs. They can be difficult to change and maintain, leading to having to generate 
 another encoding. And, they don't work in older browsers, specifically Internet 
-Explorer 7 and below.
+Explorer 7 and below.</p>
 
-If using data URIs helps cut down a few HTTP requests, and the HTML or CSS can 
+<p>If using data URIs helps cut down a few HTTP requests, and the HTML or CSS can 
 be heavily cached, the benefits tend to outweigh the risk. A few tools to help 
 generate data URIs include 
 <a href="http://websemantics.co.uk/online_tools/image_to_data_uri_convertor/" 
 rel="noopener noreferrer" target="_blank">converters</a> and 
 <a href="http://www.patternify.com/" rel="noopener noreferrer" target="_blank">
 pattern generators</a>. Be careful though, and always double check to see that 
-the actual data URI is less weight than the actual image.
+the actual data URI is less weight than the actual image.</p>
 
 <h5>HTML</h5>
 
@@ -747,24 +739,24 @@ the actual data URI is less weight than the actual image.
 
 <h4>Cache Common Files</h4>
 
-Another way to help cut down HTTP requests, and to serve up pages
+<p>Another way to help cut down HTTP requests, and to serve up pages
 faster, is to cache common files. When a page loads for the first time
 specific files may then be cached. Now the browser doesn't have to
 request the same files again on repeating visits for quite some time.
 How long a period of time is up to you, all depending on how long you
-would like users to hold on to specific file types.
+would like users to hold on to specific file types.</p>
 
-As with gzipping files, setting the expires headers for caching files
+<p>As with gzipping files, setting the expires headers for caching files
 can be set within the .htaccess file. And again, the HTML5 Boilerplate
 team is one step ahead of us. In their Apache Server Configs there is a
-file specifically for setting up expires headers.
+file specifically for setting up expires headers.</p>
 
-Images, videos, web fonts, and common media types are often cached for a
+<p>Images, videos, web fonts, and common media types are often cached for a
 month, while CSS and JavaScript files are often cached for a year.
 Should the CSS, or any other file, change more often than once each year
 the file name will need to be changed, preferably versioned, in order to
 be loaded. Alternatively, the expires headers can be changed to a
-smaller period of time.
+smaller period of time.</p>
 
 ```
  1  ExpiresByType text/css "access plus 1 year"
@@ -772,12 +764,12 @@ smaller period of time.
  3  
 ```
 
-Changing the "access plus 1 year" value to "access plus 1 week" is
+<p>Changing the "access plus 1 year" value to "access plus 1 week" is
 better suited for CSS and JavaScript files that are changing weekly but
 are not version controlled with separate file names. For accepted
 expires header values reference the mod_expires 
 <a href="http://httpd.apache.org/docs/current/mod/mod_expires.html" 
-rel="noopener noreferrer" target="_blank">syntax</a>.
+rel="noopener noreferrer" target="_blank">syntax</a>.</p>
 
 <h4>Resources & Links</h4>
 
@@ -832,48 +824,48 @@ rel="noopener noreferrer" target="_blank">Complex Selectors</a>
 
 <b>SHARE</b>
 
-When it comes to building layouts and positioning content on a page
+<p>When it comes to building layouts and positioning content on a page
 there are a handful of different techniques to use. Which technique to
 use largely depends on the content and the goals of the page, as some
-techniques may be better than others.
+techniques may be better than others.</p>
 
-For example, the ability to float elements side by side provides a nice,
+<p>For example, the ability to float elements side by side provides a nice,
 clean layout that is receptive to the different elements on a page.
 However, when more strict control is needed, elements may be positioned
-using other techniques, including relative or absolute positioning.
+using other techniques, including relative or absolute positioning.</p>
 
-In this lesson, we'll start by taking a look at how to contain floats.
+<p>In this lesson, we'll start by taking a look at how to contain floats.
 Following that, we'll cover more detailed positioning techniques,
 including how to precisely position elements on both the x and y axis as
-well as the z axis.
+well as the z axis.</p>
 
 <h4>Containing Floats</h4>
 
-Floating elements is a natural process when building a website's layout,
+<p>Floating elements is a natural process when building a website's layout,
 and is the instinctive method for positioning elements on a page. Floats
 allow elements to appear next to, or apart from, one another. They
 provide the ability to build a natural flow within a layout and allow
 elements to interact with one another based on their size and the size
-of their containing parent.
+of their containing parent.</p>
 
-When floated, an element's position is dependent on the other elements
+<p>When floated, an element's position is dependent on the other elements
 positioned around it. Will that element run into the one next to it?
 Will it appear on a new line? This all depends on the DOM (Document
-Object Model) and what surrounds an element.
+Object Model) and what surrounds an element.</p>
 
 <h4>What is the DOM?</h4>
 
-The DOM, or Document Object Model, is an API for HTML and XML documents
+<p>The DOM, or Document Object Model, is an API for HTML and XML documents
 which provides their structural representation. In our case, we are
 speaking specifically to HTML documents, thus the DOM represents all of
-the different elements and their relationship to each other.
+the different elements and their relationship to each other.</p>
 
-The representation can be considered a tree of sorts, with each element
+<p>The representation can be considered a tree of sorts, with each element
 having a different relationship with those around it. Elements nested
 inside others have a parent and child relationship while elements that
-share the same parent have a sibling relationship.
+share the same parent have a sibling relationship.</p>
 
-While <a href="https://css-tricks.com/all-about-floats/" 
+<p>While <a href="https://css-tricks.com/all-about-floats/" 
 rel="noopener noreferrer" target="_blank">floats</a> do provide quite a bit of 
 fire power, they do come with a few of their own problems. The most popular 
 problem involves a parent element that contains numerous floated elements. 
@@ -883,13 +875,13 @@ parent container. In this event the parent element loses context of exactly what
 it contains and collapses, thus giving the parent element a height of 0 and 
 ignoring various other properties. A lot of times this may go unnoticed, 
 specifically when the parent element doesn't have any styles tied to it and the 
-nested elements look to have aligned correctly.
+nested elements look to have aligned correctly.</p>
 
-Should the nested elements not line up correctly, styling errors may
+<p>Should the nested elements not line up correctly, styling errors may
 appear. Taking a look at the demo below, the .box-set division should
 have a light gray background, however the background is not seen as all
 of the elements nested within it are floated. Upon inspecting
-the .box-set division you will see it has a height of 0.
+the .box-set division you will see it has a height of 0.</p>
 
 <h4>HTML</h4>
 
@@ -919,31 +911,31 @@ the .box-set division you will see it has a height of 0.
 
 <h4>Containing Floats Demo</h4>
 
-One way to force containing these floats would be to place an empty
+<p>One way to force containing these floats would be to place an empty
 element just before the parent elements closing tag, of which would need
 to include the style declaration clear: both;. Clearing the floats this
 way works and is valid in most cases, but it isn't exactly semantic.
 Depending on how many different floats need to be cleared on a page the
 number of empty elements can begin to stack up quickly, while not
-providing any real contextual value to the page.
+providing any real contextual value to the page.</p>
 
-Fortunately there are a couple of different techniques we can use to
+<p>Fortunately there are a couple of different techniques we can use to
 contain these floats, the most popular of which include the overflow
-technique and the clearfix technique.
+technique and the clearfix technique.</p>
 
 <h4>The Overflow Technique</h4>
 
-One technique for containing floats within a parent element is to use
+<p>One technique for containing floats within a parent element is to use
 the CSS overflow property. Setting the overflow property value
 to auto within the parent element will contain the floats, resulting in
 an actual height for the parent element, thus including a gray
-background in our example.
+background in our example.</p>
 
-For this to work within Internet Explorer 6 a height or width is
+<p>For this to work within Internet Explorer 6 a height or width is
 required on the parent element. Since the height may likely be variable
 a width of 100% will do the trick. Using overflow: auto; in Internet
 Explorer on an Apple computer will also add scrollbars to the parent
-element, in which it is better to use the overflow: hidden; declaration.
+element, in which it is better to use the overflow: hidden; declaration.</p>
 
 ```
  1  .box-set {
@@ -954,28 +946,28 @@ element, in which it is better to use the overflow: hidden; declaration.
 
 <h4>Overflow Technique Demo</h4>
 
-Using the overflow technique does come with a few drawbacks. For
+<p>Using the overflow technique does come with a few drawbacks. For
 example, when adding styles or moving nested elements that span outside
 of the parent, like when trying to implement box shadows and dropdown
 menus. In the demonstration below, you can see how the box shadow is
 being cut off wherever it lies outside the parent element. Additionally,
-the second box is cropped outside of the parent element.
+the second box is cropped outside of the parent element.</p>
 
-Different browsers treat the overflow property differently, and thus
+<p>Different browsers treat the overflow property differently, and thus
 could also implement scrollbars in different fashions here too. Look at
 the example below in different browsers, noticing how the columns
-display differently in each browser.
+display differently in each browser.</p>
 
 <h4>Overflow Pitfall Demo</h4>
 
 <h4>The Clearfix Technique</h4>
 
-Depending on the context of the floated elements a better technique to
+<p>Depending on the context of the floated elements a better technique to
 contain floats may be the <a href="http://nicolasgallagher.com/micro-clearfix-hack/"
 rel="noopener noreferrer" target="_blank">clearfix</a> technique. The clearfix technique 
-is a bit more complex but does have better support as compared to the overflow technique.
+is a bit more complex but does have better support as compared to the overflow technique.</p>
 
-The clearfix technique is based off using
+<p>The clearfix technique is based off using
 the :before and :after pseudo-elements on the parent element. Using
 these pseudo-elements we can create hidden elements above and below the
 parent containing the floats. The :before pseudo-element is used to
@@ -983,16 +975,16 @@ prevent the top margin of child elements from collapsing by creating an
 anonymous table-cell element using the display: table; declaration. This
 also helps ensure consistency within Internet Explorer 6 and 7.
 The :after pseudo-element is used to prevent the bottom margin of child
-elements from collapsing, as well as to clear the nested floats.
+elements from collapsing, as well as to clear the nested floats.</p>
 
-Adding the &ast;zoom property to the parent element triggers
+<p>Adding the &ast;zoom property to the parent element triggers
 the hasLayout mechanism specifically within Internet Explorer 6 and 7,
 which determines how elements should draw and bound their content, as
-well as how elements should interact with and relate to other elements.
+well as how elements should interact with and relate to other elements.</p>
 
-Taking the same example from above you can see how the floats are
+<p>Taking the same example from above you can see how the floats are
 contained and the elements are able to live outside of the parent
-element.
+element.</p>
 
 <details>
   <summary>CSS</summary>
@@ -1018,18 +1010,18 @@ element.
 
 <h4>Effectively Containing Floats</h4>
 
-Which techniques to use boils down to the content at hand and your
+<p>Which techniques to use boils down to the content at hand and your
 personal preference. Some people prefer to stick strictly with the
 clearfix technique as it is consistent across the board. Others feel the
 clearfix technique is a bit too much code in some cases and prefer a mix
 of techniques based on the content. What you decide to use is up to you,
-just make sure it is well documented and easily identifiable either way.
+just make sure it is well documented and easily identifiable either way.</p>
 
-One common practice is to assign a class to the parent element which
+<p>One common practice is to assign a class to the parent element which
 includes the floats needing to be contained. Using the clearfix
 technique for example, Dan Cederholm helped coin the class name group.
 The group class name can then be applied to any parent element needing
-to contain floats.
+to contain floats.</p>
 
 <details>
   <summary>CSS</summary>
@@ -1053,35 +1045,35 @@ to contain floats.
 
 <h4>Single Pseudo-Elements</h4>
 
-It is worth noting only one :before and one :after pseudo-element are
+<p>It is worth noting only one :before and one :after pseudo-element are
 allowed per element, for the time being. When trying to use the clearfix
 technique with other :before and :after pseudo-element content you may
-not achieve the desired outcome.
+not achieve the desired outcome.</p>
 
-In the examples above, the clearfix styles would not live under
+<p>In the examples above, the clearfix styles would not live under
 the box-set class. Instead, the class of group would need to be added to
-the parent element containing the floats.
+the parent element containing the floats.</p>
 
 <h4>Position Property</h4>
 
-Occasionally you need more control over the position of an element, more
+<p>Occasionally you need more control over the position of an element, more
 than a float can provide, in which case the position property comes into
 play. The position property accepts five different values, each of which
 provide different ways to <a href="http://www.alistapart.com/articles/css-positioning-101/" 
-rel="noopener noreferrer" target="_blank">uniquely position</a> an element.
+rel="noopener noreferrer" target="_blank">uniquely position</a> an element.</p>
 
 <h4>Position Static</h4>
 
-Elements by default have the position value of static, meaning they
+<p>Elements by default have the position value of static, meaning they
 don't have, nor will they accept, any specific 
-<a href="https://learn.shayhowe.com/html-css/opening-the-box-model/">
-box offset properties</a>.
+<a href="https://learn.shayhowe.com/html-css/opening-the-box-model/" 
+rel="noopener noreferrer" target="_blank">box offset properties</a>. 
 Furthermore, elements will be positioned as intended, with their default
-behaviors.
+behaviors.</p>
 
-In the demonstration below, all the boxes are stacked one on top of the
+<p>In the demonstration below, all the boxes are stacked one on top of the
 other as they are block level elements and are not floated in any
-specific direction.
+specific direction.</p>
 
 <h4>HTML</h4>
 
@@ -1113,48 +1105,48 @@ specific direction.
 
 <h4>Position Relative</h4>
 
-The relative value for the position property is very similar to that of
+<p>The relative value for the position property is very similar to that of
 the static value. The primary difference is that the relative value
 accepts the box offset properties top, right, bottom, and left. These
 box offset properties allow the element to be precisely positioned,
-shifting the element from its default position in any direction.
+shifting the element from its default position in any direction.</p>
 
 <h4>How Box Offset Properties Work</h4>
 
-The box offset properties, top, right, bottom, and left, specify how
+<p>The box offset properties, top, right, bottom, and left, specify how
 elements may be positioned, and in which direction. These offset
 properties only work on elements with a relative, absolute,
-or fixed positioning value.
+or fixed positioning value.</p>
 
-For relatively positioned elements, these properties specify how an
+<p>For relatively positioned elements, these properties specify how an
 element should be moved from its default position. For example, using
 a top value of 20px on a relatively positioned element will push the
 element 20 pixels down from where it was originally placed. Switching
 the top value to -20px will instead pull the element 20 pixels up from
-where it was originally placed.
+where it was originally placed.</p>
 
-For elements using absolute or fixed positioning these properties
+<p>For elements using absolute or fixed positioning these properties
 specify the distance between the element and the edges of its parent
 element. For example, using a top value of 20px on an absolutely
 positioned element will push the element 20 pixels down from the top of
 its relatively positioned parent. Switching the top value to -20px will
 then pull the element 20 pixels up from the top of its relatively
-positioned parent.
+positioned parent.</p>
 
-While the relative position does accept box offset properties the
+<p>While the relative position does accept box offset properties the
 element still remains in the normal, or static, flow of the page. In
 this case other elements will not impede on where the relatively
 positioned element was originally placed. Additionally, the relatively
 positioned element may overlap, or underlap, other elements without
-moving them from their default position.
+moving them from their default position.</p>
 
-In the demonstration below you will notice that the elements are still
+<p>In the demonstration below you will notice that the elements are still
 stacked on top of one another, however they are shifted from their
 default positions according to their individual box offset property
 values. These values cause the boxes to overlap one another, yet do not
 push each other in different directions. When an element is positioned
 relatively the surrounding elements will observe the relatively
-positioned elements default position.
+positioned elements default position.</p>
 
 <h4>HTML</h4>
 
@@ -1198,43 +1190,43 @@ positioned elements default position.
 
 <h4>Position Relative Demo</h4>
 
-In the event that the top and bottom box offset properties are both
+<p>In the event that the top and bottom box offset properties are both
 declared on a relatively positioned element, the top properties will
 take priority. Additionally, if both the left and right box offset
 properties are declared on a relatively positioned element, priority is
 given in the direction in which the language of the page is written. For
 example, in English pages the left offset property is given priority,
-and for Arabic pages the right offset property is given priority.
+and for Arabic pages the right offset property is given priority.</p>
 
 <h4>Position Absolute</h4>
 
-Absolutely positioned elements accept box offset properties, however
+<p>Absolutely positioned elements accept box offset properties, however
 they are removed from the normal flow of the document. Upon removing the
 element from the normal flow, elements are positioned directly in
 relation to their containing parent whom is relatively or absolutely
 positioned. Should a relatively or absolutely positioned parent not be
 present, the absolutely positioned element will be positioned in
-relation to the body of the page.
+relation to the body of the page.</p>
 
-Using absolutely positioned elements and specifying both vertical and
+<p>Using absolutely positioned elements and specifying both vertical and
 horizontal offset properties will move the element with those property
 values in relation to its relatively positioned parent. For example, an
 element with a top value of 50px and a right value of 100px will
 position the element 50 pixels down from the top of its relatively
 positioned parent and 100 pixels in from the right of its relatively
-positioned parent.
+positioned parent.</p>
 
-Furthermore, using an absolutely positioned element and not specifying
+<p>Furthermore, using an absolutely positioned element and not specifying
 any box offset property will position the element in the top left of its
 closest relatively positioned parent. Setting one box offset property,
 such as top, will absolutely position the element vertically but will
-leave the horizontal positioning to the default value of flush left.
+leave the horizontal positioning to the default value of flush left.</p>
 
-In the demonstration below you can see how each box is absolutely
+<p>In the demonstration below you can see how each box is absolutely
 positioned in relation to the parent division, of which is relatively
 positioned. Each individual box is moved in from a specific side with a
 positive value, or pulled out from a specific side with a negative
-value.
+value.</p>
 
 <details>
   <summary>HTML</summary>
@@ -1288,38 +1280,38 @@ value.
 
 <h4>Position Absolute Demo</h4>
 
-When an element has a fixed height and width and is absolutely
+<p>When an element has a fixed height and width and is absolutely
 positioned, the top property takes priority should both
 the top and bottom offset properties be declared. As with the relatively
 positioned elements, should an element with a fixed width have both
 the left and right box offset properties, priority is given to the
-direction of which the language of the page is written.
+direction of which the language of the page is written.</p>
 
-If an element doesn't have a specific height or width and is absolutely
+<p>If an element doesn't have a specific height or width and is absolutely
 positioned, using a combination of the top and bottom box offset
 properties displays an element with a height spanning the entire
 specified size. Same goes for using both the left and right box offset
 properties, resulting in an element with a full width based on both of
 the left and right box offset properties. Using all four box offset
 properties will display an element with a full specified height and
-width.
+width.</p>
 
 <h4>Position Fixed</h4>
 
-Using the positioning value of fixed works just like that of absolute,
+<p>Using the positioning value of fixed works just like that of absolute,
 however the positioning is relative to the browser viewport, and it does
 not scroll with the page. That said, elements will always be present no
 matter where a user stands on a page. The only caveat
 with fixed positioning is that it doesn't work with Internet Explorer 6.
 Should you want to force fixed positioning within Internet Explorer 6
-there are suitable hacks.
+there are suitable hacks.</p>
 
-Using multiple box offset properties with fixed positioning will produce
-the same behaviors as an absolutely positioned element.
+<p>Using multiple box offset properties with fixed positioning will produce
+the same behaviors as an absolutely positioned element.</p>
 
-Keeping the same box offset properties from the previous demonstration,
+<p>Keeping the same box offset properties from the previous demonstration,
 watch how the boxes are positioned in relation to the browser's viewport
-and not the containing, relatively positioned parent.
+and not the containing, relatively positioned parent.</p>
 
 <h4>HTML</h4>
 
@@ -1367,16 +1359,15 @@ and not the containing, relatively positioned parent.
 
 <h4>Fixed Header or Footer</h4>
 
-One of the most common uses of fixed positioning is to build a fixed
-header, or footer, anchored to one side of a page. As a user scrolls the
-element stays prevalent, always within the viewport for users to
-interact with.
+<p>One of the most common uses of fixed positioning is to build a fixed header, 
+or footer, anchored to one side of a page. As a user scrolls the element stays 
+prevalent, always within the viewport for users to interact with.</p>
 
-The code and demonstration below outline how this may be achieved.
-Notice how both left and right box offset properties are declared. This
-allows the footer to span the entire width of the bottom of the page,
-and it does so without disrupting the box model, allowing margins,
-borders, and padding to be applied freely.
+<p>The code and demonstration below outline how this may be achieved. Notice how 
+both left and right box offset properties are declared. This allows the footer 
+to span the entire width of the bottom of the page, and it does so without 
+disrupting the box model, allowing margins, borders, and padding to be applied 
+freely.</p>
 
 <h4>HTML</h4>
 
@@ -2533,26 +2524,23 @@ are selected.
 
 <h4>:nth-of-type(n) & :nth-last-of-type(n)</h4>
 
-The :nth-of-type(n) and :nth-last-of-type(n) pseudo-classes are very
-similar to that of
-the :nth-child(n) and :nth-last-child(n) pseudo-classes, however instead
-of counting every element within a parent
-the :nth-of-type(n) and :nth-last-of-type(n) pseudo-classes only count
-elements of their own type. For example, when counting paragraphs within
-an article, the :nth-of-type(n) and :nth-last-of-type(n) pseudo-classes
-will skip any headings, divisions, or miscellaneous elements that are
-not paragraphs, while the :nth-child(n) and :nth-last-child(n) would
-count every element, no matter its type, only selecting the ones that
-match the element within the stated selector. Additionally, all of the
-same expression possibilities used within
-the :nth-child(n) and :nth-last-child(n) pseudo-classes are also
-available within
-the :nth-of-type(n) and :nth-last-of-type(n) pseudo-classes.
+<p>The :nth-of-type(n) and :nth-last-of-type(n) pseudo-classes are very similar to 
+that of the :nth-child(n) and :nth-last-child(n) pseudo-classes, however instead
+of counting every element within a parent the :nth-of-type(n) and 
+:nth-last-of-type(n) pseudo-classes only count elements of their own type. For 
+example, when counting paragraphs within an article,  the :nth-of-type(n) and 
+:nth-last-of-type(n) pseudo-classes will skip any headings, divisions, or 
+miscellaneous elements that are not paragraphs, while the :nth-child(n) and 
+:nth-last-child(n) would count every element, no matter its type, only selecting 
+the ones that match the element within the stated selector. Additionally, all 
+of the same expression possibilities used within the :nth-child(n) and 
+:nth-last-child(n) pseudo-classes are also available within the 
+:nth-of-type(n) and :nth-last-of-type(n) pseudo-classes.</p>
 
-Using the :nth-of-type(n) pseudo-class within
-the p:nth-of-type(3n) selector we are able to identify every third
-paragraph within a parent, regardless of other sibling elements within
-the parent. Here the paragraphs on lines 5 and 9 are selected.
+<p>Using the :nth-of-type(n) pseudo-class within the p:nth-of-type(3n) selector 
+we are able to identify every third paragraph within a parent, regardless of 
+other sibling elements within the parent. Here the paragraphs on lines 5 and 9 
+are selected.</p>
 
 <h4>CSS</h4>
 
@@ -2579,17 +2567,16 @@ the parent. Here the paragraphs on lines 5 and 9 are selected.
 
 </details>
 
-As with the :nth-child(n) and :nth-last-child(n) pseudo-classes, the
-primary difference between
-the :nth-of-type(n) and :nth-last-of-type(n) pseudo-classes is that
-the :nth-of-type(n) pseudo-class counts elements from the beginning of
-the document tree and the :nth-last-of-type(n) pseudo-class counts
-elements from the end of the document tree.
+<p>As with the :nth-child(n) and :nth-last-child(n) pseudo-classes, the primary 
+difference between the :nth-of-type(n) and :nth-last-of-type(n) pseudo-classes 
+is that the :nth-of-type(n) pseudo-class counts elements from the beginning of
+the document tree and the :nth-last-of-type(n) pseudo-class counts elements 
+from the end of the document tree.</p>
 
-Using the :nth-last-of-type(n) pseudo-class we can write
+<p>Using the :nth-last-of-type(n) pseudo-class we can write
 the p:nth-last-of-type(2n+1) selector which identifies every second
 paragraph from the end of a parent element starting with the last
-paragraph. Here the paragraphs on lines 4, 7, and 9 are selected.
+paragraph. Here the paragraphs on lines 4, 7, and 9 are selected.</p>
 
 <h4>CSS</h4>
 
@@ -2619,24 +2606,24 @@ paragraph. Here the paragraphs on lines 4, 7, and 9 are selected.
 
 <h4>Target Pseudo-class</h4>
 
-The :target pseudo-class is used to style elements when an element's ID
+<p>The :target pseudo-class is used to style elements when an element's ID
 attribute value matches that of the URI fragment identifier. The
 fragment identifier within a URI can be recognized by the hash
 character, #, and what directly follows it. The
 URL http://example.com/index.html#hello includes the fragment identifier
 of hello. When this identifier matches the ID attribute value of an
-element on the page, <section id="hello"> for example, that element
+element on the page, &lt;section id="hello"&gt; for example, that element
 may be identified and stylized using the :target pseudo-class. Fragment
 identifiers are most commonly seen when using 
 <a href="https://learn.shayhowe.com/html-css/getting-to-know-html/#hyperlinks">
-on page links</a>, or linking to another part of the same page.
+on page links</a>, or linking to another part of the same page.</p>
 
-Looking at the code below, if a user would visit a page with the URI
+<p>Looking at the code below, if a user would visit a page with the URI
 fragment identifier of #hello, the section with that same ID attribute
 value would be stylized accordingly using the :target pseudo-class. If
 the URI fragment identifier changes, and matches the ID attribute value
 of another section, that new section may be stylized using the same
-selector and pseudo-class from before.
+selector and pseudo-class from before.</p>
 
 <h4>CSS</h4>
 
@@ -2654,18 +2641,17 @@ selector and pseudo-class from before.
 
 <h4>Empty Pseudo-class</h4>
 
-The :empty pseudo-class allows elements that do not contain children or
+<p>The :empty pseudo-class allows elements that do not contain children or
 text nodes to be selected. Comments, processing instructions, and empty
-text nodes are not considered children and are not treated as such.
+text nodes are not considered children and are not treated as such.</p>
 
-Using the div:empty pseudo-class will identify divisions without any
-children or text nodes. Below the divisions on lines 2 and 3 are
-selected, as they are completely empty. Even though the second division
-contains a comment, it is not considered to be a child, thus leaving the
-division empty. The first division contains text, the fourth division
-contains one blank text space, and the last division contains
-a strong child element, thus they are all ruled out and are not
-selected.
+<p>Using the div:empty pseudo-class will identify divisions without any children 
+or text nodes. Below the divisions on lines 2 and 3 are selected, as they are 
+completely empty. Even though the second division contains a comment, it is not 
+considered to be a child, thus leaving the division empty. The first division 
+contains text, the fourth division contains one blank text space, and the last 
+division contains a strong child element, thus they are all ruled out and are 
+not selected.</p>
 
 <h4>CSS</h4>
 
@@ -2688,22 +2674,22 @@ selected.
 
 <h4>Negation Pseudo-class</h4>
 
-The negation pseudo-class, :not(x), is a pseudo-class that takes an
+<p>The negation pseudo-class, :not(x), is a pseudo-class that takes an
 argument which is filtered out from the selection to be made.
 The p:not(.intro) selector uses the negation pseudo-class to identify
 every paragraph element without the class of intro. The paragraph
 element is identified at the beginning of the selector followed by
 the :not(x) pseudo-class. Inside of the parentheses falls the negation
-selector, the class of .intro in this case.
+selector, the class of .intro in this case.</p>
 
-Below, both the div:not(.awesome) and :not(div) selectors use
+<p>Below, both the div:not(.awesome) and :not(div) selectors use
 the :not(x) pseudo-class. The div:not(.awesome) selector identifies any
 division without the class of awesome, while the :not(div) selector
 identifies any element that isn't a division. As a result the, division
 on line 1 is selected, as well as the two sections on lines 3 and 4,
 thus they are marked bold. The only element not selected is the division
 with the class of awesome, as it falls outside of the two negation
-pseudo-classes.
+pseudo-classes.</p>
 
 <h4>CSS</h4>
 
@@ -2863,27 +2849,27 @@ pseudo-classes.
   | div:not(.awesome) | Negation     | Selects an element not represented by the stated  |
   |                   | Pseudo-class | argument. |
   
-Pseudo-elements
+<h4>Pseudo-elements</h4>
 
-Pseudo-elements are dynamic elements that don't exist in the document
-tree, and when used within selectors
-these <a href="http://coding.smashingmagazine.com/2009/08/17/taming-advanced-css-selectors/">
-pseudo-elements</a> allow unique parts of the page to be stylized. One important point to note,
-only one pseudo-element may be used within a selector at a given time.
+<p>Pseudo-elements are dynamic elements that don't exist in the document tree, and 
+when used within selectors these 
+<a href="http://coding.smashingmagazine.com/2009/08/17/taming-advanced-css-selectors/" 
+rel="noopener noreferrer" target="_blank">pseudo-elements</a> allow unique parts of 
+the page to be stylized. One important point to note, only one pseudo-element may 
+be used within a selector at a given time.</p>
 
-Textual Pseudo-elements
+<h4>Textual Pseudo-elements</h4>
 
-The first pseudo-elements ever released were
-the :first-letter and :first-line textual pseudo-elements.
-The :first-letter pseudo-element will identify the first letter of text
-within an element, while the :first-line pseudo-element will identify
-the first line of text within an element.
+<p>The first pseudo-elements ever released were the :first-letter and :first-line 
+textual pseudo-elements. The :first-letter pseudo-element will identify the first 
+letter of text within an element, while the :first-line pseudo-element will identify
+the first line of text within an element.</p>
 
-In the demonstration below the first letter of the paragraph with the
+<p>In the demonstration below the first letter of the paragraph with the
 class of alpha is set in a larger font size and colored orange, as is
 the first line of the paragraph with the class of bravo. These
 selections are made by use of the :first-letter and :first-line textual
-pseudo-elements respectively.
+pseudo-elements respectively.</p>
 
 <h4>CSS</h4>
 
@@ -2908,22 +2894,22 @@ pseudo-elements respectively.
 
 <h4>Generated Content Pseudo-elements</h4>
 
-The :before and :after generated content pseudo-elements create new
+<p>The :before and :after generated content pseudo-elements create new
 inline level pseudo-elements just inside the selected element. Most
 commonly these pseudo-elements are used in conjunction with
 the content property to add insignificant information to a page, however
 that is not always the case. Additional uses of these psuedo-elements
 may be to add user interface components to the page without having to
-clutter the document with unsemantic elements.
+clutter the document with unsemantic elements.</p>
 
-The :before pseudo-element creates a pseudo-element before, or in front
+<p>The :before pseudo-element creates a pseudo-element before, or in front
 of, the selected element, while the :after pseudo-element creates a
 pseudo-element after, or behind, the selected element. These
 pseudo-elements appear nested within the selected element, not outside
 of it. Below the :after pseudo-element is used to display
 the href attribute value of anchor links within parentheses after the
 actual links. The information here is helpful, but not ultimately
-necessary should a browser not support these pseudo-elements.
+necessary should a browser not support these pseudo-elements.</p>
 
 <h4>CSS</h4>
 
@@ -2948,27 +2934,25 @@ necessary should a browser not support these pseudo-elements.
 
 <h4>Fragment Pseudo-element</h4>
 
-The ::selection fragment pseudo-element identifies part of the document
-that has been selected, or highlighted, by a user's actions. The
-selection may then be stylized, however only using
-the color, background, background-color, and text-shadow properties. It
-is worth noting, the background-image property is ignore. While the
-shorthand background property may be used to add a color, any images
-will be ignored.
+<p>The ::selection fragment pseudo-element identifies part of the document that 
+has been selected, or highlighted, by a user's actions. The selection may then 
+be stylized, however only using the color, background, background-color, and 
+text-shadow properties. It is worth noting, the background-image property is 
+ignore. While the shorthand background property may be used to add a color, any 
+images will be ignored.</p>
 
 <h4>Single Colon (:) versus Double Colons (::)</h4>
 
-The fragment pseudo-element was added with CSS3 and in attempt to
-differentiate pseudo-classes from pseudo-elements the double colons were
-added to pseudo-elements. Fortunately most browsers will support both
-values, single or double colons, for pseudo-elements however
-the ::selection pseudo-element must always start with double colons.
+<p>The fragment pseudo-element was added with CSS3 and in attempt to differentiate 
+pseudo-classes from pseudo-elements the double colons were added to pseudo-elements. 
+Fortunately most browsers will support both values, single or double colons, for 
+pseudo-elements however the ::selection pseudo-element must always start with double 
+colons.</p>
 
-When selecting any of the text within the demonstration below the
-background will appear orange and any text shadows will be removed
-thanks to the ::selection fragment pseudo-element. Also note,
-the ::-moz-selection Mozilla prefixed fragment pseudo-element has been
-added to ensure the best support for all browsers.
+<p>When selecting any of the text within the demonstration below the background 
+will appear orange and any text shadows will be removed thanks to the ::selection 
+fragment pseudo-element. Also note, the ::-moz-selection Mozilla prefixed fragment 
+pseudo-element has been added to ensure the best support for all browsers.</p>
 
 ```
  1  ::-moz-selection {
@@ -3059,59 +3043,60 @@ added to ensure the best support for all browsers.
 
 <h4>Selector Browser Support</h4>
 
-While these selectors provide a variety of opportunity and the ability
+<p>While these selectors provide a variety of opportunity and the ability
 to do some truly amazing things with CSS, they are at times plagued by
 poor browser support. Before doing anything too critical check the
 selectors you are wishing to use across your visitor's most common
 browsers, and then make the judgment call as to whether they are
-appropriate or not.
+appropriate or not.</p>
 
-CSS3.info provides a <a href="https://www.css3.info/selectors-test/">
+<p>CSS3.info provides a <a href="https://www.css3.info/selectors-test/">
 CSS3 Selectors Test</a> tool which will inform you as to which selectors 
 are supported by the browser in use. It's also never a bad idea to check 
-browser support directly from the vendor.
+browser support directly from the vendor.</p>
 
-Additionally, <a href="http://selectivizr.com/">Selectivizr</a>, a
+<p>Additionally, <a href="http://selectivizr.com/">Selectivizr</a>, a
 JavaScript utility, provides great support for these selectors in
 Internet Explorer 6-8. More support, should it be necessary, can also be
-provided by <a href="http://api.jquery.com/category/selectors/">jQuery selectors</a>.
+provided by <a href="http://api.jquery.com/category/selectors/">jQuery selectors</a>.</p>
 
 <h4>Selector Speed & Performance</h4>
 
-It is important to pay attention the speed and performance of selectors,
+<p>It is important to pay attention the speed and performance of selectors,
 as using too many intricate selectors can slow down the rendering of a
 page. Be attentive and when a selector begins to look a bit foreign
-think about revisiting it, and seeing if a better solution can be found.
+think about revisiting it, and seeing if a better solution can be found.</p>
 
 <h4>Resources & Links</h4>
 
--[The 30 CSS Selectors you Must Memorize](http://net.tutsplus.com/tutorials/html-css-techniques/the-30-css-selectors-you-must-memorize/) via
- Nettuts+
-
--[Child and Sibling Selectors](https://css-tricks.com/child-and-sibling-selectors/) 
-via CSS-Tricks
-
--[CSS3 Substring Matching Attribute
- Selectors](http://www.css3.info/preview/attribute-selectors/) via
- CSS3.info
-
--[How To Use CSS3
- Pseudo-Classes](http://coding.smashingmagazine.com/2011/03/30/how-to-use-css3-pseudo-classes/) via
- Smashing Magazine
-
--[Understanding :nth-child Pseudo-class
- Expressions](http://reference.sitepoint.com/css/understandingnthchildexpressions) via
- SitePoint
-
--[Taming Advanced CSS
- Selectors](http://coding.smashingmagazine.com/2009/08/17/taming-advanced-css-selectors/) via
- Smashing Magazine
+<ul>
+  <li><a href="http://net.tutsplus.com/tutorials/html-css-techniques/the-30-css-selectors-you-must-memorize/"
+    rel="noopener noreferrer" target="_blank">
+    The 30 CSS Selectors you Must Memorize</a> via Nettuts+.</li>
+  <li><a href="https://css-tricks.com/child-and-sibling-selectors/"
+    rel="noopener noreferrer" target="_blank">
+	Child and Sibling Selectors</a> via CSS-Tricks.</li>
+  <li><a href="http://www.css3.info/preview/attribute-selectors/"
+    rel="noopener noreferrer" target="_blank">
+	CSS3 Substring Matching Attribute Selectors</a> via CSS3.info</li>
+  <li><a href="http://coding.smashingmagazine.com/2011/03/30/how-to-use-css3-pseudo-classes/"
+    rel="noopener noreferrer" target="_blank">
+	How To Use CSS3 Pseudo-Classes</a> via Smashing Magazine.</li>
+  <li><a href="http://reference.sitepoint.com/css/understandingnthchildexpressions"
+    rel="noopener noreferrer" target="_blank">
+	Understanding :nth-child Pseudo-class Expressions</a> via SitePoint.</li>
+  <li<a href="http://coding.smashingmagazine.com/2009/08/17/taming-advanced-css-selectors/"
+    rel="noopener noreferrer" target="_blank">
+	Taming Advanced CSS Selectors</a> via Smashing Magazine.</li>
+</ul>
 
  
-
-**Lesson 2** Detailed
-Positioning](https://learn.shayhowe.com/advanced-html-css/detailed-css-positioning/)
-**Lesson 4** Responsive Web Design](https://learn.shayhowe.com/advanced-html-css/responsive-web-design/)
+<a href=""><b>Lesson 2</b><a href="https://learn.shayhowe.com/advanced-html-css/detailed-css-positioning/"
+  rel="noopener noreferrer" target="_blank">
+  Detailed Positioning</a>
+<a href=""><b>Lesson 4</b><a href="https://learn.shayhowe.com/advanced-html-css/responsive-web-design/"
+  rel="noopener noreferrer" target="_blank">
+  Responsive Web Design</a>
 
 <h2 align="center">Lesson 4: Responsive Web Design</h2>
 
@@ -3119,13 +3104,16 @@ Positioning](https://learn.shayhowe.com/advanced-html-css/detailed-css-positioni
 
 <h4>HTML</h4>
 
--[Responsive
- Overview](https://learn.shayhowe.com/advanced-html-css/responsive-web-design/#responsive-web-design)
-
--[Viewport](https://learn.shayhowe.com/advanced-html-css/responsive-web-design/#viewport)
+<ul>
+  <li><a href="https://learn.shayhowe.com/advanced-html-css/responsive-web-design/#responsive-web-design"
+    rel="noopener noreferrer" target="_blank">Responsive Overview</a></li>
+  <li><a href="https://learn.shayhowe.com/advanced-html-css/responsive-web-design/#viewport"
+    rel="noopener noreferrer" target="_blank">Viewport</a></li>
+</ul>
 
 <h4>CSS</h4>
 
+<ul>
 -[Flexible
  Layouts](https://learn.shayhowe.com/advanced-html-css/responsive-web-design/#flexible-layouts)
 
@@ -3140,36 +3128,38 @@ Positioning](https://learn.shayhowe.com/advanced-html-css/detailed-css-positioni
 
 <h4>SHARE</h4>
 
-The Internet took off quicker than anyone would have predicted, growing
+<p>The Internet took off quicker than anyone would have predicted, growing
 like crazy. Now, for the past few years, mobile growth has exploded onto
 the scene. The growth of mobile Internet usage is also far out pacing
-that of general Internet usage growth.
+that of general Internet usage growth.</p>
 
-These days it is hard to find someone who doesn't own a mobile device,
+<p>These days it is hard to find someone who doesn't own a mobile device,
 or multiple, connected to the Internet. In the UK there are more mobile
-phones than people, and should [trends
-continue](http://www.digitalbuzzblog.com/2011-mobile-statistics-stats-facts-marketing-infographic/) mobile
-Internet usage will surpass that of desktop Internet usage within the
-year.
+phones than people, and should 
+<a href="http://www.digitalbuzzblog.com/2011-mobile-statistics-stats-facts-marketing-infographic/" 
+rel="noopener noreferrer" target="_blank">trends continue</a> mobile Internet usage 
+will surpass that of desktop Internet usage within the year.</p>
 
-With the growth in mobile Internet usage comes the question of how to
+<p>With the growth in mobile Internet usage comes the question of how to
 build websites suitable for all users. The industry response to this
-question has become responsive web design, also known as RWD.
+question has become responsive web design, also known as RWD.</p>
 
 <h4>Responsive Overview</h4>
 
-Responsive web design is the practice of building a website suitable to
+<p>Responsive web design is the practice of building a website suitable to
 work on every device and every screen size, no matter how large or
 small, mobile or desktop. Responsive web design is focused around
 providing an intuitive and gratifying experience for everyone. Desktop
 computer and cell phone users alike all benefit from responsive
-websites.
+websites.</p>
 
-The [responsive web design](http://www.alistapart.com/articles/responsive-web-design/) term
-itself was coined, and largely developed, by Ethan Marcotte. A lot of
-what is covered in this lesson was first talked about by Ethan online
-and in his book <i><a href="http://www.abookapart.com/products/responsive-web-design/"></i>
-Responsive Web Design</a>, which is worth a read.
+<p>The <a href="http://www.alistapart.com/articles/responsive-web-design/" 
+rel="noopener noreferrer" target="_blank">responsive web design</a> term
+itself was coined, and largely developed, by Ethan Marcotte. A lot of what is 
+covered in this lesson was first talked about by Ethan online and in his book 
+<i><a href="http://www.abookapart.com/products/responsive-web-design/" 
+rel="noopener noreferrer" target="_blank"></i>Responsive Web Design</a>, 
+which is worth a read.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~ 07. food sense responsive layout (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="center" width="100%">
@@ -3181,7 +3171,8 @@ Responsive Web Design</a>, which is worth a read.
 
 <h6 align="center">Fig. 4</h6>
 
-<a href="http://foodsense.is/">Food Sense</a> has a beautiful
+<a href="http://foodsense.is/" 
+rel="noopener noreferrer" target="_blank">Food Sense</a> has a beautiful
 website, responsive to all different viewport sizes. No matter how large
 or small the viewport may be the Food Sense website adjust, creating a
 natural user experience.
@@ -3621,7 +3612,8 @@ time. Trying to keep up with these changes could be an endless process.
 <h4>Mobile First</h4>
 
 One popular technique with using media queries is called <i>mobile first</i>.
-The <a href="https://abookapart.com/products/mobile-first">mobile first</a> approach
+The <a href="https://abookapart.com/products/mobile-first" 
+rel="noopener noreferrer" target="_blank">mobile first</a> approach
 includes using styles targeted at smaller viewports as the default
 styles for a website, then use media queries to add styles as the
 viewport grows.
@@ -3906,8 +3898,8 @@ Unfortunately the max-width property doesn't work well for all instances
 of media, specifically around iframes and embedded media. When it comes
 to third party websites, such as YouTube, who use iframes for embedded
 media this is a huge disappointment. Fortunately, there is a 
-<a href="http://www.alistapart.com/articles/creating-intrinsic-ratios-for-video/">
-work around</a>.
+<a href="http://www.alistapart.com/articles/creating-intrinsic-ratios-for-video/" 
+rel="noopener noreferrer" target="_blank">work around</a>.
 
 To get embedded media to be fully responsive, the embedded element needs
 to be absolutely positioned within a parent element. The parent element
@@ -3957,9 +3949,10 @@ treating the parent element as an absolutely positioned element.
 
 <h4>Flexible Embedded Media Demo</h4>
 
-For security reasons CodePen doesn't allow iframes within embedded code
-samples, however you may <a href="https://codepen.io/shayhowe/pen/cbmsI">
-review and edit this code</a> on their website.
+<p>For security reasons CodePen doesn't allow iframes within embedded code
+samples, however you may <a href="https://codepen.io/shayhowe/pen/cbmsI" 
+rel="noopener noreferrer" target="_blank">review and edit this code</a> on their 
+website.</p>
 
 100% Wide Container
 
@@ -3970,20 +3963,27 @@ review and edit this code</a> on their website.
 <h4>Resources & Links</h4>
 
 <ul>
-  <li><a href="http://www.alistapart.com/articles/responsive-web-design/">
+  <li><a href="http://www.alistapart.com/articles/responsive-web-design/"
+    rel="noopener noreferrer" target="_blank">
     Responsive Web Design</a> via A List Apart</li>
-  <li><a href="http://dev.w3.org/csswg/css3-values/#viewport-relative-lengths">
+  <li><a href="http://dev.w3.org/csswg/css3-values/#viewport-relative-lengths"
+    rel="noopener noreferrer" target="_blank">
     Viewport Percentage Lengths</a> via W3C</li>
-  <li><a href="https://css-tricks.com/css-media-queries/">
+  <li><a href="https://css-tricks.com/css-media-queries/"
+    rel="noopener noreferrer" target="_blank">
     CSS Media Queries</a> via CSS-Tricks</li>
-  <li><a href="https://abookapart.com/products/mobile-first">
+  <li><a href="https://abookapart.com/products/mobile-first"
+    rel="noopener noreferrer" target="_blank">
     Mobile First</a> via Luke Wroblewski></li>
-  <li><a href="http://dev.opera.com/articles/view/an-introduction-to-meta-viewport-and-viewport/">
+  <li><a href="http://dev.opera.com/articles/view/an-introduction-to-meta-viewport-and-viewport/"
+    rel="noopener noreferrer" target="_blank">
     An Introduction to Meta Viewport and  &#0064;viewport</a> via Dev. Opera</li>
 </ul>
 
-**Lesson 3** <a href="https://learn.shayhowe.com/advanced-html-css/complex-selectors/">Complex Selectors</a>
-**Lesson 5** <a href="https://learn.shayhowe.com/advanced-html-css/preprocessors/">Preprocessors</a>
+<b>Lesson 3</b> <a href="https://learn.shayhowe.com/advanced-html-css/complex-selectors/" 
+  rel="noopener noreferrer" target="_blank">Complex Selectors</a>
+<b>Lesson 5</b> <a href="https://learn.shayhowe.com/advanced-html-css/preprocessors/" 
+  rel="noopener noreferrer" target="_blank">Preprocessors</a>
 
 <h2 align="center">Lesson 5: Preprocessors</h2>
 
@@ -3992,16 +3992,19 @@ review and edit this code</a> on their website.
 <h4>HTML</h4>
 
 <ul>
-  <li><a href="https://learn.shayhowe.com/advanced-html-css/preprocessors/#haml">
+  <li><a href="https://learn.shayhowe.com/advanced-html-css/preprocessors/#haml"
+    rel="noopener noreferrer" target="_blank">
     Haml</a></li>
 </ul>
 
 <h4>CSS</h4>
 
 <ul>
-  <li><a href="https://learn.shayhowe.com/advanced-html-css/preprocessors/#scss-sass">
+  <li><a href="https://learn.shayhowe.com/advanced-html-css/preprocessors/#scss-sass"
+    rel="noopener noreferrer" target="_blank">
     SCSS & Sass</a></li>
-  <li><a href="https://learn.shayhowe.com/advanced-html-css/preprocessors/#other-preprocessors">
+  <li><a href="https://learn.shayhowe.com/advanced-html-css/preprocessors/#other-preprocessors"
+    rel="noopener noreferrer" target="_blank">
     Other Preprocessors</a></li>
 </ul>
 
@@ -4033,20 +4036,20 @@ popular being Compass.
 
 <h4>Haml</h4>
 
-Haml, known as <a href="http://haml.info/docs/yardoc/file.REFERENCE.html">
-HTML abstraction markup language</a>, is a markup language with the single 
-goal of providing the ability to write beautiful markup. Serving as its own 
-markup language, code written in Haml is later processed to HTML. Haml promotes 
-DRY and well structured markup, providing a pleasing experience for anyone 
-having to write or read it.
+<p>Haml, known as <a href="http://haml.info/docs/yardoc/file.REFERENCE.html"
+rel="noopener noreferrer" target="_blank">HTML abstraction markup language</a>, 
+is a markup language with the single goal of providing the ability to write 
+beautiful markup. Serving as its own markup language, code written in Haml is 
+later processed to HTML. Haml promotes DRY and well structured markup, providing 
+a pleasing experience for anyone having to write or read it.</p>
 
 <h4>Installation</h4>
 
 Haml requires Ruby to be compiled to HTML, so the first step to using it
 is to ensure that Ruby is installed. Fortunately for those on Mac OS X
 Ruby comes preinstalled, and those on a Windows machine may
-visit <a href="http://rubyinstaller.org/">Windows Installer</a> for
-directions. Upon confirming Ruby is installed the gem install
+visit <a href="http://rubyinstaller.org/" rel="noopener noreferrer" target="_blank">
+Windows Installer</a> for directions. Upon confirming Ruby is installed the gem install
 haml command needs to be run from the command line, using Terminal or
 the alike command line program, to install Haml.
 
@@ -5997,7 +6000,8 @@ until the page has loaded and the DOM is ready.
 <h4>Selectors</h4>
 
 As previously mentioned, one of the core concepts of jQuery is
-to <a href="http://api.jquery.com/category/selectors/">select elements</a> and
+to <a href="http://api.jquery.com/category/selectors/" 
+rel="noopener noreferrer" target="_blank">select elements</a> and
 perform an action. jQuery has done a great job of making the task of
 selecting an element, or elements, extremely easy by mimicking that of
 CSS. On top of the general CSS selectors, jQuery has support for all of
@@ -6034,7 +6038,8 @@ the current handler.
 <h4>jQuery Selection Filters</h4>
 
 Should CSS selectors not be enough there are also
-custom <a href="http://api.jquery.com/category/selectors/jquery-selector-extensions/">
+custom <a href="http://api.jquery.com/category/selectors/jquery-selector-extensions/" 
+rel="noopener noreferrer" target="_blank">
 filters</a> built into jQuery to help out. These filters are an extension to CSS3 and
 provide more control over selecting an element or its relatives.
 
@@ -6085,7 +6090,8 @@ elements of div elements without a class of type or collection.
 <h4>Traversing Methods</h4>
 
 jQuery has quite a 
-few <a href="http://api.jquery.com/category/traversing/">traversing</a> methods
+few <a href="http://api.jquery.com/category/traversing/" 
+rel="noopener noreferrer" target="_blank">traversing</a> methods
 available to use. In general, they all fall into three categories,
 filtering, miscellaneous traversing, and DOM tree traversing. The
 specific methods within each category may be seen below.
@@ -7610,22 +7616,30 @@ using [animations](https://css-tricks.com/almanac/properties/b/backface-visibil
 <h3>Resources & Links</h3>
 
 <ul>
-  <li><a href="http://www.css3files.com/transform/">
- Transform Property</a> via CSS3 Files</li>
-  <li><a href="http://dev.opera.com/articles/view/understanding-the-css-transforms-matrix/">
- Understanding the CSS Transforms Matrix</a> via Dev.Opera</li>
-  <li><a href="http://24ways.org/2010/intro-to-css-3d-transforms">
- An Introduction to CSS 3-D Transforms</a> via 24 Ways</li>
-  <li><a href="https://developer.mozilla.org/en/CSS/transform-function">
- Transform Function</a> via Mozilla Developer Network</li>
-  <li><a href="http://www.webkit.org/blog-files/3d-transforms/transform-style.html">
- Transform Style</a> via WebKit</li>
-  <li><a href="https://css-tricks.com/almanac/properties/b/backface-visibility/">
- Backface Visibility</a> via CSS-Tricks</li>
+  <li><a href="http://www.css3files.com/transform/"
+    rel="noopener noreferrer" target="_blank">
+    Transform Property</a> via CSS3 Files</li>
+  <li><a href="http://dev.opera.com/articles/view/understanding-the-css-transforms-matrix/"
+    rel="noopener noreferrer" target="_blank">
+	Understanding the CSS Transforms Matrix</a> via Dev.Opera</li>
+  <li><a href="http://24ways.org/2010/intro-to-css-3d-transforms"
+    rel="noopener noreferrer" target="_blank">
+	An Introduction to CSS 3-D Transforms</a> via 24 Ways</li>
+  <li><a href="https://developer.mozilla.org/en/CSS/transform-function"
+    rel="noopener noreferrer" target="_blank">
+	Transform Function</a> via Mozilla Developer Network</li>
+  <li><a href="http://www.webkit.org/blog-files/3d-transforms/transform-style.html"
+    rel="noopener noreferrer" target="_blank">
+	Transform Style</a> via WebKit</li>
+  <li><a href="https://css-tricks.com/almanac/properties/b/backface-visibility/"
+    rel="noopener noreferrer" target="_blank">
+	Backface Visibility</a> via CSS-Tricks</li>
 </ul>
 
-<b>Lesson 6</b> <a href="https://learn.shayhowe.com/advanced-html-css/jquery/">jQuery</a>
-<b>Lesson 8</b> <a href="https://learn.shayhowe.com/advanced-html-css/transitions-animations/">Transitions &amp; Animations</a>
+<b>Lesson 6</b> <a href="https://learn.shayhowe.com/advanced-html-css/jquery/" 
+rel="noopener noreferrer" target="_blank">jQuery</a>
+<b>Lesson 8</b> <a href="https://learn.shayhowe.com/advanced-html-css/transitions-animations/" 
+rel="noopener noreferrer" target="_blank">Transitions &amp; Animations</a>
 
 
 <h2 align="center">Lesson 8: Transitions &amp; Animations</h2>
@@ -8467,23 +8481,29 @@ the animation.
 <h4>HTML</h4>
 
 <ul>
-  <li><a href="https://learn.shayhowe.com/advanced-html-css/feature-support-polyfills/#html5-shiv">
-    HTML5 Shiv</a></li>
-  <li><a href="https://learn.shayhowe.com/advanced-html-css/feature-support-polyfills/#cross-browser-testing">
-    Cross Browser  Testing</a></li>
+  <li><a href="https://learn.shayhowe.com/advanced-html-css/feature-support-polyfills/#html5-shiv"
+    rel="noopener noreferrer" target="_blank">
+    HTML5 Shiv</a>.</li>
+  <li><a href="https://learn.shayhowe.com/advanced-html-css/feature-support-polyfills/#cross-browser-testing"
+    rel="noopener noreferrer" target="_blank">
+    Cross Browser Testing</a>.</li>
 </ul>
 
 <h4>CSS</h4>
 
 <ul>
-  <li><a href="https://learn.shayhowe.com/advanced-html-css/feature-support-polyfills/#detecting-browser-features">
-    Detecting Browser Features</a></li>
+  <li><a href="https://learn.shayhowe.com/advanced-html-css/feature-support-polyfills/#detecting-browser-features"
+    rel="noopener noreferrer" target="_blank">
+    Detecting Browser Features</a>.</li>
 </ul>
 
 <b>JAVASCRIPT</b>
 
--[Conditionally Loading
- Files](https://learn.shayhowe.com/advanced-html-css/feature-support-polyfills/#conditionally-loading-files)
+<ul>
+  <li><a href="https://learn.shayhowe.com/advanced-html-css/feature-support-polyfills/#conditionally-loading-files"
+    rel="noopener noreferrer" target="_blank">
+	Conditionally Loading Files]</a></li>
+</ul>
 
 Building a website can be both extremely rewarding and frustrating.
 Common frustrations arise from trying to get a website to look and
@@ -8510,17 +8530,20 @@ supported by a specific browser.
 
 Perhaps the most popular shiv, and one you may have likely used already,
 is the HTML5 Shiv. The HTML5 Shiv was 
-<a href="http://paulirish.com/2011/the-history-of-the-html5-shiv/">
+<a href="http://paulirish.com/2011/the-history-of-the-html5-shiv/" 
+rel="noopener noreferrer" target="_blank">
 created by Remy Sharp</a> to provide the ability to use HTML5 elements within 
 versions of Internet Explorer 8 and below. The HTML5 Shiv not only creates 
 support for HTML5 elements but also allows them to be properly styled with CSS.
 
-The <a href="https://code.google.com/p/html5shiv/">shiv</a> should be
+The <a href="https://code.google.com/p/html5shiv/" 
+rel="noopener noreferrer" target="_blank">shiv</a> should be
 downloaded from Google, where Remy maintains the latest version, then
 hosted on your server. For the best performance, reference the shiv
 JavaScript file within the head of the document, after any stylesheet
 references. Additionally, you want to reference the shiv inside of
-a <a href="https://css-tricks.com/how-to-create-an-ie-only-stylesheet/">
+a <a href="https://css-tricks.com/how-to-create-an-ie-only-stylesheet/" 
+rel="noopener noreferrer" target="_blank">
 conditional comment</a>, making sure that the file is only loaded within 
 versions of Internet Explorer 8 and below.
 
@@ -8590,7 +8613,8 @@ support for specific HTML5 and CSS3 features, regardless of which
 browser is being used.
 
 Feature detection, as provided
-by <a href="http://modernizr.com/">Modernizr</a>, provides a way to
+by <a href="http://modernizr.com/" 
+rel="noopener noreferrer" target="_blank">Modernizr</a>, provides a way to
 write conditional CSS and JavaScript based on whether or not a browser
 supports a specific feature. For example, if a browser supports rounded
 corners Modernizr will add the class of borderradius to
@@ -8600,7 +8624,8 @@ Modernizr will add the class of no-borderradius to the html element.
 <h4>Loading Modernizr</h4>
 
 To get feature detection with Modernizr up and running, visit
-their <a href="http://modernizr.com/download/">download</a> page and
+their <a href="http://modernizr.com/download/" 
+rel="noopener noreferrer" target="_blank">download</a> page and
 customize what features you are looking to detect. Once downloaded,
 upload the JavaScript file on your server and reference it within
 the head of your HTML document, below any referenced style sheets.
@@ -8619,7 +8644,8 @@ Modernizr.
 Once Modernizr is up and running CSS styles may be conditionally applied
 based on the features a given browser supports. Modernizr has detection
 for the majority of the CSS3 properties and values, all of which can be
-found in the Modernizr <a href="https://modernizr.com/docs">documentation</a>.
+found in the Modernizr <a href="https://modernizr.com/docs" 
+rel="noopener noreferrer" target="_blank">documentation</a>.
 
 One item to weigh out is if feature detection is necessary for certain
 styles. For example, using an RGBa color value may easily be supported
@@ -8685,7 +8711,8 @@ necessary.
 When working with CSS3 feature detection it is hard to know what the
 styles look like in browsers that do not support specific CSS3 features.
 Fortunately, there is a bookmarklet
-called <a href="https://github.com/davatron5000/deCSS3">deCSS3</a> which
+called <a href="https://github.com/davatron5000/deCSS3" 
+rel="noopener noreferrer" target="_blank">deCSS3</a> which
 disables any CSS3 features. Doing so allows you to see what a website
 would look like without CSS3, and if your conditional styles are
 working.
@@ -8693,7 +8720,8 @@ working.
 <h4>Conditionally Loading Files</h4>
 
 On top of conditionally loading styles, Modernizr also provides a way to
-use <a href="https://modernizr.com/docs#using-modernizr-with-javascript">
+use <a href="https://modernizr.com/docs#using-modernizr-with-javascript" 
+rel="noopener noreferrer" target="_blank">
 feature detection in JavaScript</a>. With this, JavaScript polyfills and 
 conditional files may be loaded based on the detection of a given feature 
 with the help of jQuery and the jQuery getScript method.
@@ -8702,7 +8730,8 @@ Using Modernizr to set the condition of an if statement in Javascript
 allows different scripts to be executed based on whether or not the
 given condition is true or false. Below Modernizr is checking for local
 storage support. If local storage is supported 
-<a href="https://davidwalsh.name/loading-scripts-jquery">jQuery is used to load</a>
+<a href="https://davidwalsh.name/loading-scripts-jquery" 
+rel="noopener noreferrer" target="_blank">jQuery is used to load</a>
 the storage.js file using the getScript method, and if local storage is not supported jQuery
 is used the storage-polyfill.js file using the getScript method.
 
@@ -8777,11 +8806,13 @@ swapped for 'large' based off of the executed JavaScript.
 
 Currently there are polyfills for nearly all of the different HTML5 and
 CSS3 features. The team over at Modernizr has put together quite an
-exhaustive <a href="https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-browser-Polyfills">
+exhaustive <a href="https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-browser-Polyfills" 
+rel="noopener noreferrer" target="_blank">
 list of polyfills</a>. These polyfills can be dropped in as needed.
 
 The same people behind Modernizr have also put together
-a <a href="http://html5please.com/">list</a> of all of the new HTML5
+a <a href="http://html5please.com/" 
+rel="noopener noreferrer" target="_blank">list</a> of all of the new HTML5
 and CSS3 features, including instructions on how to use them
 responsibly. Understand, not all of these features need polyfills. Quite
 a few of them can be used outright or with the use of a fallback.
@@ -8795,7 +8826,8 @@ Safari, all perform pretty well. The largest pitfalls live within
 Internet Explorer, and testing different versions of Internet Explorer
 can be difficult.
 
-There are a <a href="http://www.smashingmagazine.com/2011/08/07/a-dozen-cross-browser-testing-tools/">
+There are a <a href="http://www.smashingmagazine.com/2011/08/07/a-dozen-cross-browser-testing-tools/" 
+rel="noopener noreferrer" target="_blank">
 handful</a> of services out there that do help with cross browser testing, some are
 interactive while others are not. Being able to interact with a browser,
 rather than seeing a rendered screenshot, is far more helpful for
@@ -8872,15 +8904,20 @@ bookmarklet open for debugging.</h6>
 <h5>HTML</h5>
 
 <ul>
-  <li><a href="https://learn.shayhowe.com/advanced-html-css/semantics-accessibility/#semantic-motivation">
+  <li><a href="https://learn.shayhowe.com/advanced-html-css/semantics-accessibility/#semantic-motivation"
+    rel="noopener noreferrer" target="_blank">
     Semantic Motivation</a></li>
-  <li><a href="https://learn.shayhowe.com/advanced-html-css/semantics-accessibility/#structural-semantics">
+  <li><a href="https://learn.shayhowe.com/advanced-html-css/semantics-accessibility/#structural-semantics"
+    rel="noopener noreferrer" target="_blank">
     Structural Semantics</a></li>
-  <li><a href="https://learn.shayhowe.com/advanced-html-css/semantics-accessibility/#text-level-semantics">
+  <li><a href="https://learn.shayhowe.com/advanced-html-css/semantics-accessibility/#text-level-semantics"
+    rel="noopener noreferrer" target="_blank">
     Text Level Semantics</a></li>
-  <li><a href="https://learn.shayhowe.com/advanced-html-css/semantics-accessibility/#microdata">
+  <li><a href="https://learn.shayhowe.com/advanced-html-css/semantics-accessibility/#microdata" 
+    rel="noopener noreferrer" target="_blank">
     Microdata</a></li>
-  <li><a href="https://learn.shayhowe.com/advanced-html-css/semantics-accessibility/#wai-aria">
+  <li><a href="https://learn.shayhowe.com/advanced-html-css/semantics-accessibility/#wai-aria"
+    rel="noopener noreferrer" target="_blank">
     WAI-ARIA</a></li>
 </ul>
 
@@ -8920,7 +8957,8 @@ retain integrity and continue to write the best code possible, for
 semantics provide a larger meaning in writing code.
 
 The fact of the matter is, 
-<a href="http://www.vanseodesign.com/web-design/semantic-html/">semantics largely 
+<a href="http://www.vanseodesign.com/web-design/semantic-html/" 
+rel="noopener noreferrer" target="_blank">semantics largely 
 benefit everyone</a>. For starters, semantics provide a shared and unambiguous 
 meaning to content. Semantics give content solid structure and value, while also
 favoring accessibility, providing better user interfaces and more defined 
@@ -8943,7 +8981,8 @@ recap, semantics provide:
 <h4>Structural Semantics</h4>
 
 Within the beginner's guide we discuss the use of 
-<a href="https://learn.shayhowe.com/html-css/getting-to-know-html/">
+<a href="https://learn.shayhowe.com/html-css/getting-to-know-html/" 
+rel="noopener noreferrer" target="_blank">
 structural semantics</a>, specifically using the header, nav, article, section, 
 aside, and footer elements. These elements are used to provide additional
 background context to the content within them, communicating their core
@@ -8984,13 +9023,15 @@ semantics.
 
 The majority of content on the web lives within text, and we primarily
 browse the Internet looking for this content. Using the
-proper <a href="https://developers.whatwg.org/text-level-semantics.html">
+proper <a href="https://developers.whatwg.org/text-level-semantics.html" 
+rel="noopener noreferrer" target="_blank">
 semantic markup</a> for text makes it easier for users to find what they need.
 
 <h4>Bolding Text</h4>
 
 There are a few different ways to make text bold, including multiple
-elements and the <a href="https://learn.shayhowe.com/html-css/working-with-typography/">
+elements and the <a href="https://learn.shayhowe.com/html-css/working-with-typography/" 
+rel="noopener noreferrer" target="_blank">
 font weight</a> CSS property. The two main elements used in this case include strong 
 and b. While these two elements have the same presentation they have completely
 different semantic meanings.
@@ -9015,7 +9056,8 @@ identify significantly important text.
 <h4>Italicizing Text</h4>
 
 Italicizing text falls in line with that of bolding text, where we can
-use multiple elements or the <a href="https://learn.shayhowe.com/html-css/working-with-typography/">
+use multiple elements or the <a href="https://learn.shayhowe.com/html-css/working-with-typography/" 
+rel="noopener noreferrer" target="_blank">
 font style</a> CSS property to achieve a desired presentation. When italicizing text, the
 two elements most commonly used are em and i. Again, these share the
 same presentation, yet have completely different semantic meanings.
@@ -9041,7 +9083,8 @@ importance.
 
 Recently there has been a small movement of front end programmers using
 the i element for including icons on a page, specifically as seen
-within <a href="https://getbootstrap.com/">Bootstrap</a>.
+within <a href="https://getbootstrap.com/" 
+rel="noopener noreferrer" target="_blank">Bootstrap</a>.
 The i element is used as a hook, to which a class then determines which
 icon background image to apply to the element. Depending on how closely
 you wish to follow semantics this may or may not be an acceptable
@@ -9052,7 +9095,8 @@ practices.
 Continuing the pattern of having multiple elements with the same
 presentation, underlining text is no different. There are a couple of
 different elements we can use as well as the 
-<a href="https://learn.shayhowe.com/html-css/working-with-typography/">
+<a href="https://learn.shayhowe.com/html-css/working-with-typography/" 
+rel="noopener noreferrer" target="_blank">
 text decoration</a> CSS property. In this case, the two primary elements 
 used to underline text are ins and u.
 
@@ -9096,7 +9140,8 @@ Use underlines with caution.
 
 Striking text follows the same pattern as before where different
 elements may be used, as may the 
-<a href="https://learn.shayhowe.com/html-css/working-with-typography/">
+<a href="https://learn.shayhowe.com/html-css/working-with-typography/" 
+rel="noopener noreferrer" target="_blank">
 text decoration</a> CSS property. The two properties most commonly used 
 include del and s.
 
@@ -9334,7 +9379,8 @@ copyright information or legal print.
 
 <h4>Citations & Quotes</h4>
 
-The beginner's guide discusses <a href="https://learn.shayhowe.com/html-css/working-with-typography/">
+The beginner's guide discusses <a href="https://learn.shayhowe.com/html-css/working-with-typography/" 
+rel="noopener noreferrer" target="_blank">
 citations and quotes</a>, and when to use the cite, q, and blockquote elements accordingly. As a
 quick reminder, the cite element refers to a title of work, the q element identifies dialog or 
 prose, and the blockquote element is used to code longer formed quotes, commonly from external 
@@ -9343,7 +9389,8 @@ sources.
 <h4>Hyperlink Attributes</h4>
 
 The beginner's guide also
-outlines <a href="https://learn.shayhowe.com/html-css/getting-to-know-html/">
+outlines <a href="https://learn.shayhowe.com/html-css/getting-to-know-html/" 
+rel="noopener noreferrer" target="_blank">
 hyperlinks</a>, and some of their different behaviors. What is not covered, 
 however, is some of the semantic benefits to hyperlinks, specifically with 
 the use of the download and rel attributes.
@@ -9386,8 +9433,8 @@ the rel attribute value of copyright should be used.
  3 
 ```
 
-A few <a href="http://microformats.org/wiki/existing-rel-values">
-popular</a> rel attribute values include:
+<p>A few <a href="http://microformats.org/wiki/existing-rel-values" 
+rel="noopener noreferrer" target="_blank">popular</a> rel attribute values include:</p>
 
 <ul>
   <li>alternate</li>
@@ -9406,7 +9453,8 @@ popular</a> rel attribute values include:
 
 <h4>Microdata</h4>
 
-<a href="http://www.w3.org/TR/microdata/">Microdata</a> is HTML
+<a href="http://www.w3.org/TR/microdata/" 
+rel="noopener noreferrer" target="_blank">Microdata</a> is HTML
 extended with nested groups of name-value pairs that allow machines,
 including browsers and search engines, to pick up additional semantics
 and information for rich content. Adding microdata to your website is
@@ -9414,7 +9462,8 @@ accomplished by using predetermined attributes and values. These
 attributes and values will then be interpreted, and extended, as
 intended. Currently, the more popular uses of microdata reside within
 coding contact information and calendar events, however there are 
-<a href="http://schema.org/docs/schemas.html">encoding models</a> for products,
+<a href="http://schema.org/docs/schemas.html" 
+rel="noopener noreferrer" target="_blank">encoding models</a> for products,
 reviews, and more.
 
 One example of microdata at work is within Google, where microdata is
@@ -9438,14 +9487,18 @@ information, hours, pricing, ratings, and more.</h6>
 <h4>Microdata vs. Microformats vs. RDFa</h4>
 
 There are actually a handful of rich, structured data standards,
-including <a href="http://www.w3.org/TR/microdata/">microdata</a>,
-<a href="http://microformats.org/wiki/Main_Page">microformats</a>, and 
-<a href="http://www.w3.org/TR/xhtml-rdfa-primer/">RDFa</a>. All
+including <a href="http://www.w3.org/TR/microdata/" 
+rel="noopener noreferrer" target="_blank">microdata</a>,
+<a href="http://microformats.org/wiki/Main_Page" 
+rel="noopener noreferrer" target="_blank">microformats</a>, and 
+<a href="http://www.w3.org/TR/xhtml-rdfa-primer/" 
+rel="noopener noreferrer" target="_blank">RDFa</a>. All
 of these have their pros and cons, and all of which are still viable to
 practice.
 
 Microdata is the recommended format from 
-<a href="https://support.google.com/webmasters/bin/answer.py?hl=en&answer=99170">
+<a href="https://support.google.com/webmasters/bin/answer.py?hl=en&answer=99170" 
+rel="noopener noreferrer" target="_blank">
 Google</a>, and other search engines, as well as part of the HTML5 specification. It
 uses findings from both microformats and RDFa to base it's design
 around, thus looking to be a solid choice, and the one covered here. It
@@ -9466,7 +9519,8 @@ microdata information pertaining to this item should reside.
 Once you have determined the scope, use the itemtype attribute to
 identify what microdata vocabulary should be used. Generally speaking,
 some of the more popular microdata item types have been outlined
-at <a href="http://schema.org/docs/schemas.html">Schema.org</a>.
+at <a href="http://schema.org/docs/schemas.html" 
+rel="noopener noreferrer" target="_blank">Schema.org</a>.
 There are, however, other websites which outline additional, and
 different, item types. You may also write your own item types should you
 find the need.
@@ -9507,7 +9561,8 @@ elements and what attribute is used for their property value.
 <h4>Person Microdata</h4>
 
 When referring to a person
-the <a href="http://schema.org/Person">person</a> microdata library
+the <a href="http://schema.org/Person" 
+rel="noopener noreferrer" target="_blank">person</a> microdata library
 should be used. Below is an example of what a person microdata item
 might look like. Please notice, the person item type is used, as is the
 postal address item type within it. Also, please notice the different
@@ -9540,13 +9595,15 @@ item properties and their corresponding values.
 
 Please keep in mind, this code is for an individual person. Should you
 wish to refer to an organization, a more specific 
-<a href="http://schema.org/Organization">organization</a> microdata
+<a href="http://schema.org/Organization" 
+rel="noopener noreferrer" target="_blank">organization</a> microdata
 library should be followed.
 
 <h4>Event Microdata</h4>
 
 The event microdata is very similar to that of the person microdata,
-however it uses the <a href="http://schema.org/Event">event</a> microdata library
+however it uses the <a href="http://schema.org/Event" 
+rel="noopener noreferrer" target="_blank">event</a> microdata library
 instead. Common property similarities between the two can be identified,
 as can some of the nested item types.
 
@@ -9579,13 +9636,15 @@ as can some of the nested item types.
 
 Microdata provides a lot of ways to further extend the content of a
 page. We have only touched the surface here. Further information on
-microdata may be found at <a href="http://diveintohtml5.info/extensibility.html">
-Dive Into HTML5 Microdata</a> and <a href="https://developers.whatwg.org/links.html#microdata">
-WHATWG Microdata</a>.
+microdata may be found at <a href="http://diveintohtml5.info/extensibility.html" 
+rel="noopener noreferrer" target="_blank">
+Dive Into HTML5 Microdata</a> and <a href="https://developers.whatwg.org/links.html#microdata" 
+rel="noopener noreferrer" target="_blank">WHATWG Microdata</a>.
 
 <h4>WAI-ARIA</h4>
 
-<a href="http://www.w3.org/WAI/intro/aria">WAI-ARIA</a>, also know as
+<a href="http://www.w3.org/WAI/intro/aria" 
+rel="noopener noreferrer" target="_blank">WAI-ARIA</a>, also know as
 Web Accessibility Initiative --- Accessible Rich Internet Applications,
 is a specification that helps make web pages and applications more
 accessible to those with disabilities. Specifically, WAI-ARIA helps
@@ -9595,7 +9654,8 @@ technologies.
 
 <h4>Roles</h4>
 
-Setting <a href="https://www.w3.org/TR/wai-aria/#roles">WAI-ARIA roles</a> is
+Setting <a href="https://www.w3.org/TR/wai-aria/#roles" 
+rel="noopener noreferrer" target="_blank">WAI-ARIA roles</a> is
 accomplished using the role attribute. These roles then specify what
 certain elements and blocks of content do on a page.
 
@@ -9687,7 +9747,8 @@ the following code snippet.
 <h3>States & Properties</h3>
 
 In combination with WAI-ARIA roles there are also 
-<a href="https://www.w3.org/TR/wai-aria/#states_and_properties" rel="noopener noreferrer" target="_blank">
+<a href="https://www.w3.org/TR/wai-aria/#states_and_properties" 
+rel="noopener noreferrer" target="_blank">
 states and properties</a> which help inform assistive technologies how content 
 is configured. Like roles, the states and properties are broken into four 
 categories, including <b>widget attributes</b>, <b>live region attributes</b>, 
