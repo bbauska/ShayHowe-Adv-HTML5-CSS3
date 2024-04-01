@@ -2,7 +2,7 @@
 ---
 title: "Shay & Howe's Advanced HTML and CSS"
 author: "Brian Bauska (bbauska)"
-date last editted: "3/30/2024 10+pm"
+date last editted: "3/31/2024 6+pm"
 output:
   markdown:
   with some style
@@ -1543,11 +1543,10 @@ taking a look at how to select different types of elements and elements
 in different states of use.</p>
 
 <p>CSS3 brought new selectors, opening a whole new world of opportunities
-and improvements to existing practices. Here we'll
-discuss 
+and improvements to existing practices. Here we'll discuss 
 <a href="http://net.tutsplus.com/tutorials/html-css-techniques/the-30-css-selectors-you-must-memorize/" 
-rel="noopener noreferrer" target="_blank">
-selectors</a>, old and new, and how to best put them to use.</p>
+rel="noopener noreferrer" target="_blank">selectors</a>, old and new, and how to 
+best put them to use.</p>
 
 <h4>Common Selectors</h4>
 
@@ -1686,11 +1685,11 @@ article, thus selected.</p>
 
 <h4>Sibling Selectors</h4>
 
-<p>Knowing how to <a href="https://css-tricks.com/child-and-sibling-selectors/">
-select children</a> of an element is largely beneficial, and quite commonly seen. However
-sibling elements, those elements that share a common parent, may also
-need to be selected. These sibling selections can be made by way of the
-general sibling and adjacent sibling selectors.</p>
+<p>Knowing how to <a href="https://css-tricks.com/child-and-sibling-selectors/" 
+rel="noopener noreferrer" target="_blank">select children</a> of an element is 
+largely beneficial, and quite commonly seen. However sibling elements, those 
+elements that share a common parent, may also need to be selected. These sibling 
+selections can be made by way of the general sibling and adjacent sibling selectors.</p>
 
 <h4>General Sibling Selector</h4>
 
@@ -1882,10 +1881,11 @@ selected.</p>
 attribute selectors, in which an element is selected based upon its
 class or ID value. These class and ID attribute selectors are widely
 used and extremely powerful but only the beginning. Other 
-<a href="http://www.css3.info/preview/attribute-selectors/">attribute
-selectors</a> have emerged over the years, specifically taking a large 
-leap forward with CSS3. Now elements can be selected based on whether an 
-attribute is present and what its value may contain.</p>
+<a href="http://www.css3.info/preview/attribute-selectors/" 
+rel="noopener noreferrer" target="_blank">attribute selectors</a> have emerged 
+over the years, specifically taking a large leap forward with CSS3. Now elements 
+can be selected based on whether an attribute is present and what its value may 
+contain.</p>
 
 <h4>Attribute Present Selector</h4>
 
@@ -2126,7 +2126,8 @@ stated value.</p>
 
 <h4>Pseudo-classes</h4>
 
-<p><a href="http://coding.smashingmagazine.com/2011/03/30/how-to-use-css3-pseudo-classes/">
+<p><a href="http://coding.smashingmagazine.com/2011/03/30/how-to-use-css3-pseudo-classes/" 
+rel="noopener noreferrer" target="_blank">
 Pseudo-classes</a> are similar to regular classes in HTML however they are not 
 directly stated within the markup, instead they are dynamically populated as a 
 result of users' actions or the document structure. The most common pseudo-class,
@@ -2330,7 +2331,8 @@ and increases by one for each list item, until finally locating and
 selecting the fourth item. When using a number outright it must be a
 positive number.</p>
 
-<p><a href="http://reference.sitepoint.com/css/understandingnthchildexpressions">
+<p><a href="http://reference.sitepoint.com/css/understandingnthchildexpressions" 
+rel="noopener noreferrer" target="_blank">
 Expressions for pseudo-classes</a> fall in the format of *a*n, *a*n+*b*, *a*n-*b*, 
 n+*b*, *-*n+*b*, and *-a*n+*b*. The same expression may be translated and read
 as (a×n)±b. The a variable stands for the multiplier in which elements
@@ -2605,7 +2607,8 @@ of hello. When this identifier matches the ID attribute value of an
 element on the page, &lt;section id="hello"&gt; for example, that element
 may be identified and stylized using the :target pseudo-class. Fragment
 identifiers are most commonly seen when using 
-<a href="https://learn.shayhowe.com/html-css/getting-to-know-html/#hyperlinks">
+<a href="https://learn.shayhowe.com/html-css/getting-to-know-html/#hyperlinks" 
+rel="noopener noreferrer" target="_blank">
 on page links</a>, or linking to another part of the same page.</p>
 
 <p>Looking at the code below, if a user would visit a page with the URI
@@ -3040,15 +3043,18 @@ selectors you are wishing to use across your visitor's most common
 browsers, and then make the judgment call as to whether they are
 appropriate or not.</p>
 
-<p>CSS3.info provides a <a href="https://www.css3.info/selectors-test/">
+<p>CSS3.info provides a <a href="https://www.css3.info/selectors-test/" 
+rel="noopener noreferrer" target="_blank">
 CSS3 Selectors Test</a> tool which will inform you as to which selectors 
 are supported by the browser in use. It's also never a bad idea to check 
 browser support directly from the vendor.</p>
 
-<p>Additionally, <a href="http://selectivizr.com/">Selectivizr</a>, a
+<p>Additionally, <a href="http://selectivizr.com/" 
+rel="noopener noreferrer" target="_blank">Selectivizr</a>, a
 JavaScript utility, provides great support for these selectors in
 Internet Explorer 6-8. More support, should it be necessary, can also be
-provided by <a href="http://api.jquery.com/category/selectors/">jQuery selectors</a>.</p>
+provided by <a href="http://api.jquery.com/category/selectors/" 
+rel="noopener noreferrer" target="_blank">jQuery selectors</a>.</p>
 
 <h4>Selector Speed & Performance</h4>
 
@@ -3081,10 +3087,10 @@ think about revisiting it, and seeing if a better solution can be found.</p>
 </ul>
 
  
-<a href=""><b>Lesson 2</b><a href="https://learn.shayhowe.com/advanced-html-css/detailed-css-positioning/"
+<b>Lesson 2</b><a href="https://learn.shayhowe.com/advanced-html-css/detailed-css-positioning/"
   rel="noopener noreferrer" target="_blank">
   Detailed Positioning</a>
-<a href=""><b>Lesson 4</b><a href="https://learn.shayhowe.com/advanced-html-css/responsive-web-design/"
+<b>Lesson 4</b><a href="https://learn.shayhowe.com/advanced-html-css/responsive-web-design/"
   rel="noopener noreferrer" target="_blank">
   Responsive Web Design</a>
 
@@ -3208,11 +3214,12 @@ or padding.</p>
 
 <h4>Relative Viewport Lengths</h4>
 
-<p>CSS3 <a href="http://dev.w3.org/csswg/css3-values/#viewport-relative-lengths">
-introduced</a> some new relative length units, specifically related to the viewport 
-size of the browser or device. These new units include vw, vh, vmin, and vmax.
-Overall support for these new units isn't great, but it is growing. In time they 
-look to play a large roll in building responsive websites.</p>
+<p>CSS3 <a href="http://dev.w3.org/csswg/css3-values/#viewport-relative-lengths" 
+rel="noopener noreferrer" target="_blank">introduced</a> some new relative length 
+units, specifically related to the viewport size of the browser or device. These 
+new units include vw, vh, vmin, and vmax. Overall support for these new units isn't 
+great, but it is growing. In time they look to play a large roll in building 
+responsive websites.</p>
 
 <ul>
   <li>vw<br>
@@ -3334,9 +3341,9 @@ this event, media queries can be used to help build a better experience.</p>
 targeting and including styles. Media queries provide the ability to specify 
 different styles for individual browser and device circumstances, the width 
 of the viewport or device orientation for example. Being able to apply uniquely 
-<a href="https://css-tricks.com/css-media-queries/">
-targeted styles</a> opens up a world of opportunity and leverage to responsive 
-web design.</p>
+<a href="https://css-tricks.com/css-media-queries/" 
+rel="noopener noreferrer" target="_blank">targeted styles</a> opens up a world 
+of opportunity and leverage to responsive web design.</p>
 
 <h4>Initializing Media Queries</h4>
 
@@ -3531,14 +3538,16 @@ common but equally as helpful when needed.</p>
 below, as well as other legacy browsers. There are, however, a couple
 suitable polyfills written in Javascript.</p>
 
-<p><a href="https://github.com/scottjehl/Respond/">Respond.js</a> is a lightweight 
+<p><a href="https://github.com/scottjehl/Respond/" 
+rel="noopener noreferrer" target="_blank">Respond.js</a> is a lightweight 
 polyfill that only looks for min/max-width media types, which is perfect should 
 those be the only media query types used. 
-<a href="https://code.google.com/p/css3-mediaqueries-js/">
-CSS3-MediaQueries.js</a> is a more developed, and heavier, polyfill offering 
-support for a larger array of more complex media queries. Additionally, keep 
-in mind any polyfill can have performance concerns, and potentially slow down
-websites. Make sure that any given polyfill is worth the performance trade off.</p>
+<a href="https://code.google.com/p/css3-mediaqueries-js/" 
+rel="noopener noreferrer" target="_blank">CSS3-MediaQueries.js</a> is a more 
+developed, and heavier, polyfill offering support for a larger array of more 
+complex media queries. Additionally, keep in mind any polyfill can have 
+performance concerns, and potentially slow down websites. Make sure that any 
+given polyfill is worth the performance trade off.</p>
 
 <h4>Media Queries Demo</h4>
 
@@ -3693,9 +3702,9 @@ larger viewports and done so without overwriting any initial styles.</p>
 <p>Mobile devices generally do a pretty decent job of displaying websites
 these days. Sometimes they could use a little assistance though,
 particularly around identifying
-the <a href="http://dev.opera.com/articles/view/an-introduction-to-meta-viewport-and-viewport/">
-viewport</a> size, scale, and resolution of a website. To remedy this, Apple invented
-the viewport meta tag.</p>
+the <a href="http://dev.opera.com/articles/view/an-introduction-to-meta-viewport-and-viewport/" 
+rel="noopener noreferrer" target="_blank">viewport</a> size, scale, and resolution 
+of a website. To remedy this, Apple invented the viewport meta tag.</p>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~ 10. website without viewport meta tag (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -4004,8 +4013,10 @@ challenge.</p>
 <p>A preprocessor is a program that takes one type of data and converts it
 to another type of data. In the case of HTML and CSS, some of the more
 popular preprocessor languages
-include <a href="http://haml.info/">Haml</a> and <a href="http://sass-lang.com/">Sass</a>.
-include <a href="http://haml.info/">Haml</a> and <a href="http://sass-lang.com/">Sass</a>.
+include <a href="http://haml.info/" 
+rel="noopener noreferrer" target="_blank">Haml</a> and <a href="http://sass-lang.com/" 
+rel="noopener noreferrer" target="_blank">Sass</a>.<br>
+
 Haml is processed into HTML and Sass is processed into CSS.</p>
 
 <p>Upon setting out to solve some of the more common problems, Haml and
@@ -4063,8 +4074,8 @@ for changes without the use of another dependency.</p>
 <p>Inside of a Rails application a Haml dependency may be added in the
 Gemfile, thus automatically compiling Haml files to HTML upon any
 changes. There are a few desktop applications available for those not
-using Rails, one of the more popular being <a href="https://codekitapp.com/">
-CodeKit</a>.</p>
+using Rails, one of the more popular being <a href="https://codekitapp.com/" 
+rel="noopener noreferrer" target="_blank">CodeKit</a>.</p>
 
 <p>On top of Haml CodeKit also supports other preprocessors, which may also
 come in handy.</p>
@@ -4098,7 +4109,8 @@ passed in after the exclamation points, !!! 5.</p>
 <h4>Declaring Elements</h4>
 
 <p>One of the defining features of Haml is its syntax, and how to 
-<a href="https://coderwall.com/p/aivizg/introduction-to-haml--2">declare and nest</a> elements.
+<a href="https://coderwall.com/p/aivizg/introduction-to-haml--2" 
+rel="noopener noreferrer" target="_blank">declare and nest</a> elements.
 HTML elements generally have opening and closing tags, however within
 Haml elements only have one tag, the opening. Elements are initialized
 with a percent sign, %, and then indented to identify nesting.
@@ -4520,16 +4532,18 @@ resembling Haml a bit in that they make writing code easier, and provide
 quite a bit of leverage in doing so. Individually SCSS and Sass come
 from the same origin however they are technical different syntaxes.</p>
 
-<p>Sass, <a href="https://sass-lang.com/documentation/">
-Syntactically Awesome Stylesheets</a>, came first and is a strict indented syntax. 
-SCSS, Sassy CSS, followed shortly after providing the same firing power of Sass 
-but with a more flexible syntax, including the ability to write plain CSS.</p>
+<p>Sass, <a href="https://sass-lang.com/documentation/" 
+rel="noopener noreferrer" target="_blank">Syntactically Awesome Stylesheets</a>, 
+came first and is a strict indented syntax. SCSS, Sassy CSS, followed shortly 
+after providing the same firing power of Sass but with a more flexible syntax, 
+including the ability to write plain CSS.</p>
 
 <h4>Installation</h4>
 
-<p>As with Haml, SCSS and Sass are <a href="http://sassmeister.com/">
-compiled</a> using Ruby therefore Ruby needs to be installed to produce CSS files. 
-Please follow the directions from before to install, or ensure Ruby is installed.</p>
+<p>As with Haml, SCSS and Sass are <a href="http://sassmeister.com/" 
+rel="noopener noreferrer" target="_blank">compiled</a> using Ruby therefore Ruby 
+needs to be installed to produce CSS files. Please follow the directions from 
+before to install, or ensure Ruby is installed.</p>
 
 <p>Once Ruby is installed the gem install sass command needs to be run from
 the command line to install SCSS and Sass.</p>
@@ -5001,8 +5015,10 @@ Sass also recognizes which operations to execute first based on the use of paren
 
 <h4>Number Functions</h4>
 
-<p>By default Sass includes a handful of <a href="https://sass-lang.com/documentation/modules/math">
-built in functions</a>, many of which are used to manipulate number values as wished.</p>
+<p>By default Sass includes a handful of 
+<a href="https://sass-lang.com/documentation/modules/math" 
+rel="noopener noreferrer" target="_blank">built in functions</a>, many of which 
+are used to manipulate number values as wished.</p>
 
 <p>The percentage() function turns a value into a percentage. The round() function 
 rounds a value to the closest whole number, defaulting to rounding up where necessary. 
@@ -5646,8 +5662,11 @@ counter variable can be finely controlled allowing for precise looping.</p>
 
 <p>Haml and Sass are far from the only preprocessing languages available,
 including JavaScript preprocessors as well. Some of the other popular
-preprocessors including <a href="http://jade-lang.com/), [Slim](http://slim-lang.com/">
-Jade</a>, <a href="http://lesscss.org/">LESS</a>, and <a href="http://coffeescript.org/">CoffeeScript</a>.</p>
+preprocessors including <a href="http://jade-lang.com/" 
+rel="noopener noreferrer" target="_blank">Jade</a>, <a href="http://slim-lang.com/" 
+rel="noopener noreferrer" target="_blank">Slim</a>, <a href="http://lesscss.org/" 
+rel="noopener noreferrer" target="_blank">LESS</a>, and <a href="http://coffeescript.org/" 
+rel="noopener noreferrer" target="_blank">CoffeeScript</a>.</p>
 
 <p>In the interest of brevity Haml and Sass were the only preprocessors
 covered in this lesson. They were also chosen because they are built
@@ -5662,24 +5681,32 @@ your research for each project and make the most educated decision.</p>
 
 <h4>Resources & Links</h4>
 
--[Haml](http://haml.info/) --- HTML Abstraction Markup Language
+<ul>
+  <li><a href="http://haml.info/" 
+    rel="noopener noreferrer" target="_blank">
+	Haml</a> --- HTML Abstraction Markup Language</li>
+  <li><a href="http://sass-lang.com/" 
+    rel="noopener noreferrer" target="_blank">
+	Sass</a> --- Syntactically Awesome Stylesheets</li>
+  <li><a href="http://haml.info/docs/yardoc/file.REFERENCE.html" 
+    rel="noopener noreferrer" target="_blank">
+	Haml Documentation Reference</a></li>
+  <li><a href="https://sass-lang.com/documentation/" 
+    rel="noopener noreferrer" target="_blank">
+	Sass Documentation Reference</a></li>
+  <li><a href="http://sassmeister.com/" 
+    rel="noopener noreferrer" target="_blank">
+	Sass Playground</a> via SassMeister</li>
+  <li><a href="https://sass-lang.com/documentation/modules" 
+    rel="noopener noreferrer" target="_blank">
+	SassScript Function</a> via Sass Documentation</li>
+</ul>
 
--[Sass](http://sass-lang.com/) --- Syntactically Awesome Stylesheets
-
--[Haml Documentation
- Reference](http://haml.info/docs/yardoc/file.REFERENCE.html)
-
--[Sass Documentation Reference](https://sass-lang.com/documentation/)
-
--[Sass Playground](http://sassmeister.com/) via
- SassMeister
-
--[SassScript Function](https://sass-lang.com/documentation/modules) via
- Sass Documentation
-
-<b>Lesson 4</b><a href="https://learn.shayhowe.com/advanced-html-css/responsive-web-design/">
+<b>Lesson 4</b><a href="https://learn.shayhowe.com/advanced-html-css/responsive-web-design/" 
+  rel="noopener noreferrer" target="_blank">
   Responsive Web Design</a>
-<b>Lesson 6</b><a href="https://learn.shayhowe.com/advanced-html-css/jquery/">
+<b>Lesson 6</b><a href="https://learn.shayhowe.com/advanced-html-css/jquery/" 
+  rel="noopener noreferrer" target="_blank">
   jQuery</a>
 
 
@@ -5707,10 +5734,13 @@ your research for each project and make the most educated decision.</p>
 
 <p>In part of being a web designer or front end developer you will commonly run 
 into JavaScript, often referred to as JS, and jQuery. Within the top 10,000 
-websites JavaScript is used within <a href="https://trends.builtwith.com/docinfo/Javascript">
-over 92%</a> of them, and jQuery is used within in <a href="https://trends.builtwith.com/javascript/jQuery">
+websites JavaScript is used within <a href="https://trends.builtwith.com/docinfo/Javascript" 
+rel="noopener noreferrer" target="_blank">over 92%</a> of them, and jQuery is 
+used within in <a href="https://trends.builtwith.com/javascript/jQuery" 
+rel="noopener noreferrer" target="_blank">
 over 63%</a> of them. Needless to say, they are fairly popular. You may even 
-aspire to <a href="http://jsforcats.com/">write</a> JavaScript or jQuery to 
+aspire to <a href="http://jsforcats.com/" 
+rel="noopener noreferrer" target="_blank">write</a> JavaScript or jQuery to 
 build your own behaviors at one point or another.</p>
 
 <p>If you are asking what exactly are JavaScript and jQuery fear not, this
@@ -5719,10 +5749,11 @@ jQuery.</p>
 
 <h3>JavaScript Intro</h3>
 
-<p><a href="https://developer.mozilla.org/en-US/docs/JavaScript/A_re-introduction_to_JavaScript">
-JavaScript</a> provides the ability to add interactivity to a website, and help 
-enrich the user experience. HTML provides a page with <b>structure</b> and CSS 
-provides a page with <b>appearance</b>, JavaScript provide a page with <b>behavior</b>.</p>
+<p><a href="https://developer.mozilla.org/en-US/docs/JavaScript/A_re-introduction_to_JavaScript" 
+rel="noopener noreferrer" target="_blank">JavaScript (20xx)</a> provides the 
+ability to add interactivity to a website, and help enrich the user experience. 
+HTML provides a page with <b>structure</b> and CSS provides a page with <b>appearance</b>, 
+JavaScript provide a page with <b>behavior</b>.</p>
 
 <p>Like CSS, JavaScript should be saved in an external file with the .js file 
 extension, and then referenced within an HTML document using the script element. 
@@ -5750,14 +5781,15 @@ numbers, undefined, null, or other values such as functions or objects.</p>
 
 <p>One popular way variables are defined is with the var keyword, followed
 by the variable name, an equal sign (=), then the value, ending with a
-semicolon (;). The variable name must begin with a letter, underscore
+semicolon (;). The variable name must begin with a letter, underscore (_)
 (&#0095;), or dollar sign ($). Variables cannot begin with numbers, although
 they may be used subsequently, and they cannot use hyphens whatsoever.
 Additionally, JavaScript is case sensitive so letters
 include a through z in both lower and uppercase.</p>
 
 <p>The common convention around naming variables is to
-use <a href="https://en.wikipedia.org/wiki/CamelCase">camelCase</a>, without the 
+use <a href="https://en.wikipedia.org/wiki/CamelCase" 
+rel="noopener noreferrer" target="_blank">camelCase</a>, without the 
 use of any dashes or underscores. camelCase consist of combining words while 
 removing spaces, capitalizing the beginning of each new word except for the 
 initial word. For example, shay_is_awesome would more commonly named 
@@ -5865,17 +5897,18 @@ run from within the console.</p>
 
 <h4>jQuery Intro</h4>
 
-<p>With a basic understanding of JavaScript and some of it's foundations,
-it is time to take a look at jQuery. jQuery is an open source JavaScript
-library written by John Resig that simplifies the interaction between
-HTML, CSS, and JavaScript. Since 2006, when jQuery was released, it has
-taken off, being used by websites and companies large and small.</p>
+<p>With a basic understanding of JavaScript and some of it's foundations, it is 
+time to take a look at jQuery. jQuery is an open source JavaScript library written 
+by John Resig that simplifies the interaction between HTML, CSS, and JavaScript. 
+Since 2006, when jQuery was released, it has taken off, being used by websites and 
+companies large and small.</p>
 
 <p>What has made jQuery so popular is it's 
-<a href="https://tutsplus.com/course/30-days-to-learn-jquery/">ease of use</a>, 
-with selections resembling CSS and a comprehensible separation of behavior. The 
-benefits of jQuery are massive, however for our purpose we will only be considered 
-about the ability to find elements and perform actions with them.</p>
+<a href="https://tutsplus.com/course/30-days-to-learn-jquery/" 
+rel="noopener noreferrer" target="_blank">ease of use</a>, with selections 
+resembling CSS and a comprehensible separation of behavior. The benefits of jQuery 
+are massive, however for our purpose we will only be considered about the ability 
+to find elements and perform actions with them.</p>
 
 <h4>Getting Started with jQuery</h4>
 
@@ -6087,14 +6120,14 @@ specific methods within each category may be seen below.</p>
 
 <h4>Manipulation</h4>
 
-<p>Selecting and traversing elements in the DOM is only part of what jQuery
-offers, one other major part is what is possible with those elements
-once found. One possibility is to 
-<a href="http://api.jquery.com/category/manipulation/">manipulate</a> these
-elements, by either reading, adding, or changing attributes or styles.
-Additionally, elements may be altered in the DOM, changing their
-placement, removing them, adding new elements, and so forth. Overall the
-options to manipulate elements are fairly vast.</p>
+<p>Selecting and traversing elements in the DOM is only part of what jQuery offers, 
+one other major part is what is possible with those elements once found. One 
+possibility is to 
+<a href="http://api.jquery.com/category/manipulation/" 
+rel="noopener noreferrer" target="_blank">manipulate</a> these elements, by either 
+reading, adding, or changing attributes or styles. Additionally, elements may be 
+altered in the DOM, changing their placement, removing them, adding new elements, 
+and so forth. Overall the options to manipulate elements are fairly vast.</p>
 
 <h4>Getting & Setting</h4>
 
@@ -6244,10 +6277,11 @@ the text of any h1 elements with the text Hello World.</p>
 <h4>Events</h4>
 
 <p>One of the beauties of jQuery is the ability to easily add 
-<a href="http://api.jquery.com/category/events/">event handlers</a>, which
-are methods that are called only upon a specific event or action taking
-place. For example, the method of adding a class to an element can be
-set to only occur upon that element being clicked on.</p>
+<a href="http://api.jquery.com/category/events/" 
+rel="noopener noreferrer" target="_blank">event handlers</a>, which are methods 
+that are called only upon a specific event or action taking place. For example, 
+the method of adding a class to an element can be set to only occur upon that 
+element being clicked on.</p>
 
 <p>Below is a standard selector, grabbing all of the list items.
 The .click() event method is bound to the list item selector, setting up
@@ -6271,8 +6305,9 @@ the this keyword, receives the class of saved-item.</p>
 <h4>Event Flexibility</h4>
 
 <p>The .click() event method, along with a handful of other event methods,
-is actually a <a href="http://jqfundamentals.com/chapter/events">
-shorthand method</a> which uses the .on() method introduced in jQuery 1.7. 
+is actually a <a href="http://jqfundamentals.com/chapter/events" 
+rel="noopener noreferrer" target="_blank">shorthand method</a> which uses the 
+.on() method introduced in jQuery 1.7.<br>
 The .on() method provides quite a bit of flexibility, using automatic delegation 
 for elements that get added to the page dynamically.</p>
 
@@ -6285,7 +6320,7 @@ function staying the same as before.</p>
 
 ```
  1  $('li').on('click', function(event){ 
- 2  $(this).addClass('saved-item');
+ 2    $(this).addClass('saved-item');
  3  });  
  4 
 ```
@@ -6300,7 +6335,7 @@ the .click() event is called on the anchor with the up ID.</p>
 
 ```
  1  $('.pagination').on('hover', function(event){ 
- 2  $('a#up').click(); 
+ 2    $('a#up').click(); 
  3  });  
  4 
 ```
@@ -6422,10 +6457,10 @@ sliding content up and down. All of these are ready to use methods and
 may be customized as best see fit.</p>
 
 <p>Each effect method has it's own syntax so it is best to reference the
-jQuery <a href="http://api.jquery.com/category/effects/">effects documentation</a> 
-for specific syntax around each method. Most commonly though, effects
-generally accept a duration, easing, and the ability to specify a
-callback function.</p>
+jQuery <a href="http://api.jquery.com/category/effects/" 
+rel="noopener noreferrer" target="_blank">effects documentation</a> for specific 
+syntax around each method. Most commonly though, effects generally accept a 
+duration, easing, and the ability to specify a callback function.</p>
 
 <h4>jQuery CSS Animations</h4>
 
@@ -6474,7 +6509,8 @@ animation at one constant pace for the entire duration.</p>
 
 <p>The two easing values that come with jQuery may be extend with the use
 of different plug-ins, of which may offer additional values. One of the
-most popular plug-ins is the <a href="http://jqueryui.com/">jQuery UI</a> suite.</p>
+most popular plug-ins is the <a href="http://jqueryui.com/" 
+rel="noopener noreferrer" target="_blank">jQuery UI</a> suite.</p>
 
 <p>On top of new easing values jQuery UI also provides a handful other
 interactions, effects, widgets, and other helpful resources worth taking
@@ -6496,12 +6532,13 @@ or effects may be placed, each following their own required syntax.</p>
 
 <h4>Effect Syntax</h4>
 
-<p>As previously mentioned, each effect method has it's own syntax which
-can be found in the jQuery <a href="http://api.jquery.com/category/effects/">
-effects documentation</a>.
-The duration, easing, and callback parameters outlined here are common,
-but not available on every method. It is best to review the syntax of a
-method should you have any questions around it.</p>
+<p>As previously mentioned, each effect method has it's own syntax which can be 
+found in the jQuery 
+<a href="http://api.jquery.com/category/effects/" 
+rel="noopener noreferrer" target="_blank">effects documentation</a>.
+The duration, easing, and callback parameters outlined here are common, but not 
+available on every method. It is best to review the syntax of a method should 
+you have any questions around it.</p>
 
 <h4>Effects Demo</h4>
 
@@ -6678,41 +6715,49 @@ Software. Faster.</p>
 <h4>CSS</h4>
 
 <ul>
-  <li><a href="https://learn.shayhowe.com/advanced-html-css/css-transforms/#transform-syntax">
+  <li><a href="https://learn.shayhowe.com/advanced-html-css/css-transforms/#transform-syntax" 
+    rel="noopener noreferrer" target="_blank">
     Transform Syntax</a></li>
-  <li><a href="https://learn.shayhowe.com/advanced-html-css/css-transforms/#two-dimensional-transforms">
+  <li><a href="https://learn.shayhowe.com/advanced-html-css/css-transforms/#two-dimensional-transforms" 
+    rel="noopener noreferrer" target="_blank">
     2D Transforms</a></li>
-  <li><a href="https://learn.shayhowe.com/advanced-html-css/css-transforms/#combining-transforms">
+  <li><a href="https://learn.shayhowe.com/advanced-html-css/css-transforms/#combining-transforms" 
+    rel="noopener noreferrer" target="_blank">
     Combining Transforms</a></li>
-  <li><a href="https://learn.shayhowe.com/advanced-html-css/css-transforms/#transform-origin">
+  <li><a href="https://learn.shayhowe.com/advanced-html-css/css-transforms/#transform-origin" 
+    rel="noopener noreferrer" target="_blank">
     Transform Origin</a></li>
-  <li><a href="https://learn.shayhowe.com/advanced-html-css/css-transforms/#perspective">
+  <li><a href="https://learn.shayhowe.com/advanced-html-css/css-transforms/#perspective" 
+    rel="noopener noreferrer" target="_blank">
     Perspective</a></li>
-  <li><a href="https://learn.shayhowe.com/advanced-html-css/css-transforms/#three-dimensional-transforms">
+  <li><a href="https://learn.shayhowe.com/advanced-html-css/css-transforms/#three-dimensional-transforms" 
+    rel="noopener noreferrer" target="_blank">
     3D Transforms</a></li>
-  <li><a href="https://learn.shayhowe.com/advanced-html-css/css-transforms/#transform-style">
+  <li><a href="https://learn.shayhowe.com/advanced-html-css/css-transforms/#transform-style" 
+    rel="noopener noreferrer" target="_blank">
     Transform Style</a></li>
-  <li><a href="https://learn.shayhowe.com/advanced-html-css/css-transforms/#backface-visibility">
+  <li><a href="https://learn.shayhowe.com/advanced-html-css/css-transforms/#backface-visibility" 
+    rel="noopener noreferrer" target="_blank">
     Backface Visibility</a></li>
 </ul>
 
 <h4>SHARE</h4>
 
-<p>With CSS3 came new ways to position and alter elements. Now general
-layout techniques can be revisited with alternative ways to size,
-position, and change elements. All of these new techniques are made
-possible by the transform property.</p>
+<p>With CSS3 came new ways to position and alter elements. Now general layout 
+techniques can be revisited with alternative ways to size, position, and change 
+elements. All of these new techniques are made possible by the transform property.</p>
 
-<p>The transform property comes in two different settings, two-dimensional
-and three-dimensional. Each of these come with their own individual
-properties and values.</p>
+<p>The transform property comes in two different settings, two-dimensional and 
+three-dimensional. Each of these come with their own individual properties and 
+values.</p>
 
-<p>Within this lesson we'll take a look at both two-dimensional and
-three-dimensional transforms. Generally speaking, browser support for
-the transform property isn't great, but it is getting better every day.
-For the best support vendor prefixes are encouraged, however you may
-need to download the nightly version of <a href="https://tools.google.com/dlpage/chromesxs/">
-Chrome</a> to see all of these transforms in action.</p>
+<p>Within this lesson we'll take a look at both two-dimensional and three-dimensional 
+transforms. Generally speaking, browser support for the transform property isn't great, 
+but it is getting better every day. For the best support vendor prefixes are encouraged, 
+however you may need to download the nightly version of 
+<a href="https://tools.google.com/dlpage/chromesxs/" 
+rel="noopener noreferrer" target="_blank">Chrome</a> to see all of these transforms 
+in action.</p>
 
 <h4>Transform Syntax</h4>
 
@@ -6743,15 +6788,14 @@ time being.</p>
 
 <h4>2D Transforms</h4>
 
-<p>Elements may be distorted, or transformed, on both a two-dimensional
-plane or a three-dimensional plane. Two-dimensional transforms work on
-the x and y axes, known as horizontal and vertical axes.
-Three-dimensional transforms work on both the x and y axes, as well as
-the z axis. These three-dimensional transforms help define not only the
-length and width of an element, but also the depth. We'll start by
-discussing how to <a href="http://www.css3files.com/transform/">
-transform elements</a> on a two-dimensional plane, and then work our way into 
-three-dimensional transforms.</p>
+<p>Elements may be distorted, or transformed, on both a two-dimensional plane or 
+a three-dimensional plane. Two-dimensional transforms work on the x and y axes, 
+known as horizontal and vertical axes. Three-dimensional transforms work on both 
+the x and y axes, as well as the z axis. These three-dimensional transforms help 
+define not only the length and width of an element, but also the depth. We'll 
+start by discussing how to <a href="http://www.css3files.com/transform/" 
+rel="noopener noreferrer" target="_blank">transform elements</a> on a two-dimensional 
+plane, and then work our way into three-dimensional transforms.</p>
 
 <h4>2D Rotate</h4>
 
@@ -6978,8 +7022,9 @@ same as if you were to set the height of an element numerous times.</p>
 of the transform. Using the rotate, scale, transition, and skew values provide an 
 easy way to establish this matrix. However, should you be mathematically inclined, 
 and prefer to take a 
-<a href="http://dev.opera.com/articles/view/understanding-the-css-transforms-matrix/">
-deeper dive</a> into transforms, try your hand at using the matrix property.</p>
+<a href="http://dev.opera.com/articles/view/understanding-the-css-transforms-matrix/" 
+rel="noopener noreferrer" target="_blank">deeper dive</a> into transforms, try your 
+hand at using the matrix property.</p>
 
 <h4>2D Cube Demo</h4>
 
@@ -7255,9 +7300,10 @@ of a transform.</p>
 <p>Working with two-dimensional transforms we are able to alter elements on the 
 horizontal and vertical axes, however there is another axis along which we can 
 transform elements. Using 
-<a href="http://24ways.org/2010/intro-to-css-3d-transforms">
-three-dimensional transforms</a> we can change elements on the z axis, giving us 
-control of depth as well as length and width.</p>
+<a href="http://24ways.org/2010/intro-to-css-3d-transforms" 
+rel="noopener noreferrer" target="_blank">three-dimensional transforms</a> we can 
+change elements on the z axis, giving us control of depth as well as length and 
+width.</p>
 
 <h4>3D Rotate</h4>
 
@@ -7389,9 +7435,10 @@ they cannot be skewed on the z axis.</p>
 to write out shorthand three-dimensional transforms. These properties
 include rotate3d, scale3d, transition3d, and matrix3d. These properties
 do require a bit more math, as well as a
-strong <a href="https://developer.mozilla.org/en/CSS/transform-function">
-understanding</a> of the matrices behind each transform. Should you be 
-interested in looking a bit deeper into them, please do!</p>
+strong <a href="https://developer.mozilla.org/en/CSS/transform-function" 
+rel="noopener noreferrer" target="_blank">understanding</a> of the matrices 
+behind each transform. Should you be interested in looking a bit deeper into 
+them, please do!</p>
 
 <h4>Transform Style</h4>
 
@@ -7442,8 +7489,8 @@ lie flat on the two-dimensional plane.</p>
 <h4>Transform Style Demo</h4>
 
 <p>To see an additional example of the transform-style property in action
-check out the WebKit <a href="http://www.webkit.org/blog-files/3d-transforms/transform-style.html">
-explanation</a>.</p>
+check out the WebKit <a href="http://www.webkit.org/blog-files/3d-transforms/transform-style.html" 
+rel="noopener noreferrer" target="_blank">explanation</a>.</p>
 
 <h4>Backface Visibility</h4>
 
@@ -7461,8 +7508,8 @@ value, always displaying an element, no matter which direction it faces.</p>
 <p>In the demonstration below notice how the second box isn't displayed
 because backface-visibility: hidden; declaration has been set.
 The backface-visibility property takes even more significance when
-using <a href="https://css-tricks.com/almanac/properties/b/backface-visibility/">
-animations</a>.</p>
+using <a href="https://css-tricks.com/almanac/properties/b/backface-visibility/" 
+rel="noopener noreferrer" target="_blank">animations</a>.</p>
 
 <h4>HTML</h4>
 
@@ -7595,15 +7642,20 @@ rel="noopener noreferrer" target="_blank">Transitions &amp; Animations</a>
 <h4>CSS</h4>
 
 <ul>
-  <li><a href="https://learn.shayhowe.com/advanced-html-css/transitions-animations/#transitions">
+  <li><a href="https://learn.shayhowe.com/advanced-html-css/transitions-animations/#transitions" 
+    rel="noopener noreferrer" target="_blank">
     Transitions</a></li>
-  <li><a href="https://learn.shayhowe.com/advanced-html-css/transitions-animations/#shorthand-transitions">
+  <li><a href="https://learn.shayhowe.com/advanced-html-css/transitions-animations/#shorthand-transitions" 
+    rel="noopener noreferrer" target="_blank">
     Shorthand Transitions</a></li>
-  <li><a href="https://learn.shayhowe.com/advanced-html-css/transitions-animations/#animations">
+  <li><a href="https://learn.shayhowe.com/advanced-html-css/transitions-animations/#animations" 
+    rel="noopener noreferrer" target="_blank">
     Animations</a></li>
-  <li><a href="https://learn.shayhowe.com/advanced-html-css/transitions-animations/#customizing-animations">
+  <li><a href="https://learn.shayhowe.com/advanced-html-css/transitions-animations/#customizing-animations" 
+    rel="noopener noreferrer" target="_blank">
     Customizing Animations</a></li>
-  <li><a href="https://learn.shayhowe.com/advanced-html-css/transitions-animations/#shorthand-animations">
+  <li><a href="https://learn.shayhowe.com/advanced-html-css/transitions-animations/#shorthand-animations" 
+    rel="noopener noreferrer" target="_blank">
     Shorthand Animations</a></li>
 </ul>
 
@@ -7626,16 +7678,15 @@ transition upon different keyframes.</p>
 <h4>Transitions</h4>
 
 <p>As mentioned, for a 
-<a href="http://www.alistapart.com/articles/understanding-css3-transitions/">
-transition</a> to take place, an element must have a change in state, and different 
-styles must be identified for each state. The easiest way for determining styles 
-for different states is by using the :hover, :focus, :active, and :target 
-pseudo-classes.</p>
+<a href="http://www.alistapart.com/articles/understanding-css3-transitions/" 
+rel="noopener noreferrer" target="_blank">transition (2010)</a> to take place, 
+an element must have a change in state, and different styles must be identified 
+for each state. The easiest way for determining styles for different states is 
+by using the :hover, :focus, :active, and :target pseudo-classes.</p>
 
-<p>There are four transition related properties in total,
-including transition-property, transition-duration, transition-timing-function,
-and transition-delay. Not all of these are required to build a
-transition, with the first three are the most popular.</p>
+<p>There are four transition related properties in total, including transition-property, 
+transition-duration, transition-timing-function, and transition-delay. Not all of these 
+are required to build a transition, with the first three are the most popular.</p>
 
 <p>In the example below the box will change its background color over the
 course of 1 second in a linear fashion.</p>
@@ -7845,10 +7896,12 @@ slows down throughout the transition. The ease-in-out value identifies a
 transition that starts slowly, speeds up in the middle, then slows down
 again before ending.</p>
 
-<p>Each timing function has a <a href="http://www.roblaplaca.com/examples/bezierBuilder/">
-cubic-bezier curve</a> behind it, which can be specifically set using the 
-cubic-bezier(x1, y1, x2, y2) value. Additional values include step-start, 
-step-stop, and a uniquely identified steps(number_of_steps, direction) value.</p>
+<!-- was "http://www.roblaplaca.com/examples/bezierBuilder/" -->
+<p>Each timing function has a <a href="https://www.cssportal.com/css-cubic-bezier-generator/" 
+rel="noopener noreferrer" target="_blank">cubic-bezier curve</a> behind it, which 
+can be specifically set using the cubic-bezier(x1, y1, x2, y2) value. Additional 
+values include step-start, step-stop, and a uniquely identified steps(number_of_steps, 
+direction) value.</p>
 
 <p>When transitioning multiple properties, you can identify multiple timing
 functions. These timing function values, as with other transition
@@ -8035,10 +8088,10 @@ transition values.</p>
 <p>Transitions do a great job of building out visual interactions from one
 state to another, and are perfect for these kinds of single state
 changes. However, when more control is required, transitions need to
-have multiple states. In return, this is
-where 
-<a href="http://coding.smashingmagazine.com/2011/09/14/the-guide-to-css-animation-principles-and-examples/">
-animations</a> pick up where transitions leave off.</p>
+have multiple states. In return, this is where 
+<a href="http://coding.smashingmagazine.com/2011/09/14/the-guide-to-css-animation-principles-and-examples/" 
+rel="noopener noreferrer" target="_blank">animations (2011)</a> pick up where transitions 
+leave off.</p>
 
 <h4>Animations Keyframes</h4>
 
@@ -8377,13 +8430,13 @@ the animation.</p>
 
 <h4>Shorthand Animations</h4>
 
-<p>Fortunately <a href="https://developer.mozilla.org/en-US/docs/CSS/Using_CSS_animations">
-animations</a>, just like transitions, can be written out in a 
-shorthand format. This is accomplished with one animation property, rather than 
-multiple declarations. The order of values within the animation property should
-be animation-name, animation-duration, animation-timing-function, 
-animation-delay, animation-iteration-count, animation-direction, 
-animation-fill-mode, and lastly animation-play-state.</p>
+<p>Fortunately <a href="https://developer.mozilla.org/en-US/docs/CSS/Using_CSS_animations" 
+rel="noopener noreferrer" target="_blank">animations</a>, just like transitions, 
+can be written out in a shorthand format. This is accomplished with one animation 
+property, rather than multiple declarations. The order of values within the animation 
+property should be animation-name, animation-duration, animation-timing-function, 
+animation-delay, animation-iteration-count, animation-direction, animation-fill-mode, 
+and lastly animation-play-state.</p>
 
 ```
  1  .stage:hover .ball {
@@ -8403,20 +8456,24 @@ the animation.</p>
 <h4>Resources & Links</h4>
 
 <ul>
-  <li><a href="http://www.alistapart.com/articles/understanding-css3-transitions/">
+  <li><a href="http://www.alistapart.com/articles/understanding-css3-transitions/" 
+    rel="noopener noreferrer" target="_blank">
     Understanding CSS3 Transitions</a> via A List Apart.</li>
-  <li><a href="http://www.roblaplaca.com/examples/bezierBuilder/">
+  <li><a href="http://www.roblaplaca.com/examples/bezierBuilder/" 
+    rel="noopener noreferrer" target="_blank">
     CSS Cubic-Bezier Builder</a> via Rob LaPlaca.</li>
-  <li><a href="http://coding.smashingmagazine.com/2011/09/14/the-guide-to-css-animation-principles-and-examples/">
+  <li><a href="http://coding.smashingmagazine.com/2011/09/14/the-guide-to-css-animation-principles-and-examples/" 
+    rel="noopener noreferrer" target="_blank">
     The Guide To CSS Animation: Principles and Examples</a> via Smashing Magazine.</li>
-  <li><a href="https://developer.mozilla.org/en-US/docs/CSS/Using_CSS_animations">
+  <li><a href="https://developer.mozilla.org/en-US/docs/CSS/Using_CSS_animations" 
+    rel="noopener noreferrer" target="_blank">
     Using CSS Animations</a> via Mozilla Developer Network.</li>
 </ul>
 
-<b>Lesson 7</b> <a href="https://learn.shayhowe.com/advanced-html-css/css-transforms/">
-Transforms</a>
-<b>Lesson 9</b> <a href="https://learn.shayhowe.com/advanced-html-css/feature-support-polyfills/">
-Feature Support & Polyfills</a>
+<b>Lesson 7</b> <a href="https://learn.shayhowe.com/advanced-html-css/css-transforms/" 
+rel="noopener noreferrer" target="_blank">Transforms</a>
+<b>Lesson 9</b> <a href="https://learn.shayhowe.com/advanced-html-css/feature-support-polyfills/" 
+rel="noopener noreferrer" target="_blank">Feature Support & Polyfills</a>
 
 
 <h2 align="center">Lesson 9: Feature Support &amp; Polyfills</h2>
@@ -8794,7 +8851,8 @@ versions 6 through 9.</h6>
 
 Microsoft provides a handful of VirtualPCs that can be used solely for
 testing. Setting all of these up can be a herculean task. Fortunately,
-Greg Thornton has built an <a href="https://github.com/xdissent/ievms">
+Greg Thornton has built an <a href="https://github.com/xdissent/ievms" 
+rel="noopener noreferrer" target="_blank">
 automated installer</a> for all of these virtual machines. The installation 
 takes a while to download all of the different virtual machines, and requires 
 a decent amount of disk space. Prepare adequately by only installing the necessary 
