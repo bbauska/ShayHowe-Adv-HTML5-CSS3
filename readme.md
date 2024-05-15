@@ -1,4 +1,3 @@
-<!--
 ---
 title: "Shay & Howe's Advanced HTML and CSS"
 author: "Brian Bauska (bbauska)"
@@ -7,7 +6,6 @@ output:
   markdown:
   with some style
 ---
--->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!---~~~~~~~~~~~~~~~~~~~~~~~~~~ readme.md of shayhowe-Adv-HTML-CSS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -9773,25 +9771,25 @@ structure cannot be determined.
   <h3>Resources &amp; Links</h3>
 
   <ul>
- <li><a href="https://developers.whatwg.org/text-level-semantics.html" 
-   rel="noopener noreferrer" target="_blank">
-   Text-Level Semantics</a> via WHATWG</li>
- <li><a href="http://microformats.org/wiki/existing-rel-values" 
-   rel="noopener noreferrer" target="_blank">
-   Existing rel Values</a> via Microformats.org</li>
- <li><a href="http://schema.org/docs/schemas.html" 
-   rel="noopener noreferrer" target="_blank">
-   Organization of Schemas</a> via Schema.org</li>
- <li><a href="http://diveintohtml5.info/extensibility.html" 
-   rel="noopener noreferrer" target="_blank">
-   Microdata</a> via Dive Into HTML5</li>
- <li><a href="http://www.w3.org/WAI/intro/aria" 
-   rel="noopener noreferrer" target="_blank">
-   WAI-ARIA Overview</a>) via W3.org</li>
- <li><a href="https://www.w3.org/TR/wai-aria/#roles" 
-   rel="noopener noreferrer" target="_blank">
-   The Roles Model</a> via W3.org</li>
-</ul>
+   <li><a href="https://developers.whatwg.org/text-level-semantics.html" 
+     rel="noopener noreferrer" target="_blank">
+     Text-Level Semantics</a> via WHATWG</li>
+   <li><a href="http://microformats.org/wiki/existing-rel-values" 
+     rel="noopener noreferrer" target="_blank">
+     Existing rel Values</a> via Microformats.org</li>
+   <li><a href="http://schema.org/docs/schemas.html" 
+     rel="noopener noreferrer" target="_blank">
+     Organization of Schemas</a> via Schema.org</li>
+   <li><a href="http://diveintohtml5.info/extensibility.html" 
+     rel="noopener noreferrer" target="_blank">
+     Microdata</a> via Dive Into HTML5</li>
+   <li><a href="http://www.w3.org/WAI/intro/aria" 
+     rel="noopener noreferrer" target="_blank">
+     WAI-ARIA Overview</a>) via W3.org</li>
+   <li><a href="https://www.w3.org/TR/wai-aria/#roles" 
+     rel="noopener noreferrer" target="_blank">
+     The Roles Model</a> via W3.org</li>
+  </ul>
 
 </details>
 
@@ -9799,15 +9797,4 @@ structure cannot be determined.
   rel="noopener noreferrer" target="_blank">Feature Support &amp; Polyfills</a>
 
 ...the end.
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~ 0x/0x.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--
-<p align="center" width="100%">
-  <img src="./images/image00x.png"
- style="width:40%"
- alt="." />
-  <img src="./images/image00x.png"
- style="width:40%"
- alt="." />
-</p>
--->
+<!-- 5/14/2024 4:58pm -->
