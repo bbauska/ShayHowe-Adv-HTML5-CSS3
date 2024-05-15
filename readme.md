@@ -4,7 +4,6 @@ author: "Brian Bauska (bbauska)"
 date last editted: "3/31/2024 6+pm"
 output:
   markdown:
-  with some style
 ---
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!---~~~~~~~~~~~~~~~~~~~~~~~~~~ readme.md of shayhowe-Adv-HTML-CSS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
