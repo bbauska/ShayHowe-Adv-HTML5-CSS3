@@ -1,7 +1,8 @@
 ---
 title: "Shay & Howe's Advanced HTML and CSS"
 author: "Brian Bauska (bbauska)"
-date last editted: "3/31/2024 6+pm"
+date first editted: "3/31/2024 6+pm"
+date last editted: "5/19/2024 6+pm"
 output:
   markdown:
 ---
@@ -235,7 +236,7 @@ principles from each methodology as you prefer.</p>
 
 <p>One functionality of CSS often abused without awareness
 are <a href="http://csswizardry.com/2011/09/writing-efficient-css-selectors/" 
-rel="noopener noreferrer" target="_blank">selectors</a>. Much of the attention 
+rel="noopener noreferrer" target="_blank">selectors (2011)</a>. Much of the attention 
 within CSS is given to properties and values. So long as these styles are applied 
 to the correct element, everything looks to be fine. This is a very poor assumption. 
 How elements are selected within CSS affects performance, including how fast a page
@@ -392,7 +393,7 @@ is being shared and reused, and the overall file size is reduced.</p>
 <p>Simply removing duplicate and unnecessary code is the best way to cut
 down on file size, however there are additional ways. One way includes 
 <a href="http://www.hanselman.com/blog/TheImportanceAndEaseOfMinifyingYourCSSAndJavaScriptAndOptimizingPNGsForYourBlogOrWebsite.aspx" 
-rel="noopener noreferrer" target="_blank">minifying</a> and compressing 
+rel="noopener noreferrer" target="_blank">minifying (2011)</a> and compressing 
 files, such as HTML, CSS, and JavaScript files. Additionally, images may be 
 compressed, removing any unnecessary comments and color profiles.</p>
 
@@ -405,7 +406,7 @@ matching strings identified, the smaller the file can be compressed,
 thus sending a smaller file from the server to the browser.</p>
 
 <p>Setting up gzip is fairly painless, and the <a href="http://html5boilerplate.com/" 
-rel="noopener noreferrer" target="_blank">HTML5 Boilerplate</a> team has done a 
+rel="noopener noreferrer" target="_blank">HTML5 Boilerplate (Jan, 2010)</a> team has done a 
 great job of getting this going. To gzip files an .htaccess file needs to be added 
 to the root directory of the web server, labeling the specific files to be gzipped. 
 The dot at the beginning of the file name is correct, as the .htaccess file is a 
@@ -437,7 +438,7 @@ of data around performance, particularly within the Network tab.
 Additionally, there are a few websites that help identify if gzip
 compression is enabled.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~ 01. gzip overview screenshot (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 01. gzip overview screenshot ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="center" width="100%">
   <img src="./images/image001.png"
   style="width:40%"
@@ -450,7 +451,7 @@ compression is enabled.</p>
 <p>The Network tab identifies each file loaded within the browser and displays the 
 file size and load time. Notice how gzipping has reduced the file sizes by around 60%.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 02. gzip detail screenshot (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 02. gzip detail screenshot ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="center" width="100%">
   <img src="./images/image002.png"
   style="width:40%"
@@ -9797,3 +9798,4 @@ structure cannot be determined.
 
 ...the end.
 <!-- 5/14/2024 4:58pm -->
+<!-- 5/19/2024 6:53pm -->
