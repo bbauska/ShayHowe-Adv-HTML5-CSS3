@@ -6630,8 +6630,14 @@ animation is complete.</p>
 
 -[jQuery UI](http://jqueryui.com/)
 
-<b>Lesson 5 </b> <a href="#preprocessors">Preprocessors</a>
-<b>Lesson 7 </b> <a href="#transforms">Transforms</a>
+<div>
+  <div style="float:left">
+    <b>Lesson 5 </b> <a href="#preprocessors">Preprocessors</a>
+  </div>
+  div style="float:right">
+    <b>Lesson 7 </b> <a href="#transforms">Transforms</a>
+  </div>
+</div>
 
 <h2 align="center" id="transforms">Lesson 7: Transforms</h2>
 
@@ -7539,9 +7545,12 @@ rel="noopener noreferrer" target="_blank">animations</a>.</p>
 	Backface Visibility</a> via CSS-Tricks</li>
 </ul>
 
-<b>Lesson 6 </b> <a href="jquery">jQuery</a>
-<b>Lesson 8 </b> <a href="transitions-animations">Transitions &amp; Animations</a>
-
+<div style="float:left">
+  <b>Lesson 6 </b> <a href="jquery">jQuery</a>
+  <div align="right">
+    <b>Lesson 8 </b> <a href="transitions-animations">Transitions &amp; Animations</a>
+  </div>
+</div>
 
 <h2 align="center" id="#transitions-animations">Lesson 8: Transitions &amp; Animations</h2>
 
@@ -8370,9 +8379,12 @@ the animation.</p>
     Using CSS Animations</a> via Mozilla Developer Network.</li>
 </ul>
 
+<div style="float:left">
 <b>Lesson 7 </b> <a href="#css-transforms">Transforms</a>
-<b>Lesson 9 </b> <a href="#feature-support-polyfills/">Feature Support &amp; Polyfills</a>
-
+  <div align="right">
+    <b>Lesson 9 </b> <a href="#feature-support-polyfills/">Feature Support &amp; Polyfills</a>
+  </div>
+</div>
 
 <h2 align="center" id="feature-support-polyfills">Lesson 9: Feature Support &amp; Polyfills</h2>
 
@@ -8787,10 +8799,8 @@ bookmarklet open for debugging.</h6>
 
 -[Microsoft IE Virtual Machines](https://github.com/xdissent/ievms) via Greg Thornton
 
-<div>
-  <div style="float:left">
-    <b>Lesson 8 </b><a href="#transitions-animations">Transitions &amp; Animations</a>
-  </div>
+<div style="float:left">
+  <b>Lesson 8 </b><a href="#transitions-animations">Transitions &amp; Animations</a>
   <div align="right">
     <b>Lesson 10 </b><a href="#semantics-accessibility">Extending Semantics &amp; Accessibility</a>
   </div>
