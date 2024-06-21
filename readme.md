@@ -8787,8 +8787,14 @@ bookmarklet open for debugging.</h6>
 
 -[Microsoft IE Virtual Machines](https://github.com/xdissent/ievms) via Greg Thornton
 
-<b>Lesson 8 </b><a href="#transitions-animations">Transitions &amp; Animations</a>
-<b>Lesson 10 </b><a href="#semantics-accessibility">Extending Semantics &amp; Accessibility</a>
+<div>
+  <div style="float:left">
+    <b>Lesson 8 </b><a href="#transitions-animations">Transitions &amp; Animations</a>
+  </div>
+  <div align="right">
+    <b>Lesson 10 </b><a href="#semantics-accessibility">Extending Semantics &amp; Accessibility</a>
+  </div>
+</div>
 
 <h2 id="semantics-accessibility">Lesson 10 Extending Semantics & Accessibility</h2>
 
