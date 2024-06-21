@@ -788,7 +788,7 @@ rel="noopener noreferrer" target="_blank">syntax</a>.</p>
   <div style="float:left">
     <b>Lesson 1 </b> <a href="#performance-organization">Performance &amp; Organization</a>
   </div>
-  <div style="float:left">
+  <div style="float:right">
     <b>Lesson 3 </b> <a href="#complex-selectors">Complex Selectors</a>
   </div>
 </div>
@@ -6662,7 +6662,7 @@ animation is complete.</p>
   <div style="float:left">
     <b>Lesson 5 </b> <a href="#preprocessors">Preprocessors</a>
   </div>
-  <div style="float:left">
+  <div style="float:right">
     <b>Lesson 7 </b> <a href="#transforms">Transforms</a>
   </div>
 </div>
@@ -7577,7 +7577,8 @@ rel="noopener noreferrer" target="_blank">animations</a>.</p>
   <div style="text-align:left">
     <b>Lesson 6 </b> <a href="jquery">jQuery</a>
   </div>
-  <div style="text-align:right">
+  <p>                                         </p>
+  <div style="text-align:left">
     <b>Lesson 8 </b> <a href="transitions-animations">Transitions &amp; Animations</a>
   </div>
 </div>
@@ -8411,6 +8412,7 @@ the animation.</p>
 
 <div align='justify'>
     <b>Lesson 7 </b> <a href="#css-transforms">Transforms</a>
+	<p>                                </p>
     <b>Lesson 9 </b> <a href="#feature-support-polyfills/">Feature Support &amp; Polyfills</a>
 </div>
 
@@ -8828,10 +8830,11 @@ bookmarklet open for debugging.</h6>
 -[Microsoft IE Virtual Machines](https://github.com/xdissent/ievms) via Greg Thornton
 
 <div>
-  <div style="float:left">
+  <div style='text-align: left;'>
     <b>Lesson 8 </b><a href="#transitions-animations">Transitions &amp; Animations</a>
   </div>
-  <div style="float:right">
+  <p>          </p>
+  <div style='text-align: right;'>
     <b>Lesson 10 </b><a href="#semantics-accessibility">Extending Semantics &amp; Accessibility</a>
   </div>
 </div>
