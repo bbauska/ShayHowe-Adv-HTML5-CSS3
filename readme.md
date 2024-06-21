@@ -788,7 +788,7 @@ rel="noopener noreferrer" target="_blank">syntax</a>.</p>
   <div style="float:left">
     <b>Lesson 1 </b> <a href="#performance-organization">Performance &amp; Organization</a>
   </div>
-  <div style="float:right">
+  <div style="float:left">
     <b>Lesson 3 </b> <a href="#complex-selectors">Complex Selectors</a>
   </div>
 </div>
@@ -1481,7 +1481,7 @@ box three.</p>
   <div style="float:left">
     <b>Lesson 1 </b> <a href="#performance-organization">Performance &amp; Organization</a>
   </div>
-  <div style="float:right">
+  <div style="float:left">
     <b>Lesson 3 </b> <a href="#complex-selectors">Complex Selectors</a>
   </div>
 </div>
@@ -3062,7 +3062,7 @@ think about revisiting it, and seeing if a better solution can be found.</p>
   <div style="float:left">
     <b>Lesson 2 </b><a href="#detailed-positioning">Detailed Positioning</a>
   </div>
-  <div style="float:right">
+  <div style="float:left">
     <b>Lesson 4 </b><a href="#responsive-web-design">Responsive Web Design</a>
   </div>
 </div>
@@ -3939,7 +3939,7 @@ website.</p>
   <div style="float:left">
     <b>Lesson 3 </b> <a href="#complex-selectors/">Complex Selectors</a>
   </div>
-  <div style="float:right">
+  <div style="float:left">
     <b>Lesson 5 </b> <a href="#preprocessors/">Preprocessors</a>
   </div>
 </div>
@@ -5669,7 +5669,7 @@ your research for each project and make the most educated decision.</p>
   <div style="float:left">
     <b>Lesson 4 </b><a href="#responsive-web-design/">Responsive Web Design</a>
   </div>
-  <div style="float:right">
+  <div style="float:left">
     <b>Lesson 6 </b><a href="#jquery/">jQuery</a>
   </div>
 </div>
@@ -6662,7 +6662,7 @@ animation is complete.</p>
   <div style="float:left">
     <b>Lesson 5 </b> <a href="#preprocessors">Preprocessors</a>
   </div>
-  <div style="float:right">
+  <div style="float:left">
     <b>Lesson 7 </b> <a href="#transforms">Transforms</a>
   </div>
 </div>
@@ -7574,10 +7574,10 @@ rel="noopener noreferrer" target="_blank">animations</a>.</p>
 </ul>
 
 <div>
-  <div style="float:left">
+  <div style="text-align:left">
     <b>Lesson 6 </b> <a href="jquery">jQuery</a>
   </div>
-  <div style="float:right">
+  <div style="text-align:right">
     <b>Lesson 8 </b> <a href="transitions-animations">Transitions &amp; Animations</a>
   </div>
 </div>
@@ -8409,13 +8409,9 @@ the animation.</p>
     Using CSS Animations</a> via Mozilla Developer Network.</li>
 </ul>
 
-<div>
-  <div style="float:left">
+<div align='justify'>
     <b>Lesson 7 </b> <a href="#css-transforms">Transforms</a>
-  </div>
-  <div style="float:right">
     <b>Lesson 9 </b> <a href="#feature-support-polyfills/">Feature Support &amp; Polyfills</a>
-  </div>
 </div>
 
 <h2 align="center" id="feature-support-polyfills">Lesson 9: Feature Support &amp; Polyfills</h2>
