@@ -19,7 +19,7 @@ output:
 <h4>HTML</h4>
 
 <ul>
-  <li><a href="#minify-compress-files">Minify & Compress Files</a></li>
+  <li><a href="#minify-compress-files">Minify &amp; Compress Files</a></li>
   <li><a href="#cache-common-files">Cache Common Files</a></li>
 </ul>
 
@@ -784,8 +784,8 @@ rel="noopener noreferrer" target="_blank">syntax</a>.</p>
     Data URIs</a> via CSS-Tricks</li>
 </ul>
 
-<b>Lesson 1</b> <a href="#performance-organization">Performance &amp; Organization</a>
-<b>Lesson 3</b> <a href="#complex-selectors">Complex Selectors</a>
+<b>Lesson 1 </b> <a href="#performance-organization">Performance &amp; Organization</a>
+<b>Lesson 3 </b> <a href="#complex-selectors">Complex Selectors</a>
 
 <h2 align="center" id="detailed-positioning">Lesson 2: Detailed Positioning</h2>
 
@@ -1471,8 +1471,8 @@ box three.</p>
 	A Detailed Look at the z-index CSS Property</a> via Impressive Webs</li>
 </ul>
 
-<b>Lesson 1</b> <a href="#performance-organization">Performance &amp; Organization</a>
-<b>Lesson 3</b> <a href="#complex-selectors">Complex Selectors</a>
+<b>Lesson 1 </b> <a href="#performance-organization">Performance &amp; Organization</a>
+<b>Lesson 3 </b> <a href="#complex-selectors">Complex Selectors</a>
 
 <h2 align="center" id="complex-selectors">Lesson 3: Complex Selectors</h2>
 
@@ -3047,8 +3047,8 @@ think about revisiting it, and seeing if a better solution can be found.</p>
 </ul>
 
  
-<b>Lesson 2</b><a href="#detailed-css-positioning/">Detailed Positioning</a>
-<b>Lesson 4</b><a href="#responsive-web-design/">Responsive Web Design</a>
+<b>Lesson 2 </b><a href="#detailed-positioning">Detailed Positioning</a>
+<b>Lesson 4 </b><a href="#responsive-web-design">Responsive Web Design</a>
 
 <h2 align="center" id="respoonsive-web-design">Lesson 4: Responsive Web Design</h2>
 
@@ -3088,7 +3088,7 @@ will surpass that of desktop Internet usage within the year.</p>
 build websites suitable for all users. The industry response to this
 question has become responsive web design, also known as RWD.</p>
 
-<h4>Responsive Overview</h4>
+<h4 id="responsive-overview">Responsive Overview</h4>
 
 <p>Responsive web design is the practice of building a website suitable to
 work on every device and every screen size, no matter how large or
@@ -3918,8 +3918,8 @@ website.</p>
     An Introduction to Meta Viewport and  @viewport</a> via Dev. Opera</li>
 </ul>
 
-<b>Lesson 3</b> <a href="#complex-selectors/">Complex Selectors</a>
-<b>Lesson 5</b> <a href="#preprocessors/">Preprocessors</a>
+<b>Lesson 3 </b> <a href="#complex-selectors/">Complex Selectors</a>
+<b>Lesson 5 </b> <a href="#preprocessors/">Preprocessors</a>
 
 <h2 align="center" id="preprocessors">Lesson 5: Preprocessors</h2>
 
@@ -3955,9 +3955,9 @@ to another type of data. In the case of HTML and CSS, some of the more
 popular preprocessor languages
 include <a href="http://haml.info/" 
 rel="noopener noreferrer" target="_blank">Haml</a> and <a href="http://sass-lang.com/" 
-rel="noopener noreferrer" target="_blank">Sass</a>.<br>
+rel="noopener noreferrer" target="_blank">Sass</a>.</p>
 
-Haml is processed into HTML and Sass is processed into CSS.</p>
+<p>Haml is processed into HTML and Sass is processed into CSS.</p>
 
 <p>Upon setting out to solve some of the more common problems, Haml and
 Sass found many additional ways to empower HTML and CSS, not only by
@@ -5642,8 +5642,8 @@ your research for each project and make the most educated decision.</p>
 	SassScript Function</a> via Sass Documentation</li>
 </ul>
 
-<b>Lesson 4</b><a href="#responsive-web-design/">Responsive Web Design</a>
-<b>Lesson 6</b><a href="#jquery/">jQuery</a>
+<b>Lesson 4 </b><a href="#responsive-web-design/">Responsive Web Design</a>
+<b>Lesson 6 </b><a href="#jquery/">jQuery</a>
 
 
 <h2 align="center" id="jquery">Lesson 6: jQuery</h2>
@@ -6630,10 +6630,10 @@ animation is complete.</p>
 
 -[jQuery UI](http://jqueryui.com/)
 
-<b>Lesson 5</b> <a href="#preprocessors">Preprocessors</a>
-<b>Lesson 7</b> <a href="#transforms">Transforms</a>
+<b>Lesson 5 </b> <a href="#preprocessors">Preprocessors</a>
+<b>Lesson 7 </b> <a href="#transforms">Transforms</a>
 
-<h2 align="center">Lesson 7: Transforms</h2>
+<h2 align="center" id="transforms">Lesson 7: Transforms</h2>
 
 <h3>In this Lesson 7</h3>
 
@@ -7539,8 +7539,8 @@ rel="noopener noreferrer" target="_blank">animations</a>.</p>
 	Backface Visibility</a> via CSS-Tricks</li>
 </ul>
 
-<b>Lesson 6</b> <a href="jquery">jQuery</a>
-<b>Lesson 8</b> <a href="transitions-animations">Transitions &amp; Animations</a>
+<b>Lesson 6 </b> <a href="jquery">jQuery</a>
+<b>Lesson 8 </b> <a href="transitions-animations">Transitions &amp; Animations</a>
 
 
 <h2 align="center" id="#transitions-animations">Lesson 8: Transitions &amp; Animations</h2>
@@ -7575,7 +7575,7 @@ to be altered in multiple keyframes. Transitions provide a change from
 one state to another, while animations can set multiple points of
 transition upon different keyframes.</p>
 
-<h4>Transitions</h4>
+<h4 id="transitions">Transitions</h4>
 
 <p>As mentioned, for a 
 <a href="http://www.alistapart.com/articles/understanding-css3-transitions/" 
@@ -7861,7 +7861,7 @@ can be declared as comma separated values.</p>
 
 <h4>Transition Delay Demo</h4>
 
-<h4>Shorthand Transitions</h4>
+<h4 id="shorthand-transitions">Shorthand Transitions</h4>
 
 <p>Declaring every transition property individually can become quite
 intensive, especially with vendor prefixes. Fortunately there is a
@@ -7983,7 +7983,7 @@ transition values.</p>
 
 <h4>Demo</h4>
 
-<h4>Animations</h4>
+<h4 id="animations">Animations</h4>
 
 <p>Transitions do a great job of building out visual interactions from one
 state to another, and are perfect for these kinds of single state
@@ -8157,7 +8157,7 @@ the left, however only when hovering over the stage.</p>
 
 <p>Hover over the ball below to see the animation in action.</p>
 
-<h4>Customizing Animations</h4>
+<h4 id="customizing-animations">Customizing Animations</h4>
 
 <p>Animations also provide the ability to further customize an element's
 behavior, including the ability to declare the number of times an
@@ -8328,7 +8328,7 @@ the forwards and backwards values.</p>
 <p>Hover over the ball below to see the animation in action. Click to pause
 the animation.</p>
 
-<h4>Shorthand Animations</h4>
+<h4 id="shorthand-animations">Shorthand Animations</h4>
 
 <p>Fortunately <a href="https://developer.mozilla.org/en-US/docs/CSS/Using_CSS_animations" 
 rel="noopener noreferrer" target="_blank">animations</a>, just like transitions, 
@@ -8370,11 +8370,11 @@ the animation.</p>
     Using CSS Animations</a> via Mozilla Developer Network.</li>
 </ul>
 
-<b>Lesson 7</b> <a href="css-transforms">Transforms</a>
-<b>Lesson 9</b> <a href="feature-support-polyfills/">Feature Support &amp; Polyfills</a>
+<b>Lesson 7 </b> <a href="#css-transforms">Transforms</a>
+<b>Lesson 9 </b> <a href="#feature-support-polyfills/">Feature Support &amp; Polyfills</a>
 
 
-<h2 align="center" id="#feature-support-polyfills">Lesson 9: Feature Support &amp; Polyfills</h2>
+<h2 align="center" id="feature-support-polyfills">Lesson 9: Feature Support &amp; Polyfills</h2>
 
 <h3>In this Lesson 9</h3>
 
@@ -8787,10 +8787,10 @@ bookmarklet open for debugging.</h6>
 
 -[Microsoft IE Virtual Machines](https://github.com/xdissent/ievms) via Greg Thornton
 
-<b>Lesson 8</b><a href="transitions-animations">Transitions &amp; Animations</a>
-<b>Lesson 10</b><a href="semantics-accessibility">Extending Semantics &amp; Accessibility</a>
+<b>Lesson 8 </b><a href="#transitions-animations">Transitions &amp; Animations</a>
+<b>Lesson 10 </b><a href="#semantics-accessibility">Extending Semantics &amp; Accessibility</a>
 
-<h2 id="#semantice-accessibility">Lesson 10 Extending Semantics & Accessibility</h2>
+<h2 id="semantics-accessibility">Lesson 10 Extending Semantics & Accessibility</h2>
 
 <h3>In this Lesson 10</h3>
 
@@ -9675,7 +9675,7 @@ structure cannot be determined.
 
 </details>
 
-<b>Lesson 9</b> <a href="feature-support-polyfills">Feature Support &amp; Polyfills</a>
+<b>Lesson 9 </b> <a href="feature-support-polyfills">Feature Support &amp; Polyfills</a>
 
 ...the end.
 <!-- 5/14/2024 4:58pm -->
