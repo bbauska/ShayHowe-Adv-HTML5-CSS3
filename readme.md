@@ -8883,7 +8883,7 @@ bookmarklet open for debugging.</h6>
 
 -[Microsoft IE Virtual Machines](https://github.com/xdissent/ievms) via Greg Thornton
 
-<!-- 93 - 15 = 78 spaces between -->
+<!-- 73 spaces between -->
 <div>
   <b>Lesson 8 </b><a href="#transitions-animations">Transitions &amp; Animations</a>
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -8892,7 +8892,7 @@ bookmarklet open for debugging.</h6>
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;
   <b>Lesson 10 </b><a href="#semantics-accessibility">Extending Semantics &amp; Accessibility</a>
 </div>
 
