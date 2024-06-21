@@ -3953,7 +3953,7 @@ website.</p>
     An Introduction to Meta Viewport and  @viewport</a> via Dev. Opera</li>
 </ul>
 
-<!-- 104 + 11 spaces -->
+<!-- 115 spaces = perfect w/30 chars 17 left + 13 right -->
 <div>
     <b>Lesson 3 </b> <a href="#complex-selectors/">Complex Selectors</a>
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -5690,10 +5690,10 @@ your research for each project and make the most educated decision.</p>
 	SassScript Function</a> via Sass Documentation</li>
 </ul>
 
-<!-- 115 + 11 spaces -->
+<!-- 127 spaces + 6 right + 21 left -->
 <div>
     <b>Lesson 4 </b><a href="#responsive-web-design/">Responsive Web Design</a>
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -6690,11 +6690,11 @@ animation is complete.</p>
 
 -[jQuery UI](http://jqueryui.com/)
 
-<!-- 92 + 15 = 107 + 25 -->
+<!-- 126, 13 left + 10 right -->
 <div>
   <b>Lesson 5 </b> <a href="#preprocessors">Preprocessors</a>
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -7613,7 +7613,7 @@ rel="noopener noreferrer" target="_blank">animations</a>.</p>
 	Backface Visibility</a> via CSS-Tricks</li>
 </ul>
 
-<!-- 92 + 34 -->
+<!-- 120 -->
 <p>
 <b>Lesson 6 </b> <a href="jquery">jQuery</a>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -7626,7 +7626,7 @@ rel="noopener noreferrer" target="_blank">animations</a>.</p>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <b>Lesson 8 </b> <a href="transitions-animations">Transitions &amp; Animations</a>
 </p>
 
