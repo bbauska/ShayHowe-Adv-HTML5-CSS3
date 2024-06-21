@@ -785,10 +785,10 @@ rel="noopener noreferrer" target="_blank">syntax</a>.</p>
 </ul>
 
 <div>
-  <div style="float:left">
+  <div style='float:left;'>
     <b>Lesson 1 </b> <a href="#performance-organization">Performance &amp; Organization</a>
   </div>
-  <div style="float:right">
+  <div style='float:right;'>
     <b>Lesson 3 </b> <a href="#complex-selectors">Complex Selectors</a>
   </div>
 </div>
@@ -1478,10 +1478,10 @@ box three.</p>
 </ul>
 
 <div>
-  <div style="float:left">
+  <div style='float:left;'>
     <b>Lesson 1 </b> <a href="#performance-organization">Performance &amp; Organization</a>
   </div>
-  <div style="float:left">
+  <div style='float:right;'>
     <b>Lesson 3 </b> <a href="#complex-selectors">Complex Selectors</a>
   </div>
 </div>
@@ -3059,10 +3059,10 @@ think about revisiting it, and seeing if a better solution can be found.</p>
 </ul>
 
 <div>
-  <div style="float:left">
+  <div style='float:left;'>
     <b>Lesson 2 </b><a href="#detailed-positioning">Detailed Positioning</a>
   </div>
-  <div style="float:left">
+  <div style='float:left;'>
     <b>Lesson 4 </b><a href="#responsive-web-design">Responsive Web Design</a>
   </div>
 </div>
@@ -3936,10 +3936,10 @@ website.</p>
 </ul>
 
 <div>
-  <div style="float:left">
+  <div style="float:left;">
     <b>Lesson 3 </b> <a href="#complex-selectors/">Complex Selectors</a>
   </div>
-  <div style="float:left">
+  <div style="float:right;">
     <b>Lesson 5 </b> <a href="#preprocessors/">Preprocessors</a>
   </div>
 </div>
@@ -6659,10 +6659,10 @@ animation is complete.</p>
 -[jQuery UI](http://jqueryui.com/)
 
 <div>
-  <div style="float:left">
+  <div style='text-align:left;'>
     <b>Lesson 5 </b> <a href="#preprocessors">Preprocessors</a>
   </div>
-  <div style="float:right">
+  <div style='text-align:right;'>
     <b>Lesson 7 </b> <a href="#transforms">Transforms</a>
   </div>
 </div>
@@ -7577,7 +7577,6 @@ rel="noopener noreferrer" target="_blank">animations</a>.</p>
   <div style="text-align:left">
     <b>Lesson 6 </b> <a href="jquery">jQuery</a>
   </div>
-  <p>                                         </p>
   <div style="text-align:left">
     <b>Lesson 8 </b> <a href="transitions-animations">Transitions &amp; Animations</a>
   </div>
@@ -8412,7 +8411,6 @@ the animation.</p>
 
 <div align='justify'>
     <b>Lesson 7 </b> <a href="#css-transforms">Transforms</a>
-	<p>                                </p>
     <b>Lesson 9 </b> <a href="#feature-support-polyfills/">Feature Support &amp; Polyfills</a>
 </div>
 
@@ -8829,11 +8827,10 @@ bookmarklet open for debugging.</h6>
 
 -[Microsoft IE Virtual Machines](https://github.com/xdissent/ievms) via Greg Thornton
 
-<div>
+<div style='text-align: center;'>
   <div style='text-align: left;'>
     <b>Lesson 8 </b><a href="#transitions-animations">Transitions &amp; Animations</a>
   </div>
-  <p>          </p>
   <div style='text-align: right;'>
     <b>Lesson 10 </b><a href="#semantics-accessibility">Extending Semantics &amp; Accessibility</a>
   </div>
