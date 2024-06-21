@@ -784,7 +784,7 @@ rel="noopener noreferrer" target="_blank">syntax</a>.</p>
     Data URIs</a> via CSS-Tricks</li>
 </ul>
 
-<!-- 73 spaces -->
+<!-- 70 spaces -->
 <div>
     <b>Lesson 1 </b> <a href="#performance-organization">Performance &amp; Organization</a>
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -793,7 +793,7 @@ rel="noopener noreferrer" target="_blank">syntax</a>.</p>
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <b>Lesson 3 </b> <a href="#complex-selectors">Complex Selectors</a>
 </div>
 
