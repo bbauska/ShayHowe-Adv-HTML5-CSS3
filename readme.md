@@ -763,7 +763,7 @@ rel="noopener noreferrer" target="_blank">syntax</a>.</p>
 <ul>
   <li><a href="http://developer.yahoo.com/performance/rules.html" 
     rel="noopener noreferrer" target="_blank">
-	Best Practices for Speeding Up Your Web Site</a> via Yahoo! Developer Network</li>
+    Best Practices for Speeding Up Your Web Site</a> via Yahoo! Developer Network</li>
   <li><a href="https://www.stevesouders.com/blog/2012/02/10/the-performance-golden-rule/"
     rel="noopener noreferrer" target="_blank">
     Rules for Faster-Loading Web  Sites</a> via Steve Sounders</li>
@@ -778,7 +778,7 @@ rel="noopener noreferrer" target="_blank">syntax</a>.</p>
     Minifying and Optimizing Files</a> via Scott Hanselman</li>
   <li><a href="http://html5boilerplate.com/"
     rel="noopener noreferrer" target="_blank">
-	HTML5 Boilerplate</a></li>
+    HTML5 Boilerplate</a></li>
   <li><a href="https://css-tricks.com/data-uris/"
     rel="noopener noreferrer" target="_blank">
     Data URIs</a> via CSS-Tricks</li>
@@ -1470,16 +1470,16 @@ box three.</p>
 <ul>
   <li><a href="https://css-tricks.com/all-about-floats/" 
     rel="noopener noreferrer" target="_blank">
-	All About Floats</a> via CSS-Tricks</li>
+    All About Floats</a> via CSS-Tricks</li>
   <li><a href="http://nicolasgallagher.com/micro-clearfix-hack/" 
     rel="noopener noreferrer" target="_blank">
-	A New Micro Clearfix Hack</a> via Nicolas Gallagher</li>
+    A New Micro Clearfix Hack</a> via Nicolas Gallagher</li>
   <li><a href="http://www.alistapart.com/articles/css-positioning-101/" 
     rel="noopener noreferrer" target="_blank">
-	CSS Positioning 101</a> via A List Apart</li>
+    CSS Positioning 101</a> via A List Apart</li>
   <li><a href="http://www.impressivewebs.com/a-detailed-look-at-the-z-index-css-property/"
     rel="noopener noreferrer" target="_blank">
-	A Detailed Look at the z-index CSS Property</a> via Impressive Webs</li>
+    A Detailed Look at the z-index CSS Property</a> via Impressive Webs</li>
 </ul>
 
 <!-- 91 spaces -->
@@ -3053,19 +3053,19 @@ think about revisiting it, and seeing if a better solution can be found.</p>
     The 30 CSS Selectors you Must Memorize</a> via Nettuts+.</li>
   <li><a href="https://css-tricks.com/child-and-sibling-selectors/"
     rel="noopener noreferrer" target="_blank">
-	Child and Sibling Selectors</a> via CSS-Tricks.</li>
+    Child and Sibling Selectors</a> via CSS-Tricks.</li>
   <li><a href="http://www.css3.info/preview/attribute-selectors/"
     rel="noopener noreferrer" target="_blank">
-	CSS3 Substring Matching Attribute Selectors</a> via CSS3.info</li>
+    CSS3 Substring Matching Attribute Selectors</a> via CSS3.info</li>
   <li><a href="http://coding.smashingmagazine.com/2011/03/30/how-to-use-css3-pseudo-classes/"
     rel="noopener noreferrer" target="_blank">
-	How To Use CSS3 Pseudo-Classes</a> via Smashing Magazine.</li>
+    How To Use CSS3 Pseudo-Classes</a> via Smashing Magazine.</li>
   <li><a href="http://reference.sitepoint.com/css/understandingnthchildexpressions"
     rel="noopener noreferrer" target="_blank">
-	Understanding :nth-child Pseudo-class Expressions</a> via SitePoint.</li>
+    Understanding :nth-child Pseudo-class Expressions</a> via SitePoint.</li>
   <li<a href="http://coding.smashingmagazine.com/2009/08/17/taming-advanced-css-selectors/"
     rel="noopener noreferrer" target="_blank">
-	Taming Advanced CSS Selectors</a> via Smashing Magazine.</li>
+    Taming Advanced CSS Selectors</a> via Smashing Magazine.</li>
 </ul>
 
 <!-- 98 spaces -->
@@ -5462,23 +5462,23 @@ entities, while comparison operators determine equality or different
 between to entities.</p>
 
 ```
-	- <
-	Less than
+    - <
+    Less than
 
-	- >
-	Greater than
+    - >
+    Greater than
 
-	- ==
-	Equal to
+    - ==
+    Equal to
 
-	- <=
-	Less than or equal to
+    - <=
+    Less than or equal to
 
-	- >=
-	Greather than or equal to
+    - >=
+    Greather than or equal to
 
-	- !=
-	Not equal to
+    - !=
+    Not equal to
 ```
 
 ```
@@ -5670,22 +5670,22 @@ your research for each project and make the most educated decision.</p>
 <ul>
   <li><a href="http://haml.info/" 
     rel="noopener noreferrer" target="_blank">
-	Haml</a> --- HTML Abstraction Markup Language</li>
+    Haml</a> --- HTML Abstraction Markup Language</li>
   <li><a href="http://sass-lang.com/" 
     rel="noopener noreferrer" target="_blank">
-	Sass</a> --- Syntactically Awesome Stylesheets</li>
+    Sass</a> --- Syntactically Awesome Stylesheets</li>
   <li><a href="http://haml.info/docs/yardoc/file.REFERENCE.html" 
     rel="noopener noreferrer" target="_blank">
-	Haml Documentation Reference</a></li>
+    Haml Documentation Reference</a></li>
   <li><a href="https://sass-lang.com/documentation/" 
     rel="noopener noreferrer" target="_blank">
-	Sass Documentation Reference</a></li>
+    Sass Documentation Reference</a></li>
   <li><a href="http://sassmeister.com/" 
     rel="noopener noreferrer" target="_blank">
-	Sass Playground</a> via SassMeister</li>
+    Sass Playground</a> via SassMeister</li>
   <li><a href="https://sass-lang.com/documentation/modules" 
     rel="noopener noreferrer" target="_blank">
-	SassScript Function</a> via Sass Documentation</li>
+    SassScript Function</a> via Sass Documentation</li>
 </ul>
 
 <!-- 127 spaces + 6 right + 21 left -->
@@ -7596,19 +7596,19 @@ rel="noopener noreferrer" target="_blank">animations</a>.</p>
     Transform Property</a> via CSS3 Files</li>
   <li><a href="http://dev.opera.com/articles/view/understanding-the-css-transforms-matrix/"
     rel="noopener noreferrer" target="_blank">
-	Understanding the CSS Transforms Matrix</a> via Dev.Opera</li>
+    Understanding the CSS Transforms Matrix</a> via Dev.Opera</li>
   <li><a href="http://24ways.org/2010/intro-to-css-3d-transforms"
     rel="noopener noreferrer" target="_blank">
-	An Introduction to CSS 3-D Transforms</a> via 24 Ways</li>
+    An Introduction to CSS 3-D Transforms</a> via 24 Ways</li>
   <li><a href="https://developer.mozilla.org/en/CSS/transform-function"
     rel="noopener noreferrer" target="_blank">
-	Transform Function</a> via Mozilla Developer Network</li>
+    Transform Function</a> via Mozilla Developer Network</li>
   <li><a href="http://www.webkit.org/blog-files/3d-transforms/transform-style.html"
     rel="noopener noreferrer" target="_blank">
-	Transform Style</a> via WebKit</li>
+    Transform Style</a> via WebKit</li>
   <li><a href="https://css-tricks.com/almanac/properties/b/backface-visibility/"
     rel="noopener noreferrer" target="_blank">
-	Backface Visibility</a> via CSS-Tricks</li>
+    Backface Visibility</a> via CSS-Tricks</li>
 </ul>
 
 <!-- 120 - 7 -->
@@ -9710,7 +9710,7 @@ nested within other regions of the document structure.
 
 | Element | Implied Role  | Acceptable Roles                        |
 |---------|---------------|-----------------------------------------|
-| article | article	      | application, article, document, or main |
+| article | article          | application, article, document, or main |
 | aside   | complementary | complementary, note, or search          |
 | footer  | —             | contentinfo (Only once per page)        |
 | header  | —             | banner (Only once per page)             |
