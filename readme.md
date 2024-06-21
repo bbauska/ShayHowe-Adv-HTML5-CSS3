@@ -784,8 +784,14 @@ rel="noopener noreferrer" target="_blank">syntax</a>.</p>
     Data URIs</a> via CSS-Tricks</li>
 </ul>
 
-<b>Lesson 1 </b> <a href="#performance-organization">Performance &amp; Organization</a>
-<b>Lesson 3 </b> <a href="#complex-selectors">Complex Selectors</a>
+<div>
+  <div style="float:left">
+    <b>Lesson 1 </b> <a href="#performance-organization">Performance &amp; Organization</a>
+  </div>
+  <div style="float:right">
+    <b>Lesson 3 </b> <a href="#complex-selectors">Complex Selectors</a>
+  </div>
+</div>
 
 <h2 align="center" id="detailed-positioning">Lesson 2: Detailed Positioning</h2>
 
@@ -1471,8 +1477,14 @@ box three.</p>
 	A Detailed Look at the z-index CSS Property</a> via Impressive Webs</li>
 </ul>
 
-<b>Lesson 1 </b> <a href="#performance-organization">Performance &amp; Organization</a>
-<b>Lesson 3 </b> <a href="#complex-selectors">Complex Selectors</a>
+<div>
+  <div style="float:left">
+    <b>Lesson 1 </b> <a href="#performance-organization">Performance &amp; Organization</a>
+  </div>
+  <div style="float:right">
+    <b>Lesson 3 </b> <a href="#complex-selectors">Complex Selectors</a>
+  </div>
+</div>
 
 <h2 align="center" id="complex-selectors">Lesson 3: Complex Selectors</h2>
 
@@ -3046,9 +3058,14 @@ think about revisiting it, and seeing if a better solution can be found.</p>
 	Taming Advanced CSS Selectors</a> via Smashing Magazine.</li>
 </ul>
 
- 
-<b>Lesson 2 </b><a href="#detailed-positioning">Detailed Positioning</a>
-<b>Lesson 4 </b><a href="#responsive-web-design">Responsive Web Design</a>
+<div>
+  <div style="float:left">
+    <b>Lesson 2 </b><a href="#detailed-positioning">Detailed Positioning</a>
+  </div>
+  <div style="float:right">
+    <b>Lesson 4 </b><a href="#responsive-web-design">Responsive Web Design</a>
+  </div>
+</div>
 
 <h2 align="center" id="respoonsive-web-design">Lesson 4: Responsive Web Design</h2>
 
@@ -3918,8 +3935,14 @@ website.</p>
     An Introduction to Meta Viewport and  @viewport</a> via Dev. Opera</li>
 </ul>
 
-<b>Lesson 3 </b> <a href="#complex-selectors/">Complex Selectors</a>
-<b>Lesson 5 </b> <a href="#preprocessors/">Preprocessors</a>
+<div>
+  <div style="float:left">
+    <b>Lesson 3 </b> <a href="#complex-selectors/">Complex Selectors</a>
+  </div>
+  <div style="float:right">
+    <b>Lesson 5 </b> <a href="#preprocessors/">Preprocessors</a>
+  </div>
+</div>
 
 <h2 align="center" id="preprocessors">Lesson 5: Preprocessors</h2>
 
@@ -5642,9 +5665,14 @@ your research for each project and make the most educated decision.</p>
 	SassScript Function</a> via Sass Documentation</li>
 </ul>
 
-<b>Lesson 4 </b><a href="#responsive-web-design/">Responsive Web Design</a>
-<b>Lesson 6 </b><a href="#jquery/">jQuery</a>
-
+<div>
+  <div style="float:left">
+    <b>Lesson 4 </b><a href="#responsive-web-design/">Responsive Web Design</a>
+  </div>
+  <div style="float:right">
+    <b>Lesson 6 </b><a href="#jquery/">jQuery</a>
+  </div>
+</div>
 
 <h2 align="center" id="jquery">Lesson 6: jQuery</h2>
 
@@ -6634,7 +6662,7 @@ animation is complete.</p>
   <div style="float:left">
     <b>Lesson 5 </b> <a href="#preprocessors">Preprocessors</a>
   </div>
-  div style="float:right">
+  <div style="float:right">
     <b>Lesson 7 </b> <a href="#transforms">Transforms</a>
   </div>
 </div>
@@ -7545,9 +7573,11 @@ rel="noopener noreferrer" target="_blank">animations</a>.</p>
 	Backface Visibility</a> via CSS-Tricks</li>
 </ul>
 
-<div style="float:left">
-  <b>Lesson 6 </b> <a href="jquery">jQuery</a>
-  <div align="right">
+<div>
+  <div style="float:left">
+    <b>Lesson 6 </b> <a href="jquery">jQuery</a>
+  </div>
+  <div style="float:right">
     <b>Lesson 8 </b> <a href="transitions-animations">Transitions &amp; Animations</a>
   </div>
 </div>
@@ -8379,9 +8409,11 @@ the animation.</p>
     Using CSS Animations</a> via Mozilla Developer Network.</li>
 </ul>
 
-<div style="float:left">
-<b>Lesson 7 </b> <a href="#css-transforms">Transforms</a>
-  <div align="right">
+<div>
+  <div style="float:left">
+    <b>Lesson 7 </b> <a href="#css-transforms">Transforms</a>
+  </div>
+  <div style="float:right">
     <b>Lesson 9 </b> <a href="#feature-support-polyfills/">Feature Support &amp; Polyfills</a>
   </div>
 </div>
@@ -8799,9 +8831,11 @@ bookmarklet open for debugging.</h6>
 
 -[Microsoft IE Virtual Machines](https://github.com/xdissent/ievms) via Greg Thornton
 
-<div style="float:left">
-  <b>Lesson 8 </b><a href="#transitions-animations">Transitions &amp; Animations</a>
-  <div align="right">
+<div>
+  <div style="float:left">
+    <b>Lesson 8 </b><a href="#transitions-animations">Transitions &amp; Animations</a>
+  </div>
+  <div style="float:right">
     <b>Lesson 10 </b><a href="#semantics-accessibility">Extending Semantics &amp; Accessibility</a>
   </div>
 </div>
