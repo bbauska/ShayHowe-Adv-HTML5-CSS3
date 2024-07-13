@@ -1,7 +1,7 @@
 ---
 title: "Shay & Howe's Advanced HTML and CSS"
 author: "Brian Bauska (bbauska)"
-date first editted: "3/31/2024 6+pm"
+date created: "3/31/2024 6+pm"
 date last editted: "6/21/2024 1+am"
 output:
   markdown:
