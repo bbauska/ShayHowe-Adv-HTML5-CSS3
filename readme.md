@@ -1063,12 +1063,12 @@ specific direction.</p>
 <h4>HTML</h4>
 
 <pre>
- 1  <div class="box-set">
- 2    <figure class="box box-1">Box 1</figure>
- 3    <figure class="box box-2">Box 2</figure>
- 4    <figure class="box box-3">Box 3</figure>
- 5    <figure class="box box-4">Box 4</figure>
- 6  </div>
+ 1  &lt;div class="box-set"&gt;
+ 2    &lt;figure class="box box-1"&gt;Box 1&lt;/figure&gt;
+ 3    &lt;figure class="box box-2"&gt;Box 2&lt;/figure&gt;
+ 4    &lt;figure class="box box-3"&gt;Box 3&lt;/figure&gt;
+ 5    &lt;figure class="box box-4"&gt;Box 4&lt;/figure&gt;
+ 6  &lt;/div&gt;
  7  
 </pre>
 
@@ -1136,12 +1136,12 @@ positioned elements default position.</p>
 <h4>HTML</h4>
 
 <pre>
- 1  <div class="box-set">
- 2    <figure class="box box-1">Box 1</figure>
- 3    <figure class="box box-2">Box 2</figure>
- 4    <figure class="box box-3">Box 3</figure>
- 5    <figure class="box box-4">Box 4</figure>
- 6  </div>
+ 1  &lt;div class="box-set"&gt;
+ 2    &lt;figure class="box box-1"&gt;Box 1&lt;/figure&gt;
+ 3    &lt;figure class="box box-2"&gt;Box 2&lt;/figure&gt;
+ 4    &lt;figure class="box box-3"&gt;Box 3&lt;/figure&gt;
+ 5    &lt;figure class="box box-4"&gt;Box 4&lt;/figure&gt;
+ 6  &lt;/div&gt;
  7  
 </pre>
 
@@ -1217,12 +1217,12 @@ value.</p>
   <summary>HTML</summary>
 
 <pre>
- 1  <div class="box-set">
- 2    <figure class="box box-1">Box 1</figure>
- 3    <figure class="box box-2">Box 2</figure>
- 4    <figure class="box box-3">Box 3</figure>
- 5    <figure class="box box-4">Box 4</figure>
- 6  </div>
+ 1  &lt;div class="box-set"&gt;
+ 2    &lt;figure class="box box-1"&gt;Box 1&lt;/figure&gt;
+ 3    &lt;figure class="box box-2"&gt;Box 2&lt;/figure&gt;
+ 4    &lt;figure class="box box-3"&gt;Box 3&lt;/figure&gt;
+ 5    &lt;figure class="box box-4"&gt;Box 4&lt;/figure&gt;
+ 6  &lt;/div&gt;
  7  
 </pre>
 
@@ -1301,12 +1301,12 @@ and not the containing, relatively positioned parent.</p>
 <h4>HTML</h4>
 
 <pre>
- 1  <div class="box-set">
- 2    <figure class="box box-1">Box 1</figure>
- 3    <figure class="box box-2">Box 2</figure>
- 4    <figure class="box box-3">Box 3</figure>
- 5    <figure class="box box-4">Box 4</figure>
- 6  </div>
+ 1  &lt;div class="box-set"&gt;
+ 2    &lt;figure class="box box-1"&gt;Box 1&lt;/figure&gt;
+ 3    &lt;figure class="box box-2"&gt;Box 2&lt;/figure&gt;
+ 4    &lt;figure class="box box-3"&gt;Box 3&lt;/figure&gt;
+ 5    &lt;figure class="box box-4"&gt;Box 4&lt;/figure&gt;
+ 6  &lt;/div&gt;
  7 
 </pre>
 
@@ -1357,7 +1357,7 @@ freely.</p>
 <h4>HTML</h4>
 
 <pre>
- 1  <footer>Fixed Footer</footer>
+ 1  &lt;footer&gt;Fixed Footer&lt;/footer&gt;
  2  
 </pre>
 
@@ -1413,12 +1413,12 @@ box three.</p>
 <h4>HTML</h4>
 
 <pre>
- 1  <div class="box-set">
- 2  <figure class="box box-1">Box 1</figure>  
- 3  <figure class="box box-2">Box 2</figure>  
- 4  <figure class="box box-3">Box 3</figure>  
- 5  <figure class="box box-4">Box 4</figure>  
- 6  </div>
+ 1  &lt;div class="box-set"&gt;
+ 2  &lt;figure class="box box-1"&gt;Box 1&lt;/figure&gt;  
+ 3  &lt;figure class="box box-2"&gt;Box 2&lt;/figure&gt;  
+ 4  &lt;figure class="box box-3"&gt;Box 3&lt;/figure&gt;  
+ 5  &lt;figure class="box box-4"&gt;Box 4&lt;/figure&gt;  
+ 6  &lt;/div&gt;
  7 
 </pre>
 
@@ -1481,7 +1481,7 @@ box three.</p>
 
 <!-- 80 spaces -->
 <p>
-    <b>Lesson 1 </b> <a href="performance-organization">Performance &amp; Organization</a>
+    <b>Lesson 1</b> <a href="performance-organization">Performance &amp; Organization</a>
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -1489,7 +1489,7 @@ box three.</p>
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <b>Lesson 3 </b> <a href="#complex-selectors">Complex Selectors</a>
+    <b>Lesson 3</b> <a href="#complex-selectors">Complex Selectors</a>
 </p>
 
 <h2 align="center" id="#complex-selectors">Lesson 3: Complex Selectors</h2>
@@ -1552,10 +1552,10 @@ be used once per page.</p>
 <h4>HTML</h4>
 
 <pre>
- 1  <section id="intro">
- 2    <h1>...</h1>
- 3    <h2 class="tagline">...</h2>
- 4  </section>
+ 1  &lt;section id="intro"&gt;
+ 2    &lt;h1&gt;...&lt;/h1&gt;
+ 3    &lt;h2 class="tagline"&gt;...&lt;/h2&gt;
+ 4  &lt;/section&gt;
  5  
 </pre>
 
@@ -1604,13 +1604,13 @@ any h2 element outside of the article element is not selected.</p>
 <h4>HTML</h4>
 
 <pre>
- 1  <h2>...</h2>  
- 2  <article>
- 3    <h2>This heading will be selected</h2>
- 4    <div> 
- 5      <h2>This heading will be selected</h2>
- 6    </div>
- 7  </article> 
+ 1  &lt;h2&gt;...&lt;/h2&gt;  
+ 2  &lt;article&gt;
+ 3    &lt;h2&gt;This heading will be selected&lt;/h2&gt;
+ 4    &lt;div&gt; 
+ 5      &lt;h2&gt;This heading will be selected&lt;/h2&gt;
+ 6    &lt;/div&gt;
+ 7  &lt;/article&gt; 
  8 
 </pre>
 
@@ -1634,20 +1634,20 @@ article, thus selected.</p>
 <h4>CSS</h4>
 
 <pre>
- 1  article > p {...}
+ 1  article &gt; p {...}
  2 
 </pre>
 
 <h4>HTML</h4>
 
 <pre>
- 1  <p>...</p> 
- 2  <article>
- 3    <p>This paragraph will be selected</p>
- 4    <div> 
- 5      <p>...</p> 
- 6    </div>
- 7  </article> 
+ 1  &lt;p&gt;...&lt;/p&gt; 
+ 2  &lt;article&gt;
+ 3    &lt;p&gt;This paragraph will be selected&lt;/p&gt;
+ 4    &lt;div&gt; 
+ 5      &lt;p&gt;...&lt;/p&gt; 
+ 6    &lt;/div&gt;
+ 7  &lt;/article&gt; 
  8 
 </pre>
 
@@ -1695,16 +1695,16 @@ sibling heading.</p>
   <summary>HTML</summary>
   
 <pre>
- 1  <p>...</p> 
- 2  <section>
- 3    <p>...</p> 
- 4    <h2>...</h2>  
- 5    <p>This paragraph will be selected</p>
- 6    <div> 
- 7      <p>...</p> 
- 8    </div>
- 9    <p>This paragraph will be selected</p>
- 10 </section> 
+ 1  &lt;p&gt;...&lt;/p&gt; 
+ 2  &lt;section&gt;
+ 3    &lt;p&gt;...&lt;/p&gt; 
+ 4    &lt;h2&gt;...&lt;/h2&gt;  
+ 5    &lt;p&gt;This paragraph will be selected&lt;/p&gt;
+ 6    &lt;div&gt; 
+ 7      &lt;p&gt;...&lt;/p&gt; 
+ 8    &lt;/div&gt;
+ 9    &lt;p&gt;This paragraph will be selected&lt;/p&gt;
+ 10 &lt;/section&gt; 
  11 
 </pre>
 
@@ -1743,16 +1743,16 @@ selected.</p>
   <summary>HTML</summary>
 
 <pre>
- 1  <p>...</p>
- 2  <section>
- 3    <p>...</p> 
- 4    <h2>...</h2>  
- 5    <p>This paragraph will be selected</p>
- 6    <div> 
- 7      <p>...</p> 
- 8    </div>
- 9    <p>...</p> 
- 10 </section> 
+ 1  &lt;p&gt;...&lt;/p&gt;
+ 2  &lt;section&gt;
+ 3    &lt;p&gt;...&lt;/p&gt; 
+ 4    &lt;h2&gt;...&lt;/h2&gt;  
+ 5    &lt;p&gt;This paragraph will be selected&lt;/p&gt;
+ 6    &lt;div&gt; 
+ 7      &lt;p&gt;...&lt;/p&gt; 
+ 8    &lt;/div&gt;
+ 9    &lt;p&gt;...&lt;/p&gt; 
+ 10 &lt;/section&gt; 
  11 
 </pre>
 
@@ -1764,16 +1764,16 @@ selected.</p>
   <summary>HTML</summary>
 
 <pre>
- 1  <input type="checkbox" id="toggle"> 
- 2  <label for="toggle">&#9776;</label> 
- 3  <nav> 
- 4    <ul>  
- 5      <li><a href="#">Home</a></li>
- 6      <li><a href="#">About</a></li>  
- 7      <li><a href="#">Services</a></li>  
- 8      <li><a href="#">Contact</a></li>
- 9    </ul> 
- 10 </nav>
+ 1  &lt;input type="checkbox" id="toggle"&gt; 
+ 2  &lt;label for="toggle"&gt;&#9776;&lt;/label&gt; 
+ 3  &lt;nav&gt; 
+ 4    &lt;ul&gt;  
+ 5      &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+ 6      &lt;li&gt;&lt;a href="#"&gt;About&lt;/a&gt;&lt;/li&gt;  
+ 7      &lt;li&gt;&lt;a href="#"&gt;Services&lt;/a&gt;&lt;/li&gt;  
+ 8      &lt;li&gt;&lt;a href="#"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+ 9    &lt;/ul&gt; 
+ 10 &lt;/nav&gt;
  11 
 </pre>
 
@@ -1883,7 +1883,7 @@ type or class, all depending on the level of specificity desired.</p>
 <h4>HTML</h4>
 
 <pre>
- 1  <a href="#" target="_blank">...</a>
+ 1  &lt;a href="#" target="_blank"&gt;...&lt;/a&gt;
  2 
 </pre>
 
