@@ -2,7 +2,7 @@
 title: "Shay & Howe's Advanced HTML and CSS"
 author: "Brian Bauska (bbauska)"
 date created: "3/31/2024 6+pm"
-date last editted: "6/21/2024 1+am"
+date last editted: "8/16/2024 3+pm"
 output:
   markdown:
 ---
@@ -12,7 +12,7 @@ output:
 <h1 align="center" width="100%">Advanced HTML &amp; CSS</h1>
 <h6 align="center">by Shay-Howe</h6>
 
-<h2 align="center" id="performance-organization">Lesson 1: Performance &amp; Organization</h2>
+<h2 align="center" id="#performance-organization">Lesson 1: Performance &amp; Organization</h2>
 
 <h3>In this Lesson 1</h3>
 
@@ -797,7 +797,7 @@ rel="noopener noreferrer" target="_blank">syntax</a>.</p>
     <b>Lesson 3 </b> <a href="#complex-selectors">Complex Selectors</a>
 </div>
 
-<h2 align="center" id="detailed-positioning">Lesson 2: Detailed Positioning</h2>
+<h2 align="center" id="#detailed-positioning">Lesson 2: Detailed Positioning</h2>
 
 <h3>In this Lesson 2</h3>
 
@@ -1494,7 +1494,7 @@ box three.</p>
     <b>Lesson 3 </b> <a href="#complex-selectors">Complex Selectors</a>
 </p>
 
-<h2 align="center" id="complex-selectors">Lesson 3: Complex Selectors</h2>
+<h2 align="center" id="#complex-selectors">Lesson 3: Complex Selectors</h2>
 
 <h3>In this Lesson 3</h3>
 
@@ -1748,13 +1748,13 @@ selected.</p>
 ```
  1  <p>...</p>
  2  <section>
- 3  <p>...</p> 
- 4  <h2>...</h2>  
- 5  <p>This paragraph will be selected</p>
- 6  <div> 
- 7  <p>...</p> 
- 8  </div>
- 9  <p>...</p> 
+ 3    <p>...</p> 
+ 4    <h2>...</h2>  
+ 5    <p>This paragraph will be selected</p>
+ 6    <div> 
+ 7      <p>...</p> 
+ 8    </div>
+ 9    <p>...</p> 
  10 </section> 
  11 
 ```
@@ -2086,7 +2086,7 @@ stated value.</p>
 
 <h4>Attribute Selectors Overview</h4>
 
-  | **Example** | **Classification** | **Explanation** |
+  | <b>Example</b> | <b>Classification</b> | <b>Explanation</b> |
   |---------------|----------------------|----------------------------------------------|
   | a[target]     | Attribute Present    | Selects an element if the given attribute is |
   |               | Selector             | present. |
@@ -2770,7 +2770,7 @@ pseudo-classes.</p>
 
 <h4>Pseudo-classes Overview</h4>
 
-  | **Example** | **Classification** | **Explanation** |
+  | <b>Example</b> | <b>Classification</b> | <b>Explanation</b> |
   |---------------|----------------------|---------------------------------------------------|
   | a:link        | Link Pseudo-    | Selects a link that has not been visited by a user.    |
   |               | class           |                                                        |
@@ -2849,8 +2849,8 @@ pseudo-elements respectively.</p>
 ```
  1  .alpha:first-letter,
  2  .bravo:first-line {
- 3  color: #ff7b29;
- 4  font-size: 18px;
+ 3    color: #ff7b29;
+ 4    font-size: 18px;
  5  }
  6 
 ```
@@ -2888,9 +2888,9 @@ necessary should a browser not support these pseudo-elements.</p>
 
 ```
  1  a:after {
- 2  color: #9799a7;
- 3  content: " (" attr(href) ")";
- 4  font-size: 11px;
+ 2    color: #9799a7;
+ 3    content: " (" attr(href) ")";
+ 4    font-size: 11px;
  5  }
  6 
 ```
@@ -2929,10 +2929,10 @@ pseudo-element has been added to ensure the best support for all browsers.</p>
 
 ```
  1  ::-moz-selection {
- 2  background: #ff7b29;
+ 2    background: #ff7b29;
  3  }
  4  ::selection {
- 5  background: #ff7b29;
+ 5    background: #ff7b29;
  6  }
  7 
 ```
@@ -2952,44 +2952,44 @@ pseudo-element has been added to ensure the best support for all browsers.</p>
   <summary>CSS</summary>
   
 ```
- 1  .arrow {
- 2  background: #2db34a;
- 3  color: #fff;
- 4  display: inline-block;
- 5  height: 30px;
- 6  line-height: 30px;
- 7  padding: 0 12px;
- 8  position: relative;
- 9  text-decoration: none;
+ 1   .arrow {
+ 2     background: #2db34a;
+ 3     color: #fff;
+ 4     display: inline-block;
+ 5     height: 30px;
+ 6     line-height: 30px;
+ 7     padding: 0 12px;
+ 8     position: relative;
+ 9     text-decoration: none;
  10  }
  11  .arrow:before,  
  12  .arrow:after {
- 13  content: "";
- 14  height: 0;
- 15  position: absolute;
- 16  width: 0;
+ 13    content: "";
+ 14    height: 0;
+ 15    position: absolute;
+ 16    width: 0;
  17  }
  18  .arrow:before {
- 19  border-bottom: 15px solid #2db34a;
- 20  border-left: 15px solid transparent;
- 21  border-top: 15px solid #2db34a;
- 22  left: -15px;
+ 19    border-bottom: 15px solid #2db34a;
+ 20    border-left: 15px solid transparent;
+ 21    border-top: 15px solid #2db34a;
+ 22    left: -15px;
  23  }
  24  .arrow:after {
- 25  border-bottom: 15px solid transparent;
- 26  border-left: 15px solid #2db34a;
- 27  border-top: 15px solid transparent;
- 28  right: -15px;
+ 25    border-bottom: 15px solid transparent;
+ 26    border-left: 15px solid #2db34a;
+ 27    border-top: 15px solid transparent;
+ 28    right: -15px;
  29  }
  30  .arrow:hover {
- 31  background: #ff7b29;
+ 31    background: #ff7b29;
  32  }
  33  .arrow:hover:before {
- 34  border-bottom: 15px solid #ff7b29;
- 35  border-top: 15px solid #ff7b29;
+ 34    border-bottom: 15px solid #ff7b29;
+ 35    border-top: 15px solid #ff7b29;
  36  }
  37  .arrow:hover:after {
- 39  border-left: 15px solid #ff7b29;
+ 39    border-left: 15px solid #ff7b29;
  40  }
  41 
 ```
@@ -3080,7 +3080,7 @@ think about revisiting it, and seeing if a better solution can be found.</p>
     <b>Lesson 4 </b><a href="#responsive-web-design">Responsive Web Design</a>
 </div>
 
-<h2 align="center" id="respoonsive-web-design">Lesson 4: Responsive Web Design</h2>
+<h2 align="center" id="#respoonsive-web-design">Lesson 4: Responsive Web Design</h2>
 
 <h3>In this Lesson 4</h3>
 
@@ -3239,8 +3239,8 @@ following.</p>
 
 ```
  1  <div class="container"> 
- 2  <section>...</section> 
- 3  <aside>...</aside>  
+ 2    <section>...</section> 
+ 3    <aside>...</aside>  
  4  </div>
  5 
 ```
@@ -3538,10 +3538,10 @@ the section and aside.</p>
 
 ```
  1  @media all and (max-width: 420px) { 
- 2  section, aside {
- 3  float: none; 
- 4  width: auto; 
- 5  } 
+ 2    section, aside {
+ 3      float: none; 
+ 4      width: auto; 
+ 5    } 
  6  } 
  7 
 ```
@@ -3648,20 +3648,20 @@ build the following:</p>
 ```
  1  section,
  2  aside { 
- 3  margin: 1.858736059%; 
+ 3    margin: 1.858736059%; 
  4  } 
  5  @media all and (min-width: 420px) { 
- 6  .container { 
- 7  max-width: 538px;  
- 8  } 
- 9  section {  
- 10  float: left; 
- 11  width: 63.197026%; 
- 12  } 
- 13  aside { 
- 14 float: right;
- 15  width: 29.3680297%;
- 16  } 
+ 6    .container { 
+ 7      max-width: 538px;  
+ 8    } 
+ 9    section {  
+ 10     float: left; 
+ 11     width: 63.197026%; 
+ 12   } 
+ 13   aside { 
+ 14     float: right;
+ 15     width: 29.3680297%;
+ 16   } 
  17 } 
  18 
 ```
@@ -3834,8 +3834,8 @@ tag would look like the following @viewport rule in CSS.</p>
 
 ```
  1  @viewport {  
- 2  width: device-width;
- 3  zoom: 1; 
+ 2    width: device-width;
+ 3    zoom: 1; 
  4  }  
  5  
 ```
@@ -3853,7 +3853,7 @@ any media will scale down according to its containers width.</p>
 
 ```
  1  img, video, canvas {  
- 2  max-width: 100%;
+ 2    max-width: 100%;
  3  } 
  4 
 ```
@@ -3898,18 +3898,18 @@ treating the parent element as an absolutely positioned element.</p>
 
 ```
  1  figure {
- 2  height: 0; 
- 3  padding-bottom: 56.25%; /* 16:9 */ 
- 4  position: relative;
- 5  width: 100%; 
+ 2    height: 0; 
+ 3    padding-bottom: 56.25%; /* 16:9 */ 
+ 4    position: relative;
+ 5    width: 100%; 
  6  } 
  7  iframe {
- 8  height: 100%;
- 9  left: 0;
- 10  position: absolute;
- 11  top: 0; 
- 13  width: 100%; 
- 14  } 
+ 8    height: 100%;
+ 9    left: 0;
+ 10   position: absolute;
+ 11   top: 0; 
+ 13   width: 100%; 
+ 14 } 
  15 
 ```
 
@@ -3963,7 +3963,7 @@ website.</p>
     <b>Lesson 5 </b> <a href="#preprocessors/">Preprocessors</a>
 </div>
 
-<h2 align="center" id="preprocessors">Lesson 5: Preprocessors</h2>
+<h2 align="center" id="#preprocessors">Lesson 5: Preprocessors</h2>
 
 <h3>In this Lesson 5</h3>
 
@@ -4121,12 +4121,12 @@ struggle.</p>
 
 ```
  1  <body>
- 2  <header> 
- 3  <h1>Hello World</h1> 
- 4  </header>
- 5  <section>
- 6  <p>Lorem ipsum dolor sit amet.</p>  
- 7  </section> 
+ 2    <header> 
+ 3      <h1>Hello World</h1> 
+ 4    </header>
+ 5    <section>
+ 6      <p>Lorem ipsum dolor sit amet.</p>  
+ 7    </section> 
  8  </body>  
  9 
 ```
@@ -4439,7 +4439,7 @@ the group being :css and :javascript.</p>
 ```
  1  :javascript
  2  $('button').on('click', function(event) {  
- 3  $('p').hide('slow');
+ 3    $('p').hide('slow');
  4  });  
  5 
 ```
@@ -4449,7 +4449,7 @@ the group being :css and :javascript.</p>
 ```
  1  <script> 
  2  $('button').on('click', function(event) {  
- 3  $('p').hide('slow');
+ 3    $('p').hide('slow');
  4  });  
  5  </script>
  6 
@@ -4462,8 +4462,8 @@ the group being :css and :javascript.</p>
 ```
  1  :css 
  2  .container { 
- 3  margin: 0 auto; 
- 4  width: 960px;
+ 3    margin: 0 auto; 
+ 4    width: 960px;
  5  } 
  6  :sass
  7  .container 
@@ -4477,8 +4477,8 @@ the group being :css and :javascript.</p>
 ```
  1  <style>  
  2  .container { 
- 3  margin: 0 auto; 
- 4  width: 960px;
+ 3    margin: 0 auto; 
+ 4    width: 960px;
  5  } 
  6  </style> 
  7 
@@ -4622,11 +4622,11 @@ indentation and clear line breaks for formatting.</p>
 
 ```
  1  .new {  
- 2  color: #ff7b29; 
- 3  font-weight: bold; 
+ 2    color: #ff7b29; 
+ 3    font-weight: bold; 
  4  } 
  5  .new span {
- 6  text-transform: uppercase;  
+ 6    text-transform: uppercase;  
  7  } 
  8 
 ```
@@ -4652,7 +4652,7 @@ may also all be accomplished with SCSS.</p>
 <p>In the syntax example above you will notice how selectors may be nested
 inside of one another to create compound selectors. The nesting quickly
 outlines identifiable selectors, however it is important not to go
-overboard. Do **not** nest selectors for unapparent reasons or go
+overboard. Do <b>not</b> nest selectors for unapparent reasons or go
 overboard nesting one selector under the prior one. Using specific
 selectors without raising specificity is important.</p>
 
@@ -4672,13 +4672,13 @@ selectors without raising specificity is important.</p>
 
 ```
  1  .portfolio { 
- 2  border: 1px solid #9799a7;  
+ 2    border: 1px solid #9799a7;  
  3  } 
  4  .portfolio ul { 
- 5  list-style: none;  
+ 5    list-style: none;  
  6  } 
  7  .portfolio li { 
- 8  float: left; 
+ 8    float: left; 
  9  } 
  10 
 ```
@@ -4707,9 +4707,9 @@ your decision is up to personal preference.</p>
 
 ```
  1  div {
- 2  font-family: Baskerville, Palatino, serif;
- 3  font-style: italic;
- 4  font-weight: normal;  
+ 2    font-family: Baskerville, Palatino, serif;
+ 3    font-style: italic;
+ 4    font-weight: normal;  
  5  } 
  6 
 ```
@@ -4733,12 +4733,12 @@ changing property values based off a media condition.</p>
 
 ```
  1  .container { 
- 2  width: 960px;
+ 2    width: 960px;
  3  } 
  4  @media screen and (max-width: 960px) { 
- 5  .container { 
- 6  width: 100%; 
- 7  } 
+ 5    .container { 
+ 6      width: 100%; 
+ 7    } 
  8  } 
  9 
 ```
@@ -4766,10 +4766,10 @@ as &amp;.featured.</p>
 
 ```
  1  a {  
- 2  color: #0087cc; 
+ 2    color: #0087cc; 
  3  } 
  4  a:hover {  
- 5  color: #ff7b29; 
+ 5    color: #ff7b29; 
  6  } 
  7 
 ```
@@ -4795,10 +4795,10 @@ of the most beneficial is inside of feature detection.</p>
 
 ```
  1  .btn {  
- 2  background: linear-gradient(#fff, #9799a7);  
+ 2    background: linear-gradient(#fff, #9799a7);  
  3  } 
  4  .no-cssgradients .btn {  
- 5  background: url("gradient.png") 0 0 repeat-x; 
+ 5    background: url("gradient.png") 0 0 repeat-x; 
  6  } 
  7 
 ```
@@ -4832,10 +4832,10 @@ is not rendered in the compiled CSS.</p>
 ```
  1  /* Normal comment */
  2  div {
- 3  background: #333;  
+ 3    background: #333;  
  4  } 
  5  strong {
- 6  display: block; 
+ 6    display: block; 
  7  } 
  8 
 ```
@@ -4866,7 +4866,7 @@ separated by spaces or commas.</p>
 
 ```
  1  p {  
- 2  font: 1em "Helvetica Neue", Arial, "Lucida Grande", sans-serif;  
+ 2    font: 1em "Helvetica Neue", Arial, "Lucida Grande", sans-serif;  
  3  } 
  4 
 ```
@@ -4893,7 +4893,7 @@ string of plain text.</p>
 
 ```
  1  .chicago { 
- 2  left: 20px;
+ 2    left: 20px;
  3  } 
  4 
 ```
@@ -4904,16 +4904,16 @@ string of plain text.</p>
 manners. Calculations can handle most problems, such as addition,
 subtraction, division, multiplication, and rounding.</p>
 
-<p>Addition can be done by using the plus sign, +, and may be completed
+<p>Addition can be done by using the plus sign, '+', and may be completed
 with or without units of measurement. When done with units, the unit
 tied to the first number in the equation is the unit that will be used
 in the computed value. For example, ten pixels plus one inch will equal
 106 pixels. Subtraction is handled the same way as addition but with the
-minus sign, -, instead.</p>
+minus sign, '-', instead.</p>
 
-<p>Multiplication is completed with the asterisk sign, *, however only one
+<p>Multiplication is completed with the asterisk sign, '*', however only one
 of the numbers, if any, may include a unit of measurement. Using the
-percent sign, %, will return the remainder of the two numbers upon being
+percent sign, '%', will return the remainder of the two numbers upon being
 divided, and as with multiplication, only allows one number, if any, to
 have a unit.</p>
 
@@ -5699,7 +5699,7 @@ your research for each project and make the most educated decision.</p>
     <b>Lesson 6 </b><a href="#jquery/">jQuery</a>
 </div>
 
-<h2 align="center" id="jquery">Lesson 6: jQuery</h2>
+<h2 align="center" id="#jquery">Lesson 6: jQuery</h2>
 
 <h3>In this Lesson 6</h3>
 
@@ -6699,7 +6699,7 @@ animation is complete.</p>
   <b>Lesson 7 </b> <a href="#transforms">Transforms</a>
 </div>
 
-<h2 align="center" id="transforms">Lesson 7: Transforms</h2>
+<h2 align="center" id="#transforms">Lesson 7: Transforms</h2>
 
 <h3>In this Lesson 7</h3>
 
@@ -8462,7 +8462,7 @@ the animation.</p>
   <b>Lesson 9 </b> <a href="#feature-support-polyfills/">Feature Support &amp; Polyfills</a>
 </p>
 
-<h2 align="center" id="feature-support-polyfills">Lesson 9: Feature Support &amp; Polyfills</h2>
+<h2 align="center" id="#feature-support-polyfills">Lesson 9: Feature Support &amp; Polyfills</h2>
 
 <h3>In this Lesson 9</h3>
 
@@ -8888,7 +8888,7 @@ bookmarklet open for debugging.</h6>
   <b>Lesson 10 </b><a href="#semantics-accessibility">Extending Semantics &amp; Accessibility</a>
 </div>
 
-<h2 align="center" id="semantics-accessibility">Lesson 10 Extending Semantics & Accessibility</h2>
+<h2 align="center" id="#semantics-accessibility">Lesson 10 Extending Semantics & Accessibility</h2>
 
 <h3>In this Lesson 10</h3>
 
@@ -9773,9 +9773,10 @@ structure cannot be determined.
 
 </details>
 
-<b>Lesson 9 </b> <a href="feature-support-polyfills">Feature Support &amp; Polyfills</a>
+<h3><b>Lesson 9</b> <a href="feature-support-polyfills">Feature Support &amp; Polyfills</a></h3>
 
 ...the end.
 <!-- 5/14/2024 4:58pm -->
 <!-- 5/19/2024 6:53pm -->
 <!-- 6/21/2024 Fri 1:25am -->
+<!-- 8/16/2024 Fri 3:55pm -->
