@@ -12,7 +12,7 @@ output:
 <h1 align="center" width="100%">Advanced HTML &amp; CSS</h1>
 <h6 align="center">by Shay-Howe</h6>
 
-<h2 align="center" id="#performance-organization">Lesson 1: Performance &amp; Organization</h2>
+<h2 align="center" id="performance-organization">Lesson 1: Performance &amp; Organization</h2>
 <h3>In this Lesson 1:</h3>
 
 <h4>HTML</h4>
@@ -522,7 +522,7 @@ data than necessary.</p>
  2  
 </pre>
 
-<h4 id="#reduce-http-requests">Reduce HTTP Requests</h4>
+<h4 id="reduce-http-requests">Reduce HTTP Requests</h4>
 
 <p>Next to file size, the number of HTTP requests a website makes is one of
 the largest performance pitfalls. Each time a request is made to the
@@ -724,7 +724,7 @@ the actual data URI is less weight than the actual image.</p>
 
 <h4>Image Data URI Demo</h4>
 
-<h4 id="#cache-common-files">Cache Common Files</h4>
+<h4 id="cache-common-files">Cache Common Files</h4>
 
 <p>Another way to help cut down HTTP requests, and to serve up pages
 faster, is to cache common files. When a page loads for the first time
@@ -794,10 +794,10 @@ rel="noopener noreferrer" target="_blank">syntax</a>.</p>
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <b>Lesson 3 </b> <a href="#complex-selectors">Complex Selectors</a>
+    <b>Lesson 3 </b> <a href="complex-selectors">Complex Selectors</a>
 </div>
 
-<h2 align="center" id="#detailed-positioning">Lesson 2: Detailed Positioning</h2>
+<h2 align="center" id="detailed-positioning">Lesson 2: Detailed Positioning</h2>
 <h3>In this Lesson 2:</h3>
 
 <h4>CSS</h4>
@@ -825,7 +825,7 @@ Following that, we'll cover more detailed positioning techniques,
 including how to precisely position elements on both the x and y axis as
 well as the z axis.</p>
 
-<h4 id="#containing-floats">Containing Floats</h4>
+<h4 id="containing-floats">Containing Floats</h4>
 
 <p>Floating elements is a natural process when building a website's layout,
 and is the instinctive method for positioning elements on a page. Floats
@@ -1040,7 +1040,7 @@ not achieve the desired outcome.</p>
 the box-set class. Instead, the class of group would need to be added to
 the parent element containing the floats.</p>
 
-<h4 id="#position-property">Position Property</h4>
+<h4 id="position-property">Position Property</h4>
 
 <p>Occasionally you need more control over the position of an element, more
 than a float can provide, in which case the position property comes into
@@ -1383,7 +1383,7 @@ freely.</p>
 
 <h4>Fixed Footer Demo</h4>
 
-<h4 id="#z-index-property">Z-Index Property</h4>
+<h4 id="z-index-property">Z-Index Property</h4>
 
 <p>By nature web pages are often considered to be two dimensional,
 displaying elements upon a x and y axis. However when you begin to
@@ -1490,21 +1490,21 @@ box three.</p>
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <b>Lesson 3</b> <a href="#complex-selectors">Complex Selectors</a>
+    <b>Lesson 3</b> <a href="complex-selectors">Complex Selectors</a>
 </p>
 
-<h2 align="center" id="#complex-selectors">Lesson 3: Complex Selectors</h2>
+<h2 align="center" id="complex-selectors">Lesson 3: Complex Selectors</h2>
 <h3>In this Lesson 3:</h3>
 
 <h4>CSS</h4>
 
 <ul>
-  <li><a href="#common-selectors">Common Selectors</a></li>
-  <li><a href="#child-selectors">Child Selectors</a></li>
-  <li><a href="#sibling-selectors">Sibling Selectors</a></li>
-  <li><a href="#attribute-selectors">Attribute Selectors</a></li>
-  <li><a href="#pseudo-classes">Pseudo-classes</a></li>
-  <li><a href="#pseudo-elements">Pseudo-elements</a></li>
+  <li><a href="common-selectors">Common Selectors</a></li>
+  <li><a href="child-selectors">Child Selectors</a></li>
+  <li><a href="sibling-selectors">Sibling Selectors</a></li>
+  <li><a href="attribute-selectors">Attribute Selectors</a></li>
+  <li><a href="pseudo-classes">Pseudo-classes</a></li>
+  <li><a href="pseudo-elements">Pseudo-elements</a></li>
 </ul>
 
 <b>SHARE</b>
@@ -1526,7 +1526,7 @@ and improvements to existing practices. Here we'll discuss 
 rel="noopener noreferrer" target="_blank">selectors</a>, old and new, and how to 
 best put them to use.</p>
 
-<h4 id="#common-selectors">Common Selectors</h4>
+<h4 id="common-selectors">Common Selectors</h4>
 
 <p>Before diving too deep into some of the more complex selectors, and
 those offered within CSS3, let's take a quick look at some of the more
@@ -1652,7 +1652,7 @@ article, thus selected.</p>
  8 
 </pre>
 
-<h4 id="#child-selectors">Child Selectors Overview</h4>
+<h4 id="child-selectors">Child Selectors Overview</h4>
 
   | <b>Example</b>|<b>Classification</b> | <b>Explanation</b> |
   --------------|-----------------------------|-----------------------------------------------------|
@@ -1661,7 +1661,7 @@ article, thus selected.</p>
   | article > p | Direct Child | Selects an element that resides immediately inside an |
   |             | Selector     | identified parent element.                            |
 
-<h4 id="#sibling-selectors">Sibling Selectors</h4>
+<h4 id="sibling-selectors">Sibling Selectors</h4>
 
 <p>Knowing how to <a href="https://css-tricks.com/child-and-sibling-selectors/" 
 rel="noopener noreferrer" target="_blank">select children</a> of an element is 
@@ -1853,7 +1853,7 @@ selected.</p>
   |        | Selector         | in which both elements share the same parent.                     |
 
 
-<h4 id="#attribute-selectors">Attribute Selectors</h4>
+<h4 id="attribute-selectors">Attribute Selectors</h4>
 
 <p>Some of the common selectors looked at early may also be defined as
 attribute selectors, in which an element is selected based upon its
@@ -1999,7 +1999,7 @@ stated value.</p>
 <h4>HTML</h4>
 
 <pre>
- 1  <a href="#" rel="tag nofollow">...</a> 
+ 1  &lt;a href="#" rel="tag nofollow"&gt;...&lt;/a&gt;
  2 
 </pre>
 
@@ -2022,7 +2022,7 @@ stated value.</p>
 <h4>HTML</h4>
 
 <pre>
- 1  <a href="#" lang="en-US">...</a> 
+ 1  &lt;a href="#" lang="en-US"&gt;...&lt;/a&gt;
  2 
 </pre>
 
@@ -2031,13 +2031,13 @@ stated value.</p>
 <h4>HTML</h4>
 
 <pre>
- 1  <ul>  
- 2    <li><a href="#.pdf">PDF Document</a></li>
- 3    <li><a href="#.doc">Word Document</a></li>  
- 4    <li><a href="#.jpg">Image File</a></li>  
- 5    <li><a href="#.mp3">Audio File</a></li>  
- 6    <li><a href="#.mp4">Video File</a></li>  
- 7  </ul>
+ 1  &lt;ul&gt;  
+ 2    &lt;li&gt;&lt;a href="#.pdf"&gt;PDF Document&lt;/a&gt;&lt;/li&gt;
+ 3    &lt;li&gt;&lt;a href="#.doc"&gt;Word Document&lt;/a&gt;&lt;/li&gt;  
+ 4    &lt;li&gt;&lt;a href="#.jpg"&gt;Image File&lt;/a&gt;&lt;/li&gt;  
+ 5    &lt;li&gt;&lt;a href="#.mp3"&gt;Audio File&lt;/a&gt;&lt;/li&gt;  
+ 6    &lt;li&gt;&lt;a href="#.mp4"&gt;Video File&lt;/a&gt;&lt;/li&gt;  
+ 7  &lt;/ul&gt;
  8 
 </pre>
 
@@ -2102,7 +2102,7 @@ stated value.</p>
   | a[lang&#0124;="en"]     | Attribute        | Selects an element if the given attribute value |
   |                         | Hyphenated       | is hyphen-separated and begins with the word stated. |
 
-<h4 id="#pseudo-classes">Pseudo-classes</h4>
+<h4 id="pseudo-classes">Pseudo-classes</h4>
 
 <p><a href="http://coding.smashingmagazine.com/2011/03/30/how-to-use-css3-pseudo-classes/" 
 rel="noopener noreferrer" target="_blank">
@@ -2225,17 +2225,17 @@ list item.</p>
   <summary>HTML</summary>
 
 <pre>
- 1  <ul>
- 2    <li>This list item will be selected</li>
- 3    <li>
- 4      <div>This div will be selected</div>
- 5    </li>
- 6    <li>
- 7      <div>...</div>
- 8      <div>...</div>
- 9    </li>
- 10   <li>This list item will be selected</li>
- 11 </ul>
+ 1  &lt;ul&gt;
+ 2    &lt;li&gt;This list item will be selected&lt;/li&gt;
+ 3    &lt;li&gt;
+ 4      &lt;div&gt;This div will be selected&lt;/div&gt;
+ 5    &lt;/li&gt;
+ 6    &lt;li&gt;
+ 7      &lt;div&gt;...&lt;/div&gt;
+ 8      &lt;div&gt;...&lt;/div&gt;
+ 9    &lt;/li&gt;
+ 10   &lt;li&gt;This list item will be selected&lt;/li&gt;
+ 11 &lt;/ul&gt;
  12   
 </pre>
 
@@ -2275,14 +2275,14 @@ article, thus also selected.</p>
 <h4>HTML</h4>
 
 <pre>
- 1  <article>
- 2    <h1>...</h1>
- 3    <p>This paragraph will be selected</p>
- 4    <p>...</p>
- 5    <img src="#"><!-- This image will be selected -->
- 6    <p>This paragraph will be selected</p>
- 7    <h6>...</h6>
- 8  </article>
+ 1  &lt;article&gt;
+ 2    &lt;h1&gt;...&lt;/h1&gt;
+ 3    &lt;p&gt;This paragraph will be selected&lt;/p&gt;
+ 4    &lt;p&gt;...&lt;/p&gt;
+ 5    &lt;img src="#"&gt;&lt;!-- This image will be selected --&gt;
+ 6    &lt;p&gt;This paragraph will be selected&lt;/p&gt;
+ 7    &lt;h6&gt;...&lt;/h6&gt;
+ 8  &lt;/article&gt;
  9 
 </pre>
 
@@ -2379,14 +2379,14 @@ third list item, thus lines 4 and 7 are selected.</p>
 <h4>HTML</h4>
 
 <pre>
- 1  <ul>
- 2    <li>...</li>
- 3    <li>...</li>
- 4    <li>This list item will be selected</li>
- 5    <li>...</li>
- 6    <li>...</li>
- 7    <li>This list item will be selected</li>
- 8  </ul>
+ 1  &lt;ul&gt;
+ 2    &lt;li&gt;...&lt;/li&gt;
+ 3    &lt;li&gt;...&lt;/li&gt;
+ 4    &lt;li&gt;This list item will be selected&lt;/li&gt;
+ 5    &lt;li&gt;...&lt;/li&gt;
+ 6    &lt;li&gt;...&lt;/li&gt;
+ 7    &lt;li&gt;This list item will be selected&lt;/li&gt;
+ 8  &lt;/ul&gt;
 </pre>
 
 <p>Using a different expression within the :nth-child(n) pseudo-class will
@@ -2403,14 +2403,14 @@ and then onward. As a result, the list items lines 4 and 6 are selected.</p>
 <h4>HTML</h4>
 
 <pre>
- 1  <ul>
- 2    <li>...</li>
- 3    <li>...</li>
- 4    <li>This list item will be selected</li>
- 5    <li>...</li>
- 6    <li>This list item will be selected</li>
- 7    <li>...</li>
- 8  </ul>
+ 1  &lt;ul&gt;
+ 2    &lt;li&gt;...&lt;/li&gt;
+ 3    &lt;li&gt;...&lt;/li&gt;
+ 4    &lt;li&gt;This list item will be selected&lt;/li&gt;
+ 5    &lt;li&gt;...&lt;/li&gt;
+ 6    &lt;li&gt;This list item will be selected&lt;/li&gt;
+ 7    &lt;li&gt;...&lt;/li&gt;
+ 8  &lt;/ul&gt;
  9 
 </pre>
 
@@ -2429,14 +2429,14 @@ lines 2 through 5 are selected.</p>
 <h4>HTML</h4>
 
 <pre>
- 1  <ul>
- 2    <li>This list item will be selected</li>
- 3    <li>This list item will be selected</li>
- 4    <li>This list item will be selected</li>
- 5    <li>This list item will be selected</li>
- 6    <li>...</li>
- 7    <li>...</li>
- 8  </ul>
+ 1  &lt;ul&gt;
+ 2    &lt;li&gt;This list item will be selected&lt;/li&gt;
+ 3    &lt;li&gt;This list item will be selected&lt;/li&gt;
+ 4    &lt;li&gt;This list item will be selected&lt;/li&gt;
+ 5    &lt;li&gt;This list item will be selected&lt;/li&gt;
+ 6    &lt;li&gt;...&lt;/li&gt;
+ 7    &lt;li&gt;...&lt;/li&gt;
+ 8  &lt;/ul&gt;
  9 
 </pre>
 
@@ -2454,14 +2454,14 @@ item, thus the list items on lines 2, 4, and 6 are selected.</p>
 <h4>HTML</h4>
 
 <pre>
- 1  <ul>
- 2    <li>This list item will be selected</li>
- 3    <li>...</li>
- 4    <li>This list item will be selected</li>
- 5    <li>...</li>
- 6    <li>This list item will be selected</li>
- 7    <li>...</li>
- 8  </ul>
+ 1  &lt;ul&gt;
+ 2    &lt;li&gt;This list item will be selected&lt;/li&gt;
+ 3    &lt;li&gt;...&lt;/li&gt;
+ 4    &lt;li&gt;This list item will be selected&lt;/li&gt;
+ 5    &lt;li&gt;...&lt;/li&gt;
+ 6    &lt;li&gt;This list item will be selected&lt;/li&gt;
+ 7    &lt;li&gt;...&lt;/li&gt;
+ 8  &lt;/ul&gt;
 </pre>
 
 <p>Changing from the :nth-child(n) pseudo-class to the :nth-last-child(n) pseudo-class 
@@ -2481,14 +2481,14 @@ items on lines 3 and 6 are selected.</p>
 <h4>HTML</h4>
 
 <pre>
- 1  <ul>
- 2    <li>...</li>
- 3    <li>This list item will be selected</li>
- 4    <li>...</li>
- 5    <li>...</li>
- 6    <li>This list item will be selected</li>
- 7    <li>...</li>
- 8  </ul>
+ 1  &lt;ul&gt;
+ 2    &lt;li&gt;...&lt;/li&gt;
+ 3    &lt;li&gt;This list item will be selected&lt;/li&gt;
+ 4    &lt;li&gt;...&lt;/li&gt;
+ 5    &lt;li&gt;...&lt;/li&gt;
+ 6    &lt;li&gt;This list item will be selected&lt;/li&gt;
+ 7    &lt;li&gt;...&lt;/li&gt;
+ 8  &lt;/ul&gt;
 </pre>
 
 <h4>:nth-of-type(n) & :nth-last-of-type(n)</h4>
@@ -2634,12 +2634,12 @@ not selected.</p>
 <h4>HTML</h4>
 
 <pre>
- 1  <div>Hello</div>
- 2  <div><!-- Coming soon --></div><!-- This div will be 
- 3  selected -->
- 4  <div></div><!-- This div will be selected -->
- 5  <div> </div>
- 6  <div><strong></strong></div>
+ 1  &lt;div&gt;Hello&lt;/div&gt;
+ 2  &lt;div&gt;&lt;!-- Coming soon --&gt;&lt;/div&gt;&lt;!-- This div will be 
+ 3  selected --&gt;
+ 4  &lt;div&gt;&lt;/div&gt;&lt;!-- This div will be selected --&gt;
+ 5  &lt;div&gt; &lt;/div&gt;
+ 6  &lt;div&gt;&lt;strong&gt;&lt;/strong&gt;&lt;/div&gt;
  7  
 </pre>
 
@@ -2673,10 +2673,10 @@ pseudo-classes.</p>
 <h4>HTML</h4>
 
 <pre>
- 1  <div>This div will be selected</div>
- 2  <div class="awesome">...</div>
- 3  <section>This section will be selected</section>
- 4  <section class="awesome">This section will be selected</section>
+ 1  &lt;div&gt;This div will be selected&lt;/div&gt;
+ 2  &lt;div class="awesome"&gt;...&lt;/div&gt;
+ 3  &lt;section&gt;This section will be selected&lt;/section&gt;
+ 4  &lt;section class="awesome"&gt;This section will be selected&lt;/section&gt;
  5 
 </pre>
 
@@ -2686,34 +2686,34 @@ pseudo-classes.</p>
   <summary>HTML</summary>
 
 <pre>
- 1  <table>
- 2    <thead>
- 3      <tr>
- 4        <th>Number</th>
- 5        <th>Player</th>
- 6        <th>Position</th>
- 7        <th>Height</th>
- 8        <th>Weight</th>
- 9      </tr>
- 10   </thead>
- 11   <tbody>
- 12     <tr>
- 13       <td>8</td>
- 14       <td>Marco Belinelli</td>
- 15       <td>G</td>
- 16       <td>6-5</td>
- 17       <td>195</td>
- 18     </tr>
- 19     <tr>
- 20       <td>5</td>
- 21       <td>Carlos Boozer</td>
- 22       <td>F</td>
- 23       <td>6-9</td>
- 24       <td>266</td>
- 25     </tr>
+ 1  &lt;table&gt;
+ 2    &lt;thead&gt;
+ 3      &lt;tr&gt;
+ 4        &lt;th&gt;Number&lt;/th&gt;
+ 5        &lt;th&gt;Player&lt;/th&gt;
+ 6        &lt;th&gt;Position&lt;/th&gt;
+ 7        &lt;th&gt;Height&lt;/th&gt;
+ 8        &lt;th&gt;Weight&lt;/th&gt;
+ 9      &lt;/tr&gt;
+ 10   &lt;/thead&gt;
+ 11   &lt;tbody&gt;
+ 12     &lt;tr&gt;
+ 13       &lt;td&gt;8&lt;/td&gt;
+ 14       &lt;td&gt;Marco Belinelli&lt;/td&gt;
+ 15       &lt;td&gt;G&lt;/td&gt;
+ 16       &lt;td&gt;6-5&lt;/td&gt;
+ 17       &lt;td&gt;195&lt;/td&gt;
+ 18     &lt;/tr&gt;
+ 19     &lt;tr&gt;
+ 20       &lt;td&gt;5&lt;/td&gt;
+ 21       &lt;td&gt;Carlos Boozer&lt;/td&gt;
+ 22       &lt;td&gt;F&lt;/td&gt;
+ 23       &lt;td&gt;6-9&lt;/td&gt;
+ 24       &lt;td&gt;266&lt;/td&gt;
+ 25     &lt;/tr&gt;
  26     ...
- 27   </tbody>
- 28 </table>
+ 27   &lt;/tbody&gt;
+ 28 &lt;/table&gt;
  29  
 </pre>
 
@@ -2820,7 +2820,7 @@ pseudo-classes.</p>
   | div:not(.awesome) | Negation     | Selects an element not represented by the stated  |
   |                   | Pseudo-class | argument. |
   
-<h4 id="#pseudo-elements">Pseudo-elements</h4>
+<h4 id="pseudo-elements">Pseudo-elements</h4>
 
 <p>Pseudo-elements are dynamic elements that don't exist in the document tree, and 
 when used within selectors these 
@@ -2856,8 +2856,8 @@ pseudo-elements respectively.</p>
 <h4>HTML</h4>
 
 <pre>
- 1  <p class="alpha">Lorem ipsum dolor...</p>
- 2  <p class="bravo">Integer eget enim...</p>
+ 1  &lt;p class="alpha"&gt;Lorem ipsum dolor...&lt;/p&gt;
+ 2  &lt;p class="bravo"&gt;Integer eget enim...&lt;/p&gt;
  3 
 </pre>
 
@@ -2896,8 +2896,8 @@ necessary should a browser not support these pseudo-elements.</p>
 <h4>HTML</h4>
 
 <pre>
- 1  <a href="http://google.com/">Search the Web</a>
- 2  <a href="http://learn.shayhowe.com/">Learn How to Build Websites</a>
+ 1  &lt;a href="http://google.com/"&gt;Search the Web&lt;/a&gt;
+ 2  &lt;a href="http://learn.shayhowe.com/"&gt;Learn How to Build Websites&lt;/a&gt;
  3 
 </pre>
 
@@ -3066,7 +3066,7 @@ think about revisiting it, and seeing if a better solution can be found.</p>
 
 <!-- 88 spaces -->
 <div>
-    <b>Lesson 2 </b><a href="#detailed-positioning">Detailed Positioning</a>
+    <b>Lesson 2 </b><a href="detailed-positioning">Detailed Positioning</a>
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -3075,26 +3075,26 @@ think about revisiting it, and seeing if a better solution can be found.</p>
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <b>Lesson 4 </b><a href="#responsive-web-design">Responsive Web Design</a>
+    <b>Lesson 4 </b><a href="responsive-web-design">Responsive Web Design</a>
 </div>
 
-<h2 align="center" id="#respoonsive-web-design">Lesson 4: Responsive Web Design</h2>
+<h2 align="center" id="respoonsive-web-design">Lesson 4: Responsive Web Design</h2>
 <h3>In this Lesson 4:</h3>
 
 <h4>HTML</h4>
 
 <ul>
-  <li><a href="#responsive-overview">Responsive Overview</a></li>
-  <li><a href="#viewport">Viewport</a></li>
+  <li><a href="responsive-overview">Responsive Overview</a></li>
+  <li><a href="viewport">Viewport</a></li>
 </ul>
 
 <h4>CSS</h4>
 
 <ul>
-  <li><a href="#flexible-layouts">Flexible Layouts</a></li>
-  <li><a href="#media-queries">Media Queries</a></li>
-  <li><a href="#mobile-first">Mobile First</a></li>
-  <li><a href="#flexible-media">Flexible Media</a></li>
+  <li><a href="flexible-layouts">Flexible Layouts</a></li>
+  <li><a href="media-queries">Media Queries</a></li>
+  <li><a href="mobile-first">Mobile First</a></li>
+  <li><a href="flexible-media">Flexible Media</a></li>
 </ul>
 
 <h4>SHARE</h4>
@@ -3115,7 +3115,7 @@ will surpass that of desktop Internet usage within the year.</p>
 build websites suitable for all users. The industry response to this
 question has become responsive web design, also known as RWD.</p>
 
-<h4 id="#responsive-overview">Responsive Overview</h4>
+<h4 id="responsive-overview">Responsive Overview</h4>
 
 <p>Responsive web design is the practice of building a website suitable to
 work on every device and every screen size, no matter how large or
@@ -3680,7 +3680,6 @@ particularly around identifying
 the <a href="http://dev.opera.com/articles/view/an-introduction-to-meta-viewport-and-viewport/" 
 rel="noopener noreferrer" target="_blank">viewport</a> size, scale, and resolution 
 of a website. To remedy this, Apple invented the viewport meta tag.</p>
-
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~ 10. website without viewport meta tag (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="center" width="100%">
@@ -3960,7 +3959,7 @@ website.</p>
     <b>Lesson 5 </b> <a href="#preprocessors/">Preprocessors</a>
 </div>
 
-<h2 align="center" id="#preprocessors">Lesson 5: Preprocessors</h2>
+<h2 align="center" id="preprocessors">Lesson 5: Preprocessors</h2>
 <h3>In this Lesson 5:</h3>
 
 <h4>HTML</h4>
@@ -4004,7 +4003,7 @@ websites easier and more logical. The popularity of preprocessors have
 also brought along different frameworks to support them, one of the more
 popular being Compass.</p>
 
-<h4 id="#haml">Haml</h4>
+<h4 id="haml">Haml</h4>
 
 <p>Haml, known as <a href="http://haml.info/docs/yardoc/file.REFERENCE.html"
 rel="noopener noreferrer" target="_blank">HTML abstraction markup language</a>, 
@@ -4503,7 +4502,7 @@ wrapping the necessary Ruby code inside.</p>
  2 
 </pre>
 
-<h4 id="#scss-sass">SCSS &amp; Sass</h4>
+<h4 id="scss-sass">SCSS &amp; Sass</h4>
 
 <p>SCSS and Sass are preprocessing languages which are compiled to CSS,
 resembling Haml a bit in that they make writing code easier, and provide
@@ -5636,7 +5635,7 @@ counter variable can be finely controlled allowing for precise looping.</p>
 
 </details>
 
-<h4 id="#other-preprocessors">Other Preprocessors</h4>
+<h4 id="other-preprocessors">Other Preprocessors</h4>
 
 <p>Haml and Sass are far from the only preprocessing languages available,
 including JavaScript preprocessors as well. Some of the other popular
@@ -5695,7 +5694,7 @@ your research for each project and make the most educated decision.</p>
     <b>Lesson 6 </b><a href="#jquery/">jQuery</a>
 </div>
 
-<h2 align="center" id="#jquery">Lesson 6: jQuery</h2>
+<h2 align="center" id="jquery">Lesson 6: jQuery</h2>
 <h3>In this Lesson 6:</h3>
 
 <h4>JavaScript</h4>
@@ -5727,7 +5726,7 @@ build your own behaviors at one point or another.</p>
 lesson gives a brief overview of JavaScript and then takes a look at
 jQuery.</p>
 
-<h4 id="#javascript">JavaScript Intro</h4>
+<h4 id="javascript">JavaScript Intro</h4>
 
 <p><a href="https://developer.mozilla.org/en-US/docs/JavaScript/A_re-introduction_to_JavaScript" 
 rel="noopener noreferrer" target="_blank">JavaScript (20xx)</a> provides the 
@@ -5874,7 +5873,7 @@ properties, each having a key followed by a colon and value.</p>
 <p>Using the developer tools built into the Chrome web browser, JavaScript may be 
 run from within the console.</p>
 
-<h4 id="#jquery">jQuery Intro</h4>
+<h4 id="jquery">jQuery Intro</h4>
 
 <p>With a basic understanding of JavaScript and some of it's foundations, it is 
 time to take a look at jQuery. jQuery is an open source JavaScript library written 
@@ -5956,7 +5955,7 @@ until the page has loaded and the DOM is ready.</p>
  4 
 </pre>
 
-<h4 id="#selectors">Selectors</h4>
+<h4 id="selectors">Selectors</h4>
 
 <p>As previously mentioned, one of the core concepts of jQuery is
 to <a href="http://api.jquery.com/category/selectors/" 
@@ -6012,7 +6011,7 @@ not being native to the DOM they are a bit slow. The best results with
 using these filters is accomplished by using the :filter() method, which
 is part of the traversing feature in jQuery.</p>
 
-<h4 id="#traversing">Traversing</h4>
+<h4 id="traversing">Traversing</h4>
 
 <p>At times the general CSS selectors alone don't cut it and a little more
 detailed control is desired. Fortunately jQuery provides a handful of
@@ -6097,7 +6096,7 @@ specific methods within each category may be seen below.</p>
   <li>.siblings()</li>
 </ul>
 
-<h4 id="#manipulation">Manipulation</h4>
+<h4 id="manipulation">Manipulation</h4>
 
 <p>Selecting and traversing elements in the DOM is only part of what jQuery offers, 
 one other major part is what is possible with those elements once found. One 
@@ -6427,7 +6426,7 @@ methods include:</p>
   <li>.mouseup()</li>
 </ul>
 
-<h4 id="#effects">Effects</h4>
+<h4 id="effects">Effects</h4>
 
 <p>Next to events, jQuery also provides a handful of customizable effects.
 These effects come by the way of different methods, including event
@@ -6694,7 +6693,7 @@ animation is complete.</p>
   <b>Lesson 7 </b> <a href="#transforms">Transforms</a>
 </div>
 
-<h2 align="center" id="#transforms">Lesson 7: Transforms</h2>
+<h2 align="center" id="transforms">Lesson 7: Transforms</h2>
 <h3>In this Lesson 7:</h3>
 
 <p>GitlabGitLab is the most comprehensive AI-powered DevSecOps Platform.
@@ -7615,7 +7614,7 @@ rel="noopener noreferrer" target="_blank">animations</a>.</p>
 <b>Lesson 8 </b> <a href="transitions-animations">Transitions &amp; Animations</a>
 </p>
 
-<h2 align="center" id="#transitions-animations">Lesson 8: Transitions &amp; Animations</h2>
+<h2 align="center" id="transitions-animations">Lesson 8: Transitions &amp; Animations</h2>
 <h3>In this Lesson 8:</h3>
 
 <p>GitlabGitLab is the only place where enterprises build mission critical software.</p>
@@ -8455,7 +8454,7 @@ the animation.</p>
   <b>Lesson 9 </b> <a href="feature-support-polyfills/">Feature Support &amp; Polyfills</a>
 </p>
 
-<h2 align="center" id="#feature-support-polyfills">Lesson 9: Feature Support &amp; Polyfills</h2>
+<h2 align="center" id="feature-support-polyfills">Lesson 9: Feature Support &amp; Polyfills</h2>
 <h3>In this Lesson 9:</h3>
 
 <h4>HTML</h4>
@@ -8873,7 +8872,7 @@ bookmarklet open for debugging.</h6>
   <b>Lesson 10 </b><a href="#semantics-accessibility">Extending Semantics &amp; Accessibility</a>
 </div>
 
-<h2 align="center" id="#semantics-accessibility">Lesson 10: Extending Semantics & Accessibility</h2>
+<h2 align="center" id="semantics-accessibility">Lesson 10: Extending Semantics & Accessibility</h2>
 <h3>In this Lesson 10:</h3>
 
 <h5>HTML</h5>
