@@ -1876,7 +1876,7 @@ type or class, all depending on the level of specificity desired.</p>
 <h4>CSS</h4>
 
 <pre>
- 1  a[target] {...} 
+ 1  a&lbrack;target&rbrack; {...} 
  2 
 </pre>
 
@@ -1899,7 +1899,7 @@ inside of the quotations should be the desired matching attribute value.</p>
 <h4>CSS</h4>
 
 <pre>
- 1  a[href="http://google.com/"] {...} 
+ 1  a&lbrack;href="http://google.com/"&rbrack; {...} 
  2 
 </pre>
 
@@ -1922,7 +1922,7 @@ attribute value.</p>
 <h4>CSS</h4>
 
 <pre>
- 1  a[href*="login"] {...}
+ 1  a&lbrack;href*="login"&rbrack; {...}
  2 
 </pre>
 
@@ -1945,7 +1945,7 @@ stated value.</p>
 <h4>CSS</h4>
 
 <pre>
- 1  a[href&Hat;="https://"] {...}
+ 1  a&lbrack;href&Hat;="https://"&rbrack; {...}
  2 
 </pre>
 
@@ -1968,7 +1968,7 @@ stated value.</p>
 <h4>CSS</h4>
 
 <pre>
- 1  a[href$=".pdf"] {...} 
+ 1  a&lbrack;href$=".pdf"&rbrack; {...} 
  2 
 </pre>
 
@@ -1991,7 +1991,7 @@ stated value.</p>
 <h4>CSS</h4>
 
 <pre>
- 1  a[rel&tilde;="tag"] {...}
+ 1  a&lbrack;rel&tilde;="tag"&rbrack; {...}
  2 
 </pre>
 
@@ -2014,7 +2014,7 @@ stated value.</p>
 <h4>CSS</h4>
 
 <pre>
- 1  a[lang&#0124;="en"] {...}
+ 1  a&lbrack;lang&#0124;="en"&rbrack; {...}
  2 
 </pre>
 
@@ -2059,19 +2059,19 @@ stated value.</p>
  13 a:hover { 
  14   color: #ff7b29; 
  15 } 
- 16 a[href&$=".pdf"] {
+ 16 a&lbrack;href&$=".pdf"&rbrack; {
  17   background-image: url("images/pdf.png");
  18 } 
- 19 a[href$=".doc"] {
+ 19 a&lbrack;href$=".doc"&rbrack; {
  20   background-image: url("images/doc.png");
  21 } 
- 22 a[href$=".jpg"] {
+ 22 a&lbrack;href$=".jpg"&rbrack; {
  23   background-image: url("images/image.png"); 
  24 } 
- 25 a[href$=".mp3"] {
+ 25 a&lbrack;href$=".mp3"&rbrack; {
  26   background-image: url("images/audio.png"); 
  27 } 
- 28 a[href$=".mp4"] {
+ 28 a&lbrack;href$=".mp4"&rbrack; {
  29   background-image: url("images/video.png"); 
  30 } 
  31 
@@ -2521,16 +2521,16 @@ are selected.</p>
   <summary>HTML</summary>
 
 <pre>
- 1  <article>
- 2    <h1>...</h1>
- 3    <p>...</p>
- 4    <p>...</p>
- 5    <p>This paragraph will be selected</p>
- 6    <h2>...</h2>
- 7    <p>...</p>
- 8    <p>...</p>
- 9    <p>This paragraph will be selected</p>
- 10 </article>
+ 1  &lt;article&gt;
+ 2    &lt;h1&gt;...&lt;/h1&gt;
+ 3    &lt;p&gt;...&lt;/p&gt;
+ 4    &lt;p&gt;...&lt;/p&gt;
+ 5    &lt;p&gt;This paragraph will be selected&lt;/p&gt;
+ 6    &lt;h2&gt;...&lt;/h2&gt;
+ 7    &lt;p&gt;...&lt;/p&gt;
+ 8    &lt;p&gt;...&lt;/p&gt;
+ 9    &lt;p&gt;This paragraph will be selected&lt;/p&gt;
+ 10 &lt;/article&gt;
  11 
 </pre>
 
@@ -2558,16 +2558,16 @@ paragraph. Here the paragraphs on lines 4, 7, and 9 are selected.</p>
   <summary>HTML</summary>
 
 <pre>
- 1  <article>
- 2    <h1>...</h1>
- 3    <p>...</p>
- 4    <p>This paragraph will be selected</p>
- 5    <p>...</p>
- 6    <h2>...</h2>
- 7    <p>This paragraph will be selected</p>
- 8    <p>...</p>
- 9    <p>This paragraph will be selected</p>
- 10 </article>
+ 1  &lt;article&gt;
+ 2    &lt;h1&gt;...&lt;/h1&gt;
+ 3    &lt;p&gt;...&lt;/p&gt;
+ 4    &lt;p&gt;This paragraph will be selected&lt;/p&gt;
+ 5    &lt;p&gt;...&lt;/p&gt;
+ 6    &lt;h2&gt;...&lt;/h2&gt;
+ 7    &lt;p&gt;This paragraph will be selected&lt;/p&gt;
+ 8    &lt;p&gt;...&lt;/p&gt;
+ 9    &lt;p&gt;This paragraph will be selected&lt;/p&gt;
+ 10 &lt;/article&gt;
  11 
 </pre>
 
@@ -2605,7 +2605,7 @@ selector and pseudo-class from before.</p>
 <h4>HTML</h4>
 
 <pre>
- 1  <section id="hello">...</section>
+ 1  &lt;section id="hello"&gt;...&lt;/section&gt;
  2  
 </pre>
 
@@ -2819,7 +2819,7 @@ pseudo-classes.</p>
   | div:not(.awesome) | Negation     | Selects an element not represented by the stated  |
   |                   | Pseudo-class | argument. |
   
-<h4 id="pseudo-elements">Pseudo-elements</h4>
+<h4 id="#pseudo-elements">Pseudo-elements</h4>
 
 <p>Pseudo-elements are dynamic elements that don't exist in the document tree, and 
 when used within selectors these 
@@ -3114,7 +3114,7 @@ will surpass that of desktop Internet usage within the year.</p>
 build websites suitable for all users. The industry response to this
 question has become responsive web design, also known as RWD.</p>
 
-<h4 id="responsive-overview">Responsive Overview</h4>
+<h4 id="#responsive-overview">Responsive Overview</h4>
 
 <p>Responsive web design is the practice of building a website suitable to
 work on every device and every screen size, no matter how large or
@@ -4003,7 +4003,7 @@ websites easier and more logical. The popularity of preprocessors have
 also brought along different frameworks to support them, one of the more
 popular being Compass.</p>
 
-<h4 id="haml">Haml</h4>
+<h4 id="#haml">Haml</h4>
 
 <p>Haml, known as <a href="http://haml.info/docs/yardoc/file.REFERENCE.html"
 rel="noopener noreferrer" target="_blank">HTML abstraction markup language</a>, 
@@ -4355,7 +4355,7 @@ slash.</p>
 <h4>Haml</h4>
 
 <pre>
- 1  [if lt IE 9] 
+ 1  &lbrack;if lt IE 9] 
  2  %script{:src => "html5shiv.js"}
  3 
 </pre>
@@ -4363,9 +4363,9 @@ slash.</p>
 <h4>Compiled HTML</h4>
 
 <pre>
- 1  <!--[if lt IE 9]>
+ 1  <!--&lbrack;if lt IE 9]>
  2  <script src="html5shiv.js"></script>
- 3  <![endif]-->  
+ 3  <!&lbrack;endif]-->  
  4 
 </pre>
 
@@ -4502,7 +4502,7 @@ wrapping the necessary Ruby code inside.</p>
  2 
 </pre>
 
-<h4 id="scss-sass">SCSS &amp; Sass</h4>
+<h4 id="#scss-sass">SCSS &amp; Sass</h4>
 
 <p>SCSS and Sass are preprocessing languages which are compiled to CSS,
 resembling Haml a bit in that they make writing code easier, and provide
@@ -5171,17 +5171,17 @@ less common than color alterations.</p>
 
 <pre>
   - change-color() --- Set any property of a color
-    $color, [$red], [$green], [$blue], [$hue],
-    [$saturation], [$lightness], [$alpha]
+    $color, &lbrack;$red], &lbrack;$green], &lbrack;$blue], &lbrack;$hue],
+    &lbrack;$saturation], &lbrack;$lightness], &lbrack;$alpha]
 
   - adjust-color() --- Incrementally manipulate any property of a color
-    $color, [$red], [$green], [$blue], [$hue],
-    [$saturation], [$lightness], [$alpha]
+    $color, &lbrack;$red], &lbrack;$green], &lbrack;$blue], &lbrack;$hue],
+    &lbrack;$saturation], &lbrack;$lightness], &lbrack;$alpha]
 
   - scale-color() --- Fluidly scale any percentage based on property of
     a color
-    $color, [$red], [$green], [$blue], [$saturation],
-    [$lightness], [$alpha]
+    $color, &lbrack;$red], &lbrack;$green], &lbrack;$blue], &lbrack;$saturation],
+    &lbrack;$lightness], &lbrack;$alpha]
 </pre>
 
 <h4>Sass</h4>
@@ -5635,7 +5635,7 @@ counter variable can be finely controlled allowing for precise looping.</p>
 
 </details>
 
-<h4 id="other-preprocessors">Other Preprocessors</h4>
+<h4 id="#other-preprocessors">Other Preprocessors</h4>
 
 <p>Haml and Sass are far from the only preprocessing languages available,
 including JavaScript preprocessors as well. Some of the other popular
@@ -5726,7 +5726,7 @@ build your own behaviors at one point or another.</p>
 lesson gives a brief overview of JavaScript and then takes a look at
 jQuery.</p>
 
-<h4 id="javascript">JavaScript Intro</h4>
+<h4 id="#javascript">JavaScript Intro</h4>
 
 <p><a href="https://developer.mozilla.org/en-US/docs/JavaScript/A_re-introduction_to_JavaScript" 
 rel="noopener noreferrer" target="_blank">JavaScript (20xx)</a> provides the 
@@ -5777,7 +5777,7 @@ example, shay_is_awesome would more commonly named shayIsAwesome.</p>
  1  var theStarterLeague = 125; 
  2  var food_truck = 'Coffee';
  3  var mixtape01 = true; 
- 4  var vinyl = ]'Miles Davis', 'Frank Sinatra', 'Ray Charles'[; 
+ 4  var vinyl = ]'Miles Davis', 'Frank Sinatra', 'Ray Charles'&lbrack;; 
  5 
 </pre>
 
@@ -5852,10 +5852,10 @@ properties, each having a key followed by a colon and value.</p>
  3    name: 'The Starter League',
  4    location: 'Merchandise Mart',
  5    students: 120,
- 6    teachers: ['Jeff', 'Raghu', 'Carolyn', 'Shay']
+ 6    teachers: &lbrack;'Jeff', 'Raghu', 'Carolyn', 'Shay']
  7  };
  8  // Array
- 9  var school = ['Austin', 'Chicago', 'Portland'];
+ 9  var school = &lbrack;'Austin', 'Chicago', 'Portland'];
  10 
 </pre>
 
@@ -5873,7 +5873,7 @@ properties, each having a key followed by a colon and value.</p>
 <p>Using the developer tools built into the Chrome web browser, JavaScript may be 
 run from within the console.</p>
 
-<h4 id="jquery">jQuery Intro</h4>
+<h4 id="#jquery">jQuery Intro</h4>
 
 <p>With a basic understanding of JavaScript and some of it's foundations, it is 
 time to take a look at jQuery. jQuery is an open source JavaScript library written 
@@ -5955,7 +5955,7 @@ until the page has loaded and the DOM is ready.</p>
  4 
 </pre>
 
-<h4 id="selectors">Selectors</h4>
+<h4 id="#selectors">Selectors</h4>
 
 <p>As previously mentioned, one of the core concepts of jQuery is
 to <a href="http://api.jquery.com/category/selectors/" 
@@ -5974,7 +5974,7 @@ parentheses, ('...'), and may select elements just like that of CSS.</p>
  1  $('.feature'); // Class selector  
  2  $('li strong'); // Descendant selector 
  3  $('em, i'); // Multiple selector  
- 4  $('a[target="_blank"]'); // Attribute selector
+ 4  $('a&lbrack;target="_blank"]'); // Attribute selector
  5  $('p:nth-child(2)'); // Pseudo-class selector
  6 
 </pre>
@@ -6011,7 +6011,7 @@ not being native to the DOM they are a bit slow. The best results with
 using these filters is accomplished by using the :filter() method, which
 is part of the traversing feature in jQuery.</p>
 
-<h4 id="traversing">Traversing</h4>
+<h4 id="#traversing">Traversing</h4>
 
 <p>At times the general CSS selectors alone don't cut it and a little more
 detailed control is desired. Fortunately jQuery provides a handful of
@@ -6096,7 +6096,7 @@ specific methods within each category may be seen below.</p>
   <li>.siblings()</li>
 </ul>
 
-<h4 id="manipulation">Manipulation</h4>
+<h4 id="#manipulation">Manipulation</h4>
 
 <p>Selecting and traversing elements in the DOM is only part of what jQuery offers, 
 one other major part is what is possible with those elements once found. One 
@@ -6222,7 +6222,7 @@ the text of any h1 elements with the text Hello World.</p>
 
 <pre>
  1  $('section').prepend('<h3>Featured</h3>');
- 2  $('a[target="_blank"]').after('<em>New window.</em>'); 
+ 2  $('a&lbrack;target="_blank"]').after('<em>New window.</em>'); 
  3  $('h1').text('Hello World'); 
  4 
 </pre>
@@ -6426,7 +6426,7 @@ methods include:</p>
   <li>.mouseup()</li>
 </ul>
 
-<h4 id="effects">Effects</h4>
+<h4 id="#effects">Effects</h4>
 
 <p>Next to events, jQuery also provides a handful of customizable effects.
 These effects come by the way of different methods, including event
@@ -7622,11 +7622,11 @@ rel="noopener noreferrer" target="_blank">animations</a>.</p>
 <h4>CSS</h4>
 
 <ul>
-  <li><a href="#transitions">Transitions</a></li>
-  <li><a href="#shorthand-transitions">Shorthand Transitions</a></li>
-  <li><a href="#animations">Animations</a></li>
-  <li><a href="#customizing-animations">Customizing Animations</a></li>
-  <li><a href="#shorthand-animations">Shorthand Animations</a></li>
+  <li><a href="transitions">Transitions</a></li>
+  <li><a href="shorthand-transitions">Shorthand Transitions</a></li>
+  <li><a href="animations">Animations</a></li>
+  <li><a href="customizing-animations">Customizing Animations</a></li>
+  <li><a href="shorthand-animations">Shorthand Animations</a></li>
 </ul>
 
 <h4>SHARE</h4>
@@ -8442,7 +8442,7 @@ the animation.</p>
 
 <!-- 94 perfect + 10 + 17 = 121 -->
 <p>
-  <b>Lesson 7 </b> <a href="#css-transforms">Transforms</a>
+  <b>Lesson 7 </b> <a href="css-transforms">Transforms</a>
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -8451,7 +8451,7 @@ the animation.</p>
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <b>Lesson 9 </b> <a href="#feature-support-polyfills/">Feature Support &amp; Polyfills</a>
+  <b>Lesson 9 </b> <a href="feature-support-polyfills/">Feature Support &amp; Polyfills</a>
 </p>
 
 <h2 align="center" id="#feature-support-polyfills">Lesson 9: Feature Support &amp; Polyfills</h2>
@@ -8521,9 +8521,9 @@ versions of Internet Explorer 8 and below.</p>
 <p>In this case the conditional comment looks like <!--[if lt IE 9]>...<![endif]-->.</p>
 
 <pre>
- 1  <!--[if lt IE 9]>
+ 1  <!--&lbrack;if lt IE 9]>
  2  <script src="html5shiv.js"></script>
- 3  <![endif]-->
+ 3  <!&lbrack;endif]-->
  4 
 </pre>
 
@@ -8805,7 +8805,6 @@ rather than seeing a rendered screenshot, is far more helpful for
 debugging code. One of the best ways to boot up multiple versions of
 Internet Explorer is by using multiple virtual machines, each with a
 different version of Internet Explorer.</p>
-
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 14. virtualbox (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--
@@ -8818,7 +8817,7 @@ different version of Internet Explorer.</p>
 <h6 align="center" width="40%">Fig. 9. VirtualBox running on Mac OS X with Internet Explorer
 versions 6 through 9.</h6>
 
-Microsoft provides a handful of VirtualPCs that can be used solely for
+<p>Microsoft provides a handful of VirtualPCs that can be used solely for
 testing. Setting all of these up can be a herculean task. Fortunately,
 Greg Thornton has built an <a href="https://github.com/xdissent/ievms" 
 rel="noopener noreferrer" target="_blank">
@@ -8827,13 +8826,12 @@ takes a while to download all of the different virtual machines, and requires
 a decent amount of disk space. Prepare adequately by only installing the necessary 
 virtual machines and by clearing up the necessary disk space ahead of time.
 Depending on how often the virtual machines are used, it may be worth
-installing them on an external hard drive.
+installing them on an external hard drive.</p>
 
-Internet Explorer versions 8 and above have built-in development tools,
+<p>Internet Explorer versions 8 and above have built-in development tools,
 unfortunately versions 7 and below do not. The web inspector and all of
 the other debugging tools we've grown to love are not readily available
-within Internet Explorer 7 and below.
-
+within Internet Explorer 7 and below.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 15. virtualbox (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="center" width="100%">
@@ -8847,24 +8845,19 @@ bookmarklet open for debugging.</h6>
 
 <h4>Resources & Links</h4>
 
--[HTML5 Shiv](https://code.google.com/p/html5shiv/) via Remy Sharp
-
--[How To Create an IE-Only
- Stylesheet](https://css-tricks.com/how-to-create-an-ie-only-stylesheet/) via
- CSS-Tricks
-
--[Modernizr](http://modernizr.com/)
-
--[Loading Scripts with
- jQuery](https://davidwalsh.name/loading-scripts-jquery) via David Walsh
-
--[deCSS3](https://github.com/davatron5000/deCSS3) via Dave Rupert
-
--[HTML5 Cross Browser Polyfills](https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-browser-Polyfills)
-
--[HTML5 Please](http://html5please.com/)
-
--[Microsoft IE Virtual Machines](https://github.com/xdissent/ievms) via Greg Thornton
+<ul>
+  <li><a href="https://code.google.com/p/html5shiv/">HTML5 Shiv</a> via Remy Sharp</li>
+  <li><a href="https://css-tricks.com/how-to-create-an-ie-only-stylesheet/">
+    How To Create an IE-Only Stylesheet</a> via CSS-Tricks</li>
+  <li><a href="http://modernizr.com/">Modernizr</a>http://modernizr.com/</li>
+  <li><a href="https://davidwalsh.name/loading-scripts-jquery">
+    Loading Scripts with jQuery</a> via David Walsh</li>
+  <li><a href="https://github.com/davatron5000/deCSS3">deCSS3</a> via Dave Rupert</li>
+  <li><a href="https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-browser-Polyfills">
+    HTML5 Cross Browser Polyfills</a></li>
+  <li><a href="http://html5please.com/">HTML5 Please</a></li>
+  <li><a href="https://github.com/xdissent/ievms">Microsoft IE Virtual Machines</a> via Greg Thornton</li>
+</ul>
 
 <!-- 70 spaces between -->
 <div>
@@ -8892,42 +8885,42 @@ bookmarklet open for debugging.</h6>
   <li><a href="#wai-aria">WAI-ARIA</a></li>
 </ul>
 
-<b>SHARE</b>
+<b>Share</b>
 
-Semantics and accessibility are naturally part of HTML by design,
+<p>Semantics and accessibility are naturally part of HTML by design,
 however they are not fully leveraged unless used accordingly. Knowing
 how to write semantic and accessible code properly takes an
 understanding of how semantics and accessibility work, and how users and
 machines interpret them. Writing semantic and accessible code isn't
 incredibly difficult, but it can be time consuming. In the long run,
-however, the benefits win out.
+however, the benefits win out.</p>
 
-One of the more important parts to remember when writing semantic and
+<p>One of the more important parts to remember when writing semantic and
 accessible code is to do your best to leverage the standard markup
 language. Do your best to write the cleanest code possible, and take
 pride in your work. Generally speaking, don't use a meaningless element
 where another element might make more semantic sense, using a div where
 a h1 would be better fitted for example. Use semantic elements and
 attributes, as well as microdata and WAI-ARIA to extend the value of
-your code.
+your code.</p>
 
-Additionally, <b>be an advocate for semantics and accessibility</b>. Tell
+<p>Additionally, <b>be an advocate for semantics and accessibility</b>. Tell
 others why you've written certain code, and provide reasoning why
 certain modules of content are marked up in a specific way. Outline
 goals and objectives within your code, and explain how those goals and
 objectives are being accomplished. The practice of writing semantic and
 accessible code is growing, however adoption at large has not yet been
-achieved. Be an advocate for the code you write.
+achieved. Be an advocate for the code you write.</p>
 
 <h4>Semantic Motivation</h4>
 
-Occasionally, one may ask if semantics really make a difference. You may
+<p>Occasionally, one may ask if semantics really make a difference. You may
 hear they slow down development, are poorly supported, or that they are
 even opinionated. While this may have some validity, you still need to
 retain integrity and continue to write the best code possible, for
-semantics provide a larger meaning in writing code.
+semantics provide a larger meaning in writing code.</p>
 
-The fact of the matter is, 
+<p>The fact of the matter is, 
 <a href="http://www.vanseodesign.com/web-design/semantic-html/" 
 rel="noopener noreferrer" target="_blank">semantics largely 
 benefit everyone</a>. For starters, semantics provide a shared and unambiguous 
@@ -8937,10 +8930,10 @@ information to assistive technologies. Search and globalization is more
 permanent with semantics, making it easier to serve content internationally 
 and making it more search engine friendly. Should that not be enough, semantics 
 also promote interoperability, allowing the exchange and use of information 
-across different platforms and devices.
+across different platforms and devices.</p>
 
-It's safe to say semantics are important, and here to stay. To briefly
-recap, semantics provide:
+<p>It's safe to say semantics are important, and here to stay. To briefly
+recap, semantics provide:</p>
 
 <ul>
   <li>Unambiguous, shared meaning within content</li>
@@ -8951,7 +8944,7 @@ recap, semantics provide:
 
 <h4>Structural Semantics</h4>
 
-Within the beginner's guide we discuss the use of 
+<p>Within the beginner's guide we discuss the use of 
 <a href="https://learn.shayhowe.com/html-css/getting-to-know-html/" 
 rel="noopener noreferrer" target="_blank">
 structural semantics</a>, specifically using the header, nav, article, section, 
@@ -8959,60 +8952,60 @@ aside, and footer elements. These elements are used to provide additional
 background context to the content within them, communicating their core
 meaning to web browsers and other devices. This is important, as it
 provides a better way to outline and structure pages, not to mention a
-more meaningful solution than divisions.
+more meaningful solution than divisions.</p>
 
 <h4>Hiding Content</h4>
 
-Every now and then you may want to hide a block of content on the page,
+<p>Every now and then you may want to hide a block of content on the page,
 perhaps showing or hiding an element depending on a user's state. For
 example, having a success message hidden from a user until they complete
 a desired action. Most commonly, this is accomplished with the display:
 none; CSS declaration. While this does work, it is semantically
-incorrect.
+incorrect.</p>
 
-A better option is to use the hidden Boolean attribute, which is a
+<p>A better option is to use the hidden Boolean attribute, which is a
 global attribute available to all elements for use. Functionally it
 performs the same way as the CSS declaration, but semantically it
 represents an element that should be hidden, or ignored, for the time
 being. Screen readers and other devices will recognize this, temporarily
-skipping it, where they may not done so with the CSS declaration.
+skipping it, where they may not done so with the CSS declaration.</p>
 
 <pre>
- 1  <!-- Good -->  
- 2  <div hidden>...</div>  
- 3  <!-- Not good --> 
- 4  <div style="display: none;">...</div> 
+ 1  &lt;!-- Good --&gt;  
+ 2  &lt;div hidden&gt;...&lt;/div&gt;  
+ 3  &lt;!-- Not good --&gt; 
+ 4  &lt;div style="display: none;"&gt;...&lt;/div&gt; 
  5 
 </pre>
 
-Imagine a blind user attempting to fill out a form and the first piece
+<p>Imagine a blind user attempting to fill out a form and the first piece
 of content, before even filling out the form, is a success message. This
 is a poor user experience, and one that can easily be fixed using proper
-semantics.
+semantics.</p>
 
 <h4>Text Level Semantics</h4>
 
-The majority of content on the web lives within text, and we primarily
+<p>The majority of content on the web lives within text, and we primarily
 browse the Internet looking for this content. Using the
 proper <a href="https://developers.whatwg.org/text-level-semantics.html" 
 rel="noopener noreferrer" target="_blank">
-semantic markup</a> for text makes it easier for users to find what they need.
+semantic markup</a> for text makes it easier for users to find what they need.</p>
 
 <h4>Bolding Text</h4>
 
-There are a few different ways to make text bold, including multiple
+<p>There are a few different ways to make text bold, including multiple
 elements and the <a href="https://learn.shayhowe.com/html-css/working-with-typography/" 
 rel="noopener noreferrer" target="_blank">
 font weight</a> CSS property. The two main elements used in this case include strong 
 and b. While these two elements have the same presentation they have completely
-different semantic meanings.
+different semantic meanings.</p>
 
-The strong element outlines text that has a <b>strong importance</b>. On
+<p>The strong element outlines text that has a <b>strong importance</b>. On
 the contrasting side, the b element identifies text that is to
 be <b>stylistically offset</b>, without importance. Generally speaking,
 the b element should be used solely as a styling hook to change the
 presentation of an element, where the strong element should be used to
-identify significantly important text.
+identify significantly important text.</p>
 
 <pre>
  1  <!-- Strong importance -->
@@ -9026,19 +9019,19 @@ identify significantly important text.
 
 <h4>Italicizing Text</h4>
 
-Italicizing text falls in line with that of bolding text, where we can
+<p>Italicizing text falls in line with that of bolding text, where we can
 use multiple elements or the <a href="https://learn.shayhowe.com/html-css/working-with-typography/" 
 rel="noopener noreferrer" target="_blank">
 font style</a> CSS property to achieve a desired presentation. When italicizing text, the
 two elements most commonly used are em and i. Again, these share the
-same presentation, yet have completely different semantic meanings.
+same presentation, yet have completely different semantic meanings.</p>
 
-The em element places a <b>stressed emphasis</b> on text, while
+<p>The em element places a <b>stressed emphasis</b> on text, while
 the i element identifies text to be expressed in an <b>alternate voice or
 tone</b>. Using the em element really drives prominence with an added
 importance. On the other hand, the i element is primarily used within
 dialog or prose, offsetting text without any added emphasis or
-importance.
+importance.</p>
 
 <pre>
  1  <!-- Stressed emphasis --> 
@@ -9052,43 +9045,43 @@ importance.
 
 <h4>Using i for Icons</h4>
 
-Recently there has been a small movement of front end programmers using
+<p>Recently there has been a small movement of front end programmers using
 the i element for including icons on a page, specifically as seen
 within <a href="https://getbootstrap.com/" 
 rel="noopener noreferrer" target="_blank">Bootstrap</a>.
 The i element is used as a hook, to which a class then determines which
 icon background image to apply to the element. Depending on how closely
 you wish to follow semantics this may or may not be an acceptable
-practices.
+practices.</p>
 
 <h4>Underlining Text</h4>
 
-Continuing the pattern of having multiple elements with the same
+<p>Continuing the pattern of having multiple elements with the same
 presentation, underlining text is no different. There are a couple of
 different elements we can use as well as the 
 <a href="https://learn.shayhowe.com/html-css/working-with-typography/" 
 rel="noopener noreferrer" target="_blank">
 text decoration</a> CSS property. In this case, the two primary elements 
-used to underline text are ins and u.
+used to underline text are ins and u.</p>
 
-The ins element is used to identify text that has been recently <b>added
+<p>The ins element is used to identify text that has been recently <b>added
 to the document</b>, and the u element simply refers to an <b>unarticulated
-annotation</b>.
+annotation</b>.</p>
 
-For more semantic code, the ins element may be used with
+<p>For more semantic code, the ins element may be used with
 the cite and datetime attributes. The datetime attribute identifies when
 the content was added to the document, and the cite attribute provides a
 machine readable source providing reference for the addition, perhaps
-documentation or a request ticket.
+documentation or a request ticket.</p>
 
-The u element is typically used to label text as a proper name, often in
-another language, or to point out a misspelling.
+<p>The u element is typically used to label text as a proper name, often in
+another language, or to point out a misspelling.</p>
 
-Underlining text does require a bit of additional care, as it may be
+<p>Underlining text does require a bit of additional care, as it may be
 confused with a hyperlink. By default hyperlinks are underlined, and
 thus have become a standard design practice. Underlining text that is
 not a hyperlink can confuse users and cause quite a bit of frustration.
-Use underlines with caution.
+Use underlines with caution.</p>
 
 <details>
   <summary>Example, Underline</summary>
@@ -9109,21 +9102,21 @@ Use underlines with caution.
 
 <h4>Striking Text</h4>
 
-Striking text follows the same pattern as before where different
+<p>Striking text follows the same pattern as before where different
 elements may be used, as may the 
 <a href="https://learn.shayhowe.com/html-css/working-with-typography/" 
 rel="noopener noreferrer" target="_blank">
 text decoration</a> CSS property. The two properties most commonly used 
-include del and s.
+include del and s.</p>
 
-The del element is used to identify text <b>deleted or removed from the
+<p>The del element is used to identify text <b>deleted or removed from the
 document</b>. As with the ins element, it may be used with
 the cite and datetime attributes. Each of which hold the identical
 semantic values as before, cite specifying a resource that explains the
 change and datetime identifying when the content was removed from the
-document.
+document.</p>
 
-The s element identifies text that is no longer accurate or relevant.
+The s element identifies text that is no longer accurate or relevant.</p>
 
 <details>
   <summary>Example, Striking Text</summary>
@@ -9144,10 +9137,10 @@ The s element identifies text that is no longer accurate or relevant.
 
 <h4>Highlighting Text</h4>
 
-To highlight text for reference purposes the mark element should be
+<p>To highlight text for reference purposes the mark element should be
 used. Added in HTML5, the mark element provides a clean, semantic way to
 identify text, specifically for reference purposes without having to use
-an un-semantic text level element.
+an un-semantic text level element.</p>
 
 <pre>
  1  <!-- Highlighted for reference purposes --> 
@@ -9159,12 +9152,12 @@ an un-semantic text level element.
 
 <h4>Abbreviations</h4>
 
-Abbreviations, the shortened form of a phrase, can be semantically
+<p>Abbreviations, the shortened form of a phrase, can be semantically
 marked up in HTML using the abbr element. The abbr element should be
 used along with the title attribute, of which includes the full value of
 the phrase being abbreviated. The acronym element was originally used to
 distinguish acronyms from abbreviations but has since been deprecated,
-and shouldn't be used.
+and shouldn't be used.</p>
 
 <pre>
  1  <abbr title="HyperText Markup Language">HTML</abbr>
@@ -9176,10 +9169,10 @@ and shouldn't be used.
 
 <h4>Sub & Superscripts</h4>
 
-Subscripts and superscripts may be marked up accordingly using
+<p>Subscripts and superscripts may be marked up accordingly using
 the sub and sup elements respectively. It is important to note that
 these elements should be reserved for typographical conventions, not for
-presentational purposes.
+presentational purposes.</p>
 
 <pre>
  1  <!-- Subscript -->
@@ -9194,25 +9187,25 @@ presentational purposes.
 
 <h4>Meter &amp; Progress</h4>
 
-To gauge scale or indicate progress the meter and progress elements
+<p>To gauge scale or indicate progress the meter and progress elements
 should be used. The meter element is used to measure a fixed value, one
 that does not change over time, while the progress element measures the
-progress of a increasing measurement.
+progress of a increasing measurement.</p>
 
-The meter element may be used with the min, max, low, high, optimum,
+<p>The meter element may be used with the min, max, low, high, optimum,
 and value attributes. The min and max attributes set the lower and upper
 bounds of the range, where the value attribute sets the exact measured
 value. The low and high attributes identify what is to be considered the
 lower and higher parts of the range, while the optimum value identifies
 the most favorable part of the range, of which may be in the lower or
-higher parts.
+higher parts.</p>
 
-The progress element indicates progress rather than a fixed measurement.
+<p>The progress element indicates progress rather than a fixed measurement.
 It specifically represents the completion of a task, either by what is
 left to be completed or what has been completed thus far. There are two
 attributes that may be applied to the progress element, value and max.
 The value attributes indicates where the progress currently stands and
-the max attribute indicates what progress needs to be reached.
+the max attribute indicates what progress needs to be reached.</p>
 
 <details>
   <summary>Example, Meter &amp; Progress</summary>
@@ -9235,18 +9228,18 @@ the max attribute indicates what progress needs to be reached.
 
 <h4>Time &amp; Address</h4>
 
-Representing time and addresses in HTML can be accomplished using
+<p>Representing time and addresses in HTML can be accomplished using
 the time and address elements respectively. The time element may be used
 with, or without, the datetime attribute, depending on how the text
 within the element is formatted. If the content is formatted with the
 correct time stamp then the datetime attribute may be omitted.
 Furthermore, if the time is representing the date or time of a
-publication the pubdate Boolean attribute should be used.
+publication the pubdate Boolean attribute should be used.</p>
 
-The address element may be used to hold any contact information,
+<p>The address element may be used to hold any contact information,
 including a physical address as well as a website or email address. It
 should not include any further information than the contact information,
-and other content needs to be placed outside of the address element.
+and other content needs to be placed outside of the address element.</p>
 
 <details>
   <summary>Example, Time &amp; Address</summary>
@@ -9274,19 +9267,19 @@ and other content needs to be placed outside of the address element.
 
 <h4>Presenting Code</h4>
 
-Presenting code snippets, or samples, within a page can be accomplished
+<p>Presenting code snippets, or samples, within a page can be accomplished
 using either the code or pre elements, or a combination of the two.
 The code element is commonly used to represent a fragment of code and is
 displayed in the default monospace font. The code element is an inline
 level element and may be used within paragraphs of text, or other block
-and inline level elements.
+and inline level elements.</p>
 
-For large blocks of code, the pre element can be used in conjunction
+<p>For large blocks of code, the pre element can be used in conjunction
 with the code element. The pre element represent preformatted text and
 will display text exactly as it is typed, whitespace included. Nesting
 the code element within the pre element semantically identifies larger
 samples of code, which include whitepsace, displayed in a block level
-manner.
+manner.</p>
 
 <pre>
  1  &lt;!-- Inline code samples --&gt;  
@@ -9303,20 +9296,20 @@ manner.
 
 <h4>Line & Word Breaks</h4>
 
-Occasionally you may want to include a line break within a line of text,
+<p>Occasionally you may want to include a line break within a line of text,
 in which case the br element may be used. The br element does not have a
 closing tag, simply a beginning. In XHTML the br element is self
-closing, including a trailing forward slash, <br />.
+closing, including a trailing forward slash,</p> <br />.
 
-Line breaks are not to be used for thematic grouping of content.
+<p>Line breaks are not to be used for thematic grouping of content.
 Paragraphs or other elements are better suited for thematic grouping.
 Line breaks are specifically to be used where line breaks exist as part
-of the content, for example as within addresses and poems.
+of the content, for example as within addresses and poems.</p>
 
-In addition to line breaks, you may also specify word breaking
+<p>In addition to line breaks, you may also specify word breaking
 opportunities with the wbr element. Using the wbr element in the middle
 of a word ensures that, should the word need to wrap two lines, it does
-in a legible fashion.
+in a legible fashion.</p>
 
 <pre>
  1  &lt;!-- Line break --&gt;  
@@ -9332,13 +9325,13 @@ in a legible fashion.
 
 <h4>Side Comments</h4>
 
-Originally the small element was used to render text as one font size
+<p>Originally the small element was used to render text as one font size
 smaller than the default, purely for presentational purposes. As we are
 aware, presentation and style should only live within CSS, not HTML.
 Within HTML5, the small element preserves the presentation of being
 displayed at a smaller font size, however it semantically means to be
 rendered as a side comments or small print. This often includes
-copyright information or legal print.
+copyright information or legal print.</p>
 
 <pre>
  1  &lt;!-- Side comments or small print --&gt; 
@@ -9350,35 +9343,35 @@ copyright information or legal print.
 
 <h4>Citations & Quotes</h4>
 
-The beginner's guide discusses <a href="https://learn.shayhowe.com/html-css/working-with-typography/" 
+<p>The beginner's guide discusses <a href="https://learn.shayhowe.com/html-css/working-with-typography/" 
 rel="noopener noreferrer" target="_blank">
 citations and quotes</a>, and when to use the cite, q, and blockquote elements accordingly. As a
 quick reminder, the cite element refers to a title of work, the q element identifies dialog or 
 prose, and the blockquote element is used to code longer formed quotes, commonly from external 
-sources.
+sources.</p>
 
 <h4>Hyperlink Attributes</h4>
 
-The beginner's guide also
+<p>The beginner's guide also
 outlines <a href="https://learn.shayhowe.com/html-css/getting-to-know-html/" 
 rel="noopener noreferrer" target="_blank">
 hyperlinks</a>, and some of their different behaviors. What is not covered, 
 however, is some of the semantic benefits to hyperlinks, specifically with 
-the use of the download and rel attributes.
+the use of the download and rel attributes.</p>
 
 <h4>Download Attribute</h4>
 
-The download attribute tells the browser to prompt a download for a
+<p>The download attribute tells the browser to prompt a download for a
 file, rather than the default behavior of navigation to the file. As an
 example, if the hyperlink reference attribute, href, is pointing to an
 image, the browser will prompt a user to download the image instead of
-opening the image within the browser.
+opening the image within the browser.</p>
 
-The download attribute can serve as a Boolean attribute, downloading the
+<p>The download attribute can serve as a Boolean attribute, downloading the
 file as is, or it may contain a value, of which becomes the file name
 once downloaded. Using a specific value here lets you name the file as
 you wish on your server while still providing users with a meaningful
-name.
+name.</p>
 
 <pre>
  1  <!-- Boolean -->  
@@ -9392,11 +9385,11 @@ name.
 
 <h4>Relationship Attribute</h4>
 
-For any hyperlinks including a reference attribute, href, you may also
+<p>For any hyperlinks including a reference attribute, href, you may also
 include the relationship attribute, rel. The rel attribute identifies
 the relationship between the current document and the document being
 referenced. For example, when linking to a copyright statement
-the rel attribute value of copyright should be used.
+the rel attribute value of copyright should be used.</p>
 
 </pre>
  1  <a href="legal.html" rel="copyright">Terms of Use</a>  
@@ -9424,7 +9417,7 @@ rel="noopener noreferrer" target="_blank">popular</a> rel attribute values inc
 
 <h4>Microdata</h4>
 
-<a href="http://www.w3.org/TR/microdata/" 
+<p><a href="http://www.w3.org/TR/microdata/" 
 rel="noopener noreferrer" target="_blank">Microdata</a> is HTML
 extended with nested groups of name-value pairs that allow machines,
 including browsers and search engines, to pick up additional semantics
@@ -9435,15 +9428,14 @@ intended. Currently, the more popular uses of microdata reside within
 coding contact information and calendar events, however there are 
 <a href="http://schema.org/docs/schemas.html" 
 rel="noopener noreferrer" target="_blank">encoding models</a> for products,
-reviews, and more.
+reviews, and more.</p>
 
-One example of microdata at work is within Google, where microdata is
+<p>One example of microdata at work is within Google, where microdata is
 interpreted and used within search results to display more relevant
 data. Often performing a search for a business location yields the
 address and sub sequential contact information within the results.
 Chances are this information is being pulled from microdata written on
-an existing website.
-
+an existing website.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 16. google microdata (181) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="center" width="100%">
