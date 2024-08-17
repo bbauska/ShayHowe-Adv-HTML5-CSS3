@@ -522,19 +522,19 @@ data than necessary.</p>
  2  
 </pre>
 
-<h4 id="reduce-http-requests">Reduce HTTP Requests</h4>
+<h4 id="#reduce-http-requests">Reduce HTTP Requests</h4>
 
 <p>Next to file size, the number of HTTP requests a website makes is one of
 the largest performance pitfalls. Each time a request is made to the
 server the page load time increases. Some request have to finish before
-others can start, and too many request can bloat the server.</p>
+others can start, and too many requests can bloat the server.</p>
 
 <h4>Combine Like Files</h4>
 
 <p>One way, and perhaps the easiest way, to reduce the number of HTTP
 requests is to combine like files. Specifically, combine all of the CSS
 files into one and all of the JavaScript files into one. Combining these
-files then compressing them creates one, hopefully small, HTTP request.</p>
+files then compressing them creating one, hopefully small, HTTP request.</p>
 
 <pre>
  1  &lt;!-- Bad --&gt;
@@ -551,8 +551,9 @@ files then compressing them creates one, hopefully small, HTTP request.</p>
 the <b>beginning</b> of the document within the head, while the JavaScript
 for a web page should be loaded at the <b>end</b>, just before the
 closing body tag. The reason for these unique placements is because CSS
-can be loaded while the rest of the website is being loaded as well.
-JavaScript, on the other hand, can only render one file at a time, thus
+can be loaded while the rest of the website is being loaded as well.</p>
+
+<p>JavaScript, on the other hand, can only render one file at a time, thus
 prohibiting anything else from loading. One caveat here is when
 JavaScript files are asynchronously loaded after the page itself is done
 rendering. Another caveat is when JavaScript is needed in helping render
@@ -598,18 +599,18 @@ be shown accordingly.</p>
   <summary>HTML</summary>
 
 <pre>
- 1  &lt;ul>
- 2    &lt;li>&lt;a href="#">&lt;span class="bold">Bold Text&lt;/span>&lt;/a>&lt;/li>
- 3    &lt;li>&lt;a href="#">&lt;span class="italic">Italicize 4 Text&lt;/span>&lt;/a>&lt;/li>
- 4    &lt;li>&lt;a href="#">&lt;span class="underline">Underline Text&lt;/span>&lt;/a>&lt;/li>
- 5    &lt;li>&lt;a href="#">&lt;span class="size">Size 7  Text&lt;/span>&lt;/a>&lt;/li>
- 6    &lt;li>&lt;a href="#">&lt;span class="bullet">Bullet Text&lt;/span>&lt;/a>&lt;/li>
- 7    &lt;li>&lt;a href="#">&lt;span class="number">Number 1  Text&lt;/span>&lt;/a>&lt;/li>
- 8    &lt;li>&lt;a href="#">&lt;span class="quote">Quote 1  Text&lt;/span>&lt;/a>&lt;/li>
- 9    &lt;li>&lt;a href="#">&lt;span class="left">Left Align 1  Text&lt;/span>&lt;/a>&lt;/li>
- 10   &lt;li>&lt;a href="#">&lt;span class="center">Center Align 1  Text&lt;/span>&lt;/a>&lt;/li>
- 11   &lt;li>&lt;a href="#">&lt;span class="right">Right Align Text&lt;/span>&lt;/a>&lt;/li>
- 12 </ul>
+ 1  &lt;ul&gt;
+ 2    &lt;li&gt;&lt;a href="#"&gt;&lt;span class="bold"&gt;Bold Text&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+ 3    &lt;li&gt;&lt;a href="#"&gt;&lt;span class="italic"&gt;Italicize 4 Text&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+ 4    &lt;li&gt;&lt;a href="#"&gt;&lt;span class="underline"&gt;Underline Text&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+ 5    &lt;li&gt;&lt;a href="#"&gt;&lt;span class="size"&gt;Size 7  Text&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+ 6    &lt;li&gt;&lt;a href="#"&gt;&lt;span class="bullet"&gt;Bullet Text&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+ 7    &lt;li&gt;&lt;a href="#"&gt;&lt;span class="number"&gt;Number 1  Text&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+ 8    &lt;li&gt;&lt;a href="#"&gt;&lt;span class="quote"&gt;Quote 1  Text&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+ 9    &lt;li&gt;&lt;a href="#"&gt;&lt;span class="left"&gt;Left Align 1  Text&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+ 10   &lt;li&gt;&lt;a href="#"&gt;&lt;span class="center"&gt;Center Align 1  Text&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+ 11   &lt;li&gt;&lt;a href="#"&gt;&lt;span class="right"&gt;Right Align Text&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+ 12 &lt;/ul&gt;
  13 
 </pre>
 
@@ -723,7 +724,7 @@ the actual data URI is less weight than the actual image.</p>
 
 <h4>Image Data URI Demo</h4>
 
-<h4 id="cache-common-files">Cache Common Files</h4>
+<h4 id="#cache-common-files">Cache Common Files</h4>
 
 <p>Another way to help cut down HTTP requests, and to serve up pages
 faster, is to cache common files. When a page loads for the first time
@@ -802,9 +803,9 @@ rel="noopener noreferrer" target="_blank">syntax</a>.</p>
 <h4>CSS</h4>
 
 <ul>
-  <li><a href="#containing-floats">Containing Floats</a></li>
-  <li><a href="#position-property">Position Property</a></li>
-  <li><a href="#z-index-property">Z-Index Property</a></li>
+  <li><a href="containing-floats">Containing Floats</a></li>
+  <li><a href="position-property">Position Property</a></li>
+  <li><a href="z-index-property">Z-Index Property</a></li>
 </ul>
 
 <b>Share</b>
@@ -824,7 +825,7 @@ Following that, we'll cover more detailed positioning techniques,
 including how to precisely position elements on both the x and y axis as
 well as the z axis.</p>
 
-<h4 id="containing-floats">Containing Floats</h4>
+<h4 id="#containing-floats">Containing Floats</h4>
 
 <p>Floating elements is a natural process when building a website's layout,
 and is the instinctive method for positioning elements on a page. Floats
@@ -1039,7 +1040,7 @@ not achieve the desired outcome.</p>
 the box-set class. Instead, the class of group would need to be added to
 the parent element containing the floats.</p>
 
-<h4 id="position-property">Position Property</h4>
+<h4 id="#position-property">Position Property</h4>
 
 <p>Occasionally you need more control over the position of an element, more
 than a float can provide, in which case the position property comes into
@@ -1382,7 +1383,7 @@ freely.</p>
 
 <h4>Fixed Footer Demo</h4>
 
-<h4 id="z-index-property">Z-Index Property</h4>
+<h4 id="#z-index-property">Z-Index Property</h4>
 
 <p>By nature web pages are often considered to be two dimensional,
 displaying elements upon a x and y axis. However when you begin to
@@ -1525,7 +1526,7 @@ and improvements to existing practices. Here we'll discuss 
 rel="noopener noreferrer" target="_blank">selectors</a>, old and new, and how to 
 best put them to use.</p>
 
-<h4 id="common-selectors">Common Selectors</h4>
+<h4 id="#common-selectors">Common Selectors</h4>
 
 <p>Before diving too deep into some of the more complex selectors, and
 those offered within CSS3, let's take a quick look at some of the more
@@ -1651,7 +1652,7 @@ article, thus selected.</p>
  8 
 </pre>
 
-<h4 id="child-selectors">Child Selectors Overview</h4>
+<h4 id="#child-selectors">Child Selectors Overview</h4>
 
   | <b>Example</b>|<b>Classification</b> | <b>Explanation</b> |
   --------------|-----------------------------|-----------------------------------------------------|
@@ -1660,7 +1661,7 @@ article, thus selected.</p>
   | article > p | Direct Child | Selects an element that resides immediately inside an |
   |             | Selector     | identified parent element.                            |
 
-<h4 id="sibling-selectors">Sibling Selectors</h4>
+<h4 id="#sibling-selectors">Sibling Selectors</h4>
 
 <p>Knowing how to <a href="https://css-tricks.com/child-and-sibling-selectors/" 
 rel="noopener noreferrer" target="_blank">select children</a> of an element is 
@@ -1852,7 +1853,7 @@ selected.</p>
   |        | Selector         | in which both elements share the same parent.                     |
 
 
-<h4 id="attribute-selectors">Attribute Selectors</h4>
+<h4 id="#attribute-selectors">Attribute Selectors</h4>
 
 <p>Some of the common selectors looked at early may also be defined as
 attribute selectors, in which an element is selected based upon its
@@ -2101,7 +2102,7 @@ stated value.</p>
   | a[lang&#0124;="en"]     | Attribute        | Selects an element if the given attribute value |
   |                         | Hyphenated       | is hyphen-separated and begins with the word stated. |
 
-<h4 id="pseudo-classes">Pseudo-classes</h4>
+<h4 id="#pseudo-classes">Pseudo-classes</h4>
 
 <p><a href="http://coding.smashingmagazine.com/2011/03/30/how-to-use-css3-pseudo-classes/" 
 rel="noopener noreferrer" target="_blank">
@@ -4195,10 +4196,10 @@ outlined formats.</p>
 <h4>Compiled HTML</h4>
 
 <pre>
- 1  <section class="feature"></section> 
- 2  <section class="feature special"></section>  
- 3  <section id="hello"></section> 
- 4  <section class="feature" id="hello" role="region"></section>  
+ 1  &lt;section class="feature"&gt;&lt;/section&gt; 
+ 2  &lt;section class="feature special"&gt;&lt;/section&gt;  
+ 3  &lt;section id="hello"&gt;&lt;/section&gt; 
+ 4  &lt;section class="feature" id="hello" role="region"&gt;&lt;/section&gt;  
  5 
 </pre>
 
@@ -4220,9 +4221,9 @@ identified with a . and IDs are to be identified with a #.</p>
 <h4>Compiled HTML</h4>
 
 <pre>
- 1  <div class="awesome"></div> 
- 2  <div class="awesome lesson"></div>
- 3  <div class="lesson" id="getting-started"></div>  
+ 1  &lt;div class="awesome"&gt;&lt;/div&gt; 
+ 2  &lt;div class="awesome lesson"&gt;&lt;/div&gt;
+ 3  &lt;div class="lesson" id="getting-started"&gt;&lt;/div&gt;  
  4 
 </pre>
 
@@ -4234,7 +4235,7 @@ HTML, all depending on the syntax being used.</p>
 <h4>Haml</h4>
 
 <pre>
- 1  %input{:type => "checkbox", :checked => true}  
+ 1  %input{:type =&gt; "checkbox", :checked =&gt; true}  
  2  %input(type="checkbox" checked=true)  
  3  %input(type="checkbox" checked) 
  4 
@@ -4243,7 +4244,7 @@ HTML, all depending on the syntax being used.</p>
 <h4>Compiled HTML</h4>
 
 <pre>
- 1  <input type="checkbox" checked>  
+ 1  &lt;input type="checkbox" checked&gt;  
  2 
 </pre>
 
@@ -4271,10 +4272,10 @@ execution.</p>
 <h4>Compiled HTML</h4>
 
 <pre>
- 1  <div class="author"> 
- 2  Shay Howe  
- 3  = @author 
- 4  </div>
+ 1  &lt;div class="author"&gt; 
+ 2    Shay Howe  
+ 3    = @author 
+ 4  &lt;/div&gt;
  5 
 </pre>
 
@@ -4299,14 +4300,14 @@ outside of the anchor text.</p>
  1  %p
  2  Shay is 
  3  = succeed "." do 
- 4  %a{:href => "#"} awesome 
+ 4  %a{:href =&gt; "#"} awesome 
  5 
 </pre>
 
 <h4>Compiled HTML</h4>
 
 <pre>
- 1  <p>Shay is <a href="#">awesome</a>.</p>  
+ 1  &lt;p&gt;Shay is &lt;a href="#"&gt;awesome&lt;/a&gt;.&lt;/p&gt;  
  2 
 </pre>
 
@@ -4333,15 +4334,15 @@ code can be commented out by being nested underneath a forward slash.</p>
 <h4>Compiled HTML</h4>
 
 <pre>
- 1  <div> 
- 2    <!-- Commented line --> 
+ 1  &lt;div&gt; 
+ 2    &lt;!-- Commented line --&gt; 
  3    Actual line
- 4  </div>
- 5    <!--  
- 6  <div> 
+ 4  &lt;/div&gt;
+ 5    &lt;!--  
+ 6  &lt;div&gt; 
  7    Commented block 
- 8  </div>
- 9  -->
+ 8  &lt;/div&gt;
+ 9  --&gt;
  10 
 </pre>
 
@@ -4356,16 +4357,16 @@ slash.</p>
 
 <pre>
  1  &lbrack;if lt IE 9] 
- 2  %script{:src => "html5shiv.js"}
+ 2  %script{:src =&gt; "html5shiv.js"}
  3 
 </pre>
 
 <h4>Compiled HTML</h4>
 
 <pre>
- 1  <!--&lbrack;if lt IE 9]>
- 2  <script src="html5shiv.js"></script>
- 3  <!&lbrack;endif]-->  
+ 1  &lt;!--&lbrack;if lt IE 9]&gt;
+ 2  &lt;script src="html5shiv.js"&gt;&lt;/script&gt;
+ 3  &lt;!&lbrack;endif]--&gt;  
  4 
 </pre>
 
@@ -4391,9 +4392,9 @@ multiple lines with the use of nesting.</p>
 <h4>Compiled HTML</h4>
 
 <pre>
- 1  <div> 
+ 1  &lt;div&gt; 
  2    Actual line
- 3  </div>
+ 3  &lt;/div&gt;
  4 
 </pre>
 
@@ -9449,7 +9450,7 @@ information, hours, pricing, ratings, and more.</h6>
 
 <h4>Microdata vs. Microformats vs. RDFa</h4>
 
-There are actually a handful of rich, structured data standards,
+<p>There are actually a handful of rich, structured data standards,
 including <a href="http://www.w3.org/TR/microdata/" 
 rel="noopener noreferrer" target="_blank">microdata</a>,
 <a href="http://microformats.org/wiki/Main_Page" 
@@ -9457,9 +9458,9 @@ rel="noopener noreferrer" target="_blank">microformats</a>, and 
 <a href="http://www.w3.org/TR/xhtml-rdfa-primer/" 
 rel="noopener noreferrer" target="_blank">RDFa</a>. All
 of these have their pros and cons, and all of which are still viable to
-practice.
+practice.</p>
 
-Microdata is the recommended format from 
+<p>Microdata is the recommended format from 
 <a href="https://support.google.com/webmasters/bin/answer.py?hl=en&answer=99170" 
 rel="noopener noreferrer" target="_blank">
 Google</a>, and other search engines, as well as part of the HTML5 specification. It
@@ -9468,25 +9469,25 @@ around, thus looking to be a solid choice, and the one covered here. It
 is, however, recommended you do your research, take the pulse of the
 community, find what works best for your situation, and use that. Using
 one of these standards is substantially better than not using any. Find
-what will provide the best benefit for your users.
+what will provide the best benefit for your users.</p>
 
 <h4>Outlining Microdata</h4>
 
-Microdata is identified using three main
-attributes, itemscope, itemtype, and itemprop.
+<p>Microdata is identified using three main
+attributes, itemscope, itemtype, and itemprop.</p>
 
-The itemscope Boolean attribute declares the scope of each microdata
+<p>The itemscope Boolean attribute declares the scope of each microdata
 item. Place this attribute on the parent element where all of the
-microdata information pertaining to this item should reside.
+microdata information pertaining to this item should reside.</p>
 
-Once you have determined the scope, use the itemtype attribute to
+<p>Once you have determined the scope, use the itemtype attribute to
 identify what microdata vocabulary should be used. Generally speaking,
 some of the more popular microdata item types have been outlined
 at <a href="http://schema.org/docs/schemas.html" 
 rel="noopener noreferrer" target="_blank">Schema.org</a>.
 There are, however, other websites which outline additional, and
 different, item types. You may also write your own item types should you
-find the need.
+find the need.</p>
 
 <pre>
  1  <section itemscope itemtype="http://schema.org/Person"> 
@@ -9495,23 +9496,23 @@ find the need.
  4 
 </pre>
 
-Once the scope and type of the item have been determined, properties may
+<p>Once the scope and type of the item have been determined, properties may
 then be set. These properties are identified by different elements which
 include the itemprop attribute. The value of this attribute determines
 what property is being referenced, and the content within the element
-itself most commonly determines the value of the property.
+itself most commonly determines the value of the property.</p>
 
 <pre>
- 1  <section itemscope itemtype="http://schema.org/Person"> 
- 2    <h1 itemprop="name">Shay Howe</h1>
- 3  </section> 
+ 1  &lt;section itemscope itemtype="http://schema.org/Person"&gt; 
+ 2    &lt;h1 itemprop="name"&gt;Shay Howe&lt;/h1&gt;
+ 3  &lt;/section&gt; 
  4 
 </pre>
 
-Some elements, however, do not get their itemprop value from the content
+<p>Some elements, however, do not get their itemprop value from the content
 within the element. Instead, their value is determined from the value of
 another attribute on the element. The table below outlines these one-off
-elements and what attribute is used for their property value.
+elements and what attribute is used for their property value.</p>
 
   | <b>Element</b>                                       | <b>Value</b>       |
   |------------------------------------------------------|--------------------|
@@ -9523,13 +9524,12 @@ elements and what attribute is used for their property value.
 
 <h4>Person Microdata</h4>
 
-When referring to a person
-the <a href="http://schema.org/Person" 
+<p>When referring to a person the <a href="http://schema.org/Person" 
 rel="noopener noreferrer" target="_blank">person</a> microdata library
 should be used. Below is an example of what a person microdata item
 might look like. Please notice, the person item type is used, as is the
 postal address item type within it. Also, please notice the different
-item properties and their corresponding values.
+item properties and their corresponding values.</p>
 
 <details>
   <summary>Example, Person Microdata</summary>
@@ -9556,19 +9556,18 @@ item properties and their corresponding values.
 
 <h4>Person Microdata Demo</h4>
 
-Please keep in mind, this code is for an individual person. Should you
-wish to refer to an organization, a more specific 
-<a href="http://schema.org/Organization" 
+<p>Please keep in mind, this code is for an individual person. Should you
+wish to refer to an organization, a more specific <a href="http://schema.org/Organization" 
 rel="noopener noreferrer" target="_blank">organization</a> microdata
-library should be followed.
+library should be followed.</p>
 
 <h4>Event Microdata</h4>
 
-The event microdata is very similar to that of the person microdata,
+<p>The event microdata is very similar to that of the person microdata,
 however it uses the <a href="http://schema.org/Event" 
 rel="noopener noreferrer" target="_blank">event</a> microdata library
 instead. Common property similarities between the two can be identified,
-as can some of the nested item types.
+as can some of the nested item types.</p>
 
 <details>
   <summary>Example, Event Microdata</summary>
@@ -9597,45 +9596,45 @@ as can some of the nested item types.
 
 <h4>Event Microdata Demo</h4>
 
-Microdata provides a lot of ways to further extend the content of a
+<p>Microdata provides a lot of ways to further extend the content of a
 page. We have only touched the surface here. Further information on
 microdata may be found at <a href="http://diveintohtml5.info/extensibility.html" 
 rel="noopener noreferrer" target="_blank">
 Dive Into HTML5 Microdata</a> and <a href="https://developers.whatwg.org/links.html#microdata" 
-rel="noopener noreferrer" target="_blank">WHATWG Microdata</a>.
+rel="noopener noreferrer" target="_blank">WHATWG Microdata</a>.</p>
 
 <h4>WAI-ARIA</h4>
 
-<a href="http://www.w3.org/WAI/intro/aria" 
+<p><a href="http://www.w3.org/WAI/intro/aria" 
 rel="noopener noreferrer" target="_blank">WAI-ARIA</a>, also know as
 Web Accessibility Initiative --- Accessible Rich Internet Applications,
 is a specification that helps make web pages and applications more
 accessible to those with disabilities. Specifically, WAI-ARIA helps
 define roles (for what blocks of content do), states (for how blocks of
 content are configured), and additional properties to support assistive
-technologies.
+technologies.</p>
 
 <h4>Roles</h4>
 
-Setting <a href="https://www.w3.org/TR/wai-aria/#roles" 
+<p>Setting <a href="https://www.w3.org/TR/wai-aria/#roles" 
 rel="noopener noreferrer" target="_blank">WAI-ARIA roles</a> is
 accomplished using the role attribute. These roles then specify what
-certain elements and blocks of content do on a page.
+certain elements and blocks of content do on a page.</p>
 
 <pre>
  1  &lt;header role="banner"&gt;...&lt;/header&gt; 
  2 
 </pre>
 
-WAI-ARIA roles break down into four different categories, including
+<p>WAI-ARIA roles break down into four different categories, including
 abstract, widget, document structure, and landmark roles. For this
-lesson we will focus primarily on the document structure and landmark
-roles. <b>Document structure roles</b> define the organizational structure
+lesson we will focus primarily on the <b>document structure</b> and <b>landmark
+roles</b>. <b>Document structure roles</b> define the organizational structure
 of content on a page, while <b>landmark roles</b> define the regions of a
 page. Specific role values for each of these categories are broken out
-below.
+below.</p>
 
-<h4>Document Structure Roles</h4>
+<h4>Document Structure Roles:</h4>
 
 <ul>
   <li>article</li>
@@ -9671,15 +9670,16 @@ below.
   <li>search</li>
 </ul>
 
-HTML5 introduced a handful of new structural elements which commonly
+<p>HTML5 introduced a handful of new structural elements which commonly
 match up against the document structure and landmark roles. Exactly how
-these roles match up against specific elements may be seen below. Please
-notice, the header and footer elements do not have an implied role, and
+these roles match up against specific elements may be seen below.</p>
+
+<p>Please notice, the header and footer elements do not have an implied role, and
 the acceptable roles for these elements may only be used <b>once</b> per
 page. That said, if you have multiple header and footer elements on a
 page the banner and contentinfo roles should be applied on the elements
 directly tied to the document from a top level perspective, not elements
-nested within other regions of the document structure.
+nested within other regions of the document structure.</p>
 
 
 | Element | Implied Role  | Acceptable Roles                        |
@@ -9692,8 +9692,8 @@ nested within other regions of the document structure.
 | section | region        | alert, alertdialog, application, contentinfo, dialog, document, log, |
 |         |               | main, marquee, region, search, or status.                            |
 
-Combining the elements with their matched roles in HTML5 would look like
-the following code snippet.
+<p>Combining the elements with their matched roles in HTML5 would look like
+the following code snippet.</p>
 
 <pre>
  1  &lt;header role="banner"&gt;  
@@ -9709,23 +9709,25 @@ the following code snippet.
 
 <h3>States & Properties</h3>
 
-In combination with WAI-ARIA roles there are also 
+<p>In combination with WAI-ARIA roles there are also 
 <a href="https://www.w3.org/TR/wai-aria/#states_and_properties" 
-rel="noopener noreferrer" target="_blank">
-states and properties</a> which help inform assistive technologies how content 
-is configured. Like roles, the states and properties are broken into four 
-categories, including <b>widget attributes</b>, <b>live region attributes</b>, 
-<b>drag-and-drop attributes</b>, and <b>relationship attributes</b>.
+rel="noopener noreferrer" target="_blank">states and properties</a> 
+which help inform assistive technologies how content is configured. Like roles, 
+the states and properties are broken into four categories, including 
+<b>widget attributes</b>, <b>live region attributes</b>, <b>drag-and-drop attributes</b>, 
+and <b>relationship attributes</b>.</p>
 
-The <b>widget attributes</b> support widget roles and are specific to the
-user interface and where users take actions. The <b>live region
-attributes</b> may be applied to any element and are used to indicate
-content changes for assistive technologies, on page alerts and
-notifications for example. <b>Drag-and-drop attributes</b> supply
-information about drag-and-drop interface elements and provide alternate
-behaviors to assistive technologies. Lastly, <b>relationship
-attributes</b> outline the relationship between elements when the document
-structure cannot be determined.
+<ul>
+  <li>The <b>widget attributes</b> support widget roles and are specific to the 
+    user interface and where users take actions.</li>
+  <li>The <b>live region attributes</b> may be applied to any element and are used 
+    to indicate content changes for assistive technologies, on page alerts and 
+	notifications for example.</li>
+  <li><b>Drag-and-drop attributes</b> supply information about drag-and-drop 
+    interface elements and provide alternate behaviors to assistive technologies.</li>
+  <li>Lastly, <b>relationship attributes</b> outline the relationship between 
+    elements when the document structure cannot be determined.</li>
+</ul>
 
 <details>
   <summary>Resources</summary>
