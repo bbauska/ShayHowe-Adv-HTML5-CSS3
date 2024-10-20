@@ -786,7 +786,7 @@ rel="noopener noreferrer" target="_blank">syntax</a>.</p>
 
 <!-- 70 spaces -->
 <div>
-    <b>Lesson 1 </b> <a href="performance-organization">Performance &amp; Organization</a>
+    <b>Lesson 1 </b> <a href="#performance-organization">Performance &amp; Organization</a>
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -794,7 +794,7 @@ rel="noopener noreferrer" target="_blank">syntax</a>.</p>
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <b>Lesson 3 </b> <a href="complex-selectors">Complex Selectors</a>
+    <b>Lesson 3 </b> <a href="#complex-selectors">Complex Selectors</a>
 </div>
 
 <h2 align="center" id="detailed-positioning">Lesson 2: Detailed Positioning</h2>
@@ -803,9 +803,9 @@ rel="noopener noreferrer" target="_blank">syntax</a>.</p>
 <h4>CSS</h4>
 
 <ul>
-  <li><a href="containing-floats">Containing Floats</a></li>
-  <li><a href="position-property">Position Property</a></li>
-  <li><a href="z-index-property">Z-Index Property</a></li>
+  <li><a href="#containing-floats">Containing Floats</a></li>
+  <li><a href="#position-property">Position Property</a></li>
+  <li><a href="#z-index-property">Z-Index Property</a></li>
 </ul>
 
 <b>Share</b>
@@ -1482,7 +1482,7 @@ box three.</p>
 
 <!-- 80 spaces -->
 <p>
-    <b>Lesson 1</b> <a href="performance-organization">Performance &amp; Organization</a>
+    <b>Lesson 1</b> <a href="#performance-organization">Performance &amp; Organization</a>
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -1490,7 +1490,7 @@ box three.</p>
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <b>Lesson 3</b> <a href="complex-selectors">Complex Selectors</a>
+    <b>Lesson 3</b> <a href="#complex-selectors">Complex Selectors</a>
 </p>
 
 <h2 align="center" id="complex-selectors">Lesson 3: Complex Selectors</h2>
@@ -1499,12 +1499,12 @@ box three.</p>
 <h4>CSS</h4>
 
 <ul>
-  <li><a href="common-selectors">Common Selectors</a></li>
-  <li><a href="child-selectors">Child Selectors</a></li>
-  <li><a href="sibling-selectors">Sibling Selectors</a></li>
-  <li><a href="attribute-selectors">Attribute Selectors</a></li>
-  <li><a href="pseudo-classes">Pseudo-classes</a></li>
-  <li><a href="pseudo-elements">Pseudo-elements</a></li>
+  <li><a href="#common-selectors">Common Selectors</a></li>
+  <li><a href="#child-selectors">Child Selectors</a></li>
+  <li><a href="#sibling-selectors">Sibling Selectors</a></li>
+  <li><a href="#attribute-selectors">Attribute Selectors</a></li>
+  <li><a href="#pseudo-classes">Pseudo-classes</a></li>
+  <li><a href="#pseudo-elements">Pseudo-elements</a></li>
 </ul>
 
 <b>SHARE</b>
@@ -1907,7 +1907,7 @@ inside of the quotations should be the desired matching attribute value.</p>
 <h4>HTML</h4>
 
 <pre>
- 1  <a href="http://google.com/">...</a>  
+ 1  &lt;a href="http://google.com/"&gt;...&lt;/a&gt;
  2 
 </pre>
 
@@ -1930,7 +1930,7 @@ attribute value.</p>
 <h4>HTML</h4>
 
 <pre>
- 1  <a href="/login.php">...</a>  
+ 1  &lt;a href="/login.php"&gt;...&lt;/a&gt;
  2 
 </pre>
 
@@ -1953,7 +1953,7 @@ stated value.</p>
 <h4>HTML</h4>
 
 <pre>
- 1  <a href="https://chase.com/">...</a>  
+ 1  &lt;a href="https://chase.com/"&gt;...&lt;/a&gt;
  2 
 </pre>
 
@@ -1976,7 +1976,7 @@ stated value.</p>
 <h4>HTML</h4>
 
 <pre>
- 1  <a href="/docs/menu.pdf">...</a> 
+ 1  &lt;a href="/docs/menu.pdf"&gt;...&lt;/a&gt;
  2 
 </pre>
 
