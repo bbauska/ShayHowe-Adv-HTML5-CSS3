@@ -17,6 +17,22 @@ body {
   font-kerning: normal;
 }
 
+pre {
+  overflow: auto;
+  }
+pre > code {
+  display: block;
+  margin-left: 15px;
+  padding: 1rem;
+  word-wrap: normal;
+  }
+pre, code {
+  font-family: monospace, monospace;
+  font-size: 10px;
+  margin-left: 15px;
+}
+pre:hover, pre:focus { width: min-content; }
+
 details {
   font: 13px Inter, sans-serif, Bahnschrift, Calibri;
   width: 65%;
@@ -97,23 +113,6 @@ blockquote {
   color: #606060;
 }
 
-pre {
-  overflow: auto;
-  }
-pre > code {
-  display: block;
-  margin-left: 15px;
-  padding: 1rem;
-  word-wrap: normal;
-  }
-pre, code {
-  font-family: monospace, monospace;
-  font-size: 10px;
-  margin-left: 15px;
-}
-pre:hover, pre:focus { width: min-content; }
-
-/**/
 /* code {  */
 /*   font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;  */
 /*   font-size: 85%;  */
