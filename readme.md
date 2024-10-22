@@ -1,8 +1,9 @@
 ---
-title: "Shay & Howe's Advanced HTML and CSS"
+title: "Advanced HTML and CSS"
 author: "Brian Bauska (bbauska)"
 date created: "3/31/2024 6+pm"
 date last editted: "8/16/2024 3+pm"
+date last editted: "10/21/2024 11+pm"
 output:
   markdown:
 ---
@@ -9680,7 +9681,6 @@ page the banner and contentinfo roles should be applied on the elements
 directly tied to the document from a top level perspective, not elements
 nested within other regions of the document structure.</p>
 
-
 | Element | Implied Role  | Acceptable Roles                        |
 |---------|---------------|-----------------------------------------|
 | article | article	      | application, article, document, or main |
@@ -9759,7 +9759,8 @@ and <b>relationship attributes</b>.</p>
 <h3><b>Lesson 9</b> <a href="feature-support-polyfills">Feature Support &amp; Polyfills</a></h3>
 
 ...the end.
-<!-- 5/14/2024 4:58pm -->
-<!-- 5/19/2024 6:53pm -->
-<!-- 6/21/2024 Fri 1:25am -->
-<!-- 8/16/2024 Fri 3:55pm -->
+<h6>5/14/2024 4:58pm<br>
+5/19/2024 6:53pm<br>
+6/21/2024 Fri 1:25am<br>
+8/16/2024 Fri 3:55pm<br>
+10/21/2024 Mon 11:33pm</h6>
