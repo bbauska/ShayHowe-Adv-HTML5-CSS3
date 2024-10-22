@@ -23,16 +23,18 @@ pre {
 pre > code {
   display: block;
   width: 18em;
-  margin-left: 15px;
-  padding: 1rem;
+  margin-left: 5px;
+  padding: .5rem;
   word-wrap: normal;
   }
 pre, code {
   font-family: monospace, monospace;
-  font-size: 10px;
-  margin-left: 15px;
+  font-size: 12px;
+  margin-left: 0px;
 }
 pre:hover, pre:focus { width: min-content; }
+
+code {font-size: 12px; }
 
 details {
   font: 13px Inter, sans-serif, Bahnschrift, Calibri;
@@ -182,7 +184,7 @@ header {
   text-decoration: none;
 }
 
-code{white-space: pre-wrap;}
+/* code{white-space: pre-wrap;} */
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
 div.column{flex: auto; overflow-x: auto;}
