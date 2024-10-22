@@ -22,6 +22,7 @@ pre {
   }
 pre > code {
   display: block;
+  width: 15em;
   margin-left: 15px;
   padding: 1rem;
   word-wrap: normal;
@@ -58,7 +59,7 @@ details > p {
   box-shadow: 3px 3px 4px #00008b;  /* dark blue*/
 }
 details[open] > summary {
-  background-color: yellow;
+  background-color: #ffff00;  /* yellow */
 }
 
 p {
