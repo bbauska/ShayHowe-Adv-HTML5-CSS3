@@ -17,6 +17,36 @@ body {
   font-kerning: normal;
 }
 
+details {
+  font:
+    12px "Bahnschrift",
+    Calibri,
+    sans-serif;
+  width: 620px;
+}
+
+details > summary {
+  padding: 2px 6px;
+  width: 10em;
+  background-color: #ddd;
+  border: none;
+  box-shadow: 3px 3px 4px darkblue;
+  cursor: pointer;
+}
+
+details > p {
+  border-radius: 0 0 5px 5px;
+  background-color: #ddd;
+  padding: 1px 3px;
+  margin: 0;
+  box-shadow: 3px 3px 4px darkblue;
+  margin-left: 10px;
+}
+
+details[open] > summary {
+  background-color: #ffff00;
+}
+
 pre {
   overflow: auto;
   }
@@ -34,35 +64,7 @@ pre, code {
 }
 pre:hover, pre:focus { width: min-content; }
 
-code {font-size: 12px; }
-
-details {
-  font: 13px Inter, sans-serif, Bahnschrift, Calibri;
-  width: 65%;
-}
-summary {
-  font: 13px Inter, sans-serif, Bahnschrift, Calibri;
-  width: 65%;
-}
-details > summary {
-  padding: 2px 6px;
-  width: 15em;  /* 12em */
-  background-color: #eee;  /* very light gray */
-  border: none;
-  box-shadow: 3px 3px 4px #00008b;  /* dark blue */
-  cursor: pointer;
-  margin-left: 10px;
-}
-details > p {
-  border-radius: 0 0 10px 10px;
-  background-color: #fff;  /* white */
-  padding: 2px 6px;
-  margin: 0;
-  box-shadow: 3px 3px 4px #00008b;  /* dark blue*/
-}
-details[open] > summary {
-  background-color: #ffff00;  /* yellow */
-}
+code { font-size: 12px; }
 
 p {
    margin: 1em 0;
@@ -115,26 +117,6 @@ blockquote {
   border-left: 2px solid #e6e6e6;
   color: #606060;
 }
-
-/* code {  */
-/*   font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;  */
-/*   font-size: 85%;  */
-/*   margin: 0;  */
-/*   hyphens: manual;  */
-/* }  */
-/* pre {  */
-/*   margin: 1em 0;  */
-/*   overflow: auto;  */
-/* }  */
-/* pre code {  */
-/*   padding: 0;  */
-/*   overflow: visible;  */
-/*   overflow-wrap: normal;  */
-/* }  */
-/* .sourceCode {  */
-/*   background-color: transparent;  */
-/*   overflow: visible;  */
-/* }  */
 
 hr {
   background-color: #1a1a1a;
