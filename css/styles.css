@@ -18,27 +18,31 @@ body {
 }
 
 details {
-  font: 11px Inter, sans-serif, Bahnschrift, Calibri;
-  width: min-content;  /* 75%; */
+  font: 13px Inter, sans-serif, Bahnschrift, Calibri;
+  width: 65%;
+}
+summary {
+  font: 13px Inter, sans-serif, Bahnschrift, Calibri;
+  width: 65%;
 }
 details > summary {
   padding: 2px 6px;
-  width: max-content;  /* 12em */
+  width: 15em;  /* 12em */
   background-color: #eee;  /* very light gray */
   border: none;
   box-shadow: 3px 3px 4px #00008b;  /* dark blue */
   cursor: pointer;
+  margin-left: 10px;
 }
 details > p {
   border-radius: 0 0 10px 10px;
   background-color: #fff;  /* white */
   padding: 2px 6px;
   margin: 0;
-  box-shadow: 3px 3px 4px #0008b;  /* dark blue */
-  cursor: pointer;
+  box-shadow: 3px 3px 4px #00008b;  /* dark blue*/
 }
 details[open] > summary {
-  background-color: #ffff00;  /* pure (or mostly pure) yellow */
+  background-color: yellow;
 }
 
 p {
@@ -93,25 +97,42 @@ blockquote {
   color: #606060;
 }
 
-code {
-  font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
-  font-size: 85%;
-  margin: 0;
-  hyphens: manual;
-}
 pre {
-  margin: 1em 0;
   overflow: auto;
+  }
+pre > code {
+  display: block;
+  margin-left: 15px;
+  padding: 1rem;
+  word-wrap: normal;
+  }
+pre, code {
+  font-family: monospace, monospace;
+  font-size: 10px;
+  margin-left: 15px;
 }
-pre code {
-  padding: 0;
-  overflow: visible;
-  overflow-wrap: normal;
-}
-.sourceCode {
-  background-color: transparent;
-  overflow: visible;
-}
+pre:hover, pre:focus { width: min-content; }
+
+/**/
+/* code {  */
+/*   font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;  */
+/*   font-size: 85%;  */
+/*   margin: 0;  */
+/*   hyphens: manual;  */
+/* }  */
+/* pre {  */
+/*   margin: 1em 0;  */
+/*   overflow: auto;  */
+/* }  */
+/* pre code {  */
+/*   padding: 0;  */
+/*   overflow: visible;  */
+/*   overflow-wrap: normal;  */
+/* }  */
+/* .sourceCode {  */
+/*   background-color: transparent;  */
+/*   overflow: visible;  */
+/* }  */
 
 hr {
   background-color: #1a1a1a;
