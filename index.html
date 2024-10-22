@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!---~~~~~~~~~~~~~~~~~~~~~~~~~~ index.html of shayhowe-Adv-HTML-CSS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~ index.html of Adv-HTML-CSS (Shay & Howe) ~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="author" content="Brian Bauska (bbauska)" />
-  <title>Shay &amp; Howe’s Advanced HTML and CSS</title>
+  <title>Advanced HTML and CSS</title>
   <link rel="stylesheet" type="text/css" href="/css/styles.css">
   <link rel="apple-touch-icon" sizes="57x57" href="./images/apple-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="./images/apple-icon-60x60.png">
@@ -29,8 +29,8 @@
   <meta name="theme-color" content="#ffffff">
 <!--~~~~~~~~~~~~~~~~~~~~~~ index.html of uofm-inter-with-javascript (01) ~~~~~~~~~~~~~~~~~~~~~~~-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" >
-  <meta name="title" content="Shay-Howe's Advanced HTML &amp; CSS">
-  <meta name="description" content="Shay-How: Advanced HTML &amp; CSS. 
+  <meta name="title" content="Advanced HTML &amp; CSS">
+  <meta name="description" content="Advanced HTML &amp; CSS. 
     Having the ability to write HTML and CSS with a solid understanding is a 
     great expertise to have. As a website’s code base and traffic grows, a new 
     skill set comes into play, one that is extremely important to both development 
@@ -45,7 +45,7 @@
     Additionally, taking a few small steps to improve the performance of a website 
     can pay off in dividends. Website performance greatly resembles the 80/20 rule, 
     where 20% of the optimizations will speed up roughly 80% of the website." >
-  <title>Shay-Howe's Advance HTML &amp; CSS</title>
+  <title>Advance HTML &amp; CSS</title>
   <link rel="stylesheet" type="text/css" href="./css/styles.css">
 </head>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -78,8 +78,10 @@
 </script>
 </head>
 <body>
+
 <header id="title-block-header">
-<h1 class="title">Shay &amp; Howe’s Advanced HTML and CSS</h1>
+
+<h1 class="title">Advanced HTML and CSS</h1>
 <p class="author">Brian Bauska (bbauska)</p>
 </header>
 <h1 align="center" width="100%">
@@ -10725,11 +10727,12 @@ page. That said, if you have multiple header and footer elements on a
 page the banner and contentinfo roles should be applied on the elements
 directly tied to the document from a top level perspective, not elements
 nested within other regions of the document structure.</p>
+
 <table>
 <colgroup>
-<col style="width: 13%" />
-<col style="width: 23%" />
-<col style="width: 63%" />
+  <col style="width: 13%" />
+  <col style="width: 23%" />
+  <col style="width: 63%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -10767,7 +10770,7 @@ nested within other regions of the document structure.</p>
 <tr class="even">
 <td>section</td>
 <td>region</td>
-<td>alert, alertdialog, application, contentinfo, dialog, document, log, </td>
+<td>alert, alertdialog, application, contentinfo, dialog, document, log, main, marquee, region, search, or status.</td>
 </tr>
 <tr class="odd">
 <td></td>
@@ -10776,6 +10779,7 @@ nested within other regions of the document structure.</p>
 </tr>
 </tbody>
 </table>
+
 <p>Combining the elements with their matched roles in HTML5 would look
 like the following code snippet.</p>
 <pre><code> 1  &lt;header role=&quot;banner&quot;&gt;  
@@ -10787,70 +10791,49 @@ like the following code snippet.</p>
  7  &lt;aside role=&quot;complementary&quot;&gt;...&lt;/aside&gt;  
  8  &lt;footer role=&quot;contentinfo&quot;&gt;...&lt;/footer&gt;  
  9 </code></pre>
-<h3>
-States &amp; Properties
-</h3>
+<h3>States &amp; Properties</h3>
+
 <p>In combination with WAI-ARIA roles there are also 
 <a href="https://www.w3.org/TR/wai-aria/#states_and_properties" 
-rel="noopener noreferrer" target="_blank"> states and
-properties</a> which help inform assistive technologies how content is
-configured. Like roles, the states and properties are broken into four
-categories, including <b>widget attributes</b>, <b>live region
-attributes</b>, <b>drag-and-drop attributes</b>, and <b>relationship
-attributes</b>.</p>
-<p>The <b>widget attributes</b> support widget roles and are specific to
-the user interface and where users take actions. The <b>live region
-attributes</b> may be applied to any element and are used to indicate
-content changes for assistive technologies, on page alerts and
-notifications for example. <b>Drag-and-drop attributes</b> supply
-information about drag-and-drop interface elements and provide alternate
-behaviors to assistive technologies. Lastly, <b>relationship
-attributes</b> outline the relationship between elements when the
+rel="noopener noreferrer" target="_blank">States and properties</a> which help inform 
+assistive technologies how content is configured. Like roles, the states and properties 
+are broken into four categories, including <b>widget attributes</b>, <b>live region
+attributes</b>, <b>drag-and-drop attributes</b>, and <b>relationship attributes</b>.</p>
+
+<p>The <b>widget attributes</b> support widget roles and are specific to the user interface 
+and where users take actions. The <b>live region attributes</b> may be applied to any element 
+and are used to indicate content changes for assistive technologies, on page alerts and 
+notifications for example. <b>Drag-and-drop attributes</b> supply information about 
+drag-and-drop interface elements and provide alternate behaviors to assistive technologies. 
+Lastly, <b>relationship attributes</b> outline the relationship between elements when the
 document structure cannot be determined.</p>
+
 <details>
-<summary>
-Resources
-</summary>
-<h3>
-Resources &amp; Links
-</h3>
+  <summary>Resources</summary>
+
+<h3>Resources &amp; Links</h3>
+
 <ul>
-<li>
-<a href="https://developers.whatwg.org/text-level-semantics.html" 
-     rel="noopener noreferrer" target="_blank"> Text-Level Semantics</a>
-via WHATWG
-</li>
-<li>
-<a href="http://microformats.org/wiki/existing-rel-values" 
-     rel="noopener noreferrer" target="_blank"> Existing rel
-Values</a> via Microformats.org
-</li>
-<li>
-<a href="http://schema.org/docs/schemas.html" 
-     rel="noopener noreferrer" target="_blank"> Organization of
-Schemas</a> via Schema.org
-</li>
-<li>
-<a href="http://diveintohtml5.info/extensibility.html" 
-     rel="noopener noreferrer" target="_blank"> Microdata</a> via Dive
-Into HTML5
-</li>
-<li>
-<a href="http://www.w3.org/WAI/intro/aria" 
-     rel="noopener noreferrer" target="_blank"> WAI-ARIA
-Overview</a>) via W3.org
-</li>
-<li>
-<a href="https://www.w3.org/TR/wai-aria/#roles" 
-     rel="noopener noreferrer" target="_blank"> The Roles Model</a> via
-W3.org
-</li>
+  <li><a href="https://developers.whatwg.org/text-level-semantics.html" 
+     rel="noopener noreferrer" target="_blank">Text-Level Semantics</a> via WHATWG</li>
+  <li><a href="http://microformats.org/wiki/existing-rel-values" 
+     rel="noopener noreferrer" target="_blank">Existing rel Values</a> via Microformats.org</li>
+  <li><a href="http://schema.org/docs/schemas.html" 
+     rel="noopener noreferrer" target="_blank">Organization of Schemas</a> via Schema.org</li>
+  <li><a href="http://diveintohtml5.info/extensibility.html" 
+    rel="noopener noreferrer" target="_blank"> Microdata</a> via Dive Into HTML5</li>
+  <li><a href="http://www.w3.org/WAI/intro/aria" 
+     rel="noopener noreferrer" target="_blank">WAI-ARIA Overview</a>) via W3.org</li>
+  <li><a href="https://www.w3.org/TR/wai-aria/#roles" 
+     rel="noopener noreferrer" target="_blank">The Roles Model</a> via W3.org</li>
 </ul>
+
 </details>
+
 <p><b>Lesson 9</b>
 <a href="https://learn.shayhowe.com/advanced-html-css/feature-support-polyfills/" 
-  rel="noopener noreferrer" target="_blank">Feature Support &amp;
-Polyfills</a></p>
+  rel="noopener noreferrer" target="_blank">Feature Support &amp; Polyfills</a></p>
+
 <p>…the end. <!-- 5/14/2024 4:58pm --> <!-- 5/19/2024 6:53pm --></p>
 </body>
 </html>
