@@ -80,106 +80,70 @@
 <body>
 
 <header id="title-block-header">
-
-<h1 class="title">Advanced HTML and CSS</h1>
-<p class="author">Brian Bauska (bbauska)</p>
+  <h1 class="title">Advanced HTML &amp; CSS</h1>
+  <p class="author">Shay-Howe &amp; Brian Bauska (bbauska)</p>
 </header>
-<h1 align="center" width="100%">
-Advanced HTML &amp; CSS
-</h1>
-<h6 align="center">
-by Shay-Howe
-</h6>
-<h2 align="center">
-Lesson 1: Performance &amp; Organization
-</h2>
-<h3>
-In this Lesson 1
-</h3>
-<h4>
-HTML
-</h4>
+
+<h2 align="center">Lesson 1: Performance &amp; Organization</h2>
+<h3>In this Lesson 1</h3>
+<h4>HTML</h4>
+
 <ul>
-<li>
-<a href="https://learn.shayhowe.com/advanced-html-css/performance-organization/#minify-compress-files"
-    rel="noopener noreferrer" target="_blank"> Minify &amp; Compress
-Files</a>
-</li>
-<li>
-<a href="https://learn.shayhowe.com/advanced-html-css/performance-organization/#cache-common-files"
-    rel="noopener noreferrer" target="_blank"> Cache Common Files</a>
-</li>
+  <li><a href="https://learn.shayhowe.com/advanced-html-css/performance-organization/#minify-compress-files"
+    rel="noopener noreferrer" target="_blank"> Minify &amp; Compress Files</a></li>
+  <li><a href="https://learn.shayhowe.com/advanced-html-css/performance-organization/#cache-common-files"
+    rel="noopener noreferrer" target="_blank"> Cache Common Files</a></li>
 </ul>
-<h4>
-CSS
-</h4>
+
+<h4>CSS</h4>
+
 <ul>
-<li>
-<a href="https://learn.shayhowe.com/advanced-html-css/performance-organization/#strategy-structure" 
-    rel="noopener noreferrer" target="_blank"> Strategy &amp;
-Structure</a>
-</li>
-<li>
-<a href="https://learn.shayhowe.com/advanced-html-css/performance-organization/#performance-driven-selectors" 
-    rel="noopener noreferrer" target="_blank"> Performance Driven
-Selectors</a>
-</li>
-<li>
-<a href="https://learn.shayhowe.com/advanced-html-css/performance-organization/#reusable-code" 
-    rel="noopener noreferrer" target="_blank"> Reusable Code</a>
-</li>
-<li>
-<a href="https://learn.shayhowe.com/advanced-html-css/performance-organization/#reduce-http-requests" 
-    rel="noopener noreferrer" target="_blank"> Reduce HTTP Requests</a>
-</li>
+  <li><a href="https://learn.shayhowe.com/advanced-html-css/performance-organization/#strategy-structure" 
+    rel="noopener noreferrer" target="_blank"> Strategy &amp; Structure</a></li>
+  <li><a href="https://learn.shayhowe.com/advanced-html-css/performance-organization/#performance-driven-selectors" 
+    rel="noopener noreferrer" target="_blank"> Performance Driven Selectors</a></li>
+  <li><a href="https://learn.shayhowe.com/advanced-html-css/performance-organization/#reusable-code" 
+    rel="noopener noreferrer" target="_blank"> Reusable Code</a></li>
+  <li><a href="https://learn.shayhowe.com/advanced-html-css/performance-organization/#reduce-http-requests" 
+    rel="noopener noreferrer" target="_blank"> Reduce HTTP Requests</a></li>
 </ul>
-<p>
-Having the ability
-to <a href="https://learn.shayhowe.com/html-css/writing-your-best-code/" 
-rel="noopener noreferrer" target="_blank">write HTML and CSS</a> with a
-solid understanding is a great expertise to have. As a website’s code
-base and traffic grows, a new skill set comes into play, one that is
-extremely important to both development time and user experience.
-Knowing the fundamentals of website 
-<a href="http://developer.yahoo.com/performance/rules.html" 
-rel="noopener noreferrer" target="_blank">performance</a> and
-organization can go a long way.
-</p>
-<p>
-The organization and architecture of a code base can greatly affect not
+
+<p>Having the ability to <a href="https://learn.shayhowe.com/html-css/writing-your-best-code/" 
+rel="noopener noreferrer" target="_blank">write HTML and CSS</a> with a solid understanding is 
+a great expertise to have. As a website’s code base and traffic grows, a new skill set comes 
+into play, one that is extremely important to both development time and user experience.
+Knowing the fundamentals of website <a href="http://developer.yahoo.com/performance/rules.html" 
+rel="noopener noreferrer" target="_blank">performance</a> and organization can go a long way.</p>
+
+<p>The organization and architecture of a code base can greatly affect not
 only the speed of development, but also the speed at which pages render.
 Both of which can be sizeable concerns not only for developers but also
 users. Taking the time to design the right structure for a code base,
 and identify how all of the different components will work together, can
-speed up production and make for a better experience all around.
-</p>
+speed up production and make for a better experience all around.</p>
 <p>
 Additionally, taking a few small steps to improve the performance of a
 website can pay off in
 dividends. <a href="https://www.stevesouders.com/blog/2012/02/10/the-performance-golden-rule/" 
 rel="noopener noreferrer" target="_blank">Website performance
 (2012)</a> greatly resembles the 80/20 rule, where 20% of the
-optimizations will speed up roughly 80% of the website.
-</p>
-<h4>
-Strategy &amp; Structure
-</h4>
-<p>
-The first part to improving a website’s performance and organization
+optimizations will speed up roughly 80% of the website.</p>
+
+<h4>Strategy &amp; Structure</h4>
+
+<p>The first part to improving a website’s performance and organization
 revolves around identifying a good strategy and structure for developing
 the code base. Specifically, building a strong directory architecture,
-outlining design patterns, and finding ways to reuse common code.
-</p>
-<h4>
-Style Architecture
-</h4>
-<p>
-Exactly how to organize styles boils down to personal preference and
+outlining design patterns, and finding ways to reuse common code.</p>
+
+<h4>Style Architecture</h4>
+
+<p>Exactly how to organize styles boils down to personal preference and
 what is best for a given website but generally speaking there are best
 practices to follow. One practice includes separating styles based on
 intent, which includes creating directories for common base styles, user
-interface components, and business logic modules.
-</p>
+interface components, and business logic modules.</p>
+
 <pre><code> 1  # Base
  2    -- normalize.css
  3    -- layout.css
@@ -198,23 +162,21 @@ interface components, and business logic modules.
  16   -- footer.css
  17   -- header.css
  18 </code></pre>
-<p>
-The architecture outlined above includes three directories, all with
+
+<p>The architecture outlined above includes three directories, all with
 individual groups of styles. The goal here is to <b>start thinking of
 websites as systems</b>  rather than individual pages, and the code
 architecture should reflect this mindset. Notice how there aren’t any
-page specific styles here.
-</p>
-<p>
-The base directory includes common styles and variables to be used
+page specific styles here.</p>
+
+<p>The base directory includes common styles and variables to be used
 across the entire website, layout and typography styles for example.
 The components directory includes styles for specific user interface
 elements which are broken down into different component files such as
 alerts and buttons. Lastly, the modules directory includes styles for
-different sections of a page, which are determined by business needs.
-</p>
-<p>
-The component styles are purely interface driven and have nothing to do
+different sections of a page, which are determined by business needs.</p>
+
+<p>The component styles are purely interface driven and have nothing to do
 with the core business logic of the website. Modules then include styles
 specific to the business logic. When marking up a module in HTML it is
 common to use different user interface components within it. For
@@ -222,58 +184,49 @@ example, the sidebar of a page may have list and button styles that are
 defined within component styles while other styles needed for the
 sidebar are inherited from the module style. The separation of style
 encourages well thought out presets and the ability for styles to be
-widely shared and reused.
-</p>
-<p>
-The strategy of organizing styles this way isn’t exactly new, and has
+widely shared and reused.</p>
+
+<p>The strategy of organizing styles this way isn’t exactly new, and has
 been previously mentioned in different CSS methodologies including
 Object Oriented CSS, OOCSS, and the Scalable and Modular Architecture
 for CSS, SMACSS. These methodologies have their own opinions on
-structure, as well as on how to use styles.
-</p>
-<h4>
-Object Oriented CSS
-</h4>
-<p>
-The <a href="http://oocss.org/" rel="noopener noreferrer" target="_blank">
+structure, as well as on how to use styles.</p>
+
+<h4>Object Oriented CSS</h4>
+
+<p>The <a href="http://oocss.org/" rel="noopener noreferrer" target="_blank">
 Object Oriented CSS (2014)</a> methodology was pioneered by Nicole
 Sullivan in her work with writing styles for larger websites. Object
 Oriented CSS identifies two principles that will help build scalable
 websites with a strong architecture and a reasonable amount of code.
-These two principles include:
-</p>
+These two principles include:</p>
+
 <ul>
-<li>
-Separate structure from skin
-</li>
-<li>
-Separate content from container
-</li>
+  <li>Separate structure from skin</li>
+  <li>Separate content from container</li>
 </ul>
-<p>
-Overall <b>separating structure from skin</b> includes abstracting the
+
+<p>Overall <b>separating structure from skin</b> includes abstracting the
 layout of an element away from the theme of a website. The structure of
 a module should be transparent, allowing other styles to be inherited
 and displayed without conflict. Most commonly this requires a solid grid
-and layout structure, along with well crafted modules.
-</p>
-<p>
-<b>Separating content from the container</b> involves removing the
+and layout structure, along with well crafted modules.</p>
+
+<p><b>Separating content from the container</b> involves removing the
 dependency of a parent element nesting children elements. A heading
 should look the same regardless of its parent container. To accomplish
 this, elements need to inherit default styles, then be extended with
-multiple classes as necessary.
-</p>
-<h5>
-HTML
-</h5>
+multiple classes as necessary.</p>
+
+<h5>HTML</h5>
+
 <pre><code> 1  &lt;div class=&quot;alert alert-error&quot;&gt;
  2    &lt;p class=&quot;msg&quot;&gt;...&lt;/p&gt;
  3  &lt;/div&gt;
  4 </code></pre>
-<h5>
-CSS
-</h5>
+
+<h5>CSS</h5>
+
 <pre><code> 1  .alert {...}
  2  .alert-error {...}
  3  .msg {...}
@@ -519,209 +472,167 @@ CSS Examples
 Which approach you take doesn’t make a huge difference, so long as code
 is being shared and reused, and the overall file size is reduced.
 </p>
-<h4>
-Minify &amp; Compress Files
-</h4>
-<p>
-Simply removing duplicate and unnecessary code is the best way to cut
+
+<h4>Minify &amp; Compress Files</h4>
+
+<p>Simply removing duplicate and unnecessary code is the best way to cut
 down on file size, however there are additional ways. One way includes 
 <a href="http://www.hanselman.com/blog/TheImportanceAndEaseOfMinifyingYourCSSAndJavaScriptAndOptimizingPNGsForYourBlogOrWebsite.aspx" 
 rel="noopener noreferrer" target="_blank">minifying (2011)</a> and
 compressing files, such as HTML, CSS, and JavaScript files.
 Additionally, images may be compressed, removing any unnecessary
-comments and color profiles.
-</p>
-<h4>
-gzip Compression
-</h4>
-<p>
-One of the more popular types of file compression is called gzip. gzip
+comments and color profiles.</p>
+
+<h4>gzip Compression</h4>
+
+<p>One of the more popular types of file compression is called gzip. gzip
 compression takes common files, including HTML, CSS, JavaScript, and so
 forth, and identifies similar strings to compress down. The more
 matching strings identified, the smaller the file can be compressed,
-thus sending a smaller file from the server to the browser.
-</p>
-<p>
-Setting up gzip is fairly painless, and the
+thus sending a smaller file from the server to the browser.</p>
+
+<p>Setting up gzip is fairly painless, and the
 <a href="http://html5boilerplate.com/" 
 rel="noopener noreferrer" target="_blank">HTML5 Boilerplate (Jan,
 2010)</a> team has done a great job of getting this going. To gzip files
 an .htaccess file needs to be added to the root directory of the web
 server, labeling the specific files to be gzipped. The dot at the
 beginning of the file name is correct, as the .htaccess file is a hidden
-file.
-</p>
-<p>
-Within the HTML5 Boilerplate Apache Server Configs, they instruct which
+file.</p>
+
+<p>Within the HTML5 Boilerplate Apache Server Configs, they instruct which
 files gzip compression should be applied to. Keep in mind, the code for
 this compression should live within a .htaccess file in the root
 directory of the web server. Additionally, it is worth noting
 that .htaccess files only work on Apache web servers, which need to have
-the following modules enabled.
-</p>
+the following modules enabled.</p>
+
 <ul>
-<li>
-mod_setenvif.c
-</li>
-<li>
-mod_headers.c
-</li>
-<li>
-mod_deflate.c
-</li>
-<li>
-mod_filter.c
-</li>
-<li>
-mod_expires.c
-</li>
-<li>
-mod_rewrite.c
-</li>
+  <li>mod_setenvif.c</li>
+  <li>mod_headers.c</li>
+  <li>mod_deflate.c</li>
+  <li>mod_filter.c</li>
+  <li>mod_expires.c</li>
+  <li>mod_rewrite.c</li>
 </ul>
-<p>
-Generally speaking this isn’t an issue, and some web servers may even
+
+<p>Generally speaking this isn’t an issue, and some web servers may even
 set up compression for you. After all, it is in the web server’s best
-interest to compress files too.
-</p>
-<h4>
-Measuring Compression
-</h4>
-<p>
-Within the Google Chrome web browser the web inspector gives a plethora
+interest to compress files too.</p>
+
+<h4>Measuring Compression</h4>
+
+<p>Within the Google Chrome web browser the web inspector gives a plethora
 of data around performance, particularly within the Network tab.
 Additionally, there are a few websites that help identify if gzip
-compression is enabled.
-</p>
+compression is enabled.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 01. gzip overview screenshot ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p align="center" width="100%">
-<img src="./images/image001.png"
+<img class="border displayed"
+  src="./images/image001.png"
+  loading="lazy"
   style="width:40%"
   title="gzip Overview Screenshot"
   alt="gzip Overview Screenshot." />
-</p>
-<h6 align="center">
-Fig. 1
-</h6>
-<p>
-The Network tab identifies each file loaded within the browser and
+
+<h6 align="center">Fig. 1</h6>
+
+<p>The Network tab identifies each file loaded within the browser and
 displays the file size and load time. Notice how gzipping has reduced
-the file sizes by around 60%.
-</p>
+the file sizes by around 60%.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 02. gzip detail screenshot ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p align="center" width="100%">
-<img src="./images/image002.png"
+<img class="border displayed"
+  src="./images/image002.png"
+  loading="lazy"
   style="width:40%"
   title="gzip Detail Screenshot"
   alt="gzip Detail Screenshot." />
 </p>
-<h6 align="center">
-Fig. 1
-</h6>
-<p>
-Looking at a file specifically identifies what type of compression
+
+<h6 align="center">Fig. 1</h6>
+
+<p>Looking at a file specifically identifies what type of compression
 encoding the browser supports. In this case gzip, deflate, and sdch are
-all supported as noted within the request headers.
-</p>
-<p>
-Looking at the response headers identifies that the file was sent using
-the gzip compression encoding.
-</p>
-<h4>
-Image Compression
-</h4>
-<p>
-Cutting down the size of a text file helps, but you get even better
+all supported as noted within the request headers.</p>
+
+<p>Looking at the response headers identifies that the file was sent using
+the gzip compression encoding.</p>
+
+<h4>Image Compression</h4>
+
+<p>Cutting down the size of a text file helps, but you get even better
 results by compressing the file size of images. The total file size of
 all the images across a website can quickly add up, and compressing
-images will greatly help keep the file size under control.
-</p>
-<p>
-Many people steer away from compressing images in fear that compression
+images will greatly help keep the file size under control.</p>
+<p>Many people steer away from compressing images in fear that compression
 involves reducing the quality of the image itself. For the most part
 this is incorrect, and images can be compressed in a lossless fashion,
 allowing unnecessary color profiles and comments to be removed from the
-image without changing the quality of the image at all.
-</p>
-<p>
-There are a handful of tools to help compress images, two of the best
+image without changing the quality of the image at all.</p>
+<p>There are a handful of tools to help compress images, two of the best
 are <a href="http://imageoptim.com/" rel="noopener noreferrer" target="_blank">
 ImageOptim</a> for Mac and <a href="http://pnggauntlet.com/" 
 rel="noopener noreferrer" target="_blank">PNGGauntlet</a> for Windows.
 Both of these services compress the most commonly used image formats,
-specifically JPG and PNG files.
-</p>
-<h4>
-Image Compression Demo
-</h4>
-<h4>
-Uncompressed, 455kb
-</h4>
+specifically JPG and PNG files.</p>
+
+<h4>Image Compression Demo</h4>
+
+<h4>Uncompressed, 455kb</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~ 03. uncompressed ocean picture (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p align="center" width="100%">
-<img src="./images/image003.jpeg"
+<img class="border displayed"
+  src="./images/image003.webp"
   style="width:40%"
   title="Uncompressed Ocean Picture"
   alt="Uncompressed Ocean Picture." />
-</p>
-<h4>
-Compressed, 401kb
-</h4>
+
+<h4>Compressed, 401kb</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~ 04. compressed ocean picture (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p align="center" width="100%">
-<img src="./images/image004.jpeg"
+<img class="border displayed"
+  src="./images/image004.webp"
   style="width:40%"
   title="Compressed Ocean Picture"
   alt="Compressed Ocean Picture." />
-</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 05. imageoptim screenshot (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p align="center" width="100%">
-<img src="./images/image005.png"
+<img class="border displayed"
+  src="./images/image005.webp"
   style="width:40%"
   title="ImageOptim Screenshot"
   alt="ImageOptim Screenshot." />
-</p>
-<h6 align="center">
-Fig. 4
-</h6>
-<p>
-Using ImageOptim the above image was reduced over 14% without any
-reduction or loss in quality.
-</p>
-<p>
-It should also be noted, setting an image’s dimensions in HTML by way of
+
+<h6 align="center">Fig. 4</h6>
+
+<p>Using ImageOptim the above image was reduced over 14% without any
+reduction or loss in quality.</p>
+<p>It should also be noted, setting an image’s dimensions in HTML by way of
 the height and width attributes <b>does help</b> render the page
 quicker, setting aside the appropriate space for the image. Understand,
 these attributes are to only be used to identify the exact image
 dimensions and not to shrink an image. Using a larger image, then
 scaling it down with the height and width attributes is bad practice as
-it loads more data than necessary.
-</p>
+it loads more data than necessary.</p>
+
 <pre><code> 1  &lt;img src=&quot;ocean.jpg&quot; height=&quot;440&quot; width=&quot;660&quot; alt=&quot;Oceanview&quot;&gt;
  2  </code></pre>
-<h4>
-Reduce HTTP Requests
-</h4>
-<p>
-Next to file size, the number of HTTP requests a website makes is one of
+ 
+<h4>Reduce HTTP Requests</h4>
+
+<p>Next to file size, the number of HTTP requests a website makes is one of
 the largest performance pitfalls. Each time a request is made to the
 server the page load time increases. Some request have to finish before
-others can start, and too many request can bloat the server.
-</p>
-<h4>
-Combine Like Files
-</h4>
-<p>
-One way, and perhaps the easiest way, to reduce the number of HTTP
+others can start, and too many request can bloat the server.</p>
+
+<h4>Combine Like Files</h4>
+
+<p>One way, and perhaps the easiest way, to reduce the number of HTTP
 requests is to combine like files. Specifically, combine all of the CSS
 files into one and all of the JavaScript files into one. Combining these
-files then compressing them creates one, hopefully small, HTTP request.
-</p>
+files then compressing them creates one, hopefully small, HTTP request.</p>
+
 <pre><code> 1  &lt;!-- Bad --&gt;
  2  &lt;link href=&quot;css/reset.css&quot; rel=&quot;stylesheet&quot;&gt;
  3  &lt;link href=&quot;css/base.css&quot; rel=&quot;stylesheet&quot;&gt;
@@ -730,21 +641,19 @@ files then compressing them creates one, hopefully small, HTTP request.
  6  &lt;!-- Good --&gt;
  7  &lt;link href=&quot;css/styles.css&quot; rel=&quot;stylesheet&quot;&gt;
  8  </code></pre>
-<p>
-In general, the CSS for a web page should be loaded at
-the <b>beginning</b> of the document within the head, while the
-JavaScript for a web page should be loaded at the <b>end</b>, just
-before the closing body tag. The reason for these unique placements is
-because CSS can be loaded while the rest of the website is being loaded
-as well. JavaScript, on the other hand, can only render one file at a
-time, thus prohibiting anything else from loading. One caveat here is
-when JavaScript files are asynchronously loaded after the page itself is
-done rendering. Another caveat is when JavaScript is needed in helping
-render the page, as such the case with the HTML5 shiv.
-</p>
-<h4>
-Image Sprites
-</h4>
+
+<p>In general, the CSS for a web page should be loaded at the <b>beginning</b> of the 
+document within the head, while the JavaScript for a web page should be loaded at the 
+<b>end</b>, just before the closing body tag. The reason for these unique placements is
+because CSS can be loaded while the rest of the website is being loaded as well.</p>
+
+<p>JavaScript, on the other hand, can only render one file at a time, thus prohibiting 
+anything else from loading. One caveat here is when JavaScript files are asynchronously 
+loaded after the page itself is done rendering. Another caveat is when JavaScript is 
+needed in helping render the page, as such the case with the HTML5 shiv.</p>
+
+<h4>Image Sprites</h4>
+
 <p>
 The practice of <i>spriting</i> images within CSS includes using one
 background image across multiple elements. The goal here is to cut down
@@ -766,29 +675,25 @@ background image being hidden.
 </p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 06. menu sprite (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p align="center" width="100%">
-<img src="./images/image006.png"
+<img class="border displayed"
+  src="./images/image006.png"
   style="width:40%"
   title="Menu Sprite"
   alt="Menu Sprite." />
-</p>
-<h6 align="center">
-Fig. 1
-</h6>
-<p>
-Here is a sprite for a text editor menu, outlined with guides for
-reference of how the images background position will change.
-</p>
-<p>
-Using the image sprite above, a menu can be created by using the image
+
+<h6 align="center">Fig. 1</h6>
+
+<p>Here is a sprite for a text editor menu, outlined with guides for
+reference of how the images background position will change.</p>
+
+<p>Using the image sprite above, a menu can be created by using the image
 sprite as a background on the span element. Then, using classes to
 change the background position of the image sprite, different icons can
-be shown accordingly.
-</p>
+be shown accordingly.</p>
+
 <details>
-<summary>
-HTML
-</summary>
+  <summary>HTML</summary>
+  
 <pre><code> 1  &lt;ul&gt;
  2    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;bold&quot;&gt;Bold Text&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
  3    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;italic&quot;&gt;Italicize 4 Text&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
@@ -802,11 +707,12 @@ HTML
  11   &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;right&quot;&gt;Right Align Text&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
  12 &lt;/ul&gt;
  13 </code></pre>
+
 </details>
+
 <details>
-<summary>
-CSS
-</summary>
+  <summary>CSS</summary>
+  
 <pre><code> 1  ul {
  2    margin: 0;
  3    padding: 0;
@@ -862,15 +768,14 @@ CSS
  53   background-position: -144px 0;
  54 }
  55 </code></pre>
+ 
 </details>
-<h4>
-Image Sprites Demo
-</h4>
-<h4>
-Image Data URI
-</h4>
-<p>
-Additionally, instead of spriting images, the encoded data for an image
+
+<h4>Image Sprites Demo</h4>
+
+<h4>Image Data URI</h4>
+
+<p>Additionally, instead of spriting images, the encoded data for an image
 can be included within HTML and CSS directly by way of the 
 <a href="https://css-tricks.com/data-uris/" rel="noopener noreferrer" target="_blank">
 data URI</a>, removing the need for a HTTP request all together. Using
@@ -878,164 +783,129 @@ the image data URI works great for small images, likely to never change,
 and where the HTML and CSS can be heavily cached. There are, however, a
 couple of problems with data URIs. They can be difficult to change and
 maintain, leading to having to generate another encoding. And, they
-don’t work in older browsers, specifically Internet Explorer 7 and
-below.
-</p>
-<p>
-If using data URIs helps cut down a few HTTP requests, and the HTML or
+don’t work in older browsers, specifically Internet Explorer 7 and below.</p>
+
+<p>If using data URIs helps cut down a few HTTP requests, and the HTML or
 CSS can be heavily cached, the benefits tend to outweigh the risk. A few
 tools to help generate data URIs include 
 <a href="http://websemantics.co.uk/online_tools/image_to_data_uri_convertor/" 
 rel="noopener noreferrer" target="_blank">converters</a> and 
 <a href="http://www.patternify.com/" rel="noopener noreferrer" target="_blank">
 pattern generators</a>. Be careful though, and always double check to
-see that the actual data URI is less weight than the actual image.
-</p>
-<h5>
-HTML
-</h5>
+see that the actual data URI is less weight than the actual image.</p>
+
+<h5>HTML</h5>
+
 <pre><code> 1  &lt;img height=&quot;100&quot; width=&quot;660&quot; alt=&quot;Rigged Pattern&quot; src=&quot;data:image/png;base64,
  2  iVBORw0KGgoAAAANSUhEUgAAAAoAAAAICAYAAADA+m62AAAAPUlEQVQYV2NkQAO6m73+X/bdxoguji 
  3  IAU4RNMVwhuiQ6H6wQl3XI4oy4FMHcCJPHcDS6J2A2EqUQpJ
  4  hohQAyIyYy0nBAGgAAAABJRU5ErkJggg==&quot;&gt;
  5  </code></pre>
-<h5>
-CSS
-</h5>
+
+<h5>CSS</h5>
+
 <pre><code> 1  div {
  2  background: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAICAYAA 
  3  ADA+m62AAAAPUlEQVQYV2NkQAO6m73+X/bdxogujiIAU4RNMVwhuiQ6H6wQl3XI4oy4F
  4  MHcCJPHcDS6J2A2EqUQpJhohQAyIyYy0nBAGgAAAABJRU5ErkJggg==&quot;) repeat;
  5 }</code></pre>
-<h4>
-Image Data URI Demo
-</h4>
-<h4>
-Cache Common Files
-</h4>
-<p>
-Another way to help cut down HTTP requests, and to serve up pages
+ 
+<h4>Image Data URI Demo</h4>
+ 
+<h4>Cache Common Files</h4>
+
+<p>Another way to help cut down HTTP requests, and to serve up pages
 faster, is to cache common files. When a page loads for the first time
 specific files may then be cached. Now the browser doesn’t have to
 request the same files again on repeating visits for quite some time.
 How long a period of time is up to you, all depending on how long you
-would like users to hold on to specific file types.
-</p>
-<p>
-As with gzipping files, setting the expires headers for caching files
+would like users to hold on to specific file types.</p>
+
+<p>As with gzipping files, setting the expires headers for caching files
 can be set within the .htaccess file. And again, the HTML5 Boilerplate
 team is one step ahead of us. In their Apache Server Configs there is a
-file specifically for setting up expires headers.
-</p>
-<p>
-Images, videos, web fonts, and common media types are often cached for a
+file specifically for setting up expires headers.</p>
+
+<p>Images, videos, web fonts, and common media types are often cached for a
 month, while CSS and JavaScript files are often cached for a year.
 Should the CSS, or any other file, change more often than once each year
 the file name will need to be changed, preferably versioned, in order to
 be loaded. Alternatively, the expires headers can be changed to a
-smaller period of time.
-</p>
+smaller period of time.</p>
+
 <pre><code> 1  ExpiresByType text/css &quot;access plus 1 year&quot;
  2  ExpiresByType application/javascript &quot;access plus 1 year&quot;
  3  </code></pre>
-<p>
-Changing the “access plus 1 year” value to “access plus 1 week” is
+
+<p>Changing the “access plus 1 year” value to “access plus 1 week” is
 better suited for CSS and JavaScript files that are changing weekly but
 are not version controlled with separate file names. For accepted
 expires header values reference the mod_expires 
 <a href="http://httpd.apache.org/docs/current/mod/mod_expires.html" 
-rel="noopener noreferrer" target="_blank">syntax</a>.
-</p>
-<h4>
-Resources &amp; Links
-</h4>
+rel="noopener noreferrer" target="_blank">syntax</a>.</p>
+
+<h4>Resources &amp; Links</h4>
+
 <ul>
-<li>
-<a href="http://developer.yahoo.com/performance/rules.html" 
-    rel="noopener noreferrer" target="_blank"> Best Practices for
-Speeding Up Your Web Site</a> via Yahoo! Developer Network
-</li>
-<li>
-<a href="https://www.stevesouders.com/blog/2012/02/10/the-performance-golden-rule/"
-    rel="noopener noreferrer" target="_blank"> Rules for Faster-Loading
-Web Sites</a> via Steve Sounders
-</li>
-<li>
-<a href="http://viget.com/inspire/css-squareoff"
-    rel="noopener noreferrer" target="_blank"> CSS Strategy
-Square-off</a> via Viget Labs
-</li>
-<li>
-<a href="http://csswizardry.com/2011/09/writing-efficient-css-selectors/"
-    rel="noopener noreferrer" target="_blank"> Writing Efficient CSS
-Selectors</a> via Harry Roberts
-</li>
-<li>
-<a href="http://www.hanselman.com/blog/TheImportanceAndEaseOfMinifyingYourCSSAndJavaScriptAndOptimizingPNGsForYourBlogOrWebsite.aspx"
-    rel="noopener noreferrer" target="_blank"> Minifying and Optimizing
-Files</a> via Scott Hanselman
-</li>
-<li>
-<a href="http://html5boilerplate.com/"
-    rel="noopener noreferrer" target="_blank"> HTML5 Boilerplate</a>
-</li>
-<li>
-<a href="https://css-tricks.com/data-uris/"
-    rel="noopener noreferrer" target="_blank"> Data URIs</a> via
-CSS-Tricks
-</li>
+  <li><a href="http://developer.yahoo.com/performance/rules.html" 
+    rel="noopener noreferrer" target="_blank">Best Practices for Speeding Up Your Web Site</a> 
+	via Yahoo! Developer Network</li>
+  <li><a href="https://www.stevesouders.com/blog/2012/02/10/the-performance-golden-rule/"
+    rel="noopener noreferrer" target="_blank">Rules for Faster-Loading Web Sites</a> 
+	via Steve Sounders</li>
+  <li><a href="http://viget.com/inspire/css-squareoff" 
+    rel="noopener noreferrer" target="_blank"> CSS Strategy Square-off</a> via Viget Labs</li>
+  <li><a href="http://csswizardry.com/2011/09/writing-efficient-css-selectors/"
+    rel="noopener noreferrer" target="_blank">Writing Efficient CSS Selectors</a> via Harry Roberts</li>
+  <li><a href="http://www.hanselman.com/blog/TheImportanceAndEaseOfMinifyingYourCSSAndJavaScriptAndOptimizingPNGsForYourBlogOrWebsite.aspx"
+    rel="noopener noreferrer" target="_blank">Minifying and Optimizing Files</a> via Scott Hanselman</li>
+  <li><a href="http://html5boilerplate.com/" rel="noopener noreferrer" target="_blank">
+    HTML5 Boilerplate</a></li>
+  <li><a href="https://css-tricks.com/data-uris/" rel="noopener noreferrer" target="_blank">
+    Data URIs</a> via CSS-Tricks</li>
 </ul>
+
 <p><b>Lesson 1</b>
 <a href="https://learn.shayhowe.com/advanced-html-css/performance-organization/" 
 rel="noopener noreferrer" target="_blank">Performance &amp;
 Organization</a> <b>Lesson 3</b>
 <a href="https://learn.shayhowe.com/advanced-html-css/complex-selectors/" 
 rel="noopener noreferrer" target="_blank">Complex Selectors</a></p>
-<h2 align="center">
-Lesson 2: Detailed Positioning
-</h2>
-<h3>
-In this Lesson 2
-</h3>
-<h4>
-CSS
-</h4>
+
+<h2 align="center">Lesson 2: Detailed Positioning</h2>
+
+<h3>In this Lesson 2</h3>
+
+<h4>CSS</h4>
+
 <ul>
-<li>
-<a href="https://learn.shayhowe.com/advanced-html-css/detailed-css-positioning/#containing-floats" 
-    rel="noopener noreferrer" target="_blank"> Containing Floats</a>
-</li>
-<li>
-<a href="https://learn.shayhowe.com/advanced-html-css/detailed-css-positioning/#position-property" 
-    rel="noopener noreferrer" target="_blank"> Position Property</a>
-</li>
-<li>
-<a href="https://learn.shayhowe.com/advanced-html-css/detailed-css-positioning/#z-index-property" 
-    rel="noopener noreferrer" target="_blank"> Z-Index Property</a>
-</li>
+  <li><a href="https://learn.shayhowe.com/advanced-html-css/detailed-css-positioning/#containing-floats" 
+    rel="noopener noreferrer" target="_blank"> Containing Floats</a></li>
+  <li><a href="https://learn.shayhowe.com/advanced-html-css/detailed-css-positioning/#position-property" 
+    rel="noopener noreferrer" target="_blank"> Position Property</a></li>
+  <li><a href="https://learn.shayhowe.com/advanced-html-css/detailed-css-positioning/#z-index-property" 
+    rel="noopener noreferrer" target="_blank"> Z-Index Property</a></li>
 </ul>
+
 <p><b>SHARE</b></p>
-<p>
-When it comes to building layouts and positioning content on a page
+
+<p>When it comes to building layouts and positioning content on a page
 there are a handful of different techniques to use. Which technique to
 use largely depends on the content and the goals of the page, as some
-techniques may be better than others.
-</p>
-<p>
-For example, the ability to float elements side by side provides a nice,
+techniques may be better than others.</p>
+<p>For example, the ability to float elements side by side provides a nice,
 clean layout that is receptive to the different elements on a page.
 However, when more strict control is needed, elements may be positioned
-using other techniques, including relative or absolute positioning.
-</p>
+using other techniques, including relative or absolute positioning.</p>
 <p>
 In this lesson, we’ll start by taking a look at how to contain floats.
 Following that, we’ll cover more detailed positioning techniques,
 including how to precisely position elements on both the x and y axis as
 well as the z axis.
 </p>
-<h4>
-Containing Floats
-</h4>
+
+<h4>Containing Floats</h4>
+
 <p>
 Floating elements is a natural process when building a website’s layout,
 and is the instinctive method for positioning elements on a page. Floats
@@ -1050,9 +920,9 @@ positioned around it. Will that element run into the one next to it?
 Will it appear on a new line? This all depends on the DOM (Document
 Object Model) and what surrounds an element.
 </p>
-<h4>
-What is the DOM?
-</h4>
+
+<h4>What is the DOM?</h4>
+
 <p>
 The DOM, or Document Object Model, is an API for HTML and XML documents
 which provides their structural representation. In our case, we are
@@ -1816,99 +1686,90 @@ CSS
  2  .tagline {...}
  3  #intro {...}
  4  </code></pre>
-<h4>
-HTML
-</h4>
+
+<h4>HTML</h4>
+
 <pre><code> 1  &lt;section id=&quot;intro&quot;&gt;
  2    &lt;h1&gt;...&lt;/h1&gt;
  3    &lt;h2 class=&quot;tagline&quot;&gt;...&lt;/h2&gt;
  4  &lt;/section&gt;
  5  </code></pre>
-<h4>
-Common Selectors Overview
-</h4>
+ 
+<h4>Common Selectors Overview</h4>
+
 <table>
-<colgroup>
-<col style="width: 11%" />
-<col style="width: 31%" />
-<col style="width: 56%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><b>Example</b></th>
-<th><b>Classification</b></th>
-<th><b>Explanation</b></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>h1</td>
-<td>Type Selector</td>
-<td>Selects an element by its type.</td>
-</tr>
-<tr class="even">
-<td>.tagline</td>
-<td>Class</td>
-<td>Selects an element by the class attribute value, which may be
-reused</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td>Selector</td>
-<td>multiple times per page.</td>
-</tr>
-<tr class="even">
-<td><b>#intro</b></td>
-<td>ID Selector</td>
-<td>Selects an element by the ID attribute value, which is unique and
-to</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td></td>
-<td>only be used once per page.</td>
-</tr>
-</tbody>
+  <colgroup>
+    <col style="width: 11%" />
+    <col style="width: 31%" />
+    <col style="width: 56%" />
+  </colgroup>
+  <thead>
+    <tr class="header">
+      <th><b>Example</b></th>
+      <th><b>Classification</b></th>
+      <th><b>Explanation</b></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="odd">
+      <td>h1</td>
+      <td>Type Selector</td>
+      <td>Selects an element by its type.</td>
+    </tr>
+    <tr class="even">
+      <td>.tagline</td>
+      <td>Class</td>
+      <td>Selects an element by the class attribute value, which may be reused</td>
+    </tr>
+    <tr class="odd">
+      <td></td>
+      <td>Selector</td>
+      <td>multiple times per page.</td>
+    </tr>
+    <tr class="even">
+      <td><b>#intro</b></td>
+      <td>ID Selector</td>
+      <td>Selects an element by the ID attribute value, which is unique and to</td>
+    </tr>
+    <tr class="odd">
+      <td></td>
+      <td></td>
+      <td>only be used once per page.</td>
+    </tr>
+  </tbody>
 </table>
-<h4>
-Child Selectors
-</h4>
-<p>
-Child selectors provide a way to select elements that fall within one
+
+<h4>Child Selectors</h4>
+
+<p>Child selectors provide a way to select elements that fall within one
 another, thus making them children of their parent element. These
 selections can be made two different ways, using either descendant or
-direct child selectors.
-</p>
-<h4>
-Descendant Selector
-</h4>
-<p>
-The most common child selector is the descendant selector, which matches
+direct child selectors.</p>
+
+<h4>Descendant Selector</h4>
+
+<p>The most common child selector is the descendant selector, which matches
 every element that follows an identified ancestor. The descendant
 element does not have to come directly after the ancestor element inside
 the document tree, such as a parent-child relationship, but may fall
 anywhere within the ancestor element. Descendant selectors are created
 by spacing apart elements within a selector, creating a new level of
-hierarchy for each element list.
-</p>
-<p>
-The article h2 selector is a descendant selector, only
+hierarchy for each element list.</p>
+
+<p>The article h2 selector is a descendant selector, only
 selecting h2 elements that fall inside of an article element. Notice, no
 matter where a h2 element lives, so long as it is within
 the article element, it will always be selected. Additionally,
-any h2 element outside of the article element is not selected.
-</p>
-<p>
-Below, the headings on lines 3 and 5 are selected.
-</p>
-<h4>
-CSS
-</h4>
+any h2 element outside of the article element is not selected.</p>
+<p>Below, the headings on lines 3 and 5 are selected.</p>
+
+<h4>CSS</h4>
+
 <pre><code> 1  article h2 {...}  
  2 </code></pre>
-<h4>
-HTML
-</h4>
+ 
+<h4>HTML</h4>
+
 <pre><code> 1  &lt;h2&gt;...&lt;/h2&gt;  
  2  &lt;article&gt;
  3    &lt;h2&gt;This heading will be selected&lt;/h2&gt;
@@ -1917,17 +1778,15 @@ HTML
  6    &lt;/div&gt;
  7  &lt;/article&gt; 
  8 </code></pre>
-<h4>
-Direct Child Selector
-</h4>
-<p>
-Sometimes descendant selectors go a bit overboard, selecting more than
+ 
+<h4>Direct Child Selector</h4>
+
+<p>Sometimes descendant selectors go a bit overboard, selecting more than
 hoped. At times only the direct children of a parent element need to be
 selected, not every instance of the element nested deeply inside of an
 ancestor. In this event the direct child selector may be used by placing
 a greater than sign, &gt;, between the parent element and child element
-within the selector.
-</p>
+within the selector.</p>
 <p>
 For example, article &gt; p is a direct child selector only
 identifying p elements that fall directly within an article element.
@@ -1938,14 +1797,13 @@ another element other than the article element, will not be selected.
 Below, the paragraph on line 3 is the only direct child of its parent
 article, thus selected.
 </p>
-<h4>
-CSS
-</h4>
+<h4>CSS</h4>
+
 <pre><code> 1  article &gt; p {...}
  2 </code></pre>
-<h4>
-HTML
-</h4>
+ 
+<h4>HTML</h4>
+
 <pre><code> 1  &lt;p&gt;...&lt;/p&gt; 
  2  &lt;article&gt;
  3    &lt;p&gt;This paragraph will be selected&lt;/p&gt;
@@ -1954,60 +1812,58 @@ HTML
  6    &lt;/div&gt;
  7  &lt;/article&gt; 
  8 </code></pre>
-<h4>
-Child Selectors Overview
-</h4>
+ 
+<h4>Child Selectors Overview</h4>
+
 <table>
-<colgroup>
-<col style="width: 14%" />
-<col style="width: 30%" />
-<col style="width: 55%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><b>Example</b></th>
-<th><b>Classification</b></th>
-<th><b>Explanation</b></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>article h2</td>
-<td>Descendant</td>
-<td>Selects an element that resides anywhere within an</td>
-</tr>
-<tr class="even">
-<td></td>
-<td>Selector</td>
-<td>identified ancestor element.</td>
-</tr>
-<tr class="odd">
-<td>article &gt; p</td>
-<td>Direct Child</td>
-<td>Selects an element that resides immediately inside an</td>
-</tr>
-<tr class="even">
-<td></td>
-<td>Selector</td>
-<td>identified parent element.</td>
-</tr>
-</tbody>
+  <colgroup>
+    <col style="width: 14%" />
+    <col style="width: 30%" />
+    <col style="width: 55%" />
+  </colgroup>
+  <thead>
+    <tr class="header">
+      <th><b>Example</b></th>
+      <th><b>Classification</b></th>
+      <th><b>Explanation</b></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="odd">
+      <td>article h2</td>
+      <td>Descendant</td>
+      <td>Selects an element that resides anywhere within an</td>
+    </tr>
+    <tr class="even">
+      <td></td>
+      <td>Selector</td>
+      <td>identified ancestor element.</td>
+    </tr>
+    <tr class="odd">
+      <td>article &gt; p</td>
+      <td>Direct Child</td>
+      <td>Selects an element that resides immediately inside an</td>
+    </tr>
+    <tr class="even">
+      <td></td>
+      <td>Selector</td>
+      <td>identified parent element.</td>
+    </tr>
+  </tbody>
 </table>
-<h4>
-Sibling Selectors
-</h4>
-<p>
-Knowing how
+
+<h4>Sibling Selectors</h4>
+
+<p>Knowing how
 to <a href="https://css-tricks.com/child-and-sibling-selectors/" 
 rel="noopener noreferrer" target="_blank">select children</a> of an
 element is largely beneficial, and quite commonly seen. However sibling
 elements, those elements that share a common parent, may also need to be
 selected. These sibling selections can be made by way of the general
-sibling and adjacent sibling selectors.
-</p>
-<h4>
-General Sibling Selector
-</h4>
+sibling and adjacent sibling selectors.</p>
+
+<h4>General Sibling Selector</h4>
+
 <p>
 The general sibling selector allow elements to be selected based on
 their sibling elements, those which share the same common parent. They
@@ -2026,15 +1882,15 @@ The paragraphs on lines 5 and 9 are selected as they come after the
 heading within the document tree and share the same parent as their
 sibling heading.
 </p>
-<h4>
-CSS
-</h4>
+
+<h4>CSS</h4>
+
 <pre><code> 1  h2 ~ p {...}  
  2 </code></pre>
+ 
 <details>
-<summary>
-HTML
-</summary>
+<summary>HTML</summary>
+
 <pre><code> 1  &lt;p&gt;...&lt;/p&gt; 
  2  &lt;section&gt;
  3    &lt;p&gt;...&lt;/p&gt; 
@@ -2046,10 +1902,11 @@ HTML
  9    &lt;p&gt;This paragraph will be selected&lt;/p&gt;
  10 &lt;/section&gt; 
  11 </code></pre>
+
 </details>
-<h4>
-Adjacent Sibling Selector
-</h4>
+
+<h4>Adjacent Sibling Selector</h4>
+
 <p>
 Occasionally a little more control may be desired, including the ability
 to select a sibling element that directly follows after another sibling
@@ -2171,53 +2028,51 @@ CSS
  51    color: #ff7b29; 
  52  } 
  53 </code></pre>
+ 
 </details>
-<h4>
-Demo
-</h4>
-<h4>
-Sibling Selectors Overview
-</h4>
+
+<h4>Demo</h4>
+<h4>Sibling Selectors Overview</h4>
+
 <table>
-<colgroup>
-<col style="width: 14%" />
-<col style="width: 30%" />
-<col style="width: 55%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><b>Example</b></th>
-<th><b>Classification</b></th>
-<th><b>Explanation</b></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>h2 ~ p</td>
-<td>General Sibling</td>
-<td>Selects an element that follows anywhere after the prior</td>
-</tr>
-<tr class="even">
-<td></td>
-<td>Selector</td>
-<td>element, in which both elements share the same parent.</td>
-</tr>
-<tr class="odd">
-<td>h2 + p</td>
-<td>Adjacent Sibling</td>
-<td>Selects an element that follows directly after the prior
-element,</td>
-</tr>
-<tr class="even">
-<td></td>
-<td>Selector</td>
-<td>in which both elements share the same parent.</td>
-</tr>
-</tbody>
+  <colgroup>
+    <col style="width: 14%" />
+    <col style="width: 30%" />
+    <col style="width: 55%" />
+  </colgroup>
+  <thead>
+    <tr class="header">
+      <th><b>Example</b></th>
+      <th><b>Classification</b></th>
+      <th><b>Explanation</b></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="odd">
+      <td>h2 ~ p</td>
+      <td>General Sibling</td>
+      <td>Selects an element that follows anywhere after the prior</td>
+    </tr>
+    <tr class="even">
+      <td></td>
+      <td>Selector</td>
+      <td>element, in which both elements share the same parent.</td>
+    </tr>
+    <tr class="odd">
+      <td>h2 + p</td>
+      <td>Adjacent Sibling</td>
+      <td>Selects an element that follows directly after the prior element,</td>
+    </tr>
+    <tr class="even">
+      <td></td>
+      <td>Selector</td>
+      <td>in which both elements share the same parent.</td>
+    </tr>
+  </tbody>
 </table>
-<h4>
-Attribute Selectors
-</h4>
+
+<h4>Attribute Selectors</h4>
+
 <p>
 Some of the common selectors looked at early may also be defined as
 attribute selectors, in which an element is selected based upon its
@@ -2429,103 +2284,102 @@ CSS
 <h4>
 Demo
 </h4>
-<h4>
-Attribute Selectors Overview
-</h4>
+<h4>Attribute Selectors Overview</h4>
+
 <table>
-<colgroup>
-<col style="width: 18%" />
-<col style="width: 26%" />
-<col style="width: 55%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><strong>Example</strong></th>
-<th><strong>Classification</strong></th>
-<th><strong>Explanation</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>a[target]</td>
-<td>Attribute Present</td>
-<td>Selects an element if the given attribute is</td>
-</tr>
-<tr class="even">
-<td></td>
-<td>Selector</td>
-<td>present.</td>
-</tr>
-<tr class="odd">
-<td>a[href=“http://google.com/”]</td>
-<td>Attribute Equals</td>
-<td>Selects an element if the given attribute value</td>
-</tr>
-<tr class="even">
-<td></td>
-<td>Selector</td>
-<td>exactly matches the value stated.</td>
-</tr>
-<tr class="odd">
-<td>a[href*=“login”]</td>
-<td>Attribute Contains</td>
-<td>Selects an element if the given attribute value</td>
-</tr>
-<tr class="even">
-<td></td>
-<td>Selector</td>
-<td>contains at least one instance of the value stated</td>
-</tr>
-<tr class="odd">
-<td>a[href^=“https://”]</td>
-<td>Attribute Begins</td>
-<td>Selects an element if the given attribute value</td>
-</tr>
-<tr class="even">
-<td></td>
-<td>with Selector</td>
-<td>begins with the value stated.</td>
-</tr>
-<tr class="odd">
-<td>a[href$=“.pdf”]</td>
-<td>Attribute Ends</td>
-<td>Selects an element if the given attribute value</td>
-</tr>
-<tr class="even">
-<td></td>
-<td>With Selector</td>
-<td>ends with the value stated.</td>
-</tr>
-<tr class="odd">
-<td>a[rel˜=“tag”]</td>
-<td>Attribute Spaced</td>
-<td>Selects an element if the given attribute value</td>
-</tr>
-<tr class="even">
-<td></td>
-<td>Selector</td>
-<td>is whitespace-separated with one word being</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td></td>
-<td>exactly as stated.</td>
-</tr>
-<tr class="even">
-<td>a[lang|=“en”]</td>
-<td>Attribute</td>
-<td>Selects an element if the given attribute value</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td>Hyphenated</td>
-<td>is hyphen-separated and begins with the word stated.</td>
-</tr>
-</tbody>
+  <colgroup>
+    <col style="width: 18%" />
+    <col style="width: 26%" />
+    <col style="width: 55%" />
+  </colgroup>
+  <thead>
+    <tr class="header">
+      <th><strong>Example</strong></th>
+      <th><strong>Classification</strong></th>
+      <th><strong>Explanation</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="odd">
+      <td>a[target]</td>
+      <td>Attribute Present</td>
+      <td>Selects an element if the given attribute is</td>
+    </tr>
+    <tr class="even">
+      <td></td>
+      <td>Selector</td>
+      <td>present.</td>
+    </tr>
+    <tr class="odd">
+      <td>a[href=“http://google.com/”]</td>
+      <td>Attribute Equals</td>
+      <td>Selects an element if the given attribute value</td>
+    </tr>
+    <tr class="even">
+      <td></td>
+      <td>Selector</td>
+      <td>exactly matches the value stated.</td>
+    </tr>
+    <tr class="odd">
+      <td>a[href*=“login”]</td>
+      <td>Attribute Contains</td>
+      <td>Selects an element if the given attribute value</td>
+    </tr>
+    <tr class="even">
+      <td></td>
+      <td>Selector</td>
+      <td>contains at least one instance of the value stated</td>
+    </tr>
+    <tr class="odd">
+      <td>a[href^=“https://”]</td>
+      <td>Attribute Begins</td>
+      <td>Selects an element if the given attribute value</td>
+    </tr>
+    <tr class="even">
+      <td></td>
+      <td>with Selector</td>
+      <td>begins with the value stated.</td>
+    </tr>
+    <tr class="odd">
+      <td>a[href$=“.pdf”]</td>
+      <td>Attribute Ends</td>
+      <td>Selects an element if the given attribute value</td>
+    </tr>
+    <tr class="even">
+      <td></td>
+      <td>With Selector</td>
+      <td>ends with the value stated.</td>
+    </tr>
+    <tr class="odd">
+      <td>a[rel˜=“tag”]</td>
+      <td>Attribute Spaced</td>
+      <td>Selects an element if the given attribute value</td>
+    </tr>
+    <tr class="even">
+      <td></td>
+      <td>Selector</td>
+      <td>is whitespace-separated with one word being</td>
+    </tr>
+    <tr class="odd">
+      <td></td>
+      <td></td>
+      <td>exactly as stated.</td>
+    </tr>
+    <tr class="even">
+      <td>a[lang|=“en”]</td>
+      <td>Attribute</td>
+      <td>Selects an element if the given attribute value</td>
+    </tr>
+    <tr class="odd">
+      <td></td>
+      <td>Hyphenated</td>
+      <td>is hyphen-separated and begins with the word stated.</td>
+    </tr>
+  </tbody>
 </table>
-<h4>
-Pseudo-classes
-</h4>
+
+<h4>Pseudo-classes</h4>
+
 <p>
 <a href="http://coding.smashingmagazine.com/2011/03/30/how-to-use-css3-pseudo-classes/" 
 rel="noopener noreferrer" target="_blank"> Pseudo-classes</a> are
@@ -3183,279 +3037,278 @@ CSS
  35    border-bottom-right-radius: 6px;
  36  }
  37  </code></pre>
+
 </details>
-<h4>
-Demo
-</h4>
-<h4>
-Pseudo-classes Overview
-</h4>
+
+<h4>Demo</h4>
+
+<h4>Pseudo-classes Overview</h4>
+
 <table>
-<colgroup>
-<col style="width: 17%" />
-<col style="width: 25%" />
-<col style="width: 57%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><strong>Example</strong></th>
-<th><strong>Classification</strong></th>
-<th><strong>Explanation</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>a:link</td>
-<td>Link Pseudo-</td>
-<td>Selects a link that has not been visited by a user.</td>
-</tr>
-<tr class="even">
-<td></td>
-<td>class</td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>a:visited</td>
-<td>Link Pseudo-</td>
-<td>Selects a link that has been visited by a user.</td>
-</tr>
-<tr class="even">
-<td></td>
-<td>class</td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>a:hover</td>
-<td>Action Pseudo-</td>
-<td>Selects an element when a user has hovered their</td>
-</tr>
-<tr class="even">
-<td></td>
-<td>class</td>
-<td>cursor over it.</td>
-</tr>
-<tr class="odd">
-<td>a:active</td>
-<td>Action Pseudo-</td>
-<td>Selects an element when a user has engaged it.</td>
-</tr>
-<tr class="even">
-<td></td>
-<td>class</td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>a:focus</td>
-<td>Action Pseudo-</td>
-<td>Selects an element when a user has made it their focus</td>
-</tr>
-<tr class="even">
-<td></td>
-<td>class</td>
-<td>point.</td>
-</tr>
-<tr class="odd">
-<td>input:enabled</td>
-<td>State Pseudo-</td>
-<td>Selects an element in the default enabled state.</td>
-</tr>
-<tr class="even">
-<td></td>
-<td>class</td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>input:disabled</td>
-<td>State Pseudo-</td>
-<td>Selects an element in the disabled state, by way of the</td>
-</tr>
-<tr class="even">
-<td></td>
-<td>class</td>
-<td>disabled attribute.</td>
-</tr>
-<tr class="odd">
-<td>input:checked</td>
-<td>State Pseudo-</td>
-<td>Selects a checkbox or radio button that has been</td>
-</tr>
-<tr class="even">
-<td></td>
-<td>class</td>
-<td>checked.</td>
-</tr>
-<tr class="odd">
-<td>input:indeterminate</td>
-<td>State Pseudo-</td>
-<td>Selects a checkbox or radio button thats neither been</td>
-</tr>
-<tr class="even">
-<td></td>
-<td>class</td>
-<td>checked or unchecked, leaving it in an indeterminate</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td></td>
-<td>state.</td>
-</tr>
-<tr class="even">
-<td>li:first-child</td>
-<td>Structural</td>
-<td>Selects an element that is the first within a parent.</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td>Pseudo-class</td>
-<td></td>
-</tr>
-<tr class="even">
-<td>li:last-child</td>
-<td>Structural</td>
-<td>Selects an element that is the last within a parent.</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td>Pseudo-class</td>
-<td></td>
-</tr>
-<tr class="even">
-<td>div:only-child</td>
-<td>Structural</td>
-<td>Selects an element that is the only element within a</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td>Pseudo-class</td>
-<td>parent.</td>
-</tr>
-<tr class="even">
-<td>p:first-of-type</td>
-<td>Structural</td>
-<td>Selects an element that is the first of its type within a</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td>Pseudo-class</td>
-<td>parent.</td>
-</tr>
-<tr class="even">
-<td>p:last-of-type</td>
-<td>Structural</td>
-<td>Selects an element that is the last of its type within a</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td>Pseudo-class</td>
-<td>parent.</td>
-</tr>
-<tr class="even">
-<td>img:only-of-type</td>
-<td>Structural</td>
-<td>Selects an element that is the only one of its type within a</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td>Pseudo-class</td>
-<td>parent.</td>
-</tr>
-<tr class="even">
-<td>li:nth-child(2n+3)</td>
-<td>Structural</td>
-<td>Selects an element that matches the given number or</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td>Pseudo-class</td>
-<td>expression, counting all elements from the beginning of</td>
-</tr>
-<tr class="even">
-<td></td>
-<td></td>
-<td>the document tree.</td>
-</tr>
-<tr class="odd">
-<td>li:nth-last-</td>
-<td>Structural</td>
-<td>Selects an element that matches the given number or</td>
-</tr>
-<tr class="even">
-<td>type(3n+2)</td>
-<td>Pseudo-class</td>
-<td>expression, counting all elements from the end of the</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td></td>
-<td>document tree.</td>
-</tr>
-<tr class="even">
-<td>p:nth-of-type(3n)</td>
-<td>Structural</td>
-<td>Selects an element that matches the given number or</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td>Pseudo-class</td>
-<td>expression, counting all elements of its type from the</td>
-</tr>
-<tr class="even">
-<td></td>
-<td></td>
-<td>beginning of the document tree.</td>
-</tr>
-<tr class="odd">
-<td>p:nth-last-of-</td>
-<td>Structural</td>
-<td>Selects an element that matches the given number or</td>
-</tr>
-<tr class="even">
-<td>type(2n+1)</td>
-<td>Pseudo-class</td>
-<td>expression, counting all elements of its type from the</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td></td>
-<td>end of the document tree.</td>
-</tr>
-<tr class="even">
-<td>section:target</td>
-<td>Target Pseudo-</td>
-<td>Selects an element whose ID attribute value matches</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td>class</td>
-<td>that of the URI fragment identifier.</td>
-</tr>
-<tr class="even">
-<td>div:empty</td>
-<td>Empty Pseudo-</td>
-<td>Selects an element that does not contain any children</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td>class</td>
-<td>or text nodes.</td>
-</tr>
-<tr class="even">
-<td>div:not(.awesome)</td>
-<td>Negation</td>
-<td>Selects an element not represented by the stated</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td>Pseudo-class</td>
-<td>argument.</td>
-</tr>
-</tbody>
+  <colgroup>
+    <col style="width: 17%" />
+    <col style="width: 25%" />
+    <col style="width: 57%" />
+  </colgroup>
+  <thead>
+    <tr class="header">
+      <th><strong>Example</strong></th>
+      <th><strong>Classification</strong></th>
+      <th><strong>Explanation</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="odd">
+      <td>a:link</td>
+      <td>Link Pseudo-</td>
+      <td>Selects a link that has not been visited by a user.</td>
+    </tr>
+    <tr class="even">
+      <td></td>
+      <td>class</td>
+      <td></td>
+    </tr>
+    <tr class="odd">
+      <td>a:visited</td>
+      <td>Link Pseudo-</td>
+      <td>Selects a link that has been visited by a user.</td>
+    </tr>
+    <tr class="even">
+      <td></td>
+      <td>class</td>
+      <td></td>
+    </tr>
+    <tr class="odd">
+      <td>a:hover</td>
+      <td>Action Pseudo-</td>
+      <td>Selects an element when a user has hovered their</td>
+    </tr>
+    <tr class="even">
+      <td></td>
+      <td>class</td>
+      <td>cursor over it.</td>
+    </tr>
+    <tr class="odd">
+      <td>a:active</td>
+      <td>Action Pseudo-</td>
+      <td>Selects an element when a user has engaged it.</td>
+    </tr>
+    <tr class="even">
+      <td></td>
+      <td>class</td>
+      <td></td>
+    </tr>
+    <tr class="odd">
+      <td>a:focus</td>
+      <td>Action Pseudo-</td>
+      <td>Selects an element when a user has made it their focus</td>
+    </tr>
+    <tr class="even">
+      <td></td>
+      <td>class</td>
+      <td>point.</td>
+    </tr>
+    <tr class="odd">
+      <td>input:enabled</td>
+      <td>State Pseudo-</td>
+      <td>Selects an element in the default enabled state.</td>
+    </tr>
+    <tr class="even">
+      <td></td>
+      <td>class</td>
+      <td></td>
+    </tr>
+    <tr class="odd">
+      <td>input:disabled</td>
+      <td>State Pseudo-</td>
+      <td>Selects an element in the disabled state, by way of the</td>
+    </tr>
+    <tr class="even">
+      <td></td>
+      <td>class</td>
+      <td>disabled attribute.</td>
+    </tr>
+    <tr class="odd">
+      <td>input:checked</td>
+      <td>State Pseudo-</td>
+      <td>Selects a checkbox or radio button that has been</td>
+    </tr>
+    <tr class="even">
+      <td></td>
+      <td>class</td>
+      <td>checked.</td>
+    </tr>
+    <tr class="odd">
+      <td>input:indeterminate</td>
+      <td>State Pseudo-</td>
+      <td>Selects a checkbox or radio button thats neither been</td>
+    </tr>
+    <tr class="even">
+      <td></td>
+      <td>class</td>
+      <td>checked or unchecked, leaving it in an indeterminate</td>
+    </tr>
+    <tr class="odd">
+      <td></td>
+      <td></td>
+      <td>state.</td>
+    </tr>
+    <tr class="even">
+      <td>li:first-child</td>
+      <td>Structural</td>
+      <td>Selects an element that is the first within a parent.</td>
+    </tr>
+    <tr class="odd">
+      <td></td>
+      <td>Pseudo-class</td>
+      <td></td>
+    </tr>
+    <tr class="even">
+      <td>li:last-child</td>
+      <td>Structural</td>
+      <td>Selects an element that is the last within a parent.</td>
+    </tr>
+    <tr class="odd">
+      <td></td>
+      <td>Pseudo-class</td>
+      <td></td>
+    </tr>
+    <tr class="even">
+      <td>div:only-child</td>
+      <td>Structural</td>
+      <td>Selects an element that is the only element within a</td>
+    </tr>
+    <tr class="odd">
+      <td></td>
+      <td>Pseudo-class</td>
+      <td>parent.</td>
+    </tr>
+    <tr class="even">
+      <td>p:first-of-type</td>
+      <td>Structural</td>
+      <td>Selects an element that is the first of its type within a</td>
+    </tr>
+    <tr class="odd">
+      <td></td>
+      <td>Pseudo-class</td>
+      <td>parent.</td>
+    </tr>
+    <tr class="even">
+      <td>p:last-of-type</td>
+      <td>Structural</td>
+      <td>Selects an element that is the last of its type within a</td>
+    </tr>
+    <tr class="odd">
+      <td></td>
+      <td>Pseudo-class</td>
+      <td>parent.</td>
+    </tr>
+    <tr class="even">
+      <td>img:only-of-type</td>
+      <td>Structural</td>
+      <td>Selects an element that is the only one of its type within a</td>
+    </tr>
+    <tr class="odd">
+      <td></td>
+      <td>Pseudo-class</td>
+      <td>parent.</td>
+    </tr>
+    <tr class="even">
+      <td>li:nth-child(2n+3)</td>
+      <td>Structural</td>
+      <td>Selects an element that matches the given number or</td>
+    </tr>
+    <tr class="odd">
+      <td></td>
+      <td>Pseudo-class</td>
+      <td>expression, counting all elements from the beginning of</td>
+    </tr>
+    <tr class="even">
+      <td></td>
+      <td></td>
+      <td>the document tree.</td>
+    </tr>
+    <tr class="odd">
+      <td>li:nth-last-</td>
+      <td>Structural</td>
+      <td>Selects an element that matches the given number or</td>
+    </tr>
+    <tr class="even">
+      <td>type(3n+2)</td>
+      <td>Pseudo-class</td>
+      <td>expression, counting all elements from the end of the</td>
+    </tr>
+    <tr class="odd">
+      <td></td>
+      <td></td>
+      <td>document tree.</td>
+    </tr>
+    <tr class="even">
+      <td>p:nth-of-type(3n)</td>
+      <td>Structural</td>
+      <td>Selects an element that matches the given number or</td>
+    </tr>
+    <tr class="odd">
+      <td></td>
+      <td>Pseudo-class</td>
+      <td>expression, counting all elements of its type from the</td>
+    </tr>
+    <tr class="even">
+      <td></td>
+      <td></td>
+      <td>beginning of the document tree.</td>
+    </tr>
+    <tr class="odd">
+      <td>p:nth-last-of-</td>
+      <td>Structural</td>
+      <td>Selects an element that matches the given number or</td>
+    </tr>
+    <tr class="even">
+      <td>type(2n+1)</td>
+      <td>Pseudo-class</td>
+      <td>expression, counting all elements of its type from the</td>
+    </tr>
+    <tr class="odd">
+      <td></td>
+      <td></td>
+      <td>end of the document tree.</td>
+    </tr>
+    <tr class="even">
+      <td>section:target</td>
+      <td>Target Pseudo-</td>
+      <td>Selects an element whose ID attribute value matches</td>
+    </tr>
+    <tr class="odd">
+      <td></td>
+      <td>class</td>
+      <td>that of the URI fragment identifier.</td>
+    </tr>
+    <tr class="even">
+      <td>div:empty</td>
+      <td>Empty Pseudo-</td>
+      <td>Selects an element that does not contain any children</td>
+    </tr>
+    <tr class="odd">
+      <td></td>
+      <td>class</td>
+      <td>or text nodes.</td>
+    </tr>
+    <tr class="even">
+      <td>div:not(.awesome)</td>
+      <td>Negation</td>
+      <td>Selects an element not represented by the stated</td>
+    </tr>
+    <tr class="odd">
+      <td></td>
+      <td>Pseudo-class</td>
+      <td>argument.</td>
+    </tr>
+  </tbody>
 </table>
-<h4>
-Pseudo-elements
-</h4>
-<p>
-Pseudo-elements are dynamic elements that don’t exist in the document
+
+<h4>Pseudo-elements</h4>
+
+<p>Pseudo-elements are dynamic elements that don’t exist in the document
 tree, and when used within selectors these 
 <a href="http://coding.smashingmagazine.com/2009/08/17/taming-advanced-css-selectors/" 
 rel="noopener noreferrer" target="_blank">pseudo-elements</a> allow
@@ -3628,82 +3481,82 @@ CSS
  39  border-left: 15px solid #ff7b29;
  40  }
  41 </code></pre>
+
 </details>
-<h4>
-Demo
-</h4>
-<h4>
-Pseudo-elements Overview
-</h4>
+
+<h4>Demo</h4>
+
+<h4>Pseudo-elements Overview</h4>
+
 <table>
-<colgroup>
-<col style="width: 17%" />
-<col style="width: 20%" />
-<col style="width: 61%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><b>Example</b></th>
-<th><b>Classification</b></th>
-<th><b>Explanation</b></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>.alpha:first-</td>
-<td>Textual Pseudo-</td>
-<td>Selects the first letter of text within an element.</td>
-</tr>
-<tr class="even">
-<td>letter</td>
-<td>elements</td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>.bravo:first-</td>
-<td>Textual Pseudo-</td>
-<td>Selects the first line of text within an element.</td>
-</tr>
-<tr class="even">
-<td>line</td>
-<td>elements</td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>div:before</td>
-<td>Generated Content</td>
-<td>Creates a pseudo-element inside the selected element at</td>
-</tr>
-<tr class="even">
-<td></td>
-<td></td>
-<td>the beginning.</td>
-</tr>
-<tr class="odd">
-<td>a:after</td>
-<td>Generated Content</td>
-<td>Creates a pseudo-element inside the selected element at</td>
-</tr>
-<tr class="even">
-<td></td>
-<td></td>
-<td>the end.</td>
-</tr>
-<tr class="odd">
-<td>::selection</td>
-<td>Fragment Pseudo-</td>
-<td>Selects the part of a document which has been selected,</td>
-</tr>
-<tr class="even">
-<td></td>
-<td>element</td>
-<td>or highlighted, by a users’ action.</td>
-</tr>
-</tbody>
+  <colgroup>
+    <col style="width: 17%" />
+    <col style="width: 20%" />
+    <col style="width: 61%" />
+  </colgroup>
+  <thead>
+    <tr class="header">
+      <th><b>Example</b></th>
+      <th><b>Classification</b></th>
+      <th><b>Explanation</b></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="odd">
+      <td>.alpha:first-</td>
+      <td>Textual Pseudo-</td>
+      <td>Selects the first letter of text within an element.</td>
+    </tr>
+    <tr class="even">
+      <td>letter</td>
+      <td>elements</td>
+      <td></td>
+    </tr>
+    <tr class="odd">
+      <td>.bravo:first-</td>
+      <td>Textual Pseudo-</td>
+      <td>Selects the first line of text within an element.</td>
+    </tr>
+    <tr class="even">
+      <td>line</td>
+      <td>elements</td>
+      <td></td>
+    </tr>
+    <tr class="odd">
+      <td>div:before</td>
+      <td>Generated Content</td>
+      <td>Creates a pseudo-element inside the selected element at</td>
+    </tr>
+    <tr class="even">
+      <td></td>
+      <td></td>
+      <td>the beginning.</td>
+    </tr>
+    <tr class="odd">
+      <td>a:after</td>
+      <td>Generated Content</td>
+      <td>Creates a pseudo-element inside the selected element at</td>
+    </tr>
+    <tr class="even">
+      <td></td>
+      <td></td>
+      <td>the end.</td>
+    </tr>
+    <tr class="odd">
+      <td>::selection</td>
+      <td>Fragment Pseudo-</td>
+      <td>Selects the part of a document which has been selected,</td>
+    </tr>
+    <tr class="even">
+      <td></td>
+      <td>element</td>
+      <td>or highlighted, by a users’ action.</td>
+    </tr>
+  </tbody>
 </table>
-<h4>
-Selector Browser Support
-</h4>
+
+<h4>Selector Browser Support</h4>
+
 <p>
 While these selectors provide a variety of opportunity and the ability
 to do some truly amazing things with CSS, they are at times plagued by
@@ -3858,15 +3711,14 @@ which is worth a read.
 </p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~ 07. food sense responsive layout (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p align="center" width="100%">
-<img src="./images/image007.png"
-   style="width:40%"
-   title="Food Sense Responsive Layout"
-   alt="Food Sense Responsive Layout." />
-</p>
-<h6 align="center">
-Fig. 4
-</h6>
+<img class="border displayed"
+  src="./images/image007.png"
+  style="width:40%"
+  title="Food Sense Responsive Layout"
+  alt="Food Sense Responsive Layout." />
+
+<h6 align="center">Fig. 4</h6>
+
 <p>
 <a href="http://foodsense.is/" 
 rel="noopener noreferrer" target="_blank">Food Sense</a> has a beautiful
@@ -4292,38 +4144,34 @@ the section and aside.
  7 </code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~ 08. demo without media queries (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p align="center" width="100%">
-<img src="./images/image008.png"
+<img class="border displayed"
+  src="./images/image008.png"
   style="width:40%"
   title="Demo Without Media Queries"
   alt="Demo Without Media Queries." />
-</p>
-<h6 align="center" width="40%">
-Fig. 4. Without any media queries the section and aside become quite
-small. Perhaps too small to even contain any real content.
-</h6>
+
+<h6 align="center" width="40%">Fig. 4. Without any media queries the section and aside become quite
+small. Perhaps too small to even contain any real content.</h6>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 09. demo with media queries (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p align="center" width="100%">
-<img src="./images/image009.png"
+<img class="border displayed"
+  src="./images/image009.png"
   style="width:40%"
   title="Demo with Media Queries"
   alt="Demo with Media Queries." />
-</p>
+
 <h6 align="center" width="40%">
 Fig. 4. Using media queries to remove the floats and change their
 widths, the section and aside are now able to span the full width of the
-viewport, allowing breathing room for any existing content.
-</h6>
-<h4>
-Identifying Breakpoints
-</h4>
-<p>
-Your instinct might be to write media query breakpoints around common
+viewport, allowing breathing room for any existing content.</h6>
+
+<h4>Identifying Breakpoints</h4>
+
+<p>Your instinct might be to write media query breakpoints around common
 viewport sizes as determined by different device resolutions, such
 as 320px, 480px, 768px, 1024px, 1224px, and so forth. This is
-a <b>bad</b> idea.
-</p>
+a <b>bad</b> idea.</p>
+
 <p>
 When building a responsive website it should adjust to an array of
 different viewport sizes, regardless of the device. Breakpoints should
@@ -4442,20 +4290,19 @@ the viewport meta tag.
 </p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~ 10. website without viewport meta tag (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p align="center" width="100%">
-<img src="./images/image010.png"
+<img class="border displayed"
+  src="./images/image010.png"
   style="width:40%"
   title="Website without Viewport Meta Tag"
   alt="Website without Viewport Meta Tag." />
-</p>
+
 <h6 align="center" width="40%">
 Fig. 4. Although this demo has media queries, many mobile devices still
 do not know the initial width or scale of the website. Therefore, they
-may not interrupt media queries.
-</h6>
-<h4>
-Viewport Height &amp; Width
-</h4>
+may not interrupt media queries.</h6>
+
+<h4>Viewport Height &amp; Width</h4>
+
 <p>
 Using the viewport meta tag with either the height or width values will
 define the height or width of the viewport respectively. Each value
@@ -4473,22 +4320,20 @@ the device-height and device-width values.
  2 </code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~ 11. website with viewport meta tag (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p align="center" width="100%">
-<img src="./images/image011.png"
+<img class="border displayed"
+  src="./images/image011.png"
   style="width:40%"
   title="Website with Viewport Meta Tag"
   alt="Website with Viewport Meta Tag." />
-</p>
+
 <h6 align="center" width="40%">
 Fig. 4. Letting devices know the intended width of the
 website, device-width in this case, allows the website to be sized
-properly and to pick up any qualifying media queries.
-</h6>
-<h4>
-Viewport Scale
-</h4>
-<p>
-To control how a website is scaled on a mobile device, and how users can
+properly and to pick up any qualifying media queries.</h6>
+
+<h4>Viewport Scale</h4>
+
+<p>To control how a website is scaled on a mobile device, and how users can
 continue to scale a website, use
 the minimum-scale, maximum-scale, initial-scale, and 
 user-scalable properties.
@@ -4504,12 +4349,12 @@ for initial-scale should always be a positive integer between 0 and 10.
  2 </code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 12. viewport scale meta tag (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p align="center" width="100%">
-<img src="./images/image012.png"
+<img class="border displayed"
+  src="./images/image012.png"
   style="width:40%"
   title="Viewport Scale Meta Tag"
   alt="Viewport Scale Meta Tag." />
-</p>
+
 <h6 align="center" width="40%">
 Fig. 4. Using an integer above 1 will zoom the website to be larger than
 the default scale. Generally speaking, this value will most commonly be
@@ -4570,70 +4415,61 @@ outlined below, using both the width and initial-scale properties.
  2 </code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~ 11. website with viewport meta tag (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p align="center" width="100%">
-<img src="./images/image011.png"
+<img class="border displayed"
+  src="./images/image011.png"
   style="width:40%"
   title="Website with Viewport Meta Tag"
   alt="Website with Viewport Meta Tag." />
-</p>
+
 <h6 align="center" width="40%">
 Fig. 4. A combination of width=device-width and initial-scale=1  provide
-the initial size and zoom commonly required.
-</h6>
-<h4>
-CSS Viewport Rule
-</h4>
-<p>
-Since the viewport meta tag revolves so heavily around setting the
+the initial size and zoom commonly required.</h6>
+
+<h4>CSS Viewport Rule</h4>
+
+<p>Since the viewport meta tag revolves so heavily around setting the
 styles of how a website should be rendered it has been recommend to move
 the viewport from a meta tag with HTML to an @ rule within CSS. This
 helps keep the style separated from content, providing a more semantic
-approach.
-</p>
-<p>
-Currently some browsers have already implemented the <span
+approach.</p>
+<p>Currently some browsers have already implemented the <span
 class="citation" data-cites="viewport">@viewport</span> rule, however
 support isn’t great across the board. The previously
 recommended viewport meta tag would look like the following <span
-class="citation" data-cites="viewport">@viewport</span> rule in CSS.
-</p>
+class="citation" data-cites="viewport">@viewport</span> rule in CSS.</p>
+
 <pre><code> 1  @viewport {  
  2  width: device-width;
  3  zoom: 1; 
  4  }  
  5  </code></pre>
-<h4>
-Flexible Media
-</h4>
-<p>
-The final, equally important aspect to responsive web design involves
+ 
+<h4>Flexible Media</h4>
+
+<p>The final, equally important aspect to responsive web design involves
 flexible media. As viewports begin to change size media doesn’t always
 follow suit. Images, videos, and other media types need to be scalable,
-changing their size as the size of the viewport changes.
-</p>
-<p>
-One quick way to make media scalable is by using the max-width property
+changing their size as the size of the viewport changes.</p>
+<p>One quick way to make media scalable is by using the max-width property
 with a value of 100%. Doing so ensures that as the viewport gets smaller
-any media will scale down according to its containers width.
-</p>
+any media will scale down according to its containers width.</p>
+
 <pre><code> 1  img, video, canvas {  
  2  max-width: 100%;
  3  } 
  4 </code></pre>
-<h4>
-Flexible Media Demo
-</h4>
-<h4>
-Flexible Embedded Media
-</h4>
-<p>
-Unfortunately the max-width property doesn’t work well for all instances
+ 
+<h4>Flexible Media Demo</h4>
+
+<h4>Flexible Embedded Media</h4>
+
+<p>Unfortunately the max-width property doesn’t work well for all instances
 of media, specifically around iframes and embedded media. When it comes
 to third party websites, such as YouTube, who use iframes for embedded
 media this is a huge disappointment. Fortunately, there is a 
 <a href="http://www.alistapart.com/articles/creating-intrinsic-ratios-for-video/" 
-rel="noopener noreferrer" target="_blank">work around</a>.
-</p>
+rel="noopener noreferrer" target="_blank">work around</a>.</p>
+
 <p>
 To get embedded media to be fully responsive, the embedded element needs
 to be absolutely positioned within a parent element. The parent element
@@ -4651,17 +4487,17 @@ bottom padding of 56.25%. Padding on the bottom and not the top is
 specifically used to prevent Internet Explorer 5.5 from breaking, and
 treating the parent element as an absolutely positioned element.
 </p>
-<h4>
-HTML
-</h4>
+
+<h4>HTML</h4>
+
 <pre><code> 1  &lt;figure&gt; 
  2    &lt;iframe src=&quot;https://www.youtube.com/embed/Sv3xVOs7_No&quot;&gt;&lt;/iframe&gt; 
  3  &lt;/figure&gt;
  4 </code></pre>
+
 <details>
-<summary>
-CSS
-</summary>
+  <summary>CSS</summary>
+
 <pre><code> 1  figure {
  2  height: 0; 
  3  padding-bottom: 56.25%; /* 16:9 */ 
@@ -4676,17 +4512,16 @@ CSS
  13  width: 100%; 
  14  } 
  15 </code></pre>
+
 </details>
-<h4>
-Flexible Embedded Media Demo
-</h4>
-<p>
-For security reasons CodePen doesn’t allow iframes within embedded code
+
+<h4>Flexible Embedded Media Demo</h4>
+
+<p>For security reasons CodePen doesn’t allow iframes within embedded code
 samples, however you
 may <a href="https://codepen.io/shayhowe/pen/cbmsI" 
-rel="noopener noreferrer" target="_blank">review and edit this
-code</a> on their website.
-</p>
+rel="noopener noreferrer" target="_blank">review and edit this code</a> on their website.</p>
+
 <p>100% Wide Container</p>
 <p>75% Wide Container</p>
 <p>50% Wide Container</p>
@@ -6675,21 +6510,19 @@ Example, Object
 </details>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 13. web inspector console (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p align="center" width="100%">
-<p><img src="./images/image013.png"
+<img class="border displayed"
+  src="./images/image013.png"
   style="width:50%"
   title="Web Inspector Console"
-  alt="Web Inspector Console." /></p>
-<h6 align="center">
-Fig. 6
-</h6>
-<p>
-Using the developer tools built into the Chrome web browser, JavaScript
-may be run from within the console.
-</p>
-<h4>
-jQuery Intro
-</h4>
+  alt="Web Inspector Console." />
+
+<h6 align="center">Fig. 6</h6>
+
+<p>Using the developer tools built into the Chrome web browser, JavaScript
+may be run from within the console.</p>
+
+<h4>jQuery Intro</h4>
+
 <p>
 With a basic understanding of JavaScript and some of it’s foundations,
 it is time to take a look at jQuery. jQuery is an open source JavaScript
@@ -9794,17 +9627,15 @@ while others are not. Being able to interact with a browser, rather than
 seeing a rendered screenshot, is far more helpful for debugging code.
 One of the best ways to boot up multiple versions of Internet Explorer
 is by using multiple virtual machines, each with a different version of
-Internet Explorer.
-</p>
+Internet Explorer.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 14. virtualbox (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--
-<p align="center" width="100%">
-  <img src="./images/image014.png"
+<img class="border displayed"
+  src="./images/image014.png"
   style="width:40%"
   title="VirtualBox"
   alt="VirtualBox" />
-</p>
+
 <h6 align="center" width="40%">Fig. 9. VirtualBox running on Mac OS X with Internet Explorer
 versions 6 through 9.</h6>
 
@@ -9826,19 +9657,18 @@ within Internet Explorer 7 and below.
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 15. virtualbox (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p align="center" width="100%">
-<img src="./images/image015.png"
+<img class="border displayed"
+  src="./images/image015.png"
   style="width:40%"
   title="VirtualBox"
   alt="VirtualBox" />
-</p>
+
 <h6 align="center" width="40%">
 Fig. 9. Internet Explorer 7 running inside of a virtual machine with the
-Firebug Lite bookmarklet open for debugging.
-</h6>
-<h4>
-Resources &amp; Links
-</h4>
+Firebug Lite bookmarklet open for debugging.</h6>
+
+<h4>Resources &amp; Links</h4>
+
 <p>-<a href="https://code.google.com/p/html5shiv/">HTML5 Shiv</a> via
 Remy Sharp</p>
 <p>-<a
@@ -9860,15 +9690,12 @@ href="https://learn.shayhowe.com/advanced-html-css/transitions-animations/">Tran
 &amp; Animations</a> <b>Lesson 10</b> <a
 href="https://learn.shayhowe.com/advanced-html-css/semantics-accessibility/">Extending
 Semantics &amp; Accessibility</a></p>
-<h2>
-Lesson 10 Extending Semantics &amp; Accessibility
-</h2>
-<h3>
-In this Lesson 10
-</h3>
-<h5>
-HTML
-</h5>
+<h2>Lesson 10 Extending Semantics &amp; Accessibility</h2>
+
+<h3>In this Lesson 10</h3>
+
+<h5>HTML</h5>
+
 <ul>
 <li>
 <a href="https://learn.shayhowe.com/advanced-html-css/semantics-accessibility/#semantic-motivation"
@@ -10426,19 +10253,19 @@ Chances are this information is being pulled from microdata written on
 an existing website.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 16. google microdata (181) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p align="center" width="100%">
-<img src="./images/image016.jpeg"
-   style="width:40%"
-   title="Google Microdata"
-   alt="Google Microdata." />
-</p>
+<img class="border displayed"
+  src="./images/image016.jpeg"
+  style="width:40%"
+  title="Google Microdata"
+  alt="Google Microdata." />
+
 <h6 align="center" width="40%">
 Fig. 10. Google uses microdata to identify business locations, contact
 information, hours, pricing, ratings, and more.
 </h6>
-<h4>
-Microdata vs. Microformats vs. RDFa
-</h4>
+
+<h4>Microdata vs. Microformats vs. RDFa</h4>
+
 <p>There are actually a handful of rich, structured data standards,
 including <a href="http://www.w3.org/TR/microdata/" 
 rel="noopener noreferrer" target="_blank">microdata</a>,
@@ -10457,14 +10284,16 @@ recommended you do your research, take the pulse of the community, find
 what works best for your situation, and use that. Using one of these
 standards is substantially better than not using any. Find what will
 provide the best benefit for your users.</p>
-<h4>
-Outlining Microdata
-</h4>
+
+<h4>Outlining Microdata</h4>
+
 <p>Microdata is identified using three main
 attributes, itemscope, itemtype, and itemprop.</p>
+
 <p>The itemscope Boolean attribute declares the scope of each microdata
 item. Place this attribute on the parent element where all of the
 microdata information pertaining to this item should reside.</p>
+
 <p>Once you have determined the scope, use the itemtype attribute to
 identify what microdata vocabulary should be used. Generally speaking,
 some of the more popular microdata item types have been outlined
@@ -10473,72 +10302,76 @@ rel="noopener noreferrer" target="_blank">Schema.org</a>. There are,
 however, other websites which outline additional, and different, item
 types. You may also write your own item types should you find the
 need.</p>
+
 <pre><code> 1  &lt;section itemscope itemtype=&quot;http://schema.org/Person&quot;&gt; 
  2    ... 
  3  &lt;/section&gt; 
  4 </code></pre>
+
 <p>Once the scope and type of the item have been determined, properties
 may then be set. These properties are identified by different elements
 which include the itemprop attribute. The value of this attribute
 determines what property is being referenced, and the content within the
 element itself most commonly determines the value of the property.</p>
+
 <pre><code> 1  &lt;section itemscope itemtype=&quot;http://schema.org/Person&quot;&gt; 
  2    &lt;h1 itemprop=&quot;name&quot;&gt;Shay Howe&lt;/h1&gt;
  3  &lt;/section&gt; 
  4 </code></pre>
-<p>Some elements, however, do not get their itemprop value from the
-content within the element. Instead, their value is determined from the
-value of another attribute on the element. The table below outlines
-these one-off elements and what attribute is used for their property
-value.</p>
+ 
+<p>Some elements, however, do not get their itemprop value from the content within the 
+element. Instead, their value is determined from the value of another attribute on the 
+element. The table below outlines these one-off elements and what attribute is used for 
+their property value.</p>
+
 <table>
-<colgroup>
-<col style="width: 72%" />
-<col style="width: 27%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><b>Element</b></th>
-<th><b>Value</b></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>&lt;meta&gt;</td>
-<td>content attribute</td>
-</tr>
-<tr class="even">
-<td>&lt;audio&gt;, &lt;embed&gt;, &lt;iframe&gt;, &lt;img&gt;,
-&lt;source&gt;, &lt;video&gt;</td>
-<td>src attribute</td>
-</tr>
-<tr class="odd">
-<td>&lt;a&gt;, &lt;area&gt;, &lt;link&gt;</td>
-<td>href attribute</td>
-</tr>
-<tr class="even">
-<td>&lt;object&gt;</td>
-<td>data attribute</td>
-</tr>
-<tr class="odd">
-<td>&lt;time&gt;</td>
-<td>datetime attribute</td>
-</tr>
-</tbody>
+  <colgroup>
+    <col style="width: 72%" />
+    <col style="width: 27%" />
+  </colgroup>
+  <thead>
+    <tr class="header">
+      <th><b>Element</b></th>
+      <th><b>Value</b></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="odd">
+      <td>&lt;meta&gt;</td>
+      <td>content attribute</td>
+    </tr>
+    <tr class="even">
+      <td>&lt;audio&gt;, &lt;embed&gt;, &lt;iframe&gt;, &lt;img&gt;, &lt;source&gt;, 
+	    &lt;video&gt;</td>
+      <td>src attribute</td>
+    </tr>
+    <tr class="odd">
+      <td>&lt;a&gt;, &lt;area&gt;, &lt;link&gt;</td>
+      <td>href attribute</td>
+    </tr>
+    <tr class="even">
+      <td>&lt;object&gt;</td>
+      <td>data attribute</td>
+    </tr>
+    <tr class="odd">
+      <td>&lt;time&gt;</td>
+      <td>datetime attribute</td>
+    </tr>
+  </tbody>
 </table>
-<h4>
-Person Microdata
-</h4>
+
+<h4>Person Microdata</h4>
+
 <p>When referring to a person the <a href="http://schema.org/Person" 
 rel="noopener noreferrer" target="_blank">person</a> microdata library
 should be used. Below is an example of what a person microdata item
 might look like. Please notice, the person item type is used, as is the
 postal address item type within it. Also, please notice the different
 item properties and their corresponding values.</p>
+
 <details>
-<summary>
-Example, Person Microdata
-</summary>
+  <summary>Example, Person Microdata</summary>
+
 <pre><code> 1  &lt;section itemscope itemtype=&quot;http://schema.org/Person&quot;&gt; 
  2    &lt;strong itemprop=&quot;name&quot;&gt;Shay Howe&lt;/strong&gt;
  3    &lt;img src=&quot;shay.jpg&quot; itemprop=&quot;image&quot; alt=&quot;Shay Howe&quot;&gt;  
@@ -10554,27 +10387,28 @@ Example, Person Microdata
  13   &lt;/address&gt; 
  14 &lt;/section&gt; 
  15 </code></pre>
+
 </details>
-<h4>
-Person Microdata Demo
-</h4>
+
+<h4>Person Microdata Demo</h4>
+
 <p>Please keep in mind, this code is for an individual person. Should
 you wish to refer to an organization, a more specific 
 <a href="http://schema.org/Organization" 
 rel="noopener noreferrer" target="_blank">organization</a> microdata
 library should be followed.</p>
-<h4>
-Event Microdata
-</h4>
+
+<h4>Event Microdata</h4>
+
 <p>The event microdata is very similar to that of the person microdata,
 however it uses the <a href="http://schema.org/Event" 
 rel="noopener noreferrer" target="_blank">event</a> microdata library
 instead. Common property similarities between the two can be identified,
 as can some of the nested item types.</p>
+
 <details>
-<summary>
-Example, Event Microdata
-</summary>
+  <summary>Example, Event Microdata</summary>
+
 <pre><code> 1  &lt;section itemscope itemtype=&quot;http://schema.org/Event&quot;&gt;  
  2    &lt;a itemprop=&quot;url&quot; href=&quot;#&quot;&gt; 
  3      &lt;span itemprop=&quot;name&quot;&gt;Styles Conference&lt;/span&gt;  
@@ -10592,10 +10426,11 @@ Example, Event Microdata
  15   &lt;/div&gt;
  16 &lt;/section&gt; 
  17 </code></pre>
+
 </details>
-<h4>
-Event Microdata Demo
-</h4>
+
+<h4>Event Microdata Demo</h4>
+
 <p>Microdata provides a lot of ways to further extend the content of a
 page. We have only touched the surface here. Further information on
 microdata may be found
@@ -10603,9 +10438,9 @@ at <a href="http://diveintohtml5.info/extensibility.html"
 rel="noopener noreferrer" target="_blank"> Dive Into HTML5
 Microdata</a> and <a href="https://developers.whatwg.org/links.html#microdata" 
 rel="noopener noreferrer" target="_blank">WHATWG Microdata</a>.</p>
-<h4>
-WAI-ARIA
-</h4>
+
+<h4>WAI-ARIA</h4>
+
 <p><a href="http://www.w3.org/WAI/intro/aria" 
 rel="noopener noreferrer" target="_blank">WAI-ARIA</a>, also know as Web
 Accessibility Initiative — Accessible Rich Internet Applications, is a
@@ -10614,15 +10449,17 @@ to those with disabilities. Specifically, WAI-ARIA helps define roles
 (for what blocks of content do), states (for how blocks of content are
 configured), and additional properties to support assistive
 technologies.</p>
-<h4>
-Roles
-</h4>
+
+<h4>Roles</h4>
+
 <p>Setting <a href="https://www.w3.org/TR/wai-aria/#roles" 
 rel="noopener noreferrer" target="_blank">WAI-ARIA roles</a> is
 accomplished using the role attribute. These roles then specify what
 certain elements and blocks of content do on a page.</p>
+
 <pre><code> 1  &lt;header role=&quot;banner&quot;&gt;...&lt;/header&gt; 
  2 </code></pre>
+
 <p>WAI-ARIA roles break down into four different categories, including
 abstract, widget, document structure, and landmark roles. For this
 lesson we will focus primarily on the document structure and landmark
@@ -10630,158 +10467,111 @@ roles. <b>Document structure roles</b> define the organizational
 structure of content on a page, while <b>landmark roles</b> define the
 regions of a page. Specific role values for each of these categories are
 broken out below.</p>
-<h4>
-Document Structure Roles
-</h4>
+
+<h4>Document Structure Roles</h4>
+
 <ul>
-<li>
-article
-</li>
-<li>
-columnheader
-</li>
-<li>
-definition
-</li>
-<li>
-directory
-</li>
-<li>
-document
-</li>
-<li>
-group
-</li>
-<li>
-heading
-</li>
-<li>
-img
-</li>
-<li>
-list
-</li>
-<li>
-listitem
-</li>
-<li>
-math
-</li>
-<li>
-note
-</li>
-<li>
-presentation
-</li>
-<li>
-region
-</li>
-<li>
-row
-</li>
-<li>
-rowheader
-</li>
-<li>
-separator
-</li>
-<li>
-toolbar
-</li>
+  <li>article</li>
+  <li>columnheader</li>
+  <li>definition</li>
+  <li>directory</li>
+  <li>document</li>
+  <li>group</li>
+  <li>heading</li>
+  <li>img</li>
+  <li>list</li>
+  <li>listitem</li>
+  <li>math</li>
+  <li>note</li>
+  <li>presentation</li>
+  <li>region</li>
+  <li>row</li>
+  <li>rowheader</li>
+  <li>separator</li>
+  <li>toolbar</li>
 </ul>
-<h4>
-Landmark Roles
-</h4>
+
+<h4>Landmark Roles</h4>
+
 <ul>
-<li>
-application
-</li>
-<li>
-banner
-</li>
-<li>
-complementary
-</li>
-<li>
-contentinfo
-</li>
-<li>
-form
-</li>
-<li>
-main
-</li>
-<li>
-navigation
-</li>
-<li>
-search
-</li>
+  <li>application</li>
+  <li>banner</li>
+  <li>complementary</li>
+  <li>contentinfo</li>
+  <li>form</li>
+  <li>main</li>
+  <li>navigation</li>
+  <li>search</li>
 </ul>
+
 <p>HTML5 introduced a handful of new structural elements which commonly
 match up against the document structure and landmark roles. Exactly how
 these roles match up against specific elements may be seen below. Please
 notice, the header and footer elements do not have an implied role, and
 the acceptable roles for these elements may only be used <b>once</b> per
-page. That said, if you have multiple header and footer elements on a
+page.</p>
+
+<p>That said, if you have multiple header and footer elements on a
 page the banner and contentinfo roles should be applied on the elements
 directly tied to the document from a top level perspective, not elements
 nested within other regions of the document structure.</p>
 
 <table>
-<colgroup>
-  <col style="width: 13%" />
-  <col style="width: 23%" />
-  <col style="width: 63%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Element</th>
-<th>Implied Role</th>
-<th>Acceptable Roles</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>article</td>
-<td>article</td>
-<td>application, article, document, or main</td>
-</tr>
-<tr class="even">
-<td>aside</td>
-<td>complementary</td>
-<td>complementary, note, or search</td>
-</tr>
-<tr class="odd">
-<td>footer</td>
-<td>—</td>
-<td>contentinfo (Only once per page)</td>
-</tr>
-<tr class="even">
-<td>header</td>
-<td>—</td>
-<td>banner (Only once per page)</td>
-</tr>
-<tr class="odd">
-<td>nav</td>
-<td>navigation</td>
-<td>navigation</td>
-</tr>
-<tr class="even">
-<td>section</td>
-<td>region</td>
-<td>alert, alertdialog, application, contentinfo, dialog, document, log, main, marquee, region, search, or status.</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td></td>
-<td>main, marquee, region, search, or status.</td>
-</tr>
-</tbody>
+  <colgroup>
+    <col style="width: 13%" />
+    <col style="width: 23%" />
+    <col style="width: 63%" />
+  </colgroup>
+  <thead>
+    <tr class="header">
+      <th>Element</th>
+      <th>Implied Role</th>
+      <th>Acceptable Roles</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="odd">
+      <td>article</td>
+      <td>article</td>
+      <td>application, article, document, or main</td>
+    </tr>
+    <tr class="even">
+      <td>aside</td>
+      <td>complementary</td>
+      <td>complementary, note, or search</td>
+    </tr>
+    <tr class="odd">
+      <td>footer</td>
+      <td>—</td>
+      <td>contentinfo (Only once per page)</td>
+    </tr>
+    <tr class="even">
+      <td>header</td>
+      <td>—</td>
+      <td>banner (Only once per page)</td>
+    </tr>
+    <tr class="odd">
+      <td>nav</td>
+      <td>navigation</td>
+      <td>navigation</td>
+    </tr>
+    <tr class="even">
+      <td>section</td>
+      <td>region</td>
+      <td>alert, alertdialog, application, contentinfo, dialog, document, log, main, 
+	    marquee, region, search, or status.</td>
+    </tr>
+    <tr class="odd">
+      <td></td>
+      <td></td>
+      <td>main, marquee, region, search, or status.</td>
+    </tr>
+  </tbody>
 </table>
 
-<p>Combining the elements with their matched roles in HTML5 would look
-like the following code snippet.</p>
+<p>Combining the elements with their matched roles in HTML5 would look like the following 
+code snippet.</p>
+
 <pre><code> 1  &lt;header role=&quot;banner&quot;&gt;  
  2    &lt;nav role=&quot;navigation&quot;&gt;...&lt;/nav&gt; 
  3  &lt;/header&gt;
@@ -10791,6 +10581,7 @@ like the following code snippet.</p>
  7  &lt;aside role=&quot;complementary&quot;&gt;...&lt;/aside&gt;  
  8  &lt;footer role=&quot;contentinfo&quot;&gt;...&lt;/footer&gt;  
  9 </code></pre>
+
 <h3>States &amp; Properties</h3>
 
 <p>In combination with WAI-ARIA roles there are also 
@@ -10837,3 +10628,16 @@ document structure cannot be determined.</p>
 <p>…the end. <!-- 5/14/2024 4:58pm --> <!-- 5/19/2024 6:53pm --></p>
 </body>
 </html>
+<!--
+<img class="border displayed"
+  src="./images/image001.webp"
+  title="JavaScript at U of Michigan logo"
+  alt="JavaScript at U of Michigan logo."
+  style="width:30%; float: left; margin-left: 20%; margin-bottom: 1em;" />
+<img class="border displayed"
+  src="./images/image002.webp"
+  title="U of Michigan logo"
+  alt="U of Michigan logo."
+  style="width:20%; float: left; margin-left: 10%; margin-bottom: 1em;" />
+<p style="clear: both;"></p>
+-->
