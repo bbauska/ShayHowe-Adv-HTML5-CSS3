@@ -332,10 +332,10 @@ qualified selectors reduce performance because they force the browser to
 render each individual selector type from right to left. They also put a
 burden on all other selectors to be more specific.
 </p>
+
 <details>
-<summary>
-CSS
-</summary>
+  <summary>CSS</summary>
+  
 <pre><code> 1  /* Bad */
  2  header nav ul li a {...}
  3  
@@ -351,6 +351,7 @@ CSS
  13 button .callout {...}
  14 </code></pre>
 </details>
+
 <p>
 In the code above, the first selector is extremely specific and could be
 identified, and rendered, much quicker with the use of a class.
@@ -392,10 +393,10 @@ Additionally, do not prefix class selectors with an element. Doing so
 prohibits those styles from easily being applied to a different element
 and increases the overall specificity of the selector.
 </p>
+
 <details>
-<summary>
-CSS
-</summary>
+  <summary>CSS</summary>
+
 <pre><code> 1  /* Bad */
  2  #container header nav {...}
  3 
@@ -409,17 +410,15 @@ CSS
  11 .feat-post {...}
  12</code></pre>
 </details>
-<p>
-It is also worth noting, stay away from ID selectors where possible as
+
+<p>It is also worth noting, stay away from ID selectors where possible as
 they are overly specific and do not allow for any repetition. At the end
 of the day using an ID isn’t a whole lot different than
-using !important.
-</p>
-<h4>
-Reusable Code
-</h4>
-<p>
-One of the largest performance drawbacks comes with bloated file sizes
+using !important.</p>
+
+<h4>Reusable Code</h4>
+
+<p>One of the largest performance drawbacks comes with bloated file sizes
 and unnecessary browser rendering. One quick way to help largely cut
 down on CSS file sizes is to reuse styles as much as possible. Any
 repeating styles or interface patterns should be combined, allowing code
@@ -436,10 +435,10 @@ Another approach, often seen within the OOCSS and SMACSS methodologies
 previously mentioned, includes binding styles to one class, then using
 multiple classes on the same element.
 </p>
+
 <details>
-<summary>
-CSS Examples
-</summary>
+  <summary>CSS Examples</summary>
+
 <pre><code> 1  /* Bad */
  2  .news { 
  3    background: #eee;  
@@ -468,10 +467,9 @@ CSS Examples
  26 }
  27 </code></pre>
 </details>
-<p>
-Which approach you take doesn’t make a huge difference, so long as code
-is being shared and reused, and the overall file size is reduced.
-</p>
+
+<p>Which approach you take doesn’t make a huge difference, so long as code
+is being shared and reused, and the overall file size is reduced.</p>
 
 <h4>Minify &amp; Compress Files</h4>
 
@@ -709,7 +707,7 @@ be shown accordingly.</p>
  13 </code></pre>
 
 </details>
-
+<br><br>
 <details>
   <summary>CSS</summary>
   
@@ -1070,9 +1068,8 @@ contained and the elements are able to live outside of the parent
 element.
 </p>
 <details>
-<summary>
-CSS
-</summary>
+  <summary>CSS</summary>
+
 <pre><code> 1  .box-set:before,
  2  .box-set:after {
  3    content: &quot;&quot;;
@@ -1086,9 +1083,9 @@ CSS
  11 }
  12  </code></pre>
 </details>
-<h4>
-Clearfix Technique Demo
-</h4>
+
+<h4>Clearfix Technique Demo</h4>
+
 <h4>
 Effectively Containing Floats
 </h4>
@@ -1242,11 +1239,10 @@ default positions according to their individual box offset property
 values. These values cause the boxes to overlap one another, yet do not
 push each other in different directions. When an element is positioned
 relatively the surrounding elements will observe the relatively
-positioned elements default position.
-</p>
-<h4>
-HTML
-</h4>
+positioned elements default position.</p>
+
+<h4>HTML</h4>
+
 <pre><code> 1  &lt;div class=&quot;box-set&quot;&gt;
  2    &lt;figure class=&quot;box box-1&quot;&gt;Box 1&lt;/figure&gt;
  3    &lt;figure class=&quot;box box-2&quot;&gt;Box 2&lt;/figure&gt;
@@ -1254,10 +1250,11 @@ HTML
  5    &lt;figure class=&quot;box box-4&quot;&gt;Box 4&lt;/figure&gt;
  6  &lt;/div&gt;
  7  </code></pre>
+
+<br><br>
 <details>
-<summary>
-CSS
-</summary>
+  <summary>CSS</summary>
+  
 <pre><code> 1  .box-set {
  2    background: #eaeaed;
  3  }
@@ -1324,12 +1321,11 @@ In the demonstration below you can see how each box is absolutely
 positioned in relation to the parent division, of which is relatively
 positioned. Each individual box is moved in from a specific side with a
 positive value, or pulled out from a specific side with a negative
-value.
-</p>
+value.</p>
+
 <details>
-<summary>
-HTML
-</summary>
+  <summary>HTML</summary>
+  
 <pre><code> 1  &lt;div class=&quot;box-set&quot;&gt;
  2    &lt;figure class=&quot;box box-1&quot;&gt;Box 1&lt;/figure&gt;
  3    &lt;figure class=&quot;box box-2&quot;&gt;Box 2&lt;/figure&gt;
@@ -1338,10 +1334,11 @@ HTML
  6  &lt;/div&gt;
  7  </code></pre>
 </details>
+
+<br><br>
 <details>
-<summary>
-CSS
-</summary>
+  <summary>CSS</summary>
+  
 <pre><code> 1  .box-set {
  2    background: #eaeaed;
  3    height: 200px;
@@ -1422,10 +1419,12 @@ HTML
  5    &lt;figure class=&quot;box box-4&quot;&gt;Box 4&lt;/figure&gt;
  6  &lt;/div&gt;
  7 </code></pre>
+
+<br><br>
+
 <details>
-<summary>
-CSS
-</summary>
+  <summary>CSS</summary>
+  
 <pre><code> 1  .box {
  2    background: #2db34a;
  3    height: 80px;
@@ -1449,12 +1448,11 @@ CSS
  21 }
  22  </code></pre>
 </details>
-<h4>
-Position Fixed Demo
-</h4>
-<h4>
-Fixed Header or Footer
-</h4>
+
+<h4>Position Fixed Demo</h4>
+
+<h4>Fixed Header or Footer</h4>
+
 <p>
 One of the most common uses of fixed positioning is to build a fixed
 header, or footer, anchored to one side of a page. As a user scrolls the
@@ -1473,10 +1471,12 @@ HTML
 </h4>
 <pre><code> 1  &lt;footer&gt;Fixed Footer&lt;/footer&gt;
  2  </code></pre>
+
+<br><br>
+
 <details>
-<summary>
-CSS
-</summary>
+  <summary>CSS</summary>
+  
 <pre><code> 1  body {
  2    background: #eaeaed;
  3  }
@@ -1888,6 +1888,8 @@ sibling heading.
 <pre><code> 1  h2 ~ p {...}  
  2 </code></pre>
  
+<br><br>
+
 <details>
 <summary>HTML</summary>
 
@@ -1936,10 +1938,12 @@ CSS
 </h4>
 <pre><code> 1  h2 + p {...}
  2 </code></pre>
+
+<br><br>
+
 <details>
-<summary>
-HTML
-</summary>
+  <summary>HTML</summary>
+
 <pre><code> 1  &lt;p&gt;...&lt;/p&gt;
  2  &lt;section&gt;
  3  &lt;p&gt;...&lt;/p&gt; 
@@ -1952,13 +1956,12 @@ HTML
  10 &lt;/section&gt; 
  11 </code></pre>
 </details>
-<h4>
-Sibling Selectors Example
-</h4>
+
+<h4>Sibling Selectors Example</h4>
+
 <details>
-<summary>
-HTML
-</summary>
+  <summary>HTML</summary>
+
 <pre><code> 1  &lt;input type=&quot;checkbox&quot; id=&quot;toggle&quot;&gt; 
  2  &lt;label for=&quot;toggle&quot;&gt;&amp;#9776;&lt;/label&gt; 
  3  &lt;nav&gt; 
@@ -1971,10 +1974,12 @@ HTML
  10 &lt;/nav&gt;
  11 </code></pre>
 </details>
+
+<br><br>
+
 <details>
-<summary>
-CSS
-</summary>
+  <summary>CSS</summary>
+
 <pre><code> 1   input { 
  2     display: none;  
  3   } 
@@ -2221,22 +2226,23 @@ sign. The vertical line denotes that the attribute value may be
 hyphen-separated however the hyphen-separated words must begin with the
 stated value.
 </p>
-<h4>
-CSS
-</h4>
+
+<h4>CSS</h4>
+
 <pre><code> 1  a[lang&amp;#0124;=&quot;en&quot;] {...}
  2 </code></pre>
-<h4>
-HTML
-</h4>
+ 
+<br><br>
+
+<h4>HTML</h4>
+
 <pre><code> 1  &lt;a href=&quot;#&quot; lang=&quot;en-US&quot;&gt;...&lt;/a&gt; 
  2 </code></pre>
-<h4>
-Attribute Selectors Example
-</h4>
-<h4>
-HTML
-</h4>
+
+<h4>Attribute Selectors Example</h4>
+
+<h4>HTML</h4>
+
 <pre><code> 1  &lt;ul&gt;  
  2    &lt;li&gt;&lt;a href=&quot;#.pdf&quot;&gt;PDF Document&lt;/a&gt;&lt;/li&gt;
  3    &lt;li&gt;&lt;a href=&quot;#.doc&quot;&gt;Word Document&lt;/a&gt;&lt;/li&gt;  
@@ -2245,10 +2251,12 @@ HTML
  6    &lt;li&gt;&lt;a href=&quot;#.mp4&quot;&gt;Video File&lt;/a&gt;&lt;/li&gt;  
  7  &lt;/ul&gt;
  8 </code></pre>
+
+<br><br>
+
 <details>
-<summary>
-CSS
-</summary>
+  <summary>CSS</summary>
+
 <pre><code> 1  ul { 
  2    list-style: none;  
  3    margin: 0;
@@ -2489,19 +2497,20 @@ within a list, thus lines 2 and 10 are selected. The
 selector div:only-child is looking for a division which is the single
 child of a parent element, without any other other siblings. In this
 case line 4 is selected as it is the only division within the specific
-list item.
-</p>
-<h4>
-CSS
-</h4>
+list item.</p>
+
+<h4>CSS</h4>
+
 <pre><code> 1  li:first-child {...}
  2  li:last-child {...}
  3  div:only-child {...}
  4 </code></pre>
+ 
+<br><br>
+
 <details>
-<summary>
-HTML
-</summary>
+  <summary>HTML</summary>
+
 <pre><code> 1  &lt;ul&gt;
  2    &lt;li&gt;This list item will be selected&lt;/li&gt;
  3    &lt;li&gt;
@@ -2800,14 +2809,15 @@ the p:nth-of-type(3n) selector we are able to identify every third
 paragraph within a parent, regardless of other sibling elements within
 the parent. Here the paragraphs on lines 5 and 9 are selected.
 </p>
-<h4>
-CSS
-</h4>
+
+<h4>CSS</h4>
+
 <pre><code> 1  p:nth-of-type(3n) {...}</code></pre>
+
+<br><br>
+
 <details>
-<summary>
-HTML
-</summary>
+  <summary>HTML</summary>
 <pre><code> 1  &lt;article&gt;
  2    &lt;h1&gt;...&lt;/h1&gt;
  3    &lt;p&gt;...&lt;/p&gt;
@@ -2834,15 +2844,15 @@ the p:nth-last-of-type(2n+1) selector which identifies every second
 paragraph from the end of a parent element starting with the last
 paragraph. Here the paragraphs on lines 4, 7, and 9 are selected.
 </p>
-<h4>
-CSS
-</h4>
+
+<h4>CSS</h4>
+
 <pre><code> 1  p:nth-last-of-type(2n+1) {...}
  2  </code></pre>
+
 <details>
-<summary>
-HTML
-</summary>
+  <summary>HTML</summary>
+  
 <pre><code> 1  &lt;article&gt;
  2    &lt;h1&gt;...&lt;/h1&gt;
  3    &lt;p&gt;...&lt;/p&gt;
@@ -2854,10 +2864,11 @@ HTML
  9    &lt;p&gt;This paragraph will be selected&lt;/p&gt;
  10 &lt;/article&gt;
  11 </code></pre>
+
 </details>
-<h4>
-Target Pseudo-class
-</h4>
+
+<h4>Target Pseudo-class</h4>
+
 <p>
 The :target pseudo-class is used to style elements when an element’s ID
 attribute value matches that of the URI fragment identifier. The
@@ -2945,27 +2956,28 @@ thus they are marked bold. The only element not selected is the division
 with the class of awesome, as it falls outside of the two negation
 pseudo-classes.
 </p>
-<h4>
-CSS
-</h4>
+
+<h4>CSS</h4>
+
 <pre><code> 1  div:not(.awesome) {...}
  2  :not(div) {...}
  3  </code></pre>
-<h4>
-HTML
-</h4>
+
+<br><br>
+
+<h4>HTML</h4>
+
 <pre><code> 1  &lt;div&gt;This div will be selected&lt;/div&gt;
  2  &lt;div class=&quot;awesome&quot;&gt;...&lt;/div&gt;
  3  &lt;section&gt;This section will be selected&lt;/section&gt;
  4  &lt;section class=&quot;awesome&quot;&gt;This section will be selected&lt;/section&gt;
  5 </code></pre>
-<h4>
-Pseudo-classes Example
-</h4>
+
+<h4>Pseudo-classes Example</h4>
+
 <details>
-<summary>
-HTML
-</summary>
+  <summary>HTML</summary>
+  
 <pre><code> 1  &lt;table&gt;
  2    &lt;thead&gt;
  3      &lt;tr&gt;
@@ -2996,10 +3008,12 @@ HTML
  28 &lt;/table&gt;
  29  </code></pre>
 </details>
+
+<br><br>
+
 <details>
-<summary>
-CSS
-</summary>
+  <summary>CSS</summary>
+
 <pre><code> 1   table {
  2     border-collapse: separate;
  3     border-spacing: 0;
@@ -3402,9 +3416,9 @@ is worth noting, the background-image property is ignore. While the
 shorthand background property may be used to add a color, any images
 will be ignored.
 </p>
-<h4>
-Single Colon (:) versus Double Colons (::)
-</h4>
+
+<h4>Single Colon (:) versus Double Colons (::)</h4>
+
 <p>
 The fragment pseudo-element was added with CSS3 and in attempt to
 differentiate pseudo-classes from pseudo-elements the double colons were
@@ -3426,21 +3440,21 @@ added to ensure the best support for all browsers.
  5  background: #ff7b29;
  6  }
  7 </code></pre>
-<h4>
-Fragment Pseudo-element Demo
-</h4>
-<h4>
-Pseudo-elements Example
-</h4>
-<h4>
-HTML
-</h4>
+
+<h4>Fragment Pseudo-element Demo</h4>
+
+<h4>Pseudo-elements Example</h4>
+
+<h4>HTML</h4>
+
 <pre><code> 1  &lt;a class=&quot;arrow&quot; href=&quot;#&quot;&gt;Continue Reading&lt;/a&gt;
  2  </code></pre>
+
+<br><br>
+
 <details>
-<summary>
-CSS
-</summary>
+  <summary>CSS</summary>
+  
 <pre><code> 1  .arrow {
  2  background: #2db34a;
  3  color: #fff;
@@ -3832,10 +3846,12 @@ HTML
  3  &lt;aside&gt;...&lt;/aside&gt;  
  4  &lt;/div&gt;
  5 </code></pre>
+ 
+<br><br>
+
 <details>
-<summary>
-CSS
-</summary>
+  <summary>CSS</summary>
+
 <pre><code> 1  .container { 
  2    width: 538px;
  3  }
@@ -3852,10 +3868,11 @@ CSS
  14   width: 158px;
  15 }
  16 </code></pre>
+
 </details>
-<h4>
-Fixed Grid Demo
-</h4>
+
+<h4>Fixed Grid Demo</h4>
+
 <p>
 Using the flexible grid formula we can take all of the fixed units of
 length and turn them into relative units. In this example we’ll use
@@ -3863,10 +3880,10 @@ percentages but em units would work equally as well. Notice, no matter
 how wide the parent container becomes, the section and aside margins and
 widths scale proportionally.
 </p>
+
 <details>
-<summary>
-Fixed Grid Demo
-</summary>
+  <summary>Fixed Grid Demo</summary>
+  
 <pre><code> 1  section,
  2  aside {
  3    margin: 1.858736059%; /* 10px ÷ 538px = .018587361 */
@@ -3880,10 +3897,11 @@ Fixed Grid Demo
  11   width: 29.3680297%; /* 158px ÷ 538px = .293680297 */
  12 }
  13 </code></pre>
+
 </details>
-<h4>
-Flexible Grid Demo
-</h4>
+
+<h4>Flexible Grid Demo</h4>
+
 <p>
 Taking the flexible layout concept, and formula, and reapplying it to
 all parts of a grid will create a completely dynamic website, scaling to
@@ -4494,6 +4512,8 @@ treating the parent element as an absolutely positioned element.
  2    &lt;iframe src=&quot;https://www.youtube.com/embed/Sv3xVOs7_No&quot;&gt;&lt;/iframe&gt; 
  3  &lt;/figure&gt;
  4 </code></pre>
+
+<br><br>
 
 <details>
   <summary>CSS</summary>
@@ -6157,10 +6177,12 @@ Sass
  2  .col-#{$col}
  3  width: 40px * $col  
  4 </code></pre>
+ 
+<br><br>
+
 <details>
-<summary>
-Compiled CSS
-</summary>
+  <summary>Compiled CSS</summary>
+
 <pre><code> 1  .col-1 {
  2  width: 40px; 
  3  } 
@@ -6178,25 +6200,27 @@ Compiled CSS
  3  } 
  1 </code></pre>
 </details>
-<h4>
-Each Loop
-</h4>
+
+<h4>Each Loop</h4>
+
 <p>
 Simply enough, the <span class="citation"
 data-cites="each">@each</span> rule returns styles for each item in a
 list. List may include multiple comma separated items.
 </p>
-<h4>
-Sass
-</h4>
+
+<h4>Sass</h4>
+
 <pre><code> 1  @each $class in uxd, rails, html, css 
  2  .#{$class}-logo
  3  background: url(&quot;/img/#{$class}.jpg&quot;)
  4 </code></pre>
+ 
+<br><br>
+
 <details>
-<summary>
-Compiled CSS
-</summary>
+  <summary>Compiled CSS</summary>
+
 <pre><code> 1  .uxd-logo {
  2    background: url(&quot;/img/uxd.jpg&quot;);
  3  } 
@@ -6211,9 +6235,9 @@ Compiled CSS
  12 } 
  13  </code></pre>
 </details>
-<h4>
-While Loop
-</h4>
+
+<h4>While Loop</h4>
+
 <p>
 The <span class="citation" data-cites="while">@while</span> rule
 repeatedly returns styles until the statement becomes false. The
@@ -6229,10 +6253,12 @@ Sass
  4  font-size: 2em - ($heading * .25em)
  5  $heading: $heading + 1 
  6 </code></pre>
+
+<br><br>
+
 <details>
-<summary>
-Compiled CSS
-</summary>
+  <summary>Compiled CSS</summary>
+
 <pre><code> 1  h1 {
  2    font-size: 1.75em;
  3  }
@@ -6251,10 +6277,11 @@ Compiled CSS
  16 h6 { 16 font-size: 0.5em;
  17 }
  18 </code></pre>
+
 </details>
-<h4>
-Other Preprocessors
-</h4>
+
+<h4>Other Preprocessors</h4>
+
 <p>
 Haml and Sass are far from the only preprocessing languages available,
 including JavaScript preprocessors as well. Some of the other popular
@@ -7509,10 +7536,12 @@ HTML
  3    &lt;a href=&quot;#&quot; class=&quot;panel-tab&quot;&gt;Open &lt;span&gt;&amp;#9660;&lt;/span&gt;&lt;/a&gt; 
  4  &lt;/div&gt;
  5 </code></pre>
+
+<br><br>
+
 <details>
-<summary>
-JavaScript
-</summary>
+  <summary>JavaScript</summary>
+  
 <pre><code> 1  $(&#39;.panel-tab&#39;).on(&#39;click&#39;, function(event){  
  2    event.preventDefault();  
  3    $(&#39;.panel-stage&#39;).slideToggle(&#39;slow&#39;, function(event){ 
@@ -7524,16 +7553,15 @@ JavaScript
  9    });  
  10 });  
  11 </code></pre>
+
 </details>
-<h4>
-Demo
-</h4>
-<h4>
-Tabs Demo
-</h4>
-<h4>
-HTML
-</h4>
+
+<h4>Demo</h4>
+
+<h4>Tabs Demo</h4>
+
+<h4>HTML</h4>
+
 <pre><code> 1  &lt;ul class=&quot;tabs-nav&quot;&gt; 
  2    &lt;li&gt;&lt;a href=&quot;#tab-1&quot;&gt;Features&lt;/a&gt;&lt;/li&gt; 
  3    &lt;li&gt;&lt;a href=&quot;#tab-2&quot;&gt;Details&lt;/a&gt;&lt;/li&gt;  
@@ -7543,10 +7571,12 @@ HTML
  7    &lt;div id=&quot;tab-2&quot;&gt;...&lt;/div&gt;
  8  &lt;/div&gt; 
  9  </code></pre>
+
+<br><br>
+
 <details>
-<summary>
-JavaScript
-</summary>
+  <summary>JavaScript</summary>
+
 <pre><code> 1  // Show the first tab by default
  2  $(&#39;.tabs-stage div&#39;).hide(); 
  3  $(&#39;.tabs-stage div:first&#39;).show(); 
@@ -7560,13 +7590,13 @@ JavaScript
  11   $($(this).attr(&#39;href&#39;)).show();
  12 });
  13  </code></pre>
+
 </details>
-<h4>
-Demo
-</h4>
-<h4>
-Resources &amp; Links
-</h4>
+
+<h4>Demo</h4>
+
+<h4>Resources &amp; Links</h4>
+
 <p>-<a href="http://jsforcats.com/">JavaScript For Cats</a></p>
 <p>-<a
 href="https://developer.mozilla.org/en-US/docs/JavaScript/A_re-introduction_to_JavaScript">A
@@ -7938,6 +7968,7 @@ HTML
  4    &lt;figure class=&quot;side right&quot;&gt;3&lt;/figure&gt;
  5  &lt;/div&gt; 
  6  </code></pre>
+<br><br>
 <details>
 <summary>
 CSS
@@ -7997,6 +8028,7 @@ HTML
  3  &lt;figure class=&quot;box-3&quot;&gt;Box 3&lt;/figure&gt;
  4  &lt;figure class=&quot;box-4&quot;&gt;Box 3&lt;/figure&gt;
  5 </code></pre>
+<br><br>
 <details>
 <summary>
 CSS
@@ -8167,6 +8199,7 @@ HTML
  9  &lt;/div&gt;
  10  </code></pre>
 </details>
+<br><br>
 <details>
 <summary>
 CSS
@@ -8224,17 +8257,16 @@ As with the general rotate value before, positive values will rotate the
 element around its dedicated axis clockwise, while negative values will
 rotate the element counterclockwise.
 </p>
-<h4>
-HTML
-</h4>
+<h4>HTML</h4>
+
 <pre><code> 1  &lt;figure class=&quot;box-1&quot;&gt;Box 1&lt;/figure&gt;
  2  &lt;figure class=&quot;box-2&quot;&gt;Box 2&lt;/figure&gt;
  3  &lt;figure class=&quot;box-3&quot;&gt;Box 3&lt;/figure&gt;
  4 </code></pre>
+ 
 <details>
-<summary>
-CSS
-</summary>
+  <summary>CSS</summary>
+  
 <pre><code> 1  .box-1 {
  2    transform: perspective(200px) rotateX(45deg);
  3  }
@@ -8246,12 +8278,11 @@ CSS
  9  }
  10 </code></pre>
 </details>
-<h4>
-3D Rotate Demo
-</h4>
-<h4>
-3D Scale
-</h4>
+
+<h4>3D Rotate Demo</h4>
+
+<h4>3D Scale</h4>
+
 <p>
 By using the scaleZ three-dimensional transform elements may be scaled
 on the z axis. This isn’t extremely exciting when no other
@@ -8357,6 +8388,7 @@ lie flat on the two-dimensional plane.</p>
  6  &lt;/div&gt;
  7 </code></pre>
 
+<br><br>
 <details>
   <summary>CSS</summary>
   
@@ -8403,6 +8435,7 @@ rel="noopener noreferrer" target="_blank">animations</a>.</p>
  2  &lt;figure class=&quot;box-2&quot;&gt;Box 2&lt;/figure&gt;
  3 </code></pre>
 
+<br><br>
 <h4>CSS</h4>
 
 <pre><code> 1  .box-1 {
@@ -8419,9 +8452,8 @@ rel="noopener noreferrer" target="_blank">animations</a>.</p>
 <h4>3D Cube Demo</h4>
 
 <details>
-<summary>
-HTML
-</summary>
+  <summary>HTML</summary>
+
 <pre><code> 1  &lt;div class=&quot;cube-container&quot;&gt;
  2    &lt;div class=&quot;cube&quot;&gt; 
  3      &lt;figure class=&quot;side front&quot;&gt;1&lt;/figure&gt;
@@ -8435,6 +8467,7 @@ HTML
  11 </code></pre>
 </details>
 
+<br><br>
 <details>
   <summary>CSS</summary>
 
@@ -8835,10 +8868,11 @@ transition values.</p>
 
 <pre><code> 1  &lt;button&gt;Awesome Button&lt;/button&gt;
  2  </code></pre>
+
+<br><br>
 <details>
-<summary>
-CSS
-</summary>
+  <summary>CSS</summary>
+
 <pre><code> 1  button { 
  2    border: 0; 
  3    background: #0087cc;
@@ -8873,8 +8907,9 @@ CSS
  6  &lt;/div&gt;
  7  </code></pre>
 
+<br><br>
 <details>
-<summary>CSS</summary>
+  <summary>CSS</summary>
 
 <pre><code> 1  .card-container {
  2    height: 150px;
@@ -9121,7 +9156,8 @@ the alternate and reverse values, running an animation backwards then
 forwards. The alternate-reverse value starts at 100% running to 0% and
 then back to 100% again.</p>
 <details>
-<summary>Example, Alternate Reverse</summary>
+  <summary>Example, Alternate Reverse</summary>
+
 <pre><code> 1  .stage:hover .ball {
  2    animation-name: slide;
  3    animation-duration: 2s;
@@ -9146,8 +9182,10 @@ state rather than starting from the very beginning again.</p>
 <p>In the example below the animation-play-state property is set
 to paused when making the stage active by clicking on it. Notice how the
 animation will temporarily pause until you let up on the mouse.</p>
+
 <details>
-<summary>Example, Animation Play State</summary>
+  <summary>Example, Animation Play State</summary>
+
 <pre><code> 1  .stage:hover .ball {
  2    animation-name: slide;
  3    animation-duration: 2s;
@@ -9331,33 +9369,29 @@ rel="noopener noreferrer" target="_blank"> conditional comment</a>,
 making sure that the file is only loaded within versions of Internet
 Explorer 8 and below.
 </p>
-<p>
-In this case the conditional comment looks
-like <!--[if lt IE 9]>...<![endif]-->.
-</p>
+
+<p>In this case the conditional comment looks like;</p>
+
 <pre><code> 1  &lt;!--[if lt IE 9]&gt;
  2  &lt;script src=&quot;html5shiv.js&quot;&gt;&lt;/script&gt;
  3  &lt;![endif]--&gt;
  4 </code></pre>
-<h4>
-The Difference Between a Shiv &amp; a Shim
-</h4>
-<p>
-Chances are you may have heard of both the HTML5 <i>Shiv</i> and
+ 
+<h4>The Difference Between a Shiv &amp; a Shim</h4>
+
+<p>Chances are you may have heard of both the HTML5 <i>Shiv</i> and
 HTML5 <i>Shim</i>, and wondered what the difference, if any, may be.
 Oddly enough, there is <b>no</b> difference between the HTML5 Shiv and
 HTML5 Shim. The two words are often used interchangeably and are
-commonly transposed.
-</p>
-<p>
-Additionally, once the new HTML5 elements are created using the shiv,
+commonly transposed.</p>
+
+<p>Additionally, once the new HTML5 elements are created using the shiv,
 any block level elements need to be identified and updated using
-the display: block; declaration.
-</p>
+the display: block; declaration.</p>
+
 <details>
-<summary>
-display: block
-</summary>
+  <summary>display: block</summary>
+
 <pre><code> 1  article,
  2  aside,
  3  details,
@@ -9372,22 +9406,22 @@ display: block
  12   display: block;
  13 }
  14 </code></pre>
+
 </details>
-<p>
-Lastly, Internet Explorer 8 and 9 do not correctly define styles for a
+
+<p>Lastly, Internet Explorer 8 and 9 do not correctly define styles for a
 few HTML5 inline-block level elements. As before, these styles will need
 to be explicitly stated. After which, all versions of Internet Explorer
-should be good to go using any new HTML5 elements.
-</p>
+should be good to go using any new HTML5 elements.</p>
+
 <pre><code> 1  audio,
  2  canvas,
  3  video {
  4    display: inline-block;
  5  }
  6  </code></pre>
-<h4>
-Detecting Browser Features
-</h4>
+ 
+<h4>Detecting Browser Features</h4>
 <p>
 Referencing the HTML5 Shiv works well with a conditional comment because
 the intention is to specifically target browsers that don’t support new
@@ -9862,17 +9896,16 @@ or tone</b>. Using the em element really drives prominence with an added
 importance. On the other hand, the i element is primarily used within
 dialog or prose, offsetting text without any added emphasis or
 importance.</p>
+
 <pre><code> 1  &lt;!-- Stressed emphasis --&gt; 
  2  I &lt;em&gt;love&lt;/em&gt; Chicago!
  3  &lt;!-- Alternative voice or tone --&gt;  
  4  The name &lt;i&gt;Shay&lt;/i&gt; means a gift.  
  5 </code></pre>
-<h4>
-Italicizing Text Demo
-</h4>
-<h4>
-Using i for Icons
-</h4>
+ 
+<h4>Italicizing Text Demo</h4>
+
+<h4>Using i for Icons</h4>
 <p>Recently there has been a small movement of front end programmers
 using the i element for including icons on a page, specifically as seen
 within <a href="https://getbootstrap.com/" 
@@ -9881,9 +9914,9 @@ is used as a hook, to which a class then determines which icon
 background image to apply to the element. Depending on how closely you
 wish to follow semantics this may or may not be an acceptable
 practices.</p>
-<h4>
-Underlining Text
-</h4>
+
+<h4>Underlining Text</h4>
+
 <p>Continuing the pattern of having multiple elements with the same
 presentation, underlining text is no different. There are a couple of
 different elements we can use as well as the 
@@ -9906,10 +9939,10 @@ confused with a hyperlink. By default hyperlinks are underlined, and
 thus have become a standard design practice. Underlining text that is
 not a hyperlink can confuse users and cause quite a bit of frustration.
 Use underlines with caution.</p>
+
 <details>
-<summary>
-Example, Underline
-</summary>
+  <summary>Example, Underline</summary>
+
 <pre><code> 1  &lt;!-- Added to the document --&gt;
  2  &lt;ins cite=&quot;http://learn.shayhowe.com&quot; datetime=&quot;2012-07-01&quot;&gt;
  3    Updated: This website now contains an advanced guide. 
@@ -9918,12 +9951,11 @@ Example, Underline
  6  &lt;u&gt;Urushihara Yuuji&lt;/u&gt; won &lt;u&gt;Sasuke 27&lt;/u&gt;. 
  7 </code></pre>
 </details>
-<h4>
-Underlining Text Demo
-</h4>
-<h4>
-Striking Text
-</h4>
+
+<h4>Underlining Text Demo</h4>
+
+<h4>Striking Text</h4>
+
 <p>Striking text follows the same pattern as before where different
 elements may be used, as may the 
 <a href="https://learn.shayhowe.com/html-css/working-with-typography/" 
@@ -9938,9 +9970,8 @@ document.</p>
 <p>The s element identifies text that is no longer accurate or
 relevant.</p>
 <details>
-<summary>
-Example, Striking Text
-</summary>
+  <summary>Example, Striking Text</summary>
+
 <pre><code> 1  &lt;!-- Deleted from the document --&gt;  
  2  I am an avid cyclist, &lt;del cite=&quot;http://shayhowe.com&quot; 
  3  datetime=&quot;2012-07-01&quot;&gt;
@@ -9949,12 +9980,11 @@ Example, Striking Text
  6  &lt;s&gt;$24.99&lt;/s&gt; $19.99  
  7 </code></pre>
 </details>
-<h4>
-Striking Text Demo
-</h4>
-<h4>
-Highlighting Text
-</h4>
+
+<h4>Striking Text Demo</h4>
+
+<h4>Highlighting Text</h4>
+
 <p>To highlight text for reference purposes the mark element should be
 used. Added in HTML5, the mark element provides a clean, semantic way to
 identify text, specifically for reference purposes without having to use
@@ -10017,10 +10047,10 @@ There are two attributes that may be applied to
 the progress element, value and max. The value attributes indicates
 where the progress currently stands and the max attribute indicates what
 progress needs to be reached.</p>
+
 <details>
-<summary>
-Example, Meter &amp; Progress
-</summary>
+  <summary>Example, Meter &amp; Progress</summary>
+  
 <pre><code> 1  &lt;!-- Meter --&gt; 
  2  &lt;meter value=&quot;7&quot; max=&quot;10&quot;&gt;7 stars&lt;/meter&gt;  
  3  &lt;meter value=&quot;47&quot; min=&quot;0&quot; max=&quot;105&quot; low=&quot;5&quot; high=&quot;65&quot;  optimum=&quot;45&quot;&gt;The car  
@@ -10031,12 +10061,11 @@ Example, Meter &amp; Progress
  8  &lt;progress value=&quot;50&quot; min=&quot;0&quot; max=&quot;100&quot;&gt;Hold tight, you&quot;re getting there.&lt;/progress&gt;
  9 </code></pre>
 </details>
-<h4>
-Meter &amp; Progress Demo
-</h4>
-<h4>
-Time &amp; Address
-</h4>
+
+<h4>Meter &amp; Progress Demo</h4>
+
+<h4>Time &amp; Address</h4>
+
 <p>Representing time and addresses in HTML can be accomplished using
 the time and address elements respectively. The time element may be used
 with, or without, the datetime attribute, depending on how the text
@@ -10048,10 +10077,10 @@ publication the pubdate Boolean attribute should be used.</p>
 including a physical address as well as a website or email address. It
 should not include any further information than the contact information,
 and other content needs to be placed outside of the address element.</p>
+
 <details>
-<summary>
-Example, Time &amp; Address
-</summary>
+  <summary>Example, Time &amp; Address</summary>
+  
 <pre><code> 1  &lt;!-- Time --&gt;  
  2  &lt;time&gt;2011-08-24&lt;/time&gt; 
  3  &lt;time datetime=&quot;2011-08-24&quot; pubdate&gt;August 24th, 2011&lt;/time&gt;
@@ -10067,12 +10096,11 @@ Example, Time &amp; Address
  13 &lt;/address&gt; 
  14 </code></pre>
 </details>
-<h4>
-Time &amp; Address Demo
-</h4>
-<h4>
-Presenting Code
-</h4>
+
+<h4>Time &amp; Address Demo</h4>
+
+<h4>Presenting Code</h4>
+
 <p>Presenting code snippets, or samples, within a page can be
 accomplished using either the code or pre elements, or a combination of
 the two. The code element is commonly used to represent a fragment of
