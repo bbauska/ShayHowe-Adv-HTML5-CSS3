@@ -7003,10 +7003,9 @@ their individual perspectives with the perspective value.</p>
 <h4>HTML</h4>
 
 <pre>
- 1  &lt;figure class="box">Box 1&lt;/figure>
- 2  &lt;figure class="box">Box 2&lt;/figure>
- 3  &lt;figure class="box">Box 3&lt;/figure>
- 4 
+ 1  &lt;figure class="box"&gt;Box 1&lt;/figure&gt;
+ 2  &lt;figure class="box"&gt;Box 2&lt;/figure&gt;
+ 3  &lt;figure class="box"&gt;Box 3&lt;/figure&gt;
 </pre>
 
 <h4>CSS</h4>
@@ -7130,7 +7129,6 @@ of a transform.</p>
  13  .original-3 {
  14   perspective-origin: 20px 40px;
  15 }
- 16 
 </pre>
 
 </details>
