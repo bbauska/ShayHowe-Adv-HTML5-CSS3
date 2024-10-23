@@ -520,7 +520,6 @@ data than necessary.</p>
 
 <pre>
  1  &lt;img src="ocean.jpg" height="440" width="660" alt="Oceanview"&gt;
- 2  
 </pre>
 
 <h4 id="reduce-http-requests">Reduce HTTP Requests</h4>
@@ -545,7 +544,6 @@ files then compressing them creating one, hopefully small, HTTP request.</p>
  5  
  6  &lt;!-- Good --&gt;
  7  &lt;link href="css/styles.css" rel="stylesheet"&gt;
- 8  
 </pre>
 
 <p>In general, the CSS for a web page should be loaded at
@@ -612,7 +610,6 @@ be shown accordingly.</p>
  10   &lt;li&gt;&lt;a href="#"&gt;&lt;span class="center"&gt;Center Align 1  Text&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
  11   &lt;li&gt;&lt;a href="#"&gt;&lt;span class="right"&gt;Right Align Text&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
  12 &lt;/ul&gt;
- 13 
 </pre>
 
 </details>
@@ -675,7 +672,6 @@ be shown accordingly.</p>
  52 .right {
  53   background-position: -144px 0;
  54 }
- 55 
 </pre>
 
 </details>
@@ -710,7 +706,6 @@ the actual data URI is less weight than the actual image.</p>
  2  iVBORw0KGgoAAAANSUhEUgAAAAoAAAAICAYAAADA+m62AAAAPUlEQVQYV2NkQAO6m73+X/bdxoguji 
  3  IAU4RNMVwhuiQ6H6wQl3XI4oy4FMHcCJPHcDS6J2A2EqUQpJ
  4  hohQAyIyYy0nBAGgAAAABJRU5ErkJggg=="&gt;
- 5  
 </pre>
 
 <h5>CSS</h5>
@@ -720,7 +715,7 @@ the actual data URI is less weight than the actual image.</p>
  2    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAICAYAA 
  3    ADA+m62AAAAPUlEQVQYV2NkQAO6m73+X/bdxogujiIAU4RNMVwhuiQ6H6wQl3XI4oy4F
  4    MHcCJPHcDS6J2A2EqUQpJhohQAyIyYy0nBAGgAAAABJRU5ErkJggg==") repeat;
- 5 }
+ 5  }
 </pre>
 
 <h4>Image Data URI Demo</h4>
@@ -749,7 +744,6 @@ smaller period of time.</p>
 <pre>
  1  ExpiresByType text/css "access plus 1 year"
  2  ExpiresByType application/javascript "access plus 1 year"
- 3  
 </pre>
 
 <p>Changing the "access plus 1 year" value to "access plus 1 week" is
@@ -893,7 +887,6 @@ the .box-set division you will see it has a height of 0.</p>
  7    margin: 1.858736059%;
  8    width: 29.615861214%;
  9  }
- 10 
 </pre>
 
 <h4>Containing Floats Demo</h4>
@@ -928,7 +921,6 @@ element, in which it is better to use the overflow: hidden; declaration.</p>
  1  .box-set {
  2    overflow: auto;
  3  }
- 4  
 </pre>
 
 <h4>Overflow Technique Demo</h4>
@@ -988,7 +980,6 @@ element.</p>
  9  .box-set {
  10   *zoom: 1;
  11 }
- 12  
 </pre>
 
 </details>
@@ -1025,7 +1016,6 @@ to contain floats.</p>
  9  .group {
  10   *zoom: 1;
  11  }
- 12 
 </pre>
 
 </details>
@@ -1071,7 +1061,6 @@ specific direction.</p>
  4    &lt;figure class="box box-3"&gt;Box 3&lt;/figure&gt;
  5    &lt;figure class="box box-4"&gt;Box 4&lt;/figure&gt;
  6  &lt;/div&gt;
- 7  
 </pre>
 
 <h4>CSS</h4>
@@ -1085,7 +1074,6 @@ specific direction.</p>
  6    height: 80px;
  7    width: 80px;
  8  }
- 9  
 </pre>
 
 <h4>Position Static Demo</h4>
@@ -1144,7 +1132,6 @@ positioned elements default position.</p>
  4    &lt;figure class="box box-3"&gt;Box 3&lt;/figure&gt;
  5    &lt;figure class="box box-4"&gt;Box 4&lt;/figure&gt;
  6  &lt;/div&gt;
- 7  
 </pre>
 
 <details>
@@ -1170,7 +1157,6 @@ positioned elements default position.</p>
  17   bottom: -10px;
  18   right: 20px;
  19 }
- 20 
 </pre>
 
 </details>
@@ -1225,7 +1211,6 @@ value.</p>
  4    &lt;figure class="box box-3"&gt;Box 3&lt;/figure&gt;
  5    &lt;figure class="box box-4"&gt;Box 4&lt;/figure&gt;
  6  &lt;/div&gt;
- 7  
 </pre>
 
 </details>
@@ -1260,7 +1245,6 @@ value.</p>
  24 .box-4 {
  25   bottom: 0;
  26 }
- 27  
 </pre>
 
 </details>
@@ -1309,7 +1293,6 @@ and not the containing, relatively positioned parent.</p>
  4    &lt;figure class="box box-3"&gt;Box 3&lt;/figure&gt;
  5    &lt;figure class="box box-4"&gt;Box 4&lt;/figure&gt;
  6  &lt;/div&gt;
- 7 
 </pre>
 
 <details>
@@ -1337,7 +1320,6 @@ and not the containing, relatively positioned parent.</p>
  19 .box-4 {
  20   bottom: 0;
  21 }
- 22  
 </pre>
 
 </details>
@@ -1360,7 +1342,6 @@ freely.</p>
 
 <pre>
  1  &lt;footer&gt;Fixed Footer&lt;/footer&gt;
- 2  
 </pre>
 
 <details>
@@ -1377,7 +1358,6 @@ freely.</p>
  8    position: fixed;
  9    right: 0;
  10 }
- 11 
 </pre>
 
 </details>
@@ -1421,7 +1401,6 @@ box three.</p>
  4  &lt;figure class="box box-3"&gt;Box 3&lt;/figure&gt;  
  5  &lt;figure class="box box-4"&gt;Box 4&lt;/figure&gt;  
  6  &lt;/div&gt;
- 7 
 </pre>
 
 <details>
@@ -1457,7 +1436,6 @@ box three.</p>
  27   left: 190px;
  28   z-index: 1;
  29 }
- 30  
 </pre>
 
 </details>
@@ -1482,8 +1460,7 @@ box three.</p>
 </ul>
 
 <!-- 80 spaces -->
-<p>
-    <b>Lesson 1</b> <a href="#performance-organization">Performance &amp; Organization</a>
+<p><b>Lesson 1</b> <a href="#performance-organization">Performance &amp; Organization</a>
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -1548,7 +1525,6 @@ be used once per page.</p>
  1  h1 {...}
  2  .tagline {...}
  3  #intro {...}
- 4  
 </pre>
 
 <h4>HTML</h4>
@@ -1558,7 +1534,6 @@ be used once per page.</p>
  2    &lt;h1&gt;...&lt;/h1&gt;
  3    &lt;h2 class="tagline"&gt;...&lt;/h2&gt;
  4  &lt;/section&gt;
- 5  
 </pre>
 
 <h4>Common Selectors Overview</h4>
@@ -1600,7 +1575,6 @@ any h2 element outside of the article element is not selected.</p>
 
 <pre>
  1  article h2 {...}  
- 2 
 </pre>
 
 <h4>HTML</h4>
@@ -1613,7 +1587,6 @@ any h2 element outside of the article element is not selected.</p>
  5      &lt;h2&gt;This heading will be selected&lt;/h2&gt;
  6    &lt;/div&gt;
  7  &lt;/article&gt; 
- 8 
 </pre>
 
 <h4>Direct Child Selector</h4>
@@ -1637,7 +1610,6 @@ article, thus selected.</p>
 
 <pre>
  1  article &gt; p {...}
- 2 
 </pre>
 
 <h4>HTML</h4>
@@ -1650,7 +1622,6 @@ article, thus selected.</p>
  5      &lt;p&gt;...&lt;/p&gt; 
  6    &lt;/div&gt;
  7  &lt;/article&gt; 
- 8 
 </pre>
 
 <h4 id="child-selectors">Child Selectors Overview</h4>
@@ -1690,7 +1661,6 @@ sibling heading.</p>
 
 <pre>
  1  h2 ~ p {...}  
- 2 
 </pre>
 
 <details>
@@ -1707,7 +1677,6 @@ sibling heading.</p>
  8    &lt;/div&gt;
  9    &lt;p&gt;This paragraph will be selected&lt;/p&gt;
  10 &lt;/section&gt; 
- 11 
 </pre>
 
 </details>
@@ -1738,7 +1707,6 @@ selected.</p>
 
 <pre>
  1  h2 + p {...}
- 2 
 </pre>
 
 <details>
@@ -1755,7 +1723,6 @@ selected.</p>
  8    &lt;/div&gt;
  9    &lt;p&gt;...&lt;/p&gt; 
  10 &lt;/section&gt; 
- 11 
 </pre>
 
 </details>
@@ -1776,7 +1743,6 @@ selected.</p>
  8      &lt;li&gt;&lt;a href="#"&gt;Contact&lt;/a&gt;&lt;/li&gt;
  9    &lt;/ul&gt; 
  10 &lt;/nav&gt;
- 11 
 </pre>
 
 </details>
@@ -1837,7 +1803,6 @@ selected.</p>
  50  a:hover { 
  51    color: #ff7b29; 
  52  } 
- 53 
 </pre>
 
 </details>
@@ -1879,14 +1844,12 @@ type or class, all depending on the level of specificity desired.</p>
 
 <pre>
  1  a&lbrack;target&rbrack; {...} 
- 2 
 </pre>
 
 <h4>HTML</h4>
 
 <pre>
  1  &lt;a href="#" target="_blank"&gt;...&lt;/a&gt;
- 2 
 </pre>
 
 <h4>Attribute Equals Selector</h4>
@@ -1902,14 +1865,12 @@ inside of the quotations should be the desired matching attribute value.</p>
 
 <pre>
  1  a&lbrack;href="http://google.com/"&rbrack; {...} 
- 2 
 </pre>
 
 <h4>HTML</h4>
 
 <pre>
  1  &lt;a href="http://google.com/"&gt;...&lt;/a&gt;
- 2 
 </pre>
 
 <h4>Attribute Contains Selector</h4>
@@ -1925,14 +1886,12 @@ attribute value.</p>
 
 <pre>
  1  a&lbrack;href*="login"&rbrack; {...}
- 2 
 </pre>
 
 <h4>HTML</h4>
 
 <pre>
  1  &lt;a href="/login.php"&gt;...&lt;/a&gt;
- 2 
 </pre>
 
 <h4>Attribute Begins With Selector</h4>
@@ -1948,14 +1907,12 @@ stated value.</p>
 
 <pre>
  1  a&lbrack;href&Hat;="https://"&rbrack; {...}
- 2 
 </pre>
 
 <h4>HTML</h4>
 
 <pre>
  1  &lt;a href="https://chase.com/"&gt;...&lt;/a&gt;
- 2 
 </pre>
 
 <h4>Attribute Ends With Selector</h4>
@@ -1971,14 +1928,12 @@ stated value.</p>
 
 <pre>
  1  a&lbrack;href$=".pdf"&rbrack; {...} 
- 2 
 </pre>
 
 <h4>HTML</h4>
 
 <pre>
  1  &lt;a href="/docs/menu.pdf"&gt;...&lt;/a&gt;
- 2 
 </pre>
 
 <h4>Attribute Spaced Selector</h4>
@@ -1994,14 +1949,12 @@ stated value.</p>
 
 <pre>
  1  a&lbrack;rel&tilde;="tag"&rbrack; {...}
- 2 
 </pre>
 
 <h4>HTML</h4>
 
 <pre>
  1  &lt;a href="#" rel="tag nofollow"&gt;...&lt;/a&gt;
- 2 
 </pre>
 
 <h4>Attribute Hyphenated Selector</h4>
@@ -2017,14 +1970,12 @@ stated value.</p>
 
 <pre>
  1  a&lbrack;lang&#0124;="en"&rbrack; {...}
- 2 
 </pre>
 
 <h4>HTML</h4>
 
 <pre>
  1  &lt;a href="#" lang="en-US"&gt;...&lt;/a&gt;
- 2 
 </pre>
 
 <h4>Attribute Selectors Example</h4>
@@ -2039,7 +1990,6 @@ stated value.</p>
  5    &lt;li&gt;&lt;a href="#.mp3"&gt;Audio File&lt;/a&gt;&lt;/li&gt;  
  6    &lt;li&gt;&lt;a href="#.mp4"&gt;Video File&lt;/a&gt;&lt;/li&gt;  
  7  &lt;/ul&gt;
- 8 
 </pre>
 
 <details>
@@ -2076,7 +2026,6 @@ stated value.</p>
  28 a&lbrack;href$=".mp4"&rbrack; {
  29   background-image: url("images/video.png"); 
  30 } 
- 31 
 </pre>
 
 </details>
@@ -2125,7 +2074,6 @@ history.</p>
 <pre>
  1  a:link {...}
  2  a:visited {...}
- 3 
 </pre>
 
 <h4>User Action Pseudo-classes</h4>
@@ -2144,7 +2092,6 @@ to tab from one element to another.</p>
  1  a:hover {...}  
  2  a:active {...} 
  3  a:focus {...}  
- 4 
 </pre>
 
 <h4>User Interface State Pseudo-classes</h4>
@@ -2164,7 +2111,6 @@ adjusted as wished with the :disabled pseudo-class.</p>
 <pre>
  1  input:enabled {...}
  2  input:disabled {...}
- 3  
 </pre>
 
 <p>The last two user interface element state pseudo-classes
@@ -2178,7 +2124,6 @@ used to target these elements.</p>
 <pre>
  1  input:checked {...}
  2  input:indeterminate {...}
- 3  
 </pre>
 
 <h4>Structural & Position Pseudo-classes</h4>
@@ -2219,7 +2164,6 @@ list item.</p>
  1  li:first-child {...}
  2  li:last-child {...}
  3  div:only-child {...}
- 4 
 </pre>
 
 <details>
@@ -2237,7 +2181,6 @@ list item.</p>
  9    &lt;/li&gt;
  10   &lt;li&gt;This list item will be selected&lt;/li&gt;
  11 &lt;/ul&gt;
- 12   
 </pre>
 
 </details>
@@ -2270,7 +2213,6 @@ article, thus also selected.</p>
  1  p:first-of-type {...}
  2  p:last-of-type {...}
  3  img:only-of-type {...}
- 4 
 </pre>
 
 <h4>HTML</h4>
@@ -2284,7 +2226,6 @@ article, thus also selected.</p>
  6    &lt;p&gt;This paragraph will be selected&lt;/p&gt;
  7    &lt;h6&gt;...&lt;/h6&gt;
  8  &lt;/article&gt;
- 9 
 </pre>
 
 <p>Lastly, there are a few structural and position based pseudo-classes that
@@ -2424,7 +2365,6 @@ lines 2 through 5 are selected.</p>
 
 <pre>
  1  li:nth-child(-n+4) {...}
- 2 
 </pre>
 
 <h4>HTML</h4>
@@ -2438,7 +2378,6 @@ lines 2 through 5 are selected.</p>
  6    &lt;li&gt;...&lt;/li&gt;
  7    &lt;li&gt;...&lt;/li&gt;
  8  &lt;/ul&gt;
- 9 
 </pre>
 
 <p>Adding a negative integer before the n argument changes the selection
@@ -2533,7 +2472,6 @@ are selected.</p>
  8    &lt;p&gt;...&lt;/p&gt;
  9    &lt;p&gt;This paragraph will be selected&lt;/p&gt;
  10 &lt;/article&gt;
- 11 
 </pre>
 
 </details>
@@ -2553,7 +2491,6 @@ paragraph. Here the paragraphs on lines 4, 7, and 9 are selected.</p>
 
 <pre>
  1  p:nth-last-of-type(2n+1) {...}
- 2  
 </pre>
 
 <details>
@@ -2570,7 +2507,6 @@ paragraph. Here the paragraphs on lines 4, 7, and 9 are selected.</p>
  8    &lt;p&gt;...&lt;/p&gt;
  9    &lt;p&gt;This paragraph will be selected&lt;/p&gt;
  10 &lt;/article&gt;
- 11 
 </pre>
 
 </details>
@@ -2601,14 +2537,12 @@ selector and pseudo-class from before.</p>
 
 <pre>
  1  section:target {...}
- 2  
 </pre>
 
 <h4>HTML</h4>
 
 <pre>
  1  &lt;section id="hello"&gt;...&lt;/section&gt;
- 2  
 </pre>
 
 <h4>Empty Pseudo-class</h4>
@@ -2629,7 +2563,6 @@ not selected.</p>
 
 <pre>
  1  div:empty {...}
- 2 
 </pre>
 
 <h4>HTML</h4>
@@ -2641,7 +2574,6 @@ not selected.</p>
  4  &lt;div&gt;&lt;/div&gt;&lt;!-- This div will be selected --&gt;
  5  &lt;div&gt; &lt;/div&gt;
  6  &lt;div&gt;&lt;strong&gt;&lt;/strong&gt;&lt;/div&gt;
- 7  
 </pre>
 
 <h4>Negation Pseudo-class</h4>
@@ -2668,7 +2600,6 @@ pseudo-classes.</p>
 <pre>
  1  div:not(.awesome) {...}
  2  :not(div) {...}
- 3  
 </pre>
 
 <h4>HTML</h4>
@@ -2678,7 +2609,6 @@ pseudo-classes.</p>
  2  &lt;div class="awesome"&gt;...&lt;/div&gt;
  3  &lt;section&gt;This section will be selected&lt;/section&gt;
  4  &lt;section class="awesome"&gt;This section will be selected&lt;/section&gt;
- 5 
 </pre>
 
 <h4>Pseudo-classes Example</h4>
@@ -2715,7 +2645,6 @@ pseudo-classes.</p>
  26     ...
  27   &lt;/tbody&gt;
  28 &lt;/table&gt;
- 29  
 </pre>
 
 </details>
@@ -2760,7 +2689,6 @@ pseudo-classes.</p>
  34  tr:last-child td:last-child {
  35    border-bottom-right-radius: 6px;
  36  }
- 37  
 </pre>
 
 </details>
@@ -2851,7 +2779,6 @@ pseudo-elements respectively.</p>
  3    color: #ff7b29;
  4    font-size: 18px;
  5  }
- 6 
 </pre>
 
 <h4>HTML</h4>
@@ -2859,7 +2786,6 @@ pseudo-elements respectively.</p>
 <pre>
  1  &lt;p class="alpha"&gt;Lorem ipsum dolor...&lt;/p&gt;
  2  &lt;p class="bravo"&gt;Integer eget enim...&lt;/p&gt;
- 3 
 </pre>
 
 <h4>Textual Pseudo-elements Demo</h4>
@@ -2891,7 +2817,6 @@ necessary should a browser not support these pseudo-elements.</p>
  3    content: " (" attr(href) ")";
  4    font-size: 11px;
  5  }
- 6 
 </pre>
 
 <h4>HTML</h4>
@@ -2899,7 +2824,6 @@ necessary should a browser not support these pseudo-elements.</p>
 <pre>
  1  &lt;a href="http://google.com/"&gt;Search the Web&lt;/a&gt;
  2  &lt;a href="http://learn.shayhowe.com/"&gt;Learn How to Build Websites&lt;/a&gt;
- 3 
 </pre>
 
 <h4>Generated Content Pseudo-elements Demo</h4>
@@ -2933,7 +2857,6 @@ pseudo-element has been added to ensure the best support for all browsers.</p>
  4  ::selection {
  5    background: #ff7b29;
  6  }
- 7 
 </pre>
 
 <h4>Fragment Pseudo-element Demo</h4>
@@ -2944,7 +2867,6 @@ pseudo-element has been added to ensure the best support for all browsers.</p>
 
 <pre>
  1  <a class="arrow" href="#">Continue Reading</a>
- 2  
 </pre>
 
 <details>
@@ -2990,7 +2912,6 @@ pseudo-element has been added to ensure the best support for all browsers.</p>
  37  .arrow:hover:after {
  39    border-left: 15px solid #ff7b29;
  40  }
- 41 
 </pre>
 
 </details>
@@ -3221,7 +3142,6 @@ relative width of the target element.</p>
 
 <pre>
  1  target ÷ context = result
- 2  
 </pre>
 
 <h4>Flexible Grid</h4>
@@ -3240,7 +3160,6 @@ following.</p>
  2    <section>...</section> 
  3    <aside>...</aside>  
  4  </div>
- 5 
 </pre>
 
 <details>
@@ -3262,7 +3181,6 @@ following.</p>
  13   float: right;
  14   width: 158px;
  15 }
- 16 
 </pre>
 
 </details>
@@ -3291,7 +3209,6 @@ widths scale proportionally.</p>
  10   float: right;
  11   width: 29.3680297%; /* 158px ÷ 538px = .293680297 */
  12 }
- 13 
 </pre>
 
 </details>
@@ -3335,7 +3252,6 @@ additional HTTP requests.</p>
 <pre>
  1  <!-- Separate CSS File -->
  2  <link href="styles.css" rel="stylesheet" media="all and (max-width: 1024px)">
- 3 
 </pre>
 
 <h4>CSS</h4>
@@ -3345,7 +3261,6 @@ additional HTTP requests.</p>
  2  @media all and (max-width: 1024px) {...}
  3  /* @import Rule */ 
  4  @import url(styles.css) all and (max-width: 1024px) {...} 
- 5 
 </pre>
 
 <p>Each media query may include a media type followed by one or more
@@ -3374,7 +3289,6 @@ selects all media types between 800 and 1024 pixels wide.</p>
 
 <pre>
  1  @media all and (min-width: 800px) and (max-width: 1024px) {...} 
- 2 
 </pre>
 
 <p>The not logical operator negates the query, specifying any query but the
@@ -3384,7 +3298,6 @@ screens would apply here for example.</p>
 
 <pre>
  1  @media not screen and (color) {...}
- 2 
 </pre>
 
 <p>The only logical operator is a new operator and is not recognized by
@@ -3395,7 +3308,6 @@ user agent capable of rending media queries.</p>
 
 <pre>
  1  @media only screen and (orientation: portrait) {...}
- 2 
 </pre>
 
 <h4>Omitting a Media Type</h4>
@@ -3425,7 +3337,6 @@ or absolute.</p>
 
 <pre>
  1  @media all and (min-width: 320px) and (max-width: 780px) {...}  
- 2 
 </pre>
 
 <p>Within responsive design the most commonly used features
@@ -3451,7 +3362,6 @@ plays a large part with mobile devices.</p>
 
 <pre>
  1  @media all and (orientation: landscape) {...} 
- 2 
 </pre>
 
 <h4>Aspect Ratio Media Features</h4>
@@ -3468,7 +3378,6 @@ pixels while the second integer identifies the height in pixels.</p>
 
 <pre>
  1  @media all and (min-device-aspect-ratio: 16/9) {...}
- 2 
 </pre>
 
 <h4>Pixel Ratio Media Features</h4>
@@ -3483,7 +3392,6 @@ so look like the following.</p>
 <pre>
  1  @media only screen and (-webkit-min-device-pixel-ratio: 1.3), 
     only screen and (min-device-pixel-ratio: 1.3) {...}
- 2 
 </pre>
 
 <h4>Resolution Media Feature</h4>
@@ -3497,7 +3405,6 @@ resolution values.</p>
 
 <pre>
  1  @media print and (min-resolution: 300dpi) {...}  
- 2 
 </pre>
 
 <h4>Other Media Features</h4>
@@ -3541,7 +3448,6 @@ the section and aside.</p>
  4      width: auto; 
  5    } 
  6  } 
- 7 
 </pre>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -3609,7 +3515,6 @@ and develop intrinsic mobile experiences.</p>
  3  @media screen and (min-width: 600px) {...} 
  4  @media screen and (min-width: 1000px) {...}
  5  @media screen and (min-width: 1400px) {...}
- 6 
 </pre>
 
 <p>Additionally, downloading unnecessary media assets can be stopped by
@@ -3628,8 +3533,7 @@ even reduce a device's battery life.</p>
  7    body {
  8      background-image: url("bg.png") 50% 50% no-repeat;  
  9    }
- 1  }
- 1 
+ 10 }
 </pre>
 
 <h4>Mobile First Demo</h4>
@@ -3661,7 +3565,6 @@ build the following:</p>
  15     width: 29.3680297%;
  16   } 
  17 } 
- 18 
 </pre>
 
 </details>
@@ -3707,7 +3610,6 @@ the device defaults by applying the device-height and device-width values.</
 
 <pre>
  1  <meta name="viewport" content="width=device-width">
- 2 
 </pre>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -3736,7 +3638,6 @@ for initial-scale should always be a positive integer between 0 and 10.</p>
 
 <pre>
  1  <meta name="viewport" content="initial-scale=2">
- 2 
 </pre>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -3759,7 +3660,6 @@ these must also be between 0 and 10.</p>
 
 <pre>
  1  <meta name="viewport" content="minimum-scale=0">
- 2 
 </pre>
 
 <p>Generally speaking, these values should not be set to the same value as
@@ -3774,7 +3674,6 @@ viewing a website as desired.</p>
 
 <pre>
  1  <meta name="viewport" content="user-scalable=yes"> 
- 2 
 </pre>
 
 <h4>Viewport Resolution</h4>
@@ -3790,7 +3689,6 @@ helpful when pixel by pixel control is needed.</p>
 
 <pre>
  1  <meta name="viewport" content="target-densitydpi=device-dpi">  
- 2 
 </pre>
 
 <h4>Combining Viewport Values</h4>
@@ -3803,7 +3701,6 @@ outlined below, using both the width and initial-scale properties.</p>
 
 <pre>
  1  <meta name="viewport" content="width=device-width, initial-scale=1">
- 2 
 </pre>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -3834,7 +3731,6 @@ tag would look like the following @viewport rule in CSS.</p>
  2    width: device-width;
  3    zoom: 1; 
  4  }  
- 5  
 </pre>
 
 <h4>Flexible Media</h4>
@@ -3852,7 +3748,6 @@ any media will scale down according to its containers width.</p>
  1  img, video, canvas {  
  2    max-width: 100%;
  3  } 
- 4 
 </pre>
 
 <h4>Flexible Media Demo</h4>
@@ -3887,7 +3782,6 @@ treating the parent element as an absolutely positioned element.</p>
  1  <figure> 
  2    <iframe src="https://www.youtube.com/embed/Sv3xVOs7_No"></iframe> 
  3  </figure>
- 4 
 </pre>
 
 <details>
@@ -3907,7 +3801,6 @@ treating the parent element as an absolutely positioned element.</p>
  11   top: 0; 
  13   width: 100%; 
  14 } 
- 15 
 </pre>
 
 </details>
@@ -6744,7 +6637,6 @@ transform type followed by a specific amount inside parentheses.</p>
  4    -o-transform: scale(1.5);
  5    transform: scale(1.5);
  6  }
- 7 
 </pre>
 
 <p>Notice how the transform property includes multiple vendor prefixes to
@@ -6782,9 +6674,8 @@ discuss how you can change this default point of rotation.</p>
 <h4>HTML</h4>
 
 <pre>
- 1  <figure class="box-1">Box 1</figure>
- 2  <figure class="box-2">Box 2</figure>
- 3 
+ 1  &lt;figure class="box-1"&gt;Box 1&lt;/figure&gt;
+ 2  &lt;figure class="box-2"&gt;Box 2&lt;/figure&gt;
 </pre>
 
 <h4>CSS</h4>
@@ -6796,7 +6687,6 @@ discuss how you can change this default point of rotation.</p>
  4  .box-2 {
  5    transform: rotate(-55deg);  
  6  } 
- 7 
 </pre>
 
 <h4>Rotate Demo</h4>
@@ -6818,9 +6708,8 @@ value greater than or equal to 1.01 makes an element appear larger.</p>
 <h4>HTML</h4>
 
 <pre>
- 1  <figure class="box-1">Box 1</figure>
- 2  <figure class="box-2">Box 2</figure>
- 3 
+ 1  &lt;figure class="box-1"&gt;Box 1&lt;/figure&gt;
+ 2  &lt;figure class="box-2"&gt;Box 2&lt;/figure&gt;
 </pre>
 
 <h4>CSS</h4>
@@ -6832,7 +6721,6 @@ value greater than or equal to 1.01 makes an element appear larger.</p>
  4  .box-2 {
  5    transform: scale(1.25);  
  6  } 
- 7 
 </pre>
 
 <h4>Scale Demo</h4>
@@ -6848,10 +6736,9 @@ comma, and then the y axis value.</p>
 <h4>HTML</h4>
 
 <pre>
- 1  <figure class="box-1">Box 1</figure>
- 2  <figure class="box-2">Box 2</figure>
- 3  <figure class="box-3">Box 3</figure>
- 4 
+ 1  &lt;figure class="box-1"&gt;Box 1&lt;/figure&gt;
+ 2  &lt;figure class="box-2"&gt;Box 2&lt;/figure&gt;
+ 3  &lt;figure class="box-3"&gt;Box 3&lt;/figure&gt;
 </pre>
 
 <h4>CSS</h4>
@@ -6866,7 +6753,6 @@ comma, and then the y axis value.</p>
  7  .box-3 {
  8    transform: scale(.5, 1.15); 
  9  } 
- 10  
 </pre>
 
 <h4>Multiple Scaling Demo</h4>
@@ -6893,10 +6779,9 @@ position.</p>
 <h4>HTML</h4>
 
 <pre>
- 1  <figure class="box-1">Box 1</figure>
- 2  <figure class="box-2">Box 2</figure>
- 3  <figure class="box-3">Box 3</figure>
- 4 
+ 1  &lt;figure class="box-1"&gt;Box 1&lt;/figure&gt;
+ 2  &lt;figure class="box-2"&gt;Box 2&lt;/figure&gt;
+ 3  &lt;figure class="box-3"&gt;Box 3&lt;/figure&gt;
 </pre>
 
 <h4>CSS</h4>
@@ -6911,7 +6796,6 @@ position.</p>
  7  .box-3 {
  8    transform: translate(-10px, 25%); 
  9  } 
- 10 
 </pre>
 
 <h4>Translate Demo</h4>
@@ -6933,10 +6817,9 @@ apply here.</p>
 <h4>HTML</h4>
 
 <pre>
- 1  <figure class="box-1">Box 1</figure>
- 2  <figure class="box-2">Box 2</figure>
- 3  <figure class="box-3">Box 3</figure>
- 4 
+ 1  &lt;figure class="box-1"&gt;Box 1&lt;/figure&gt;
+ 2  &lt;figure class="box-2"&gt;Box 2&lt;/figure&gt;
+ 3  &lt;figure class="box-3"&gt;Box 3&lt;/figure&gt;
 </pre>
 
 <h4>CSS</h4>
@@ -6951,7 +6834,6 @@ apply here.</p>
  7  .box-3 {
  8    transform: skew(5deg, -20deg); 
  9  } 
- 10 
 </pre>
 
 <h4>Skew Demo</h4>
@@ -6971,9 +6853,8 @@ same as if you were to set the height of an element numerous times.</p>
 <h4>HTML</h4>
 
 <pre>
- 1  <figure class="box-1">Box 1</figure>
- 2  <figure class="box-2">Box 2</figure>
- 3 
+ 1  &lt;figure class="box-1"&gt;Box 1&lt;/figure&gt;
+ 2  &lt;figure class="box-2"&gt;Box 2&lt;/figure&gt;
 </pre>
 
 <h4>CSS</h4>
@@ -6985,7 +6866,6 @@ same as if you were to set the height of an element numerous times.</p>
  4  .box-2 {
  5    transform: skew(10deg, 20deg) translateX(20px);
  6  }
- 7  
 </pre>
 
 <h4>Combining Transforms Demo</h4>
@@ -7003,12 +6883,11 @@ hand at using the matrix property.</p>
 <h4>HTML</h4>
 
 <pre>
- 1  <div class="cube"> 
- 2    <figure class="side top">1</figure>  
- 3    <figure class="side left">2</figure> 
- 4    <figure class="side right">3</figure>
- 5  </div> 
- 6  
+ 1  &lt;div class="cube"&gt; 
+ 2    &lt;figure class="side top"&gt;1&lt;/figure&gt;  
+ 3    &lt;figure class="side left"&gt;2&lt;/figure&gt; 
+ 4    &lt;figure class="side right"&gt;3&lt;/figure&gt;
+ 5  &lt;/div&gt; 
 </pre>
 
 <details>
@@ -7036,7 +6915,6 @@ hand at using the matrix property.</p>
  19   transform: rotate(-15deg) skew(-15deg, -15deg) translate(50%,
  10   100%);
  21 }
- 22 
 </pre>
 
 </details>
@@ -7063,11 +6941,10 @@ the origin to 20 pixels across and 50 pixels down the element.</p>
 <h4>HTML</h4>
 
 <pre>
- 1  <figure class="box-1">Box 1</figure>
- 2  <figure class="box-2">Box 2</figure>
- 3  <figure class="box-3">Box 3</figure>
- 4  <figure class="box-4">Box 3</figure>
- 5 
+ 1  &lt;figure class="box-1"&gt;Box 1&lt;/figure&gt;
+ 2  &lt;figure class="box-2"&gt;Box 2&lt;/figure&gt;
+ 3  &lt;figure class="box-3"&gt;Box 3&lt;/figure&gt;
+ 4  &lt;figure class="box-4"&gt;Box 3&lt;/figure&gt;
 </pre>
 
 <details>
@@ -7090,7 +6967,6 @@ the origin to 20 pixels across and 50 pixels down the element.</p>
  14   transform: scale(.75) translate(-10px, -10px);
  15   transform-origin: 20px 50px;
  16 }
- 17 
 </pre>
 
 </details>
@@ -7127,9 +7003,9 @@ their individual perspectives with the perspective value.</p>
 <h4>HTML</h4>
 
 <pre>
- 1  <figure class="box">Box 1</figure>
- 2  <figure class="box">Box 2</figure>
- 3  <figure class="box">Box 3</figure>
+ 1  &lt;figure class="box">Box 1&lt;/figure>
+ 2  &lt;figure class="box">Box 2&lt;/figure>
+ 3  &lt;figure class="box">Box 3&lt;/figure>
  4 
 </pre>
 
@@ -7139,7 +7015,6 @@ their individual perspectives with the perspective value.</p>
  1  .box {
  2    transform: perspective(200px) rotateX(45deg);
  3  }
- 4 
 </pre>
 
 <h4>Perspective Value Demo</h4>
@@ -7151,12 +7026,11 @@ the perspective property on their direct parent element.</p>
 <h4>HTML</h4>
 
 <pre>
- 1  <div class="group">  
- 2    <figure class="box">Box 1</figure>
- 3    <figure class="box">Box 2</figure>
- 4    <figure class="box">Box 3</figure>
- 5  </div>
- 6 
+ 1  &lt;div class="group"&gt;  
+ 2    &lt;figure class="box"&gt;Box 1&lt;/figure&gt;
+ 3    &lt;figure class="box"&gt;Box 2&lt;/figure&gt;
+ 4    &lt;figure class="box"&gt;Box 3&lt;/figure&gt;
+ 5  &lt;/div&gt;
 </pre>
 
 <h4>CSS</h4>
@@ -7168,7 +7042,6 @@ the perspective property on their direct parent element.</p>
  4  .box {
  5    transform: rotateX(45deg);
  6  }
- 7 
 </pre>
 
 <h4>Perspective Property Demo</h4>
@@ -7194,9 +7067,8 @@ depth values.</p>
 <h4>HTML</h4>
 
 <pre>
- 1  <figure class="box-1">Box 1</figure>
- 2  <figure class="box-2">Box 2</figure>
- 3 
+ 1  &lt;figure class="box-1"&gt;Box 1&lt;/figure&gt;
+ 2  &lt;figure class="box-2"&gt;Box 2&lt;/figure&gt;
 </pre>
 
 <h4>CSS</h4>
@@ -7208,7 +7080,6 @@ depth values.</p>
  4  .box-2 {
  5    transform: perspective(1000px) rotateX(45deg);
  6  }
- 7 
 </pre>
 
 <h4>Perspective Depth Value Demo</h4>
@@ -7227,16 +7098,15 @@ of a transform.</p>
   <summary>HTML</summary>
 
 <pre>
- 1  <div class="original original-1">
- 2    <figure class="box">Box 1</figure>
- 3  </div>
- 4  <div class="original original-2">
- 5    <figure class="box">Box 2</figure>
- 6  </div>
- 7  <div class="original original-3">
- 8    <figure class="box">Box 3</figure>
- 9  </div>
- 10  
+ 1  &lt;div class="original original-1"&gt;
+ 2    &lt;figure class="box"&gt;Box 1&lt;/figure&gt;
+ 3  &lt;/div&gt;
+ 4  &lt;div class="original original-2"&gt;
+ 5    &lt;figure class="box"&gt;Box 2&lt;/figure&gt;
+ 6  &lt;/div&gt;
+ 7  &lt;div class="original original-3"&gt;
+ 8    &lt;figure class="box"&gt;Box 3&lt;/figure&gt;
+ 9  &lt;/div&gt;
 </pre>
 
 </details>
@@ -7297,10 +7167,9 @@ rotate the element counterclockwise.</p>
 <h4>HTML</h4>
 
 <pre>
- 1  <figure class="box-1">Box 1</figure>
- 2  <figure class="box-2">Box 2</figure>
- 3  <figure class="box-3">Box 3</figure>
- 4 
+ 1  &lt;figure class="box-1"&gt;Box 1&lt;/figure&gt;
+ 2  &lt;figure class="box-2"&gt;Box 2&lt;/figure&gt;
+ 3  &lt;figure class="box-3"&gt;Box 3&lt;/figure&gt;
 </pre>
 
 <details>
@@ -7316,7 +7185,6 @@ rotate the element counterclockwise.</p>
  7  .box-3 {
  8    transform: perspective(200px) rotateZ(45deg);
  9  }
- 10 
 </pre>
 
 </details>
@@ -7340,7 +7208,6 @@ the rotateX in this case, the elements will appear to be unchanged.</p>
 <pre>
  1  <figure class="box-1">Box 1</figure>
  2  <figure class="box-2">Box 2</figure>
- 3 
 </pre>
 
 <h4>CSS</h4>
@@ -7352,7 +7219,6 @@ the rotateX in this case, the elements will appear to be unchanged.</p>
  4  .box-2 {
  5    transform: perspective(200px) scaleZ(.25) rotateX(45deg);
  6  }
- 7 
 </pre>
 
 <h4>3D Scale Demo</h4>
@@ -7430,13 +7296,12 @@ lie flat on the two-dimensional plane.</p>
 <h4>HTML</h4>
 
 <pre>
- 1  <div class="rotate three-d">  
- 2    <figure class="box">Box 1</figure>
- 3  </div>
- 4  <div class="rotate"> 
- 5    <figure class="box">Box 2</figure>
- 6  </div>
- 7 
+ 1  &lt;div class="rotate three-d"&gt;  
+ 2    &lt;figure class="box"&gt;Box 1&lt;/figure&gt;
+ 3  &lt;/div&gt;
+ 4  &lt;div class="rotate"&gt; 
+ 5    &lt;figure class="box"&gt;Box 2&lt;/figure&gt;
+ 6  &lt;/div&gt;
 </pre>
 
 <details>
@@ -7453,7 +7318,6 @@ lie flat on the two-dimensional plane.</p>
  8    transform: rotateX(15deg) translateZ(20px);
  9    transform-origin: 0 0;
  10 }
- 11 
 </pre>
 
 </details>
@@ -7486,9 +7350,8 @@ rel="noopener noreferrer" target="_blank">animations</a>.</p>
 <h4>HTML</h4>
 
 <pre>
- 1  <figure class="box-1">Box 1</figure>
- 2  <figure class="box-2">Box 2</figure>
- 3 
+ 1  <figure class="box-1"&gt;Box 1</figure&gt;
+ 2  <figure class="box-2"&gt;Box 2</figure&gt;
 </pre>
 
 <h4>CSS</h4>
@@ -7501,7 +7364,6 @@ rel="noopener noreferrer" target="_blank">animations</a>.</p>
  5    backface-visibility: hidden;
  6    transform: rotateY(180deg);
  7  }
- 8 
 </pre>
 
 <h4>Backface Visibility Demo</h4>
@@ -7512,17 +7374,16 @@ rel="noopener noreferrer" target="_blank">animations</a>.</p>
   <summary>HTML</summary>
 
 <pre>
- 1  <div class="cube-container">
- 2    <div class="cube"> 
- 3      <figure class="side front">1</figure>
- 4      <figure class="side back">2</figure> 
- 5      <figure class="side left">3</figure> 
- 6      <figure class="side right">4</figure>
- 7      <figure class="side top">5</figure>  
- 8      <figure class="side bottom">6</figure>  
- 9    </div> 
- 10 </div> 
- 11 
+ 1  &lt;div class="cube-container"&gt;
+ 2    &lt;div class="cube"&gt; 
+ 3      &lt;figure class="side front"&gt;1&lt;/figure&gt;
+ 4      &lt;figure class="side back"&gt;2&lt;/figure&gt; 
+ 5      &lt;figure class="side left"&gt;3&lt;/figure&gt; 
+ 6      &lt;figure class="side right"&gt;4&lt;/figure&gt;
+ 7      &lt;figure class="side top"&gt;5&lt;/figure&gt;  
+ 8      &lt;figure class="side bottom"&gt;6&lt;/figure&gt;  
+ 9    &lt;/div&gt; 
+ 10 &lt;/div&gt;
 </pre>
 
 </details>
@@ -7569,7 +7430,6 @@ rel="noopener noreferrer" target="_blank">animations</a>.</p>
  36 .bottom { 
  37   transform: rotateX(-90deg) translateZ(100px);
  38 } 
- 40 
 </pre>
 
 </details>
@@ -7600,8 +7460,7 @@ rel="noopener noreferrer" target="_blank">animations</a>.</p>
 </ul>
 
 <!-- 104 -->
-<p>
-<b>Lesson 6 </b> <a href="jquery">jQuery</a>
+<p><b>Lesson 6 </b> <a href="jquery">jQuery</a>
     &nbsp;&nbsp;&nbsp;&nbsp;
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -7616,6 +7475,7 @@ rel="noopener noreferrer" target="_blank">animations</a>.</p>
 </p>
 
 <h2 align="center" id="transitions-animations">Lesson 8: Transitions &amp; Animations</h2>
+
 <h3>In this Lesson 8:</h3>
 
 <p>GitlabGitLab is the only place where enterprises build mission critical software.</p>
@@ -7675,7 +7535,6 @@ course of 1 second in a linear fashion.</p>
  7  .box:hover {
  8    background: #ff7b29;
  9  }
- 10 
 </pre>
 
 </details>
@@ -7754,8 +7613,8 @@ element.</p>
  9    background: #ff7b29;
  10   border-radius: 50%;
  11 }
- 12 
 </pre>
+
 </details>
 
 <h4>Transition Property Demo</h4>
@@ -7843,7 +7702,6 @@ transitioned properties.</p>
  9    background: #ff7b29;
  10   border-radius: 50%;
  11 }
- 12 
 </pre>
 
 </details>
@@ -7893,7 +7751,6 @@ property values, may be declared as comma separated values.</p>
  9    background: #ff7b29;
  10   border-radius: 50%;
  11 }
- 12 
 </pre>
 
 </details>
@@ -7925,7 +7782,6 @@ can be declared as comma separated values.</p>
  10   background: #ff7b29;
  11   border-radius: 50%;
  12 }
- 13  
 </pre>
 
 </details>
@@ -7960,7 +7816,6 @@ transition values.</p>
  7    color: #ff7b29;
  8    border-radius: 50%;
  9  }
- 10 
 </pre>
 
 </details>
@@ -7973,7 +7828,6 @@ transition values.</p>
 
 <pre>
  1  <button>Awesome Button</button>
- 2  
 </pre>
 
 <details>
@@ -7997,7 +7851,6 @@ transition values.</p>
  15   box-shadow: 0 2px 0 #006599; 
  16   transform: translateY(3px);  
  17 }  
- 18  
 </pre>
 
 </details>
@@ -8015,7 +7868,6 @@ transition values.</p>
  4      <div class="side back">...</div>
  5    </div>
  6  </div>
- 7  
 </pre>
 
 <details>
@@ -8047,7 +7899,6 @@ transition values.</p>
  23 .card .back {
  24   transform: rotateY(180deg);
  25 }
- 26  
 </pre>
 
 </details>
@@ -8089,7 +7940,6 @@ animated.</p>
  12     top: 0;
  13   }
  14 }
- 15 
 </pre>
 
 </details>
@@ -8137,7 +7987,6 @@ in which the animation is to be applied to.</p>
  1  .stage:hover .ball {
  2    animation-name: slide;
  3  }
- 4 
 </pre>
 
 <p>Using the animation-name property alone isn't enough though. You also
@@ -8157,7 +8006,6 @@ transitions, the duration may be set in seconds or milliseconds.</p>
  2    animation-name: slide;
  3    animation-duration: 2s;
  4  }
- 5 
 </pre>
 
 <p>A timing function and delay can be declared using the animation-timing-function 
@@ -8171,7 +8019,6 @@ and behave just as they do with transitions.</p>
  4    animation-timing-function: ease-in-out;
  5    animation-delay: .5s;
  6  }
- 7 
 </pre>
 
 <p>The animation below should cause the ball to bounce once while moving to
@@ -8183,7 +8030,6 @@ the left, however only when hovering over the stage.</p>
  1  <div class="stage">
  2    <figure class="ball"></figure>
  3  </div>
- 4  
 </pre>
 
 <details>
@@ -8219,7 +8065,6 @@ the left, however only when hovering over the stage.</p>
  27    animation-timing-function: ease-in-out;
  28    animation-delay: .5s;
  29  }
- 30 
 </pre>
 
 </details>
@@ -8256,7 +8101,6 @@ indefinitely in a never ending fashion.</p>
  5    animation-delay: .5s;
  6    animation-iteration-count: infinite;
  7  }
- 8  
 </pre>
 
 </details>
@@ -8306,7 +8150,6 @@ then back to 100% again.</p>
  6    animation-iteration-count: infinite;
  7    animation-direction: alternate;
  8  }
- 9  
 </pre>
 
 </details>
@@ -8341,7 +8184,6 @@ animation will temporarily pause until you let up on the mouse.</p>
  9  .stage:active .ball {
  10   animation-play-state: paused;
  11 }
- 12 
 </pre>
 
 </details>
@@ -8386,10 +8228,9 @@ the forwards and backwards values.</p>
  5    animation-delay: .5s;
  6    animation-fill-mode: forwards;
  7  }
- 8  .stage:active .ball {
+ 8  .stage:active .ball { 
  9    animation-play-state: paused;
- 1  }
- 0 
+ 10 }
 </pre>
 
 </details>
@@ -8416,7 +8257,6 @@ and lastly animation-play-state.</p>
  4  .stage:active .ball {
  5    animation-play-state: paused;
  6  }
- 7 
 </pre>
 
 <h4>Shorthand Animations Demo</h4>
@@ -8525,7 +8365,6 @@ versions of Internet Explorer 8 and below.</p>
  1  <!--&lbrack;if lt IE 9]>
  2  <script src="html5shiv.js"></script>
  3  <!&lbrack;endif]-->
- 4 
 </pre>
 
 <h4>The Difference Between a Shiv &amp; a Shim</h4>
@@ -8557,7 +8396,6 @@ the display: block; declaration.</p>
  11 summary {
  12   display: block;
  13 }
- 14 
 </pre>
 
 </details>
@@ -8573,7 +8411,6 @@ should be good to go using any new HTML5 elements.</p>
  3  video {
  4    display: inline-block;
  5  }
- 6  
 </pre>
 
 <h4>Detecting Browser Features</h4>
@@ -8608,7 +8445,6 @@ Modernizr.</p>
 
 <pre>
  1  <script src="modernizr.js"></script>
- 2  
 </pre>
 
 <h4>Conditionally Applying CSS Styles</h4>
@@ -8663,7 +8499,6 @@ additional HTTP requests when possible.</p>
  31  .no-cssgradients button:active {
  32    background-position: 0 -98px;
  33  }
- 34 
 </pre>
 
 </details>
@@ -8720,7 +8555,6 @@ is used the storage-polyfill.js file using the getScript method.</p>
  7      jQuery.getScript('storage-polyfill.js');
  8    }
  9  });
- 10 
 </pre>
 
 </details>
@@ -8738,7 +8572,6 @@ beneficial for performance.</p>
  3      jQuery.getScript('tabs.js'); 
  4    } 
  5  });  
- 6 
 </pre>
 
 <p>Above, Modernizr looks to detect screens above 640 pixels wide,
@@ -8763,7 +8596,6 @@ preventing the script from loading on smaller screens.</p>
  3      $('.size').text('small');
  4    }
  5  });
- 6 
 </pre>
 
 <h4>Conditionally Running Scripts Demo</h4>
@@ -8976,7 +8808,6 @@ skipping it, where they may not done so with the CSS declaration.</p>
  2  &lt;div hidden&gt;...&lt;/div&gt;  
  3  &lt;!-- Not good --&gt; 
  4  &lt;div style="display: none;"&gt;...&lt;/div&gt; 
- 5 
 </pre>
 
 <p>Imagine a blind user attempting to fill out a form and the first piece
@@ -9013,7 +8844,6 @@ identify significantly important text.</p>
  2  <strong>Caution:</strong> Falling rocks.
  3  <!-- Stylistically offset -->
  4  This recipe calls for <b>bacon</b> and <b>baconnaise</b>.
- 5  
 </pre>
 
 <h4>Bolding Text Demo</h4>
@@ -9039,7 +8869,6 @@ importance.</p>
  2  I <em>love</em> Chicago!
  3  <!-- Alternative voice or tone -->  
  4  The name <i>Shay</i> means a gift.  
- 5 
 </pre>
 
 <h4>Italicizing Text Demo</h4>
@@ -9088,13 +8917,12 @@ Use underlines with caution.</p>
   <summary>Example, Underline</summary>
 
 <pre>
- 1  <!-- Added to the document -->
- 2  <ins cite="http://learn.shayhowe.com" datetime="2012-07-01">
+ 1  &lt;!-- Added to the document --&gt;
+ 2  &lt;ins cite="http://learn.shayhowe.com" datetime="2012-07-01"&gt;
  3    Updated: This website now contains an advanced guide. 
- 4  </ins>
- 5  <!-- Unarticulated annotation -->
- 6  <u>Urushihara Yuuji</u> won <u>Sasuke 27</u>. 
- 7 
+ 4  &lt;/ins&gt;
+ 5  &lt;!-- Unarticulated annotation --&gt;
+ 6  &lt;u&gt;Urushihara Yuuji&lt;/u&gt; won &lt;u&gt;Sasuke 27&lt;/u&gt;. 
 </pre>
 
 </details>
@@ -9123,13 +8951,12 @@ The s element identifies text that is no longer accurate or relevant.</p>
   <summary>Example, Striking Text</summary>
   
 <pre>
- 1  <!-- Deleted from the document -->  
- 2  I am an avid cyclist, <del cite="http://shayhowe.com" 
- 3  datetime="2012-07-01">
- 4  skateboarder</del> and designer.
- 5  <!-- No longer accurate or relevant -->  
- 6  <s>$24.99</s> $19.99  
- 7 
+ 1  &lt;!-- Deleted from the document --&gt;  
+ 2  I am an avid cyclist, &lt;del cite="http://shayhowe.com" 
+ 3  datetime="2012-07-01"&gt;
+ 4  skateboarder&lt;/del&gt; and designer.
+ 5  &lt;!-- No longer accurate or relevant --&gt;  
+ 6  &lt;s&gt;$24.99&lt;/s&gt; $19.99  
 </pre>
 
 </details>
@@ -9144,9 +8971,8 @@ identify text, specifically for reference purposes without having to use
 an un-semantic text level element.</p>
 
 <pre>
- 1  <!-- Highlighted for reference purposes --> 
- 2  Search results for <mark>'chicago'</mark>.
- 3 
+ 1  &lt;!-- Highlighted for reference purposes --&gt; 
+ 2  Search results for &lt;mark&gt;'chicago'&lt;/mark&gt;.
 </pre>
 
 <h4>Highlighting Text Demo</h4>
@@ -9163,7 +8989,6 @@ and shouldn't be used.</p>
 <pre>
  1  <abbr title="HyperText Markup Language">HTML</abbr>
  2  <abbr title="Cascading Style Sheets">CSS</abbr> 
- 3 
 </pre>
 
 <h4>Abbreviations Demo</h4>
@@ -9180,8 +9005,6 @@ presentational purposes.</p>
  2  H<sub>2</sub>O 
  3  <!-- Superscripts -->
  4  1<sup>st</sup> Place 
- 5 
- 6 
 </pre>
 
 <h4>Sub &amp; Superscripts Demo</h4>
@@ -9220,7 +9043,6 @@ the max attribute indicates what progress needs to be reached.</p>
  6  You are <progress value="50" max="100">50%</progress>  
  7  complete.  
  8  <progress value="50" min="0" max="100">Hold tight, you"re getting there.</progress>
- 9 
 </pre>
 
 </details>
@@ -9259,7 +9081,6 @@ and other content needs to be placed outside of the address element.</p>
  11   Suite 620<br> 
  12   Chicago, IL 60654<br> USA  
  13 </address> 
- 14 
 </pre>
 
 </details>
@@ -9290,7 +9111,6 @@ manner.</p>
  5    color: #666; 
  6    font: 14px/20px Arial, sans-serif;
  7  }&lt;/code&gt;&lt;/pre&gt;
- 8 
 </pre>
 
 <h4>Presenting Code Demo</h4>
@@ -9319,7 +9139,6 @@ in a legible fashion.</p>
  4  USA  
  5  &lt;!-- Word break --&gt;  
  6  http://shay&lt;wbr&gt;howe.com  
- 7 
 </pre>
 
 <h4>Line & Word Breaks Demo</h4>
@@ -9337,7 +9156,6 @@ copyright information or legal print.</p>
 <pre>
  1  &lt;!-- Side comments or small print --&gt; 
  2  &lt;small&gt;&copy; 2012 Shay Howe&lt;/small&gt;
- 3 
 </pre>
 
 <h4>Side Comments Demo</h4>
@@ -9379,7 +9197,6 @@ name.</p>
  2  <a href="twitter-logo.png" download>Twitter Logo</a>  
  3  <!-- With a value -->
  4  <a href="twitter-logo.png" download="Logo">Twitter Logo</a>  
- 5 
 </pre>
 
 <h4>Download Attribute Demo</h4>
@@ -9392,10 +9209,9 @@ the relationship between the current document and the document being
 referenced. For example, when linking to a copyright statement
 the rel attribute value of copyright should be used.</p>
 
-</pre>
+<pre>
  1  <a href="legal.html" rel="copyright">Terms of Use</a>  
  2  <a href="toc.html" rel="contents">Table of Contents</a>
- 3 
 </pre>
 
 <p>A few <a href="http://microformats.org/wiki/existing-rel-values" 
@@ -9493,7 +9309,6 @@ find the need.</p>
  1  <section itemscope itemtype="http://schema.org/Person"> 
  2    ... 
  3  </section> 
- 4 
 </pre>
 
 <p>Once the scope and type of the item have been determined, properties may
@@ -9506,7 +9321,6 @@ itself most commonly determines the value of the property.</p>
  1  &lt;section itemscope itemtype="http://schema.org/Person"&gt; 
  2    &lt;h1 itemprop="name"&gt;Shay Howe&lt;/h1&gt;
  3  &lt;/section&gt; 
- 4 
 </pre>
 
 <p>Some elements, however, do not get their itemprop value from the content
@@ -9549,7 +9363,6 @@ item properties and their corresponding values.</p>
  12     &lt;span itemprop="postalCode"&gt;60654&lt;/span&gt;  
  13   &lt;/address&gt; 
  14 &lt;/section&gt; 
- 15 
 </pre>
 
 </details>
@@ -9589,7 +9402,6 @@ as can some of the nested item types.</p>
  14     &lt;/address&gt; 
  15   &lt;/div&gt;
  16 &lt;/section&gt; 
- 17 
 </pre>
 
 </details>
@@ -9623,7 +9435,6 @@ certain elements and blocks of content do on a page.</p>
 
 <pre>
  1  &lt;header role="banner"&gt;...&lt;/header&gt; 
- 2 
 </pre>
 
 <p>WAI-ARIA roles break down into four different categories, including
@@ -9703,7 +9514,6 @@ the following code snippet.</p>
  6  &lt;/article&gt; 
  7  &lt;aside role="complementary"&gt;...&lt;/aside&gt;  
  8  &lt;footer role="contentinfo"&gt;...&lt;/footer&gt;  
- 9 
 </pre>
 
 <h3>States & Properties</h3>
@@ -9763,4 +9573,5 @@ and <b>relationship attributes</b>.</p>
 5/19/2024 6:53pm<br>
 6/21/2024 Fri 1:25am<br>
 8/16/2024 Fri 3:55pm<br>
-10/21/2024 Mon 11:33pm</h6>
+10/21/2024 Mon 11:33pm<br/>
+10/23/2024 Wed 12:33pm</h6>
