@@ -92,20 +92,20 @@
 
 <ul>
   <li><a href="https://learn.shayhowe.com/advanced-html-css/performance-organization/#minify-compress-files"
-    rel="noopener noreferrer" target="_blank"> Minify &amp; Compress Files</a></li>
+    rel="noopener noreferrer" target="_blank">Minify &amp; Compress Files</a></li>
   <li><a href="https://learn.shayhowe.com/advanced-html-css/performance-organization/#cache-common-files"
-    rel="noopener noreferrer" target="_blank"> Cache Common Files</a></li>
+    rel="noopener noreferrer" target="_blank">Cache Common Files</a></li>
 </ul>
 
 <h4>CSS</h4>
 
 <ul>
   <li><a href="https://learn.shayhowe.com/advanced-html-css/performance-organization/#strategy-structure" 
-    rel="noopener noreferrer" target="_blank"> Strategy &amp; Structure</a></li>
+    rel="noopener noreferrer" target="_blank">Strategy &amp; Structure</a></li>
   <li><a href="https://learn.shayhowe.com/advanced-html-css/performance-organization/#performance-driven-selectors" 
-    rel="noopener noreferrer" target="_blank"> Performance Driven Selectors</a></li>
+    rel="noopener noreferrer" target="_blank">Performance Driven Selectors</a></li>
   <li><a href="https://learn.shayhowe.com/advanced-html-css/performance-organization/#reusable-code" 
-    rel="noopener noreferrer" target="_blank"> Reusable Code</a></li>
+    rel="noopener noreferrer" target="_blank">Reusable Code</a></li>
   <li><a href="https://learn.shayhowe.com/advanced-html-css/performance-organization/#reduce-http-requests" 
     rel="noopener noreferrer" target="_blank"> Reduce HTTP Requests</a></li>
 </ul>
@@ -117,12 +117,11 @@ into play, one that is extremely important to both development time and user exp
 Knowing the fundamentals of website <a href="http://developer.yahoo.com/performance/rules.html" 
 rel="noopener noreferrer" target="_blank">performance</a> and organization can go a long way.</p>
 
-<p>The organization and architecture of a code base can greatly affect not
-only the speed of development, but also the speed at which pages render.
-Both of which can be sizeable concerns not only for developers but also
-users. Taking the time to design the right structure for a code base,
-and identify how all of the different components will work together, can
-speed up production and make for a better experience all around.</p>
+<p>The organization and architecture of a code base can greatly affect not only the speed 
+of development, but also the speed at which pages render. Both of which can be sizeable 
+concerns not only for developers but also users. Taking the time to design the right 
+structure for a code base, and identify how all of the different components will work 
+together, can speed up production and make for a better experience all around.</p>
 
 <p>Additionally, taking a few small steps to improve the performance of a
 website can pay off in
@@ -146,30 +145,28 @@ practices to follow. One practice includes separating styles based on
 intent, which includes creating directories for common base styles, user
 interface components, and business logic modules.</p>
 
-<pre><code> 1  # Base
- 2    -- normalize.css
- 3    -- layout.css
- 4    -- typography.css
- 5  
- 6  # Components
- 7    -- alerts.css
- 8    -- buttons.css
- 9    -- forms.css
- 10   -- list.css
- 11   -- nav.css
- 12   -- tables.css
- 13  
- 14 # Modules
- 15   -- aside.css
- 16   -- footer.css
- 17   -- header.css
- 18 </code></pre>
+<pre># Base
+  -- normalize.css
+  -- layout.css
+  -- typography.css
 
-<p>The architecture outlined above includes three directories, all with
-individual groups of styles. The goal here is to <b>start thinking of
-websites as systems</b>  rather than individual pages, and the code
-architecture should reflect this mindset. Notice how there aren’t any
-page specific styles here.</p>
+# Components
+  -- alerts.css
+  -- buttons.css
+  -- forms.css
+  -- list.css
+  -- nav.css
+  -- tables.css
+ 
+# Modules
+  -- aside.css
+  -- footer.css
+  -- header.css</pre>
+
+<p>The architecture outlined above includes three directories, all with individual groups 
+of styles. The goal here is to <b>start thinking of websites as systems</b> rather than 
+individual pages, and the code architecture should reflect this mindset. Notice how there 
+aren’t any page specific styles here.</p>
 
 <p>The base directory includes common styles and variables to be used
 across the entire website, layout and typography styles for example.
@@ -222,17 +219,15 @@ multiple classes as necessary.</p>
 
 <h5>HTML</h5>
 
-<pre><code> 1  &lt;div class=&quot;alert alert-error&quot;&gt;
- 2    &lt;p class=&quot;msg&quot;&gt;...&lt;/p&gt;
- 3  &lt;/div&gt;
- 4 </code></pre>
+<pre>&lt;div class=&quot;alert alert-error&quot;&gt;
+  &lt;p class=&quot;msg&quot;&gt;...&lt;/p&gt;
+&lt;/div&gt;</pre>
 
 <h5>CSS</h5>
 
-<pre><code> 1  .alert {...}
- 2  .alert-error {...}
- 3  .msg {...}
- 4 </code></pre>
+<pre>.alert {...}
+.alert-error {...}
+.msg {...}</pre>
 
 <p>Object Oriented CSS advocates building a component library, staying
 flexible, and utilizing a grid. These are good ground rules, and they
@@ -264,18 +259,16 @@ could include styles based around the skin, or look and feel, of different modul
 
 <h4>HTML</h4>
 
-<pre><code> 1  &lt;div class=&quot;alert is-error&quot;&gt;
- 2    &lt;p&gt;...&lt;/p&gt;
- 3  &lt;/div&gt;
- 4  </code></pre>
+<pre>&lt;div class=&quot;alert is-error&quot;&gt;
+  &lt;p&gt;...&lt;/p&gt;
+&lt;/div&gt;</pre>
  
 <h4>CSS</h4>
 
-<pre><code> 1  .alert {...}
- 2  .alert.is-error {...}
- 3  .alert p {...}
- 4  .alert.is-error p {...}
- 5  </code></pre>
+<pre>.alert {...}
+.alert.is-error {...}
+.alert p {...}
+.alert.is-error p {...}</pre>
 
 <p>In the example above the alert class falls into the module category while the is-error 
 class falls into the state category. Styles from each of these categories are then 
@@ -311,20 +304,20 @@ burden on all other selectors to be more specific.</p>
 <details>
   <summary>CSS</summary>
   
-<pre><code> 1  /* Bad */
- 2  header nav ul li a {...}
- 3  
- 4  /* Good */
- 5  .primary-link {...}
- 6  
- 7  /* Bad */
- 8  button strong span {...}
- 9  button strong span .callout {...}
- 10 
- 11 /* Good */
- 12 button span {...}
- 13 button .callout {...}
- 14 </code></pre>
+<pre>/* Bad */
+header nav ul li a {...}
+  
+/* Good */
+.primary-link {...}
+
+/* Bad */
+button strong span {...}
+button strong span .callout {...}
+
+/* Good */
+button span {...}
+button .callout {...}</pre>
+
 </details>
 
 <p>In the code above, the first selector is extremely specific and could be identified, 
@@ -346,37 +339,31 @@ more charitable code.</p>
 <p>Classes are great, they render quickly, allow for styles to be reused,
 and are already commonly used in building a website. When using classes
 though, there are common practices to observe in order to see that they
-are leveraged properly.
-</p>
-<p>
-Since selectors are rendered from right to left it is important to keep
+are leveraged properly.</p>
+
+<p>Since selectors are rendered from right to left it is important to keep
 an eye on the <b>key selector</b>. The key selector is the selector unit
 at the end, furthest to the right. The key selector is crucial as it
 identifies the first element a browser is going to find. Having a poor
 key selector can send the browser on a wild goose hunt. Don’t be afraid
-to use a class to be more unique simply for the benefit of performance.
-</p>
-<p>
-Additionally, do not prefix class selectors with an element. Doing so
+to use a class to be more unique simply for the benefit of performance.</p>
+
+<p>Additionally, do not prefix class selectors with an element. Doing so
 prohibits those styles from easily being applied to a different element
-and increases the overall specificity of the selector.
-</p>
+and increases the overall specificity of the selector.</p>
 
 <details>
   <summary>CSS</summary>
 
-<pre><code> 1  /* Bad */
- 2  #container header nav {...}
- 3 
- 4  /* Good */
- 5  .primary-nav {...}
- 6 
- 7  /* Bad */
- 8  article.feat-post {...}
- 9 
- 10 /* Good */
- 11 .feat-post {...}
- 12</code></pre>
+<pre>/* Bad */
+#container header nav {...}
+/* Good */
+.primary-nav {...}
+/* Bad */
+article.feat-post {...}
+/* Good */
+.feat-post {...}</pre>
+ 
 </details>
 
 <p>It is also worth noting, stay away from ID selectors where possible as
@@ -393,47 +380,45 @@ repeating styles or interface patterns should be combined, allowing code
 to be shared. If two modules share a background, rounded corners, and a
 box shadow there is no reason to explicitly state those same styles
 twice. Instead they can be combined, within a single class, allowing the
-styles to be written once and then shared.
-</p>
-<p>
-Reusing code doesn’t have to come at the cost of semantics either. One
+styles to be written once and then shared.</p>
+
+<p>Reusing code doesn’t have to come at the cost of semantics either. One
 technique would be to pair selectors together, separating them with a
 comma, allowing the same styles to be inherited across two selectors.
 Another approach, often seen within the OOCSS and SMACSS methodologies
 previously mentioned, includes binding styles to one class, then using
-multiple classes on the same element.
-</p>
+multiple classes on the same element.</p>
 
 <details>
   <summary>CSS Examples</summary>
 
-<pre><code> 1  /* Bad */
- 2  .news { 
- 3    background: #eee;  
- 4    border-radius: 5px;
- 5    box-shadow: inset 0 1px 2px rgba(0, 0, 0, .25); 
- 6  }
- 7  .social {
- 8    background: #eee;
- 9    border-radius: 5px;
- 10   box-shadow: inset 0 1px 2px rgba(0, 0, 0, .25);
- 11 }
- 12
- 13 /* Good */
- 14 .news,
- 15 .social {
- 16   background: #eee;
- 17   border-radius: 5px;
- 18   box-shadow: inset 0 1px 2px rgba(0, 0, 0, .25);
- 19 }
- 20 
- 21 /* Even Better */
- 22 .modal {
- 23   background: #eee;
- 24   border-radius: 5px;
- 25   box-shadow: inset 0 1px 2px rgba(0, 0, 0, .25);
- 26 }
- 27 </code></pre>
+<pre>
+/* Bad */
+.news { 
+  background: #eee;  
+  border-radius: 5px;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, .25); 
+}
+.social {
+  background: #eee;
+  border-radius: 5px;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, .25);
+}
+/* Good */
+.news,
+.social {
+  background: #eee;
+  border-radius: 5px;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, .25);
+}
+/* Even Better */
+.modal {
+  background: #eee;
+  border-radius: 5px;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, .25);
+}
+</pre>
+
 </details>
 
 <p>Which approach you take doesn’t make a huge difference, so long as code
@@ -582,8 +567,7 @@ dimensions and not to shrink an image. Using a larger image, then
 scaling it down with the height and width attributes is bad practice as
 it loads more data than necessary.</p>
 
-<pre><code> 1  &lt;img src=&quot;ocean.jpg&quot; height=&quot;440&quot; width=&quot;660&quot; alt=&quot;Oceanview&quot;&gt;
- 2  </code></pre>
+<pre>&lt;img src=&quot;ocean.jpg&quot; height=&quot;440&quot; width=&quot;660&quot; alt=&quot;Oceanview&quot;&gt;</pre>
  
 <h4>Reduce HTTP Requests</h4>
 
@@ -599,14 +583,14 @@ requests is to combine like files. Specifically, combine all of the CSS
 files into one and all of the JavaScript files into one. Combining these
 files then compressing them creates one, hopefully small, HTTP request.</p>
 
-<pre><code> 1  &lt;!-- Bad --&gt;
+<pre> 1  &lt;!-- Bad --&gt;
  2  &lt;link href=&quot;css/reset.css&quot; rel=&quot;stylesheet&quot;&gt;
  3  &lt;link href=&quot;css/base.css&quot; rel=&quot;stylesheet&quot;&gt;
  4  &lt;link href=&quot;css/site.css&quot; rel=&quot;stylesheet&quot;&gt;
  5  
  6  &lt;!-- Good --&gt;
  7  &lt;link href=&quot;css/styles.css&quot; rel=&quot;stylesheet&quot;&gt;
- 8  </code></pre>
+ 8  </pre>
 
 <p>In general, the CSS for a web page should be loaded at the <b>beginning</b> of the 
 document within the head, while the JavaScript for a web page should be loaded at the 
@@ -660,80 +644,82 @@ be shown accordingly.</p>
 <details>
   <summary>HTML</summary>
   
-<pre><code> 1  &lt;ul&gt;
- 2    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;bold&quot;&gt;Bold Text&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
- 3    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;italic&quot;&gt;Italicize 4 Text&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
- 4    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;underline&quot;&gt;Underline Text&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
- 5    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;size&quot;&gt;Size 7  Text&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
- 6    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;bullet&quot;&gt;Bullet Text&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
- 7    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;number&quot;&gt;Number 1  Text&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
- 8    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;quote&quot;&gt;Quote 1  Text&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
- 9    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;left&quot;&gt;Left Align 1  Text&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
- 10   &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;center&quot;&gt;Center Align 1  Text&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
- 11   &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;right&quot;&gt;Right Align Text&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
- 12 &lt;/ul&gt;
- 13 </code></pre>
+<pre>&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;bold&quot;&gt;Bold Text&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;italic&quot;&gt;Italicize 4 Text&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;underline&quot;&gt;Underline Text&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;size&quot;&gt;Size 7  Text&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;bullet&quot;&gt;Bullet Text&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;number&quot;&gt;Number 1  Text&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;quote&quot;&gt;Quote 1  Text&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;left&quot;&gt;Left Align 1  Text&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;center&quot;&gt;Center Align 1  Text&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;right&quot;&gt;Right Align Text&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</pre>
 
 </details>
+
 <br><br>
+
 <details>
   <summary>CSS</summary>
   
-<pre><code> 1  ul {
- 2    margin: 0;
- 3    padding: 0;
- 4  }
- 5  li {
- 6    float: left;
- 7    list-style: none;
- 8    margin: 2px;
- 9  }
- 10 li a {
- 11   background: linear-gradient(#fff, #eee);
- 12   border: 1px solid #ccc;
- 13   border-radius: 3px;
- 14   display: block;
- 15   padding: 3px;
- 16 }
- 17 li a:hover {
- 18   border-color: #999;
- 19 }
- 20 li span {
- 21   background: url(&quot;sprite.png&quot;) 0 0 no-repeat;
- 22   color: transparent;
- 23   display: block;
- 24   font: 0/0 a;
- 25   height: 16px;
- 26   width: 16px;
- 27 }
- 28 .italic {
- 29   background-position: -16px 0;
- 30 }
- 31 .underline { 
- 32   background-position: -32px 0;
- 33 }
- 34 .size { 
- 35   background-position: -48px 0;
- 36 }
- 37 .bullet {
- 38   background-position: -64px 0;
- 39 }
- 40 .number {
- 41   background-position: -80px 0;
- 42 }
- 43 .quote {
- 44   background-position: -96px 0;
- 45 }
- 46 .left {
- 47   background-position: -112px 0;
- 48 }
- 49 .center {
- 50   background-position: -128px 0;
- 51 }
- 52 .right {
- 53   background-position: -144px 0;
- 54 }
- 55 </code></pre>
+<pre>
+ul {
+  margin: 0;
+  padding: 0;
+}
+li {
+  float: left;
+  list-style: none;
+  margin: 2px;
+}
+li a {
+  background: linear-gradient(#fff, #eee);
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  display: block;
+  padding: 3px;
+}
+li a:hover {
+  border-color: #999;
+}
+li span {
+  background: url(&quot;sprite.png&quot;) 0 0 no-repeat;
+  color: transparent;
+  display: block;
+  font: 0/0 a;
+  height: 16px;
+  width: 16px;
+}
+.italic {
+  background-position: -16px 0;
+}
+.underline { 
+  background-position: -32px 0;
+}
+.size { 
+  background-position: -48px 0;
+}
+.bullet {
+  background-position: -64px 0;
+}
+.number {
+  background-position: -80px 0;
+}
+.quote {
+  background-position: -96px 0;
+}
+.left {
+  background-position: -112px 0;
+}
+.center {
+  background-position: -128px 0;
+}
+.right {
+  background-position: -144px 0;
+}
+</pre>
  
 </details>
 
@@ -762,19 +748,19 @@ see that the actual data URI is less weight than the actual image.</p>
 
 <h5>HTML</h5>
 
-<pre><code> 1  &lt;img height=&quot;100&quot; width=&quot;660&quot; alt=&quot;Rigged Pattern&quot; src=&quot;data:image/png;base64,
+<pre> 1  &lt;img height=&quot;100&quot; width=&quot;660&quot; alt=&quot;Rigged Pattern&quot; src=&quot;data:image/png;base64,
  2  iVBORw0KGgoAAAANSUhEUgAAAAoAAAAICAYAAADA+m62AAAAPUlEQVQYV2NkQAO6m73+X/bdxoguji 
  3  IAU4RNMVwhuiQ6H6wQl3XI4oy4FMHcCJPHcDS6J2A2EqUQpJ
  4  hohQAyIyYy0nBAGgAAAABJRU5ErkJggg==&quot;&gt;
- 5  </code></pre>
+ 5  </pre>
 
 <h5>CSS</h5>
 
-<pre><code> 1  div {
+<pre> 1  div {
  2  background: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAICAYAA 
  3  ADA+m62AAAAPUlEQVQYV2NkQAO6m73+X/bdxogujiIAU4RNMVwhuiQ6H6wQl3XI4oy4F
  4  MHcCJPHcDS6J2A2EqUQpJhohQAyIyYy0nBAGgAAAABJRU5ErkJggg==&quot;) repeat;
- 5 }</code></pre>
+ 5 }</pre>
  
 <h4>Image Data URI Demo</h4>
  
@@ -799,9 +785,9 @@ the file name will need to be changed, preferably versioned, in order to
 be loaded. Alternatively, the expires headers can be changed to a
 smaller period of time.</p>
 
-<pre><code> 1  ExpiresByType text/css &quot;access plus 1 year&quot;
+<pre> 1  ExpiresByType text/css &quot;access plus 1 year&quot;
  2  ExpiresByType application/javascript &quot;access plus 1 year&quot;
- 3  </code></pre>
+ 3  </pre>
 
 <p>Changing the “access plus 1 year” value to “access plus 1 week” is
 better suited for CSS and JavaScript files that are changing weekly but
@@ -925,16 +911,16 @@ the .box-set division you will see it has a height of 0.
 <h4>
 HTML
 </h4>
-<pre><code> 1  &lt;div class=&quot;box-set&quot;&gt;
+<pre> 1  &lt;div class=&quot;box-set&quot;&gt;
  2    &lt;figure class=&quot;box&quot;&gt;Box 1&lt;/figure&gt;
  3    &lt;figure class=&quot;box&quot;&gt;Box 2&lt;/figure&gt;
  4    &lt;figure class=&quot;box&quot;&gt;Box 3&lt;/figure&gt;
  5  &lt;/div&gt;
- 6  </code></pre>
+ 6  </pre>
 <h4>
 CSS
 </h4>
-<pre><code> 1  .box-set {
+<pre> 1  .box-set {
  2    background: #eaeaed;
  3  }
  4  .box {
@@ -943,7 +929,7 @@ CSS
  7    margin: 1.858736059%;
  8    width: 29.615861214%;
  9  }
- 10 </code></pre>
+ 10 </pre>
 <h4>
 Containing Floats Demo
 </h4>
@@ -978,10 +964,10 @@ a width of 100% will do the trick. Using overflow: auto; in Internet
 Explorer on an Apple computer will also add scrollbars to the parent
 element, in which it is better to use the overflow: hidden; declaration.
 </p>
-<pre><code> 1  .box-set {
+<pre> 1  .box-set {
  2    overflow: auto;
  3  }
- 4  </code></pre>
+ 4  </pre>
 <h4>
 Overflow Technique Demo
 </h4>
@@ -1038,7 +1024,7 @@ element.
 <details>
   <summary>CSS</summary>
 
-<pre><code> 1  .box-set:before,
+<pre> 1  .box-set:before,
  2  .box-set:after {
  3    content: &quot;&quot;;
  4    display: table;
@@ -1049,7 +1035,7 @@ element.
  9  .box-set {
  10   *zoom: 1;
  11 }
- 12  </code></pre>
+ 12  </pre>
 </details>
 
 <h4>Clearfix Technique Demo</h4>
@@ -1076,7 +1062,7 @@ to contain floats.
 <summary>
 CSS
 </summary>
-<pre><code> 1  .group:before,
+<pre> 1  .group:before,
  2  .group:after {
  3    content: &quot;&quot;;
  4    display: table;
@@ -1087,7 +1073,7 @@ CSS
  9  .group {
  10   *zoom: 1;
  11  }
- 12 </code></pre>
+ 12 </pre>
 </details>
 <h4>
 Single Pseudo-Elements
@@ -1134,17 +1120,17 @@ specific direction.
 <h4>
 HTML
 </h4>
-<pre><code> 1  &lt;div class=&quot;box-set&quot;&gt;
+<pre> 1  &lt;div class=&quot;box-set&quot;&gt;
  2    &lt;figure class=&quot;box box-1&quot;&gt;Box 1&lt;/figure&gt;
  3    &lt;figure class=&quot;box box-2&quot;&gt;Box 2&lt;/figure&gt;
  4    &lt;figure class=&quot;box box-3&quot;&gt;Box 3&lt;/figure&gt;
  5    &lt;figure class=&quot;box box-4&quot;&gt;Box 4&lt;/figure&gt;
  6  &lt;/div&gt;
- 7  </code></pre>
+ 7  </pre>
 <h4>
 CSS
 </h4>
-<pre><code> 1  .box-set {
+<pre> 1  .box-set {
  2    background: #eaeaed;
  3  }
  4  .box {
@@ -1152,7 +1138,7 @@ CSS
  6    height: 80px;
  7    width: 80px;
  8  }
- 9  </code></pre>
+ 9  </pre>
 <h4>
 Position Static Demo
 </h4>
@@ -1211,19 +1197,19 @@ positioned elements default position.</p>
 
 <h4>HTML</h4>
 
-<pre><code> 1  &lt;div class=&quot;box-set&quot;&gt;
+<pre> 1  &lt;div class=&quot;box-set&quot;&gt;
  2    &lt;figure class=&quot;box box-1&quot;&gt;Box 1&lt;/figure&gt;
  3    &lt;figure class=&quot;box box-2&quot;&gt;Box 2&lt;/figure&gt;
  4    &lt;figure class=&quot;box box-3&quot;&gt;Box 3&lt;/figure&gt;
  5    &lt;figure class=&quot;box box-4&quot;&gt;Box 4&lt;/figure&gt;
  6  &lt;/div&gt;
- 7  </code></pre>
+ 7  </pre>
 
 <br><br>
 <details>
   <summary>CSS</summary>
   
-<pre><code> 1  .box-set {
+<pre> 1  .box-set {
  2    background: #eaeaed;
  3  }
  4  .box {
@@ -1242,7 +1228,7 @@ positioned elements default position.</p>
  17   bottom: -10px;
  18   right: 20px;
  19 }
- 20 </code></pre>
+ 20 </pre>
 </details>
 <h4>
 Position Relative Demo
@@ -1294,20 +1280,20 @@ value.</p>
 <details>
   <summary>HTML</summary>
   
-<pre><code> 1  &lt;div class=&quot;box-set&quot;&gt;
+<pre> 1  &lt;div class=&quot;box-set&quot;&gt;
  2    &lt;figure class=&quot;box box-1&quot;&gt;Box 1&lt;/figure&gt;
  3    &lt;figure class=&quot;box box-2&quot;&gt;Box 2&lt;/figure&gt;
  4    &lt;figure class=&quot;box box-3&quot;&gt;Box 3&lt;/figure&gt;
  5    &lt;figure class=&quot;box box-4&quot;&gt;Box 4&lt;/figure&gt;
  6  &lt;/div&gt;
- 7  </code></pre>
+ 7  </pre>
 </details>
 
 <br><br>
 <details>
   <summary>CSS</summary>
   
-<pre><code> 1  .box-set {
+<pre> 1  .box-set {
  2    background: #eaeaed;
  3    height: 200px;
  4    position: relative;
@@ -1333,7 +1319,7 @@ value.</p>
  24 .box-4 {
  25   bottom: 0;
  26 }
- 27  </code></pre>
+ 27  </pre>
 </details>
 <h4>
 Position Absolute Demo
@@ -1380,20 +1366,20 @@ and not the containing, relatively positioned parent.
 <h4>
 HTML
 </h4>
-<pre><code> 1  &lt;div class=&quot;box-set&quot;&gt;
+<pre> 1  &lt;div class=&quot;box-set&quot;&gt;
  2    &lt;figure class=&quot;box box-1&quot;&gt;Box 1&lt;/figure&gt;
  3    &lt;figure class=&quot;box box-2&quot;&gt;Box 2&lt;/figure&gt;
  4    &lt;figure class=&quot;box box-3&quot;&gt;Box 3&lt;/figure&gt;
  5    &lt;figure class=&quot;box box-4&quot;&gt;Box 4&lt;/figure&gt;
  6  &lt;/div&gt;
- 7 </code></pre>
+ 7 </pre>
 
 <br><br>
 
 <details>
   <summary>CSS</summary>
   
-<pre><code> 1  .box {
+<pre> 1  .box {
  2    background: #2db34a;
  3    height: 80px;
  4    position: fixed;
@@ -1414,7 +1400,7 @@ HTML
  19 .box-4 {
  20   bottom: 0;
  21 }
- 22  </code></pre>
+ 22  </pre>
 </details>
 
 <h4>Position Fixed Demo</h4>
@@ -1437,15 +1423,15 @@ borders, and padding to be applied freely.
 <h4>
 HTML
 </h4>
-<pre><code> 1  &lt;footer&gt;Fixed Footer&lt;/footer&gt;
- 2  </code></pre>
+<pre> 1  &lt;footer&gt;Fixed Footer&lt;/footer&gt;
+ 2  </pre>
 
 <br><br>
 
 <details>
   <summary>CSS</summary>
   
-<pre><code> 1  body {
+<pre> 1  body {
  2    background: #eaeaed;
  3  }
  4  footer {
@@ -1455,7 +1441,7 @@ HTML
  8    position: fixed;
  9    right: 0;
  10 }
- 11 </code></pre>
+ 11 </pre>
 </details>
 <h4>
 Fixed Footer Demo
@@ -1481,34 +1467,30 @@ the z-index property is pretty straight forward. The element with the
 highest z-index value will appear on the top regardless of its placement
 in the DOM.
 </p>
-<p>
-In order to apply the z-index property to an element, you must first
+<p>In order to apply the z-index property to an element, you must first
 apply a position value of relative, absolute, or fixed. The same as if
-you were to apply any box offset properties.
-</p>
-<p>
-In the example below, without the z-index property each box will be
+you were to apply any box offset properties.</p>
+
+<p>In the example below, without the z-index property each box will be
 positioned precisely, starting with box two sitting on top of box one,
 then box three sitting on top of box two, and so forth. Reordering the
 stacking with the z-index property now positions box two on top of every
 other box, followed by box three underneath it, and box four underneath
-box three.
-</p>
-<h4>
-HTML
-</h4>
-<pre><code> 1  &lt;div class=&quot;box-set&quot;&gt;
- 2  &lt;figure class=&quot;box box-1&quot;&gt;Box 1&lt;/figure&gt;  
- 3  &lt;figure class=&quot;box box-2&quot;&gt;Box 2&lt;/figure&gt;  
- 4  &lt;figure class=&quot;box box-3&quot;&gt;Box 3&lt;/figure&gt;  
- 5  &lt;figure class=&quot;box box-4&quot;&gt;Box 4&lt;/figure&gt;  
- 6  &lt;/div&gt;
- 7 </code></pre>
+box three.</p>
+
+<h4>HTML</h4>
+
+<pre>&lt;div class=&quot;box-set&quot;&gt;
+&lt;figure class=&quot;box box-1&quot;&gt;Box 1&lt;/figure&gt;  
+&lt;figure class=&quot;box box-2&quot;&gt;Box 2&lt;/figure&gt;  
+&lt;figure class=&quot;box box-3&quot;&gt;Box 3&lt;/figure&gt;  
+&lt;figure class=&quot;box box-4&quot;&gt;Box 4&lt;/figure&gt;  
+&lt;/div&gt;</pre>
+
 <details>
-<summary>
-CSS
-</summary>
-<pre><code> 1  .box-set {
+  <summary>CSS</summary>
+
+<pre> 1  .box-set {
  2    background: #eaeaed;
  3    height: 160px;
  4    position: relative;
@@ -1537,7 +1519,7 @@ CSS
  27   left: 190px;
  28   z-index: 1;
  29 }
- 30  </code></pre>
+ 30  </pre>
 </details>
 <h4>
 Z-Index Demo
@@ -1650,18 +1632,18 @@ only be used once per page.
 <h4>
 CSS
 </h4>
-<pre><code> 1  h1 {...}
+<pre> 1  h1 {...}
  2  .tagline {...}
  3  #intro {...}
- 4  </code></pre>
+ 4  </pre>
 
 <h4>HTML</h4>
 
-<pre><code> 1  &lt;section id=&quot;intro&quot;&gt;
+<pre> 1  &lt;section id=&quot;intro&quot;&gt;
  2    &lt;h1&gt;...&lt;/h1&gt;
  3    &lt;h2 class=&quot;tagline&quot;&gt;...&lt;/h2&gt;
  4  &lt;/section&gt;
- 5  </code></pre>
+ 5  </pre>
  
 <h4>Common Selectors Overview</h4>
 
@@ -1733,19 +1715,19 @@ any h2 element outside of the article element is not selected.</p>
 
 <h4>CSS</h4>
 
-<pre><code> 1  article h2 {...}  
- 2 </code></pre>
+<pre> 1  article h2 {...}  
+ 2 </pre>
  
 <h4>HTML</h4>
 
-<pre><code> 1  &lt;h2&gt;...&lt;/h2&gt;  
+<pre> 1  &lt;h2&gt;...&lt;/h2&gt;  
  2  &lt;article&gt;
  3    &lt;h2&gt;This heading will be selected&lt;/h2&gt;
  4    &lt;div&gt; 
  5      &lt;h2&gt;This heading will be selected&lt;/h2&gt;
  6    &lt;/div&gt;
  7  &lt;/article&gt; 
- 8 </code></pre>
+ 8 </pre>
  
 <h4>Direct Child Selector</h4>
 
@@ -1767,19 +1749,19 @@ article, thus selected.
 </p>
 <h4>CSS</h4>
 
-<pre><code> 1  article &gt; p {...}
- 2 </code></pre>
+<pre> 1  article &gt; p {...}
+ 2 </pre>
  
 <h4>HTML</h4>
 
-<pre><code> 1  &lt;p&gt;...&lt;/p&gt; 
+<pre> 1  &lt;p&gt;...&lt;/p&gt; 
  2  &lt;article&gt;
  3    &lt;p&gt;This paragraph will be selected&lt;/p&gt;
  4    &lt;div&gt; 
  5      &lt;p&gt;...&lt;/p&gt; 
  6    &lt;/div&gt;
  7  &lt;/article&gt; 
- 8 </code></pre>
+ 8 </pre>
  
 <h4>Child Selectors Overview</h4>
 
@@ -1853,15 +1835,15 @@ sibling heading.
 
 <h4>CSS</h4>
 
-<pre><code> 1  h2 ~ p {...}  
- 2 </code></pre>
+<pre> 1  h2 ~ p {...}  
+ 2 </pre>
  
 <br><br>
 
 <details>
 <summary>HTML</summary>
 
-<pre><code> 1  &lt;p&gt;...&lt;/p&gt; 
+<pre> 1  &lt;p&gt;...&lt;/p&gt; 
  2  &lt;section&gt;
  3    &lt;p&gt;...&lt;/p&gt; 
  4    &lt;h2&gt;...&lt;/h2&gt;  
@@ -1871,7 +1853,7 @@ sibling heading.
  8    &lt;/div&gt;
  9    &lt;p&gt;This paragraph will be selected&lt;/p&gt;
  10 &lt;/section&gt; 
- 11 </code></pre>
+ 11 </pre>
 
 </details>
 
@@ -1904,15 +1886,15 @@ selected.
 <h4>
 CSS
 </h4>
-<pre><code> 1  h2 + p {...}
- 2 </code></pre>
+<pre> 1  h2 + p {...}
+ 2 </pre>
 
 <br><br>
 
 <details>
   <summary>HTML</summary>
 
-<pre><code> 1  &lt;p&gt;...&lt;/p&gt;
+<pre> 1  &lt;p&gt;...&lt;/p&gt;
  2  &lt;section&gt;
  3  &lt;p&gt;...&lt;/p&gt; 
  4  &lt;h2&gt;...&lt;/h2&gt;  
@@ -1922,7 +1904,7 @@ CSS
  8  &lt;/div&gt;
  9  &lt;p&gt;...&lt;/p&gt; 
  10 &lt;/section&gt; 
- 11 </code></pre>
+ 11 </pre>
 </details>
 
 <h4>Sibling Selectors Example</h4>
@@ -1930,7 +1912,7 @@ CSS
 <details>
   <summary>HTML</summary>
 
-<pre><code> 1  &lt;input type=&quot;checkbox&quot; id=&quot;toggle&quot;&gt; 
+<pre> 1  &lt;input type=&quot;checkbox&quot; id=&quot;toggle&quot;&gt; 
  2  &lt;label for=&quot;toggle&quot;&gt;&amp;#9776;&lt;/label&gt; 
  3  &lt;nav&gt; 
  4    &lt;ul&gt;  
@@ -1940,7 +1922,7 @@ CSS
  8      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;
  9    &lt;/ul&gt; 
  10 &lt;/nav&gt;
- 11 </code></pre>
+ 11 </pre>
 </details>
 
 <br><br>
@@ -1948,7 +1930,7 @@ CSS
 <details>
   <summary>CSS</summary>
 
-<pre><code> 1   input { 
+<pre> 1   input { 
  2     display: none;  
  3   } 
  4   label,  
@@ -2000,7 +1982,7 @@ CSS
  50  a:hover { 
  51    color: #ff7b29; 
  52  } 
- 53 </code></pre>
+ 53 </pre>
  
 </details>
 
@@ -2071,13 +2053,13 @@ class, all depending on the level of specificity desired.
 <h4>
 CSS
 </h4>
-<pre><code> 1  a[target] {...} 
- 2 </code></pre>
+<pre> 1  a[target] {...} 
+ 2 </pre>
 <h4>
 HTML
 </h4>
-<pre><code> 1  &lt;a href=&quot;#&quot; target=&quot;_blank&quot;&gt;...&lt;/a&gt;
- 2 </code></pre>
+<pre> 1  &lt;a href=&quot;#&quot; target=&quot;_blank&quot;&gt;...&lt;/a&gt;
+ 2 </pre>
 <h4>
 Attribute Equals Selector
 </h4>
@@ -2092,13 +2074,13 @@ of the quotations should be the desired matching attribute value.
 <h4>
 CSS
 </h4>
-<pre><code> 1  a[href=&quot;http://google.com/&quot;] {...} 
- 2 </code></pre>
+<pre> 1  a[href=&quot;http://google.com/&quot;] {...} 
+ 2 </pre>
 <h4>
 HTML
 </h4>
-<pre><code> 1  &lt;a href=&quot;http://google.com/&quot;&gt;...&lt;/a&gt;  
- 2 </code></pre>
+<pre> 1  &lt;a href=&quot;http://google.com/&quot;&gt;...&lt;/a&gt;  
+ 2 </pre>
 <h4>
 Attribute Contains Selector
 </h4>
@@ -2113,13 +2095,13 @@ attribute value.
 <h4>
 CSS
 </h4>
-<pre><code> 1  a[href*=&quot;login&quot;] {...}
- 2 </code></pre>
+<pre> 1  a[href*=&quot;login&quot;] {...}
+ 2 </pre>
 <h4>
 HTML
 </h4>
-<pre><code> 1  &lt;a href=&quot;/login.php&quot;&gt;...&lt;/a&gt;  
- 2 </code></pre>
+<pre> 1  &lt;a href=&quot;/login.php&quot;&gt;...&lt;/a&gt;  
+ 2 </pre>
 <h4>
 Attribute Begins With Selector
 </h4>
@@ -2134,13 +2116,13 @@ stated value.
 <h4>
 CSS
 </h4>
-<pre><code> 1  a[href&amp;Hat;=&quot;https://&quot;] {...}
- 2 </code></pre>
+<pre> 1  a[href&amp;Hat;=&quot;https://&quot;] {...}
+ 2 </pre>
 <h4>
 HTML
 </h4>
-<pre><code> 1  &lt;a href=&quot;https://chase.com/&quot;&gt;...&lt;/a&gt;  
- 2 </code></pre>
+<pre> 1  &lt;a href=&quot;https://chase.com/&quot;&gt;...&lt;/a&gt;  
+ 2 </pre>
 <h4>
 Attribute Ends With Selector
 </h4>
@@ -2155,13 +2137,13 @@ stated value.
 <h4>
 CSS
 </h4>
-<pre><code> 1  a[href$=&quot;.pdf&quot;] {...} 
- 2 </code></pre>
+<pre> 1  a[href$=&quot;.pdf&quot;] {...} 
+ 2 </pre>
 <h4>
 HTML
 </h4>
-<pre><code> 1  &lt;a href=&quot;/docs/menu.pdf&quot;&gt;...&lt;/a&gt; 
- 2 </code></pre>
+<pre> 1  &lt;a href=&quot;/docs/menu.pdf&quot;&gt;...&lt;/a&gt; 
+ 2 </pre>
 <h4>
 Attribute Spaced Selector
 </h4>
@@ -2176,13 +2158,13 @@ stated value.
 <h4>
 CSS
 </h4>
-<pre><code> 1  a[rel&amp;tilde;=&quot;tag&quot;] {...}
- 2 </code></pre>
+<pre> 1  a[rel&amp;tilde;=&quot;tag&quot;] {...}
+ 2 </pre>
 <h4>
 HTML
 </h4>
-<pre><code> 1  &lt;a href=&quot;#&quot; rel=&quot;tag nofollow&quot;&gt;...&lt;/a&gt; 
- 2 </code></pre>
+<pre> 1  &lt;a href=&quot;#&quot; rel=&quot;tag nofollow&quot;&gt;...&lt;/a&gt; 
+ 2 </pre>
 <h4>
 Attribute Hyphenated Selector
 </h4>
@@ -2197,35 +2179,35 @@ stated value.
 
 <h4>CSS</h4>
 
-<pre><code> 1  a[lang&amp;#0124;=&quot;en&quot;] {...}
- 2 </code></pre>
+<pre> 1  a[lang&amp;#0124;=&quot;en&quot;] {...}
+ 2 </pre>
  
 <br><br>
 
 <h4>HTML</h4>
 
-<pre><code> 1  &lt;a href=&quot;#&quot; lang=&quot;en-US&quot;&gt;...&lt;/a&gt; 
- 2 </code></pre>
+<pre> 1  &lt;a href=&quot;#&quot; lang=&quot;en-US&quot;&gt;...&lt;/a&gt; 
+ 2 </pre>
 
 <h4>Attribute Selectors Example</h4>
 
 <h4>HTML</h4>
 
-<pre><code> 1  &lt;ul&gt;  
+<pre> 1  &lt;ul&gt;  
  2    &lt;li&gt;&lt;a href=&quot;#.pdf&quot;&gt;PDF Document&lt;/a&gt;&lt;/li&gt;
  3    &lt;li&gt;&lt;a href=&quot;#.doc&quot;&gt;Word Document&lt;/a&gt;&lt;/li&gt;  
  4    &lt;li&gt;&lt;a href=&quot;#.jpg&quot;&gt;Image File&lt;/a&gt;&lt;/li&gt;  
  5    &lt;li&gt;&lt;a href=&quot;#.mp3&quot;&gt;Audio File&lt;/a&gt;&lt;/li&gt;  
  6    &lt;li&gt;&lt;a href=&quot;#.mp4&quot;&gt;Video File&lt;/a&gt;&lt;/li&gt;  
  7  &lt;/ul&gt;
- 8 </code></pre>
+ 8 </pre>
 
 <br><br>
 
 <details>
   <summary>CSS</summary>
 
-<pre><code> 1  ul { 
+<pre> 1  ul { 
  2    list-style: none;  
  3    margin: 0;
  4    padding: 0;  
@@ -2255,7 +2237,7 @@ stated value.
  28 a[href$=&quot;.mp4&quot;] {
  29   background-image: url(&quot;images/video.png&quot;); 
  30 } 
- 31 </code></pre>
+ 31 </pre>
 </details>
 <h4>
 Demo
@@ -2377,9 +2359,9 @@ the :link pseudo-class comes into play, where the :visited pseudo-class
 styles links that a user has already visited based on their browsing
 history.
 </p>
-<pre><code> 1  a:link {...}
+<pre> 1  a:link {...}
  2  a:visited {...}
- 3 </code></pre>
+ 3 </pre>
 <h4>
 User Action Pseudo-classes
 </h4>
@@ -2394,10 +2376,10 @@ Lastly, the :focus pseudo-class is applied to an element when a user has
 made an element the focus point of the page, often by using the keyboard
 to tab from one element to another.
 </p>
-<pre><code> 1  a:hover {...}  
+<pre> 1  a:hover {...}  
  2  a:active {...} 
  3  a:focus {...}  
- 4 </code></pre>
+ 4 </pre>
 <h4>
 User Interface State Pseudo-classes
 </h4>
@@ -2415,9 +2397,9 @@ browsers by default will fade out disabled inputs to inform users that
 the input is not available for interaction, however those styles may be
 adjusted as wished with the :disabled pseudo-class.
 </p>
-<pre><code> 1  input:enabled {...}
+<pre> 1  input:enabled {...}
  2  input:disabled {...}
- 3  </code></pre>
+ 3  </pre>
 <p>
 The last two user interface element state pseudo-classes
 of :checked and :indeterminate revolve around checkbox and radio button
@@ -2427,9 +2409,9 @@ button has neither been selected nor unselected it lives in an
 indeterminate state, from which the :indeterminate pseudo-class can be
 used to target these elements.
 </p>
-<pre><code> 1  input:checked {...}
+<pre> 1  input:checked {...}
  2  input:indeterminate {...}
- 3  </code></pre>
+ 3  </pre>
 <h4>
 Structural &amp; Position Pseudo-classes
 </h4>
@@ -2469,17 +2451,17 @@ list item.</p>
 
 <h4>CSS</h4>
 
-<pre><code> 1  li:first-child {...}
+<pre> 1  li:first-child {...}
  2  li:last-child {...}
  3  div:only-child {...}
- 4 </code></pre>
+ 4 </pre>
  
 <br><br>
 
 <details>
   <summary>HTML</summary>
 
-<pre><code> 1  &lt;ul&gt;
+<pre> 1  &lt;ul&gt;
  2    &lt;li&gt;This list item will be selected&lt;/li&gt;
  3    &lt;li&gt;
  4      &lt;div&gt;This div will be selected&lt;/div&gt;
@@ -2490,7 +2472,7 @@ list item.</p>
  9    &lt;/li&gt;
  10   &lt;li&gt;This list item will be selected&lt;/li&gt;
  11 &lt;/ul&gt;
- 12   </code></pre>
+ 12   </pre>
 </details>
 <h3>
 :first-of-type, :last-of-type, &amp; :only-of-type
@@ -2523,14 +2505,14 @@ the only image to appear within the article, thus also selected.
 <h4>
 CSS
 </h4>
-<pre><code> 1  p:first-of-type {...}
+<pre> 1  p:first-of-type {...}
  2  p:last-of-type {...}
  3  img:only-of-type {...}
- 4 </code></pre>
+ 4 </pre>
 <h4>
 HTML
 </h4>
-<pre><code> 1  &lt;article&gt;
+<pre> 1  &lt;article&gt;
  2    &lt;h1&gt;...&lt;/h1&gt;
  3    &lt;p&gt;This paragraph will be selected&lt;/p&gt;
  4    &lt;p&gt;...&lt;/p&gt;
@@ -2538,7 +2520,7 @@ HTML
  6    &lt;p&gt;This paragraph will be selected&lt;/p&gt;
  7    &lt;h6&gt;...&lt;/h6&gt;
  8  &lt;/article&gt;
- 9 </code></pre>
+ 9 </pre>
 <p>
 Lastly, there are a few structural and position based pseudo-classes
 that select elements based on a number or an algebraic expression. These
@@ -2647,18 +2629,18 @@ third list item, thus lines 4 and 7 are selected.
 <h4>
 CSS
 </h4>
-<pre><code> 1  li:nth-child(3n) {...}</code></pre>
+<pre> 1  li:nth-child(3n) {...}</pre>
 <h4>
 HTML
 </h4>
-<pre><code> 1  &lt;ul&gt;
+<pre> 1  &lt;ul&gt;
  2    &lt;li&gt;...&lt;/li&gt;
  3    &lt;li&gt;...&lt;/li&gt;
  4    &lt;li&gt;This list item will be selected&lt;/li&gt;
  5    &lt;li&gt;...&lt;/li&gt;
  6    &lt;li&gt;...&lt;/li&gt;
  7    &lt;li&gt;This list item will be selected&lt;/li&gt;
- 8  &lt;/ul&gt;</code></pre>
+ 8  &lt;/ul&gt;</pre>
 <p>
 Using a different expression within the :nth-child(n) pseudo-class will
 yield a different selection. The li:nth-child(2n+3) selector, for
@@ -2668,11 +2650,11 @@ and then onward. As a result, the list items lines 4 and 6 are selected.
 <h4>
 CSS
 </h4>
-<pre><code> 1  li:nth-child(2n+3) {...}</code></pre>
+<pre> 1  li:nth-child(2n+3) {...}</pre>
 <h4>
 HTML
 </h4>
-<pre><code> 1  &lt;ul&gt;
+<pre> 1  &lt;ul&gt;
  2    &lt;li&gt;...&lt;/li&gt;
  3    &lt;li&gt;...&lt;/li&gt;
  4    &lt;li&gt;This list item will be selected&lt;/li&gt;
@@ -2680,7 +2662,7 @@ HTML
  6    &lt;li&gt;This list item will be selected&lt;/li&gt;
  7    &lt;li&gt;...&lt;/li&gt;
  8  &lt;/ul&gt;
- 9 </code></pre>
+ 9 </pre>
 <p>
 Changing the expression again, this time with a negative value, yields
 new selection. Here the li:nth-child(-n+4) selector is identifying the
@@ -2690,12 +2672,12 @@ lines 2 through 5 are selected.
 <h4>
 CSS
 </h4>
-<pre><code> 1  li:nth-child(-n+4) {...}
- 2 </code></pre>
+<pre> 1  li:nth-child(-n+4) {...}
+ 2 </pre>
 <h4>
 HTML
 </h4>
-<pre><code> 1  &lt;ul&gt;
+<pre> 1  &lt;ul&gt;
  2    &lt;li&gt;This list item will be selected&lt;/li&gt;
  3    &lt;li&gt;This list item will be selected&lt;/li&gt;
  4    &lt;li&gt;This list item will be selected&lt;/li&gt;
@@ -2703,7 +2685,7 @@ HTML
  6    &lt;li&gt;...&lt;/li&gt;
  7    &lt;li&gt;...&lt;/li&gt;
  8  &lt;/ul&gt;
- 9 </code></pre>
+ 9 </pre>
 <p>
 Adding a negative integer before the n argument changes the selection
 again. Here the li:nth-child(-2n+5) selector identifies every second
@@ -2713,18 +2695,18 @@ item, thus the list items on lines 2, 4, and 6 are selected.
 <h4>
 CSS
 </h4>
-<pre><code> 1  li:nth-child(-2n+5) {...}</code></pre>
+<pre> 1  li:nth-child(-2n+5) {...}</pre>
 <h4>
 HTML
 </h4>
-<pre><code> 1  &lt;ul&gt;
+<pre> 1  &lt;ul&gt;
  2    &lt;li&gt;This list item will be selected&lt;/li&gt;
  3    &lt;li&gt;...&lt;/li&gt;
  4    &lt;li&gt;This list item will be selected&lt;/li&gt;
  5    &lt;li&gt;...&lt;/li&gt;
  6    &lt;li&gt;This list item will be selected&lt;/li&gt;
  7    &lt;li&gt;...&lt;/li&gt;
- 8  &lt;/ul&gt;</code></pre>
+ 8  &lt;/ul&gt;</pre>
 <p>
 Changing from the :nth-child(n) pseudo-class to
 the :nth-last-child(n) pseudo-class switches the direction of counting,
@@ -2737,19 +2719,19 @@ list. Here the list items on lines 3 and 6 are selected.
 <h4>
 CSS
 </h4>
-<pre><code> 1  li:nth-last-child(3n+2) {...}
-</code></pre>
+<pre> 1  li:nth-last-child(3n+2) {...}
+</pre>
 <h4>
 HTML
 </h4>
-<pre><code> 1  &lt;ul&gt;
+<pre> 1  &lt;ul&gt;
  2    &lt;li&gt;...&lt;/li&gt;
  3    &lt;li&gt;This list item will be selected&lt;/li&gt;
  4    &lt;li&gt;...&lt;/li&gt;
  5    &lt;li&gt;...&lt;/li&gt;
  6    &lt;li&gt;This list item will be selected&lt;/li&gt;
  7    &lt;li&gt;...&lt;/li&gt;
- 8  &lt;/ul&gt;</code></pre>
+ 8  &lt;/ul&gt;</pre>
 <h4>
 :nth-of-type(n) &amp; :nth-last-of-type(n)
 </h4>
@@ -2780,13 +2762,13 @@ the parent. Here the paragraphs on lines 5 and 9 are selected.
 
 <h4>CSS</h4>
 
-<pre><code> 1  p:nth-of-type(3n) {...}</code></pre>
+<pre> 1  p:nth-of-type(3n) {...}</pre>
 
 <br><br>
 
 <details>
   <summary>HTML</summary>
-<pre><code> 1  &lt;article&gt;
+<pre> 1  &lt;article&gt;
  2    &lt;h1&gt;...&lt;/h1&gt;
  3    &lt;p&gt;...&lt;/p&gt;
  4    &lt;p&gt;...&lt;/p&gt;
@@ -2796,7 +2778,7 @@ the parent. Here the paragraphs on lines 5 and 9 are selected.
  8    &lt;p&gt;...&lt;/p&gt;
  9    &lt;p&gt;This paragraph will be selected&lt;/p&gt;
  10 &lt;/article&gt;
- 11 </code></pre>
+ 11 </pre>
 </details>
 <p>
 As with the :nth-child(n) and :nth-last-child(n) pseudo-classes, the
@@ -2815,13 +2797,13 @@ paragraph. Here the paragraphs on lines 4, 7, and 9 are selected.
 
 <h4>CSS</h4>
 
-<pre><code> 1  p:nth-last-of-type(2n+1) {...}
- 2  </code></pre>
+<pre> 1  p:nth-last-of-type(2n+1) {...}
+ 2  </pre>
 
 <details>
   <summary>HTML</summary>
   
-<pre><code> 1  &lt;article&gt;
+<pre> 1  &lt;article&gt;
  2    &lt;h1&gt;...&lt;/h1&gt;
  3    &lt;p&gt;...&lt;/p&gt;
  4    &lt;p&gt;This paragraph will be selected&lt;/p&gt;
@@ -2831,7 +2813,7 @@ paragraph. Here the paragraphs on lines 4, 7, and 9 are selected.
  8    &lt;p&gt;...&lt;/p&gt;
  9    &lt;p&gt;This paragraph will be selected&lt;/p&gt;
  10 &lt;/article&gt;
- 11 </code></pre>
+ 11 </pre>
 
 </details>
 
@@ -2862,13 +2844,13 @@ selector and pseudo-class from before.
 <h4>
 CSS
 </h4>
-<pre><code> 1  section:target {...}
- 2  </code></pre>
+<pre> 1  section:target {...}
+ 2  </pre>
 <h4>
 HTML
 </h4>
-<pre><code> 1  &lt;section id=&quot;hello&quot;&gt;...&lt;/section&gt;
- 2  </code></pre>
+<pre> 1  &lt;section id=&quot;hello&quot;&gt;...&lt;/section&gt;
+ 2  </pre>
 <h4>
 Empty Pseudo-class
 </h4>
@@ -2890,18 +2872,18 @@ selected.
 <h4>
 CSS
 </h4>
-<pre><code> 1  div:empty {...}
- 2 </code></pre>
+<pre> 1  div:empty {...}
+ 2 </pre>
 <h4>
 HTML
 </h4>
-<pre><code> 1  &lt;div&gt;Hello&lt;/div&gt;
+<pre> 1  &lt;div&gt;Hello&lt;/div&gt;
  2  &lt;div&gt;&lt;!-- Coming soon --&gt;&lt;/div&gt;&lt;!-- This div will be 
  3  selected --&gt;
  4  &lt;div&gt;&lt;/div&gt;&lt;!-- This div will be selected --&gt;
  5  &lt;div&gt; &lt;/div&gt;
  6  &lt;div&gt;&lt;strong&gt;&lt;/strong&gt;&lt;/div&gt;
- 7  </code></pre>
+ 7  </pre>
 <h4>
 Negation Pseudo-class
 </h4>
@@ -2927,26 +2909,26 @@ pseudo-classes.
 
 <h4>CSS</h4>
 
-<pre><code> 1  div:not(.awesome) {...}
+<pre> 1  div:not(.awesome) {...}
  2  :not(div) {...}
- 3  </code></pre>
+ 3  </pre>
 
 <br><br>
 
 <h4>HTML</h4>
 
-<pre><code> 1  &lt;div&gt;This div will be selected&lt;/div&gt;
+<pre> 1  &lt;div&gt;This div will be selected&lt;/div&gt;
  2  &lt;div class=&quot;awesome&quot;&gt;...&lt;/div&gt;
  3  &lt;section&gt;This section will be selected&lt;/section&gt;
  4  &lt;section class=&quot;awesome&quot;&gt;This section will be selected&lt;/section&gt;
- 5 </code></pre>
+ 5 </pre>
 
 <h4>Pseudo-classes Example</h4>
 
 <details>
   <summary>HTML</summary>
   
-<pre><code> 1  &lt;table&gt;
+<pre> 1  &lt;table&gt;
  2    &lt;thead&gt;
  3      &lt;tr&gt;
  4        &lt;th&gt;Number&lt;/th&gt;
@@ -2974,7 +2956,7 @@ pseudo-classes.
  26     ...
  27   &lt;/tbody&gt;
  28 &lt;/table&gt;
- 29  </code></pre>
+ 29  </pre>
 </details>
 
 <br><br>
@@ -2982,7 +2964,7 @@ pseudo-classes.
 <details>
   <summary>CSS</summary>
 
-<pre><code> 1   table {
+<pre> 1   table {
  2     border-collapse: separate;
  3     border-spacing: 0;
  4     width: 100%;
@@ -3018,7 +3000,7 @@ pseudo-classes.
  34  tr:last-child td:last-child {
  35    border-bottom-right-radius: 6px;
  36  }
- 37  </code></pre>
+ 37  </pre>
 
 </details>
 
@@ -3317,18 +3299,18 @@ pseudo-elements respectively.
 <h4>
 CSS
 </h4>
-<pre><code> 1  .alpha:first-letter,
+<pre> 1  .alpha:first-letter,
  2  .bravo:first-line {
  3  color: #ff7b29;
  4  font-size: 18px;
  5  }
- 6 </code></pre>
+ 6 </pre>
 <h4>
 HTML
 </h4>
-<pre><code> 1  &lt;p class=&quot;alpha&quot;&gt;Lorem ipsum dolor...&lt;/p&gt;
+<pre> 1  &lt;p class=&quot;alpha&quot;&gt;Lorem ipsum dolor...&lt;/p&gt;
  2  &lt;p class=&quot;bravo&quot;&gt;Integer eget enim...&lt;/p&gt;
- 3 </code></pre>
+ 3 </pre>
 <h4>
 Textual Pseudo-elements Demo
 </h4>
@@ -3357,18 +3339,18 @@ necessary should a browser not support these pseudo-elements.
 <h4>
 CSS
 </h4>
-<pre><code> 1  a:after {
+<pre> 1  a:after {
  2  color: #9799a7;
  3  content: &quot; (&quot; attr(href) &quot;)&quot;;
  4  font-size: 11px;
  5  }
- 6 </code></pre>
+ 6 </pre>
 <h4>
 HTML
 </h4>
-<pre><code> 1  &lt;a href=&quot;http://google.com/&quot;&gt;Search the Web&lt;/a&gt;
+<pre> 1  &lt;a href=&quot;http://google.com/&quot;&gt;Search the Web&lt;/a&gt;
  2  &lt;a href=&quot;http://learn.shayhowe.com/&quot;&gt;Learn How to Build Websites&lt;/a&gt;
- 3 </code></pre>
+ 3 </pre>
 <h4>
 Generated Content Pseudo-elements Demo
 </h4>
@@ -3401,13 +3383,13 @@ thanks to the ::selection  fragment pseudo-element. Also note,
 the ::-moz-selection Mozilla prefixed fragment pseudo-element has been
 added to ensure the best support for all browsers.
 </p>
-<pre><code> 1  ::-moz-selection {
+<pre> 1  ::-moz-selection {
  2  background: #ff7b29;
  3  }
  4  ::selection {
  5  background: #ff7b29;
  6  }
- 7 </code></pre>
+ 7 </pre>
 
 <h4>Fragment Pseudo-element Demo</h4>
 
@@ -3415,15 +3397,15 @@ added to ensure the best support for all browsers.
 
 <h4>HTML</h4>
 
-<pre><code> 1  &lt;a class=&quot;arrow&quot; href=&quot;#&quot;&gt;Continue Reading&lt;/a&gt;
- 2  </code></pre>
+<pre> 1  &lt;a class=&quot;arrow&quot; href=&quot;#&quot;&gt;Continue Reading&lt;/a&gt;
+ 2  </pre>
 
 <br><br>
 
 <details>
   <summary>CSS</summary>
   
-<pre><code> 1  .arrow {
+<pre> 1  .arrow {
  2  background: #2db34a;
  3  color: #fff;
  4  display: inline-block;
@@ -3462,7 +3444,7 @@ added to ensure the best support for all browsers.
  37  .arrow:hover:after {
  39  border-left: 15px solid #ff7b29;
  40  }
- 41 </code></pre>
+ 41 </pre>
 
 </details>
 
@@ -3793,8 +3775,8 @@ The formula is based around taking the target width of an element and
 dividing it by the width of it’s parent element. The result is the
 relative width of the target element.
 </p>
-<pre><code> 1  target ÷ context = result
- 2  </code></pre>
+<pre> 1  target ÷ context = result
+ 2  </pre>
 <h4>
 Flexible Grid
 </h4>
@@ -3809,18 +3791,18 @@ following.
 <h4>
 HTML
 </h4>
-<pre><code> 1  &lt;div class=&quot;container&quot;&gt; 
+<pre> 1  &lt;div class=&quot;container&quot;&gt; 
  2  &lt;section&gt;...&lt;/section&gt; 
  3  &lt;aside&gt;...&lt;/aside&gt;  
  4  &lt;/div&gt;
- 5 </code></pre>
+ 5 </pre>
  
 <br><br>
 
 <details>
   <summary>CSS</summary>
 
-<pre><code> 1  .container { 
+<pre> 1  .container { 
  2    width: 538px;
  3  }
  4  section,
@@ -3835,7 +3817,7 @@ HTML
  13   float: right;
  14   width: 158px;
  15 }
- 16 </code></pre>
+ 16 </pre>
 
 </details>
 
@@ -3852,7 +3834,7 @@ widths scale proportionally.
 <details>
   <summary>Fixed Grid Demo</summary>
   
-<pre><code> 1  section,
+<pre> 1  section,
  2  aside {
  3    margin: 1.858736059%; /* 10px ÷ 538px = .018587361 */
  4  }
@@ -3864,7 +3846,7 @@ widths scale proportionally.
  10   float: right;
  11   width: 29.3680297%; /* 158px ÷ 538px = .293680297 */
  12 }
- 13 </code></pre>
+ 13 </pre>
 
 </details>
 
@@ -3914,17 +3896,17 @@ to avoid any additional HTTP requests.
 <h4>
 HTML
 </h4>
-<pre><code> 1  &lt;!-- Separate CSS File --&gt;
+<pre> 1  &lt;!-- Separate CSS File --&gt;
  2  &lt;link href=&quot;styles.css&quot; rel=&quot;stylesheet&quot; media=&quot;all and (max-width: 1024px)&quot;&gt;
- 3 </code></pre>
+ 3 </pre>
 <h4>
 CSS
 </h4>
-<pre><code> 1  /* @media Rule */  
+<pre> 1  /* @media Rule */  
  2  @media all and (max-width: 1024px) {...}
  3  /* @import Rule */ 
  4  @import url(styles.css) all and (max-width: 1024px) {...} 
- 5 </code></pre>
+ 5 </pre>
 <p>
 Each media query may include a media type followed by one or more
 expressions. Common media types include all, screen, print, tv,
@@ -3954,16 +3936,16 @@ both a, b, c, and so forth. Multiple individual media queries can be
 comma separated, acting as an unspoken or operator. The example below
 selects all media types between 800 and 1024 pixels wide.
 </p>
-<pre><code> 1  @media all and (min-width: 800px) and (max-width: 1024px) {...} 
- 2 </code></pre>
+<pre> 1  @media all and (min-width: 800px) and (max-width: 1024px) {...} 
+ 2 </pre>
 <p>
 The not logical operator negates the query, specifying any query but the
 one identified. In the example below the expression applies to any
 device that does not have a color screen. Black and white or monochrome
 screens would apply here for example.
 </p>
-<pre><code> 1  @media not screen and (color) {...}
- 2 </code></pre>
+<pre> 1  @media not screen and (color) {...}
+ 2 </pre>
 <p>
 The only logical operator is a new operator and is not recognized by
 user agents using the HTML4 algorithm, thus hiding the styles from
@@ -3971,8 +3953,8 @@ devices or browsers that don’t support media queries. Below, the
 expression selects only screens in a portrait orientation that have a
 user agent capable of rending media queries.
 </p>
-<pre><code> 1  @media only screen and (orientation: portrait) {...}
- 2 </code></pre>
+<pre> 1  @media only screen and (orientation: portrait) {...}
+ 2 </pre>
 <h4>
 Omitting a Media Type
 </h4>
@@ -4005,8 +3987,8 @@ viewport rendering area, the browser window for example. Values for
 these height and width media features may be any length unit, relative
 or absolute.
 </p>
-<pre><code> 1  @media all and (min-width: 320px) and (max-width: 780px) {...}  
- 2 </code></pre>
+<pre> 1  @media all and (min-width: 320px) and (max-width: 780px) {...}  
+ 2 </pre>
 <p>
 Within responsive design the most commonly used features
 include min-width and max-width. These help build responsive websites on
@@ -4030,7 +4012,7 @@ when the display is wider than taller, and the portrait mode is
 triggered when the display is taller than wider. This media feature
 plays a large part with mobile devices.</p>
 
-<pre><code>@media all and (orientation: landscape) {...}</code></pre>
+<pre>@media all and (orientation: landscape) {...}</pre>
 
 <h4>Aspect Ratio Media Feature</h4>
 
@@ -4045,8 +4027,8 @@ The value for the aspect ratio feature consist of two positive integers
 separated by a forward slash. The first integer identifies the width in
 pixels while the second integer identifies the height in pixels.
 </p>
-<pre><code> 1  @media all and (min-device-aspect-ratio: 16/9) {...}
- 2 </code></pre>
+<pre> 1  @media all and (min-device-aspect-ratio: 16/9) {...}
+ 2 </pre>
 <h4>
 Pixel Ratio Media Features
 </h4>
@@ -4058,9 +4040,9 @@ Specifically, the pixel ratio feature is great for identifying high
 definition devices, including retina displays. Media queries for doing
 so look like the following.
 </p>
-<pre><code> 1  @media only screen and (-webkit-min-device-pixel-ratio: 1.3), 
+<pre> 1  @media only screen and (-webkit-min-device-pixel-ratio: 1.3), 
     only screen and (min-device-pixel-ratio: 1.3) {...}
- 2 </code></pre>
+ 2 </pre>
 <h4>
 Resolution Media Feature
 </h4>
@@ -4072,8 +4054,8 @@ Additionally, the resolution media feature will accept dots per pixel
 (1.3dppx), dots per centimeter (118dpcm), and other length based
 resolution values.
 </p>
-<pre><code> 1  @media print and (min-resolution: 300dpi) {...}  
- 2 </code></pre>
+<pre> 1  @media print and (min-resolution: 300dpi) {...}  
+ 2 </pre>
 <h4>
 Other Media Features
 </h4>
@@ -4116,13 +4098,13 @@ media query for viewports under 420 pixels wide we can change the layout
 by turning off the floats and changing the widths of
 the section and aside.
 </p>
-<pre><code> 1  @media all and (max-width: 420px) { 
+<pre> 1  @media all and (max-width: 420px) { 
  2  section, aside {
  3  float: none; 
  4  width: auto; 
  5  } 
  6  } 
- 7 </code></pre>
+ 7 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~ 08. demo without media queries (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <img class="border displayed"
@@ -4191,12 +4173,12 @@ and develop intrinsic mobile experiences.
 A breakout of mobile first media queries might look abit like the
 following.
 </p>
-<pre><code> 1  /* Default styles first then media queries */ 
+<pre> 1  /* Default styles first then media queries */ 
  2  @media screen and (min-width: 400px) {...} 
  3  @media screen and (min-width: 600px) {...} 
  4  @media screen and (min-width: 1000px) {...}
  5  @media screen and (min-width: 1400px) {...}
- 6 </code></pre>
+ 6 </pre>
 <p>
 Additionally, downloading unnecessary media assets can be stopped by
 using media queries. Generally speaking, avoiding CSS3 shadows,
@@ -4204,7 +4186,7 @@ gradients, transforms, and animations within mobile styles isn’t a bad
 idea either. When used excessively, they cause heavy loading and can
 even reduce a device’s battery life.
 </p>
-<pre><code> 1  /* Default media */
+<pre> 1  /* Default media */
  2  body {
  3    background: #ddd;
  4  }
@@ -4214,7 +4196,7 @@ even reduce a device’s battery life.
  8      background-image: url(&quot;bg.png&quot;) 50% 50% no-repeat;  
  9    }
  1  }
- 1 </code></pre>
+ 1 </pre>
 <h4>
 Mobile First Demo
 </h4>
@@ -4229,7 +4211,7 @@ build the following:
 <summary>
 Mobile First Demo
 </summary>
-<pre><code> 1  section,
+<pre> 1  section,
  2  aside { 
  3  margin: 1.858736059%; 
  4  } 
@@ -4246,7 +4228,7 @@ Mobile First Demo
  15  width: 29.3680297%;
  16  } 
  17 } 
- 18 </code></pre>
+ 18 </pre>
 </details>
 <h4>
 Mobile First Demo
@@ -4297,8 +4279,8 @@ For the best results, and the best looking website, it is recommend that
 you use the device defaults by applying
 the device-height and device-width values.
 </p>
-<pre><code> 1  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot;&gt;
- 2 </code></pre>
+<pre> 1  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot;&gt;
+ 2 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~ 11. website with viewport meta tag (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <img class="border displayed"
@@ -4326,8 +4308,8 @@ the viewport size. Should a device be in landscape mode this would be
 the ratio between the device width and the viewport size. Values
 for initial-scale should always be a positive integer between 0 and 10.
 </p>
-<pre><code> 1  &lt;meta name=&quot;viewport&quot; content=&quot;initial-scale=2&quot;&gt;
- 2 </code></pre>
+<pre> 1  &lt;meta name=&quot;viewport&quot; content=&quot;initial-scale=2&quot;&gt;
+ 2 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 12. viewport scale meta tag (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <img class="border displayed"
@@ -4349,8 +4331,8 @@ Using the same reasoning, the maximum-scale value should be a positive
 integer greater than or equal to the initial-scale. Values for both of
 these must also be between 0 and 10.
 </p>
-<pre><code> 1  &lt;meta name=&quot;viewport&quot; content=&quot;minimum-scale=0&quot;&gt;
- 2 </code></pre>
+<pre> 1  &lt;meta name=&quot;viewport&quot; content=&quot;minimum-scale=0&quot;&gt;
+ 2 </pre>
 <p>
 Generally speaking, these values should not be set to the same value as
 the initial-scale. This would disable any zooming, which can be
@@ -4363,8 +4345,8 @@ Turning off the ability to scale a website is a <b>bad idea</b>. It
 harms accessibility and usability, preventing those with disabilities
 from viewing a website as desired.
 </p>
-<pre><code> 1  &lt;meta name=&quot;viewport&quot; content=&quot;user-scalable=yes&quot;&gt; 
- 2 </code></pre>
+<pre> 1  &lt;meta name=&quot;viewport&quot; content=&quot;user-scalable=yes&quot;&gt; 
+ 2 </pre>
 <h4>
 Viewport Resolution
 </h4>
@@ -4380,8 +4362,8 @@ high-dpi, medium-dpi, low-dpi, or an actual DPI number.
 Using the target-densitydpi viewport value is rare, but extremely
 helpful when pixel by pixel control is needed.
 </p>
-<pre><code> 1  &lt;meta name=&quot;viewport&quot; content=&quot;target-densitydpi=device-dpi&quot;&gt;  
- 2 </code></pre>
+<pre> 1  &lt;meta name=&quot;viewport&quot; content=&quot;target-densitydpi=device-dpi&quot;&gt;  
+ 2 </pre>
 <h4>
 Combining Viewport Values
 </h4>
@@ -4392,8 +4374,8 @@ multiple values requires comma separating them within
 the content attribute value. One of the recommended viewport values is
 outlined below, using both the width and initial-scale properties.
 </p>
-<pre><code> 1  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
- 2 </code></pre>
+<pre> 1  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+ 2 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~ 11. website with viewport meta tag (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <img class="border displayed"
@@ -4419,11 +4401,11 @@ support isn’t great across the board. The previously
 recommended viewport meta tag would look like the following <span
 class="citation" data-cites="viewport">@viewport</span> rule in CSS.</p>
 
-<pre><code> 1  @viewport {  
+<pre> 1  @viewport {  
  2  width: device-width;
  3  zoom: 1; 
  4  }  
- 5  </code></pre>
+ 5  </pre>
  
 <h4>Flexible Media</h4>
 
@@ -4435,10 +4417,10 @@ changing their size as the size of the viewport changes.</p>
 with a value of 100%. Doing so ensures that as the viewport gets smaller
 any media will scale down according to its containers width.</p>
 
-<pre><code> 1  img, video, canvas {  
+<pre> 1  img, video, canvas {  
  2  max-width: 100%;
  3  } 
- 4 </code></pre>
+ 4 </pre>
  
 <h4>Flexible Media Demo</h4>
 
@@ -4471,17 +4453,17 @@ treating the parent element as an absolutely positioned element.
 
 <h4>HTML</h4>
 
-<pre><code> 1  &lt;figure&gt; 
+<pre> 1  &lt;figure&gt; 
  2    &lt;iframe src=&quot;https://www.youtube.com/embed/Sv3xVOs7_No&quot;&gt;&lt;/iframe&gt; 
  3  &lt;/figure&gt;
- 4 </code></pre>
+ 4 </pre>
 
 <br><br>
 
 <details>
   <summary>CSS</summary>
 
-<pre><code> 1  figure {
+<pre> 1  figure {
  2  height: 0; 
  3  padding-bottom: 56.25%; /* 16:9 */ 
  4  position: relative;
@@ -4494,7 +4476,7 @@ treating the parent element as an absolutely positioned element.
  11  top: 0; 
  13  width: 100%; 
  14  } 
- 15 </code></pre>
+ 15 </pre>
 
 </details>
 
@@ -4629,15 +4611,15 @@ Windows Installer</a> for directions. Upon confirming Ruby is installed
 the gem install haml command needs to be run from the command line,
 using Terminal or the alike command line program, to install Haml.
 </p>
-<pre><code> 1  gem install haml
- 2 </code></pre>
+<pre> 1  gem install haml
+ 2 </pre>
 <p>
 Files written in the Haml markup should be saved with the file extension
 of .haml. To then convert these files from Haml to HTML the haml command
 below needs to be run to compile each individual file.
 </p>
-<pre><code> 1  haml index.haml index.html  
- 2 </code></pre>
+<pre> 1  haml index.haml index.html  
+ 2 </pre>
 <p>
 In the example above, the file index.haml is converted to HTML and saved
 as index.html within the same directory. This command has to be run
@@ -4683,13 +4665,13 @@ passed in after the exclamation points, !!! 5.
 <h4>
 Haml
 </h4>
-<pre><code> 1  !!! 5
- 2 </code></pre>
+<pre> 1  !!! 5
+ 2 </pre>
 <h4>
 Compiled HTML
 </h4>
-<pre><code> 1  &lt;!DOCTYPE html&gt;  
- 2 </code></pre>
+<pre> 1  &lt;!DOCTYPE html&gt;  
+ 2 </pre>
 <h4>
 Declaring Elements
 </h4>
@@ -4714,16 +4696,16 @@ struggle.
 <h4>
 Haml
 </h4>
-<pre><code> 1  %body
+<pre> 1  %body
  2  %header 
  3  %h1 Hello World 
  4  %section
  5  %p Lorem ipsum dolor sit amet. 
- 6 </code></pre>
+ 6 </pre>
 <h4>
 Compiled HTML
 </h4>
-<pre><code> 1  &lt;body&gt;
+<pre> 1  &lt;body&gt;
  2  &lt;header&gt; 
  3  &lt;h1&gt;Hello World&lt;/h1&gt; 
  4  &lt;/header&gt;
@@ -4731,7 +4713,7 @@ Compiled HTML
  6  &lt;p&gt;Lorem ipsum dolor sit amet.&lt;/p&gt;  
  7  &lt;/section&gt; 
  8  &lt;/body&gt;  
- 9 </code></pre>
+ 9 </pre>
 <h4>
 Handling Text
 </h4>
@@ -4741,14 +4723,14 @@ or indented below the element. Text cannot be both on the same line as
 the declared element and nested below it, it has to be either or. The
 example from above could be rewritten as the following:
 </p>
-<pre><code> 1  %body 
+<pre> 1  %body 
  2  %header  
  3  %h1
  4  Hello World
  5  %section 
  6  %p 
  7  Lorem ipsum dolor sit amet.  
- 8  </code></pre>
+ 8  </pre>
 <h4>
 Attributes
 </h4>
@@ -4762,15 +4744,15 @@ style attributes will use standard HTML syntax inside of ().
 <h4>
 Haml
 </h4>
-<pre><code> 1  %img{:src =&gt; &quot;shay.jpg&quot;, :alt =&gt; &quot;Shay Howe&quot;}
+<pre> 1  %img{:src =&gt; &quot;shay.jpg&quot;, :alt =&gt; &quot;Shay Howe&quot;}
  2  %img{src: &quot;shay.jpg&quot;, alt: &quot;Shay Howe&quot;}  
  3  %img(src=&quot;shay.jpg&quot; alt=&quot;Shay Howe&quot;)
- 4 </code></pre>
+ 4 </pre>
 <h4>
 Compiled HTML
 </h4>
-<pre><code> 1  &lt;img src=&quot;shay.jpg&quot; alt=&quot;Shay Howe&quot;&gt;
- 2 </code></pre>
+<pre> 1  &lt;img src=&quot;shay.jpg&quot; alt=&quot;Shay Howe&quot;&gt;
+ 2 </pre>
 <h4>
 Classes &amp; IDs
 </h4>
@@ -4791,19 +4773,19 @@ outlined formats.
 <h4>
 Haml
 </h4>
-<pre><code> 1  %section.feature
+<pre> 1  %section.feature
  2  %section.feature.special 
  3  %section#hello  
  4  %section#hello.feature(role=&quot;region&quot;) 
- 5 </code></pre>
+ 5 </pre>
 <h4>
 Compiled HTML
 </h4>
-<pre><code> 1  &lt;section class=&quot;feature&quot;&gt;&lt;/section&gt; 
+<pre> 1  &lt;section class=&quot;feature&quot;&gt;&lt;/section&gt; 
  2  &lt;section class=&quot;feature special&quot;&gt;&lt;/section&gt;  
  3  &lt;section id=&quot;hello&quot;&gt;&lt;/section&gt; 
  4  &lt;section class=&quot;feature&quot; id=&quot;hello&quot; role=&quot;region&quot;&gt;&lt;/section&gt;  
- 5 </code></pre>
+ 5 </pre>
 <h4>
 Division Classes &amp; IDs
 </h4>
@@ -4815,17 +4797,17 @@ identified with a . and IDs are to be identified with a #.
 <h4>
 Haml
 </h4>
-<pre><code> 1  .awesome
+<pre> 1  .awesome
  2  .awesome.lesson 
  3  #getting-started.lesson  
- 4 </code></pre>
+ 4 </pre>
 <h4>
 Compiled HTML
 </h4>
-<pre><code> 1  &lt;div class=&quot;awesome&quot;&gt;&lt;/div&gt; 
+<pre> 1  &lt;div class=&quot;awesome&quot;&gt;&lt;/div&gt; 
  2  &lt;div class=&quot;awesome lesson&quot;&gt;&lt;/div&gt;
  3  &lt;div class=&quot;lesson&quot; id=&quot;getting-started&quot;&gt;&lt;/div&gt;  
- 4 </code></pre>
+ 4 </pre>
 <h4>
 Boolean Attributes
 </h4>
@@ -4836,15 +4818,15 @@ HTML, all depending on the syntax being used.
 <h4>
 Haml
 </h4>
-<pre><code> 1  %input{:type =&gt; &quot;checkbox&quot;, :checked =&gt; true}  
+<pre> 1  %input{:type =&gt; &quot;checkbox&quot;, :checked =&gt; true}  
  2  %input(type=&quot;checkbox&quot; checked=true)  
  3  %input(type=&quot;checkbox&quot; checked) 
- 4 </code></pre>
+ 4 </pre>
 <h4>
 Compiled HTML
 </h4>
-<pre><code> 1  &lt;input type=&quot;checkbox&quot; checked&gt;  
- 2 </code></pre>
+<pre> 1  &lt;input type=&quot;checkbox&quot; checked&gt;  
+ 2 </pre>
 <h4>
 Escaping Text
 </h4>
@@ -4863,18 +4845,18 @@ backslash, is escaped text, printing it as is, without execution.
 <h4>
 Haml
 </h4>
-<pre><code> 1  .author 
+<pre> 1  .author 
  2  = @author 
  3  \\= @author 
- 4 </code></pre>
+ 4 </pre>
 <h4>
 Compiled HTML
 </h4>
-<pre><code> 1  &lt;div class=&quot;author&quot;&gt; 
+<pre> 1  &lt;div class=&quot;author&quot;&gt; 
  2  Shay Howe  
  3  = @author 
  4  &lt;/div&gt;
- 5 </code></pre>
+ 5 </pre>
 <h4>
 Text Escaping Alternatives
 </h4>
@@ -4896,16 +4878,16 @@ outside of the anchor text.
 <h4>
 Haml
 </h4>
-<pre><code> 1  %p
+<pre> 1  %p
  2  Shay is 
  3  = succeed &quot;.&quot; do 
  4  %a{:href =&gt; &quot;#&quot;} awesome 
- 5 </code></pre>
+ 5 </pre>
 <h4>
 Compiled HTML
 </h4>
-<pre><code> 1  &lt;p&gt;Shay is &lt;a href=&quot;#&quot;&gt;awesome&lt;/a&gt;.&lt;/p&gt;  
- 2 </code></pre>
+<pre> 1  &lt;p&gt;Shay is &lt;a href=&quot;#&quot;&gt;awesome&lt;/a&gt;.&lt;/p&gt;  
+ 2 </pre>
 <h4>
 Comments
 </h4>
@@ -4919,17 +4901,17 @@ code can be commented out by being nested underneath a forward slash.
 <h4>
 Haml
 </h4>
-<pre><code> 1  %div 
+<pre> 1  %div 
  2  / Commented line
  3  Actual line
  4  / 
  5  %div 
  6  Commented block 
- 7 </code></pre>
+ 7 </pre>
 <h4>
 Compiled HTML
 </h4>
-<pre><code> 1  &lt;div&gt; 
+<pre> 1  &lt;div&gt; 
  2    &lt;!-- Commented line --&gt; 
  3    Actual line
  4  &lt;/div&gt;
@@ -4938,7 +4920,7 @@ Compiled HTML
  7    Commented block 
  8  &lt;/div&gt;
  9  --&gt;
- 10 </code></pre>
+ 10 </pre>
 <h4>
 Conditional Comments
 </h4>
@@ -4950,16 +4932,16 @@ square brackets need to be placed directly after the forward slash.
 <h4>
 Haml
 </h4>
-<pre><code> 1  [if lt IE 9] 
+<pre> 1  [if lt IE 9] 
  2  %script{:src =&gt; &quot;html5shiv.js&quot;}
- 3 </code></pre>
+ 3 </pre>
 <h4>
 Compiled HTML
 </h4>
-<pre><code> 1  &lt;!--[if lt IE 9]&gt;
+<pre> 1  &lt;!--[if lt IE 9]&gt;
  2  &lt;script src=&quot;html5shiv.js&quot;&gt;&lt;/script&gt;
  3  &lt;![endif]--&gt;  
- 4 </code></pre>
+ 4 </pre>
 <h4>
 Silent Comments
 </h4>
@@ -4975,17 +4957,17 @@ multiple lines with the use of nesting.
 <h4>
 Haml
 </h4>
-<pre><code> 1  %div 
+<pre> 1  %div 
  2  -# Removed line 
  3  Actual line
- 4 </code></pre>
+ 4 </pre>
 <h4>
 Compiled HTML
 </h4>
-<pre><code> 1  &lt;div&gt; 
+<pre> 1  &lt;div&gt; 
  2    Actual line
  3  &lt;/div&gt;
- 4 </code></pre>
+ 4 </pre>
 <h4>
 Filters
 </h4>
@@ -5055,27 +5037,27 @@ Javascript Filter
 <h4>
 Haml
 </h4>
-<pre><code> 1  :javascript
+<pre> 1  :javascript
  2  $(&#39;button&#39;).on(&#39;click&#39;, function(event) {  
  3  $(&#39;p&#39;).hide(&#39;slow&#39;);
  4  });  
- 5 </code></pre>
+ 5 </pre>
 <h4>
 Compiled HTML
 </h4>
-<pre><code> 1  &lt;script&gt; 
+<pre> 1  &lt;script&gt; 
  2  $(&#39;button&#39;).on(&#39;click&#39;, function(event) {  
  3  $(&#39;p&#39;).hide(&#39;slow&#39;);
  4  });  
  5  &lt;/script&gt;
- 6 </code></pre>
+ 6 </pre>
 <h4>
 CSS &amp; Sass Filters
 </h4>
 <h4>
 Haml
 </h4>
-<pre><code> 1  :css 
+<pre> 1  :css 
  2  .container { 
  3  margin: 0 auto; 
  4  width: 960px;
@@ -5084,17 +5066,17 @@ Haml
  7  .container 
  8  margin: 0 auto  
  9  width: 960px 
- 10  </code></pre>
+ 10  </pre>
 <h4>
 Compiled HTML
 </h4>
-<pre><code> 1  &lt;style&gt;  
+<pre> 1  &lt;style&gt;  
  2  .container { 
  3  margin: 0 auto; 
  4  width: 960px;
  5  } 
  6  &lt;/style&gt; 
- 7 </code></pre>
+ 7 </pre>
 <h4>
 Ruby Interpolation
 </h4>
@@ -5110,13 +5092,13 @@ Below is an example of Ruby being interpolated as part of a class name.
 <h4>
 Haml
 </h4>
-<pre><code> 1  %div{:class =&gt; &quot;student-#{@student.name}&quot;}
- 2 </code></pre>
+<pre> 1  %div{:class =&gt; &quot;student-#{@student.name}&quot;}
+ 2 </pre>
 <h4>
 Compiled HTML
 </h4>
-<pre><code> 1  &lt;div class=&quot;student-shay&quot;&gt; 
- 2 </code></pre>
+<pre> 1  &lt;div class=&quot;student-shay&quot;&gt; 
+ 2 </pre>
 <h4>
 SCSS &amp; Sass
 </h4>
@@ -5146,14 +5128,14 @@ the directions from before to install, or ensure Ruby is installed.
 Once Ruby is installed the gem install sass command needs to be run from
 the command line to install SCSS and Sass.
 </p>
-<pre><code> 1  gem install sass
- 2 </code></pre>
+<pre> 1  gem install sass
+ 2 </pre>
 <p>
 Files written in SCSS or Sass need to have the .scss or .sass file
 extensions respectively. To convert either of these file types
 to .css the following sass command needs to be run.
 </p>
-<pre><code> 1  sass styles.sass styles.css </code></pre>
+<pre> 1  sass styles.sass styles.css </pre>
 <p>
 The command above takes the styles.sass Sass file and compiles it to
 the styles.css file. As with Haml, these file names are paths and need
@@ -5167,16 +5149,16 @@ Should changes to a file be ongoing Sass can watch the file and
 recompile the CSS every time a change takes place. To watch a Sass file
 the following sass command may be run.
 </p>
-<pre><code> 1  sass --watch styles.sass:styles.css 
- 2 </code></pre>
+<pre> 1  sass --watch styles.sass:styles.css 
+ 2 </pre>
 <p>
 Additionally, instead of compiling or watching individual files, Sass is
 capable of compiling and watching entire directories of files. For
 example, to watch an entire directory of Sass files and convert them to
 CSS the sass command below may be run.
 </p>
-<pre><code> 1  sass --watch assets/sass:public/css 
- 2 </code></pre>
+<pre> 1  sass --watch assets/sass:public/css 
+ 2 </pre>
 <h4>
 Converting Files from SCSS to Sass &amp; Vice Versa
 </h4>
@@ -5186,11 +5168,11 @@ convert files from SCSS to Sass and vice versa. To do so
 the sass commands below may be used to convert a SCSS file to Sass, and
 then a Sass file to SCSS respectively.
 </p>
-<pre><code> 1  # Convert Sass to SCSS
+<pre> 1  # Convert Sass to SCSS
  2  sass-convert styles.sass styles.scss  
  3  # Convert SCSS to Sass
  4  sass-convert styles.scss styles.sass  
- 5  </code></pre>
+ 5  </pre>
 <h4>
 Syntax
 </h4>
@@ -5206,34 +5188,34 @@ indentation and clear line breaks for formatting.
 <h4>
 SCSS
 </h4>
-<pre><code> 1  .new {  
+<pre> 1  .new {  
  2    color: #ff7b29; 
  3    font-weight: bold; 
  4    span {  
  5      text-transform: uppercase;  
  6    } 
  7  } 
- 8 </code></pre>
+ 8 </pre>
 <h4>
 Sass
 </h4>
-<pre><code> 1  .new 
+<pre> 1  .new 
  2  color: #ff7b29  
  3  font-weight: bold  
  4  span 
  5  text-transform: uppercase
- 6 </code></pre>
+ 6 </pre>
 <h4>
 Compiled CSS
 </h4>
-<pre><code> 1  .new {  
+<pre> 1  .new {  
  2  color: #ff7b29; 
  3  font-weight: bold; 
  4  } 
  5  .new span {
  6  text-transform: uppercase;  
  7  } 
- 8 </code></pre>
+ 8 </pre>
 <h4>
 Using SCSS vs. Sass
 </h4>
@@ -5268,17 +5250,17 @@ selectors without raising specificity is important.
 <h4>
 Sass
 </h4>
-<pre><code> 1  .portfolio 
+<pre> 1  .portfolio 
  2  border: 1px solid #9799a7
  3  ul
  4  list-style: none
  5  li
  6  float: left
- 7 </code></pre>
+ 7 </pre>
 <h4>
 Compiled CSS
 </h4>
-<pre><code> 1  .portfolio { 
+<pre> 1  .portfolio { 
  2  border: 1px solid #9799a7;  
  3  } 
  4  .portfolio ul { 
@@ -5287,7 +5269,7 @@ Compiled CSS
  7  .portfolio li { 
  8  float: left; 
  9  } 
- 10 </code></pre>
+ 10 </pre>
 <h4>
 Nesting Properties
 </h4>
@@ -5302,21 +5284,21 @@ your decision is up to personal preference.
 <h4>
 Sass
 </h4>
-<pre><code> 1  div  
+<pre> 1  div  
  2  font:
  3  family: Baskerville, Palatino, serif 
  4  style: italic
  5  weight: normal  
- 6 </code></pre>
+ 6 </pre>
 <h4>
 Compiled CSS
 </h4>
-<pre><code> 1  div {
+<pre> 1  div {
  2  font-family: Baskerville, Palatino, serif;
  3  font-style: italic;
  4  font-weight: normal;  
  5  } 
- 6 </code></pre>
+ 6 </pre>
 <h4>
 Nested Media Queries
 </h4>
@@ -5327,15 +5309,15 @@ changing property values based off a media condition.
 <h4>
 Sass
 </h4>
-<pre><code> 1  .container 
+<pre> 1  .container 
  2  width: 960px 
  3  @media screen and (max-width: 960px)
  4  width: 100%
- 5 </code></pre>
+ 5 </pre>
 <h4>
 Compiled CSS
 </h4>
-<pre><code> 1  .container { 
+<pre> 1  .container { 
  2  width: 960px;
  3  } 
  4  @media screen and (max-width: 960px) { 
@@ -5343,7 +5325,7 @@ Compiled CSS
  6  width: 100%; 
  7  } 
  8  } 
- 9 </code></pre>
+ 9 </pre>
 <h4>
 Parent Selector
 </h4>
@@ -5358,21 +5340,21 @@ as &amp;.featured.
 <h4>
 Sass
 </h4>
-<pre><code> 1  a 
+<pre> 1  a 
  2  color: #0087cc  
  3  &amp;:hover 
  4  color: #ff7b29  
- 5 </code></pre>
+ 5 </pre>
 <h4>
 Compiled CSS
 </h4>
-<pre><code> 1  a {  
+<pre> 1  a {  
  2  color: #0087cc; 
  3  } 
  4  a:hover {  
  5  color: #ff7b29; 
  6  } 
- 7 </code></pre>
+ 7 </pre>
 <h4>
 Parent Key Selector
 </h4>
@@ -5385,21 +5367,21 @@ of the most beneficial is inside of feature detection.
 <h4>
 Sass
 </h4>
-<pre><code> 1  .btn 
+<pre> 1  .btn 
  2  background: linear-gradient(#fff, #9799a7)
  3  .no-cssgradients &amp; 
  4  background: url(&quot;gradient.png&quot;) 0 0 repeat-x  
- 5 </code></pre>
+ 5 </pre>
 <h4>
 Compiled CSS
 </h4>
-<pre><code> 1  .btn {  
+<pre> 1  .btn {  
  2  background: linear-gradient(#fff, #9799a7);  
  3  } 
  4  .no-cssgradients .btn {  
  5  background: url(&quot;gradient.png&quot;) 0 0 repeat-x; 
  6  } 
- 7 </code></pre>
+ 7 </pre>
 <h4>
 Comments
 </h4>
@@ -5418,24 +5400,24 @@ is not rendered in the compiled CSS.
 <h4>
 Sass
 </h4>
-<pre><code> 1  /* Normal comment */
+<pre> 1  /* Normal comment */
  2  div  
  3  background: #333
  4  // Omitted comment 
  5  strong  
  6  display: block  
- 7 </code></pre>
+ 7 </pre>
 <h4>
 Compiled CSS
 </h4>
-<pre><code> 1  /* Normal comment */
+<pre> 1  /* Normal comment */
  2  div {
  3  background: #333;  
  4  } 
  5  strong {
  6  display: block; 
  7  } 
- 8 </code></pre>
+ 8 </pre>
 <h4>
 Variables
 </h4>
@@ -5453,18 +5435,18 @@ color, boolean, null, or a list of values separated by spaces or commas.
 <h4>
 Sass
 </h4>
-<pre><code> 1  $font-base: 1em
+<pre> 1  $font-base: 1em
  2  $serif: &quot;Helvetica Neue&quot;, Arial, &quot;Lucida Grande&quot;, sans-serif 
  3  p 
  4  font: $font-base $serif
- 5 </code></pre>
+ 5 </pre>
 <h4>
 Compiled CSS
 </h4>
-<pre><code> 1  p {  
+<pre> 1  p {  
  2  font: 1em &quot;Helvetica Neue&quot;, Arial, &quot;Lucida Grande&quot;, sans-serif;  
  3  } 
- 4 </code></pre>
+ 4 </pre>
 <h4>
 Variable Interpolation
 </h4>
@@ -5478,18 +5460,18 @@ string of plain text.
 <h4>
 Sass
 </h4>
-<pre><code> 1  $location: chicago
+<pre> 1  $location: chicago
  2  $offset: left  
  3  .#{$location}  
  4  #{$offset}: 20px  
- 5 </code></pre>
+ 5 </pre>
 <h4>
 Compiled CSS
 </h4>
-<pre><code> 1  .chicago { 
+<pre> 1  .chicago { 
  2  left: 20px;
  3  } 
- 4 </code></pre>
+ 4 </pre>
 <h4>
 Calculations
 </h4>
@@ -5516,19 +5498,19 @@ have a unit.
 <h4>
 Sass
 </h4>
-<pre><code> 1  width: 40px + 6 
+<pre> 1  width: 40px + 6 
  2  width: 40px - 6 
  3  width: 40px * 6
  4  width: 40px % 6 
- 5 </code></pre>
+ 5 </pre>
 <h4>
 Compiled CSS
 </h4>
-<pre><code> 1  width: 46px; 
+<pre> 1  width: 46px; 
  2  width: 34px; 
  3  width: 240px;
  4  width: 4px;
- 5 </code></pre>
+ 5 </pre>
 <h4>
 Division
 </h4>
@@ -5547,22 +5529,22 @@ value will be unitless.
 <h4>
 Sass
 </h4>
-<pre><code> 1  width: 100px / 10  
+<pre> 1  width: 100px / 10  
  2  width: (100px / 10)
  3  width: (100px / 10px) 
  4  $width: 100px  
  5  width: $width / 10
  6  width: 5px - 100px / 10  
- 7 </code></pre>
+ 7 </pre>
 <h4>
 Compiled CSS
 </h4>
-<pre><code> 1  width: 100px/10;
+<pre> 1  width: 100px/10;
  2  width: 10px; 
  3  width: 10; 
  4  width: 10px; 
  5  width: -5px; 
- 6 </code></pre>
+ 6 </pre>
 <h4>
 Detailed Math
 </h4>
@@ -5574,17 +5556,17 @@ on the use of parentheses.
 <h4>
 Sass
 </h4>
-<pre><code> 1  $grid: 16 
+<pre> 1  $grid: 16 
  2  $column: 40px  
  3  $gutter: 20px  
  4  $container: ($column * $grid) + ($gutter * $grid) 
  5  width: $container 
- 6 </code></pre>
+ 6 </pre>
 <h4>
 Compiled CSS
 </h4>
-<pre><code> 1  width: 960px;
- 2 </code></pre>
+<pre> 1  width: 960px;
+ 2 </pre>
 <h4>
 Number Functions
 </h4>
@@ -5622,21 +5604,21 @@ abs()
 <h4>
 Sass
 </h4>
-<pre><code> 1  width: percentage(2.5)
+<pre> 1  width: percentage(2.5)
  2  width: round(2.5px)
  3  width: ceil(2.5px) 
  4  width: floor(2.5px)
  5  width: abs(-2.5px) 
- 6 </code></pre>
+ 6 </pre>
 <h4>
 Compiled CSS
 </h4>
-<pre><code> 1  width: 250%; 
+<pre> 1  width: 250%; 
  2  width: 3px;
  3  width: 3px;
  4  width: 2px;
  5  width: 2.5px;
- 6 </code></pre>
+ 6 </pre>
 <h4>
 Color
 </h4>
@@ -5650,15 +5632,15 @@ value.
 <h4>
 Sass
 </h4>
-<pre><code> 1  color: rgba(#8ec63f, .25)
+<pre> 1  color: rgba(#8ec63f, .25)
  2  $green: #8ec63f
  3  color: rgba($green, .25)
- 4 </code></pre>
+ 4 </pre>
 <h4>
 Compiled CSS
 </h4>
-<pre><code> 1  color: rgba(142, 198, 63, .25);
- 2 </code></pre>
+<pre> 1  color: rgba(142, 198, 63, .25);
+ 2 </pre>
 <h4>
 Color Operations
 </h4>
@@ -5671,17 +5653,17 @@ intended.
 <h4>
 Sass
 </h4>
-<pre><code> 1  color: #8ec63f + #666 
+<pre> 1  color: #8ec63f + #666 
  2  color: #8ec63f * 2
  3  color: rgba(142, 198, 63, .75) / rgba(255, 255, 255, .75)
- 4 </code></pre>
+ 4 </pre>
 <h4>
 Compiled CSS
 </h4>
-<pre><code> 1  color: #f4ffa5; 
+<pre> 1  color: #f4ffa5; 
  2  color: #ffff7e; 
  3  color: rgba(0, 0, 0, .75);  
- 4 </code></pre>
+ 4 </pre>
 <h4>
 Color Alterations
 </h4>
@@ -5709,21 +5691,21 @@ grayscale()
 <h4>
 Sass
 </h4>
-<pre><code> 1  color: invert(#8ec63f)
+<pre> 1  color: invert(#8ec63f)
  2  color: complement(#8ec63f)  
  3  color: mix(#8ec63f, #fff)
  4  color: mix(#8ec63f, #fff, 10%) 
  5  color: grayscale(#8ec63f)
- 6 </code></pre>
+ 6 </pre>
 <h4>
 Compiled CSS
 </h4>
-<pre><code> 1  color: #7139c0; 
+<pre> 1  color: #7139c0; 
  2  color: #773fc6; 
  3  color: #c6e29f; 
  4  color: #f3f9eb; 
  5  color: #838383; 
- 6 </code></pre>
+ 6 </pre>
 <h4>
 HSLa Color Alterations
 </h4>
@@ -5758,7 +5740,7 @@ fade-out()
 <h4>
 Sass
 </h4>
-<pre><code> 1  color: lighten(#8ec63f, 50%)
+<pre> 1  color: lighten(#8ec63f, 50%)
  2  color: darken(#8ec63f, 30%) 
  3  color: saturate(#8ec63f, 75%)  
  4  color: desaturate(#8ec63f, 25%)
@@ -5766,11 +5748,11 @@ Sass
  6  color: adjust-hue(#8ec63f, -30)
  7  color: fade-in(rgba(142, 198, 63, 0), .4) 
  8  color: fade-out(#8ec63f, .4)
- 9 </code></pre>
+ 9 </pre>
 <h4>
 Compiled CSS
 </h4>
-<pre><code> 1  color: white;
+<pre> 1  color: white;
  2  color: #3b5319; 
  3  color: #98ff06; 
  4  color: #89a75e; 
@@ -5778,7 +5760,7 @@ Compiled CSS
  6  color: #c6bb3f; 
  7  color: rgba(142, 198, 63, 0.4);
  8  color: rgba(142, 198, 63, 0.6);
- 9 </code></pre>
+ 9 </pre>
 <h4>
 Color Manipulation
 </h4>
@@ -5789,7 +5771,7 @@ specific color properties. With this control also comes complexity,
 which is why color manipulations are a bit less common than color
 alterations.
 </p>
-<pre><code>  - change-color() --- Set any property of a color
+<pre>  - change-color() --- Set any property of a color
     $color, [$red], [$green], [$blue], [$hue],
     [$saturation], [$lightness], [$alpha]
 
@@ -5800,21 +5782,21 @@ alterations.
   - scale-color() --- Fluidly scale any percentage based on property of
     a color
     $color, [$red], [$green], [$blue], [$saturation],
-    [$lightness], [$alpha]</code></pre>
+    [$lightness], [$alpha]</pre>
 <h4>
 Sass
 </h4>
-<pre><code> 1  color: change-color(#8ec63f, $red: 60, $green: 255) 
+<pre> 1  color: change-color(#8ec63f, $red: 60, $green: 255) 
  2  color: adjust-color(#8ec63f, $hue: 300, $lightness: 50%)  
  3  color: scale-color(#8ec63f, $lightness: 25%, $alpha: 30%) 
- 4 </code></pre>
+ 4 </pre>
 <h4>
 Compiled CSS
 </h4>
-<pre><code> 1  color: #3cff3f; 
+<pre> 1  color: #3cff3f; 
  2  color: white;
  3  color: #aad46f; 
- 4 </code></pre>
+ 4 </pre>
 <h4>
 Extends
 </h4>
@@ -5839,18 +5821,18 @@ code weight. Additionally, extends parley nicely with OOCSS and SMACSS.
 <h4>
 Sass
 </h4>
-<pre><code> 1  .alert  
+<pre> 1  .alert  
  2  border-radius: 10px
  3  padding: 10px 20px 
  4  .alert-error 
  5  @extend .alert 
  6  background: #f2dede
  7  color: #b94a48  
- 8 </code></pre>
+ 8 </pre>
 <h4>
 Compiled CSS
 </h4>
-<pre><code> 1  .alert, 
+<pre> 1  .alert, 
  2  .alert-error {  
  3  border-radius: 10px;  
  4  padding: 10px 20px;
@@ -5859,7 +5841,7 @@ Compiled CSS
  7  background: #f2dede;  
  8  color: #b94a48; 
  9  } 
- 10 </code></pre>
+ 10 </pre>
 <h4>
 Placeholder Selector Extend
 </h4>
@@ -5874,18 +5856,18 @@ the .alert selector never makes its way into the CSS.
 <h4>
 Sass
 </h4>
-<pre><code> 1  %alert  
+<pre> 1  %alert  
  2  border-radius: 10px
  3  padding: 10px 20px 
  4  .alert-error 
  5  @extend %alert 
  6  background: #f2dede
  7  color: #b94a48  
- 8 </code></pre>
+ 8 </pre>
 <h4>
 Compiled CSS
 </h4>
-<pre><code> 1  .alert-error {  
+<pre> 1  .alert-error {  
  2  border-radius: 10px;  
  3  padding: 10px 20px;
  4  } 
@@ -5893,7 +5875,7 @@ Compiled CSS
  6  background: #f2dede;  
  7  color: #b94a48; 
  8  } 
- 9 </code></pre>
+ 9 </pre>
 <h4>
 Element Selector Extend
 </h4>
@@ -5903,23 +5885,23 @@ As with classes, extends also work with standard element selectors too.
 <h4>
 Sass
 </h4>
-<pre><code> 1  h2
+<pre> 1  h2
  2  color: #9c6
  3  span 
  4  text-decoration: underline  
  5  .sub-heading 
  6  @extend h2
- 7 </code></pre>
+ 7 </pre>
 <h4>
 Compiled CSS
 </h4>
-<pre><code> 1  h2, .sub-heading { 
+<pre> 1  h2, .sub-heading { 
  2  color: #9c6; 
  3  } 
  4  h2 span, .sub-heading span {
  5  text-decoration: underline; 
  6  } 
- 7 </code></pre>
+ 7 </pre>
 <h4>
 Mixins
 </h4>
@@ -5943,23 +5925,23 @@ data-cites="include">@include</span> rule.
 <h4>
 Sass
 </h4>
-<pre><code> 1  @mixin btn($color, $color-hover)  
+<pre> 1  @mixin btn($color, $color-hover)  
  2  color: $color  
  3  &amp;:hover 
  4  color: $color-hover  
  5  .btn 
  6  +btn($color: #fff, $color-hover: #9799a7)  
- 7 </code></pre>
+ 7 </pre>
 <h4>
 Compiled CSS
 </h4>
-<pre><code> 1  .btn {  
+<pre> 1  .btn {  
  2  color: #fff; 
  3  } 
  4  .btn:hover { 
  5  color: #9799a7; 
  6  } 
- 7 </code></pre>
+ 7 </pre>
 <h4>
 Default Arguments
 </h4>
@@ -5970,23 +5952,23 @@ values, which may be over written if wished.
 <h4>
 Sass
 </h4>
-<pre><code> 1  @mixin btn($color: #fff, $color-hover: #9799a7) 
+<pre> 1  @mixin btn($color: #fff, $color-hover: #9799a7) 
  2  color: $color  
  3  &amp;:hover 
  4  color: $color-hover  
  5  .btn 
  6  +btn($color-hover: #9799a7)
- 7 </code></pre>
+ 7 </pre>
 <h4>
 Compiled CSS
 </h4>
-<pre><code> 1  .btn {  
+<pre> 1  .btn {  
  2    color: #fff; 
  3  } 
  4  .btn:hover { 
  5    color: #9799a7; 
  6  } 
- 7 </code></pre>
+ 7 </pre>
 <h4>
 Variable Arguments
 </h4>
@@ -5995,22 +5977,22 @@ When one or more values need to be passed to an argument the variable
 name may end with … inside of the mixin. In the example below with box
 shadows we can pass in comma separated values to the mixin.
 </p>
-<pre><code> 1  @mixin box-shadow($shadow...)  
+<pre> 1  @mixin box-shadow($shadow...)  
  2  -webkit-box-shadow: $shadow
  3  -moz-box-shadow: $shadow
  4  box-shadow: $shadow  
  5  .shadows
  6  +box-shadow(0 1px 2px #cecfd5, inset 0 0 5px #cecfd5) 
- 7 </code></pre>
+ 7 </pre>
 <h4>
 Compiled CSS
 </h4>
-<pre><code> 1  .shadows { 
+<pre> 1  .shadows { 
  2  -moz-box-shadow: 0 1px 2px #cecfd5, inset 0 0 5px #cecfd5;  
  3  -webkit-box-shadow: 0 1px 2px #cecfd5, inset 0 0 5px #cecfd5;  
  4  box-shadow: 0 1px 2px #cecfd5, inset 0 0 5px #cecfd5; 
  5  } 
- 6 </code></pre>
+ 6 </pre>
 <h4>
 Imports
 </h4>
@@ -6036,14 +6018,14 @@ within the HTML document.
 <h4>
 Sass
 </h4>
-<pre><code> 1  @import &quot;normalize&quot;
+<pre> 1  @import &quot;normalize&quot;
  2  @import &quot;grid&quot;, &quot;typography&quot; 
- 3 </code></pre>
+ 3 </pre>
 <h4>
 Compiled HTML
 </h4>
-<pre><code> 1  &lt;link href=&quot;styles.css&quot; rel=&quot;stylesheet&quot;&gt; 
- 2 </code></pre>
+<pre> 1  &lt;link href=&quot;styles.css&quot; rel=&quot;stylesheet&quot;&gt; 
+ 2 </pre>
 <h4>
 Loops &amp; Conditionals
 </h4>
@@ -6064,7 +6046,7 @@ operators. Relational operators looks at the relationship between two
 entities, while comparison operators determine equality or different
 between to entities.
 </p>
-<pre><code>    - &lt;
+<pre>    - &lt;
     Less than
 
     - &gt;
@@ -6080,8 +6062,8 @@ between to entities.
     Greather than or equal to
 
     - !=
-    Not equal to</code></pre>
-<pre><code> 1  // Relational Operators  
+    Not equal to</pre>
+<pre> 1  // Relational Operators  
  2  6 &lt; 10 // true 
  3  4 &lt;= 60 // true
  4  8 &gt; 2 // true  
@@ -6090,7 +6072,7 @@ between to entities.
  7  #fff == white // true 
  8  10 + 30 == 40 // true 
  9  normal != bold // true
- 10 </code></pre>
+ 10 </pre>
 <h4>
 If Function
 </h4>
@@ -6105,7 +6087,7 @@ be applied.
 <h4>
 Sass
 </h4>
-<pre><code> 1  $shay: awesome 
+<pre> 1  $shay: awesome 
  2  .shay
  3  @if $shay == awesome
  4    background: #ff7b29
@@ -6113,14 +6095,14 @@ Sass
  6    background: #0087cc
  7  @else  
  8    background: #333
- 9 </code></pre>
+ 9 </pre>
 <h4>
 Compiled CSS
 </h4>
-<pre><code> 1  .shay { 
+<pre> 1  .shay { 
  2  background: #ff7b29;  
  3  } 
- 4 </code></pre>
+ 4 </pre>
 <h4>
 For Loop
 </h4>
@@ -6136,17 +6118,17 @@ through 3, will output styles up to, and including, 3.
 <h4>
 Sass
 </h4>
-<pre><code> 1  @for $col from 1 to 6  
+<pre> 1  @for $col from 1 to 6  
  2  .col-#{$col}
  3  width: 40px * $col  
- 4 </code></pre>
+ 4 </pre>
  
 <br><br>
 
 <details>
   <summary>Compiled CSS</summary>
 
-<pre><code> 1  .col-1 {
+<pre> 1  .col-1 {
  2  width: 40px; 
  3  } 
  4  .col-2 {
@@ -6161,7 +6143,7 @@ Sass
  1  .col-5 {
  2  width: 200px;
  3  } 
- 1 </code></pre>
+ 1 </pre>
 </details>
 
 <h4>Each Loop</h4>
@@ -6174,17 +6156,17 @@ list. List may include multiple comma separated items.
 
 <h4>Sass</h4>
 
-<pre><code> 1  @each $class in uxd, rails, html, css 
+<pre> 1  @each $class in uxd, rails, html, css 
  2  .#{$class}-logo
  3  background: url(&quot;/img/#{$class}.jpg&quot;)
- 4 </code></pre>
+ 4 </pre>
  
 <br><br>
 
 <details>
   <summary>Compiled CSS</summary>
 
-<pre><code> 1  .uxd-logo {
+<pre> 1  .uxd-logo {
  2    background: url(&quot;/img/uxd.jpg&quot;);
  3  } 
  4  .rails-logo {
@@ -6196,7 +6178,7 @@ list. List may include multiple comma separated items.
  10 .css-logo {
  11   background: url(&quot;/img/css.jpg&quot;);
  12 } 
- 13  </code></pre>
+ 13  </pre>
 </details>
 
 <h4>While Loop</h4>
@@ -6210,19 +6192,19 @@ variable can be finely controlled allowing for precise looping.
 <h4>
 Sass
 </h4>
-<pre><code> 1  $heading: 1 
+<pre> 1  $heading: 1 
  2  @while $heading &lt;= 6  
  3  h#{$heading}
  4  font-size: 2em - ($heading * .25em)
  5  $heading: $heading + 1 
- 6 </code></pre>
+ 6 </pre>
 
 <br><br>
 
 <details>
   <summary>Compiled CSS</summary>
 
-<pre><code> 1  h1 {
+<pre> 1  h1 {
  2    font-size: 1.75em;
  3  }
  4  h2 {
@@ -6239,7 +6221,7 @@ Sass
  15 }
  16 h6 { 16 font-size: 0.5em;
  17 }
- 18 </code></pre>
+ 18 </pre>
 
 </details>
 
@@ -6378,8 +6360,8 @@ all of the HTML has been parsed. However, at times, JavaScript is needed
 to help render HTML and determine it’s behavior, thus may be referenced
 within a documents head.
 </p>
-<pre><code> 1  &lt;script src=&quot;script.js&quot;&gt;&lt;/script&gt; 
- 2 </code></pre>
+<pre> 1  &lt;script src=&quot;script.js&quot;&gt;&lt;/script&gt; 
+ 2 </pre>
 <h4>
 Values &amp; Variables
 </h4>
@@ -6411,11 +6393,11 @@ removing spaces, capitalizing the beginning of each new word except for
 the initial word. For example, shay_is_awesome would more commonly
 named  shayIsAwesome.
 </p>
-<pre><code> 1  var theStarterLeague = 125; 
+<pre> 1  var theStarterLeague = 125; 
  2  var food_truck = &#39;Coffee&#39;;
  3  var mixtape01 = true; 
  4  var vinyl = ]&#39;Miles Davis&#39;, &#39;Frank Sinatra&#39;, &#39;Ray Charles&#39;[; 
- 5 </code></pre>
+ 5 </pre>
 <h4>
 Statements
 </h4>
@@ -6428,10 +6410,10 @@ separated with semicolons, ;. New statements should begin on a new line,
 and indentation should be used when nesting statements for better
 legibility, but is not required.
 </p>
-<pre><code> 1  log(polaroid);  
+<pre> 1  log(polaroid);  
  2  return(&#39;bicycle lane&#39;);
  3  alert(&#39;Congratulations, you &#39; + outcome);  
- 4 </code></pre>
+ 4 </pre>
 <h4>
 Functions
 </h4>
@@ -6447,10 +6429,10 @@ function name, a list of commas separated arguments wrapped in
 parentheses, if necessary, and then the JavaScript statement, or
 statements, that defines the function enclosed in curly braces, {}.
 </p>
-<pre><code> 1  function sayHello(name) {
+<pre> 1  function sayHello(name) {
  2  return(&#39;Hello &#39; + name);  
  3  } 
- 4 </code></pre>
+ 4 </pre>
 <h4>
 Arrays
 </h4>
@@ -6487,7 +6469,7 @@ properties, each having a key followed by a colon and value.
 <summary>
 Example, Object
 </summary>
-<pre><code> 1  // Object
+<pre> 1  // Object
  2  var school = {
  3    name: &#39;The Starter League&#39;,
  4    location: &#39;Merchandise Mart&#39;,
@@ -6496,7 +6478,7 @@ Example, Object
  7  };
  8  // Array
  9  var school = [&#39;Austin&#39;, &#39;Chicago&#39;, &#39;Portland&#39;];
- 10 </code></pre>
+ 10 </pre>
 </details>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 13. web inspector console (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -6550,9 +6532,9 @@ production environment it is encouraged to use the minified version for
 better loading times. Additionally, using a CDN like Google also helps
 with loading time, and potential caching benefits.
 </p>
-<pre><code> 1  &lt;script src=&quot;//aja
+<pre> 1  &lt;script src=&quot;//aja
  2  x.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js&quot;&gt;&lt;/script&gt; 
- 3  &lt;script src=&quot;script.js&quot;&gt;&lt;/script&gt; </code></pre>
+ 3  &lt;script src=&quot;script.js&quot;&gt;&lt;/script&gt; </pre>
 <p>
 In the code sample above, notice the second script element referencing a
 second JavaScript file. All of the custom, handwritten JavaScript and
@@ -6582,9 +6564,9 @@ element node to perform an action on it. These selections and actions
 should be written in a new file, referenced outside of the actual jQuery
 library.
 </p>
-<pre><code> 1  $();
+<pre> 1  $();
  2  jQuery();  
- 3 </code></pre>
+ 3 </pre>
 <h4>
 Document Ready
 </h4>
@@ -6596,10 +6578,10 @@ ready to be altered. By placing all of our other custom written jQuery
 inside of this function we can guarantee that it will not be executed
 until the page has loaded and the DOM is ready.
 </p>
-<pre><code> 1  $(document).ready(function(event){  
+<pre> 1  $(document).ready(function(event){  
  2  // jQuery code  
  3  });  
- 4 </code></pre>
+ 4 </pre>
 <h4>
 Selectors
 </h4>
@@ -6618,12 +6600,12 @@ Invoking the jQuery object, $(), containing a selector will return that
 DOM node to manipulate it. The selector falls within the
 parentheses, (‘…’), and may select elements just like that of CSS.
 </p>
-<pre><code> 1  $(&#39;.feature&#39;); // Class selector  
+<pre> 1  $(&#39;.feature&#39;); // Class selector  
  2  $(&#39;li strong&#39;); // Descendant selector 
  3  $(&#39;em, i&#39;); // Multiple selector  
  4  $(&#39;a[target=&quot;_blank&quot;]&#39;); // Attribute selector
  5  $(&#39;p:nth-child(2)&#39;); // Pseudo-class selector
- 6 </code></pre>
+ 6 </pre>
 <h4>
 This Selection Keyword
 </h4>
@@ -6633,10 +6615,10 @@ element in which was referenced inside of the original selector. In this
 event the this keyword may be used to refer to the element selected in
 the current handler.
 </p>
-<pre><code> 1  $(&#39;div&#39;).click(function(event){
+<pre> 1  $(&#39;div&#39;).click(function(event){
  2  $(this);  
  3  });  
- 4 </code></pre>
+ 4 </pre>
 <h4>
 jQuery Selection Filters
 </h4>
@@ -6647,8 +6629,8 @@ rel="noopener noreferrer" target="_blank"> filters</a> built into jQuery
 to help out. These filters are an extension to CSS3 and provide more
 control over selecting an element or its relatives.
 </p>
-<pre><code> 1  $(&#39;div:has(strong)&#39;);  
- 2  </code></pre>
+<pre> 1  $(&#39;div:has(strong)&#39;);  
+ 2  </pre>
 <p>
 As they stand these filters may be used inside of the selector, however
 not being native to the DOM they are a bit slow. The best results with
@@ -6672,8 +6654,8 @@ the div elements in the DOM, which are then filtered using
 the .not() method. With this specific method all of the div elements
 without a class of type or collection will be selected.
 </p>
-<pre><code> 1  $(&#39;div&#39;).not(&#39;.type, .collection&#39;);
- 2 </code></pre>
+<pre> 1  $(&#39;div&#39;).not(&#39;.type, .collection&#39;);
+ 2 </pre>
 <h4>
 Chaining Methods
 </h4>
@@ -6687,8 +6669,8 @@ The code sample below uses both the .not() method and
 the .parent() method. Combined together this will only select the parent
 elements of div elements without a class of type or collection.
 </p>
-<pre><code> 1  $(&#39;div&#39;).not(&#39;.type, .collection&#39;).parent();  
- 2 </code></pre>
+<pre> 1  $(&#39;div&#39;).not(&#39;.type, .collection&#39;).parent();  
+ 2 </pre>
 <h4>
 Traversing Methods
 </h4>
@@ -6821,11 +6803,11 @@ method to determine what piece of information is to be retrieved.
 Additionally, the same selector and method may also be used to set a
 piece of information.
 </p>
-<pre><code> 1  // Gets the value of the alt attribute  
+<pre> 1  // Gets the value of the alt attribute  
  2  $(&#39;img&#39;).attr(&#39;alt&#39;);  
  3  // Sets the value of the alt attribute  
  4  $(&#39;img&#39;).attr(&#39;alt&#39;, &#39;Wild kangaroo&#39;);
- 5 </code></pre>
+ 5 </pre>
 <p>
 In the examples and snippets to follow methods will primarily be used in
 a setting mode, however they may also be able to be used in a getting
@@ -6843,10 +6825,10 @@ is used to remove all classes from any paragraphs, and lastly
 the .attr() method is used to find the value of the title attribute of
 any abbr element and set it to Hello World.
 </p>
-<pre><code> 1  $(&#39;li:even&#39;).addClass(&#39;even-item&#39;);
+<pre> 1  $(&#39;li:even&#39;).addClass(&#39;even-item&#39;);
  2  $(&#39;p&#39;).removeClass(); 
  3  $(&#39;abbr&#39;).attr(&#39;title&#39;, &#39;Hello World&#39;);  
- 4 </code></pre>
+ 4 </pre>
 <h4>
 Attribute Manipulation Methods
 </h4>
@@ -6904,14 +6886,14 @@ values, however other units of measurement may be used. As seen below,
 to change the unit of measurement identify the value then use a plus
 sign followed by the quoted unit of measurement.
 </p>
-<pre><code> 1  $(&#39;h1 span&#39;).css(&#39;font-size&#39;, &#39;normal&#39;); 
+<pre> 1  $(&#39;h1 span&#39;).css(&#39;font-size&#39;, &#39;normal&#39;); 
  2  $(&#39;div&#39;).css({  
  3  fontSize: &#39;13px&#39;,
  4  background: &#39;#f60&#39;  
  5  });  
  6  $(&#39;header&#39;).height(200); 
  7  $(&#39;.extend&#39;).height(30 + &#39;em&#39;); 
- 8 </code></pre>
+ 8 </pre>
 <h4>
 Style Manipulation Methods
 </h4>
@@ -6966,10 +6948,10 @@ new h3 element just inside any section, the .after() method is adding a
 new em element just after the link, and the .text() method is replacing
 the text of any h1 elements with the text Hello World.
 </p>
-<pre><code> 1  $(&#39;section&#39;).prepend(&#39;&lt;h3&gt;Featured&lt;/h3&gt;&#39;);
+<pre> 1  $(&#39;section&#39;).prepend(&#39;&lt;h3&gt;Featured&lt;/h3&gt;&#39;);
  2  $(&#39;a[target=&quot;_blank&quot;]&#39;).after(&#39;&lt;em&gt;New window.&lt;/em&gt;&#39;); 
  3  $(&#39;h1&#39;).text(&#39;Hello World&#39;); 
- 4 </code></pre>
+ 4 </pre>
 <h4>
 DOM Manipulation Methods
 </h4>
@@ -7060,10 +7042,10 @@ Inside of the function is another selector with the .addClass() method
 bound to it. Now, when a list item is clicked on that list item, via
 the this keyword, receives the class of saved-item.
 </p>
-<pre><code> 1  $(&#39;li&#39;).click(function(event){ 
+<pre> 1  $(&#39;li&#39;).click(function(event){ 
  2  $(this).addClass(&#39;saved-item&#39;);
  3  });  
- 4 </code></pre>
+ 4 </pre>
 <h4>
 Event Flexibility
 </h4>
@@ -7083,10 +7065,10 @@ in place of the .click() method. Now the click event name is passed in
 as the first argument inside the .on() method with the event handler
 function staying the same as before.
 </p>
-<pre><code> 1  $(&#39;li&#39;).on(&#39;click&#39;, function(event){ 
+<pre> 1  $(&#39;li&#39;).on(&#39;click&#39;, function(event){ 
  2    $(this).addClass(&#39;saved-item&#39;);
  3  });  
- 4 </code></pre>
+ 4 </pre>
 <h4>
 Nesting Events
 </h4>
@@ -7097,10 +7079,10 @@ the hover argument, thus being called when hovering over any element
 with the class of pagination. Upon calling the .on() event
 the .click() event is called on the anchor with the up ID.
 </p>
-<pre><code> 1  $(&#39;.pagination&#39;).on(&#39;hover&#39;, function(event){ 
+<pre> 1  $(&#39;.pagination&#39;).on(&#39;hover&#39;, function(event){ 
  2    $(&#39;a#up&#39;).click(); 
  3  });  
- 4 </code></pre>
+ 4 </pre>
 <h4>
 Event Demo
 </h4>
@@ -7112,17 +7094,17 @@ clicking the close icon.
 <h4>
 HTML
 </h4>
-<pre><code> 1  &lt;div class=&quot;notice-warning&quot;&gt;
+<pre> 1  &lt;div class=&quot;notice-warning&quot;&gt;
  2    &lt;div class=&quot;notice-close&quot;&gt;x&lt;/div&gt;  
  3    &lt;strong&gt;Warning!&lt;/strong&gt; I&quot;m about to lose my cool.  
  4  &lt;/div&gt; 
- 5  </code></pre>
+ 5  </pre>
 &lt;h4JavaScript
 </h4>
-<pre><code> 1  $(&#39;.notice-close&#39;).on(&#39;click&#39;, function(event){
+<pre> 1  $(&#39;.notice-close&#39;).on(&#39;click&#39;, function(event){
  2    $(&#39;.notice-warning&#39;).remove();  
  3  });
- 4  </code></pre>
+ 4  </pre>
 <h4>
 Demo
 </h4>
@@ -7326,10 +7308,10 @@ keyword fast defaults to 200 milliseconds. Using a keyword value is
 fine, but millisecond values may also be passed in directly. Keyword
 values must be quoted while millisecond values do not.
 </p>
-<pre><code> 1  $(&#39;.error&#39;).show();
+<pre> 1  $(&#39;.error&#39;).show();
  2  $(&#39;.error&#39;).show(&#39;slow&#39;); 
  3  $(&#39;.error&#39;).show(500);
- 4 </code></pre>
+ 4 </pre>
 <h4>
 Effect Easing
 </h4>
@@ -7343,9 +7325,9 @@ animation at a slow pace, picking up speed during the animation, and
 then slows down again before completion. The linear value runs the
 animation at one constant pace for the entire duration.
 </p>
-<pre><code> 1  $(&#39;.error&#39;).show(&#39;slow&#39;, &#39;linear&#39;);
+<pre> 1  $(&#39;.error&#39;).show(&#39;slow&#39;, &#39;linear&#39;);
  2  $(&#39;.error&#39;).show(500, &#39;linear&#39;);
- 3 </code></pre>
+ 3 </pre>
 <h4>
 jQuery UI
 </h4>
@@ -7369,10 +7351,10 @@ called a callback function. The callback function should be placed after
 the duration or easing, if either exist. Inside this function new events
 or effects may be placed, each following their own required syntax.
 </p>
-<pre><code> 1  $(&#39;.error&#39;).show(&#39;slow&#39;, &#39;linear&#39;, function(event){  
+<pre> 1  $(&#39;.error&#39;).show(&#39;slow&#39;, &#39;linear&#39;, function(event){  
  2  $(&#39;.error .status&#39;).text(&#39;Continue&#39;);
  3  });  
- 4 </code></pre>
+ 4 </pre>
 <h4>
 Effect Syntax
 </h4>
@@ -7398,20 +7380,20 @@ animation is complete.
 <h4>
 HTML
 </h4>
-<pre><code> 1  &lt;div class=&quot;notice-warning&quot;&gt;
+<pre> 1  &lt;div class=&quot;notice-warning&quot;&gt;
  2    &lt;div class=&quot;notice-close&quot;&gt;x&lt;/div&gt;  
  3    &lt;strong&gt;Warning!&lt;/strong&gt; I&#39;m about to lose my cool.  
  4  &lt;/div&gt; 
- 5  </code></pre>
+ 5  </pre>
 <h4>
 JavaScript
 </h4>
-<pre><code> 1  $(&#39;.notice-close&#39;).on(&#39;click&#39;, function(event){  
+<pre> 1  $(&#39;.notice-close&#39;).on(&#39;click&#39;, function(event){  
  2    $(&#39;.notice-warning&#39;).fadeOut(&#39;slow&#39;, function(event){  
  3      $(this).remove(); 
  4    });  
  5  });  
- 6 </code></pre>
+ 6 </pre>
 <h4>
 Demo
 </h4>
@@ -7494,18 +7476,18 @@ Slide Demo
 <h4>
 HTML
 </h4>
-<pre><code> 1  &lt;div class=&quot;panel&quot;&gt;  
+<pre> 1  &lt;div class=&quot;panel&quot;&gt;  
  2    &lt;div class=&quot;panel-stage&quot;&gt;&lt;/div&gt;
  3    &lt;a href=&quot;#&quot; class=&quot;panel-tab&quot;&gt;Open &lt;span&gt;&amp;#9660;&lt;/span&gt;&lt;/a&gt; 
  4  &lt;/div&gt;
- 5 </code></pre>
+ 5 </pre>
 
 <br><br>
 
 <details>
   <summary>JavaScript</summary>
   
-<pre><code> 1  $(&#39;.panel-tab&#39;).on(&#39;click&#39;, function(event){  
+<pre> 1  $(&#39;.panel-tab&#39;).on(&#39;click&#39;, function(event){  
  2    event.preventDefault();  
  3    $(&#39;.panel-stage&#39;).slideToggle(&#39;slow&#39;, function(event){ 
  4      if($(this).is(&#39;:visible&#39;)){ 
@@ -7515,7 +7497,7 @@ HTML
  8      } 
  9    });  
  10 });  
- 11 </code></pre>
+ 11 </pre>
 
 </details>
 
@@ -7525,7 +7507,7 @@ HTML
 
 <h4>HTML</h4>
 
-<pre><code> 1  &lt;ul class=&quot;tabs-nav&quot;&gt; 
+<pre> 1  &lt;ul class=&quot;tabs-nav&quot;&gt; 
  2    &lt;li&gt;&lt;a href=&quot;#tab-1&quot;&gt;Features&lt;/a&gt;&lt;/li&gt; 
  3    &lt;li&gt;&lt;a href=&quot;#tab-2&quot;&gt;Details&lt;/a&gt;&lt;/li&gt;  
  4  &lt;/ul&gt;  
@@ -7533,14 +7515,14 @@ HTML
  6    &lt;div id=&quot;tab-1&quot;&gt;...&lt;/div&gt;
  7    &lt;div id=&quot;tab-2&quot;&gt;...&lt;/div&gt;
  8  &lt;/div&gt; 
- 9  </code></pre>
+ 9  </pre>
 
 <br><br>
 
 <details>
   <summary>JavaScript</summary>
 
-<pre><code> 1  // Show the first tab by default
+<pre> 1  // Show the first tab by default
  2  $(&#39;.tabs-stage div&#39;).hide(); 
  3  $(&#39;.tabs-stage div:first&#39;).show(); 
  4  $(&#39;.tabs-nav li:first&#39;).addClass(&#39;tab-active&#39;);
@@ -7552,7 +7534,7 @@ HTML
  10   $(&#39;.tabs-stage div&#39;).hide(); 
  11   $($(this).attr(&#39;href&#39;)).show();
  12 });
- 13  </code></pre>
+ 13  </pre>
 
 </details>
 
@@ -7656,13 +7638,13 @@ The actual syntax for the transform property is quite simple, including
 the transform property followed by the value. The value specifies the
 transform type followed by a specific amount inside parentheses.
 </p>
-<pre><code> 1  div {
+<pre> 1  div {
  2    -webkit-transform: scale(1.5);
  3    -moz-transform: scale(1.5);
  4    -o-transform: scale(1.5);
  5    transform: scale(1.5);
  6  }
- 7 </code></pre>
+ 7 </pre>
 <p>
 Notice how the transform property includes multiple vendor prefixes to
 gain the best support across all browsers. The un-prefixed declaration
@@ -7706,19 +7688,19 @@ discuss how you can change this default point of rotation.
 <h4>
 HTML
 </h4>
-<pre><code> 1  &lt;figure class=&quot;box-1&quot;&gt;Box 1&lt;/figure&gt;
+<pre> 1  &lt;figure class=&quot;box-1&quot;&gt;Box 1&lt;/figure&gt;
  2  &lt;figure class=&quot;box-2&quot;&gt;Box 2&lt;/figure&gt;
- 3 </code></pre>
+ 3 </pre>
 <h4>
 CSS
 </h4>
-<pre><code> 1  .box-1 {
+<pre> 1  .box-1 {
  2    transform: rotate(20deg);
  3  } 
  4  .box-2 {
  5    transform: rotate(-55deg);  
  6  } 
- 7 </code></pre>
+ 7 </pre>
 <h4>
 Rotate Demo
 </h4>
@@ -7742,19 +7724,19 @@ value greater than or equal to 1.01 makes an element appear larger.
 <h4>
 HTML
 </h4>
-<pre><code> 1  &lt;figure class=&quot;box-1&quot;&gt;Box 1&lt;/figure&gt;
+<pre> 1  &lt;figure class=&quot;box-1&quot;&gt;Box 1&lt;/figure&gt;
  2  &lt;figure class=&quot;box-2&quot;&gt;Box 2&lt;/figure&gt;
- 3 </code></pre>
+ 3 </pre>
 <h4>
 CSS
 </h4>
-<pre><code> 1  .box-1 {
+<pre> 1  .box-1 {
  2    transform: scale(.75);
  3  } 
  4  .box-2 {
  5    transform: scale(1.25);  
  6  } 
- 7 </code></pre>
+ 7 </pre>
 <h4>
 Scale Demo
 </h4>
@@ -7770,14 +7752,14 @@ comma, and then the y axis value.
 <h4>
 HTML
 </h4>
-<pre><code> 1  &lt;figure class=&quot;box-1&quot;&gt;Box 1&lt;/figure&gt;
+<pre> 1  &lt;figure class=&quot;box-1&quot;&gt;Box 1&lt;/figure&gt;
  2  &lt;figure class=&quot;box-2&quot;&gt;Box 2&lt;/figure&gt;
  3  &lt;figure class=&quot;box-3&quot;&gt;Box 3&lt;/figure&gt;
- 4 </code></pre>
+ 4 </pre>
 <h4>
 CSS
 </h4>
-<pre><code> 1  .box-1 {
+<pre> 1  .box-1 {
  2    transform: scaleX(.5);
  3  } 
  4  .box-2 {
@@ -7786,7 +7768,7 @@ CSS
  7  .box-3 {
  8    transform: scale(.5, 1.15); 
  9  } 
- 10  </code></pre>
+ 10  </pre>
 <h4>
 Multiple Scaling Demo
 </h4>
@@ -7816,14 +7798,14 @@ position.
 <h4>
 HTML
 </h4>
-<pre><code> 1  &lt;figure class=&quot;box-1&quot;&gt;Box 1&lt;/figure&gt;
+<pre> 1  &lt;figure class=&quot;box-1&quot;&gt;Box 1&lt;/figure&gt;
  2  &lt;figure class=&quot;box-2&quot;&gt;Box 2&lt;/figure&gt;
  3  &lt;figure class=&quot;box-3&quot;&gt;Box 3&lt;/figure&gt;
- 4 </code></pre>
+ 4 </pre>
 <h4>
 CSS
 </h4>
-<pre><code> 1  .box-1 {
+<pre> 1  .box-1 {
  2    transform: translateX(-10px);  
  3  } 
  4  .box-2 {
@@ -7832,7 +7814,7 @@ CSS
  7  .box-3 {
  8    transform: translate(-10px, 25%); 
  9  } 
- 10 </code></pre>
+ 10 </pre>
 <h4>
 Translate Demo
 </h4>
@@ -7856,14 +7838,14 @@ apply here.
 <h4>
 HTML
 </h4>
-<pre><code> 1  &lt;figure class=&quot;box-1&quot;&gt;Box 1&lt;/figure&gt;
+<pre> 1  &lt;figure class=&quot;box-1&quot;&gt;Box 1&lt;/figure&gt;
  2  &lt;figure class=&quot;box-2&quot;&gt;Box 2&lt;/figure&gt;
  3  &lt;figure class=&quot;box-3&quot;&gt;Box 3&lt;/figure&gt;
- 4 </code></pre>
+ 4 </pre>
 <h4>
 CSS
 </h4>
-<pre><code> 1  .box-1 {
+<pre> 1  .box-1 {
  2    transform: skewX(5deg);  
  3  } 
  4  .box-2 {
@@ -7872,7 +7854,7 @@ CSS
  7  .box-3 {
  8    transform: skew(5deg, -20deg); 
  9  } 
- 10 </code></pre>
+ 10 </pre>
 <h4>
 Skew Demo
 </h4>
@@ -7894,19 +7876,19 @@ same as if you were to set the height of an element numerous times.
 <h4>
 HTML
 </h4>
-<pre><code> 1  &lt;figure class=&quot;box-1&quot;&gt;Box 1&lt;/figure&gt;
+<pre> 1  &lt;figure class=&quot;box-1&quot;&gt;Box 1&lt;/figure&gt;
  2  &lt;figure class=&quot;box-2&quot;&gt;Box 2&lt;/figure&gt;
- 3 </code></pre>
+ 3 </pre>
 <h4>
 CSS
 </h4>
-<pre><code> 1  .box-1 {
+<pre> 1  .box-1 {
  2    transform: rotate(25deg) scale(.75);
  3  }
  4  .box-2 {
  5    transform: skew(10deg, 20deg) translateX(20px);
  6  }
- 7  </code></pre>
+ 7  </pre>
 <h4>
 Combining Transforms Demo
 </h4>
@@ -7925,18 +7907,18 @@ transforms, try your hand at using the matrix property.
 <h4>
 HTML
 </h4>
-<pre><code> 1  &lt;div class=&quot;cube&quot;&gt; 
+<pre> 1  &lt;div class=&quot;cube&quot;&gt; 
  2    &lt;figure class=&quot;side top&quot;&gt;1&lt;/figure&gt;  
  3    &lt;figure class=&quot;side left&quot;&gt;2&lt;/figure&gt; 
  4    &lt;figure class=&quot;side right&quot;&gt;3&lt;/figure&gt;
  5  &lt;/div&gt; 
- 6  </code></pre>
+ 6  </pre>
 <br><br>
 <details>
 <summary>
 CSS
 </summary>
-<pre><code> 1  .cube {
+<pre> 1  .cube {
  2    position: relative;
  3  }
  4  .side {
@@ -7957,7 +7939,7 @@ CSS
  19   transform: rotate(-15deg) skew(-15deg, -15deg) translate(50%,
  10   100%);
  21 }
- 22 </code></pre>
+ 22 </pre>
 </details>
 <h4>
 Demo
@@ -7986,17 +7968,17 @@ the origin to 20 pixels across and 50 pixels down the element.
 <h4>
 HTML
 </h4>
-<pre><code> 1  &lt;figure class=&quot;box-1&quot;&gt;Box 1&lt;/figure&gt;
+<pre> 1  &lt;figure class=&quot;box-1&quot;&gt;Box 1&lt;/figure&gt;
  2  &lt;figure class=&quot;box-2&quot;&gt;Box 2&lt;/figure&gt;
  3  &lt;figure class=&quot;box-3&quot;&gt;Box 3&lt;/figure&gt;
  4  &lt;figure class=&quot;box-4&quot;&gt;Box 3&lt;/figure&gt;
- 5 </code></pre>
+ 5 </pre>
 <br><br>
 <details>
 <summary>
 CSS
 </summary>
-<pre><code> 1  .box-1 {
+<pre> 1  .box-1 {
  2    transform: rotate(15deg);
  3    transform-origin: 0 0;
  4  }
@@ -8012,7 +7994,7 @@ CSS
  14   transform: scale(.75) translate(-10px, -10px);
  15   transform-origin: 20px 50px;
  16 }
- 17 </code></pre>
+ 17 </pre>
 </details>
 <h4>
 Transform Origin Demo
@@ -8053,17 +8035,17 @@ their individual perspectives with the perspective value.
 <h4>
 HTML
 </h4>
-<pre><code> 1  &lt;figure class=&quot;box&quot;&gt;Box 1&lt;/figure&gt;
+<pre> 1  &lt;figure class=&quot;box&quot;&gt;Box 1&lt;/figure&gt;
  2  &lt;figure class=&quot;box&quot;&gt;Box 2&lt;/figure&gt;
  3  &lt;figure class=&quot;box&quot;&gt;Box 3&lt;/figure&gt;
- 4 </code></pre>
+ 4 </pre>
 <h4>
 CSS
 </h4>
-<pre><code> 1  .box {
+<pre> 1  .box {
  2    transform: perspective(200px) rotateX(45deg);
  3  }
- 4 </code></pre>
+ 4 </pre>
 <h4>
 Perspective Value Demo
 </h4>
@@ -8075,22 +8057,22 @@ the perspective property on their direct parent element.
 <h4>
 HTML
 </h4>
-<pre><code> 1  &lt;div class=&quot;group&quot;&gt;  
+<pre> 1  &lt;div class=&quot;group&quot;&gt;  
  2    &lt;figure class=&quot;box&quot;&gt;Box 1&lt;/figure&gt;
  3    &lt;figure class=&quot;box&quot;&gt;Box 2&lt;/figure&gt;
  4    &lt;figure class=&quot;box&quot;&gt;Box 3&lt;/figure&gt;
  5  &lt;/div&gt;
- 6 </code></pre>
+ 6 </pre>
 <h4>
 CSS
 </h4>
-<pre><code> 1  .group {
+<pre> 1  .group {
  2    perspective: 200px;
  3  }
  4  .box {
  5    transform: rotateX(45deg);
  6  }
- 7 </code></pre>
+ 7 </pre>
 <h4>
 Perspective Property Demo
 </h4>
@@ -8118,19 +8100,19 @@ depth values.
 <h4>
 HTML
 </h4>
-<pre><code> 1  &lt;figure class=&quot;box-1&quot;&gt;Box 1&lt;/figure&gt;
+<pre> 1  &lt;figure class=&quot;box-1&quot;&gt;Box 1&lt;/figure&gt;
  2  &lt;figure class=&quot;box-2&quot;&gt;Box 2&lt;/figure&gt;
- 3 </code></pre>
+ 3 </pre>
 <h4>
 CSS
 </h4>
-<pre><code> 1  .box-1 {
+<pre> 1  .box-1 {
  2    transform: perspective(100px) rotateX(45deg);
  3  }
  4  .box-2 {
  5    transform: perspective(1000px) rotateX(45deg);
  6  }
- 7 </code></pre>
+ 7 </pre>
 <h4>
 Perspective Depth Value Demo
 </h4>
@@ -8151,7 +8133,7 @@ of the vanishing point of a transform.
 <summary>
 HTML
 </summary>
-<pre><code> 1  &lt;div class=&quot;original original-1&quot;&gt;
+<pre> 1  &lt;div class=&quot;original original-1&quot;&gt;
  2    &lt;figure class=&quot;box&quot;&gt;Box 1&lt;/figure&gt;
  3  &lt;/div&gt;
  4  &lt;div class=&quot;original original-2&quot;&gt;
@@ -8160,14 +8142,14 @@ HTML
  7  &lt;div class=&quot;original original-3&quot;&gt;
  8    &lt;figure class=&quot;box&quot;&gt;Box 3&lt;/figure&gt;
  9  &lt;/div&gt;
- 10  </code></pre>
+ 10  </pre>
 </details>
 <br><br>
 <details>
 <summary>
 CSS
 </summary>
-<pre><code> 1  .original {
+<pre> 1  .original {
  2    perspective: 200px;
  3  }
  4  .box {
@@ -8182,7 +8164,7 @@ CSS
  13  .original-3 {
  14   perspective-origin: 20px 40px;
  15 }
- 16 </code></pre>
+ 16 </pre>
 </details>
 <h4>
 Perspective Origin Demo
@@ -8222,15 +8204,15 @@ rotate the element counterclockwise.
 </p>
 <h4>HTML</h4>
 
-<pre><code> 1  &lt;figure class=&quot;box-1&quot;&gt;Box 1&lt;/figure&gt;
+<pre> 1  &lt;figure class=&quot;box-1&quot;&gt;Box 1&lt;/figure&gt;
  2  &lt;figure class=&quot;box-2&quot;&gt;Box 2&lt;/figure&gt;
  3  &lt;figure class=&quot;box-3&quot;&gt;Box 3&lt;/figure&gt;
- 4 </code></pre>
+ 4 </pre>
  
 <details>
   <summary>CSS</summary>
   
-<pre><code> 1  .box-1 {
+<pre> 1  .box-1 {
  2    transform: perspective(200px) rotateX(45deg);
  3  }
  4  .box-2 {
@@ -8239,7 +8221,7 @@ rotate the element counterclockwise.
  7  .box-3 {
  8    transform: perspective(200px) rotateZ(45deg);
  9  }
- 10 </code></pre>
+ 10 </pre>
 </details>
 
 <h4>3D Rotate Demo</h4>
@@ -8261,19 +8243,19 @@ the elements will appear to be unchanged.
 <h4>
 HTML
 </h4>
-<pre><code> 1  &lt;figure class=&quot;box-1&quot;&gt;Box 1&lt;/figure&gt;
+<pre> 1  &lt;figure class=&quot;box-1&quot;&gt;Box 1&lt;/figure&gt;
  2  &lt;figure class=&quot;box-2&quot;&gt;Box 2&lt;/figure&gt;
- 3 </code></pre>
+ 3 </pre>
 <h4>
 CSS
 </h4>
-<pre><code> 1  .box-1 {
+<pre> 1  .box-1 {
  2    transform: perspective(200px) scaleZ(1.75) rotateX(45deg);
  3  }
  4  .box-2 {
  5    transform: perspective(200px) scaleZ(.25) rotateX(45deg);
  6  }
- 7 </code></pre>
+ 7 </pre>
 
 <h4>3D Scale Demo</h4>
 
@@ -8293,19 +8275,19 @@ for example.</p>
 
 <h4>HTML</h4>
 
-<pre><code> 1  &lt;figure class=&quot;box-1&quot;&gt;Box 1&lt;/figure&gt;
+<pre> 1  &lt;figure class=&quot;box-1&quot;&gt;Box 1&lt;/figure&gt;
  2  &lt;figure class=&quot;box-2&quot;&gt;Box 2&lt;/figure&gt;
- 3 </code></pre>
+ 3 </pre>
 
 <h4>CSS</h4>
 
-<pre><code> 1  .box-1 {
+<pre> 1  .box-1 {
  2    transform: perspective(200px) translateZ(-50px);
  3  }
  4  .box-2 {
  5    transform: perspective(200px) translateZ(50px);
  6  }
- 7 </code></pre>
+ 7 </pre>
 
 <h4>3D Translate Demo</h4>
 
@@ -8343,19 +8325,19 @@ lie flat on the two-dimensional plane.</p>
 
 <h4>HTML</h4>
 
-<pre><code> 1  &lt;div class=&quot;rotate three-d&quot;&gt;  
+<pre> 1  &lt;div class=&quot;rotate three-d&quot;&gt;  
  2    &lt;figure class=&quot;box&quot;&gt;Box 1&lt;/figure&gt;
  3  &lt;/div&gt;
  4  &lt;div class=&quot;rotate&quot;&gt; 
  5    &lt;figure class=&quot;box&quot;&gt;Box 2&lt;/figure&gt;
  6  &lt;/div&gt;
- 7 </code></pre>
+ 7 </pre>
 
 <br><br>
 <details>
   <summary>CSS</summary>
   
-<pre><code> 1  .rotate {
+<pre> 1  .rotate {
  2    transform: perspective(200px) rotateY(45deg);
  3  }
  4  .three-d {
@@ -8365,7 +8347,7 @@ lie flat on the two-dimensional plane.</p>
  8    transform: rotateX(15deg) translateZ(20px);
  9    transform-origin: 0 0;
  10 }
- 11 </code></pre>
+ 11 </pre>
 </details>
 
 <h4>Transform Style Demo</h4>
@@ -8394,21 +8376,21 @@ rel="noopener noreferrer" target="_blank">animations</a>.</p>
 
 <h4>HTML</h4>
 
-<pre><code> 1  &lt;figure class=&quot;box-1&quot;&gt;Box 1&lt;/figure&gt;
+<pre> 1  &lt;figure class=&quot;box-1&quot;&gt;Box 1&lt;/figure&gt;
  2  &lt;figure class=&quot;box-2&quot;&gt;Box 2&lt;/figure&gt;
- 3 </code></pre>
+ 3 </pre>
 
 <br><br>
 <h4>CSS</h4>
 
-<pre><code> 1  .box-1 {
+<pre> 1  .box-1 {
  2    transform: rotateY(180deg);
  3  }
  4  .box-2 {
  5    backface-visibility: hidden;
  6    transform: rotateY(180deg);
  7  }
- 8 </code></pre>
+ 8 </pre>
 
 <h4>Backface Visibility Demo</h4>
 
@@ -8417,7 +8399,7 @@ rel="noopener noreferrer" target="_blank">animations</a>.</p>
 <details>
   <summary>HTML</summary>
 
-<pre><code> 1  &lt;div class=&quot;cube-container&quot;&gt;
+<pre> 1  &lt;div class=&quot;cube-container&quot;&gt;
  2    &lt;div class=&quot;cube&quot;&gt; 
  3      &lt;figure class=&quot;side front&quot;&gt;1&lt;/figure&gt;
  4      &lt;figure class=&quot;side back&quot;&gt;2&lt;/figure&gt; 
@@ -8427,14 +8409,14 @@ rel="noopener noreferrer" target="_blank">animations</a>.</p>
  8      &lt;figure class=&quot;side bottom&quot;&gt;6&lt;/figure&gt;  
  9    &lt;/div&gt; 
  10 &lt;/div&gt; 
- 11 </code></pre>
+ 11 </pre>
 </details>
 
 <br><br>
 <details>
   <summary>CSS</summary>
 
-<pre><code> 1  .cube-container {
+<pre> 1  .cube-container {
  2    height: 200px;
  3    perspective: 300;
  4    position: relative;
@@ -8472,7 +8454,7 @@ rel="noopener noreferrer" target="_blank">animations</a>.</p>
  36 .bottom { 
  37   transform: rotateX(-90deg) translateZ(100px);
  38 } 
- 40 </code></pre>
+ 40 </pre>
 </details>
 
 <h3>Demo</h3>
@@ -8555,7 +8537,7 @@ course of 1 second in a linear fashion.</p>
 <details>
   <summary>CSS</summary>
 
-<pre><code> 1  .box {
+<pre> 1  .box {
  2    background: #2db34a;
  3    transition-property: background;
  4    transition-duration: 1s;
@@ -8564,7 +8546,7 @@ course of 1 second in a linear fashion.</p>
  7  .box:hover {
  8    background: #ff7b29;
  9  }
- 10 </code></pre>
+ 10 </pre>
 </details>
 
 <h4>Transition Demo</h4>
@@ -8580,7 +8562,7 @@ the following.</p>
 
 <details>
   <summary>CSS</summary>
-<pre><code> 1  .box {
+<pre> 1  .box {
  2    background: #2db34a;
  3    -webkit-transition-property: background;
  4    -moz-transition-property: background; 
@@ -8597,7 +8579,7 @@ the following.</p>
  15 } 
  16 .box:hover {
  17   background: #ff7b29;
- 18 } </code></pre>
+ 18 } </pre>
 </details>
 
 <h4>Transitional Property</h4>
@@ -8622,7 +8604,7 @@ element.</p>
 <details>
   <summary>CSS</summary>
 
-<pre><code> 1  .box {
+<pre> 1  .box {
  2    background: #2db34a;
  3    border-radius: 6px
  4    transition-property: background, border-radius;
@@ -8633,7 +8615,7 @@ element.</p>
  9    background: #ff7b29;
  10   border-radius: 50%;
  11 }
- 12 </code></pre>
+ 12 </pre>
 </details>
 
 <h4>Transition Property Demo</h4>
@@ -8706,7 +8688,7 @@ transitioned properties.</p>
 <details>
   <summary>CSS</summary>
   
-<pre><code> 1  .box {
+<pre> 1  .box {
  2    background: #2db34a;
  3    border-radius: 6px;
  4    transition-property: background, border-radius;
@@ -8717,7 +8699,7 @@ transitioned properties.</p>
  9    background: #ff7b29;
  10   border-radius: 50%;
  11 }
- 12 </code></pre>
+ 12 </pre>
 </details>
 
 <h4>Transition Duration Demo</h4>
@@ -8750,7 +8732,7 @@ property values, may be declared as comma separated values.</p>
 <details>
   <summary>CSS</summary>
   
-<pre><code> 1  .box {
+<pre> 1  .box {
  2    background: #2db34a;
  3    border-radius: 6px;
  4    transition-property: background, border-radius;
@@ -8761,7 +8743,7 @@ property values, may be declared as comma separated values.</p>
  9    background: #ff7b29;
  10   border-radius: 50%;
  11 }
- 12 </code></pre>
+ 12 </pre>
 </details>
 
 <h4>Transition Timing Demo</h4>
@@ -8778,7 +8760,7 @@ can be declared as comma separated values.</p>
 <details>
   <summary>CSS</summary>
   
-<pre><code> 1  .box {
+<pre> 1  .box {
  2    background: #2db34a;
  3    border-radius: 6px
  4    transition-property: background, border-radius;
@@ -8790,7 +8772,7 @@ can be declared as comma separated values.</p>
  10   background: #ff7b29;
  11   border-radius: 50%;
  12 }
- 13  </code></pre>
+ 13  </pre>
 </details>
 
 <h4>Transition Delay Demo</h4>
@@ -8812,7 +8794,7 @@ transition values.</p>
 <details>
   <summary>CSS</summary>
   
-<pre><code> 1  .box {
+<pre> 1  .box {
  2    background: #2db34a;
  3    border-radius: 6px;
  4    transition: background .2s linear, border-radius 1s ease-in 1s;
@@ -8821,7 +8803,7 @@ transition values.</p>
  7    color: #ff7b29;
  8    border-radius: 50%;
  9  }
- 10 </code></pre>
+ 10 </pre>
 </details>
 
 <h4>Shorthand Transitions Demo</h4>
@@ -8829,14 +8811,14 @@ transition values.</p>
 <h4>Transitional Button</h4>
 <h4>HTML</h4>
 
-<pre><code> 1  &lt;button&gt;Awesome Button&lt;/button&gt;
- 2  </code></pre>
+<pre> 1  &lt;button&gt;Awesome Button&lt;/button&gt;
+ 2  </pre>
 
 <br><br>
 <details>
   <summary>CSS</summary>
 
-<pre><code> 1  button { 
+<pre> 1  button { 
  2    border: 0; 
  3    background: #0087cc;
  4    border-radius: 4px; 
@@ -8853,7 +8835,7 @@ transition values.</p>
  15   box-shadow: 0 2px 0 #006599; 
  16   transform: translateY(3px);  
  17 }  
- 18  </code></pre>
+ 18  </pre>
 </details>
 
 <h4>Demo</h4>
@@ -8862,19 +8844,19 @@ transition values.</p>
 
 <h4>HTML</h4>
 
-<pre><code> 1  &lt;div class=&quot;card-container&quot;&gt;
+<pre> 1  &lt;div class=&quot;card-container&quot;&gt;
  2    &lt;div class=&quot;card&quot;&gt;
  3      &lt;div class=&quot;side&quot;&gt;...&lt;/div&gt;
  4      &lt;div class=&quot;side back&quot;&gt;...&lt;/div&gt;
  5    &lt;/div&gt;
  6  &lt;/div&gt;
- 7  </code></pre>
+ 7  </pre>
 
 <br><br>
 <details>
   <summary>CSS</summary>
 
-<pre><code> 1  .card-container {
+<pre> 1  .card-container {
  2    height: 150px;
  3    perspective: 600;
  4    position: relative;
@@ -8899,7 +8881,7 @@ transition values.</p>
  23 .card .back {
  24   transform: rotateY(180deg);
  25 }
- 26  </code></pre>
+ 26  </pre>
 </details>
 
 <h4>Demo</h4>
@@ -8926,7 +8908,7 @@ intended to be animated.</p>
 <details>
   <summary>CSS</summary>
 
-<pre><code> 1  @keyframes slide {
+<pre> 1  @keyframes slide {
  2    0% {
  3      left: 0;
  4      top: 0;
@@ -8940,7 +8922,7 @@ intended to be animated.</p>
  12     top: 0;
  13   }
  14 }
- 15 </code></pre>
+ 15 </pre>
 </details>
 
 <h4>Vendor Prefixing the Keyframe Rule</h4>
@@ -8985,10 +8967,10 @@ with the animation name, identified from the <span class="citation"
 data-cites="keyframes">@keyframes</span> rule, as the property value.
 The animation-name declaration is applied to the element in which the
 animation is to be applied to.</p>
-<pre><code> 1  .stage:hover .ball {
+<pre> 1  .stage:hover .ball {
  2    animation-name: slide;
  3  }
- 4 </code></pre>
+ 4 </pre>
 <p>Using the animation-name property alone isn’t enough though. You also
 need to declare an animation-duration property and value so that the
 browser knows how long an animation should take to complete.</p>
@@ -9000,37 +8982,37 @@ animations behave similarly to transitions. They include a duration,
 timing function, and delay if desired. To start, animations need a
 duration declared using the animation-duration property. As with
 transitions, the duration may be set in seconds or milliseconds.</p>
-<pre><code> 1  .stage:hover .ball {
+<pre> 1  .stage:hover .ball {
  2    animation-name: slide;
  3    animation-duration: 2s;
  4  }
- 5 </code></pre>
+ 5 </pre>
 <p>
 A timing function and delay can be declared using the
 animation-timing-function and animation-delay properties respectively.
 The values for these properties mimic and behave just as they do with
 transitions.
 </p>
-<pre><code> 1  .stage:hover .ball {
+<pre> 1  .stage:hover .ball {
  2    animation-name: slide;
  3    animation-duration: 2s;
  4    animation-timing-function: ease-in-out;
  5    animation-delay: .5s;
  6  }
- 7 </code></pre>
+ 7 </pre>
 <p>The animation below should cause the ball to bounce once while moving to
 the left, however only when hovering over the stage.</p>
 
 <h4>HTML</h4>
 
-<pre><code> 1  &lt;div class=&quot;stage&quot;&gt;
+<pre> 1  &lt;div class=&quot;stage&quot;&gt;
  2    &lt;figure class=&quot;ball&quot;&gt;&lt;/figure&gt;
  3  &lt;/div&gt;
- 4  </code></pre>
+ 4  </pre>
 <details>
   <summary>CSS</summary>
 
-<pre><code> 1   @keyframes slide {
+<pre> 1   @keyframes slide {
  2     0% {
  3       left: 0;
  4       top: 0;
@@ -9059,7 +9041,7 @@ the left, however only when hovering over the stage.</p>
  27    animation-timing-function: ease-in-out;
  28    animation-delay: .5s;
  29  }
- 30 </code></pre>
+ 30 </pre>
 </details>
 <h4>Animation Demo</h4>
 <p>Hover over the ball below to see the animation in action.</p>
@@ -9078,14 +9060,14 @@ times as specified, while the infinite keyword will repeat the animation
 indefinitely in a never ending fashion.</p>
 <details>
 <summary>Example, Animation Iteration</summary>
-<pre><code> 1  .stage:hover .ball {
+<pre> 1  .stage:hover .ball {
  2    animation-name: slide;
  3    animation-duration: 2s;
  4    animation-timing-function: ease-in-out;
  5    animation-delay: .5s;
  6    animation-iteration-count: infinite;
  7  }
- 8  </code></pre>
+ 8  </pre>
 </details>
 
 <h4>Animation Iteration Demo</h4>
@@ -9121,7 +9103,7 @@ then back to 100% again.</p>
 <details>
   <summary>Example, Alternate Reverse</summary>
 
-<pre><code> 1  .stage:hover .ball {
+<pre> 1  .stage:hover .ball {
  2    animation-name: slide;
  3    animation-duration: 2s;
  4    animation-timing-function: ease-in-out;
@@ -9129,7 +9111,7 @@ then back to 100% again.</p>
  6    animation-iteration-count: infinite;
  7    animation-direction: alternate;
  8  }
- 9  </code></pre>
+ 9  </pre>
 </details>
 
 <h4>Animation Direction Demo</h4>
@@ -9149,7 +9131,7 @@ animation will temporarily pause until you let up on the mouse.</p>
 <details>
   <summary>Example, Animation Play State</summary>
 
-<pre><code> 1  .stage:hover .ball {
+<pre> 1  .stage:hover .ball {
  2    animation-name: slide;
  3    animation-duration: 2s;
  4    animation-timing-function: ease-in-out;
@@ -9160,7 +9142,7 @@ animation will temporarily pause until you let up on the mouse.</p>
  9  .stage:active .ball {
  10   animation-play-state: paused;
  11 }
- 12 </code></pre>
+ 12 </pre>
 </details>
 
 <h4>Animation Play State Demo</h4>
@@ -9189,7 +9171,7 @@ the animation-direction property value.</p>
 the forwards and backwards values.</p>
 <details>
 <summary>Example, Animation</summary>
-<pre><code> 1  .stage:hover .ball {
+<pre> 1  .stage:hover .ball {
  2    animation-name: slide;
  3    animation-duration: 2s;
  4    animation-timing-function: ease-in-out;
@@ -9199,7 +9181,7 @@ the forwards and backwards values.</p>
  8  .stage:active .ball {
  9    animation-play-state: paused;
  1  }
- 0 </code></pre>
+ 0 </pre>
 </details>
 
 <h4>Animation Fill Mode Demo</h4>
@@ -9216,13 +9198,13 @@ declarations. The order of values within the animation  property should
 be animation-name, animation-duration, animation-timing-function, 
 animation-delay, animation-iteration-count, animation-direction, animation-fill-mode,
 and lastly animation-play-state.</p>
-<pre><code> 1  .stage:hover .ball {
+<pre> 1  .stage:hover .ball {
  2    animation: slide 2s ease-in-out .5s infinite alternate;
  3  }
  4  .stage:active .ball {
  5    animation-play-state: paused;
  6  }
- 7 </code></pre>
+ 7 </pre>
  
 <h4>Shorthand Animations Demo</h4>
 
@@ -9335,10 +9317,10 @@ Explorer 8 and below.
 
 <p>In this case the conditional comment looks like;</p>
 
-<pre><code> 1  &lt;!--[if lt IE 9]&gt;
+<pre> 1  &lt;!--[if lt IE 9]&gt;
  2  &lt;script src=&quot;html5shiv.js&quot;&gt;&lt;/script&gt;
  3  &lt;![endif]--&gt;
- 4 </code></pre>
+ 4 </pre>
  
 <h4>The Difference Between a Shiv &amp; a Shim</h4>
 
@@ -9355,7 +9337,7 @@ the display: block; declaration.</p>
 <details>
   <summary>display: block</summary>
 
-<pre><code> 1  article,
+<pre> 1  article,
  2  aside,
  3  details,
  4  figcaption,
@@ -9368,7 +9350,7 @@ the display: block; declaration.</p>
  11 summary {
  12   display: block;
  13 }
- 14 </code></pre>
+ 14 </pre>
 
 </details>
 
@@ -9377,12 +9359,12 @@ few HTML5 inline-block level elements. As before, these styles will need
 to be explicitly stated. After which, all versions of Internet Explorer
 should be good to go using any new HTML5 elements.</p>
 
-<pre><code> 1  audio,
+<pre> 1  audio,
  2  canvas,
  3  video {
  4    display: inline-block;
  5  }
- 6  </code></pre>
+ 6  </pre>
  
 <h4>Detecting Browser Features</h4>
 <p>
@@ -9417,8 +9399,8 @@ It is worth noting that Modernizr may be configured to include the HTML5
 Shiv, in which case the shiv doesn’t need to be referenced on top of
 Modernizr.
 </p>
-<pre><code> 1  &lt;script src=&quot;modernizr.js&quot;&gt;&lt;/script&gt;
- 2  </code></pre>
+<pre> 1  &lt;script src=&quot;modernizr.js&quot;&gt;&lt;/script&gt;
+ 2  </pre>
 <h4>
 Conditionally Applying CSS Styles
 </h4>
@@ -9441,7 +9423,7 @@ additional HTTP requests when possible.
 <details>
   <summary>Conditionally Applying CSS Styles</summary>
 
-<pre><code>
+<pre>
  1   button { 2     border: 0;
  3     color: #fff;
  4     cursor: pointer;
@@ -9474,7 +9456,7 @@ additional HTTP requests when possible.
  31  .no-cssgradients button:active {
  32    background-position: 0 -98px;
  33  }
- 34 </code></pre>
+ 34 </pre>
 
 </details>
 
@@ -9525,7 +9507,7 @@ the getScript method.</p>
 <details>
   <summary>jQuery Conditional Load</summary>
   
-<pre><code> 1  $(document).ready(function() {
+<pre> 1  $(document).ready(function() {
  2    if (Modernizr.localstorage) {
  3      // Local storage is available
  4      jQuery.getScript(&#39;storage.js&#39;);
@@ -9534,7 +9516,7 @@ the getScript method.</p>
  7      jQuery.getScript(&#39;storage-polyfill.js&#39;);
  8    }
  9  });
- 10 </code></pre>
+ 10 </pre>
 
 </details>
 
@@ -9546,12 +9528,12 @@ Doing so provides the ability to only load files based on different
 media query conditions. Not loading unnecessary files can be extremely
 beneficial for performance.
 </p>
-<pre><code> 1  $(document).ready(function() {
+<pre> 1  $(document).ready(function() {
  2    if (Modernizr.mq(&#39;screen and (min-width: 640px)&#39;)) {
  3      jQuery.getScript(&#39;tabs.js&#39;); 
  4    } 
  5  });  
- 6 </code></pre>
+ 6 </pre>
 <p>
 Above, Modernizr looks to detect screens above 640 pixels wide,
 primarily desktops, and then loads the tabs.js file based off of this
@@ -9571,12 +9553,12 @@ instead showing the tooltip in plain text on the screen. The script for
 calling these tooltips could be wrapped in a Modernizr condition,
 preventing the script from loading on smaller screens.
 </p>
-<pre><code> 1  $(document).ready(function() {
+<pre> 1  $(document).ready(function() {
  2    if (Modernizr.mq(&#39;screen and (max-width: 400px)&#39;)) {
  3      $(&#39;.size&#39;).text(&#39;small&#39;);
  4    }
  5  });
- 6 </code></pre>
+ 6 </pre>
 <h4>
 Conditionally Running Scripts Demo
 </h4>
@@ -9802,11 +9784,11 @@ performs the same way as the CSS declaration, but semantically it
 represents an element that should be hidden, or ignored, for the time
 being. Screen readers and other devices will recognize this, temporarily
 skipping it, where they may not done so with the CSS declaration.</p>
-<pre><code> 1  &lt;!-- Good --&gt;  
+<pre> 1  &lt;!-- Good --&gt;  
  2  &lt;div hidden&gt;...&lt;/div&gt;  
  3  &lt;!-- Not good --&gt; 
  4  &lt;div style=&quot;display: none;&quot;&gt;...&lt;/div&gt; 
- 5 </code></pre>
+ 5 </pre>
 <p>Imagine a blind user attempting to fill out a form and the first
 piece of content, before even filling out the form, is a success
 message. This is a poor user experience, and one that can easily be
@@ -9835,11 +9817,11 @@ be <b>stylistically offset</b>, without importance. Generally speaking,
 the b element should be used solely as a styling hook to change the
 presentation of an element, where the strong element should be used to
 identify significantly important text.</p>
-<pre><code> 1  &lt;!-- Strong importance --&gt;
+<pre> 1  &lt;!-- Strong importance --&gt;
  2  &lt;strong&gt;Caution:&lt;/strong&gt; Falling rocks.
  3  &lt;!-- Stylistically offset --&gt;
  4  This recipe calls for &lt;b&gt;bacon&lt;/b&gt; and &lt;b&gt;baconnaise&lt;/b&gt;.
- 5  </code></pre>
+ 5  </pre>
 <h4>
 Bolding Text Demo
 </h4>
@@ -9860,11 +9842,11 @@ importance. On the other hand, the i element is primarily used within
 dialog or prose, offsetting text without any added emphasis or
 importance.</p>
 
-<pre><code> 1  &lt;!-- Stressed emphasis --&gt; 
+<pre> 1  &lt;!-- Stressed emphasis --&gt; 
  2  I &lt;em&gt;love&lt;/em&gt; Chicago!
  3  &lt;!-- Alternative voice or tone --&gt;  
  4  The name &lt;i&gt;Shay&lt;/i&gt; means a gift.  
- 5 </code></pre>
+ 5 </pre>
  
 <h4>Italicizing Text Demo</h4>
 
@@ -9906,13 +9888,13 @@ Use underlines with caution.</p>
 <details>
   <summary>Example, Underline</summary>
 
-<pre><code> 1  &lt;!-- Added to the document --&gt;
+<pre> 1  &lt;!-- Added to the document --&gt;
  2  &lt;ins cite=&quot;http://learn.shayhowe.com&quot; datetime=&quot;2012-07-01&quot;&gt;
  3    Updated: This website now contains an advanced guide. 
  4  &lt;/ins&gt;
  5  &lt;!-- Unarticulated annotation --&gt;
  6  &lt;u&gt;Urushihara Yuuji&lt;/u&gt; won &lt;u&gt;Sasuke 27&lt;/u&gt;. 
- 7 </code></pre>
+ 7 </pre>
 </details>
 
 <h4>Underlining Text Demo</h4>
@@ -9935,13 +9917,13 @@ relevant.</p>
 <details>
   <summary>Example, Striking Text</summary>
 
-<pre><code> 1  &lt;!-- Deleted from the document --&gt;  
+<pre> 1  &lt;!-- Deleted from the document --&gt;  
  2  I am an avid cyclist, &lt;del cite=&quot;http://shayhowe.com&quot; 
  3  datetime=&quot;2012-07-01&quot;&gt;
  4  skateboarder&lt;/del&gt; and designer.
  5  &lt;!-- No longer accurate or relevant --&gt;  
  6  &lt;s&gt;$24.99&lt;/s&gt; $19.99  
- 7 </code></pre>
+ 7 </pre>
 </details>
 
 <h4>Striking Text Demo</h4>
@@ -9952,9 +9934,9 @@ relevant.</p>
 used. Added in HTML5, the mark element provides a clean, semantic way to
 identify text, specifically for reference purposes without having to use
 an un-semantic text level element.</p>
-<pre><code> 1  &lt;!-- Highlighted for reference purposes --&gt; 
+<pre> 1  &lt;!-- Highlighted for reference purposes --&gt; 
  2  Search results for &lt;mark&gt;&#39;chicago&#39;&lt;/mark&gt;.
- 3 </code></pre>
+ 3 </pre>
 <h4>
 Highlighting Text Demo
 </h4>
@@ -9967,9 +9949,9 @@ used along with the title attribute, of which includes the full value of
 the phrase being abbreviated. The acronym element was originally used to
 distinguish acronyms from abbreviations but has since been deprecated,
 and shouldn’t be used.</p>
-<pre><code> 1  &lt;abbr title=&quot;HyperText Markup Language&quot;&gt;HTML&lt;/abbr&gt;
+<pre> 1  &lt;abbr title=&quot;HyperText Markup Language&quot;&gt;HTML&lt;/abbr&gt;
  2  &lt;abbr title=&quot;Cascading Style Sheets&quot;&gt;CSS&lt;/abbr&gt; 
- 3 </code></pre>
+ 3 </pre>
 <h4>
 Abbreviations Demo
 </h4>
@@ -9980,12 +9962,12 @@ Sub &amp; Superscripts
 the sub and sup elements respectively. It is important to note that
 these elements should be reserved for typographical conventions, not for
 presentational purposes.</p>
-<pre><code> 1  &lt;!-- Subscript --&gt;
+<pre> 1  &lt;!-- Subscript --&gt;
  2  H&lt;sub&gt;2&lt;/sub&gt;O 
  3  &lt;!-- Superscripts --&gt;
  4  1&lt;sup&gt;st&lt;/sup&gt; Place 
  5 
- 6 </code></pre>
+ 6 </pre>
 <h4>
 Sub &amp; Superscripts Demo
 </h4>
@@ -10014,7 +9996,7 @@ progress needs to be reached.</p>
 <details>
   <summary>Example, Meter &amp; Progress</summary>
   
-<pre><code> 1  &lt;!-- Meter --&gt; 
+<pre> 1  &lt;!-- Meter --&gt; 
  2  &lt;meter value=&quot;7&quot; max=&quot;10&quot;&gt;7 stars&lt;/meter&gt;  
  3  &lt;meter value=&quot;47&quot; min=&quot;0&quot; max=&quot;105&quot; low=&quot;5&quot; high=&quot;65&quot;  optimum=&quot;45&quot;&gt;The car  
  4    is moving at a decent average mile per hour.&lt;/meter&gt;
@@ -10022,7 +10004,7 @@ progress needs to be reached.</p>
  6  You are &lt;progress value=&quot;50&quot; max=&quot;100&quot;&gt;50%&lt;/progress&gt;  
  7  complete.  
  8  &lt;progress value=&quot;50&quot; min=&quot;0&quot; max=&quot;100&quot;&gt;Hold tight, you&quot;re getting there.&lt;/progress&gt;
- 9 </code></pre>
+ 9 </pre>
 </details>
 
 <h4>Meter &amp; Progress Demo</h4>
@@ -10044,7 +10026,7 @@ and other content needs to be placed outside of the address element.</p>
 <details>
   <summary>Example, Time &amp; Address</summary>
   
-<pre><code> 1  &lt;!-- Time --&gt;  
+<pre> 1  &lt;!-- Time --&gt;  
  2  &lt;time&gt;2011-08-24&lt;/time&gt; 
  3  &lt;time datetime=&quot;2011-08-24&quot; pubdate&gt;August 24th, 2011&lt;/time&gt;
  4  &lt;time datetime=&quot;15:00&quot;&gt;3pm&lt;/time&gt; 
@@ -10057,7 +10039,7 @@ and other content needs to be placed outside of the address element.</p>
  11   Suite 620&lt;br&gt; 
  12   Chicago, IL 60654&lt;br&gt; USA  
  13 &lt;/address&gt; 
- 14 </code></pre>
+ 14 </pre>
 </details>
 
 <h4>Time &amp; Address Demo</h4>
@@ -10076,14 +10058,14 @@ will display text exactly as it is typed, whitespace included. Nesting
 the code element within the pre element semantically identifies larger
 samples of code, which include whitepsace, displayed in a block level
 manner.</p>
-<pre><code> 1  &lt;!-- Inline code samples --&gt;  
+<pre> 1  &lt;!-- Inline code samples --&gt;  
  2  Use the &lt;code&gt;article&lt;/code&gt; element. 
  3  &lt;!-- Larger, block level code snippets --&gt;  
  4  &lt;pre&gt;&lt;code&gt;body { 
  5    color: #666; 
  6    font: 14px/20px Arial, sans-serif;
  7  }&lt;/code&gt;&lt;/pre&gt; 
- 8 </code></pre>
+ 8 </pre>
 <h4>
 Presenting Code Demo
 </h4>
@@ -10102,13 +10084,13 @@ of the content, for example as within addresses and poems.</p>
 opportunities with the wbr element. Using the wbr element in the middle
 of a word ensures that, should the word need to wrap two lines, it does
 in a legible fashion.</p>
-<pre><code> 1  &lt;!-- Line break --&gt;  
+<pre> 1  &lt;!-- Line break --&gt;  
  2  600 W. Chicago Ave.&lt;br&gt;
  3  Chicago, IL 60654&lt;br&gt;  
  4  USA  
  5  &lt;!-- Word break --&gt;  
  6  http://shay&lt;wbr&gt;howe.com  
- 7 </code></pre>
+ 7 </pre>
 <h4>
 Line &amp; Word Breaks Demo
 </h4>
@@ -10122,9 +10104,9 @@ Within HTML5, the small element preserves the presentation of being
 displayed at a smaller font size, however it semantically means to be
 rendered as a side comments or small print. This often includes
 copyright information or legal print.</p>
-<pre><code> 1  &lt;!-- Side comments or small print --&gt; 
+<pre> 1  &lt;!-- Side comments or small print --&gt; 
  2  &lt;small&gt;&amp;copy; 2012 Shay Howe&lt;/small&gt;
- 3 </code></pre>
+ 3 </pre>
 <h4>
 Side Comments Demo
 </h4>
@@ -10160,11 +10142,11 @@ the file as is, or it may contain a value, of which becomes the file
 name once downloaded. Using a specific value here lets you name the file
 as you wish on your server while still providing users with a meaningful
 name.</p>
-<pre><code> 1  &lt;!-- Boolean --&gt;  
+<pre> 1  &lt;!-- Boolean --&gt;  
  2  &lt;a href=&quot;twitter-logo.png&quot; download&gt;Twitter Logo&lt;/a&gt;  
  3  &lt;!-- With a value --&gt;
  4  &lt;a href=&quot;twitter-logo.png&quot; download=&quot;Logo&quot;&gt;Twitter Logo&lt;/a&gt;  
- 5 </code></pre>
+ 5 </pre>
 <h4>
 Download Attribute Demo
 </h4>
@@ -10177,9 +10159,9 @@ identifies the relationship between the current document and the
 document being referenced. For example, when linking to a copyright
 statement the rel attribute value of copyright should be used.</p>
 
-<pre><code> 1  &lt;a href=&quot;legal.html&quot; rel=&quot;copyright&quot;&gt;Terms of Use&lt;/a&gt;  
+<pre> 1  &lt;a href=&quot;legal.html&quot; rel=&quot;copyright&quot;&gt;Terms of Use&lt;/a&gt;  
  2  &lt;a href=&quot;toc.html&quot; rel=&quot;contents&quot;&gt;Table of Contents&lt;/a&gt;
- 3 </code></pre>
+ 3 </pre>
 
 <p>A few <a href="http://microformats.org/wiki/existing-rel-values" 
 rel="noopener noreferrer" target="_blank">popular</a> rel attribute
@@ -10272,10 +10254,10 @@ however, other websites which outline additional, and different, item
 types. You may also write your own item types should you find the
 need.</p>
 
-<pre><code> 1  &lt;section itemscope itemtype=&quot;http://schema.org/Person&quot;&gt; 
+<pre> 1  &lt;section itemscope itemtype=&quot;http://schema.org/Person&quot;&gt; 
  2    ... 
  3  &lt;/section&gt; 
- 4 </code></pre>
+ 4 </pre>
 
 <p>Once the scope and type of the item have been determined, properties
 may then be set. These properties are identified by different elements
@@ -10283,10 +10265,10 @@ which include the itemprop attribute. The value of this attribute
 determines what property is being referenced, and the content within the
 element itself most commonly determines the value of the property.</p>
 
-<pre><code> 1  &lt;section itemscope itemtype=&quot;http://schema.org/Person&quot;&gt; 
+<pre> 1  &lt;section itemscope itemtype=&quot;http://schema.org/Person&quot;&gt; 
  2    &lt;h1 itemprop=&quot;name&quot;&gt;Shay Howe&lt;/h1&gt;
  3  &lt;/section&gt; 
- 4 </code></pre>
+ 4 </pre>
  
 <p>Some elements, however, do not get their itemprop value from the content within the 
 element. Instead, their value is determined from the value of another attribute on the 
@@ -10341,7 +10323,7 @@ item properties and their corresponding values.</p>
 <details>
   <summary>Example, Person Microdata</summary>
 
-<pre><code> 1  &lt;section itemscope itemtype=&quot;http://schema.org/Person&quot;&gt; 
+<pre> 1  &lt;section itemscope itemtype=&quot;http://schema.org/Person&quot;&gt; 
  2    &lt;strong itemprop=&quot;name&quot;&gt;Shay Howe&lt;/strong&gt;
  3    &lt;img src=&quot;shay.jpg&quot; itemprop=&quot;image&quot; alt=&quot;Shay Howe&quot;&gt;  
  4    &lt;div itemprop=&quot;jobTitle&quot;&gt;Designer and Front-end Developer&lt;/div&gt;  
@@ -10355,7 +10337,7 @@ item properties and their corresponding values.</p>
  12     &lt;span itemprop=&quot;postalCode&quot;&gt;60654&lt;/span&gt;  
  13   &lt;/address&gt; 
  14 &lt;/section&gt; 
- 15 </code></pre>
+ 15 </pre>
 
 </details>
 
@@ -10378,7 +10360,7 @@ as can some of the nested item types.</p>
 <details>
   <summary>Example, Event Microdata</summary>
 
-<pre><code> 1  &lt;section itemscope itemtype=&quot;http://schema.org/Event&quot;&gt;  
+<pre> 1  &lt;section itemscope itemtype=&quot;http://schema.org/Event&quot;&gt;  
  2    &lt;a itemprop=&quot;url&quot; href=&quot;#&quot;&gt; 
  3      &lt;span itemprop=&quot;name&quot;&gt;Styles Conference&lt;/span&gt;  
  4    &lt;/a&gt;  
@@ -10394,7 +10376,7 @@ as can some of the nested item types.</p>
  14     &lt;/address&gt; 
  15   &lt;/div&gt;
  16 &lt;/section&gt; 
- 17 </code></pre>
+ 17 </pre>
 
 </details>
 
@@ -10426,8 +10408,8 @@ rel="noopener noreferrer" target="_blank">WAI-ARIA roles</a> is
 accomplished using the role attribute. These roles then specify what
 certain elements and blocks of content do on a page.</p>
 
-<pre><code> 1  &lt;header role=&quot;banner&quot;&gt;...&lt;/header&gt; 
- 2 </code></pre>
+<pre> 1  &lt;header role=&quot;banner&quot;&gt;...&lt;/header&gt; 
+ 2 </pre>
 
 <p>WAI-ARIA roles break down into four different categories, including
 abstract, widget, document structure, and landmark roles. For this
@@ -10541,7 +10523,7 @@ nested within other regions of the document structure.</p>
 <p>Combining the elements with their matched roles in HTML5 would look like the following 
 code snippet.</p>
 
-<pre><code> 1  &lt;header role=&quot;banner&quot;&gt;  
+<pre> 1  &lt;header role=&quot;banner&quot;&gt;  
  2    &lt;nav role=&quot;navigation&quot;&gt;...&lt;/nav&gt; 
  3  &lt;/header&gt;
  4  &lt;article role=&quot;article&quot;&gt;
@@ -10549,7 +10531,7 @@ code snippet.</p>
  6  &lt;/article&gt; 
  7  &lt;aside role=&quot;complementary&quot;&gt;...&lt;/aside&gt;  
  8  &lt;footer role=&quot;contentinfo&quot;&gt;...&lt;/footer&gt;  
- 9 </code></pre>
+ 9 </pre>
 
 <h3>States &amp; Properties</h3>
 
