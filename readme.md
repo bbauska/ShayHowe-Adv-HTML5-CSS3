@@ -3156,10 +3156,10 @@ following.</p>
 <h4>HTML</h4>
 
 <pre>
- 1  <div class="container"> 
- 2    <section>...</section> 
- 3    <aside>...</aside>  
- 4  </div>
+ 1  &lt;div class="container"> 
+ 2    &lt;section>...&lt;/section> 
+ 3    &lt;aside>...&lt;/aside>  
+ 4  &lt;/div>
 </pre>
 
 <details>
@@ -3250,8 +3250,8 @@ additional HTTP requests.</p>
 <h4>HTML</h4>
 
 <pre>
- 1  <!-- Separate CSS File -->
- 2  <link href="styles.css" rel="stylesheet" media="all and (max-width: 1024px)">
+ 1  &lt;!-- Separate CSS File --&gt;
+ 2  &lt;link href="styles.css" rel="stylesheet" media="all and (max-width: 1024px)"&gt;
 </pre>
 
 <h4>CSS</h4>
@@ -3609,7 +3609,7 @@ the device's default height and width value.</p>
 the device defaults by applying the device-height and device-width values.</p>
 
 <pre>
- 1  <meta name="viewport" content="width=device-width">
+ 1  &lt;meta name="viewport" content="width=device-width"&gt;
 </pre>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -3637,7 +3637,7 @@ the ratio between the device width and the viewport size. Values
 for initial-scale should always be a positive integer between 0 and 10.</p>
 
 <pre>
- 1  <meta name="viewport" content="initial-scale=2">
+ 1  &lt;meta name="viewport" content="initial-scale=2"&gt;
 </pre>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -3659,7 +3659,7 @@ integer greater than or equal to the initial-scale. Values for both of
 these must also be between 0 and 10.</p>
 
 <pre>
- 1  <meta name="viewport" content="minimum-scale=0">
+ 1  &lt;meta name="viewport" content="minimum-scale=0"&gt;
 </pre>
 
 <p>Generally speaking, these values should not be set to the same value as
@@ -3673,7 +3673,7 @@ accessibility and usability, preventing those with disabilities from
 viewing a website as desired.</p>
 
 <pre>
- 1  <meta name="viewport" content="user-scalable=yes"> 
+ 1  &lt;meta name="viewport" content="user-scalable=yes"&gt;
 </pre>
 
 <h4>Viewport Resolution</h4>
@@ -3688,7 +3688,7 @@ high-dpi, medium-dpi, low-dpi, or an actual DPI number.</p>
 helpful when pixel by pixel control is needed.</p>
 
 <pre>
- 1  <meta name="viewport" content="target-densitydpi=device-dpi">  
+ 1  &lt;meta name="viewport" content="target-densitydpi=device-dpi"&gt;
 </pre>
 
 <h4>Combining Viewport Values</h4>
@@ -3700,7 +3700,7 @@ the content attribute value. One of the recommended viewport values is
 outlined below, using both the width and initial-scale properties.</p>
 
 <pre>
- 1  <meta name="viewport" content="width=device-width, initial-scale=1">
+ 1  &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
 </pre>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -3779,9 +3779,9 @@ treating the parent element as an absolutely positioned element.</p>
 <h4>HTML</h4>
 
 <pre>
- 1  <figure> 
- 2    <iframe src="https://www.youtube.com/embed/Sv3xVOs7_No"></iframe> 
- 3  </figure>
+ 1  &lt;figure&gt;
+ 2    &lt;iframe src="https://www.youtube.com/embed/Sv3xVOs7_No"&gt;&lt;/iframe&gt;
+ 3  &lt;/figure&gt;
 </pre>
 
 <details>
@@ -3918,7 +3918,6 @@ the alike command line program, to install Haml.</p>
 
 <pre>
  1  gem install haml
- 2 
 </pre>
 
 <p>Files written in the Haml markup should be saved with the file extension
@@ -3927,7 +3926,6 @@ below needs to be run to compile each individual file.</p>
 
 <pre>
  1  haml index.haml index.html  
- 2 
 </pre>
 
 <p>In the example above, the file index.haml is converted to HTML and saved
@@ -3967,14 +3965,12 @@ passed in after the exclamation points, !!! 5.</p>
 
 <pre>
  1  !!! 5
- 2 
 </pre>
 
 <h4>Compiled HTML</h4>
 
 <pre>
- 1  <!DOCTYPE html>  
- 2 
+ 1  &lt;!DOCTYPE html&gt;
 </pre>
 
 <h4>Declaring Elements</h4>
@@ -4003,21 +3999,19 @@ struggle.</p>
  3  %h1 Hello World 
  4  %section
  5  %p Lorem ipsum dolor sit amet. 
- 6 
 </pre>
 
 <h4>Compiled HTML</h4>
 
 <pre>
- 1  <body>
- 2    <header> 
- 3      <h1>Hello World</h1> 
- 4    </header>
- 5    <section>
- 6      <p>Lorem ipsum dolor sit amet.</p>  
- 7    </section> 
- 8  </body>  
- 9 
+ 1  &lt;body&gt;
+ 2    &lt;header&gt; 
+ 3      &lt;h1&gt;Hello World&lt;/h1&gt; 
+ 4    &lt;/header&gt;
+ 5    &lt;section&gt;
+ 6      &lt;p&gt;Lorem ipsum dolor sit amet.&lt;/p&gt;  
+ 7    &lt;/section&gt; 
+ 8  &lt;/body&gt;  
 </pre>
 
 <h4>Handling Text</h4>
@@ -4035,7 +4029,6 @@ example from above could be rewritten as the following:</p>
  5  %section 
  6  %p 
  7  Lorem ipsum dolor sit amet.  
- 8  
 </pre>
 
 <h4>Attributes</h4>
@@ -4052,14 +4045,12 @@ style attributes will use standard HTML syntax inside of ().</p>
  1  %img{:src => "shay.jpg", :alt => "Shay Howe"}
  2  %img{src: "shay.jpg", alt: "Shay Howe"}  
  3  %img(src="shay.jpg" alt="Shay Howe")
- 4 
 </pre>
 
 <h4>Compiled HTML</h4>
 
 <pre>
- 1  <img src="shay.jpg" alt="Shay Howe">
- 2 
+ 1  &lt;img src="shay.jpg" alt="Shay Howe"&gt;
 </pre>
 
 <h4>Classes &amp; IDs</h4>
@@ -4083,7 +4074,6 @@ outlined formats.</p>
  2  %section.feature.special 
  3  %section#hello  
  4  %section#hello.feature(role="region") 
- 5 
 </pre>
 
 <h4>Compiled HTML</h4>
@@ -4093,7 +4083,6 @@ outlined formats.</p>
  2  &lt;section class="feature special"&gt;&lt;/section&gt;  
  3  &lt;section id="hello"&gt;&lt;/section&gt; 
  4  &lt;section class="feature" id="hello" role="region"&gt;&lt;/section&gt;  
- 5 
 </pre>
 
 <h4>Division Classes &amp; IDs</h4>
@@ -4108,7 +4097,6 @@ identified with a . and IDs are to be identified with a #.</p>
  1  .awesome
  2  .awesome.lesson 
  3  #getting-started.lesson  
- 4 
 </pre>
 
 <h4>Compiled HTML</h4>
@@ -4117,7 +4105,6 @@ identified with a . and IDs are to be identified with a #.</p>
  1  &lt;div class="awesome"&gt;&lt;/div&gt; 
  2  &lt;div class="awesome lesson"&gt;&lt;/div&gt;
  3  &lt;div class="lesson" id="getting-started"&gt;&lt;/div&gt;  
- 4 
 </pre>
 
 <h4>Boolean Attributes</h4>
@@ -4131,14 +4118,12 @@ HTML, all depending on the syntax being used.</p>
  1  %input{:type =&gt; "checkbox", :checked =&gt; true}  
  2  %input(type="checkbox" checked=true)  
  3  %input(type="checkbox" checked) 
- 4 
 </pre>
 
 <h4>Compiled HTML</h4>
 
 <pre>
  1  &lt;input type="checkbox" checked&gt;  
- 2 
 </pre>
 
 <h4>Escaping Text</h4>
@@ -4159,7 +4144,6 @@ execution.</p>
  1  .author 
  2  = @author 
  3  \\= @author 
- 4 
 </pre>
 
 <h4>Compiled HTML</h4>
@@ -4169,7 +4153,6 @@ execution.</p>
  2    Shay Howe  
  3    = @author 
  4  &lt;/div&gt;
- 5 
 </pre>
 
 <h4>Text Escaping Alternatives</h4>
@@ -4194,14 +4177,12 @@ outside of the anchor text.</p>
  2  Shay is 
  3  = succeed "." do 
  4  %a{:href =&gt; "#"} awesome 
- 5 
 </pre>
 
 <h4>Compiled HTML</h4>
 
 <pre>
  1  &lt;p&gt;Shay is &lt;a href="#"&gt;awesome&lt;/a&gt;.&lt;/p&gt;  
- 2 
 </pre>
 
 <h4>Comments</h4>
@@ -4221,7 +4202,6 @@ code can be commented out by being nested underneath a forward slash.</p>
  4  / 
  5  %div 
  6  Commented block 
- 7 
 </pre>
 
 <h4>Compiled HTML</h4>
@@ -4236,7 +4216,6 @@ code can be commented out by being nested underneath a forward slash.</p>
  7    Commented block 
  8  &lt;/div&gt;
  9  --&gt;
- 10 
 </pre>
 
 <h4>Conditional Comments</h4>
@@ -4251,7 +4230,6 @@ slash.</p>
 <pre>
  1  &lbrack;if lt IE 9] 
  2  %script{:src =&gt; "html5shiv.js"}
- 3 
 </pre>
 
 <h4>Compiled HTML</h4>
@@ -4260,7 +4238,6 @@ slash.</p>
  1  &lt;!--&lbrack;if lt IE 9]&gt;
  2  &lt;script src="html5shiv.js"&gt;&lt;/script&gt;
  3  &lt;!&lbrack;endif]--&gt;  
- 4 
 </pre>
 
 <h4>Silent Comments</h4>
@@ -4279,7 +4256,6 @@ multiple lines with the use of nesting.</p>
  1  %div 
  2  -# Removed line 
  3  Actual line
- 4 
 </pre>
 
 <h4>Compiled HTML</h4>
@@ -4288,7 +4264,6 @@ multiple lines with the use of nesting.</p>
  1  &lt;div&gt; 
  2    Actual line
  3  &lt;/div&gt;
- 4 
 </pre>
 
 <h4>Filters</h4>
@@ -4329,19 +4304,17 @@ the group being :css and :javascript.</p>
  1  :javascript
  2  $('button').on('click', function(event) {  
  3    $('p').hide('slow');
- 4  });  
- 5 
+ 4  });
 </pre>
 
 <h4>Compiled HTML</h4>
 
 <pre>
- 1  <script> 
+ 1  &lt;script&gt; 
  2  $('button').on('click', function(event) {  
  3    $('p').hide('slow');
  4  });  
- 5  </script>
- 6 
+ 5  &lt;/script&gt;
 </pre>
 
 <h4>CSS &amp; Sass Filters</h4>
@@ -4358,19 +4331,17 @@ the group being :css and :javascript.</p>
  7  .container 
  8  margin: 0 auto  
  9  width: 960px 
- 10  
 </pre>
 
 <h4>Compiled HTML</h4>
 
 <pre>
- 1  <style>  
+ 1  &lt;style&gt;  
  2  .container { 
  3    margin: 0 auto; 
  4    width: 960px;
  5  } 
- 6  </style> 
- 7 
+ 6  &lt;/style&gt; 
 </pre>
 
 <h4>Ruby Interpolation</h4>
@@ -4386,14 +4357,12 @@ wrapping the necessary Ruby code inside.</p>
 
 <pre>
  1  %div{:class => "student-#{@student.name}"}
- 2 
 </pre>
 
 <h4>Compiled HTML</h4>
 
 <pre>
  1  <div class="student-shay"> 
- 2 
 </pre>
 
 <h4 id="scss-sass">SCSS &amp; Sass</h4>
@@ -4421,7 +4390,6 @@ the command line to install SCSS and Sass.</p>
 
 <pre>
  1  gem install sass
- 2 
 </pre>
 
 <p>Files written in SCSS or Sass need to have the .scss or .sass file
@@ -4445,7 +4413,6 @@ the following sass command may be run.</p>
 
 <pre>
  1  sass --watch styles.sass:styles.css 
- 2 
 </pre>
 
 <p>Additionally, instead of compiling or watching individual files, Sass is
@@ -4455,7 +4422,6 @@ CSS the sass command below may be run.</p>
 
 <pre>
  1  sass --watch assets/sass:public/css 
- 2 
 </pre>
 
 <h4>Converting Files from SCSS to Sass &amp; Vice Versa</h4>
@@ -4470,7 +4436,6 @@ then a Sass file to SCSS respectively.</p>
  2  sass-convert styles.sass styles.scss  
  3  # Convert SCSS to Sass
  4  sass-convert styles.scss styles.sass  
- 5  
 </pre>
 
 <h4>Syntax</h4>
@@ -4493,7 +4458,6 @@ indentation and clear line breaks for formatting.</p>
  5      text-transform: uppercase;  
  6    } 
  7  } 
- 8 
 </pre>
 
 <h4>Sass</h4>
@@ -4504,7 +4468,6 @@ indentation and clear line breaks for formatting.</p>
  3  font-weight: bold  
  4  span 
  5  text-transform: uppercase
- 6 
 </pre>
 
 <h4>Compiled CSS</h4>
@@ -4517,7 +4480,6 @@ indentation and clear line breaks for formatting.</p>
  5  .new span {
  6    text-transform: uppercase;  
  7  } 
- 8 
 </pre>
 
 <h4>Using SCSS vs. Sass</h4>
@@ -4554,7 +4516,6 @@ selectors without raising specificity is important.</p>
  4  list-style: none
  5  li
  6  float: left
- 7 
 </pre>
 
 <h4>Compiled CSS</h4>
@@ -4569,7 +4530,6 @@ selectors without raising specificity is important.</p>
  7  .portfolio li { 
  8    float: left; 
  9  } 
- 10 
 </pre>
 
 <h4>Nesting Properties</h4>
@@ -4589,7 +4549,6 @@ your decision is up to personal preference.</p>
  3  family: Baskerville, Palatino, serif 
  4  style: italic
  5  weight: normal  
- 6 
 </pre>
 
 <h4>Compiled CSS</h4>
@@ -4600,7 +4559,6 @@ your decision is up to personal preference.</p>
  3    font-style: italic;
  4    font-weight: normal;  
  5  } 
- 6 
 </pre>
 
 <h4>Nested Media Queries</h4>
@@ -4615,7 +4573,6 @@ changing property values based off a media condition.</p>
  2  width: 960px 
  3  @media screen and (max-width: 960px)
  4  width: 100%
- 5 
 </pre>
 
 <h4>Compiled CSS</h4>
@@ -4629,7 +4586,6 @@ changing property values based off a media condition.</p>
  6      width: 100%; 
  7    } 
  8  } 
- 9 
 </pre>
 
 <h4>Parent Selector</h4>
@@ -4648,7 +4604,6 @@ as &amp;.featured.</p>
  2  color: #0087cc  
  3  &:hover 
  4  color: #ff7b29  
- 5 
 </pre>
 
 <h4>Compiled CSS</h4>
@@ -4660,7 +4615,6 @@ as &amp;.featured.</p>
  4  a:hover {  
  5    color: #ff7b29; 
  6  } 
- 7 
 </pre>
 
 <h4>Parent Key Selector</h4>
@@ -4677,7 +4631,6 @@ of the most beneficial is inside of feature detection.</p>
  2  background: linear-gradient(#fff, #9799a7)
  3  .no-cssgradients & 
  4  background: url("gradient.png") 0 0 repeat-x  
- 5 
 </pre>
 
 <h4>Compiled CSS</h4>
@@ -4689,7 +4642,6 @@ of the most beneficial is inside of feature detection.</p>
  4  .no-cssgradients .btn {  
  5    background: url("gradient.png") 0 0 repeat-x; 
  6  } 
- 7 
 </pre>
 
 <h4>Comments</h4>
@@ -4713,7 +4665,6 @@ is not rendered in the compiled CSS.</p>
  4  // Omitted comment 
  5  strong  
  6  display: block  
- 7 
 </pre>
 
 <h4>Compiled CSS</h4>
@@ -4726,7 +4677,6 @@ is not rendered in the compiled CSS.</p>
  5  strong {
  6    display: block; 
  7  } 
- 8 
 </pre>
 
 <h4>Variables</h4>
@@ -4748,7 +4698,6 @@ separated by spaces or commas.</p>
  2  $serif: "Helvetica Neue", Arial, "Lucida Grande", sans-serif 
  3  p 
  4  font: $font-base $serif
- 5 
 </pre>
 
 <h4>Compiled CSS</h4>
@@ -4757,7 +4706,6 @@ separated by spaces or commas.</p>
  1  p {  
  2    font: 1em "Helvetica Neue", Arial, "Lucida Grande", sans-serif;  
  3  } 
- 4 
 </pre>
 
 <h4>Variable Interpolation</h4>
@@ -4775,7 +4723,6 @@ string of plain text.</p>
  2  $offset: left  
  3  .#{$location}  
  4  #{$offset}: 20px  
- 5 
 </pre>
 
 <h4>Compiled CSS</h4>
@@ -4784,7 +4731,6 @@ string of plain text.</p>
  1  .chicago { 
  2    left: 20px;
  3  } 
- 4 
 </pre>
 
 <h4>Calculations</h4>
@@ -4813,7 +4759,6 @@ have a unit.</p>
  2  width: 40px - 6 
  3  width: 40px * 6
  4  width: 40px % 6 
- 5 
 </pre>
 
 <h4>Compiled CSS</h4>
@@ -4823,7 +4768,6 @@ have a unit.</p>
  2  width: 34px; 
  3  width: 240px;
  4  width: 4px;
- 5 
 </pre>
 
 <h4>Division</h4>
@@ -4847,7 +4791,6 @@ value will be unitless.</p>
  4  $width: 100px  
  5  width: $width / 10
  6  width: 5px - 100px / 10  
- 7 
 </pre>
 
 <h4>Compiled CSS</h4>
@@ -4858,7 +4801,6 @@ value will be unitless.</p>
  3  width: 10; 
  4  width: 10px; 
  5  width: -5px; 
- 6 
 </pre>
 
 <h4>Detailed Math</h4>
@@ -4874,14 +4816,12 @@ Sass also recognizes which operations to execute first based on the use of paren
  3  $gutter: 20px  
  4  $container: ($column * $grid) + ($gutter * $grid) 
  5  width: $container 
- 6 
 </pre>
 
 <h4>Compiled CSS</h4>
 
 <pre>
  1  width: 960px;
- 2 
 </pre>
 
 <h4>Number Functions</h4>
@@ -4913,7 +4853,6 @@ finds the absolute value of a given number.</p>
  3  width: ceil(2.5px) 
  4  width: floor(2.5px)
  5  width: abs(-2.5px) 
- 6 
 </pre>
 
 <h4>Compiled CSS</h4>
@@ -4924,7 +4863,6 @@ finds the absolute value of a given number.</p>
  3  width: 3px;
  4  width: 2px;
  5  width: 2.5px;
- 6 
 </pre>
 
 <h4>Color</h4>
@@ -4940,14 +4878,12 @@ variable, and convert it into an RGBa value.</p>
  1  color: rgba(#8ec63f, .25)
  2  $green: #8ec63f
  3  color: rgba($green, .25)
- 4 
 </pre>
 
 <h4>Compiled CSS</h4>
 
 <pre>
  1  color: rgba(142, 198, 63, .25);
- 2 
 </pre>
 
 <h4>Color Operations</h4>
@@ -4963,7 +4899,6 @@ intended.</p>
  1  color: #8ec63f + #666 
  2  color: #8ec63f * 2
  3  color: rgba(142, 198, 63, .75) / rgba(255, 255, 255, .75)
- 4 
 </pre>
 
 <h4>Compiled CSS</h4>
@@ -4972,7 +4907,6 @@ intended.</p>
  1  color: #f4ffa5; 
  2  color: #ffff7e; 
  3  color: rgba(0, 0, 0, .75);  
- 4 
 </pre>
 
 <h4>Color Alterations</h4>
@@ -4998,7 +4932,6 @@ of a color.</p>
  3  color: mix(#8ec63f, #fff)
  4  color: mix(#8ec63f, #fff, 10%) 
  5  color: grayscale(#8ec63f)
- 6 
 </pre>
 
 <h4>Compiled CSS</h4>
@@ -5009,7 +4942,6 @@ of a color.</p>
  3  color: #c6e29f; 
  4  color: #f3f9eb; 
  5  color: #838383; 
- 6 
 </pre>
 
 <h4>HSLa Color Alterations</h4>
@@ -5039,7 +4971,6 @@ and desaturate().</p>
  6  color: adjust-hue(#8ec63f, -30)
  7  color: fade-in(rgba(142, 198, 63, 0), .4) 
  8  color: fade-out(#8ec63f, .4)
- 9 
 </pre>
 
 <h4>Compiled CSS</h4>
@@ -5053,7 +4984,6 @@ and desaturate().</p>
  6  color: #c6bb3f; 
  7  color: rgba(142, 198, 63, 0.4);
  8  color: rgba(142, 198, 63, 0.6);
- 9 
 </pre>
 
 <h4>Color Manipulation</h4>
@@ -5084,7 +5014,6 @@ less common than color alterations.</p>
  1  color: change-color(#8ec63f, $red: 60, $green: 255) 
  2  color: adjust-color(#8ec63f, $hue: 300, $lightness: 50%)  
  3  color: scale-color(#8ec63f, $lightness: 25%, $alpha: 30%) 
- 4 
 </pre>
 
 <h4>Compiled CSS</h4>
@@ -5093,7 +5022,6 @@ less common than color alterations.</p>
  1  color: #3cff3f; 
  2  color: white;
  3  color: #aad46f; 
- 4 
 </pre>
 
 <h4>Extends</h4>
@@ -5122,7 +5050,6 @@ code weight. Additionally, extends parley nicely with OOCSS and SMACSS.</p>
  5  @extend .alert 
  6  background: #f2dede
  7  color: #b94a48  
- 8 
 </pre>
 
 <h4>Compiled CSS</h4>
@@ -5137,7 +5064,6 @@ code weight. Additionally, extends parley nicely with OOCSS and SMACSS.</p>
  7  background: #f2dede;  
  8  color: #b94a48; 
  9  } 
- 10 
 </pre>
 
 <h4>Placeholder Selector Extend</h4>
@@ -5158,21 +5084,19 @@ below notice how the .alert selector never makes its way into the CSS.</p>
  5  @extend %alert 
  6  background: #f2dede
  7  color: #b94a48  
- 8 
 </pre>
 
 <h4>Compiled CSS</h4>
 
 <pre>
  1  .alert-error {  
- 2  border-radius: 10px;  
- 3  padding: 10px 20px;
+ 2    border-radius: 10px;  
+ 3    padding: 10px 20px;
  4  } 
  5  .alert-error {  
- 6  background: #f2dede;  
- 7  color: #b94a48; 
+ 6    background: #f2dede;  
+ 7    color: #b94a48; 
  8  } 
- 9 
 </pre>
 
 <h4>Element Selector Extend</h4>
@@ -5188,19 +5112,17 @@ below notice how the .alert selector never makes its way into the CSS.</p>
  4  text-decoration: underline  
  5  .sub-heading 
  6  @extend h2
- 7 
 </pre>
 
 <h4>Compiled CSS</h4>
 
 <pre>
  1  h2, .sub-heading { 
- 2  color: #9c6; 
+ 2    color: #9c6; 
  3  } 
  4  h2 span, .sub-heading span {
- 5  text-decoration: underline; 
+ 5    text-decoration: underline; 
  6  } 
- 7 
 </pre>
 
 <h4>Mixins</h4>
@@ -5226,7 +5148,6 @@ using a plus sign to call a mixin SCSS use an @include rule.</p>
  4  color: $color-hover  
  5  .btn 
  6  +btn($color: #fff, $color-hover: #9799a7)  
- 7 
 </pre>
 
 <h4>Compiled CSS</h4>
@@ -5238,7 +5159,6 @@ using a plus sign to call a mixin SCSS use an @include rule.</p>
  4  .btn:hover { 
  5  color: #9799a7; 
  6  } 
- 7 
 </pre>
 
 <h4>Default Arguments</h4>
@@ -5255,7 +5175,6 @@ values, which may be over written if wished.</p>
  4  color: $color-hover  
  5  .btn 
  6  +btn($color-hover: #9799a7)
- 7 
 </pre>
 
 <h4>Compiled CSS</h4>
@@ -5267,7 +5186,6 @@ values, which may be over written if wished.</p>
  4  .btn:hover { 
  5    color: #9799a7; 
  6  } 
- 7 
 </pre>
 
 <h4>Variable Arguments</h4>
@@ -5283,7 +5201,6 @@ box shadows we can pass in comma separated values to the mixin.</p>
  4  box-shadow: $shadow  
  5  .shadows
  6  +box-shadow(0 1px 2px #cecfd5, inset 0 0 5px #cecfd5) 
- 7 
 </pre>
 
 <h4>Compiled CSS</h4>
@@ -5294,7 +5211,6 @@ box shadows we can pass in comma separated values to the mixin.</p>
  3  -webkit-box-shadow: 0 1px 2px #cecfd5, inset 0 0 5px #cecfd5;  
  4  box-shadow: 0 1px 2px #cecfd5, inset 0 0 5px #cecfd5; 
  5  } 
- 6 
 </pre>
 
 <h4>Imports</h4>
@@ -5320,14 +5236,12 @@ within the HTML document.</p>
 <pre>
  1  @import "normalize"
  2  @import "grid", "typography" 
- 3 
 </pre>
 
 <h4>Compiled HTML</h4>
 
 <pre>
- 1  <link href="styles.css" rel="stylesheet"> 
- 2 
+ 1  &lt;link href="styles.css" rel="stylesheet"&gt;
 </pre>
 
 <h4>Loops &amp; Conditionals</h4>
@@ -5347,19 +5261,19 @@ entities, while comparison operators determine equality or different
 between to entities.</p>
 
 <pre>
-	- <
+	- &lt;
 	Less than
 
-	- >
+	- &gt;
 	Greater than
 
 	- ==
 	Equal to
 
-	- <=
+	- &lt;=
 	Less than or equal to
 
-	- >=
+	- &gt;=
 	Greather than or equal to
 
 	- !=
@@ -5368,15 +5282,14 @@ between to entities.</p>
 
 <pre>
  1  // Relational Operators  
- 2  6 < 10 // true 
- 3  4 <= 60 // true
- 4  8 > 2 // true  
- 5  10 >= 10 // true  
+ 2  6 &lt; 10 // true 
+ 3  4 &lt;= 60 // true
+ 4  8 &gt; 2 // true  
+ 5  10 &gt;= 10 // true  
  6  // Comparison Operators  
  7  #fff == white // true 
  8  10 + 30 == 40 // true 
  9  normal != bold // true
- 10 
 </pre>
 
 <h4>If Function</h4>
@@ -5398,16 +5311,14 @@ directly tied to it will be applied.</p>
  6    background: #0087cc
  7  @else  
  8    background: #333
- 9 
 </pre>
 
 <h4>Compiled CSS</h4>
 
 <pre>
  1  .shay { 
- 2  background: #ff7b29;  
+ 2    background: #ff7b29;  
  3  } 
- 4 
 </pre>
 
 <h4>For Loop</h4>
@@ -5424,7 +5335,6 @@ output styles up to, but not including, 3. The other form, @for $i from
  1  @for $col from 1 to 6  
  2  .col-#{$col}
  3  width: 40px * $col  
- 4 
 </pre>
 
 <details>
@@ -5432,21 +5342,20 @@ output styles up to, but not including, 3. The other form, @for $i from
 
 <pre>
  1  .col-1 {
- 2  width: 40px; 
+ 2    width: 40px; 
  3  } 
  4  .col-2 {
- 5  width: 80px; 
+ 5    width: 80px; 
  6  } 
  7  .col-3 {
- 8  width: 120px;
+ 8    width: 120px;
  9  } 
- 1  .col-4 {
- 0  width: 160px;
- 1  } 
- 1  .col-5 {
- 2  width: 200px;
- 3  } 
- 1 
+ 10 .col-4 {
+ 11   width: 160px;
+ 12 } 
+ 13 .col-5 {
+ 14   width: 200px;
+ 15 } 
 </pre>
 
 </details>
@@ -5462,7 +5371,6 @@ List may include multiple comma separated items.</p>
  1  @each $class in uxd, rails, html, css 
  2  .#{$class}-logo
  3  background: url("/img/#{$class}.jpg")
- 4 
 </pre>
 
 <details>
@@ -5481,7 +5389,6 @@ List may include multiple comma separated items.</p>
  10 .css-logo {
  11   background: url("/img/css.jpg");
  12 } 
- 13  
 </pre>
 
 </details>
@@ -5500,7 +5407,6 @@ counter variable can be finely controlled allowing for precise looping.</p>
  3  h#{$heading}
  4  font-size: 2em - ($heading * .25em)
  5  $heading: $heading + 1 
- 6 
 </pre>
 
 <details>
@@ -5524,7 +5430,6 @@ counter variable can be finely controlled allowing for precise looping.</p>
  15 }
  16 h6 { 16 font-size: 0.5em;
  17 }
- 18 
 </pre>
 
 </details>
@@ -5638,7 +5543,7 @@ to help render HTML and determine it's behavior, thus may be referenced within
 a documents head.</p>
 
 <pre>
- 1  <script src="script.js"></script> 
+ 1  &lt;script src="script.js"&gt;&lt;/script&gt;
  2 
 </pre>
 
@@ -5672,7 +5577,6 @@ example, shay_is_awesome would more commonly named shayIsAwesome.</p>
  2  var food_truck = 'Coffee';
  3  var mixtape01 = true; 
  4  var vinyl = ]'Miles Davis', 'Frank Sinatra', 'Ray Charles'&lbrack;; 
- 5 
 </pre>
 
 <h4>Statements</h4>
@@ -5689,7 +5593,6 @@ legibility, but is not required.</p>
  1  log(polaroid);  
  2  return('bicycle lane');
  3  alert('Congratulations, you ' + outcome);  
- 4 
 </pre>
 
 <h4>Functions</h4>
@@ -5706,9 +5609,8 @@ enclosed in curly braces, {}.</p>
 
 <pre>
  1  function sayHello(name) {
- 2  return('Hello ' + name);  
+ 2    return('Hello ' + name);  
  3  } 
- 4 
 </pre>
 
 <h4>Arrays</h4>
@@ -5750,7 +5652,6 @@ properties, each having a key followed by a colon and value.</p>
  7  };
  8  // Array
  9  var school = &lbrack;'Austin', 'Chicago', 'Portland'];
- 10 
 </pre>
 
 </details>
@@ -5799,9 +5700,9 @@ loading times. Additionally, using a CDN like Google also helps with loading
 time, and potential caching benefits.</p>
 
 <pre>
- 1  <script src="//aja
- 2  x.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script> 
- 3  <script src="script.js"></script> 
+ 1  &lt;script src="//aja
+ 2    x.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"&gt;&lt;/script&gt;
+ 3  &lt;script src="script.js"&gt;&lt;/script&gt;
 </pre>
 
 <p>In the code sample above, notice the second script element referencing a
@@ -5830,7 +5731,6 @@ outside of the actual jQuery library.</p>
 <pre>
  1  $();
  2  jQuery();  
- 3 
 </pre>
 
 <h4>Document Ready</h4>
@@ -5846,7 +5746,6 @@ until the page has loaded and the DOM is ready.</p>
  1  $(document).ready(function(event){  
  2  // jQuery code  
  3  });  
- 4 
 </pre>
 
 <h4 id="selectors">Selectors</h4>
@@ -5870,7 +5769,6 @@ parentheses, ('...'), and may select elements just like that of CSS.</p>
  3  $('em, i'); // Multiple selector  
  4  $('a&lbrack;target="_blank"]'); // Attribute selector
  5  $('p:nth-child(2)'); // Pseudo-class selector
- 6 
 </pre>
 
 <h4>This Selection Keyword</h4>
@@ -5884,7 +5782,6 @@ the current handler.</p>
  1  $('div').click(function(event){
  2  $(this);  
  3  });  
- 4 
 </pre>
 
 <h4>jQuery Selection Filters</h4>
@@ -5897,7 +5794,6 @@ provide more control over selecting an element or its relatives.</p>
 
 <pre>
  1  $('div:has(strong)');  
- 2  
 </pre>
 
 <p>As they stand these filters may be used inside of the selector, however
@@ -5921,7 +5817,6 @@ without a class of type or collection will be selected.</p>
 
 <pre>
  1  $('div').not('.type, .collection');
- 2 
 </pre>
 
 <h4>Chaining Methods</h4>
@@ -5936,7 +5831,6 @@ elements of div elements without a class of type or collection.</p>
 
 <pre>
  1  $('div').not('.type, .collection').parent();  
- 2 
 </pre>
 
 <h4>Traversing Methods</h4>
@@ -6015,7 +5909,6 @@ information.</p>
  2  $('img').attr('alt');  
  3  // Sets the value of the alt attribute  
  4  $('img').attr('alt', 'Wild kangaroo');
- 5 
 </pre>
 
 <p>In the examples and snippets to follow methods will primarily be used in
@@ -6036,7 +5929,6 @@ any abbr element and set it to Hello World.</p>
  1  $('li:even').addClass('even-item');
  2  $('p').removeClass(); 
  3  $('abbr').attr('title', 'Hello World');  
- 4 
 </pre>
 
 <h4>Attribute Manipulation Methods</h4>
@@ -6082,7 +5974,6 @@ sign followed by the quoted unit of measurement.</p>
  5  });  
  6  $('header').height(200); 
  7  $('.extend').height(30 + 'em'); 
- 8 
 </pre>
 
 <h4>Style Manipulation Methods</h4>
@@ -6118,7 +6009,6 @@ the text of any h1 elements with the text Hello World.</p>
  1  $('section').prepend('<h3>Featured</h3>');
  2  $('a&lbrack;target="_blank"]').after('<em>New window.</em>'); 
  3  $('h1').text('Hello World'); 
- 4 
 </pre>
 
 <h4>DOM Manipulation Methods</h4>
@@ -6169,9 +6059,8 @@ the this keyword, receives the class of saved-item.</p>
 
 <pre>
  1  $('li').click(function(event){ 
- 2  $(this).addClass('saved-item');
+ 2    $(this).addClass('saved-item');
  3  });  
- 4 
 </pre>
 
 <h4>Event Flexibility</h4>
@@ -6194,7 +6083,6 @@ function staying the same as before.</p>
  1  $('li').on('click', function(event){ 
  2    $(this).addClass('saved-item');
  3  });  
- 4 
 </pre>
 
 <h4>Nesting Events</h4>
@@ -6209,7 +6097,6 @@ the .click() event is called on the anchor with the up ID.</p>
  1  $('.pagination').on('hover', function(event){ 
  2    $('a#up').click(); 
  3  });  
- 4 
 </pre>
 
 <h4>Event Demo</h4>
@@ -6221,11 +6108,10 @@ clicking the close icon.</p>
 <h4>HTML</h4>
 
 <pre>
- 1  <div class="notice-warning">
- 2    <div class="notice-close">x</div>  
- 3    <strong>Warning!</strong> I"m about to lose my cool.  
- 4  </div> 
- 5  
+ 1  &lt;div class="notice-warning"&gt;
+ 2    &lt;div class="notice-close"&gt;x&lt;/div&gt;
+ 3    &lt;strong>Warning!&lt;/strong&gt; I"m about to lose my cool.
+ 4  &lt;/div&gt;
 </pre>
 
 <h4JavaScript</h4>
@@ -6234,7 +6120,6 @@ clicking the close icon.</p>
  1  $('.notice-close').on('click', function(event){
  2    $('.notice-warning').remove();  
  3  });
- 4  
 </pre>
 
 <h4>Demo</h4>
@@ -6357,7 +6242,6 @@ values must be quoted while millisecond values do not.</p>
  1  $('.error').show();
  2  $('.error').show('slow'); 
  3  $('.error').show(500);
- 4 
 </pre>
 
 <h4>Effect Easing</h4>
@@ -6374,7 +6258,6 @@ animation at one constant pace for the entire duration.</p>
 <pre>
  1  $('.error').show('slow', 'linear');
  2  $('.error').show(500, 'linear');
- 3 
 </pre>
 
 <h4>jQuery UI</h4>
@@ -6399,7 +6282,6 @@ or effects may be placed, each following their own required syntax.</p>
  1  $('.error').show('slow', 'linear', function(event){  
  2  $('.error .status').text('Continue');
  3  });  
- 4 
 </pre>
 
 <h4>Effect Syntax</h4>
@@ -6423,11 +6305,10 @@ animation is complete.</p>
 <h4>HTML</h4>
 
 <pre>
- 1  <div class="notice-warning">
- 2    <div class="notice-close">x</div>  
- 3    <strong>Warning!</strong> I'm about to lose my cool.  
- 4  </div> 
- 5  
+ 1  &lt;div class="notice-warning"&gt;
+ 2    &lt;div class="notice-close"&gt;x&lt;/div&gt;
+ 3    &lt;strong&gt;Warning!&lt;/strong&gt; I'm about to lose my cool.
+ 4  &lt;/div&gt;
 </pre>
 
 <h4>JavaScript</h4>
@@ -6438,7 +6319,6 @@ animation is complete.</p>
  3      $(this).remove(); 
  4    });  
  5  });  
- 6 
 </pre>
 
 <h4>Demo</h4>
@@ -6490,7 +6370,6 @@ animation is complete.</p>
  2    <div class="panel-stage"></div>
  3    <a href="#" class="panel-tab">Open <span>&#9660;</span></a> 
  4  </div>
- 5 
 </pre>
 
 <details>
@@ -6506,8 +6385,7 @@ animation is complete.</p>
  7        $('.panel-tab').html('Open <span>&#9660;</span>'); 
  8      } 
  9    });  
- 10 });  
- 11 
+ 10 });
 </pre>
 
 </details>
@@ -6527,7 +6405,6 @@ animation is complete.</p>
  6    <div id="tab-1">...</div>
  7    <div id="tab-2">...</div>
  8  </div> 
- 9  
 </pre>
 
 <details>
@@ -6546,7 +6423,6 @@ animation is complete.</p>
  10   $('.tabs-stage div').hide(); 
  11   $($(this).attr('href')).show();
  12 });
- 13  
 </pre>
 
 </details>
