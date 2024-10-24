@@ -391,7 +391,7 @@ previously mentioned, includes binding styles to one class, then using
 multiple classes on the same element.</p>
 
 <details>
-  <summary>CSS Examples</summary>
+  <summary><b>CSS Examples</b></summary>
 
 <pre>
 /* Bad */
@@ -405,6 +405,7 @@ multiple classes on the same element.</p>
   border-radius: 5px;
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, .25);
 }
+
 /* Good */
 .news,
 .social {
@@ -643,7 +644,7 @@ change the background position of the image sprite, different icons can
 be shown accordingly.</p>
 
 <details>
-  <summary>HTML</summary>
+  <summary><b>HTML</b></summary>
   
 <pre>&lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;bold&quot;&gt;Bold Text&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
@@ -752,16 +753,15 @@ see that the actual data URI is less weight than the actual image.</p>
 <pre> 1  &lt;img height=&quot;100&quot; width=&quot;660&quot; alt=&quot;Rigged Pattern&quot; src=&quot;data:image/png;base64,
  2  iVBORw0KGgoAAAANSUhEUgAAAAoAAAAICAYAAADA+m62AAAAPUlEQVQYV2NkQAO6m73+X/bdxoguji 
  3  IAU4RNMVwhuiQ6H6wQl3XI4oy4FMHcCJPHcDS6J2A2EqUQpJ
- 4  hohQAyIyYy0nBAGgAAAABJRU5ErkJggg==&quot;&gt;
- 5  </pre>
+ 4  hohQAyIyYy0nBAGgAAAABJRU5ErkJggg==&quot;&gt;</pre>
 
 <h5>CSS</h5>
 
 <pre> 1  div {
- 2  background: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAICAYAA 
- 3  ADA+m62AAAAPUlEQVQYV2NkQAO6m73+X/bdxogujiIAU4RNMVwhuiQ6H6wQl3XI4oy4F
- 4  MHcCJPHcDS6J2A2EqUQpJhohQAyIyYy0nBAGgAAAABJRU5ErkJggg==&quot;) repeat;
- 5 }</pre>
+ 2    background: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAICAYAA 
+ 3    ADA+m62AAAAPUlEQVQYV2NkQAO6m73+X/bdxogujiIAU4RNMVwhuiQ6H6wQl3XI4oy4F
+ 4    MHcCJPHcDS6J2A2EqUQpJhohQAyIyYy0nBAGgAAAABJRU5ErkJggg==&quot;) repeat;
+ 5  }</pre>
  
 <h4>Image Data URI Demo</h4>
  
@@ -786,9 +786,8 @@ the file name will need to be changed, preferably versioned, in order to
 be loaded. Alternatively, the expires headers can be changed to a
 smaller period of time.</p>
 
-<pre> 1  ExpiresByType text/css &quot;access plus 1 year&quot;
- 2  ExpiresByType application/javascript &quot;access plus 1 year&quot;
- 3  </pre>
+<pre>ExpiresByType text/css &quot;access plus 1 year&quot;
+ExpiresByType application/javascript &quot;access plus 1 year&quot;</pre>
 
 <p>Changing the “access plus 1 year” value to “access plus 1 week” is
 better suited for CSS and JavaScript files that are changing weekly but
@@ -820,11 +819,10 @@ rel="noopener noreferrer" target="_blank">syntax</a>.</p>
 
 <p><b>Lesson 1</b>
 <a href="https://learn.shayhowe.com/advanced-html-css/performance-organization/" 
-rel="noopener noreferrer" target="_blank">Performance &amp;
-Organization</a> <b>Lesson 3</b>
+rel="noopener noreferrer" target="_blank">Performance &amp; Organization</a> <b>Lesson 3</b>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <a href="https://learn.shayhowe.com/advanced-html-css/complex-selectors/" 
 rel="noopener noreferrer" target="_blank">Complex Selectors</a></p>
-
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 align="center">Lesson 2: Detailed Positioning</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -841,56 +839,50 @@ rel="noopener noreferrer" target="_blank">Complex Selectors</a></p>
     rel="noopener noreferrer" target="_blank"> Z-Index Property</a></li>
 </ul>
 
-<p><b>SHARE</b></p>
+<h4>SHARE</h4>
 
 <p>When it comes to building layouts and positioning content on a page
 there are a handful of different techniques to use. Which technique to
 use largely depends on the content and the goals of the page, as some
 techniques may be better than others.</p>
+
 <p>For example, the ability to float elements side by side provides a nice,
 clean layout that is receptive to the different elements on a page.
 However, when more strict control is needed, elements may be positioned
 using other techniques, including relative or absolute positioning.</p>
-<p>
-In this lesson, we’ll start by taking a look at how to contain floats.
+
+<p>In this lesson, we’ll start by taking a look at how to contain floats.
 Following that, we’ll cover more detailed positioning techniques,
 including how to precisely position elements on both the x and y axis as
-well as the z axis.
-</p>
+well as the z axis.</p>
 
 <h4>Containing Floats</h4>
 
-<p>
-Floating elements is a natural process when building a website’s layout,
+<p>Floating elements is a natural process when building a website’s layout,
 and is the instinctive method for positioning elements on a page. Floats
 allow elements to appear next to, or apart from, one another. They
 provide the ability to build a natural flow within a layout and allow
 elements to interact with one another based on their size and the size
-of their containing parent.
-</p>
-<p>
-When floated, an element’s position is dependent on the other elements
+of their containing parent.</p>
+
+<p>When floated, an element’s position is dependent on the other elements
 positioned around it. Will that element run into the one next to it?
 Will it appear on a new line? This all depends on the DOM (Document
-Object Model) and what surrounds an element.
-</p>
+Object Model) and what surrounds an element.</p>
 
 <h4>What is the DOM?</h4>
 
-<p>
-The DOM, or Document Object Model, is an API for HTML and XML documents
+<p>The DOM, or Document Object Model, is an API for HTML and XML documents
 which provides their structural representation. In our case, we are
 speaking specifically to HTML documents, thus the DOM represents all of
-the different elements and their relationship to each other.
-</p>
-<p>
-The representation can be considered a tree of sorts, with each element
+the different elements and their relationship to each other.</p>
+
+<p>The representation can be considered a tree of sorts, with each element
 having a different relationship with those around it. Elements nested
 inside others have a parent and child relationship while elements that
-share the same parent have a sibling relationship.
-</p>
-<p>
-While <a href="https://css-tricks.com/all-about-floats/" 
+share the same parent have a sibling relationship.</p>
+
+<p>While <a href="https://css-tricks.com/all-about-floats/" 
 rel="noopener noreferrer" target="_blank">floats</a> do provide quite a
 bit of fire power, they do come with a few of their own problems. The
 most popular problem involves a parent element that contains numerous
@@ -901,78 +893,69 @@ parent element loses context of exactly what it contains and collapses,
 thus giving the parent element a height of 0 and ignoring various other
 properties. A lot of times this may go unnoticed, specifically when the
 parent element doesn’t have any styles tied to it and the nested
-elements look to have aligned correctly.
-</p>
-<p>
-Should the nested elements not line up correctly, styling errors may
+elements look to have aligned correctly.</p>
+
+<p>Should the nested elements not line up correctly, styling errors may
 appear. Taking a look at the demo below, the .box-set division should
 have a light gray background, however the background is not seen as all
 of the elements nested within it are floated. Upon inspecting
-the .box-set division you will see it has a height of 0.
-</p>
-<h4>
-HTML
-</h4>
-<pre> 1  &lt;div class=&quot;box-set&quot;&gt;
- 2    &lt;figure class=&quot;box&quot;&gt;Box 1&lt;/figure&gt;
- 3    &lt;figure class=&quot;box&quot;&gt;Box 2&lt;/figure&gt;
- 4    &lt;figure class=&quot;box&quot;&gt;Box 3&lt;/figure&gt;
- 5  &lt;/div&gt;
- 6  </pre>
-<h4>
-CSS
-</h4>
-<pre> 1  .box-set {
- 2    background: #eaeaed;
- 3  }
- 4  .box {
- 5    background: #2db34a;
- 6    float: left;
- 7    margin: 1.858736059%;
- 8    width: 29.615861214%;
- 9  }
- 10 </pre>
-<h4>
-Containing Floats Demo
-</h4>
-<p>
-One way to force containing these floats would be to place an empty
+the .box-set division you will see it has a height of 0.</p>
+
+<h4>HTML</h4>
+
+<pre>&lt;div class=&quot;box-set&quot;&gt;
+  &lt;figure class=&quot;box&quot;&gt;Box 1&lt;/figure&gt;
+  &lt;figure class=&quot;box&quot;&gt;Box 2&lt;/figure&gt;
+  &lt;figure class=&quot;box&quot;&gt;Box 3&lt;/figure&gt;
+&lt;/div&gt;</pre>
+
+<h4>CSS</h4>
+
+<pre>.box-set {
+  background: #eaeaed;
+}
+.box {
+  background: #2db34a;
+  float: left;
+  margin: 1.858736059%;
+  width: 29.615861214%;
+}</pre>
+
+<h4>Containing Floats Demo</h4>
+
+<p>One way to force containing these floats would be to place an empty
 element just before the parent elements closing tag, of which would need
 to include the style declaration clear: both;. Clearing the floats this
 way works and is valid in most cases, but it isn’t exactly semantic.
 Depending on how many different floats need to be cleared on a page the
 number of empty elements can begin to stack up quickly, while not
-providing any real contextual value to the page.
-</p>
-<p>
-Fortunately there are a couple of different techniques we can use to
+providing any real contextual value to the page.</p>
+
+<p>Fortunately there are a couple of different techniques we can use to
 contain these floats, the most popular of which include the overflow
-technique and the clearfix technique.
-</p>
-<h4>
-The Overflow Technique
-</h4>
-<p>
-One technique for containing floats within a parent element is to use
+technique and the clearfix technique.</p>
+
+<h4>The Overflow Technique</h4>
+
+<p>One technique for containing floats within a parent element is to use
 the CSS overflow property. Setting the overflow property value
 to auto within the parent element will contain the floats, resulting in
 an actual height for the parent element, thus including a gray
-background in our example.
-</p>
-<p>
-For this to work within Internet Explorer 6 a height or width is
+background in our example.</p>
+
+<p>For this to work within Internet Explorer 6 a height or width is
 required on the parent element. Since the height may likely be variable
 a width of 100% will do the trick. Using overflow: auto; in Internet
 Explorer on an Apple computer will also add scrollbars to the parent
-element, in which it is better to use the overflow: hidden; declaration.
-</p>
-<pre> 1  .box-set {
- 2    overflow: auto;
- 3  }
- 4  </pre>
-<h4>
-Overflow Technique Demo
-</h4>
+element, in which it is better to use the overflow: hidden; declaration.</p>
+
+<pre>
+.box-set {
+  overflow: auto;
+}</pre>
+
+<h4>Overflow Technique Demo</h4>
+
 <p>
 Using the overflow technique does come with a few drawbacks. For
 example, when adding styles or moving nested elements that span outside
@@ -1591,7 +1574,9 @@ Organization</a> <b>Lesson 3</b>
     rel="noopener noreferrer" target="_blank"> Pseudo-elements</a>
 </li>
 </ul>
-<p><b>SHARE</b></p>
+
+<h4>SHARE</h4>
+
 <p>
 Selectors are one of, if not, the most important parts of CSS. They
 shape the cascade and determine how styles are to be applied to elements
@@ -1640,11 +1625,12 @@ CSS
 
 <h4>HTML</h4>
 
-<pre> 1  &lt;section id=&quot;intro&quot;&gt;
- 2    &lt;h1&gt;...&lt;/h1&gt;
- 3    &lt;h2 class=&quot;tagline&quot;&gt;...&lt;/h2&gt;
- 4  &lt;/section&gt;
- 5  </pre>
+<pre>
+&lt;section id=&quot;intro&quot;&gt;
+  &lt;h1&gt;...&lt;/h1&gt;
+  &lt;h2 class=&quot;tagline&quot;&gt;...&lt;/h2&gt;
+&lt;/section&gt;
+</pre>
  
 <h4>Common Selectors Overview</h4>
 
@@ -1755,14 +1741,15 @@ article, thus selected.
  
 <h4>HTML</h4>
 
-<pre> 1  &lt;p&gt;...&lt;/p&gt; 
- 2  &lt;article&gt;
- 3    &lt;p&gt;This paragraph will be selected&lt;/p&gt;
- 4    &lt;div&gt; 
- 5      &lt;p&gt;...&lt;/p&gt; 
- 6    &lt;/div&gt;
- 7  &lt;/article&gt; 
- 8 </pre>
+<pre>
+&lt;p&gt;...&lt;/p&gt; 
+&lt;article&gt;
+  &lt;p&gt;This paragraph will be selected&lt;/p&gt;
+  &lt;div&gt; 
+    &lt;p&gt;...&lt;/p&gt; 
+  &lt;/div&gt;
+&lt;/article&gt; 
+</pre>
  
 <h4>Child Selectors Overview</h4>
 
@@ -2040,9 +2027,9 @@ emerged over the years, specifically taking a large leap forward with
 CSS3. Now elements can be selected based on whether an attribute is
 present and what its value may contain.
 </p>
-<h4>
-Attribute Present Selector
-</h4>
+
+<h4>Attribute Present Selector</h4>
+
 <p>
 The first attribute selector identifies an element based on whether it
 includes an attribute or not, regardless of any actual value. To select
@@ -2051,84 +2038,69 @@ attribute name in square brackets, [], within a selector. The square
 brackets may or may not follow any qualifier such as an element type or
 class, all depending on the level of specificity desired.
 </p>
-<h4>
-CSS
-</h4>
-<pre> 1  a[target] {...} 
- 2 </pre>
-<h4>
-HTML
-</h4>
-<pre> 1  &lt;a href=&quot;#&quot; target=&quot;_blank&quot;&gt;...&lt;/a&gt;
- 2 </pre>
-<h4>
-Attribute Equals Selector
-</h4>
-<p>
-To identify an element with a specific, and exact matching, attribute
+
+<h4>CSS</h4>
+
+<pre>a[target] {...} </pre>
+
+<h4>HTML</h4>
+
+<pre>&lt;a href=&quot;#&quot; target=&quot;_blank&quot;&gt;...&lt;/a&gt;</pre>
+
+<h4>Attribute Equals Selector</h4>
+
+<p>To identify an element with a specific, and exact matching, attribute
 value the same selector from before may be used, however this time
 inside of the square brackets following the attribute name, include the
 desired matching value. Inside the square brackets should be the
 attribute name followed by an equals sign, =, quotations, ““, and inside
-of the quotations should be the desired matching attribute value.
-</p>
-<h4>
-CSS
-</h4>
-<pre> 1  a[href=&quot;http://google.com/&quot;] {...} 
- 2 </pre>
-<h4>
-HTML
-</h4>
-<pre> 1  &lt;a href=&quot;http://google.com/&quot;&gt;...&lt;/a&gt;  
- 2 </pre>
-<h4>
-Attribute Contains Selector
-</h4>
-<p>
-When looking to find an element based on part of an attribute value, but
+of the quotations should be the desired matching attribute value.</p>
+
+<h4>CSS</h4>
+
+<pre>a[href=&quot;http://google.com/&quot;] {...}</pre>
+
+<h4>HTML</h4>
+
+<pre>&lt;a href=&quot;http://google.com/&quot;&gt;...&lt;/a&gt;</pre>
+
+<h4>Attribute Contains Selector</h4>
+
+<p>When looking to find an element based on part of an attribute value, but
 not an exact match, the asterisk character, *, may be used within the
 square brackets of a selector. The asterisk should fall just after the
 attribute name, directly before the equals sign. Doing so denotes that
 the value to follow only needs to appear, or be contained, within the
-attribute value.
-</p>
-<h4>
-CSS
-</h4>
-<pre> 1  a[href*=&quot;login&quot;] {...}
- 2 </pre>
-<h4>
-HTML
-</h4>
-<pre> 1  &lt;a href=&quot;/login.php&quot;&gt;...&lt;/a&gt;  
- 2 </pre>
-<h4>
-Attribute Begins With Selector
-</h4>
-<p>
-In addition to selecting an element based on if an attribute value
+attribute value.</p>
+
+<h4>CSS</h4>
+
+<pre>a[href*=&quot;login&quot;] {...}</pre>
+
+<h4>HTML</h4>
+
+<pre>&lt;a href=&quot;/login.php&quot;&gt;...&lt;/a&gt;</pre>
+
+<h4>Attribute Begins With Selector</h4>
+
+<p>In addition to selecting an element based on if an attribute value
 contains a stated value, it is also possible to select an element based
 on what an attribute value begins with. Using a circumflex accent, ^,
 within the square brackets of a selector between the attribute name and
 equals sign denotes that the attribute value should begin with the
-stated value.
-</p>
-<h4>
-CSS
-</h4>
-<pre> 1  a[href&amp;Hat;=&quot;https://&quot;] {...}
- 2 </pre>
-<h4>
-HTML
-</h4>
-<pre> 1  &lt;a href=&quot;https://chase.com/&quot;&gt;...&lt;/a&gt;  
- 2 </pre>
-<h4>
-Attribute Ends With Selector
-</h4>
-<p>
-Opposite of the begins with selector, there is also an ends with
+stated value.</p>
+
+<h4>CSS</h4>
+
+<pre>a[href&amp;Hat;=&quot;https://&quot;] {...}</pre>
+
+<h4>HTML</h4>
+
+<pre>&lt;a href=&quot;https://chase.com/&quot;&gt;...&lt;/a&gt;</pre>
+
+<h4>Attribute Ends With Selector</h4>
+
+<p>Opposite of the begins with selector, there is also an ends with
 attribute selector. Instead of using the circumflex accent, the ends
 with attribute selector uses the dollar sign, $, within the square
 brackets of a selector between the attribute name and equals sign. Using
@@ -2138,57 +2110,48 @@ stated value.
 <h4>
 CSS
 </h4>
-<pre> 1  a[href$=&quot;.pdf&quot;] {...} 
- 2 </pre>
-<h4>
-HTML
-</h4>
-<pre> 1  &lt;a href=&quot;/docs/menu.pdf&quot;&gt;...&lt;/a&gt; 
- 2 </pre>
-<h4>
-Attribute Spaced Selector
-</h4>
-<p>
-At times attribute values may be spaced apart, in which only one of the
+
+<pre>a[href$=&quot;.pdf&quot;] {...}</pre>
+
+<h4>HTML</h4>
+
+<pre>&lt;a href=&quot;/docs/menu.pdf&quot;&gt;...&lt;/a&gt;</pre>
+
+<h4>Attribute Spaced Selector</h4>
+
+<p>At times attribute values may be spaced apart, in which only one of the
 words needs to be matched in order to make a selection. In this event
 using the tilde character, ˜, within the square brackets of a selector
 between the attribute name and equals sign denotes an attribute value
 that should be whitespace-separated, with one word matching the exact
 stated value.
 </p>
-<h4>
-CSS
-</h4>
-<pre> 1  a[rel&amp;tilde;=&quot;tag&quot;] {...}
- 2 </pre>
-<h4>
-HTML
-</h4>
-<pre> 1  &lt;a href=&quot;#&quot; rel=&quot;tag nofollow&quot;&gt;...&lt;/a&gt; 
- 2 </pre>
-<h4>
-Attribute Hyphenated Selector
-</h4>
-<p>
-When an attribute value is hyphen-separated, rather than
+<h4>CSS</h4>
+
+<pre>a[rel&amp;tilde;=&quot;tag&quot;] {...}</pre>
+
+<h4>HTML</h4>
+
+<pre>&lt;a href=&quot;#&quot; rel=&quot;tag nofollow&quot;&gt;...&lt;/a&gt;</pre>
+
+<h4>Attribute Hyphenated Selector</h4>
+
+<p>When an attribute value is hyphen-separated, rather than
 whitespace-separated, the vertical line character, |, may be used within
 the square brackets of a selector between the attribute name and equals
 sign. The vertical line denotes that the attribute value may be
 hyphen-separated however the hyphen-separated words must begin with the
-stated value.
-</p>
+stated value.</p>
 
 <h4>CSS</h4>
 
-<pre> 1  a[lang&amp;#0124;=&quot;en&quot;] {...}
- 2 </pre>
+<pre>a[lang&amp;#0124;=&quot;en&quot;] {...}</pre>
  
 <br><br>
 
 <h4>HTML</h4>
 
-<pre> 1  &lt;a href=&quot;#&quot; lang=&quot;en-US&quot;&gt;...&lt;/a&gt; 
- 2 </pre>
+<pre>&lt;a href=&quot;#&quot; lang=&quot;en-US&quot;&gt;...&lt;/a&gt;</pre>
 
 <h4>Attribute Selectors Example</h4>
 
@@ -2200,8 +2163,7 @@ stated value.
  4    &lt;li&gt;&lt;a href=&quot;#.jpg&quot;&gt;Image File&lt;/a&gt;&lt;/li&gt;  
  5    &lt;li&gt;&lt;a href=&quot;#.mp3&quot;&gt;Audio File&lt;/a&gt;&lt;/li&gt;  
  6    &lt;li&gt;&lt;a href=&quot;#.mp4&quot;&gt;Video File&lt;/a&gt;&lt;/li&gt;  
- 7  &lt;/ul&gt;
- 8 </pre>
+ 7  &lt;/ul&gt;</pre>
 
 <br><br>
 
@@ -2237,12 +2199,12 @@ stated value.
  27 } 
  28 a[href$=&quot;.mp4&quot;] {
  29   background-image: url(&quot;images/video.png&quot;); 
- 30 } 
- 31 </pre>
+ 30 } </pre>
+
 </details>
-<h4>
-Demo
-</h4>
+
+<h4>Demo</h4>
+
 <h4>Attribute Selectors Overview</h4>
 
 <table>
@@ -2339,35 +2301,30 @@ Demo
 
 <h4>Pseudo-classes</h4>
 
-<p>
-<a href="http://coding.smashingmagazine.com/2011/03/30/how-to-use-css3-pseudo-classes/" 
+<p><a href="http://coding.smashingmagazine.com/2011/03/30/how-to-use-css3-pseudo-classes/" 
 rel="noopener noreferrer" target="_blank"> Pseudo-classes</a> are
 similar to regular classes in HTML however they are not directly stated
 within the markup, instead they are dynamically populated as a result of
 users’ actions or the document structure. The most common pseudo-class,
 and one you’ve likely seen before, is :hover. Notice how this
 pseudo-class begins with the colon character, :, as will all other
-pseudo-classes.
-</p>
-<h4>
-Link Pseudo-classes
-</h4>
-<p>
-Some of the more basic pseudo-classes include two revolving around links
+pseudo-classes.</p>
+
+<h4>Link Pseudo-classes</h4>
+
+<p>Some of the more basic pseudo-classes include two revolving around links
 specifically. The :link and :visited pseudo-classes define if a link has
 or hasn’t been visited. To style an anchor which has not been visited
 the :link pseudo-class comes into play, where the :visited pseudo-class
 styles links that a user has already visited based on their browsing
-history.
-</p>
+history.</p>
+
 <pre> 1  a:link {...}
- 2  a:visited {...}
- 3 </pre>
-<h4>
-User Action Pseudo-classes
-</h4>
-<p>
-Based on a users’ actions different pseudo-classes may be dynamically
+ 2  a:visited {...}</pre>
+
+<h4>User Action Pseudo-classes</h4>
+
+<p>Based on a users’ actions different pseudo-classes may be dynamically
 applied to an element, of which include the :hover, :active,
 and :focus pseudo-classes. The :hover pseudo-class is applied to an
 element when a user moves their cursor over the element, most commonly
@@ -2375,15 +2332,14 @@ used with anchor elements. The :active pseudo-class is applied to an
 element when a user engages an element, such as clicking on an element.
 Lastly, the :focus pseudo-class is applied to an element when a user has
 made an element the focus point of the page, often by using the keyboard
-to tab from one element to another.
-</p>
+to tab from one element to another.</p>
+
 <pre> 1  a:hover {...}  
  2  a:active {...} 
- 3  a:focus {...}  
- 4 </pre>
-<h4>
-User Interface State Pseudo-classes
-</h4>
+ 3  a:focus {...}  </pre>
+ 
+<h4>User Interface State Pseudo-classes</h4>
+
 <p>
 As with the link pseudo-classes there are also some pseudo-classes
 generated around the user interface state of elements, particularly
@@ -2398,11 +2354,11 @@ browsers by default will fade out disabled inputs to inform users that
 the input is not available for interaction, however those styles may be
 adjusted as wished with the :disabled pseudo-class.
 </p>
+
 <pre> 1  input:enabled {...}
- 2  input:disabled {...}
- 3  </pre>
-<p>
-The last two user interface element state pseudo-classes
+ 2  input:disabled {...}</pre>
+
+<p>The last two user interface element state pseudo-classes
 of :checked and :indeterminate revolve around checkbox and radio button
 input elements. The :checked pseudo-class selects checkboxes or radio
 buttons that are, as you may expect, checked. When a checkbox or radio
@@ -2410,12 +2366,12 @@ button has neither been selected nor unselected it lives in an
 indeterminate state, from which the :indeterminate pseudo-class can be
 used to target these elements.
 </p>
+
 <pre> 1  input:checked {...}
- 2  input:indeterminate {...}
- 3  </pre>
-<h4>
-Structural &amp; Position Pseudo-classes
-</h4>
+ 2  input:indeterminate {...}</pre>
+ 
+<h4>Structural &amp; Position Pseudo-classes</h4>
+
 <p>
 A handful of pseudo-classes are structural and position based, in which
 they are determined based off where elements reside in the document
@@ -2454,30 +2410,29 @@ list item.</p>
 
 <pre> 1  li:first-child {...}
  2  li:last-child {...}
- 3  div:only-child {...}
- 4 </pre>
+ 3  div:only-child {...}</pre>
  
 <br><br>
 
 <details>
   <summary>HTML</summary>
 
-<pre> 1  &lt;ul&gt;
- 2    &lt;li&gt;This list item will be selected&lt;/li&gt;
- 3    &lt;li&gt;
- 4      &lt;div&gt;This div will be selected&lt;/div&gt;
- 5    &lt;/li&gt;
- 6    &lt;li&gt;
- 7      &lt;div&gt;...&lt;/div&gt;
- 8      &lt;div&gt;...&lt;/div&gt;
- 9    &lt;/li&gt;
- 10   &lt;li&gt;This list item will be selected&lt;/li&gt;
- 11 &lt;/ul&gt;
- 12   </pre>
+<pre>1  &lt;ul&gt;
+2    &lt;li&gt;This list item will be selected&lt;/li&gt;
+3    &lt;li&gt;
+4      &lt;div&gt;This div will be selected&lt;/div&gt;
+5    &lt;/li&gt;
+6    &lt;li&gt;
+7      &lt;div&gt;...&lt;/div&gt;
+8      &lt;div&gt;...&lt;/div&gt;
+9    &lt;/li&gt;
+10   &lt;li&gt;This list item will be selected&lt;/li&gt;
+11 &lt;/ul&gt;</pre>
+ 
 </details>
-<h3>
-:first-of-type, :last-of-type, &amp; :only-of-type
-</h3>
+
+<h3>:first-of-type, :last-of-type, &amp; :only-of-type</h3>
+
 <p>
 Finding the first, last, and only children of a parent is pretty
 helpful, and often all that is needed. However sometimes you only want
@@ -2503,16 +2458,15 @@ are actually the first or last children within the article. Lines 3 and
 The img:only-of-type selector identifies the image on line 5 as it is
 the only image to appear within the article, thus also selected.
 </p>
-<h4>
-CSS
-</h4>
+
+<h4>CSS</h4>
+
 <pre> 1  p:first-of-type {...}
  2  p:last-of-type {...}
- 3  img:only-of-type {...}
- 4 </pre>
-<h4>
-HTML
-</h4>
+ 3  img:only-of-type {...}</pre>
+ 
+<h4>HTML</h4>
+
 <pre> 1  &lt;article&gt;
  2    &lt;h1&gt;...&lt;/h1&gt;
  3    &lt;p&gt;This paragraph will be selected&lt;/p&gt;
@@ -2520,98 +2474,85 @@ HTML
  5    &lt;img src=&quot;#&quot;&gt;&lt;!-- This image will be selected --&gt;
  6    &lt;p&gt;This paragraph will be selected&lt;/p&gt;
  7    &lt;h6&gt;...&lt;/h6&gt;
- 8  &lt;/article&gt;
- 9 </pre>
-<p>
-Lastly, there are a few structural and position based pseudo-classes
+ 8  &lt;/article&gt;</pre>
+ 
+<p>Lastly, there are a few structural and position based pseudo-classes
 that select elements based on a number or an algebraic expression. These
 pseudo-classes
 include :nth-child(n), :nth-last-child(n), :nth-of-type(n),
 and :nth-last-of-type(n). All of these unique pseudo-classes are
 prefixed with nth and accept a number or expression inside of the
-parenthesis, indicated by the character n argument.
-</p>
-<p>
-The number or expression that falls within the parenthesis determines
+parenthesis, indicated by the character n argument.</p>
+
+<p>The number or expression that falls within the parenthesis determines
 exactly what element, or elements, are to be selected. Using a number
 outright will count individual elements from the beginning or end of the
 document tree and then select one element, while using an expression
 will count numerous elements from the beginning or end of the document
-tree and select them in groups or multiples.
-</p>
-<h4>
-Using Pseudo-class Numbers &amp; Expressions
-</h4>
-<p>
-As mentioned, using numbers outright within a pseudo-class will count
+tree and select them in groups or multiples.</p>
+
+<h4>Using Pseudo-class Numbers &amp; Expressions</h4>
+
+<p>As mentioned, using numbers outright within a pseudo-class will count
 from the beginning, or end, of the document tree and select one element
 accordingly. For example, the li:nth-child(4) selector will select the
 fourth list item within a list. Counting begins with the first list item
 and increases by one for each list item, until finally locating and
 selecting the fourth item. When using a number outright it must be a
-positive number.
-</p>
-<p>
-<a href="http://reference.sitepoint.com/css/understandingnthchildexpressions" 
+positive number.</p>
+
+<p><a href="http://reference.sitepoint.com/css/understandingnthchildexpressions" 
 rel="noopener noreferrer" target="_blank"> Expressions for
 pseudo-classes</a> fall in the format
 of <em>a</em>n, <em>a</em>n+<em>b</em>, <em>a</em>n-<em>b</em>, 
 n+<em>b</em>, <em>-</em>n+<em>b</em>, and <em>-a</em>n+<em>b</em>. The
 same expression may be translated and read as (a×n)±b. The a variable
 stands for the multiplier in which elements will be counted in while
-the b variable stands for where the counting will begin or take place.
-</p>
-<p>
-For example, the li:nth-child(3n) selector will identify every third
+the b variable stands for where the counting will begin or take place.</p>
+
+<p>For example, the li:nth-child(3n) selector will identify every third
 list item within a list. Using the expression this equates
 to 3×0, 3×1, 3×2, and so forth. As you can see the results of this
 expression lead to the third, sixth, and every element a multiple of
-three being selected.
-</p>
-<p>
-Additionally, the odd and even keyword values may be used. As expected,
+three being selected.</p>
+
+<p>Additionally, the odd and even keyword values may be used. As expected,
 these will select odd or even elements respectively. Should keyword
 values not be appealing the expression of 2n+1 would select all odd
-elements while the expression of 2n would select all even elements.
-</p>
-<p>
-Using the li:nth-child(4n+7) selector will identify every fourth list
+elements while the expression of 2n would select all even elements.</p>
+
+<p>Using the li:nth-child(4n+7) selector will identify every fourth list
 item starting with the seventh list item. Again, using the expression
 this equates to (4×0)+7, (4×1)+7, (4×2)+7, and so forth. The results of
 this expression leading to the seventh, eleventh, fifteenth, and every
-element that is a multiple of four here on out being selected.
-</p>
-<p>
-Using the n argument without being prefixed by a number results in
+element that is a multiple of four here on out being selected.</p>
+
+<p>Using the n argument without being prefixed by a number results in
 the a variable being interpreted as 1. With
 the li:nth-child(n+5) selector every list item will be selected starting
 with the fifth list item, leaving the first four list items unselected.
 Within the expression this breaks down as (1×0)+5, (1×1)+5, (1×2)+5, and
-so forth.
-</p>
+so forth.</p>
 <p>
 To make things a bit more complicated negative numbers may also be used.
 For example, the li:nth-child(6n-4) selector will start counting every
 sixth list item starting at negative four, selecting the second, eighth,
 and fourteenth list items and so forth. The same selector,
 li:nth-child(6n-4), could also be written as li:nth-child(6n+2), without
-the use of a negative b variable.
-</p>
-<p>
-A negative a variable, or a negative n argument, must be followed by a
+the use of a negative b variable.</p>
+
+<p>A negative a variable, or a negative n argument, must be followed by a
 positive  b variable. When preceded by a negative a variable or
 negative n argument the b  variable identifies how high the counting
 will reach. For example, the li:nth-child(-3n+12) selector will select
 every third list item within the first twelve list items. The
 selector li:nth-child(-n+9) will select the first nine list items within
 a list, as the n argument, without any stated a variable, is defaulted
-to -1.
-</p>
-<h4>
-:nth-child(n) &amp; :nth-last-child(n)
-</h4>
-<p>
-With a general understanding of how the pseudo-class numbers and
+to -1.</p>
+
+<h4>:nth-child(n) &amp; :nth-last-child(n)</h4>
+
+<p>With a general understanding of how the pseudo-class numbers and
 expressions work let’s take a look at the actual pseudo-classes in which
 these numbers and expressions may be used, the first of which being
 the :nth-child(n) and  :nth-last-child(n) pseudo-classes. These
@@ -2620,20 +2561,18 @@ pseudo-classes work a bit like the :first-child and
 elements within a parent and only select the element specifically
 identified. The :nth-child(n) works from the beginning of the document
 tree while the :nth-last-child(n) works from the end of the document
-tree.
-</p>
-<p>
-Using the :nth-child(n) pseudo-class, let’s look at
+tree.</p>
+
+<p>Using the :nth-child(n) pseudo-class, let’s look at
 the li:nth-child(3n) selector. The selector here will identify every
-third list item, thus lines 4 and 7 are selected.
-</p>
-<h4>
-CSS
-</h4>
-<pre> 1  li:nth-child(3n) {...}</pre>
-<h4>
-HTML
-</h4>
+third list item, thus lines 4 and 7 are selected.</p>
+
+<h4>CSS</h4>
+
+<pre>li:nth-child(3n) {...}</pre>
+
+<h4>HTML</h4>
+
 <pre> 1  &lt;ul&gt;
  2    &lt;li&gt;...&lt;/li&gt;
  3    &lt;li&gt;...&lt;/li&gt;
@@ -2642,19 +2581,18 @@ HTML
  6    &lt;li&gt;...&lt;/li&gt;
  7    &lt;li&gt;This list item will be selected&lt;/li&gt;
  8  &lt;/ul&gt;</pre>
-<p>
-Using a different expression within the :nth-child(n) pseudo-class will
+ 
+<p>Using a different expression within the :nth-child(n) pseudo-class will
 yield a different selection. The li:nth-child(2n+3) selector, for
 example, will identify every second list item starting with the third
-and then onward. As a result, the list items lines 4 and 6 are selected.
-</p>
-<h4>
-CSS
-</h4>
-<pre> 1  li:nth-child(2n+3) {...}</pre>
-<h4>
-HTML
-</h4>
+and then onward. As a result, the list items lines 4 and 6 are selected.</p>
+
+<h4>CSS</h4>
+
+<pre>li:nth-child(2n+3) {...}</pre>
+
+<h4>HTML</h4>
+
 <pre> 1  &lt;ul&gt;
  2    &lt;li&gt;...&lt;/li&gt;
  3    &lt;li&gt;...&lt;/li&gt;
@@ -2662,22 +2600,19 @@ HTML
  5    &lt;li&gt;...&lt;/li&gt;
  6    &lt;li&gt;This list item will be selected&lt;/li&gt;
  7    &lt;li&gt;...&lt;/li&gt;
- 8  &lt;/ul&gt;
- 9 </pre>
-<p>
-Changing the expression again, this time with a negative value, yields
+ 8  &lt;/ul&gt;</pre>
+
+<p>Changing the expression again, this time with a negative value, yields
 new selection. Here the li:nth-child(-n+4) selector is identifying the
 top four list items, leaving the rest of the list items unselected, thus
-lines 2 through 5 are selected.
-</p>
-<h4>
-CSS
-</h4>
-<pre> 1  li:nth-child(-n+4) {...}
- 2 </pre>
-<h4>
-HTML
-</h4>
+lines 2 through 5 are selected.</p>
+
+<h4>CSS</h4>
+
+<pre>li:nth-child(-n+4) {...}</pre>
+ 
+<h4>HTML</h4>
+
 <pre> 1  &lt;ul&gt;
  2    &lt;li&gt;This list item will be selected&lt;/li&gt;
  3    &lt;li&gt;This list item will be selected&lt;/li&gt;
@@ -2685,21 +2620,20 @@ HTML
  5    &lt;li&gt;This list item will be selected&lt;/li&gt;
  6    &lt;li&gt;...&lt;/li&gt;
  7    &lt;li&gt;...&lt;/li&gt;
- 8  &lt;/ul&gt;
- 9 </pre>
+ 8  &lt;/ul&gt;</pre>
+ 
 <p>
 Adding a negative integer before the n argument changes the selection
 again. Here the li:nth-child(-2n+5) selector identifies every second
 list item within the first five list items starting with the first list
 item, thus the list items on lines 2, 4, and 6 are selected.
 </p>
-<h4>
-CSS
-</h4>
-<pre> 1  li:nth-child(-2n+5) {...}</pre>
-<h4>
-HTML
-</h4>
+<h4>CSS</h4>
+
+<pre>li:nth-child(-2n+5) {...}</pre>
+
+<h4>HTML</h4>
+
 <pre> 1  &lt;ul&gt;
  2    &lt;li&gt;This list item will be selected&lt;/li&gt;
  3    &lt;li&gt;...&lt;/li&gt;
@@ -2708,23 +2642,21 @@ HTML
  6    &lt;li&gt;This list item will be selected&lt;/li&gt;
  7    &lt;li&gt;...&lt;/li&gt;
  8  &lt;/ul&gt;</pre>
-<p>
-Changing from the :nth-child(n) pseudo-class to
+ 
+<p>Changing from the :nth-child(n) pseudo-class to
 the :nth-last-child(n) pseudo-class switches the direction of counting,
 with counting starting from the end of the document tree using
 the :nth-last-child(n) pseudo-class. The li:nth-last-child(3n+2) 
 selector, for example, will identify every third list item starting from
 the second to last item in a list, moving towards the beginning of the
-list. Here the list items on lines 3 and 6 are selected.
-</p>
-<h4>
-CSS
-</h4>
-<pre> 1  li:nth-last-child(3n+2) {...}
-</pre>
-<h4>
-HTML
-</h4>
+list. Here the list items on lines 3 and 6 are selected.</p>
+
+<h4>CSS</h4>
+
+<pre>li:nth-last-child(3n+2) {...}</pre>
+
+<h4>HTML</h4>
+
 <pre> 1  &lt;ul&gt;
  2    &lt;li&gt;...&lt;/li&gt;
  3    &lt;li&gt;This list item will be selected&lt;/li&gt;
@@ -2733,10 +2665,10 @@ HTML
  6    &lt;li&gt;This list item will be selected&lt;/li&gt;
  7    &lt;li&gt;...&lt;/li&gt;
  8  &lt;/ul&gt;</pre>
-<h4>
-:nth-of-type(n) &amp; :nth-last-of-type(n)
-</h4>
-<p>
+ 
+<h4>:nth-of-type(n) &amp; :nth-last-of-type(n)</h4>
+<
+p>
 The :nth-of-type(n) and :nth-last-of-type(n) pseudo-classes are very
 similar to that of
 the :nth-child(n) and :nth-last-child(n) pseudo-classes, however instead
@@ -2747,28 +2679,26 @@ type. For example, when counting paragraphs within an article, the
 headings, divisions, or miscellaneous elements that are not paragraphs,
 while the :nth-child(n) and  :nth-last-child(n) would count every
 element, no matter its type, only selecting the ones that match the
-element within the stated selector.
-</p>
-<p>
-Additionally, all of the same expression possibilities used within the 
+element within the stated selector.</p>
+
+<p>Additionally, all of the same expression possibilities used within the 
 :nth-child(n) and :nth-last-child(n) pseudo-classes are also available
-within the :nth-of-type(n) and :nth-last-of-type(n) pseudo-classes.
-</p>
-<p>
-Using the :nth-of-type(n) pseudo-class within
+within the :nth-of-type(n) and :nth-last-of-type(n) pseudo-classes.</p>
+
+<p>Using the :nth-of-type(n) pseudo-class within
 the p:nth-of-type(3n) selector we are able to identify every third
 paragraph within a parent, regardless of other sibling elements within
-the parent. Here the paragraphs on lines 5 and 9 are selected.
-</p>
+the parent. Here the paragraphs on lines 5 and 9 are selected.</p>
 
 <h4>CSS</h4>
 
-<pre> 1  p:nth-of-type(3n) {...}</pre>
+<pre>p:nth-of-type(3n) {...}</pre>
 
 <br><br>
 
 <details>
   <summary>HTML</summary>
+  
 <pre> 1  &lt;article&gt;
  2    &lt;h1&gt;...&lt;/h1&gt;
  3    &lt;p&gt;...&lt;/p&gt;
@@ -2778,28 +2708,25 @@ the parent. Here the paragraphs on lines 5 and 9 are selected.
  7    &lt;p&gt;...&lt;/p&gt;
  8    &lt;p&gt;...&lt;/p&gt;
  9    &lt;p&gt;This paragraph will be selected&lt;/p&gt;
- 10 &lt;/article&gt;
- 11 </pre>
+ 10 &lt;/article&gt;</pre>
+
 </details>
-<p>
-As with the :nth-child(n) and :nth-last-child(n) pseudo-classes, the
+
+<p>As with the :nth-child(n) and :nth-last-child(n) pseudo-classes, the
 primary difference between
 the :nth-of-type(n) and :nth-last-of-type(n) pseudo-classes is that
 the :nth-of-type(n) pseudo-class counts elements from the beginning of
 the document tree and the :nth-last-of-type(n) pseudo-class counts
-elements from the end of the document tree.
-</p>
-<p>
-Using the :nth-last-of-type(n) pseudo-class we can write
+elements from the end of the document tree.</p>
+
+<p>Using the :nth-last-of-type(n) pseudo-class we can write
 the p:nth-last-of-type(2n+1) selector which identifies every second
 paragraph from the end of a parent element starting with the last
-paragraph. Here the paragraphs on lines 4, 7, and 9 are selected.
-</p>
+paragraph. Here the paragraphs on lines 4, 7, and 9 are selected.</p>
 
 <h4>CSS</h4>
 
-<pre> 1  p:nth-last-of-type(2n+1) {...}
- 2  </pre>
+<pre>p:nth-last-of-type(2n+1) {...}</pre>
 
 <details>
   <summary>HTML</summary>
@@ -2813,8 +2740,7 @@ paragraph. Here the paragraphs on lines 4, 7, and 9 are selected.
  7    &lt;p&gt;This paragraph will be selected&lt;/p&gt;
  8    &lt;p&gt;...&lt;/p&gt;
  9    &lt;p&gt;This paragraph will be selected&lt;/p&gt;
- 10 &lt;/article&gt;
- 11 </pre>
+ 10 &lt;/article&gt;</pre>
 
 </details>
 
@@ -3582,9 +3508,9 @@ First</a></p>
 <p>-<a
 href="https://learn.shayhowe.com/advanced-html-css/responsive-web-design/#flexible-media">Flexible
 Media</a></p>
-<h4>
-SHARE
-</h4>
+
+<h4>SHARE</h4>
+
 <p>
 The Internet took off quicker than anyone would have predicted, growing
 like crazy. Now, for the past few years, mobile growth has exploded onto
@@ -4494,9 +4420,9 @@ data-cites="viewport">@viewport</span></a> via Dev. Opera
     rel="noopener noreferrer" target="_blank"> Haml</a>
 </li>
 </ul>
-<h4>
-CSS
-</h4>
+
+<h4>CSS</h4>
+
 <ul>
 <li>
 <a href="https://learn.shayhowe.com/advanced-html-css/preprocessors/#scss-sass"
@@ -4507,9 +4433,9 @@ CSS
     rel="noopener noreferrer" target="_blank"> Other Preprocessors</a>
 </li>
 </ul>
-<h4>
-SHARE
-</h4>
+
+<h4>SHARE</h4>
+
 <p>
 In time writing HTML and CSS may feel a bit taxing, requiring a lot of
 the same tasks to be completed over and over again. Tasks such as
@@ -5723,6 +5649,7 @@ specific color properties. With this control also comes complexity,
 which is why color manipulations are a bit less common than color
 alterations.
 </p>
+
 <pre>  - change-color() --- Set any property of a color
     $color, [$red], [$green], [$blue], [$hue],
     [$saturation], [$lightness], [$alpha]
@@ -5735,55 +5662,50 @@ alterations.
     a color
     $color, [$red], [$green], [$blue], [$saturation],
     [$lightness], [$alpha]</pre>
-<h4>
-Sass
-</h4>
+
+<h4>Sass</h4>
+
 <pre> 1  color: change-color(#8ec63f, $red: 60, $green: 255) 
  2  color: adjust-color(#8ec63f, $hue: 300, $lightness: 50%)  
- 3  color: scale-color(#8ec63f, $lightness: 25%, $alpha: 30%) 
- 4 </pre>
-<h4>
-Compiled CSS
-</h4>
+ 3  color: scale-color(#8ec63f, $lightness: 25%, $alpha: 30%)</pre>
+ 
+<h4>Compiled CSS</h4>
+
 <pre> 1  color: #3cff3f; 
  2  color: white;
- 3  color: #aad46f; 
- 4 </pre>
-<h4>
-Extends
-</h4>
-<p>
-Extends provide a way to easily share and reuse styles without having to
+ 3  color: #aad46f; </pre>
+ 
+<h4>Extends</h4>
+
+<p>Extends provide a way to easily share and reuse styles without having to
 explicitly repeat code or use additional classes, providing a perfect
 way to keep code modular. Both elements and class selectors may be used
 as an extend, and there is even a placeholder selector built just for
-extends.
-</p>
-<p>
-Extends are established by using the <span class="citation"
+extends.</p>
+
+<p>Extends are established by using the <span class="citation"
 data-cites="extend">@extend</span> rule followed by the selector to
 extend. Instead of duplicating the property and values, the original
 selector receives and additional selector, that of which is from the
-selector calling the extend.
-</p>
+selector calling the extend.</p>
+
 <p>
 In all, this provides a way to quickly reuse code without driving up
 code weight. Additionally, extends parley nicely with OOCSS and SMACSS.
 </p>
-<h4>
-Sass
-</h4>
+
+<h4>Sass</h4>
+
 <pre> 1  .alert  
  2  border-radius: 10px
  3  padding: 10px 20px 
  4  .alert-error 
  5  @extend .alert 
  6  background: #f2dede
- 7  color: #b94a48  
- 8 </pre>
-<h4>
-Compiled CSS
-</h4>
+ 7  color: #b94a48  </pre>
+
+<h4>Compiled CSS</h4>
+
 <pre> 1  .alert, 
  2  .alert-error {  
  3  border-radius: 10px;  
@@ -5792,71 +5714,61 @@ Compiled CSS
  6  .alert-error {  
  7  background: #f2dede;  
  8  color: #b94a48; 
- 9  } 
- 10 </pre>
-<h4>
-Placeholder Selector Extend
-</h4>
-<p>
-To avoid building a bunch of unused classes purely for extends we can
+ 9  } </pre>
+
+<h4>Placeholder Selector Extend</h4>
+<p>To avoid building a bunch of unused classes purely for extends we can
 use what is known as a placeholder selector. The placeholder selector is
 initialized with a percentage sign, %, and is never directly compiled
 into CSS. Instead, it is used to attach selectors to when it is called
 with an extend. In the refined example below notice how
-the .alert selector never makes its way into the CSS.
-</p>
-<h4>
-Sass
-</h4>
+the .alert selector never makes its way into the CSS.</p>
+
+<h4>Sass</h4>
+
 <pre> 1  %alert  
  2  border-radius: 10px
  3  padding: 10px 20px 
  4  .alert-error 
  5  @extend %alert 
  6  background: #f2dede
- 7  color: #b94a48  
- 8 </pre>
-<h4>
-Compiled CSS
-</h4>
+ 7  color: #b94a48</pre>
+
+<h4>Compiled CSS</h4>
+
 <pre> 1  .alert-error {  
- 2  border-radius: 10px;  
- 3  padding: 10px 20px;
+ 2    border-radius: 10px;  
+ 3    padding: 10px 20px;
  4  } 
  5  .alert-error {  
- 6  background: #f2dede;  
- 7  color: #b94a48; 
- 8  } 
- 9 </pre>
-<h4>
-Element Selector Extend
-</h4>
-<p>
-As with classes, extends also work with standard element selectors too.
-</p>
-<h4>
-Sass
-</h4>
+ 6    background: #f2dede;  
+ 7    color: #b94a48; 
+ 8  }</pre>
+
+<h4>Element Selector Extend</h4>
+
+<p>As with classes, extends also work with standard element selectors too.</p>
+
+<h4>Sass</h4>
+
 <pre> 1  h2
  2  color: #9c6
  3  span 
  4  text-decoration: underline  
  5  .sub-heading 
- 6  @extend h2
- 7 </pre>
-<h4>
-Compiled CSS
-</h4>
+ 6  @extend h2</pre>
+ 
+<h4>Compiled CSS</h4>
+
 <pre> 1  h2, .sub-heading { 
- 2  color: #9c6; 
+ 2    color: #9c6; 
  3  } 
  4  h2 span, .sub-heading span {
- 5  text-decoration: underline; 
- 6  } 
- 7 </pre>
-<h4>
-Mixins
-</h4>
+ 5    text-decoration: underline; 
+ 6  }</pre>
+
+<h4>Mixins</h4>
+
 <p>
 Mixins provide a way to easily template properties and values, then
 share them amongst different selectors. Mixins differ from extends as
@@ -5874,130 +5786,112 @@ It is worth nothing that SCSS handles mixins a bit different. Instead of
 using a plus sign to call a mixin SCSS use an <span class="citation"
 data-cites="include">@include</span> rule.
 </p>
-<h4>
-Sass
-</h4>
+
+<h4>Sass</h4>
+
 <pre> 1  @mixin btn($color, $color-hover)  
  2  color: $color  
  3  &amp;:hover 
  4  color: $color-hover  
  5  .btn 
- 6  +btn($color: #fff, $color-hover: #9799a7)  
- 7 </pre>
-<h4>
-Compiled CSS
-</h4>
-<pre> 1  .btn {  
- 2  color: #fff; 
- 3  } 
- 4  .btn:hover { 
- 5  color: #9799a7; 
- 6  } 
- 7 </pre>
-<h4>
-Default Arguments
-</h4>
-<p>
-Using the same example from above we can also specify default argument
-values, which may be over written if wished.
-</p>
-<h4>
-Sass
-</h4>
-<pre> 1  @mixin btn($color: #fff, $color-hover: #9799a7) 
- 2  color: $color  
- 3  &amp;:hover 
- 4  color: $color-hover  
- 5  .btn 
- 6  +btn($color-hover: #9799a7)
- 7 </pre>
-<h4>
-Compiled CSS
-</h4>
+ 6  +btn($color: #fff, $color-hover: #9799a7)</pre>
+
+<h4>Compiled CSS</h4>
+
 <pre> 1  .btn {  
  2    color: #fff; 
  3  } 
  4  .btn:hover { 
  5    color: #9799a7; 
- 6  } 
- 7 </pre>
-<h4>
-Variable Arguments
-</h4>
-<p>
-When one or more values need to be passed to an argument the variable
+ 6  }</pre>
+
+<h4>Default Arguments</h4>
+
+<p>Using the same example from above we can also specify default argument
+values, which may be over written if wished.</p>
+
+<h4>Sass</h4>
+
+<pre> 1  @mixin btn($color: #fff, $color-hover: #9799a7) 
+ 2  color: $color  
+ 3  &amp;:hover 
+ 4  color: $color-hover  
+ 5  .btn 
+ 6  +btn($color-hover: #9799a7)</pre>
+ 
+<h4>Compiled CSS</h4>
+
+<pre> 1  .btn {  
+ 2    color: #fff; 
+ 3  } 
+ 4  .btn:hover { 
+ 5    color: #9799a7; 
+ 6  } </pre>
+ 
+<h4>Variable Arguments</h4>
+
+<p>When one or more values need to be passed to an argument the variable
 name may end with … inside of the mixin. In the example below with box
-shadows we can pass in comma separated values to the mixin.
-</p>
+shadows we can pass in comma separated values to the mixin.</p>
+
 <pre> 1  @mixin box-shadow($shadow...)  
  2  -webkit-box-shadow: $shadow
  3  -moz-box-shadow: $shadow
  4  box-shadow: $shadow  
  5  .shadows
- 6  +box-shadow(0 1px 2px #cecfd5, inset 0 0 5px #cecfd5) 
- 7 </pre>
-<h4>
-Compiled CSS
-</h4>
+ 6  +box-shadow(0 1px 2px #cecfd5, inset 0 0 5px #cecfd5)</pre>
+ 
+<h4>Compiled CSS</h4>
+
 <pre> 1  .shadows { 
  2  -moz-box-shadow: 0 1px 2px #cecfd5, inset 0 0 5px #cecfd5;  
  3  -webkit-box-shadow: 0 1px 2px #cecfd5, inset 0 0 5px #cecfd5;  
  4  box-shadow: 0 1px 2px #cecfd5, inset 0 0 5px #cecfd5; 
- 5  } 
- 6 </pre>
-<h4>
-Imports
-</h4>
-<p>
-One of nicest parts of Sass is its ability to import
+ 5  }</pre>
+
+<h4>Imports</h4>
+
+<p>One of nicest parts of Sass is its ability to import
 multiple .scss or .sass files and condense them into one single file.
 Condensing all of the files into one allows for multiple stylesheets to
 be used for better organization without the worry of numerous HTTP
-request.
-</p>
-<p>
-Instead of referencing all of the different stylesheets within an HTML
+request.</p>
+
+<p>Instead of referencing all of the different stylesheets within an HTML
 document only reference the one Sass file importing all of the other
-stylesheets.
-</p>
-<p>
-In the following examples, all three files _normalize.sass,  _grid.sass,
+stylesheets.</p>
+
+<p>In the following examples, all three files _normalize.sass,  _grid.sass,
 and _typography.sass are all compiled into one file. In the event that
 the Sass file importing all the other files is named styles.sass, and it
 is compiled into styles.css, then only styles.css needs to be referenced
-within the HTML document.
-</p>
-<h4>
-Sass
-</h4>
+within the HTML document.</p>
+
+<h4>Sass</h4>
+
 <pre> 1  @import &quot;normalize&quot;
- 2  @import &quot;grid&quot;, &quot;typography&quot; 
- 3 </pre>
-<h4>
-Compiled HTML
-</h4>
-<pre> 1  &lt;link href=&quot;styles.css&quot; rel=&quot;stylesheet&quot;&gt; 
- 2 </pre>
-<h4>
-Loops &amp; Conditionals
-</h4>
-<p>
-For a bit more intricate styling Sass supports different control
+ 2  @import &quot;grid&quot;, &quot;typography&quot; </pre>
+
+<h4>Compiled HTML</h4>
+
+<pre>&lt;link href=&quot;styles.css&quot; rel=&quot;stylesheet&quot;&gt; </pre>
+
+<h4>Loops &amp; Conditionals</h4>
+
+<p>For a bit more intricate styling Sass supports different control
 directives. Its important to understand these directives are not
 intended for everyday styling but for creating detailed mixins and
 helpers. Many of these will look familiar as they are borrowed from
-other programming languages.
-</p>
-<h4>
-Operators
-</h4>
-<p>
-Some loops and conditionals will require operators to determine their
+other programming languages.</p>
+
+<h4>Operators</h4>
+
+<p>Some loops and conditionals will require operators to determine their
 behavior, of which can be broken down into relational and comparison
 operators. Relational operators looks at the relationship between two
 entities, while comparison operators determine equality or different
-between to entities.
-</p>
+between to entities.</p>
+
 <pre>    - &lt;
     Less than
 
@@ -6015,6 +5909,7 @@ between to entities.
 
     - !=
     Not equal to</pre>
+
 <pre> 1  // Relational Operators  
  2  6 &lt; 10 // true 
  3  4 &lt;= 60 // true
@@ -6023,22 +5918,19 @@ between to entities.
  6  // Comparison Operators  
  7  #fff == white // true 
  8  10 + 30 == 40 // true 
- 9  normal != bold // true
- 10 </pre>
-<h4>
-If Function
-</h4>
-<p>
-The <span class="citation" data-cites="if">@if</span> rule test an
+ 9  normal != bold // true</pre>
+
+<h4>If Function</h4>
+
+<p>The <span class="citation" data-cites="if">@if</span> rule test an
 expressions then loads the styles beneath that expression should it
 return anything other than false or null. The initial if statement may
 be proceeded by several else if statements and one else statement. Once
 a statement is successful identified the styles directly tied to it will
-be applied.
-</p>
-<h4>
-Sass
-</h4>
+be applied.</p>
+
+<h4>Sass</h4>
+
 <pre> 1  $shay: awesome 
  2  .shay
  3  @if $shay == awesome
@@ -6046,72 +5938,65 @@ Sass
  5  @else if $shay == cool 
  6    background: #0087cc
  7  @else  
- 8    background: #333
- 9 </pre>
-<h4>
-Compiled CSS
-</h4>
-<pre> 1  .shay { 
- 2  background: #ff7b29;  
- 3  } 
- 4 </pre>
-<h4>
-For Loop
-</h4>
-<p>
-The <span class="citation" data-cites="for">@for</span> rule outputs
+ 8    background: #333</pre>
+
+<h4>Compiled CSS</h4>
+
+<pre>  1  .shay { 
+ 2    background: #ff7b29;
+ 3  } </pre>
+
+<h4>For Loop</h4>
+
+<p>The <span class="citation" data-cites="for">@for</span> rule outputs
 different sets of styles based off of a counter variable. There are two
 different forms available for for loops, those being to and through. The
 first, <span class="citation" data-cites="for">@for</span> $i from 1 to
 3 for example, will output styles up to, but not including, 3. The other
 form, <span class="citation" data-cites="for">@for</span> $i from 1
-through 3, will output styles up to, and including, 3.
-</p>
-<h4>
-Sass
-</h4>
+through 3, will output styles up to, and including, 3.</p>
+
+<h4>Sass</h4>
+
 <pre> 1  @for $col from 1 to 6  
  2  .col-#{$col}
- 3  width: 40px * $col  
- 4 </pre>
+ 3  width: 40px * $col  </pre>
  
 <br><br>
 
 <details>
   <summary>Compiled CSS</summary>
 
-<pre> 1  .col-1 {
- 2  width: 40px; 
+<pre>
+ 1  .col-1 {
+ 2    width: 40px; 
  3  } 
  4  .col-2 {
- 5  width: 80px; 
+ 5    width: 80px; 
  6  } 
  7  .col-3 {
- 8  width: 120px;
+ 8    width: 120px;
  9  } 
- 1  .col-4 {
- 0  width: 160px;
- 1  } 
- 1  .col-5 {
- 2  width: 200px;
- 3  } 
- 1 </pre>
+ 10 .col-4 {
+ 11   width: 160px;
+ 12 } 
+ 13 .col-5 {
+ 14   width: 200px;
+ 15 } </pre>
+ 
 </details>
 
 <h4>Each Loop</h4>
 
-<p>
-Simply enough, the <span class="citation"
+<p>Simply enough, the <span class="citation"
 data-cites="each">@each</span> rule returns styles for each item in a
-list. List may include multiple comma separated items.
-</p>
+list. List may include multiple comma separated items.</p>
 
 <h4>Sass</h4>
 
 <pre> 1  @each $class in uxd, rails, html, css 
  2  .#{$class}-logo
- 3  background: url(&quot;/img/#{$class}.jpg&quot;)
- 4 </pre>
+ 3  background: url(&quot;/img/#{$class}.jpg&quot;)</pre>
  
 <br><br>
 
@@ -6129,27 +6014,24 @@ list. List may include multiple comma separated items.
  9  } 
  10 .css-logo {
  11   background: url(&quot;/img/css.jpg&quot;);
- 12 } 
- 13  </pre>
+ 12 }</pre>
+
 </details>
 
 <h4>While Loop</h4>
 
-<p>
-The <span class="citation" data-cites="while">@while</span> rule
+<p>The <span class="citation" data-cites="while">@while</span> rule
 repeatedly returns styles until the statement becomes false. The
 directive accepts a handful of different operators and the counter
-variable can be finely controlled allowing for precise looping.
-</p>
-<h4>
-Sass
-</h4>
+variable can be finely controlled allowing for precise looping.</p>
+
+<h4>Sass</h4>
+
 <pre> 1  $heading: 1 
  2  @while $heading &lt;= 6  
  3  h#{$heading}
  4  font-size: 2em - ($heading * .25em)
- 5  $heading: $heading + 1 
- 6 </pre>
+ 5  $heading: $heading + 1 </pre>
 
 <br><br>
 
@@ -6172,39 +6054,34 @@ Sass
  14   font-size: 0.75em;
  15 }
  16 h6 { 16 font-size: 0.5em;
- 17 }
- 18 </pre>
+ 17 }</pre>
 
 </details>
 
 <h4>Other Preprocessors</h4>
 
-<p>
-Haml and Sass are far from the only preprocessing languages available,
+<p>Haml and Sass are far from the only preprocessing languages available,
 including JavaScript preprocessors as well. Some of the other popular
 preprocessors including <a href="http://jade-lang.com/" 
 rel="noopener noreferrer" target="_blank">Jade</a>, <a href="http://slim-lang.com/" 
 rel="noopener noreferrer" target="_blank">Slim</a>, <a href="http://lesscss.org/" 
 rel="noopener noreferrer" target="_blank">LESS</a>,
 and <a href="http://coffeescript.org/" 
-rel="noopener noreferrer" target="_blank">CoffeeScript</a>.
-</p>
-<p>
-In the interest of brevity Haml and Sass were the only preprocessors
+rel="noopener noreferrer" target="_blank">CoffeeScript</a>.</p>
+
+<p>In the interest of brevity Haml and Sass were the only preprocessors
 covered in this lesson. They were also chosen because they are built
 using Ruby and fit right into Ruby on Rails applications. They’ve also
-got tremendous community support.
-</p>
-<p>
-When it comes to choosing which, if any, preprocessor to use it is
+got tremendous community support.</p>
+
+<p>When it comes to choosing which, if any, preprocessor to use it is
 important to consider what is best for your team and project. Projects
 built in Node.js may likely better benefit from Jade. The most important
 aspect to consider, though, is what your team is accustomed to using. Do
-your research for each project and make the most educated decision.
-</p>
-<h4>
-Resources &amp; Links
-</h4>
+your research for each project and make the most educated decision.</p>
+
+<h4>Resources &amp; Links</h4>
+
 <ul>
 <li>
 <a href="http://haml.info/" 
