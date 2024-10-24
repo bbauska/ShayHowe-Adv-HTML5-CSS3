@@ -2746,8 +2746,7 @@ paragraph. Here the paragraphs on lines 4, 7, and 9 are selected.</p>
 
 <h4>Target Pseudo-class</h4>
 
-<p>
-The :target pseudo-class is used to style elements when an element’s ID
+<p>The :target pseudo-class is used to style elements when an element’s ID
 attribute value matches that of the URI fragment identifier. The
 fragment identifier within a URI can be recognized by the hash
 character, #, and what directly follows it. The
@@ -2758,49 +2757,41 @@ element may be identified and stylized using the :target pseudo-class.
 Fragment identifiers are most commonly seen when using 
 <a href="https://learn.shayhowe.com/html-css/getting-to-know-html/#hyperlinks" 
 rel="noopener noreferrer" target="_blank"> on page links</a>, or linking
-to another part of the same page.
-</p>
-<p>
-Looking at the code below, if a user would visit a page with the URI
+to another part of the same page.</p>
+
+<p>Looking at the code below, if a user would visit a page with the URI
 fragment identifier of #hello, the section with that same ID attribute
 value would be stylized accordingly using the :target pseudo-class. If
 the URI fragment identifier changes, and matches the ID attribute value
 of another section, that new section may be stylized using the same
-selector and pseudo-class from before.
-</p>
-<h4>
-CSS
-</h4>
-<pre> 1  section:target {...}
- 2  </pre>
-<h4>
-HTML
-</h4>
-<pre> 1  &lt;section id=&quot;hello&quot;&gt;...&lt;/section&gt;
- 2  </pre>
-<h4>
-Empty Pseudo-class
-</h4>
-<p>
-The :empty pseudo-class allows elements that do not contain children or
+selector and pseudo-class from before.</p>
+
+<h4>CSS</h4>
+
+<pre>section:target {...}</pre>
+
+<h4>HTML</h4>
+
+<pre>&lt;section id=&quot;hello&quot;&gt;...&lt;/section&gt;</pre>
+
+<h4>Empty Pseudo-class</h4>
+
+<p>The :empty pseudo-class allows elements that do not contain children or
 text nodes to be selected. Comments, processing instructions, and empty
-text nodes are not considered children and are not treated as such.
-</p>
-<p>
-Using the div:empty pseudo-class will identify divisions without any
+text nodes are not considered children and are not treated as such.</p>
+
+<p>Using the div:empty pseudo-class will identify divisions without any
 children or text nodes. Below the divisions on lines 2 and 3 are
 selected, as they are completely empty. Even though the second division
 contains a comment, it is not considered to be a child, thus leaving the
 division empty. The first division contains text, the fourth division
 contains one blank text space, and the last division contains
-a strong child element, thus they are all ruled out and are not
-selected.
-</p>
-<h4>
-CSS
-</h4>
-<pre> 1  div:empty {...}
- 2 </pre>
+a strong child element, thus they are all ruled out and are not selected.</p>
+
+<h4>CSS</h4>
+
+<pre>div:empty {...}</pre>
+
 <h4>
 HTML
 </h4>
@@ -2809,30 +2800,26 @@ HTML
  3  selected --&gt;
  4  &lt;div&gt;&lt;/div&gt;&lt;!-- This div will be selected --&gt;
  5  &lt;div&gt; &lt;/div&gt;
- 6  &lt;div&gt;&lt;strong&gt;&lt;/strong&gt;&lt;/div&gt;
- 7  </pre>
-<h4>
-Negation Pseudo-class
-</h4>
-<p>
-The negation pseudo-class, :not(x), is a pseudo-class that takes an
+ 6  &lt;div&gt;&lt;strong&gt;&lt;/strong&gt;&lt;/div&gt;</pre>
+
+<h4>Negation Pseudo-class</h4>
+
+<p>The negation pseudo-class, :not(x), is a pseudo-class that takes an
 argument which is filtered out from the selection to be made.
 The p:not(.intro) selector uses the negation pseudo-class to identify
 every paragraph element without the class of intro. The paragraph
 element is identified at the beginning of the selector followed by
 the :not(x) pseudo-class. Inside of the parentheses falls the negation
-selector, the class of .intro in this case.
-</p>
-<p>
-Below, both the div:not(.awesome) and :not(div) selectors use
+selector, the class of .intro in this case.</p>
+
+<p>Below, both the div:not(.awesome) and :not(div) selectors use
 the :not(x) pseudo-class. The div:not(.awesome) selector identifies any
 division without the class of awesome, while the :not(div) selector
 identifies any element that isn’t a division. As a result the, division
 on line 1 is selected, as well as the two sections on lines 3 and 4,
 thus they are marked bold. The only element not selected is the division
 with the class of awesome, as it falls outside of the two negation
-pseudo-classes.
-</p>
+pseudo-classes.</p>
 
 <h4>CSS</h4>
 
@@ -2847,8 +2834,7 @@ pseudo-classes.
 <pre> 1  &lt;div&gt;This div will be selected&lt;/div&gt;
  2  &lt;div class=&quot;awesome&quot;&gt;...&lt;/div&gt;
  3  &lt;section&gt;This section will be selected&lt;/section&gt;
- 4  &lt;section class=&quot;awesome&quot;&gt;This section will be selected&lt;/section&gt;
- 5 </pre>
+ 4  &lt;section class=&quot;awesome&quot;&gt;This section will be selected&lt;/section&gt;</pre>
 
 <h4>Pseudo-classes Example</h4>
 
@@ -2882,8 +2868,8 @@ pseudo-classes.
  25     &lt;/tr&gt;
  26     ...
  27   &lt;/tbody&gt;
- 28 &lt;/table&gt;
- 29  </pre>
+ 28 &lt;/table&gt;</pre>
+
 </details>
 
 <br><br>
@@ -2926,8 +2912,7 @@ pseudo-classes.
  33  }
  34  tr:last-child td:last-child {
  35    border-bottom-right-radius: 6px;
- 36  }
- 37  </pre>
+ 36  }</pre>
 
 </details>
 
@@ -2951,248 +2936,113 @@ pseudo-classes.
   <tbody>
     <tr class="odd">
       <td>a:link</td>
-      <td>Link Pseudo-</td>
+      <td>Link Pseudo-class</td>
       <td>Selects a link that has not been visited by a user.</td>
     </tr>
     <tr class="even">
-      <td></td>
-      <td>class</td>
-      <td></td>
-    </tr>
-    <tr class="odd">
       <td>a:visited</td>
-      <td>Link Pseudo-</td>
+      <td>Link Pseudo-class</td>
       <td>Selects a link that has been visited by a user.</td>
-    </tr>
-    <tr class="even">
-      <td></td>
-      <td>class</td>
-      <td></td>
     </tr>
     <tr class="odd">
       <td>a:hover</td>
-      <td>Action Pseudo-</td>
-      <td>Selects an element when a user has hovered their</td>
+      <td>Action Pseudo-class</td>
+      <td>Selects an element when a user has hovered their cursor over it.</td>
     </tr>
     <tr class="even">
-      <td></td>
-      <td>class</td>
-      <td>cursor over it.</td>
-    </tr>
-    <tr class="odd">
       <td>a:active</td>
-      <td>Action Pseudo-</td>
+      <td>Action Pseudo-class</td>
       <td>Selects an element when a user has engaged it.</td>
-    </tr>
-    <tr class="even">
-      <td></td>
-      <td>class</td>
-      <td></td>
     </tr>
     <tr class="odd">
       <td>a:focus</td>
-      <td>Action Pseudo-</td>
-      <td>Selects an element when a user has made it their focus</td>
+      <td>Action Pseudo-class</td>
+      <td>Selects an element when a user has made it their focus point.</td>
     </tr>
     <tr class="even">
-      <td></td>
-      <td>class</td>
-      <td>point.</td>
-    </tr>
-    <tr class="odd">
       <td>input:enabled</td>
-      <td>State Pseudo-</td>
+      <td>State Pseudo-class</td>
       <td>Selects an element in the default enabled state.</td>
-    </tr>
-    <tr class="even">
-      <td></td>
-      <td>class</td>
-      <td></td>
     </tr>
     <tr class="odd">
       <td>input:disabled</td>
-      <td>State Pseudo-</td>
-      <td>Selects an element in the disabled state, by way of the</td>
+      <td>State Pseudo-class</td>
+      <td>Selects an element in the disabled state, by way of the disabled attribute.</td>
     </tr>
     <tr class="even">
-      <td></td>
-      <td>class</td>
-      <td>disabled attribute.</td>
-    </tr>
-    <tr class="odd">
       <td>input:checked</td>
-      <td>State Pseudo-</td>
-      <td>Selects a checkbox or radio button that has been</td>
-    </tr>
-    <tr class="even">
-      <td></td>
-      <td>class</td>
-      <td>checked.</td>
+      <td>State Pseudo-class</td>
+      <td>Selects a checkbox or radio button that has been checked.</td>
     </tr>
     <tr class="odd">
       <td>input:indeterminate</td>
-      <td>State Pseudo-</td>
-      <td>Selects a checkbox or radio button thats neither been</td>
-    </tr>
-    <tr class="even">
-      <td></td>
-      <td>class</td>
-      <td>checked or unchecked, leaving it in an indeterminate</td>
-    </tr>
-    <tr class="odd">
-      <td></td>
-      <td></td>
-      <td>state.</td>
+      <td>State Pseudo-class</td>
+      <td>Selects a checkbox or radio button thats neither been checked or unchecked, leaving it in an indeterminate state.</td>
     </tr>
     <tr class="even">
       <td>li:first-child</td>
-      <td>Structural</td>
+      <td>Structural Pseudo-class</td>
       <td>Selects an element that is the first within a parent.</td>
     </tr>
     <tr class="odd">
-      <td></td>
-      <td>Pseudo-class</td>
-      <td></td>
-    </tr>
-    <tr class="even">
       <td>li:last-child</td>
-      <td>Structural</td>
+      <td>Structural Pseudo-class</td>
       <td>Selects an element that is the last within a parent.</td>
-    </tr>
-    <tr class="odd">
-      <td></td>
-      <td>Pseudo-class</td>
-      <td></td>
     </tr>
     <tr class="even">
       <td>div:only-child</td>
-      <td>Structural</td>
-      <td>Selects an element that is the only element within a</td>
+      <td>Structural Pseudo-class</td>
+      <td>Selects an element that is the only element within a parent.</td>
     </tr>
     <tr class="odd">
-      <td></td>
-      <td>Pseudo-class</td>
-      <td>parent.</td>
-    </tr>
-    <tr class="even">
       <td>p:first-of-type</td>
-      <td>Structural</td>
-      <td>Selects an element that is the first of its type within a</td>
-    </tr>
-    <tr class="odd">
-      <td></td>
-      <td>Pseudo-class</td>
-      <td>parent.</td>
+      <td>Structural Pseudo-class</td>
+      <td>Selects an element that is the first of its type within a parent.</td>
     </tr>
     <tr class="even">
       <td>p:last-of-type</td>
-      <td>Structural</td>
-      <td>Selects an element that is the last of its type within a</td>
+      <td>Structural Pseudo-class</td>
+      <td>Selects an element that is the last of its type within a parent.</td>
     </tr>
     <tr class="odd">
-      <td></td>
-      <td>Pseudo-class</td>
-      <td>parent.</td>
-    </tr>
-    <tr class="even">
       <td>img:only-of-type</td>
-      <td>Structural</td>
-      <td>Selects an element that is the only one of its type within a</td>
-    </tr>
-    <tr class="odd">
-      <td></td>
-      <td>Pseudo-class</td>
-      <td>parent.</td>
+      <td>Structural Pseudo-class</td>
+      <td>Selects an element that is the only one of its type within a parent.</td>
     </tr>
     <tr class="even">
       <td>li:nth-child(2n+3)</td>
-      <td>Structural</td>
-      <td>Selects an element that matches the given number or</td>
+      <td>Structural Pseudo-class</td>
+      <td>Selects an element that matches the given number orexpression, counting all elements from the beginning of the document tree.</td>
     </tr>
     <tr class="odd">
-      <td></td>
-      <td>Pseudo-class</td>
-      <td>expression, counting all elements from the beginning of</td>
-    </tr>
-    <tr class="even">
-      <td></td>
-      <td></td>
-      <td>the document tree.</td>
-    </tr>
-    <tr class="odd">
-      <td>li:nth-last-</td>
-      <td>Structural</td>
-      <td>Selects an element that matches the given number or</td>
-    </tr>
-    <tr class="even">
-      <td>type(3n+2)</td>
-      <td>Pseudo-class</td>
-      <td>expression, counting all elements from the end of the</td>
-    </tr>
-    <tr class="odd">
-      <td></td>
-      <td></td>
-      <td>document tree.</td>
+      <td>li:nth-last-type(3n+2)</td>
+      <td>Structural Pseudo-class</td>
+      <td>Selects an element that matches the given number or expression, counting all elements from the end of the document tree.</td>
     </tr>
     <tr class="even">
       <td>p:nth-of-type(3n)</td>
-      <td>Structural</td>
-      <td>Selects an element that matches the given number or</td>
+      <td>Structural Pseudo-class</td>
+      <td>Selects an element that matches the given number or expression, counting all elements of its type from the beginning of the document tree.</td>
     </tr>
     <tr class="odd">
-      <td></td>
-      <td>Pseudo-class</td>
-      <td>expression, counting all elements of its type from the</td>
-    </tr>
-    <tr class="even">
-      <td></td>
-      <td></td>
-      <td>beginning of the document tree.</td>
-    </tr>
-    <tr class="odd">
-      <td>p:nth-last-of-</td>
-      <td>Structural</td>
-      <td>Selects an element that matches the given number or</td>
-    </tr>
-    <tr class="even">
-      <td>type(2n+1)</td>
-      <td>Pseudo-class</td>
-      <td>expression, counting all elements of its type from the</td>
-    </tr>
-    <tr class="odd">
-      <td></td>
-      <td></td>
-      <td>end of the document tree.</td>
+      <td>p:nth-last-of-type(2n+1)</td>
+      <td>Structural Pseudo-class</td>
+      <td>Selects an element that matches the given number or expression, counting all elements of its type from the end of the document tree.</td>
     </tr>
     <tr class="even">
       <td>section:target</td>
-      <td>Target Pseudo-</td>
-      <td>Selects an element whose ID attribute value matches</td>
+      <td>Target Pseudo-class</td>
+      <td>Selects an element whose ID attribute value matches that of the URI fragment identifier.</td>
     </tr>
     <tr class="odd">
-      <td></td>
-      <td>class</td>
-      <td>that of the URI fragment identifier.</td>
-    </tr>
-    <tr class="even">
       <td>div:empty</td>
-      <td>Empty Pseudo-</td>
-      <td>Selects an element that does not contain any children</td>
-    </tr>
-    <tr class="odd">
-      <td></td>
-      <td>class</td>
-      <td>or text nodes.</td>
+      <td>Empty Pseudo-class</td>
+      <td>Selects an element that does not contain any children or text nodes.</td>
     </tr>
     <tr class="even">
       <td>div:not(.awesome)</td>
-      <td>Negation</td>
-      <td>Selects an element not represented by the stated</td>
-    </tr>
-    <tr class="odd">
-      <td></td>
-      <td>Pseudo-class</td>
-      <td>argument.</td>
+      <td>Negation Pseudo-class</td>
+      <td>Selects an element not represented by the stated argument.</td>
     </tr>
   </tbody>
 </table>
@@ -3204,119 +3054,101 @@ tree, and when used within selectors these 
 <a href="http://coding.smashingmagazine.com/2009/08/17/taming-advanced-css-selectors/" 
 rel="noopener noreferrer" target="_blank">pseudo-elements</a> allow
 unique parts of the page to be stylized. One important point to note,
-only one pseudo-element may be used within a selector at a given time.
-</p>
-<h4>
-Textual Pseudo-elements
-</h4>
-<p>
-The first pseudo-elements ever released were
-the :first-letter and :first-line  textual pseudo-elements.
-The :first-letter pseudo-element will identify the first letter of text
-within an element, while the :first-line pseudo-element will identify
-the first line of text within an element.
-</p>
-<p>
-In the demonstration below the first letter of the paragraph with the
+only one pseudo-element may be used within a selector at a given time.</p>
+
+<h4>Textual Pseudo-elements</h4>
+
+<p>The first pseudo-elements ever released were the :first-letter and :first-line textual 
+pseudo-elements. The :first-letter pseudo-element will identify the first letter of text
+within an element, while the :first-line pseudo-element will identify the first line of 
+text within an element.</p>
+
+<p>In the demonstration below the first letter of the paragraph with the
 class of alpha is set in a larger font size and colored orange, as is
 the first line of the paragraph with the class of bravo. These
 selections are made by use of the :first-letter and :first-line textual
-pseudo-elements respectively.
-</p>
-<h4>
-CSS
-</h4>
+pseudo-elements respectively.</p>
+
+<h4>CSS</h4>
+
 <pre> 1  .alpha:first-letter,
  2  .bravo:first-line {
  3  color: #ff7b29;
  4  font-size: 18px;
- 5  }
- 6 </pre>
-<h4>
-HTML
-</h4>
+ 5  }</pre>
+
+<h4>HTML</h4>
+
 <pre> 1  &lt;p class=&quot;alpha&quot;&gt;Lorem ipsum dolor...&lt;/p&gt;
- 2  &lt;p class=&quot;bravo&quot;&gt;Integer eget enim...&lt;/p&gt;
- 3 </pre>
-<h4>
-Textual Pseudo-elements Demo
-</h4>
-<h4>
-Generated Content Pseudo-elements
-</h4>
-<p>
-The :before and :after generated content pseudo-elements create new
+ 2  &lt;p class=&quot;bravo&quot;&gt;Integer eget enim...&lt;/p&gt;</pre>
+ 
+<h4>Textual Pseudo-elements Demo</h4>
+
+<h4>Generated Content Pseudo-elements</h4>
+
+<p>The :before and :after generated content pseudo-elements create new
 inline level pseudo-elements just inside the selected element. Most
 commonly these pseudo-elements are used in conjunction with
 the content property to add insignificant information to a page, however
 that is not always the case. Additional uses of these psuedo-elements
 may be to add user interface components to the page without having to
-clutter the document with unsemantic elements.
-</p>
-<p>
-The :before pseudo-element creates a pseudo-element before, or in front
+clutter the document with unsemantic elements.</p>
+
+<p>The :before pseudo-element creates a pseudo-element before, or in front
 of, the selected element, while the :after pseudo-element creates a
 pseudo-element after, or behind, the selected element. These
 pseudo-elements appear nested within the selected element, not outside
 of it. Below the :after pseudo-element is used to display
 the href attribute value of anchor links within parentheses after the
 actual links. The information here is helpful, but not ultimately
-necessary should a browser not support these pseudo-elements.
-</p>
-<h4>
-CSS
-</h4>
+necessary should a browser not support these pseudo-elements.</p>
+
+<h4>CSS</h4>
+
 <pre> 1  a:after {
  2  color: #9799a7;
  3  content: &quot; (&quot; attr(href) &quot;)&quot;;
  4  font-size: 11px;
- 5  }
- 6 </pre>
-<h4>
-HTML
-</h4>
+ 5  }</pre>
+ 
+<h4>HTML</h4>
+
 <pre> 1  &lt;a href=&quot;http://google.com/&quot;&gt;Search the Web&lt;/a&gt;
- 2  &lt;a href=&quot;http://learn.shayhowe.com/&quot;&gt;Learn How to Build Websites&lt;/a&gt;
- 3 </pre>
-<h4>
-Generated Content Pseudo-elements Demo
-</h4>
-<h4>
-Fragment Pseudo-element
-</h4>
-<p>
-The ::selection fragment pseudo-element identifies part of the document
+ 2  &lt;a href=&quot;http://learn.shayhowe.com/&quot;&gt;Learn How to Build Websites&lt;/a&gt;</pre>
+ 
+<h4>Generated Content Pseudo-elements Demo</h4>
+
+<h4>Fragment Pseudo-element</h4>
+
+<p>The ::selection fragment pseudo-element identifies part of the document
 that has been selected, or highlighted, by a user’s actions. The
 selection may then be stylized, however only using
 the color, background, background-color, and  text-shadow properties. It
 is worth noting, the background-image property is ignore. While the
 shorthand background property may be used to add a color, any images
-will be ignored.
-</p>
+will be ignored.</p>
 
 <h4>Single Colon (:) versus Double Colons (::)</h4>
 
-<p>
-The fragment pseudo-element was added with CSS3 and in attempt to
+<p>The fragment pseudo-element was added with CSS3 and in attempt to
 differentiate pseudo-classes from pseudo-elements the double colons were
 added to pseudo-elements. Fortunately most browsers will support both
 values, single or double colons, for pseudo-elements however
-the ::selection pseudo-element must always start with double colons.
-</p>
+the ::selection pseudo-element must always start with double colons.</p>
+
 <p>
 When selecting any of the text within the demonstration below the
 background will appear orange and any text shadows will be removed
 thanks to the ::selection  fragment pseudo-element. Also note,
 the ::-moz-selection Mozilla prefixed fragment pseudo-element has been
-added to ensure the best support for all browsers.
-</p>
+added to ensure the best support for all browsers.</p>
+
 <pre> 1  ::-moz-selection {
  2  background: #ff7b29;
  3  }
  4  ::selection {
  5  background: #ff7b29;
- 6  }
- 7 </pre>
+ 6  }</pre>
 
 <h4>Fragment Pseudo-element Demo</h4>
 
@@ -3324,8 +3156,7 @@ added to ensure the best support for all browsers.
 
 <h4>HTML</h4>
 
-<pre> 1  &lt;a class=&quot;arrow&quot; href=&quot;#&quot;&gt;Continue Reading&lt;/a&gt;
- 2  </pre>
+<pre>&lt;a class=&quot;arrow&quot; href=&quot;#&quot;&gt;Continue Reading&lt;/a&gt;</pre>
 
 <br><br>
 
@@ -3370,8 +3201,7 @@ added to ensure the best support for all browsers.
  36  }
  37  .arrow:hover:after {
  39  border-left: 15px solid #ff7b29;
- 40  }
- 41 </pre>
+ 40  }</pre>
 
 </details>
 
