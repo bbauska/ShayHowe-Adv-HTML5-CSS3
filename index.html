@@ -7792,11 +7792,9 @@ rotate the element counterclockwise.</p>
 
 <h4>3D Scale</h4>
 
-<p>
-By using the scaleZ three-dimensional transform elements may be scaled
-on the z axis. This isn’t extremely exciting when no other
-three-dimensional transforms are in place, as there is nothing in
-particular to scale.</p>
+<p>By using the scaleZ three-dimensional transform elements may be scaled on the z axis. 
+This isn’t extremely exciting when no other three-dimensional transforms are in place, 
+as there is nothing in particular to scale.</p>
 
 <p>In the demonstration below the elements are being scaled up and down on
 the z axis, however the rotateX value is added in order to see the
@@ -7826,6 +7824,7 @@ the translateZ value. A negative value here will push an element further
 away on the z axis, resulting in a smaller element. Using a positive
 value will pull an element closer on the z axis, resulting in a larger
 element.</p>
+
 <p>While this may appear to be very similar to that of the two-dimensional
 transform scale value, it is actually quite different. The transform is
 taking place on the z axis, not the x or y axes. When working with
@@ -7846,8 +7845,7 @@ for example.</p>
  3  }
  4  .box-2 {
  5    transform: perspective(200px) translateZ(50px);
- 6  }
- 7 </pre>
+ 6  }</pre>
 
 <h4>3D Translate Demo</h4>
 
@@ -7890,8 +7888,7 @@ lie flat on the two-dimensional plane.</p>
  3  &lt;/div&gt;
  4  &lt;div class=&quot;rotate&quot;&gt; 
  5    &lt;figure class=&quot;box&quot;&gt;Box 2&lt;/figure&gt;
- 6  &lt;/div&gt;
- 7 </pre>
+ 6  &lt;/div&gt;</pre>
 
 <br><br>
 <details>
@@ -7906,8 +7903,8 @@ lie flat on the two-dimensional plane.</p>
  7  .box {
  8    transform: rotateX(15deg) translateZ(20px);
  9    transform-origin: 0 0;
- 10 }
- 11 </pre>
+ 10 }</pre>
+ 
 </details>
 
 <h4>Transform Style Demo</h4>
@@ -7926,8 +7923,10 @@ example. By default these elements are shown from the back. So if you
 prefer not to see these elements at all, set
 the backface-visibility property to hidden, and you will hide the
 element whenever it is facing away from the screen.</p>
+
 <p>The other value to backface-visibility is visible which is the default
 value, always displaying an element, no matter which direction it faces.</p>
+
 <p>In the demonstration below notice how the second box isn’t displayed
 because backface-visibility: hidden; declaration has been set.
 The backface-visibility property takes even more significance when
@@ -7941,6 +7940,7 @@ rel="noopener noreferrer" target="_blank">animations</a>.</p>
  3 </pre>
 
 <br><br>
+
 <h4>CSS</h4>
 
 <pre> 1  .box-1 {
@@ -7949,8 +7949,7 @@ rel="noopener noreferrer" target="_blank">animations</a>.</p>
  4  .box-2 {
  5    backface-visibility: hidden;
  6    transform: rotateY(180deg);
- 7  }
- 8 </pre>
+ 7  }</pre>
 
 <h4>Backface Visibility Demo</h4>
 
@@ -7968,11 +7967,12 @@ rel="noopener noreferrer" target="_blank">animations</a>.</p>
  7      &lt;figure class=&quot;side top&quot;&gt;5&lt;/figure&gt;  
  8      &lt;figure class=&quot;side bottom&quot;&gt;6&lt;/figure&gt;  
  9    &lt;/div&gt; 
- 10 &lt;/div&gt; 
- 11 </pre>
+ 10 &lt;/div&gt; </pre>
+ 
 </details>
 
 <br><br>
+
 <details>
   <summary>CSS</summary>
 
@@ -8013,8 +8013,8 @@ rel="noopener noreferrer" target="_blank">animations</a>.</p>
  35 } 
  36 .bottom { 
  37   transform: rotateX(-90deg) translateZ(100px);
- 38 } 
- 40 </pre>
+ 38 }</pre>
+ 
 </details>
 
 <h3>Demo</h3>
@@ -8071,9 +8071,11 @@ Animations</a></p>
 transitions and animations. Front end developers have been asking for
 the ability to design these interactions within HTML and CSS, without
 the use of JavaScript or Flash, for years. Now their wish has come true.</p>
+
 <p>With CSS3 transitions you have the potential to alter the appearance and
 behavior of an element whenever a state change occurs, such as when it
 is hovered over, focused on, active, or targeted.</p>
+
 <p>Animations within CSS3 allow the appearance and behavior of an element
 to be altered in multiple keyframes. Transitions provide a change from
 one state to another, while animations can set multiple points of
@@ -8088,10 +8090,12 @@ place, an element must have a change in state, and different styles must
 be identified for each state. The easiest way for determining styles for
 different states is by using the :hover, :focus, :active,
 and :target pseudo-classes.</p>
+
 <p>There are four transition related properties in total, including
 transition-property, transition-duration, transition-timing-function,
 and transition-delay. Not all of these are required to build a
 transition, with the first three are the most popular.</p>
+
 <p>In the example below the box will change its background color over the
 course of 1 second in a linear fashion.</p>
 
@@ -8143,6 +8147,7 @@ the following.</p>
  16 .box:hover {
  17   background: #ff7b29;
  18 } </pre>
+ 
 </details>
 
 <h4>Transitional Property</h4>
@@ -8310,8 +8315,8 @@ property values, may be declared as comma separated values.</p>
  8  .box:hover {
  9    background: #ff7b29;
  10   border-radius: 50%;
- 11 }
- 12 </pre>
+ 11 }</pre>
+ 
 </details>
 
 <h4>Transition Timing Demo</h4>
@@ -8339,8 +8344,8 @@ can be declared as comma separated values.</p>
  9  .box:hover {
  10   background: #ff7b29;
  11   border-radius: 50%;
- 12 }
- 13  </pre>
+ 12 }</pre>
+ 
 </details>
 
 <h4>Transition Delay Demo</h4>
@@ -8370,8 +8375,8 @@ transition values.</p>
  6  .box:hover {
  7    color: #ff7b29;
  8    border-radius: 50%;
- 9  }
- 10 </pre>
+ 9  }</pre>
+
 </details>
 
 <h4>Shorthand Transitions Demo</h4>
@@ -8402,8 +8407,8 @@ transition values.</p>
  14 button:active {  
  15   box-shadow: 0 2px 0 #006599; 
  16   transform: translateY(3px);  
- 17 }  
- 18  </pre>
+ 17 }</pre>
+ 
 </details>
 
 <h4>Demo</h4>
@@ -8417,8 +8422,7 @@ transition values.</p>
  3      &lt;div class=&quot;side&quot;&gt;...&lt;/div&gt;
  4      &lt;div class=&quot;side back&quot;&gt;...&lt;/div&gt;
  5    &lt;/div&gt;
- 6  &lt;/div&gt;
- 7  </pre>
+ 6  &lt;/div&gt;</pre>
 
 <br><br>
 <details>
@@ -8448,8 +8452,8 @@ transition values.</p>
  22 }
  23 .card .back {
  24   transform: rotateY(180deg);
- 25 }
- 26  </pre>
+ 25 }</pre>
+
 </details>
 
 <h4>Demo</h4>
@@ -8489,8 +8493,8 @@ intended to be animated.</p>
  11     left: 488px;
  12     top: 0;
  13   }
- 14 }
- 15 </pre>
+ 14 }</pre>
+ 
 </details>
 
 <h4>Vendor Prefixing the Keyframe Rule</h4>
@@ -8516,6 +8520,7 @@ keywords from and to could be used in place of 0% and 100% if wished.
 Additional breakpoints, besides 50%, may also be stated. The element
 properties to be animated are listed inside each of the
 breakpoints, left and top in the example above.</p>
+
 <p>It is important to note, as with transitions only individual properties
 may be animated. Consider how you might move an element from top to
 bottom for example. Trying to animate from top: 0; to bottom: 0; will
@@ -8535,10 +8540,11 @@ with the animation name, identified from the <span class="citation"
 data-cites="keyframes">@keyframes</span> rule, as the property value.
 The animation-name declaration is applied to the element in which the
 animation is to be applied to.</p>
+
 <pre> 1  .stage:hover .ball {
  2    animation-name: slide;
- 3  }
- 4 </pre>
+ 3  }</pre>
+ 
 <p>Using the animation-name property alone isn’t enough though. You also
 need to declare an animation-duration property and value so that the
 browser knows how long an animation should take to complete.</p>
@@ -8550,24 +8556,24 @@ animations behave similarly to transitions. They include a duration,
 timing function, and delay if desired. To start, animations need a
 duration declared using the animation-duration property. As with
 transitions, the duration may be set in seconds or milliseconds.</p>
+
 <pre> 1  .stage:hover .ball {
  2    animation-name: slide;
  3    animation-duration: 2s;
- 4  }
- 5 </pre>
-<p>
-A timing function and delay can be declared using the
+ 4  }</pre>
+ 
+<p>A timing function and delay can be declared using the
 animation-timing-function and animation-delay properties respectively.
 The values for these properties mimic and behave just as they do with
-transitions.
-</p>
+transitions.</p>
+
 <pre> 1  .stage:hover .ball {
  2    animation-name: slide;
  3    animation-duration: 2s;
  4    animation-timing-function: ease-in-out;
  5    animation-delay: .5s;
- 6  }
- 7 </pre>
+ 6  }</pre>
+
 <p>The animation below should cause the ball to bounce once while moving to
 the left, however only when hovering over the stage.</p>
 
@@ -8575,8 +8581,8 @@ the left, however only when hovering over the stage.</p>
 
 <pre> 1  &lt;div class=&quot;stage&quot;&gt;
  2    &lt;figure class=&quot;ball&quot;&gt;&lt;/figure&gt;
- 3  &lt;/div&gt;
- 4  </pre>
+ 3  &lt;/div&gt;</pre>
+
 <details>
   <summary>CSS</summary>
 
@@ -8608,17 +8614,23 @@ the left, however only when hovering over the stage.</p>
  26    animation-duration: 2s;
  27    animation-timing-function: ease-in-out;
  28    animation-delay: .5s;
- 29  }
- 30 </pre>
+ 29  }</pre>
+
 </details>
+
 <h4>Animation Demo</h4>
+
 <p>Hover over the ball below to see the animation in action.</p>
+
 <h4>Customizing Animations</h4>
+
 <p>Animations also provide the ability to further customize an element’s
 behavior, including the ability to declare the number of times an
 animation runs, as well as the direction in which an animation
 completes.</p>
+
 <h4>Animation Iteration</h4>
+
 <p>By default, animations run their cycle once from beginning to end and
 then stop. To have an animation repeat itself numerous times
 the animation-iteration-count property may be used. Values for
@@ -8626,16 +8638,18 @@ the animation-iteration-count property include either an integer or
 the infinite keyword. Using an integer will repeat the animation as many
 times as specified, while the infinite keyword will repeat the animation
 indefinitely in a never ending fashion.</p>
+
 <details>
-<summary>Example, Animation Iteration</summary>
+  <summary>Example, Animation Iteration</summary>
+
 <pre> 1  .stage:hover .ball {
  2    animation-name: slide;
  3    animation-duration: 2s;
  4    animation-timing-function: ease-in-out;
  5    animation-delay: .5s;
  6    animation-iteration-count: infinite;
- 7  }
- 8  </pre>
+ 7  }</pre>
+ 
 </details>
 
 <h4>Animation Iteration Demo</h4>
@@ -8649,11 +8663,13 @@ you may also declare the direction an animation completes using
 the animation-direction property. Values for
 the animation-direction property include normal, reverse, alternate,
 and alternate-reverse.</p>
+
 <p>The normal value plays an animation as intended from beginning to end.
 The reverse value will play the animation exactly opposite as identified
 within the <span class="citation"
 data-cites="keyframes">@keyframes</span> rule, thus starting at 100% and
 working backwards to 0%.</p>
+
 <p>The alternate value will play an animation forwards then backwards.
 Within the keyframes that includes running forward from 0% to 100% and
 then backwards from 100% to 0%. Using
@@ -8664,10 +8680,12 @@ an animation backwards from 100% to 0%. Combining for a total
 of 2 iterations. The alternate value also inverses any timing functions
 when playing in reverse. If an animation uses the ease-in value going
 from 0% to 100%, it then uses the ease-out value going from 100% to 0%.</p>
+
 <p>Lastly, the alternate-reverse value combines both
 the alternate and reverse values, running an animation backwards then
 forwards. The alternate-reverse value starts at 100% running to 0% and
 then back to 100% again.</p>
+
 <details>
   <summary>Example, Alternate Reverse</summary>
 
@@ -8678,8 +8696,8 @@ then back to 100% again.</p>
  5    animation-delay: .5s;
  6    animation-iteration-count: infinite;
  7    animation-direction: alternate;
- 8  }
- 9  </pre>
+ 8  }</pre>
+ 
 </details>
 
 <h4>Animation Direction Demo</h4>
@@ -8692,6 +8710,7 @@ then back to 100% again.</p>
 paused using the running and paused keyword values respectively. When
 you play a paused animation, it will resume running from its current
 state rather than starting from the very beginning again.</p>
+
 <p>In the example below the animation-play-state property is set
 to paused when making the stage active by clicking on it. Notice how the
 animation will temporarily pause until you let up on the mouse.</p>
@@ -8709,8 +8728,8 @@ animation will temporarily pause until you let up on the mouse.</p>
  8  }
  9  .stage:active .ball {
  10   animation-play-state: paused;
- 11 }
- 12 </pre>
+ 11 }</pre>
+ 
 </details>
 
 <h4>Animation Play State Demo</h4>
@@ -8724,21 +8743,27 @@ the animation.</p>
 styled either before, after, or before and after an animation is run.
 The animation-fill-mode property accepts four keyword values,
 including none, forwards, backwards, and both.</p>
+
 <p>The none value will not apply any styles to an element before or after
 an animation has been run.</p>
+
 <p>The forwards value will keep the styles declared within the last
 specified keyframe. These styles may, however, be affected by
 the animation-direction and animation-iteration-count property values,
 changing exactly where an animation ends.</p>
+
 <p>The backwards value will apply the styles within the first specified
 keyframe as soon as being identified, before the animation has been run.
 This does include applying those styles during any time that may be set
 within an animation delay. The backwards value may also be affected by
 the animation-direction property value.</p>
+
 <p>Lastly, the both value will apply the behaviors from both
 the forwards and backwards values.</p>
+
 <details>
-<summary>Example, Animation</summary>
+  <summary>Example, Animation</summary>
+
 <pre> 1  .stage:hover .ball {
  2    animation-name: slide;
  3    animation-duration: 2s;
@@ -8748,8 +8773,8 @@ the forwards and backwards values.</p>
  7  }
  8  .stage:active .ball {
  9    animation-play-state: paused;
- 1  }
- 0 </pre>
+ 10 }</pre>
+ 
 </details>
 
 <h4>Animation Fill Mode Demo</h4>
@@ -8766,13 +8791,13 @@ declarations. The order of values within the animation  property should
 be animation-name, animation-duration, animation-timing-function, 
 animation-delay, animation-iteration-count, animation-direction, animation-fill-mode,
 and lastly animation-play-state.</p>
+
 <pre> 1  .stage:hover .ball {
  2    animation: slide 2s ease-in-out .5s infinite alternate;
  3  }
  4  .stage:active .ball {
  5    animation-play-state: paused;
- 6  }
- 7 </pre>
+ 6  }</pre>
  
 <h4>Shorthand Animations Demo</h4>
 
@@ -8807,72 +8832,58 @@ Polyfills</a></p>
 <h4>HTML</h4>
 
 <ul>
-<li>
-<a href="https://learn.shayhowe.com/advanced-html-css/feature-support-polyfills/#html5-shiv"
-    rel="noopener noreferrer" target="_blank"> HTML5 Shiv</a>.
-</li>
-<li>
-<a href="https://learn.shayhowe.com/advanced-html-css/feature-support-polyfills/#cross-browser-testing"
-    rel="noopener noreferrer" target="_blank"> Cross Browser
-Testing</a>.
-</li>
+  <li><a href="https://learn.shayhowe.com/advanced-html-css/feature-support-polyfills/#html5-shiv"
+    rel="noopener noreferrer" target="_blank"> HTML5 Shiv</a>.</li>
+  <li><a href="https://learn.shayhowe.com/advanced-html-css/feature-support-polyfills/#cross-browser-testing"
+    rel="noopener noreferrer" target="_blank"> Cross Browser Testing</a>.</li>
 </ul>
-<h4>
-CSS
-</h4>
+
+<h4>CSS</h4>
+
 <ul>
-<li>
-<a href="https://learn.shayhowe.com/advanced-html-css/feature-support-polyfills/#detecting-browser-features"
-    rel="noopener noreferrer" target="_blank"> Detecting Browser
-Features</a>.
-</li>
+  <li><a href="https://learn.shayhowe.com/advanced-html-css/feature-support-polyfills/#detecting-browser-features"
+    rel="noopener noreferrer" target="_blank"> Detecting Browser Features</a>.</li>
 </ul>
-<p><b>JAVASCRIPT</b></p>
+
+<h4>JAVASCRIPT</h4>
+
 <ul>
-<li>
-<a href="https://learn.shayhowe.com/advanced-html-css/feature-support-polyfills/#conditionally-loading-files"
-    rel="noopener noreferrer" target="_blank"> Conditionally Loading
-Files]</a>
-</li>
+  <li><a href="https://learn.shayhowe.com/advanced-html-css/feature-support-polyfills/#conditionally-loading-files"
+    rel="noopener noreferrer" target="_blank"> Conditionally Loading Files]</a></li>
 </ul>
-<p>
-Building a website can be both extremely rewarding and frustrating.
+
+<p>Building a website can be both extremely rewarding and frustrating.
 Common frustrations arise from trying to get a website to look and
 perform the same in every browser. All front end developers have shared
-this frustration at one point or another.
-</p>
-<p>
-Truth be told, websites <b>do not</b> need to look or perform the same
+this frustration at one point or another.</p>
+
+<p>Truth be told, websites <b>do not</b> need to look or perform the same
 in every browser. Exactly how close a website works in each browser is
 up to you and your level of comfort for a given website. If a website
 receives under half a percent of traffic from Internet Explorer 6 it
 might make sense to drop support for it. If that half a percent is still
 contributing to thousands of dollars in sales, support may be mandatory.
-Determine what is acceptable for a given website and work from there.
-</p>
-<p>
-There are a handful of common practices to get websites to perform
+Determine what is acceptable for a given website and work from there.</p>
+
+<p>There are a handful of common practices to get websites to perform
 adequately in all browsers, some of which have already been covered
 within this guide. When incorporating CSS3 properties, fallbacks are
 recommend to support older browsers. Other techniques include shivs and
 polyfills. Generally speaking, shivs and polyfills are small JavaScript
 plugins that add support for a requested set of features not natively
-supported by a specific browser.
-</p>
-<h4>
-HTML5 Shiv
-</h4>
-<p>
-Perhaps the most popular shiv, and one you may have likely used already,
+supported by a specific browser.</p>
+
+<h4>HTML5 Shiv</h4>
+
+<p>Perhaps the most popular shiv, and one you may have likely used already,
 is the HTML5 Shiv. The HTML5 Shiv was 
 <a href="http://paulirish.com/2011/the-history-of-the-html5-shiv/" 
 rel="noopener noreferrer" target="_blank"> created by Remy Sharp</a> to
 provide the ability to use HTML5 elements within versions of Internet
 Explorer 8 and below. The HTML5 Shiv not only creates support for HTML5
-elements but also allows them to be properly styled with CSS.
-</p>
-<p>
-The <a href="https://code.google.com/p/html5shiv/" 
+elements but also allows them to be properly styled with CSS.</p>
+
+<p>The <a href="https://code.google.com/p/html5shiv/" 
 rel="noopener noreferrer" target="_blank">shiv</a> should be downloaded
 from Google, where Remy maintains the latest version, then hosted on
 your server. For the best performance, reference the shiv JavaScript
@@ -8881,15 +8892,13 @@ Additionally, you want to reference the shiv inside of
 a <a href="https://css-tricks.com/how-to-create-an-ie-only-stylesheet/" 
 rel="noopener noreferrer" target="_blank"> conditional comment</a>,
 making sure that the file is only loaded within versions of Internet
-Explorer 8 and below.
-</p>
+Explorer 8 and below.</p>
 
 <p>In this case the conditional comment looks like;</p>
 
 <pre> 1  &lt;!--[if lt IE 9]&gt;
  2  &lt;script src=&quot;html5shiv.js&quot;&gt;&lt;/script&gt;
- 3  &lt;![endif]--&gt;
- 4 </pre>
+ 3  &lt;![endif]--&gt;</pre>
  
 <h4>The Difference Between a Shiv &amp; a Shim</h4>
 
@@ -8918,8 +8927,7 @@ the display: block; declaration.</p>
  10 section,
  11 summary {
  12   display: block;
- 13 }
- 14 </pre>
+ 13 }</pre>
 
 </details>
 
@@ -8932,62 +8940,53 @@ should be good to go using any new HTML5 elements.</p>
  2  canvas,
  3  video {
  4    display: inline-block;
- 5  }
- 6  </pre>
+ 5  }</pre>
  
 <h4>Detecting Browser Features</h4>
-<p>
-Referencing the HTML5 Shiv works well with a conditional comment because
+
+<p>Referencing the HTML5 Shiv works well with a conditional comment because
 the intention is to specifically target browsers that don’t support new
 HTML5 features and elements. Additionally, there is a way to to provide
 support for specific HTML5 and CSS3 features, regardless of which
-browser is being used.
-</p>
-<p>
-Feature detection, as provided by <a href="http://modernizr.com/" 
+browser is being used.</p>
+
+<p>Feature detection, as provided by <a href="http://modernizr.com/" 
 rel="noopener noreferrer" target="_blank">Modernizr</a>, provides a way
 to write conditional CSS and JavaScript based on whether or not a
 browser supports a specific feature. For example, if a browser supports
 rounded corners Modernizr will add the class of borderradius to
 the html element. If the browser doesn’t support rounded corners,
-Modernizr will add the class of no-borderradius to the html element.
-</p>
-<h4>
-Loading Modernizr
-</h4>
-<p>
-To get feature detection with Modernizr up and running, visit
+Modernizr will add the class of no-borderradius to the html element.</p>
+
+<h4>Loading Modernizr</h4>
+
+<p>To get feature detection with Modernizr up and running, visit
 their <a href="http://modernizr.com/download/" 
 rel="noopener noreferrer" target="_blank">download</a> page and
 customize what features you are looking to detect. Once downloaded,
 upload the JavaScript file on your server and reference it within
-the head of your HTML document, below any referenced style sheets.
-</p>
-<p>
-It is worth noting that Modernizr may be configured to include the HTML5
+the head of your HTML document, below any referenced style sheets.</p>
+
+<p>It is worth noting that Modernizr may be configured to include the HTML5
 Shiv, in which case the shiv doesn’t need to be referenced on top of
-Modernizr.
-</p>
-<pre> 1  &lt;script src=&quot;modernizr.js&quot;&gt;&lt;/script&gt;
- 2  </pre>
-<h4>
-Conditionally Applying CSS Styles
-</h4>
-<p>
-Once Modernizr is up and running CSS styles may be conditionally applied
+Modernizr.</p>
+
+<pre>&lt;script src=&quot;modernizr.js&quot;&gt;&lt;/script&gt;</pre>
+
+<h4>Conditionally Applying CSS Styles</h4>
+
+<p>Once Modernizr is up and running CSS styles may be conditionally applied
 based on the features a given browser supports. Modernizr has detection
 for the majority of the CSS3 properties and values, all of which can be
 found in the Modernizr <a href="https://modernizr.com/docs" 
-rel="noopener noreferrer" target="_blank">documentation</a>.
-</p>
-<p>
-One item to weigh out is if feature detection is necessary for certain
+rel="noopener noreferrer" target="_blank">documentation</a>.</p>
+
+<p>One item to weigh out is if feature detection is necessary for certain
 styles. For example, using an RGBa color value may easily be supported
 with a fallback hexadecimal value without the use of feature detection.
 When deciding to use feature detection, it is important to keep styles
 organized and performance in mind. Avoid duplicating any code or making
-additional HTTP requests when possible.
-</p>
+additional HTTP requests when possible.</p>
 
 <details>
   <summary>Conditionally Applying CSS Styles</summary>
@@ -9024,15 +9023,13 @@ additional HTTP requests when possible.
  30  }
  31  .no-cssgradients button:active {
  32    background-position: 0 -98px;
- 33  }
- 34 </pre>
+ 33  }</pre>
 
 </details>
 
 <h4>Feature Detection Demo</h4>
 
-<p>
-In the demonstration above, the button inherits some default styles.
+<p>In the demonstration above, the button inherits some default styles.
 However, specific styles are only applied based on whether or not CSS3
 gradient background are supported. In this case, rounded corners and box
 shadows are also included within the conditional styles. Those browsers
@@ -9040,30 +9037,26 @@ that support gradients get a gradient background, rounded corners, and a
 box shadow. Those browsers that do not receive an image with all of
 these styles included within the image. With this code none of the
 styles are being over written and an HTTP request is only made when
-necessary.
-</p>
-<p>
-When working with CSS3 feature detection it is hard to know what the
+necessary.</p>
+
+<p>When working with CSS3 feature detection it is hard to know what the
 styles look like in browsers that do not support specific CSS3 features.
 Fortunately, there is a bookmarklet
 called <a href="https://github.com/davatron5000/deCSS3" 
 rel="noopener noreferrer" target="_blank">deCSS3</a> which disables any
 CSS3 features. Doing so allows you to see what a website would look like
-without CSS3, and if your conditional styles are working.
-</p>
+without CSS3, and if your conditional styles are working.</p>
 
 <h4>Conditionally Loading Files</h4>
 
-<p>
-On top of conditionally loading styles, Modernizr also provides a way to
+<p>On top of conditionally loading styles, Modernizr also provides a way to
 use <a href="https://modernizr.com/docs#using-modernizr-with-javascript" 
 rel="noopener noreferrer" target="_blank"> feature detection in
 JavaScript</a>. With this, JavaScript polyfills and conditional files
 may be loaded based on the detection of a given feature with the help of
-jQuery and the jQuery getScript method.
-</p>
-<p>
-Using Modernizr to set the condition of an if statement in Javascript
+jQuery and the jQuery getScript method.</p>
+
+<p>Using Modernizr to set the condition of an if statement in Javascript
 allows different scripts to be executed based on whether or not the
 given condition is true or false. Below Modernizr is checking for local
 storage support. If local storage is supported 
@@ -9084,91 +9077,78 @@ the getScript method.</p>
  6      // Local storage is not available
  7      jQuery.getScript(&#39;storage-polyfill.js&#39;);
  8    }
- 9  });
- 10 </pre>
+ 9  });</pre>
 
 </details>
 
 <h4>Conditionally Loading Based on Media Queries</h4>
 
-<p>
-One interesting condition Modernizr can test against is media queries.
+<p>One interesting condition Modernizr can test against is media queries.
 Doing so provides the ability to only load files based on different
 media query conditions. Not loading unnecessary files can be extremely
-beneficial for performance.
-</p>
+beneficial for performance.</p>
+
 <pre> 1  $(document).ready(function() {
  2    if (Modernizr.mq(&#39;screen and (min-width: 640px)&#39;)) {
  3      jQuery.getScript(&#39;tabs.js&#39;); 
  4    } 
- 5  });  
- 6 </pre>
-<p>
-Above, Modernizr looks to detect screens above 640 pixels wide,
+ 5  });</pre>
+ 
+<p>Above, Modernizr looks to detect screens above 640 pixels wide,
 primarily desktops, and then loads the tabs.js file based off of this
 condition. It is important to note that this condition is tested only
 once, when the page loads, and that is it. Should a user resize the
 page, this condition will not be retested. Should this condition need to
-be retested, additional JavaScript would need to be included.
-</p>
-<h4>
-Conditionally Running Scripts
-</h4>
-<p>
-Using Modernizr, all of the HTML5 and CSS3 features they detect may be
+be retested, additional JavaScript would need to be included.</p>
+
+<h4>Conditionally Running Scripts</h4>
+
+<p>Using Modernizr, all of the HTML5 and CSS3 features they detect may be
 tested within JavaScript. For example, it may be worth disabling
 tooltips on mobile devices due to not having hover capabilities, and
 instead showing the tooltip in plain text on the screen. The script for
 calling these tooltips could be wrapped in a Modernizr condition,
-preventing the script from loading on smaller screens.
-</p>
+preventing the script from loading on smaller screens.</p>
+
 <pre> 1  $(document).ready(function() {
  2    if (Modernizr.mq(&#39;screen and (max-width: 400px)&#39;)) {
  3      $(&#39;.size&#39;).text(&#39;small&#39;);
  4    }
- 5  });
- 6 </pre>
-<h4>
-Conditionally Running Scripts Demo
-</h4>
-<p>
-Above is a basic example of how JavaScript can be executed based on a
+ 5  });</pre>
+
+<h4>Conditionally Running Scripts Demo</h4>
+
+<p>Above is a basic example of how JavaScript can be executed based on a
 condition established by Modernizr. Upon loading the page, if the screen
 is above 800 pixels wide nothing happens. However, if the screen is
 below 800 pixels wide, upon being loaded, the word ‘small’ will be
-swapped for ‘large’ based off of the executed JavaScript.
-</p>
-<h4>
-HTML5 &amp; CSS3 Polyfills
-</h4>
-<p>
-Currently there are polyfills for nearly all of the different HTML5 and
+swapped for ‘large’ based off of the executed JavaScript.</p>
+
+<h4>HTML5 &amp; CSS3 Polyfills</h4>
+
+<p>Currently there are polyfills for nearly all of the different HTML5 and
 CSS3 features. The team over at Modernizr has put together quite an
 exhaustive <a href="https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-browser-Polyfills" 
 rel="noopener noreferrer" target="_blank"> list of polyfills</a>. These
-polyfills can be dropped in as needed.
-</p>
-<p>
-The same people behind Modernizr have also put together
+polyfills can be dropped in as needed.</p>
+
+<p>The same people behind Modernizr have also put together
 a <a href="http://html5please.com/" 
 rel="noopener noreferrer" target="_blank">list</a> of all of the new
 HTML5 and CSS3 features, including instructions on how to use them
 responsibly. Understand, not all of these features need polyfills. Quite
-a few of them can be used outright or with the use of a fallback.
-</p>
-<h4>
-Cross Browser Testing
-</h4>
-<p>
-Perhaps the most dreaded part of web design and development is cross
+a few of them can be used outright or with the use of a fallback.</p>
+
+<h4>Cross Browser Testing</h4>
+
+<p>Perhaps the most dreaded part of web design and development is cross
 browser testing, making sure a website works well in all browsers.
 Generally speaking the more modern browsers, Chrome, Firefox, and
 Safari, all perform pretty well. The largest pitfalls live within
 Internet Explorer, and testing different versions of Internet Explorer
-can be difficult.
-</p>
-<p>
-There are
+can be difficult.</p>
+
+<p>There are
 a <a href="http://www.smashingmagazine.com/2011/08/07/a-dozen-cross-browser-testing-tools/" 
 rel="noopener noreferrer" target="_blank"> handful</a> of services out
 there that do help with cross browser testing, some are interactive
@@ -9188,7 +9168,7 @@ Internet Explorer.</p>
 <h6 align="center" width="40%">Fig. 9. VirtualBox running on Mac OS X with Internet Explorer
 versions 6 through 9.</h6>
 
-Microsoft provides a handful of VirtualPCs that can be used solely for
+<p>Microsoft provides a handful of VirtualPCs that can be used solely for
 testing. Setting all of these up can be a herculean task. Fortunately,
 Greg Thornton has built an <a href="https://github.com/xdissent/ievms" 
 rel="noopener noreferrer" target="_blank">
@@ -9197,13 +9177,12 @@ takes a while to download all of the different virtual machines, and requires
 a decent amount of disk space. Prepare adequately by only installing the necessary 
 virtual machines and by clearing up the necessary disk space ahead of time.
 Depending on how often the virtual machines are used, it may be worth
-installing them on an external hard drive.
+installing them on an external hard drive.</p>
 
-Internet Explorer versions 8 and above have built-in development tools,
+<p>Internet Explorer versions 8 and above have built-in development tools,
 unfortunately versions 7 and below do not. The web inspector and all of
 the other debugging tools we've grown to love are not readily available
-within Internet Explorer 7 and below.
-
+within Internet Explorer 7 and below.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 15. virtualbox (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <img class="border displayed"
@@ -9218,22 +9197,21 @@ Firebug Lite bookmarklet open for debugging.</h6>
 
 <h4>Resources &amp; Links</h4>
 
-<p>-<a href="https://code.google.com/p/html5shiv/">HTML5 Shiv</a> via
-Remy Sharp</p>
-<p>-<a
-href="https://css-tricks.com/how-to-create-an-ie-only-stylesheet/">How
-To Create an IE-Only Stylesheet</a> via CSS-Tricks</p>
-<p>-<a href="http://modernizr.com/">Modernizr</a></p>
-<p>-<a href="https://davidwalsh.name/loading-scripts-jquery">Loading
-Scripts with jQuery</a> via David Walsh</p>
-<p>-<a href="https://github.com/davatron5000/deCSS3">deCSS3</a> via Dave
-Rupert</p>
-<p>-<a
-href="https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-browser-Polyfills">HTML5
-Cross Browser Polyfills</a></p>
-<p>-<a href="http://html5please.com/">HTML5 Please</a></p>
-<p>-<a href="https://github.com/xdissent/ievms">Microsoft IE Virtual
-Machines</a> via Greg Thornton</p>
+<ul>
+  <li><a href="https://code.google.com/p/html5shiv/">HTML5 Shiv</a> via Remy Sharp</li>
+  <li><a href="https://css-tricks.com/how-to-create-an-ie-only-stylesheet/">
+    How To Create an IE-Only Stylesheet</a> via CSS-Tricks</li>
+  <li><a href="http://modernizr.com/">Modernizr</a></li>
+  <li><a href="https://davidwalsh.name/loading-scripts-jquery">Loading Scripts with jQuery</a> 
+    via David Walsh</li>
+  <li><a href="https://github.com/davatron5000/deCSS3">deCSS3</a> via Dave Rupert</li>
+  <li><a href="https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-browser-Polyfills">
+    HTML5 Cross Browser Polyfills</a></li>
+  <li><a href="http://html5please.com/">HTML5 Please</a></li> 
+  <li><a href="https://github.com/xdissent/ievms">Microsoft IE Virtual Machines</a> 
+    via Greg Thornton</li>
+</ul>
+
 <p><b>Lesson 8</b> <a
 href="https://learn.shayhowe.com/advanced-html-css/transitions-animations/">Transitions
 &amp; Animations</a> <b>Lesson 10</b> <a
@@ -9247,28 +9225,20 @@ Semantics &amp; Accessibility</a></p>
 <h5>HTML</h5>
 
 <ul>
-<li>
-<a href="https://learn.shayhowe.com/advanced-html-css/semantics-accessibility/#semantic-motivation"
-    rel="noopener noreferrer" target="_blank"> Semantic Motivation</a>
-</li>
-<li>
-<a href="https://learn.shayhowe.com/advanced-html-css/semantics-accessibility/#structural-semantics"
-    rel="noopener noreferrer" target="_blank"> Structural Semantics</a>
-</li>
-<li>
-<a href="https://learn.shayhowe.com/advanced-html-css/semantics-accessibility/#text-level-semantics"
-    rel="noopener noreferrer" target="_blank"> Text Level Semantics</a>
-</li>
-<li>
-<a href="https://learn.shayhowe.com/advanced-html-css/semantics-accessibility/#microdata" 
-    rel="noopener noreferrer" target="_blank"> Microdata</a>
-</li>
-<li>
-<a href="https://learn.shayhowe.com/advanced-html-css/semantics-accessibility/#wai-aria"
-    rel="noopener noreferrer" target="_blank"> WAI-ARIA</a>
-</li>
+  <li><a href="https://learn.shayhowe.com/advanced-html-css/semantics-accessibility/#semantic-motivation"
+    rel="noopener noreferrer" target="_blank"> Semantic Motivation</a></li>
+  <li><a href="https://learn.shayhowe.com/advanced-html-css/semantics-accessibility/#structural-semantics"
+    rel="noopener noreferrer" target="_blank"> Structural Semantics</a></li>
+  <li><a href="https://learn.shayhowe.com/advanced-html-css/semantics-accessibility/#text-level-semantics"
+    rel="noopener noreferrer" target="_blank"> Text Level Semantics</a></li>
+  <li><a href="https://learn.shayhowe.com/advanced-html-css/semantics-accessibility/#microdata" 
+    rel="noopener noreferrer" target="_blank"> Microdata</a></li>
+  <li><a href="https://learn.shayhowe.com/advanced-html-css/semantics-accessibility/#wai-aria"
+    rel="noopener noreferrer" target="_blank"> WAI-ARIA</a></li>
 </ul>
-<p><b>SHARE</b></p>
+
+<h4>SHARE</h4>
+
 <p>Semantics and accessibility are naturally part of HTML by design,
 however they are not fully leveraged unless used accordingly. Knowing
 how to write semantic and accessible code properly takes an
@@ -9276,6 +9246,7 @@ understanding of how semantics and accessibility work, and how users and
 machines interpret them. Writing semantic and accessible code isn’t
 incredibly difficult, but it can be time consuming. In the long run,
 however, the benefits win out.</p>
+
 <p>One of the more important parts to remember when writing semantic and
 accessible code is to do your best to leverage the standard markup
 language. Do your best to write the cleanest code possible, and take
@@ -9284,6 +9255,7 @@ where another element might make more semantic sense, using a div where
 a h1 would be better fitted for example. Use semantic elements and
 attributes, as well as microdata and WAI-ARIA to extend the value of
 your code.</p>
+
 <p>Additionally, <b>be an advocate for semantics and accessibility</b>.
 Tell others why you’ve written certain code, and provide reasoning why
 certain modules of content are marked up in a specific way. Outline
@@ -9291,14 +9263,15 @@ goals and objectives within your code, and explain how those goals and
 objectives are being accomplished. The practice of writing semantic and
 accessible code is growing, however adoption at large has not yet been
 achieved. Be an advocate for the code you write.</p>
-<h4>
-Semantic Motivation
-</h4>
+
+<h4>Semantic Motivation</h4>
+
 <p>Occasionally, one may ask if semantics really make a difference. You
 may hear they slow down development, are poorly supported, or that they
 are even opinionated. While this may have some validity, you still need
 to retain integrity and continue to write the best code possible, for
 semantics provide a larger meaning in writing code.</p>
+
 <p>The fact of the matter is, 
 <a href="http://www.vanseodesign.com/web-design/semantic-html/" 
 rel="noopener noreferrer" target="_blank">semantics largely benefit
@@ -9311,25 +9284,19 @@ serve content internationally and making it more search engine friendly.
 Should that not be enough, semantics also promote interoperability,
 allowing the exchange and use of information across different platforms
 and devices.</p>
+
 <p>It’s safe to say semantics are important, and here to stay. To
 briefly recap, semantics provide:</p>
+
 <ul>
-<li>
-Unambiguous, shared meaning within content
-</li>
-<li>
-Accessibility
-</li>
-<li>
-Search and globalization
-</li>
-<li>
-Interoperability
-</li>
+  <li>Unambiguous, shared meaning within content</li>
+  <li>Accessibility</li>
+  <li>Search and globalization</li>
+  <li>Interoperability</li>
 </ul>
-<h4>
-Structural Semantics
-</h4>
+  
+<h4>Structural Semantics</h4>
+
 <p>Within the beginner’s guide we discuss the use of 
 <a href="https://learn.shayhowe.com/html-css/getting-to-know-html/" 
 rel="noopener noreferrer" target="_blank"> structural semantics</a>,
@@ -9339,41 +9306,43 @@ background context to the content within them, communicating their core
 meaning to web browsers and other devices. This is important, as it
 provides a better way to outline and structure pages, not to mention a
 more meaningful solution than divisions.</p>
-<h4>
-Hiding Content
-</h4>
+
+<h4>Hiding Content</h4>
+
 <p>Every now and then you may want to hide a block of content on the
 page, perhaps showing or hiding an element depending on a user’s state.
 For example, having a success message hidden from a user until they
 complete a desired action. Most commonly, this is accomplished with
 the display: none; CSS declaration. While this does work, it is
 semantically incorrect.</p>
+
 <p>A better option is to use the hidden Boolean attribute, which is a
 global attribute available to all elements for use. Functionally it
 performs the same way as the CSS declaration, but semantically it
 represents an element that should be hidden, or ignored, for the time
 being. Screen readers and other devices will recognize this, temporarily
 skipping it, where they may not done so with the CSS declaration.</p>
+
 <pre> 1  &lt;!-- Good --&gt;  
  2  &lt;div hidden&gt;...&lt;/div&gt;  
  3  &lt;!-- Not good --&gt; 
- 4  &lt;div style=&quot;display: none;&quot;&gt;...&lt;/div&gt; 
- 5 </pre>
+ 4  &lt;div style=&quot;display: none;&quot;&gt;...&lt;/div&gt; </pre>
+
 <p>Imagine a blind user attempting to fill out a form and the first
 piece of content, before even filling out the form, is a success
 message. This is a poor user experience, and one that can easily be
 fixed using proper semantics.</p>
-<h4>
-Text Level Semantics
-</h4>
+
+<h4>Text Level Semantics</h4>
+
 <p>The majority of content on the web lives within text, and we
 primarily browse the Internet looking for this content. Using the
 proper <a href="https://developers.whatwg.org/text-level-semantics.html" 
 rel="noopener noreferrer" target="_blank"> semantic markup</a> for text
 makes it easier for users to find what they need.</p>
-<h4>
-Bolding Text
-</h4>
+
+<h4>Bolding Text</h4>
+
 <p>There are a few different ways to make text bold, including multiple
 elements and
 the <a href="https://learn.shayhowe.com/html-css/working-with-typography/" 
@@ -9381,23 +9350,23 @@ rel="noopener noreferrer" target="_blank"> font weight</a> CSS property.
 The two main elements used in this case include strong  and b. While
 these two elements have the same presentation they have completely
 different semantic meanings.</p>
+
 <p>The strong element outlines text that has a <b>strong importance</b>.
 On the contrasting side, the b element identifies text that is to
 be <b>stylistically offset</b>, without importance. Generally speaking,
 the b element should be used solely as a styling hook to change the
 presentation of an element, where the strong element should be used to
 identify significantly important text.</p>
+
 <pre> 1  &lt;!-- Strong importance --&gt;
  2  &lt;strong&gt;Caution:&lt;/strong&gt; Falling rocks.
  3  &lt;!-- Stylistically offset --&gt;
- 4  This recipe calls for &lt;b&gt;bacon&lt;/b&gt; and &lt;b&gt;baconnaise&lt;/b&gt;.
- 5  </pre>
-<h4>
-Bolding Text Demo
-</h4>
-<h4>
-Italicizing Text
-</h4>
+ 4  This recipe calls for &lt;b&gt;bacon&lt;/b&gt; and &lt;b&gt;baconnaise&lt;/b&gt;.</pre>
+
+<h4>Bolding Text Demo</h4>
+
+<h4>Italicizing Text</h4>
+
 <p>Italicizing text falls in line with that of bolding text, where we
 can use multiple elements or
 the <a href="https://learn.shayhowe.com/html-css/working-with-typography/" 
@@ -9405,6 +9374,7 @@ rel="noopener noreferrer" target="_blank"> font style</a> CSS property
 to achieve a desired presentation. When italicizing text, the two
 elements most commonly used are em and i. Again, these share the same
 presentation, yet have completely different semantic meanings.</p>
+
 <p>The em element places a <b>stressed emphasis</b> on text, while
 the i element identifies text to be expressed in an <b>alternate voice
 or tone</b>. Using the em element really drives prominence with an added
@@ -9415,8 +9385,7 @@ importance.</p>
 <pre> 1  &lt;!-- Stressed emphasis --&gt; 
  2  I &lt;em&gt;love&lt;/em&gt; Chicago!
  3  &lt;!-- Alternative voice or tone --&gt;  
- 4  The name &lt;i&gt;Shay&lt;/i&gt; means a gift.  
- 5 </pre>
+ 4  The name &lt;i&gt;Shay&lt;/i&gt; means a gift.</pre>
  
 <h4>Italicizing Text Demo</h4>
 
@@ -9439,16 +9408,20 @@ different elements we can use as well as the 
 rel="noopener noreferrer" target="_blank"> text decoration</a> CSS
 property. In this case, the two primary elements used to underline text
 are ins and u.</p>
+
 <p>The ins element is used to identify text that has been
 recently <b>added to the document</b>, and the u element simply refers
 to an <b>unarticulated annotation</b>.</p>
+
 <p>For more semantic code, the ins element may be used with
 the cite and datetime attributes. The datetime attribute identifies when
 the content was added to the document, and the cite attribute provides a
 machine readable source providing reference for the addition, perhaps
 documentation or a request ticket.</p>
+
 <p>The u element is typically used to label text as a proper name, often
 in another language, or to point out a misspelling.</p>
+
 <p>Underlining text does require a bit of additional care, as it may be
 confused with a hyperlink. By default hyperlinks are underlined, and
 thus have become a standard design practice. Underlining text that is
@@ -9463,8 +9436,8 @@ Use underlines with caution.</p>
  3    Updated: This website now contains an advanced guide. 
  4  &lt;/ins&gt;
  5  &lt;!-- Unarticulated annotation --&gt;
- 6  &lt;u&gt;Urushihara Yuuji&lt;/u&gt; won &lt;u&gt;Sasuke 27&lt;/u&gt;. 
- 7 </pre>
+ 6  &lt;u&gt;Urushihara Yuuji&lt;/u&gt; won &lt;u&gt;Sasuke 27&lt;/u&gt;. </pre>
+
 </details>
 
 <h4>Underlining Text Demo</h4>
@@ -9482,8 +9455,9 @@ the cite and datetime attributes. Each of which hold the identical
 semantic values as before, cite specifying a resource that explains the
 change and datetime identifying when the content was removed from the
 document.</p>
-<p>The s element identifies text that is no longer accurate or
-relevant.</p>
+
+<p>The s element identifies text that is no longer accurate or relevant.</p>
+
 <details>
   <summary>Example, Striking Text</summary>
 
@@ -9492,8 +9466,8 @@ relevant.</p>
  3  datetime=&quot;2012-07-01&quot;&gt;
  4  skateboarder&lt;/del&gt; and designer.
  5  &lt;!-- No longer accurate or relevant --&gt;  
- 6  &lt;s&gt;$24.99&lt;/s&gt; $19.99  
- 7 </pre>
+ 6  &lt;s&gt;$24.99&lt;/s&gt; $19.99  </pre>
+
 </details>
 
 <h4>Striking Text Demo</h4>
@@ -9504,50 +9478,47 @@ relevant.</p>
 used. Added in HTML5, the mark element provides a clean, semantic way to
 identify text, specifically for reference purposes without having to use
 an un-semantic text level element.</p>
+
 <pre> 1  &lt;!-- Highlighted for reference purposes --&gt; 
- 2  Search results for &lt;mark&gt;&#39;chicago&#39;&lt;/mark&gt;.
- 3 </pre>
-<h4>
-Highlighting Text Demo
-</h4>
-<h4>
-Abbreviations
-</h4>
+ 2  Search results for &lt;mark&gt;&#39;chicago&#39;&lt;/mark&gt;.</pre>
+
+<h4>Highlighting Text Demo</h4>
+
+<h4>Abbreviations</h4>
+
 <p>Abbreviations, the shortened form of a phrase, can be semantically
 marked up in HTML using the abbr element. The abbr element should be
 used along with the title attribute, of which includes the full value of
 the phrase being abbreviated. The acronym element was originally used to
 distinguish acronyms from abbreviations but has since been deprecated,
 and shouldn’t be used.</p>
+
 <pre> 1  &lt;abbr title=&quot;HyperText Markup Language&quot;&gt;HTML&lt;/abbr&gt;
- 2  &lt;abbr title=&quot;Cascading Style Sheets&quot;&gt;CSS&lt;/abbr&gt; 
- 3 </pre>
-<h4>
-Abbreviations Demo
-</h4>
-<h4>
-Sub &amp; Superscripts
-</h4>
+ 2  &lt;abbr title=&quot;Cascading Style Sheets&quot;&gt;CSS&lt;/abbr&gt; </pre>
+ 
+<h4>Abbreviations Demo</h4>
+
+<h4>Sub &amp; Superscripts</h4>
+
 <p>Subscripts and superscripts may be marked up accordingly using
 the sub and sup elements respectively. It is important to note that
 these elements should be reserved for typographical conventions, not for
 presentational purposes.</p>
+
 <pre> 1  &lt;!-- Subscript --&gt;
  2  H&lt;sub&gt;2&lt;/sub&gt;O 
  3  &lt;!-- Superscripts --&gt;
- 4  1&lt;sup&gt;st&lt;/sup&gt; Place 
- 5 
- 6 </pre>
-<h4>
-Sub &amp; Superscripts Demo
-</h4>
-<h4>
-Meter &amp; Progress
-</h4>
+ 4  1&lt;sup&gt;st&lt;/sup&gt; Place </pre>
+ 
+<h4>Sub &amp; Superscripts Demo</h4>
+
+<h4>Meter &amp; Progress</h4>
+
 <p>To gauge scale or indicate progress the meter and progress elements
 should be used. The meter element is used to measure a fixed value, one
 that does not change over time, while the progress element measures the
 progress of a increasing measurement.</p>
+
 <p>The meter element may be used with the min, max, low, high, optimum,
 and value attributes. The min and max attributes set the lower and upper
 bounds of the range, where the value attribute sets the exact measured
@@ -9555,6 +9526,7 @@ value. The low and high attributes identify what is to be considered the
 lower and higher parts of the range, while the optimum value identifies
 the most favorable part of the range, of which may be in the lower or
 higher parts.</p>
+
 <p>The progress element indicates progress rather than a fixed
 measurement. It specifically represents the completion of a task, either
 by what is left to be completed or what has been completed thus far.
@@ -9573,8 +9545,7 @@ progress needs to be reached.</p>
  5  &lt;!-- Progress --&gt; 
  6  You are &lt;progress value=&quot;50&quot; max=&quot;100&quot;&gt;50%&lt;/progress&gt;  
  7  complete.  
- 8  &lt;progress value=&quot;50&quot; min=&quot;0&quot; max=&quot;100&quot;&gt;Hold tight, you&quot;re getting there.&lt;/progress&gt;
- 9 </pre>
+ 8  &lt;progress value=&quot;50&quot; min=&quot;0&quot; max=&quot;100&quot;&gt;Hold tight, you&quot;re getting there.&lt;/progress&gt;</pre>
 </details>
 
 <h4>Meter &amp; Progress Demo</h4>
@@ -9588,6 +9559,7 @@ within the element is formatted. If the content is formatted with the
 correct time stamp then the datetime attribute may be omitted.
 Furthermore, if the time is representing the date or time of a
 publication the pubdate Boolean attribute should be used.</p>
+
 <p>The address element may be used to hold any contact information,
 including a physical address as well as a website or email address. It
 should not include any further information than the contact information,
@@ -9608,8 +9580,8 @@ and other content needs to be placed outside of the address element.</p>
  10    600 W. Chicago Ave.&lt;br&gt;
  11   Suite 620&lt;br&gt; 
  12   Chicago, IL 60654&lt;br&gt; USA  
- 13 &lt;/address&gt; 
- 14 </pre>
+ 13 &lt;/address&gt; </pre>
+
 </details>
 
 <h4>Time &amp; Address Demo</h4>
@@ -9628,45 +9600,45 @@ will display text exactly as it is typed, whitespace included. Nesting
 the code element within the pre element semantically identifies larger
 samples of code, which include whitepsace, displayed in a block level
 manner.</p>
+
 <pre> 1  &lt;!-- Inline code samples --&gt;  
  2  Use the &lt;code&gt;article&lt;/code&gt; element. 
  3  &lt;!-- Larger, block level code snippets --&gt;  
  4  &lt;pre&gt;&lt;code&gt;body { 
  5    color: #666; 
  6    font: 14px/20px Arial, sans-serif;
- 7  }&lt;/code&gt;&lt;/pre&gt; 
- 8 </pre>
-<h4>
-Presenting Code Demo
-</h4>
-<h4>
-Line &amp; Word Breaks
-</h4>
+ 7  }&lt;/code&gt;&lt;/pre&gt; </pre>
+
+<h4>Presenting Code Demo</h4>
+
+<h4>Line &amp; Word Breaks</h4>
+
 <p>Occasionally you may want to include a line break within a line of
 text, in which case the br element may be used. The br element does not
 have a closing tag, simply a beginning. In XHTML the br element is self
 closing, including a trailing forward slash, <br />.</p>
+
 <p>Line breaks are not to be used for thematic grouping of content.
 Paragraphs or other elements are better suited for thematic grouping.
 Line breaks are specifically to be used where line breaks exist as part
 of the content, for example as within addresses and poems.</p>
+
 <p>In addition to line breaks, you may also specify word breaking
 opportunities with the wbr element. Using the wbr element in the middle
 of a word ensures that, should the word need to wrap two lines, it does
 in a legible fashion.</p>
+
 <pre> 1  &lt;!-- Line break --&gt;  
  2  600 W. Chicago Ave.&lt;br&gt;
  3  Chicago, IL 60654&lt;br&gt;  
  4  USA  
  5  &lt;!-- Word break --&gt;  
- 6  http://shay&lt;wbr&gt;howe.com  
- 7 </pre>
-<h4>
-Line &amp; Word Breaks Demo
-</h4>
-<h4>
-Side Comments
-</h4>
+ 6  http://shay&lt;wbr&gt;howe.com</pre>
+ 
+<h4>Line &amp; Word Breaks Demo</h4>
+
+<h4>Side Comments</h4>
+
 <p>Originally the small element was used to render text as one font size
 smaller than the default, purely for presentational purposes. As we are
 aware, presentation and style should only live within CSS, not HTML.
@@ -9674,15 +9646,14 @@ Within HTML5, the small element preserves the presentation of being
 displayed at a smaller font size, however it semantically means to be
 rendered as a side comments or small print. This often includes
 copyright information or legal print.</p>
+
 <pre> 1  &lt;!-- Side comments or small print --&gt; 
- 2  &lt;small&gt;&amp;copy; 2012 Shay Howe&lt;/small&gt;
- 3 </pre>
-<h4>
-Side Comments Demo
-</h4>
-<h4>
-Citations &amp; Quotes
-</h4>
+ 2  &lt;small&gt;&amp;copy; 2012 Shay Howe&lt;/small&gt;</pre>
+ 
+<h4>Side Comments Demo</h4>
+
+<h4>Citations &amp; Quotes</h4>
+
 <p>The beginner’s guide
 discusses <a href="https://learn.shayhowe.com/html-css/working-with-typography/" 
 rel="noopener noreferrer" target="_blank"> citations and quotes</a>, and
@@ -9690,39 +9661,39 @@ when to use the cite, q, and blockquote elements accordingly. As a quick
 reminder, the cite element refers to a title of work, the q element
 identifies dialog or prose, and the blockquote element is used to code
 longer formed quotes, commonly from external sources.</p>
-<h4>
-Hyperlink Attributes
-</h4>
+
+<h4>Hyperlink Attributes</h4>
+
 <p>The beginner’s guide also
 outlines <a href="https://learn.shayhowe.com/html-css/getting-to-know-html/" 
 rel="noopener noreferrer" target="_blank"> hyperlinks</a>, and some of
 their different behaviors. What is not covered, however, is some of the
 semantic benefits to hyperlinks, specifically with the use of
 the download and rel attributes.</p>
-<h4>
-Download Attribute
-</h4>
+
+<h4>Download Attribute</h4>
+
 <p>The download attribute tells the browser to prompt a download for a
 file, rather than the default behavior of navigation to the file. As an
 example, if the hyperlink reference attribute, href, is pointing to an
 image, the browser will prompt a user to download the image instead of
 opening the image within the browser.</p>
+
 <p>The download attribute can serve as a Boolean attribute, downloading
 the file as is, or it may contain a value, of which becomes the file
 name once downloaded. Using a specific value here lets you name the file
 as you wish on your server while still providing users with a meaningful
 name.</p>
+
 <pre> 1  &lt;!-- Boolean --&gt;  
  2  &lt;a href=&quot;twitter-logo.png&quot; download&gt;Twitter Logo&lt;/a&gt;  
  3  &lt;!-- With a value --&gt;
- 4  &lt;a href=&quot;twitter-logo.png&quot; download=&quot;Logo&quot;&gt;Twitter Logo&lt;/a&gt;  
- 5 </pre>
-<h4>
-Download Attribute Demo
-</h4>
-<h4>
-Relationship Attribute
-</h4>
+ 4  &lt;a href=&quot;twitter-logo.png&quot; download=&quot;Logo&quot;&gt;Twitter Logo&lt;/a&gt;  </pre>
+
+<h4>Download Attribute Demo</h4>
+
+<h4>Relationship Attribute</h4>
+
 <p>For any hyperlinks including a reference attribute, href, you may
 also include the relationship attribute, rel. The rel attribute
 identifies the relationship between the current document and the
@@ -9730,8 +9701,7 @@ document being referenced. For example, when linking to a copyright
 statement the rel attribute value of copyright should be used.</p>
 
 <pre> 1  &lt;a href=&quot;legal.html&quot; rel=&quot;copyright&quot;&gt;Terms of Use&lt;/a&gt;  
- 2  &lt;a href=&quot;toc.html&quot; rel=&quot;contents&quot;&gt;Table of Contents&lt;/a&gt;
- 3 </pre>
+ 2  &lt;a href=&quot;toc.html&quot; rel=&quot;contents&quot;&gt;Table of Contents&lt;/a&gt;</pre>
 
 <p>A few <a href="http://microformats.org/wiki/existing-rel-values" 
 rel="noopener noreferrer" target="_blank">popular</a> rel attribute
@@ -9766,6 +9736,7 @@ coding contact information and calendar events, however there are
 <a href="http://schema.org/docs/schemas.html" 
 rel="noopener noreferrer" target="_blank">encoding models</a> for
 products, reviews, and more.</p>
+
 <p>One example of microdata at work is within Google, where microdata is
 interpreted and used within search results to display more relevant
 data. Often performing a search for a business location yields the
@@ -9782,8 +9753,7 @@ an existing website.</p>
 
 <h6 align="center" width="40%">
 Fig. 10. Google uses microdata to identify business locations, contact
-information, hours, pricing, ratings, and more.
-</h6>
+information, hours, pricing, ratings, and more.</h6>
 
 <h4>Microdata vs. Microformats vs. RDFa</h4>
 
@@ -9795,6 +9765,7 @@ rel="noopener noreferrer" target="_blank">microformats</a>, and 
 <a href="http://www.w3.org/TR/xhtml-rdfa-primer/" 
 rel="noopener noreferrer" target="_blank">RDFa</a>. All of these have
 their pros and cons, and all of which are still viable to practice.</p>
+
 <p>Microdata is the recommended format from
 <a href="https://support.google.com/webmasters/bin/answer.py?hl=en&answer=99170" 
 rel="noopener noreferrer" target="_blank"> Google</a>, and other search
@@ -9826,8 +9797,7 @@ need.</p>
 
 <pre> 1  &lt;section itemscope itemtype=&quot;http://schema.org/Person&quot;&gt; 
  2    ... 
- 3  &lt;/section&gt; 
- 4 </pre>
+ 3  &lt;/section&gt; </pre>
 
 <p>Once the scope and type of the item have been determined, properties
 may then be set. These properties are identified by different elements
@@ -9837,8 +9807,7 @@ element itself most commonly determines the value of the property.</p>
 
 <pre> 1  &lt;section itemscope itemtype=&quot;http://schema.org/Person&quot;&gt; 
  2    &lt;h1 itemprop=&quot;name&quot;&gt;Shay Howe&lt;/h1&gt;
- 3  &lt;/section&gt; 
- 4 </pre>
+ 3  &lt;/section&gt; </pre>
  
 <p>Some elements, however, do not get their itemprop value from the content within the 
 element. Instead, their value is determined from the value of another attribute on the 
@@ -9906,8 +9875,7 @@ item properties and their corresponding values.</p>
  11     &lt;abbr itemprop=&quot;addressRegion&quot; title=&quot;Illinois&quot;&gt;IL&lt;/abbr&gt; 
  12     &lt;span itemprop=&quot;postalCode&quot;&gt;60654&lt;/span&gt;  
  13   &lt;/address&gt; 
- 14 &lt;/section&gt; 
- 15 </pre>
+ 14 &lt;/section&gt; </pre>
 
 </details>
 
@@ -9945,8 +9913,7 @@ as can some of the nested item types.</p>
  13       &lt;span itemprop=&quot;postalCode&quot;&gt;60601&lt;/span&gt;  
  14     &lt;/address&gt; 
  15   &lt;/div&gt;
- 16 &lt;/section&gt; 
- 17 </pre>
+ 16 &lt;/section&gt; </pre>
 
 </details>
 
@@ -9978,8 +9945,7 @@ rel="noopener noreferrer" target="_blank">WAI-ARIA roles</a> is
 accomplished using the role attribute. These roles then specify what
 certain elements and blocks of content do on a page.</p>
 
-<pre> 1  &lt;header role=&quot;banner&quot;&gt;...&lt;/header&gt; 
- 2 </pre>
+<pre>&lt;header role=&quot;banner&quot;&gt;...&lt;/header&gt;</pre>
 
 <p>WAI-ARIA roles break down into four different categories, including
 abstract, widget, document structure, and landmark roles. For this
@@ -10100,8 +10066,7 @@ code snippet.</p>
  5    &lt;section role=&quot;region&quot;&gt;...&lt;/section&gt;  
  6  &lt;/article&gt; 
  7  &lt;aside role=&quot;complementary&quot;&gt;...&lt;/aside&gt;  
- 8  &lt;footer role=&quot;contentinfo&quot;&gt;...&lt;/footer&gt;  
- 9 </pre>
+ 8  &lt;footer role=&quot;contentinfo&quot;&gt;...&lt;/footer&gt;</pre>
 
 <h3>States &amp; Properties</h3>
 
