@@ -58,7 +58,7 @@ pre > code {
 pre, code {
   font-family: monospace, monospace;
   font-size: 10px;  /* 12px; */
-  margin-left: 0px;
+  margin-left: 10px;
 }
 pre:hover, pre:focus { width: min-content; }
 
