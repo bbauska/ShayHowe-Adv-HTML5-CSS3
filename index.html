@@ -2,7 +2,7 @@
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~ index.html of Adv-HTML-CSS (Shay & Howe) ~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
@@ -84,8 +84,9 @@
   <p class="author">Shay-Howe &amp; Brian Bauska (bbauska)</p>
 </header>
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 align="center">Lesson 1: Performance &amp; Organization</h2>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>In this Lesson 1</h3>
 
 <h4>HTML</h4>
@@ -824,8 +825,9 @@ Organization</a> <b>Lesson 3</b>
 <a href="https://learn.shayhowe.com/advanced-html-css/complex-selectors/" 
 rel="noopener noreferrer" target="_blank">Complex Selectors</a></p>
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 align="center">Lesson 2: Detailed Positioning</h2>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>In this Lesson 2</h3>
 
 <h4>CSS</h4>
@@ -1490,7 +1492,8 @@ box three.</p>
 <details>
   <summary>CSS</summary>
 
-<pre> 1  .box-set {
+<pre>
+ 1  .box-set {
  2    background: #eaeaed;
  3    height: 160px;
  4    position: relative;
@@ -1518,52 +1521,50 @@ box three.</p>
  26   bottom: 10px;
  27   left: 190px;
  28   z-index: 1;
- 29 }
- 30  </pre>
+ 29 }</pre>
+
 </details>
-<h4>
-Z-Index Demo
-</h4>
-<h4>
-Resources &amp; Links
-</h4>
+
+<h4>Z-Index Demo</h4>
+
+<h4>Resources &amp; Links</h4>
+
 <ul>
 <li>
 <a href="https://css-tricks.com/all-about-floats/" 
-    rel="noopener noreferrer" target="_blank"> All About Floats</a> via
+    rel="noopener noreferrer" target="_blank">All About Floats</a> via
 CSS-Tricks
 </li>
 <li>
 <a href="http://nicolasgallagher.com/micro-clearfix-hack/" 
-    rel="noopener noreferrer" target="_blank"> A New Micro Clearfix
+    rel="noopener noreferrer" target="_blank">A New Micro Clearfix
 Hack</a> via Nicolas Gallagher
 </li>
 <li>
 <a href="http://www.alistapart.com/articles/css-positioning-101/" 
-    rel="noopener noreferrer" target="_blank"> CSS Positioning
+    rel="noopener noreferrer" target="_blank">CSS Positioning
 101</a> via A List Apart
 </li>
 <li>
 <a href="http://www.impressivewebs.com/a-detailed-look-at-the-z-index-css-property/"
-    rel="noopener noreferrer" target="_blank"> A Detailed Look at the
+    rel="noopener noreferrer" target="_blank">A Detailed Look at the
 z-index CSS Property</a> via Impressive Webs
 </li>
 </ul>
 <p><b>Lesson 1</b>
 <a href="https://learn.shayhowe.com/advanced-html-css/performance-organization/"
-  rel="noopener noreferrer" target="_blank"> Performance &amp;
+  rel="noopener noreferrer" target="_blank">Performance &amp;
 Organization</a> <b>Lesson 3</b>
 <a href="https://learn.shayhowe.com/advanced-html-css/complex-selectors/" 
-  rel="noopener noreferrer" target="_blank"> Complex Selectors</a></p>
-<h2 align="center">
-Lesson 3: Complex Selectors
-</h2>
-<h3>
-In this Lesson 3
-</h3>
-<h4>
-CSS
-</h4>
+  rel="noopener noreferrer" target="_blank">Complex Selectors</a></p>
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2 align="center">Lesson 3: Complex Selectors</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3>In this Lesson 3</h3>
+
+<h4>CSS</h4>
+
 <ul>
 <li>
 <a href="https://learn.shayhowe.com/advanced-html-css/complex-selectors/#common-selectors"
@@ -3467,54 +3468,29 @@ added to ensure the best support for all browsers.
   </thead>
   <tbody>
     <tr class="odd">
-      <td>.alpha:first-</td>
-      <td>Textual Pseudo-</td>
+      <td>.alpha:first-letter</td>
+      <td>Textual Pseudo-elements</td>
       <td>Selects the first letter of text within an element.</td>
     </tr>
     <tr class="even">
-      <td>letter</td>
-      <td>elements</td>
-      <td></td>
-    </tr>
-    <tr class="odd">
-      <td>.bravo:first-</td>
-      <td>Textual Pseudo-</td>
+      <td>.bravo:first-line</td>
+      <td>Textual Pseudo-elements</td>
       <td>Selects the first line of text within an element.</td>
-    </tr>
-    <tr class="even">
-      <td>line</td>
-      <td>elements</td>
-      <td></td>
     </tr>
     <tr class="odd">
       <td>div:before</td>
       <td>Generated Content</td>
-      <td>Creates a pseudo-element inside the selected element at</td>
+      <td>Creates a pseudo-element inside the selected element at the beginning.</td>
     </tr>
     <tr class="even">
-      <td></td>
-      <td></td>
-      <td>the beginning.</td>
-    </tr>
-    <tr class="odd">
       <td>a:after</td>
       <td>Generated Content</td>
-      <td>Creates a pseudo-element inside the selected element at</td>
-    </tr>
-    <tr class="even">
-      <td></td>
-      <td></td>
-      <td>the end.</td>
+      <td>Creates a pseudo-element inside the selected element at the end.</td>
     </tr>
     <tr class="odd">
       <td>::selection</td>
-      <td>Fragment Pseudo-</td>
-      <td>Selects the part of a document which has been selected,</td>
-    </tr>
-    <tr class="even">
-      <td></td>
-      <td>element</td>
-      <td>or highlighted, by a users’ action.</td>
+      <td>Fragment Pseudo-element</td>
+      <td>Selects the part of a document which has been selected, or highlighted, by a users' action.</td>
     </tr>
   </tbody>
 </table>
@@ -3544,65 +3520,42 @@ utility, provides great support for these selectors in Internet Explorer
 by <a href="http://api.jquery.com/category/selectors/" 
 rel="noopener noreferrer" target="_blank">jQuery selectors</a>.
 </p>
-<h4>
-Selector Speed &amp; Performance
-</h4>
-<p>
-It is important to pay attention the speed and performance of selectors,
+<h4>Selector Speed &amp; Performance</h4>
+
+<p>It is important to pay attention the speed and performance of selectors,
 as using too many intricate selectors can slow down the rendering of a
 page. Be attentive and when a selector begins to look a bit foreign
-think about revisiting it, and seeing if a better solution can be found.
-</p>
-<h4>
-Resources &amp; Links
-</h4>
+think about revisiting it, and seeing if a better solution can be found.</p>
+
+<h4>Resources &amp; Links</h4>
+
 <ul>
-<li>
-<a href="http://net.tutsplus.com/tutorials/html-css-techniques/the-30-css-selectors-you-must-memorize/"
-    rel="noopener noreferrer" target="_blank"> The 30 CSS Selectors you
-Must Memorize</a> via Nettuts+.
-</li>
-<li>
-<a href="https://css-tricks.com/child-and-sibling-selectors/"
-    rel="noopener noreferrer" target="_blank"> Child and Sibling
-Selectors</a> via CSS-Tricks.
-</li>
-<li>
-<a href="http://www.css3.info/preview/attribute-selectors/"
-    rel="noopener noreferrer" target="_blank"> CSS3 Substring Matching
-Attribute Selectors</a> via CSS3.info
-</li>
-<li>
-<a href="http://coding.smashingmagazine.com/2011/03/30/how-to-use-css3-pseudo-classes/"
-    rel="noopener noreferrer" target="_blank"> How To Use CSS3
-Pseudo-Classes</a> via Smashing Magazine.
-</li>
-<li>
-<a href="http://reference.sitepoint.com/css/understandingnthchildexpressions"
-    rel="noopener noreferrer" target="_blank"> Understanding :nth-child
-Pseudo-class Expressions</a> via SitePoint.
-</li>
-&lt;li<a href="http://coding.smashingmagazine.com/2009/08/17/taming-advanced-css-selectors/"
-    rel="noopener noreferrer" target="_blank"> Taming Advanced CSS
-Selectors</a> via Smashing Magazine.
-</li>
+  <li><a href="http://net.tutsplus.com/tutorials/html-css-techniques/the-30-css-selectors-you-must-memorize/"
+    rel="noopener noreferrer" target="_blank">The 30 CSS Selectors you Must Memorize</a> via Nettuts+.</li>
+  <li><a href="https://css-tricks.com/child-and-sibling-selectors/"
+    rel="noopener noreferrer" target="_blank">Child and Sibling Selectors</a> via CSS-Tricks.</li>
+  <li><a href="http://www.css3.info/preview/attribute-selectors/" 
+    rel="noopener noreferrer" target="_blank">CSS3 Substring Matching Attribute Selectors</a> via CSS3.info</li>
+  <li><a href="http://coding.smashingmagazine.com/2011/03/30/how-to-use-css3-pseudo-classes/" 
+    rel="noopener noreferrer" target="_blank">How To Use CSS3 Pseudo-Classes</a> via Smashing Magazine.</li>
+  <li><a href="http://reference.sitepoint.com/css/understandingnthchildexpressions" 
+    rel="noopener noreferrer" target="_blank">Understanding :nth-child Pseudo-class Expressions</a> via SitePoint.</li>
+  <li><a href="http://coding.smashingmagazine.com/2009/08/17/taming-advanced-css-selectors/"
+    rel="noopener noreferrer" target="_blank">Taming Advanced CSS Selectors</a> via Smashing Magazine.</li>
 </ul>
-<p>  <b>Lesson
-2</b><a href="https://learn.shayhowe.com/advanced-html-css/detailed-css-positioning/"
-  rel="noopener noreferrer" target="_blank"> Detailed Positioning</a>
-<b>Lesson
-4</b><a href="https://learn.shayhowe.com/advanced-html-css/responsive-web-design/"
-  rel="noopener noreferrer" target="_blank"> Responsive Web
-Design</a></p>
-<h2 align="center">
-Lesson 4: Responsive Web Design
-</h2>
-<h3>
-In this Lesson 4
-</h3>
-<h4>
-HTML
-</h4>
+
+<p><b>Lesson 2</b><a href="https://learn.shayhowe.com/advanced-html-css/detailed-css-positioning/"
+  rel="noopener noreferrer" target="_blank">Detailed Positioning</a>
+<br><br><br><br><br>
+<b>Lesson 4</b><a href="https://learn.shayhowe.com/advanced-html-css/responsive-web-design/"
+  rel="noopener noreferrer" target="_blank">Responsive Web Design</a></p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2 align="center">Lesson 4: Responsive Web Design</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3>In this Lesson 4</h3>
+
+<h4>HTML</h4>
+
 <ul>
 <li>
 <a href="https://learn.shayhowe.com/advanced-html-css/responsive-web-design/#responsive-web-design"
@@ -4527,15 +4480,14 @@ data-cites="viewport">@viewport</span></a> via Dev. Opera
 <b>Lesson 5</b>
 <a href="https://learn.shayhowe.com/advanced-html-css/preprocessors/" 
   rel="noopener noreferrer" target="_blank">Preprocessors</a></p>
-<h2 align="center">
-Lesson 5: Preprocessors
-</h2>
-<h3>
-In this Lesson 5
-</h3>
-<h4>
-HTML
-</h4>
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2 align="center">Lesson 5: Preprocessors</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3>In this Lesson 5</h3>
+
+<h4>HTML</h4>
+
 <ul>
 <li>
 <a href="https://learn.shayhowe.com/advanced-html-css/preprocessors/#haml"
@@ -6291,15 +6243,14 @@ Function</a> via Sass Documentation
 <b>Lesson
 6</b><a href="https://learn.shayhowe.com/advanced-html-css/jquery/" 
   rel="noopener noreferrer" target="_blank"> jQuery</a></p>
-<h2 align="center">
-Lesson 6: jQuery
-</h2>
-<h3>
-In this Lesson 6
-</h3>
-<h4>
-JAVASCRIPT
-</h4>
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2 align="center">Lesson 6: jQuery</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3>In this Lesson 6</h3>
+
+<h4>JAVASCRIPT</h4>
+
 <p>-<a
 href="https://learn.shayhowe.com/advanced-html-css/jquery/#javascript">JavaScript
 Intro</a></p>
@@ -7559,19 +7510,17 @@ Bocoup</p>
 href="https://learn.shayhowe.com/advanced-html-css/preprocessors/">Preprocessors</a>
 <strong>Lesson 7</strong> <a
 href="https://learn.shayhowe.com/advanced-html-css/css-transforms/">Transforms</a></p>
-<h2 align="center">
-Lesson 7: Transforms
-</h2>
-<h3>
-In this Lesson 7
-</h3>
-<p>
-GitlabGitLab is the most comprehensive AI-powered DevSecOps Platform.
-Software. Faster.
-</p>
-<h4>
-CSS
-</h4>
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2 align="center">Lesson 7: Transforms</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3>In this Lesson 7</h3>
+
+<p>GitlabGitLab is the most comprehensive AI-powered DevSecOps Platform.
+Software. Faster.</p>
+
+<h4>CSS</h4>
+
 <ul>
 <li>
 <a href="https://learn.shayhowe.com/advanced-html-css/css-transforms/#transform-syntax" 
@@ -7658,9 +7607,9 @@ code in a production environment. Over time we will be able to remove
 these prefixes, however keeping them in is the safest approach for the
 time being.
 </p>
-<h4>
-2D Transforms
-</h4>
+
+<h4>2D Transforms</h4>
+
 <p>
 Elements may be distorted, or transformed, on both a two-dimensional
 plane or a three-dimensional plane. Two-dimensional transforms work on
@@ -8483,8 +8432,9 @@ rel="noopener noreferrer" target="_blank">jQuery</a> <b>Lesson 8</b>
 rel="noopener noreferrer" target="_blank">Transitions &amp;
 Animations</a></p>
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 align="center">Lesson 8: Transitions &amp; Animations</h2>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>In this Lesson 8</h3>
 
 <p>GitlabGitLab is the only place where enterprises build mission critical software.</p>
@@ -9231,8 +9181,9 @@ rel="noopener noreferrer" target="_blank">Transforms</a> <b>Lesson 9</b>
 rel="noopener noreferrer" target="_blank">Feature Support &amp;
 Polyfills</a></p>
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 align="center">Lesson 9: Feature Support &amp; Polyfills</h2>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>In this Lesson 9</h3>
 
 <h4>HTML</h4>
@@ -9670,8 +9621,9 @@ href="https://learn.shayhowe.com/advanced-html-css/transitions-animations/">Tran
 &amp; Animations</a> <b>Lesson 10</b> <a
 href="https://learn.shayhowe.com/advanced-html-css/semantics-accessibility/">Extending
 Semantics &amp; Accessibility</a></p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2>Lesson 10 Extending Semantics &amp; Accessibility</h2>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>In this Lesson 10</h3>
 
 <h5>HTML</h5>
