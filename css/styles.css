@@ -29,7 +29,7 @@ details > summary {
   border: none;
   box-shadow: 3px 3px 4px #00008b;  /* darkblue */
   cursor: pointer;
-  margin-left: 10px;
+  margin-left: 0px;  /* 10px; */
 }
 
 details > p {
@@ -51,14 +51,14 @@ pre {
 pre > code {
   display: block;
   width: 38em;
-  margin-left: 5px;
+  margin-left: 0px;  /* 5px; */
   padding: .5rem;
   word-wrap: normal;
   }
 pre, code {
   font-family: monospace, monospace;
   font-size: 10px;  /* 12px; */
-  margin-left: 10px;
+  margin-left: 0px;  /* 10px; */
 }
 pre:hover, pre:focus { width: min-content; }
 
