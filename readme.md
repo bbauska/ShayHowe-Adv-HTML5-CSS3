@@ -4356,13 +4356,13 @@ wrapping the necessary Ruby code inside.</p>
 <h4>Haml</h4>
 
 <pre>
- 1  %div{:class => "student-#{@student.name}"}
+ 1  %div{:class =&gt; "student-#{@student.name}"}
 </pre>
 
 <h4>Compiled HTML</h4>
 
 <pre>
- 1  <div class="student-shay"> 
+ 1  &lt;div class="student-shay"&gt;
 </pre>
 
 <h4 id="scss-sass">SCSS &amp; Sass</h4>
@@ -6006,8 +6006,8 @@ new em element just after the link, and the .text() method is replacing
 the text of any h1 elements with the text Hello World.</p>
 
 <pre>
- 1  $('section').prepend('<h3>Featured</h3>');
- 2  $('a&lbrack;target="_blank"]').after('<em>New window.</em>'); 
+ 1  $('section').prepend('&lt;h3&gt;Featured&lt;/h3&gt;');
+ 2  $('a&lbrack;target="_blank"]').after('&lt;em&gt;New window.&lt;/em&gt;'); 
  3  $('h1').text('Hello World'); 
 </pre>
 
@@ -6366,23 +6366,23 @@ animation is complete.</p>
 <h4>HTML</h4>
 
 <pre>
- 1  <div class="panel">  
- 2    <div class="panel-stage"></div>
- 3    <a href="#" class="panel-tab">Open <span>&#9660;</span></a> 
- 4  </div>
+ 1  &lt;div class="panel"&gt;  
+ 2    &lt;div class="panel-stage"&gt;&lt;/div&gt;
+ 3    &lt;a href="#" class="panel-tab"&gt;Open &lt;span&gt;&#9660;&lt;/span&gt;&lt;/a&gt; 
+ 4  &lt;/div&gt;
 </pre>
 
 <details>
   <summary>JavaScript</summary>
 
-<pre>
+<pre&gt;
  1  $('.panel-tab').on('click', function(event){  
  2    event.preventDefault();  
  3    $('.panel-stage').slideToggle('slow', function(event){ 
  4      if($(this).is(':visible')){ 
- 5        $('.panel-tab').html('Close <span>&#9650;</span>');
+ 5        $('.panel-tab').html('Close &lt;span&gt;&#9650;&lt;/span&gt;');
  6      } else {
- 7        $('.panel-tab').html('Open <span>&#9660;</span>'); 
+ 7        $('.panel-tab').html('Open &lt;span&gt;&#9660;&lt;/span&gt;'); 
  8      } 
  9    });  
  10 });
@@ -6397,14 +6397,14 @@ animation is complete.</p>
 <h4>HTML</h4>
 
 <pre>
- 1  <ul class="tabs-nav"> 
- 2    <li><a href="#tab-1">Features</a></li> 
- 3    <li><a href="#tab-2">Details</a></li>  
- 4  </ul>  
- 5  <div class="tabs-stage"> 
- 6    <div id="tab-1">...</div>
- 7    <div id="tab-2">...</div>
- 8  </div> 
+ 1  &lt;ul class="tabs-nav"&gt; 
+ 2    &lt;li&gt;&lt;a href="#tab-1"&gt;Features&lt;/a&gt;&lt;/li&gt; 
+ 3    &lt;li&gt;&lt;a href="#tab-2"&gt;Details&lt;/a&gt;&lt;/li&gt;  
+ 4  &lt;/ul&gt;  
+ 5  &lt;div class="tabs-stage"&gt; 
+ 6    &lt;div id="tab-1"&gt;...&lt;/div&gt;
+ 7    &lt;div id="tab-2"&gt;...&lt;/div&gt;
+ 8  &lt;/div&gt; 
 </pre>
 
 <details>
@@ -6431,21 +6431,25 @@ animation is complete.</p>
 
 <h4>Resources &amp; Links</h4>
 
--[JavaScript For Cats](http://jsforcats.com/)
-
--[A Re-introduction to
- JavaScript](https://developer.mozilla.org/en-US/docs/JavaScript/A_re-introduction_to_JavaScript) via
- Mozilla Developer Network
-
--[30 Days to Learn jQuery](https://tutsplus.com/course/30-days-to-learn-jquery/) via Tuts+ Premium
-
--[Google Hosted Libraries](https://developers.google.com/speed/libraries/devguide)
-
--[jQuery Documentation](http://docs.jquery.com/)
-
--[jQuery Fundamentals](http://jqfundamentals.com/) via Bocoup
-
--[jQuery UI](http://jqueryui.com/)
+<ul>
+  <li><a href="http://jsforcats.com/" rel="noopener noreferrer" target="_blank">
+    JavaScript For Cats</a>
+  <li><a href="https://developer.mozilla.org/en-US/docs/JavaScript/A_re-introduction_to_JavaScript"
+    rel="noopener noreferrer" target="_blank">
+    A Re-introduction to JavaScript</a> via Mozilla Developer Network</li>
+  <li><a href="https://tutsplus.com/course/30-days-to-learn-jquery/"
+    rel="noopener noreferrer" target="_blank">
+    30 Days to Learn jQuery</a> via Tuts+ Premium</li>
+  <li><a href="https://developers.google.com/speed/libraries/devguide" 
+    rel="noopener noreferrer" target="_blank">
+    Google Hosted Libraries</a></li>
+  <li><a href="http://docs.jquery.com/" rel="noopener noreferrer" target="_blank">
+    jQuery Documentation</a></li>
+  <li><a href="http://jqfundamentals.com/" rel="noopener noreferrer" target="_blank">
+    jQuery Fundamentals</a> via Bocoup</li>
+  <li><a href="http://jqueryui.com/" rel="noopener noreferrer" target="_blank">
+    jQuery UI</a></li>
+</ul>
 
 <!-- 114, 13 left + 10 right -->
 <div>
@@ -7015,8 +7019,7 @@ of a transform.</p>
 
 <p>Working with two-dimensional transforms we are able to alter elements on the 
 horizontal and vertical axes, however there is another axis along which we can 
-transform elements. Using 
-<a href="http://24ways.org/2010/intro-to-css-3d-transforms" 
+transform elements. Using <a href="http://24ways.org/2010/intro-to-css-3d-transforms" 
 rel="noopener noreferrer" target="_blank">three-dimensional transforms</a> we can 
 change elements on the z axis, giving us control of depth as well as length and 
 width.</p>
@@ -7080,8 +7083,8 @@ the rotateX in this case, the elements will appear to be unchanged.</p>
 <h4>HTML</h4>
 
 <pre>
- 1  <figure class="box-1">Box 1</figure>
- 2  <figure class="box-2">Box 2</figure>
+ 1  &lt;figure class="box-1"&gt;Box 1&lt;/figure&gt;
+ 2  &lt;figure class="box-2"&gt;Box 2&lt;/figure&gt;
 </pre>
 
 <h4>CSS</h4>
@@ -7115,9 +7118,8 @@ for example.</p>
 <h4>HTML</h4>
 
 <pre>
- 1  <figure class="box-1">Box 1</figure>
- 2  <figure class="box-2">Box 2</figure>
- 3 
+ 1  &lt;figure class="box-1"&gt;Box 1&lt;/figure&gt;
+ 2  &lt;figure class="box-2"&gt;Box 2&lt;/figure&gt;
 </pre>
 
 <h4>CSS</h4>
@@ -7129,7 +7131,6 @@ for example.</p>
  4  .box-2 {
  5    transform: perspective(200px) translateZ(50px);
  6  }
- 7 
 </pre>
 
 <h4>3D Translate Demo</h4>
@@ -7224,8 +7225,8 @@ rel="noopener noreferrer" target="_blank">animations</a>.</p>
 <h4>HTML</h4>
 
 <pre>
- 1  <figure class="box-1"&gt;Box 1</figure&gt;
- 2  <figure class="box-2"&gt;Box 2</figure&gt;
+ 1  &lt;figure class="box-1"&gt;Box 1&lt;/figure&gt;
+ 2  &lt;figure class="box-2"&gt;Box 2&lt;/figure&gt;
 </pre>
 
 <h4>CSS</h4>
@@ -7701,7 +7702,7 @@ transition values.</p>
 <h4>HTML</h4>
 
 <pre>
- 1  <button>Awesome Button</button>
+ 1  &lt;button&gt;Awesome Button&lt;/button&gt;
 </pre>
 
 <details>
@@ -7736,12 +7737,12 @@ transition values.</p>
 <h4>HTML</h4>
 
 <pre>
- 1  <div class="card-container">
- 2    <div class="card">
- 3      <div class="side">...</div>
- 4      <div class="side back">...</div>
- 5    </div>
- 6  </div>
+ 1  &lt;div class="card-container"&gt;
+ 2    &lt;div class="card"&gt;
+ 3      &lt;div class="side"&gt;...&lt;/div&gt;
+ 4      &lt;div class="side back"&gt;...&lt;/div&gt;
+ 5    &lt;/div&gt;
+ 6  &lt;/div&gt;
 </pre>
 
 <details>
@@ -7901,9 +7902,9 @@ the left, however only when hovering over the stage.</p>
 <h4>HTML</h4>
 
 <pre>
- 1  <div class="stage">
- 2    <figure class="ball"></figure>
- 3  </div>
+ 1  &lt;div class="stage"&gt;
+ 2    &lt;figure class="ball"&gt;&lt;/figure&gt;
+ 3  &lt;/div&gt;
 </pre>
 
 <details>
@@ -8236,9 +8237,9 @@ versions of Internet Explorer 8 and below.</p>
 <p>In this case the conditional comment looks like <!--[if lt IE 9]>...<![endif]-->.</p>
 
 <pre>
- 1  <!--&lbrack;if lt IE 9]>
- 2  <script src="html5shiv.js"></script>
- 3  <!&lbrack;endif]-->
+ 1  &lt;!--&lbrack;if lt IE 9&rbrack;&gt;
+ 2  &lt;script src="html5shiv.js"&gt;&lt;/script&gt;
+ 3  &lt;!-- &lbrack;endif&rbrack;--&gt;
 </pre>
 
 <h4>The Difference Between a Shiv &amp; a Shim</h4>
@@ -8318,7 +8319,7 @@ Shiv, in which case the shiv doesn't need to be referenced on top of
 Modernizr.</p>
 
 <pre>
- 1  <script src="modernizr.js"></script>
+ 1  &lt;script src="modernizr.js"&gt;&lt;/script&gt;
 </pre>
 
 <h4>Conditionally Applying CSS Styles</h4>
@@ -8714,10 +8715,10 @@ presentation of an element, where the strong element should be used to
 identify significantly important text.</p>
 
 <pre>
- 1  <!-- Strong importance -->
- 2  <strong>Caution:</strong> Falling rocks.
- 3  <!-- Stylistically offset -->
- 4  This recipe calls for <b>bacon</b> and <b>baconnaise</b>.
+ 1  &lt;!-- Strong importance --&gt;
+ 2  &lt;strong&gt;Caution:&lt;/strong&gt; Falling rocks.
+ 3  &lt;!-- Stylistically offset --&gt;
+ 4  This recipe calls for &lt;b&gt;bacon&lt;/b&gt; and &lt;b&gt;baconnaise&lt;/b&gt;.
 </pre>
 
 <h4>Bolding Text Demo</h4>
@@ -8739,10 +8740,10 @@ dialog or prose, offsetting text without any added emphasis or
 importance.</p>
 
 <pre>
- 1  <!-- Stressed emphasis --> 
- 2  I <em>love</em> Chicago!
- 3  <!-- Alternative voice or tone -->  
- 4  The name <i>Shay</i> means a gift.  
+ 1  &lt;!-- Stressed emphasis --&gt;
+ 2  I &lt;em&gt;love&lt;/em&gt; Chicago!
+ 3  &lt;!-- Alternative voice or tone --&gt;
+ 4  The name &lt;i&gt;Shay&lt;/i&gt; means a gift.
 </pre>
 
 <h4>Italicizing Text Demo</h4>
@@ -8861,8 +8862,8 @@ distinguish acronyms from abbreviations but has since been deprecated,
 and shouldn't be used.</p>
 
 <pre>
- 1  <abbr title="HyperText Markup Language">HTML</abbr>
- 2  <abbr title="Cascading Style Sheets">CSS</abbr> 
+ 1  &lt;abbr title="HyperText Markup Language"&gt;HTML&lt;/abbr&gt;
+ 2  &lt;abbr title="Cascading Style Sheets"&gt;CSS&lt;/abbr&gt;
 </pre>
 
 <h4>Abbreviations Demo</h4>
@@ -8875,10 +8876,10 @@ these elements should be reserved for typographical conventions, not for
 presentational purposes.</p>
 
 <pre>
- 1  <!-- Subscript -->
- 2  H<sub>2</sub>O 
- 3  <!-- Superscripts -->
- 4  1<sup>st</sup> Place 
+ 1  &lt;!-- Subscript --&gt;
+ 2  H&lt;sub&gt;2&lt;/sub&gt;O 
+ 3  &lt;!-- Superscripts --&gt;
+ 4  1&lt;sup&gt;st&lt;/sup&gt; Place 
 </pre>
 
 <h4>Sub &amp; Superscripts Demo</h4>
@@ -8909,14 +8910,14 @@ the max attribute indicates what progress needs to be reached.</p>
   <summary>Example, Meter &amp; Progress</summary>
 
 <pre>
- 1  <!-- Meter --> 
- 2  <meter value="7" max="10">7 stars</meter>  
- 3  <meter value="47" min="0" max="105" low="5" high="65"  optimum="45">The car  
- 4    is moving at a decent average mile per hour.</meter>
- 5  <!-- Progress --> 
- 6  You are <progress value="50" max="100">50%</progress>  
- 7  complete.  
- 8  <progress value="50" min="0" max="100">Hold tight, you"re getting there.</progress>
+ 1  &lt;!-- Meter --&gt;
+ 2  &lt;meter value="7" max="10"&gt;7 stars&lt;/meter&gt;
+ 3  &lt;meter value="47" min="0" max="105" low="5" high="65" optimum="45"&gt;The car 
+ 4    is moving at a decent average mile per hour.&lt;/meter&gt;
+ 5  &lt;!-- Progress --&gt;
+ 6  You are &lt;progress value="50" max="100"&gt;50%&lt;/progress&gt; 
+ 7  complete.
+ 8  &lt;progress value="50" min="0" max="100"&gt;Hold tight, you"re getting there.&lt;/progress&gt;
 </pre>
 
 </details>
@@ -8942,19 +8943,19 @@ and other content needs to be placed outside of the address element.</p>
   <summary>Example, Time &amp; Address</summary>
   
 <pre>
- 1  <!-- Time -->  
- 2  <time>2011-08-24</time> 
- 3  <time datetime="2011-08-24" pubdate>August 24th, 2011</time>
- 4  <time datetime="15:00">3pm</time> 
- 5  <time datetime="2011-08-24T15:00">August 24th, 2011 at 3pm</time> 
- 6  <!-- Address -->
- 7  <address> <strong>Shay Howe</strong><br>
- 8    <a href="http://learn.shayhowe.com">http://learn.shayhowe.com</a><br> 
- 9    <a href="mailto:hello@awesome.com">hello@awesome.com</a><br> 
- 10    600 W. Chicago Ave.<br>
- 11   Suite 620<br> 
- 12   Chicago, IL 60654<br> USA  
- 13 </address> 
+ 1  &lt;!-- Time --&gt;  
+ 2  &lt;time&gt;2011-08-24&lt;/time&gt; 
+ 3  &lt;time datetime="2011-08-24" pubdate&gt;August 24th, 2011&lt;/time&gt;
+ 4  &lt;time datetime="15:00"&gt;3pm&lt;/time&gt; 
+ 5  &lt;time datetime="2011-08-24T15:00"&gt;August 24th, 2011 at 3pm&lt;/time&gt; 
+ 6  &lt;!-- Address --&gt;
+ 7  &lt;address&gt; &lt;strong&gt;Shay Howe&lt;/strong&gt;&lt;br&gt;
+ 8    &lt;a href="http://learn.shayhowe.com"&gt;http://learn.shayhowe.com&lt;/a&gt;&lt;br&gt; 
+ 9    &lt;a href="mailto:hello@awesome.com"&gt;hello@awesome.com&lt;/a&gt;&lt;br&gt; 
+ 10    600 W. Chicago Ave.&lt;br&gt;
+ 11   Suite 620&lt;br&gt; 
+ 12   Chicago, IL 60654&lt;br&gt; USA  
+ 13 &lt;/address&gt; 
 </pre>
 
 </details>
@@ -9067,10 +9068,10 @@ you wish on your server while still providing users with a meaningful
 name.</p>
 
 <pre>
- 1  <!-- Boolean -->  
- 2  <a href="twitter-logo.png" download>Twitter Logo</a>  
- 3  <!-- With a value -->
- 4  <a href="twitter-logo.png" download="Logo">Twitter Logo</a>  
+ 1  &lt;!-- Boolean --&gt;
+ 2  &lt;a href="twitter-logo.png" download&gt;Twitter Logo&lt;/a&gt;
+ 3  &lt;!-- With a value --&gt;
+ 4  &lt;a href="twitter-logo.png" download="Logo"&gt;Twitter Logo&lt;/a&gt;
 </pre>
 
 <h4>Download Attribute Demo</h4>
@@ -9084,8 +9085,8 @@ referenced. For example, when linking to a copyright statement
 the rel attribute value of copyright should be used.</p>
 
 <pre>
- 1  <a href="legal.html" rel="copyright">Terms of Use</a>  
- 2  <a href="toc.html" rel="contents">Table of Contents</a>
+ 1  &lt;a href="legal.html" rel="copyright"&gt;Terms of Use&lt;/a&gt;
+ 2  &lt;a href="toc.html" rel="contents"&gt;Table of Contents&lt;/a&gt;
 </pre>
 
 <p>A few <a href="http://microformats.org/wiki/existing-rel-values" 
@@ -9180,9 +9181,9 @@ different, item types. You may also write your own item types should you
 find the need.</p>
 
 <pre>
- 1  <section itemscope itemtype="http://schema.org/Person"> 
+ 1  &lt;section itemscope itemtype="http://schema.org/Person"&gt;
  2    ... 
- 3  </section> 
+ 3  &lt;/section&gt;
 </pre>
 
 <p>Once the scope and type of the item have been determined, properties may
@@ -9373,8 +9374,7 @@ nested within other regions of the document structure.</p>
 | footer  | —             | contentinfo (Only once per page)        |
 | header  | —             | banner (Only once per page)             |
 | nav     | navigation    | navigation                              |
-| section | region        | alert, alertdialog, application, contentinfo, dialog, document, log, |
-|         |               | main, marquee, region, search, or status.                            |
+| section | region        | alert, alertdialog, application, contentinfo, dialog, document, log, main, marquee, region, search, or status. |
 
 <p>Combining the elements with their matched roles in HTML5 would look like
 the following code snippet.</p>
