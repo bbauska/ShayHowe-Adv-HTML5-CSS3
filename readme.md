@@ -2866,7 +2866,7 @@ pseudo-element has been added to ensure the best support for all browsers.</p>
 <h4>HTML</h4>
 
 <pre>
- 1  <a class="arrow" href="#">Continue Reading</a>
+ 1  &lt;a class="arrow" href="#"&gt;Continue Reading&lt;/a&gt;
 </pre>
 
 <details>
@@ -2920,18 +2920,13 @@ pseudo-element has been added to ensure the best support for all browsers.</p>
 
 <h4>Pseudo-elements Overview</h4>
 
-  | <b>Example</b> | <b>Classification</b> | <b>Explanation</b> |
-  |----------------|-------------------|---------------------------------------------------------|
-  | .alpha:first-  | Textual Pseudo-   | Selects the first letter of text within an element.     |
-  | letter         | elements          |                                                         |
-  | .bravo:first-  | Textual Pseudo-   | Selects the first line of text within an element.       |
-  | line           | elements          |                                                         |
-  | div:before     | Generated Content | Creates a pseudo-element inside the selected element at |
-  |                |                   | the beginning.                                          |
-  | a:after        | Generated Content | Creates a pseudo-element inside the selected element at |
-  |                |                   | the end.                                                |
-  | ::selection    | Fragment Pseudo-  | Selects the part of a document which has been selected, |
-  |                | element           | or highlighted, by a users' action.                     |
+| <b>Example</b> | <b>Classification</b> | <b>Explanation</b> |
+|----------------|-------------------|---------------------------------------------------------|
+| .alpha:first-letter  | Textual Pseudo-elements   | Selects the first letter of text within an element.     |
+| .bravo:first-line  | Textual Pseudo-elements   | Selects the first line of text within an element.       |
+| div:before     | Generated Content | Creates a pseudo-element inside the selected element at the beginning. |
+| a:after        | Generated Content | Creates a pseudo-element inside the selected element at the end. |
+| ::selection    | Fragment Pseudo-element  | Selects the part of a document which has been selected, or highlighted, by a users' action.|
   
 
 <h4>Selector Browser Support</h4>
