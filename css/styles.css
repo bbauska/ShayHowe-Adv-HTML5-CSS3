@@ -24,7 +24,7 @@ details {
 
 details > summary {
   padding: 2px 6px;
-  width: 12em;  /* was: 8*/
+  width: 14em;  /* was: 8*/
   background-color: #ddd;
   border: none;
   box-shadow: 3px 3px 4px #00008b;  /* darkblue */
@@ -37,12 +37,12 @@ details > p {
   background-color: #ddd;
   padding: 1px 3px;
   margin: 0;
-  box-shadow: 3px 3px 4px darkblue;
+  box-shadow: 3px 3px 4px #00008b;
   margin-left: 0px;  /* 10px; */
 }
 
 details[open] > summary {
-  background-color: #ffff00;
+  background-color: #ffff00;  /* yellow */
 }
 
 pre {
