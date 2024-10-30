@@ -65,7 +65,9 @@ pre:hover, pre:focus { width: min-content; }
 code { font-size: 12px; }
 
 p {
-   margin: 1em 0;
+  margin: 1em 0;
+  font-size: 13px;
+  font-family: "Bahnschrift", sans-serif;
 }
 
 a {
