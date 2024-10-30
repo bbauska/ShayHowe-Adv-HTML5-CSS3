@@ -584,8 +584,7 @@ files then compressing them creates one, hopefully small, HTTP request.</p>
  4  &lt;link href=&quot;css/site.css&quot; rel=&quot;stylesheet&quot;&gt;
  5  
  6  &lt;!-- Good --&gt;
- 7  &lt;link href=&quot;css/styles.css&quot; rel=&quot;stylesheet&quot;&gt;
- 8  </pre>
+ 7  &lt;link href=&quot;css/styles.css&quot; rel=&quot;stylesheet&quot;&gt;</pre>
 
 <p>In general, the CSS for a web page should be loaded at the <b>beginning</b> of the 
 document within the head, while the JavaScript for a web page should be loaded at the 
@@ -659,8 +658,7 @@ be shown accordingly.</p>
 <details>
   <summary>CSS</summary>
   
-<pre>
-ul {
+<pre>ul {
   margin: 0;
   padding: 0;
 }
@@ -713,8 +711,7 @@ li span {
 }
 .right {
   background-position: -144px 0;
-}
-</pre>
+}</pre>
  
 </details>
 
@@ -1624,8 +1621,8 @@ selected, not every instance of the element nested deeply inside of an
 ancestor. In this event the direct child selector may be used by placing
 a greater than sign, &gt;, between the parent element and child element
 within the selector.</p>
-<p>
-For example, article &gt; p is a direct child selector only
+
+<p>For example, article &gt; p is a direct child selector only
 identifying p elements that fall directly within an article element.
 Any p element placed outside of an article element, or nested inside of
 another element other than the article element, will not be selected.</p>
@@ -2940,8 +2937,8 @@ pseudo-elements respectively.</p>
 
 <pre> 1  .alpha:first-letter,
  2  .bravo:first-line {
- 3  color: #ff7b29;
- 4  font-size: 18px;
+ 3    color: #ff7b29;
+ 4    font-size: 18px;
  5  }</pre>
 
 <h4>HTML</h4>
@@ -2973,9 +2970,9 @@ necessary should a browser not support these pseudo-elements.</p>
 <h4>CSS</h4>
 
 <pre> 1  a:after {
- 2  color: #9799a7;
- 3  content: &quot; (&quot; attr(href) &quot;)&quot;;
- 4  font-size: 11px;
+ 2    color: #9799a7;
+ 3    content: &quot; (&quot; attr(href) &quot;)&quot;;
+ 4    font-size: 11px;
  5  }</pre>
  
 <h4>HTML</h4>
@@ -3003,18 +3000,17 @@ added to pseudo-elements. Fortunately most browsers will support both
 values, single or double colons, for pseudo-elements however
 the ::selection pseudo-element must always start with double colons.</p>
 
-<p>
-When selecting any of the text within the demonstration below the
+<p>When selecting any of the text within the demonstration below the
 background will appear orange and any text shadows will be removed
 thanks to the ::selection  fragment pseudo-element. Also note,
 the ::-moz-selection Mozilla prefixed fragment pseudo-element has been
 added to ensure the best support for all browsers.</p>
 
 <pre> 1  ::-moz-selection {
- 2  background: #ff7b29;
+ 2    background: #ff7b29;
  3  }
  4  ::selection {
- 5  background: #ff7b29;
+ 5    background: #ff7b29;
  6  }</pre>
 
 <h4>Fragment Pseudo-element Demo</h4>
@@ -3042,32 +3038,32 @@ added to ensure the best support for all browsers.</p>
  10  }
  11  .arrow:before,  
  12  .arrow:after {
- 13  content: &quot;&quot;;
- 14  height: 0;
- 15  position: absolute;
- 16  width: 0;
+ 13    content: &quot;&quot;;
+ 14    height: 0;
+ 15    position: absolute;
+ 16    width: 0;
  17  }
  18  .arrow:before {
- 19  border-bottom: 15px solid #2db34a;
- 20  border-left: 15px solid transparent;
- 21  border-top: 15px solid #2db34a;
- 22  left: -15px;
+ 19    border-bottom: 15px solid #2db34a;
+ 20    border-left: 15px solid transparent;
+ 21    border-top: 15px solid #2db34a;
+ 22    left: -15px;
  23  }
  24  .arrow:after {
- 25  border-bottom: 15px solid transparent;
- 26  border-left: 15px solid #2db34a;
- 27  border-top: 15px solid transparent;
- 28  right: -15px;
+ 25    border-bottom: 15px solid transparent;
+ 26    border-left: 15px solid #2db34a;
+ 27    border-top: 15px solid transparent;
+ 28    right: -15px;
  29  }
  30  .arrow:hover {
- 31  background: #ff7b29;
+ 31    background: #ff7b29;
  32  }
  33  .arrow:hover:before {
- 34  border-bottom: 15px solid #ff7b29;
- 35  border-top: 15px solid #ff7b29;
+ 34    border-bottom: 15px solid #ff7b29;
+ 35    border-top: 15px solid #ff7b29;
  36  }
  37  .arrow:hover:after {
- 39  border-left: 15px solid #ff7b29;
+ 39    border-left: 15px solid #ff7b29;
  40  }</pre>
 
 </details>
@@ -3332,7 +3328,7 @@ proportions of a fvlexible layout using relative values.</p>
 <p>The formula is based around taking the target width of an element and dividing it by 
 the width of it’s parent element. The result is the relative width of the target element.</p>
 
-<pre> 1  target ÷ context = result</pre>
+<pre>target ÷ context = result</pre>
 
 <h4>Flexible Grid</h4>
 
@@ -3465,20 +3461,20 @@ added, making sure that a browser or devices does both a, b, c, and so forth.
 individual media queries can be comma separated, acting as an unspoken or operator. The 
 example below selects all media types between 800 and 1024 pixels wide.</p>
 
-<pre> 1  @media all and (min-width: 800px) and (max-width: 1024px) {...} </pre>
+<pre>@media all and (min-width: 800px) and (max-width: 1024px) {...} </pre>
 
 <p>The not logical operator negates the query, specifying any query but the one 
 identified. In the example below the expression applies to any device that does not have 
 a color screen. Black and white or monochrome screens would apply here for example.</p>
 
-<pre> 1  @media not screen and (color) {...}</pre>
+<pre>@media not screen and (color) {...}</pre>
 
 <p>The only logical operator is a new operator and is not recognized by user agents using 
 the HTML4 algorithm, thus hiding the styles from devices or browsers that don’t support 
 media queries. Below, the expression selects only screens in a portrait orientation that 
 have a user agent capable of rending media queries.</p>
 
-<pre> 1  @media only screen and (orientation: portrait) {...}</pre>
+<pre>@media only screen and (orientation: portrait) {...}</pre>
 
 <h4>Omitting a Media Type</h4>
 
@@ -3491,30 +3487,25 @@ case the media type is defaulted to all.</p>
 to media queries but the true work comes with media features. Media features identify 
 what attributes or properties will be targeted within the media query expression.</p>
 
-<h4>
-Height &amp; Width Media Features
-</h4>
-<p>
-One of the most common media features revolves around determining a
+<h4>Height &amp; Width Media Features</h4>
+
+<p>One of the most common media features revolves around determining a
 height or width for a device or browser viewport. The height and width
 may be found by using the height and width media features. Each of these
 media features may then also be prefixed with the min or max qualifiers,
-building a feature such as min-width or max-width.
-</p>
-<p>
-The height and width features are based off the height and width of the
+building a feature such as min-width or max-width.</p>
+
+<p>The height and width features are based off the height and width of the
 viewport rendering area, the browser window for example. Values for
 these height and width media features may be any length unit, relative
-or absolute.
-</p>
-<pre> 1  @media all and (min-width: 320px) and (max-width: 780px) {...}  
- 2 </pre>
-<p>
-Within responsive design the most commonly used features
+or absolute.</p>
+
+<pre>@media all and (min-width: 320px) and (max-width: 780px) {...}</pre>
+
+<p>Within responsive design the most commonly used features
 include min-width and max-width. These help build responsive websites on
 desktops and mobile devices equally, avoiding any confusion with device
-features.
-</p>
+features.</p>
 
 <h4>Using Minimum &amp; Maximum Prefixes</h4>
 
@@ -3540,62 +3531,51 @@ plays a large part with mobile devices.</p>
 the width/height pixel ratio of the targeted rendering area or output
 device. The min and max prefixes are available to use with the different
 aspect ratio features, identifying a ratio above or below that of which
-is stated.
-</p>
-<p>
-The value for the aspect ratio feature consist of two positive integers
+is stated.</p>
+
+<p>The value for the aspect ratio feature consist of two positive integers
 separated by a forward slash. The first integer identifies the width in
-pixels while the second integer identifies the height in pixels.
-</p>
-<pre> 1  @media all and (min-device-aspect-ratio: 16/9) {...}
- 2 </pre>
-<h4>
-Pixel Ratio Media Features
-</h4>
-<p>
-In addition to the aspect ratio media features there are
+pixels while the second integer identifies the height in pixels.</p>
+
+<pre>@media all and (min-device-aspect-ratio: 16/9) {...}</pre>
+
+<h4>Pixel Ratio Media Features</h4>
+
+<p>In addition to the aspect ratio media features there are
 also pixel-ratio media features. These features do include
 the device-pixel-ratio feature as well as min and max prefixes.
 Specifically, the pixel ratio feature is great for identifying high
 definition devices, including retina displays. Media queries for doing
-so look like the following.
-</p>
-<pre> 1  @media only screen and (-webkit-min-device-pixel-ratio: 1.3), 
-    only screen and (min-device-pixel-ratio: 1.3) {...}
- 2 </pre>
-<h4>
-Resolution Media Feature
-</h4>
-<p>
-The resolution media feature specifies the resolution of the output
+so look like the following.</p>
+
+<pre>@media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min-device-pixel-ratio: 1.3) {...}</pre>
+
+<h4>Resolution Media Feature</h4>
+
+<p>The resolution media feature specifies the resolution of the output
 device in pixel density, also known as dots per inch or DPI.
 The resolution media feature does accept the min and max prefixes.
 Additionally, the resolution media feature will accept dots per pixel
 (1.3dppx), dots per centimeter (118dpcm), and other length based
-resolution values.
-</p>
-<pre> 1  @media print and (min-resolution: 300dpi) {...}  
- 2 </pre>
-<h4>
-Other Media Features
-</h4>
-<p>
-Other media features include identifying available output colors with
+resolution values.</p>
+
+<pre>@media print and (min-resolution: 300dpi) {...}</pre>
+
+<h4>Other Media Features</h4>
+
+<p>Other media features include identifying available output colors with
 use of the color, color-index, and monochrome features, identifying
 bitmap devices with the grid feature, and identifying the scanning
 process of a television with the scan feature. These features are less
-common but equally as helpful when needed.
-</p>
-<h4>
-Media Query Browser Support
-</h4>
-<p>
-Unfortunately media queries do not work within Internet Explorer 8 and
+common but equally as helpful when needed.</p>
+
+<h4>Media Query Browser Support</h4>
+
+<p>Unfortunately media queries do not work within Internet Explorer 8 and
 below, as well as other legacy browsers. There are, however, a couple
-suitable polyfills written in Javascript.
-</p>
-<p>
-<a href="https://github.com/scottjehl/Respond/" 
+suitable polyfills written in Javascript.</p>
+
+<p><a href="https://github.com/scottjehl/Respond/" 
 rel="noopener noreferrer" target="_blank">Respond.js</a> is a
 lightweight polyfill that only looks for min/max-width media types,
 which is perfect should those be the only media query types used. 
@@ -3605,26 +3585,23 @@ more developed, and heavier, polyfill offering support for a larger
 array of more complex media queries. Additionally, keep in mind any
 polyfill can have performance concerns, and potentially slow down
 websites. Make sure that any given polyfill is worth the performance
-trade off.
-</p>
-<h4>
-Media Queries Demo
-</h4>
-<p>
-Using media queries we will now rewrite the flexible layout we built
+trade off.</p>
+
+<h4>Media Queries Demo</h4>
+
+<p>Using media queries we will now rewrite the flexible layout we built
 previously. One of the current problems within the demo appears when the
 aside width becomes uselessly small within smaller viewports. Adding a
 media query for viewports under 420 pixels wide we can change the layout
 by turning off the floats and changing the widths of
-the section and aside.
-</p>
+the section and aside.</p>
+
 <pre> 1  @media all and (max-width: 420px) { 
- 2  section, aside {
- 3  float: none; 
- 4  width: auto; 
- 5  } 
- 6  } 
- 7 </pre>
+ 2    section, aside {
+ 3      float: none; 
+ 4      width: auto; 
+ 5    } 
+ 6  }</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~ 08. demo without media queries (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <img class="border displayed"
@@ -4371,65 +4348,57 @@ Haml
 <h4>
 Compiled HTML
 </h4>
+
 <pre> 1  &lt;div class=&quot;author&quot;&gt; 
  2  Shay Howe  
  3  = @author 
- 4  &lt;/div&gt;
- 5 </pre>
-<h4>
-Text Escaping Alternatives
-</h4>
-<p>
-Occasionally escaping text doesn’t quite do the job and Ruby is needed
+ 4  &lt;/div&gt;</pre>
+
+<h4>Text Escaping Alternatives</h4>
+
+<p>Occasionally escaping text doesn’t quite do the job and Ruby is needed
 to generate the desired output. One popular instance of this is when
 trying to include a period directly after a link, but not as part of the
 anchor text. Putting the period on a new line isn’t acceptable as it
 will be treated as an empty class value, causing a compiling error.
 Adding a backslash before the period will escape the character however
 it places a blank space between the last word and the period. Again, not
-producing the desired output.
-</p>
-<p>
-In these cases a Ruby helper comes in handy. In the example below, the
+producing the desired output.</p>
+
+<p>In these cases a Ruby helper comes in handy. In the example below, the
 helper is used to place a period directly after the last word but still
-outside of the anchor text.
-</p>
-<h4>
-Haml
-</h4>
+outside of the anchor text.</p>
+
+<h4>Haml</h4>
+
 <pre> 1  %p
  2  Shay is 
  3  = succeed &quot;.&quot; do 
- 4  %a{:href =&gt; &quot;#&quot;} awesome 
- 5 </pre>
-<h4>
-Compiled HTML
-</h4>
-<pre> 1  &lt;p&gt;Shay is &lt;a href=&quot;#&quot;&gt;awesome&lt;/a&gt;.&lt;/p&gt;  
- 2 </pre>
-<h4>
-Comments
-</h4>
-<p>
-As with elements and attributes, comments are handled a bit differently
+ 4  %a{:href =&gt; &quot;#&quot;} awesome</pre>
+
+<h4>Compiled HTML</h4>
+
+<pre>&lt;p&gt;Shay is &lt;a href=&quot;#&quot;&gt;awesome&lt;/a&gt;.&lt;/p&gt;</pre>
+
+<h4>Comments</h4>
+
+<p>As with elements and attributes, comments are handled a bit differently
 in Haml as well. Simply enough, code can be commented out with the use
 of a single forward slash, /. Individual lines may be commented out with
 the use of a forward slash at the beginning of the line, and blocks of
-code can be commented out by being nested underneath a forward slash.
-</p>
-<h4>
-Haml
-</h4>
+code can be commented out by being nested underneath a forward slash.</p>
+
+<h4>Haml</h4>
+
 <pre> 1  %div 
  2  / Commented line
  3  Actual line
  4  / 
  5  %div 
- 6  Commented block 
- 7 </pre>
-<h4>
-Compiled HTML
-</h4>
+ 6  Commented block</pre>
+
+<h4>Compiled HTML</h4>
+
 <pre> 1  &lt;div&gt; 
  2    &lt;!-- Commented line --&gt; 
  3    Actual line
@@ -4438,236 +4407,175 @@ Compiled HTML
  6  &lt;div&gt; 
  7    Commented block 
  8  &lt;/div&gt;
- 9  --&gt;
- 10 </pre>
-<h4>
-Conditional Comments
-</h4>
-<p>
-Conditional comments are also handled differently in Haml. To create a
+ 9  --&gt;</pre>
+ 
+<h4>Conditional Comments</h4>
+
+<p>Conditional comments are also handled differently in Haml. To create a
 conditional comment use square brackets, [], around the condition. These
-square brackets need to be placed directly after the forward slash.
-</p>
-<h4>
-Haml
-</h4>
+square brackets need to be placed directly after the forward slash.</p>
+
+<h4>Haml</h4>
+
 <pre> 1  [if lt IE 9] 
- 2  %script{:src =&gt; &quot;html5shiv.js&quot;}
- 3 </pre>
-<h4>
-Compiled HTML
-</h4>
+ 2  %script{:src =&gt; &quot;html5shiv.js&quot;}</pre>
+
+<h4>Compiled HTML</h4>
+
 <pre> 1  &lt;!--[if lt IE 9]&gt;
  2  &lt;script src=&quot;html5shiv.js&quot;&gt;&lt;/script&gt;
- 3  &lt;![endif]--&gt;  
- 4 </pre>
-<h4>
-Silent Comments
-</h4>
-<p>
-Haml also provides the ability to create Haml specific comments, or
+ 3  &lt;![endif]--&gt; </pre>
+ 
+<h4>Silent Comments</h4>
+
+<p>Haml also provides the ability to create Haml specific comments, or
 silent comments. Silent comments differ from general HTML comments in
 that upon being complied any content within a silent comment is
 completely removed from the page, and is not displayed in the output.
 Silent comments are initialized with a dash then the number sign, -#. As
 with other comments, silent comments may be used to remove one line or
-multiple lines with the use of nesting.
-</p>
-<h4>
-Haml
-</h4>
+multiple lines with the use of nesting.</p>
+
+<h4>Haml</h4>
+
 <pre> 1  %div 
  2  -# Removed line 
- 3  Actual line
- 4 </pre>
-<h4>
-Compiled HTML
-</h4>
+ 3  Actual line</pre>
+
+<h4>Compiled HTML</h4>
+
 <pre> 1  &lt;div&gt; 
  2    Actual line
- 3  &lt;/div&gt;
- 4 </pre>
-<h4>
-Filters
-</h4>
-<p>
-Haml provides a handful of filters, allowing different types of input to
+ 3  &lt;/div&gt;</pre>
+
+<h4>Filters</h4>
+
+<p>Haml provides a handful of filters, allowing different types of input to
 be used inside of Haml. Filters are identified with a colon followed by
 the name of the filter, :markdown for example, with all of the content
-to be filtered nested underneath.
-</p>
-<h4>
-Common Filters
-</h4>
-<p>
-Below are some of the more common filters, with the more popular ones of
-the group being :css and :javascript.
-</p>
+to be filtered nested underneath.</p>
+
+<h4>Common Filters</h4>
+
+<p>Below are some of the more common filters, with the more popular ones of
+the group being :css and :javascript.</p>
+
 <ul>
-<li>
-:cdata
-</li>
-<li>
-:coffee
-</li>
-<li>
-:css
-</li>
-<li>
-:erb
-</li>
-<li>
-:escaped
-</li>
-<li>
-:javascript
-</li>
-<li>
-:less
-</li>
-<li>
-:markdown
-</li>
-<li>
-:maruku
-</li>
-<li>
-:plain
-</li>
-<li>
-:preserve
-</li>
-<li>
-:ruby
-</li>
-<li>
-:sass
-</li>
-<li>
-:scss
-</li>
-<li>
-:textile
-</li>
+  <li>:cdata</li>
+  <li>:coffee</li>
+  <li>:css</li>
+  <li>:erb</li>
+  <li>:escaped</li>
+  <li>:javascript</li>
+  <li>:less</li>
+  <li>:markdown</li>
+  <li>:maruku</li>
+  <li>:plain</li>
+  <li>:preserve</li>
+  <li>:ruby</li>
+  <li>:sass</li>
+  <li>:scss</li>
+  <li>:textile</li>
 </ul>
-<h4>
-Javascript Filter
-</h4>
-<h4>
-Haml
-</h4>
+
+<h4>Javascript Filter</h4>
+
+<h4>Haml</h4>
+
 <pre> 1  :javascript
  2  $(&#39;button&#39;).on(&#39;click&#39;, function(event) {  
- 3  $(&#39;p&#39;).hide(&#39;slow&#39;);
- 4  });  
- 5 </pre>
-<h4>
-Compiled HTML
-</h4>
+ 3    $(&#39;p&#39;).hide(&#39;slow&#39;);
+ 4  });</pre>
+
+<h4>Compiled HTML</h4>
+
 <pre> 1  &lt;script&gt; 
- 2  $(&#39;button&#39;).on(&#39;click&#39;, function(event) {  
- 3  $(&#39;p&#39;).hide(&#39;slow&#39;);
- 4  });  
- 5  &lt;/script&gt;
- 6 </pre>
-<h4>
-CSS &amp; Sass Filters
-</h4>
-<h4>
-Haml
-</h4>
+ 2    $(&#39;button&#39;).on(&#39;click&#39;, function(event) {  
+ 3      $(&#39;p&#39;).hide(&#39;slow&#39;);
+ 4    });  
+ 5  &lt;/script&gt;</pre>
+
+<h4>CSS &amp; Sass Filters</h4>
+
+<h4>Haml</h4>
+
 <pre> 1  :css 
  2  .container { 
- 3  margin: 0 auto; 
- 4  width: 960px;
+ 3    margin: 0 auto; 
+ 4    width: 960px;
  5  } 
  6  :sass
  7  .container 
  8  margin: 0 auto  
- 9  width: 960px 
- 10  </pre>
-<h4>
-Compiled HTML
-</h4>
+ 9  width: 960px</pre>
+
+<h4>Compiled HTML</h4>
+
 <pre> 1  &lt;style&gt;  
  2  .container { 
- 3  margin: 0 auto; 
- 4  width: 960px;
+ 3    margin: 0 auto; 
+ 4    width: 960px;
  5  } 
- 6  &lt;/style&gt; 
- 7 </pre>
-<h4>
-Ruby Interpolation
-</h4>
-<p>
-As previously mentioned Haml can evaluate Ruby, and there may
+ 6  &lt;/style&gt; </pre>
+
+<h4>Ruby Interpolation</h4>
+
+<p>As previously mentioned Haml can evaluate Ruby, and there may
 occasionally be times where Ruby needs to be evaluated inside of plain
 text. In this event Ruby needs to be interpolated, accomplished by
-wrapping the necessary Ruby code inside.
-</p>
-<p>
-Below is an example of Ruby being interpolated as part of a class name.
-</p>
-<h4>
-Haml
-</h4>
-<pre> 1  %div{:class =&gt; &quot;student-#{@student.name}&quot;}
- 2 </pre>
-<h4>
-Compiled HTML
-</h4>
-<pre> 1  &lt;div class=&quot;student-shay&quot;&gt; 
- 2 </pre>
-<h4>
-SCSS &amp; Sass
-</h4>
-<p>
-SCSS and Sass are preprocessing languages which are compiled to CSS,
+wrapping the necessary Ruby code inside.</p>
+
+<p>Below is an example of Ruby being interpolated as part of a class name.</p>
+
+<h4>Haml</h4>
+
+<pre>%div{:class =&gt; &quot;student-#{@student.name}&quot;}</pre>
+
+<h4>Compiled HTML</h4>
+
+<pre>&lt;div class=&quot;student-shay&quot;&gt;</pre>
+
+<h4>SCSS &amp; Sass</h4>
+
+<p>SCSS and Sass are preprocessing languages which are compiled to CSS,
 resembling Haml a bit in that they make writing code easier, and provide
 quite a bit of leverage in doing so. Individually SCSS and Sass come
-from the same origin however they are technical different syntaxes.
-</p>
-<p>
-Sass, <a href="https://sass-lang.com/documentation/" 
+from the same origin however they are technical different syntaxes.</p>
+
+<p>Sass, <a href="https://sass-lang.com/documentation/" 
 rel="noopener noreferrer" target="_blank">Syntactically Awesome
 Stylesheets</a>, came first and is a strict indented syntax. SCSS, Sassy
 CSS, followed shortly after providing the same firing power of Sass but
-with a more flexible syntax, including the ability to write plain CSS.
-</p>
-<h4>
-Installation
-</h4>
-<p>
-As with Haml, SCSS and Sass are <a href="http://sassmeister.com/" 
+with a more flexible syntax, including the ability to write plain CSS.</p>
+
+<h4>Installation</h4>
+
+<p>As with Haml, SCSS and Sass are <a href="http://sassmeister.com/" 
 rel="noopener noreferrer" target="_blank">compiled</a> using Ruby
 therefore Ruby needs to be installed to produce CSS files. Please follow
-the directions from before to install, or ensure Ruby is installed.
-</p>
-<p>
-Once Ruby is installed the gem install sass command needs to be run from
-the command line to install SCSS and Sass.
-</p>
-<pre> 1  gem install sass
- 2 </pre>
-<p>
-Files written in SCSS or Sass need to have the .scss or .sass file
+the directions from before to install, or ensure Ruby is installed.</p>
+
+<p>Once Ruby is installed the gem install sass command needs to be run from
+the command line to install SCSS and Sass.</p>
+
+<pre>gem install sass</pre>
+
+<p>Files written in SCSS or Sass need to have the .scss or .sass file
 extensions respectively. To convert either of these file types
-to .css the following sass command needs to be run.
-</p>
-<pre> 1  sass styles.sass styles.css </pre>
-<p>
-The command above takes the styles.sass Sass file and compiles it to
+to .css the following sass command needs to be run.</p>
+
+<pre>sass styles.sass styles.css</pre>
+
+<p>The command above takes the styles.sass Sass file and compiles it to
 the styles.css file. As with Haml, these file names are paths and need
 to be executed respectively. The above command works when those files
 reside within the directory from which the command is run, should the
 files reside outside of the directory their path needs to be explicitly
-stated within the command.
-</p>
-<p>
-Should changes to a file be ongoing Sass can watch the file and
+stated within the command.</p>
+
+<p>Should changes to a file be ongoing Sass can watch the file and
 recompile the CSS every time a change takes place. To watch a Sass file
-the following sass command may be run.
-</p>
+the following sass command may be run.</p>
 
 <pre>sass --watch styles.sass:styles.css</pre>
 
@@ -4813,56 +4721,48 @@ changing property values based off a media condition.</p>
 
 <h4>Compiled CSS</h4>
 
-<pre> 1  .container { 
+<pre>  1  .container { 
  2    width: 960px;
  3  } 
- 4    @media screen and (max-width: 960px) { 
- 5      .container { 
- 6        width: 100%; 
- 7      } 
- 8    }</pre>
+ 4  @media screen and (max-width: 960px) { 
+ 5    .container { 
+ 6      width: 100%; 
+ 7    }
+ 8  }</pre>
  
-<h4>
-Parent Selector
-</h4>
-<p>
-Sass provides a way to add styles to a previous selector with the use of
+<h4>Parent Selector</h4>
+
+<p>Sass provides a way to add styles to a previous selector with the use of
 the parent selector, implemented by using an ampersand, &amp;. Most
 commonly the parent selector is used in conjunction with a pseudo class,
 such as :hover, however it doesn’t have to be. Additionally the parent
 selector could be used to bind additional selectors to its parent, such
-as &amp;.featured.
-</p>
-<h4>
-Sass
-</h4>
+as &amp;.featured.</p>
+
+<h4>Sass</h4>
+
 <pre> 1  a 
  2  color: #0087cc  
  3  &amp;:hover 
- 4  color: #ff7b29  
- 5 </pre>
-<h4>
-Compiled CSS
-</h4>
+ 4  color: #ff7b29</pre>
+
+<h4>Compiled CSS</h4>
+
 <pre> 1  a {  
- 2  color: #0087cc; 
+ 2    color: #0087cc; 
  3  } 
- 4  a:hover {  
- 5  color: #ff7b29; 
- 6  } 
- 7 </pre>
-<h4>
-Parent Key Selector
-</h4>
-<p>
-The parent selector may also be used as the key selector, adding
+ 4    a:hover {  
+ 5    color: #ff7b29; 
+ 6  }</pre>
+
+<h4>Parent Key Selector</h4>
+
+<p>The parent selector may also be used as the key selector, adding
 qualifying selectors to make compound selectors. There are an abundance
 of ways to use the parent selector as the key selector but perhaps one
-of the most beneficial is inside of feature detection.
-</p>
-<h4>
-Sass
-</h4>
+of the most beneficial is inside of feature detection.</p>
+
+<h4>Sass</h4>
 
 <pre> 1  .btn 
  2  background: linear-gradient(#fff, #9799a7)
@@ -4872,11 +4772,11 @@ Sass
 <h4>Compiled CSS</h4>
 
 <pre> 1  .btn {  
- 2  background: linear-gradient(#fff, #9799a7);  
+ 2    background: linear-gradient(#fff, #9799a7);  
  3  } 
  4  .no-cssgradients .btn {  
- 5  background: url(&quot;gradient.png&quot;) 0 0 repeat-x; 
- 6  } </pre>
+ 5    background: url(&quot;gradient.png&quot;) 0 0 repeat-x; 
+ 6  }</pre>
  
 <h4>Comments</h4>
 
@@ -4903,10 +4803,10 @@ is not rendered in the compiled CSS.</p>
 
 <pre> 1  /* Normal comment */
  2  div {
- 3  background: #333;  
+ 3    background: #333;  
  4  } 
  5  strong {
- 6  display: block; 
+ 6    display: block; 
  7  }</pre>
  
 <h4>Variables</h4>
@@ -4951,7 +4851,7 @@ string of plain text.</p>
 <h4>Compiled CSS</h4>
 
 <pre> 1  .chicago { 
- 2  left: 20px;
+ 2    left: 20px;
  3  }</pre>
  
 <h4>Calculations</h4>
@@ -9316,6 +9216,7 @@ configured), and additional properties to support assistive
 technologies.</p>
 
 <h4>Roles</h4>
+<!-- https://www.smashingmagazine.com/2022/09/wai-aria-guide/ -->
 
 <p>Setting <a href="https://www.w3.org/TR/wai-aria/#roles" 
 rel="noopener noreferrer" target="_blank">WAI-ARIA roles</a> is
@@ -9449,7 +9350,7 @@ code snippet.</p>
 
 <p>In combination with WAI-ARIA roles there are also 
 <a href="https://www.w3.org/TR/wai-aria/#states_and_properties" 
-rel="noopener noreferrer" target="_blank">States and properties</a> which help inform 
+rel="noopener noreferrer" target="_blank">States and properties</a>(2018) which help inform 
 assistive technologies how content is configured. Like roles, the states and properties 
 are broken into four categories, including <b>widget attributes</b>, <b>live region
 attributes</b>, <b>drag-and-drop attributes</b>, and <b>relationship attributes</b>.</p>
@@ -9469,17 +9370,17 @@ document structure cannot be determined.</p>
 
 <ul>
   <li><a href="https://developers.whatwg.org/text-level-semantics.html" 
-     rel="noopener noreferrer" target="_blank">Text-Level Semantics</a> via WHATWG</li>
+     rel="noopener noreferrer" target="_blank">Text-Level Semantics</a>(2011) via WHATWG</li>
   <li><a href="http://microformats.org/wiki/existing-rel-values" 
-     rel="noopener noreferrer" target="_blank">Existing rel Values</a> via Microformats.org</li>
+     rel="noopener noreferrer" target="_blank">Existing rel Values</a>(2013) via Microformats.org</li>
   <li><a href="http://schema.org/docs/schemas.html" 
-     rel="noopener noreferrer" target="_blank">Organization of Schemas</a> via Schema.org</li>
-  <li><a href="http://diveintohtml5.info/extensibility.html" 
-    rel="noopener noreferrer" target="_blank"> Microdata</a> via Dive Into HTML5</li>
+     rel="noopener noreferrer" target="_blank">Organization of Schemas</a>(2024) via Schema.org</li>
+  <li><a href="https://mislav.github.io/diveintohtml5/"
+    rel="noopener noreferrer" target="_blank"> Microdata</a>(2011) via Dive Into HTML5</li>
   <li><a href="http://www.w3.org/WAI/intro/aria" 
-     rel="noopener noreferrer" target="_blank">WAI-ARIA Overview</a>) via W3.org</li>
+     rel="noopener noreferrer" target="_blank">WAI-ARIA Overview</a>(2023) via W3.org</li>
   <li><a href="https://www.w3.org/TR/wai-aria/#roles" 
-     rel="noopener noreferrer" target="_blank">The Roles Model</a> via W3.org</li>
+     rel="noopener noreferrer" target="_blank">The Roles Model</a>(2023) via W3.org</li>
 </ul>
 
 </details>
