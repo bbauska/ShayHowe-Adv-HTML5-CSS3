@@ -421,42 +421,37 @@ multiple classes on the same element.</p>
 
 </details>
 
-<p>Which approach you take doesn’t make a huge difference, so long as code
-is being shared and reused, and the overall file size is reduced.</p>
+<p>Which approach you take doesn’t make a huge difference, so long as code is being 
+shared and reused, and the overall file size is reduced.</p>
 
 <h4>Minify &amp; Compress Files</h4>
 
-<p>Simply removing duplicate and unnecessary code is the best way to cut
-down on file size, however there are additional ways. One way includes 
+<p>Simply removing duplicate and unnecessary code is the best way to cut down on file 
+size, however there are additional ways. One way includes 
 <a href="http://www.hanselman.com/blog/TheImportanceAndEaseOfMinifyingYourCSSAndJavaScriptAndOptimizingPNGsForYourBlogOrWebsite.aspx" 
-rel="noopener noreferrer" target="_blank">minifying (2011)</a> and
-compressing files, such as HTML, CSS, and JavaScript files.
-Additionally, images may be compressed, removing any unnecessary
-comments and color profiles.</p>
+rel="noopener noreferrer" target="_blank">minifying (2011)</a> and compressing files, 
+such as HTML, CSS, and JavaScript files. Additionally, images may be compressed, removing 
+any unnecessary comments and color profiles.</p>
 
 <h4>gzip Compression</h4>
 
-<p>One of the more popular types of file compression is called gzip. gzip
-compression takes common files, including HTML, CSS, JavaScript, and so
-forth, and identifies similar strings to compress down. The more
-matching strings identified, the smaller the file can be compressed,
-thus sending a smaller file from the server to the browser.</p>
+<p>One of the more popular types of file compression is called gzip. gzip compression 
+takes common files, including HTML, CSS, JavaScript, and so forth, and identifies 
+similar strings to compress down. The more matching strings identified, the smaller the 
+file can be compressed, thus sending a smaller file from the server to the browser.</p>
 
 <p>Setting up gzip is fairly painless, and the
-<a href="http://html5boilerplate.com/" 
-rel="noopener noreferrer" target="_blank">HTML5 Boilerplate (Jan,
-2010)</a> team has done a great job of getting this going. To gzip files
-an .htaccess file needs to be added to the root directory of the web
-server, labeling the specific files to be gzipped. The dot at the
-beginning of the file name is correct, as the .htaccess file is a hidden
-file.</p>
+<a href="http://html5boilerplate.com/" rel="noopener noreferrer" target="_blank">
+HTML5 Boilerplate (Jan, 2010)</a> team has done a great job of getting this going. To 
+gzip files an .htaccess file needs to be added to the root directory of the web server, 
+labeling the specific files to be gzipped. The dot at the beginning of the file name is 
+correct, as the .htaccess file is a hidden file.</p>
 
-<p>Within the HTML5 Boilerplate Apache Server Configs, they instruct which
-files gzip compression should be applied to. Keep in mind, the code for
-this compression should live within a .htaccess file in the root
-directory of the web server. Additionally, it is worth noting
-that .htaccess files only work on Apache web servers, which need to have
-the following modules enabled.</p>
+<p>Within the HTML5 Boilerplate Apache Server Configs, they instruct which files gzip 
+compression should be applied to. Keep in mind, the code for this compression should 
+live within a .htaccess file in the root directory of the web server. Additionally, it 
+is worth noting that .htaccess files only work on Apache web servers, which need to 
+have the following modules enabled.</p>
 
 <ul>
   <li>mod_setenvif.c</li>
@@ -947,63 +942,51 @@ a width of 100% will do the trick. Using overflow: auto; in Internet
 Explorer on an Apple computer will also add scrollbars to the parent
 element, in which it is better to use the overflow: hidden; declaration.</p>
 
-<pre>
-.box-set {
+<pre>.box-set {
   overflow: auto;
 }</pre>
 
 <h4>Overflow Technique Demo</h4>
 
-<p>
-Using the overflow technique does come with a few drawbacks. For
+<p>Using the overflow technique does come with a few drawbacks. For
 example, when adding styles or moving nested elements that span outside
 of the parent, like when trying to implement box shadows and dropdown
 menus. In the demonstration below, you can see how the box shadow is
 being cut off wherever it lies outside the parent element. Additionally,
-the second box is cropped outside of the parent element.
-</p>
-<p>
-Different browsers treat the overflow property differently, and thus
+the second box is cropped outside of the parent element.</p>
+
+<p>Different browsers treat the overflow property differently, and thus
 could also implement scrollbars in different fashions here too. Look at
 the example below in different browsers, noticing how the columns
-display differently in each browser.
-</p>
-<h4>
-Overflow Pitfall Demo
-</h4>
-<h4>
-The Clearfix Technique
-</h4>
-<p>
-Depending on the context of the floated elements a better technique to
+display differently in each browser.</p>
+
+<h4>Overflow Pitfall Demo</h4>
+
+<h4>The Clearfix Technique</h4>
+
+<p>Depending on the context of the floated elements a better technique to
 contain floats may be
 the <a href="http://nicolasgallagher.com/micro-clearfix-hack/"
 rel="noopener noreferrer" target="_blank">clearfix</a> technique. The
 clearfix technique is a bit more complex but does have better support as
-compared to the overflow technique.
-</p>
-<p>
-The clearfix technique is based off using
-the :before and :after pseudo-elements on the parent element. Using
-these pseudo-elements we can create hidden elements above and below the
-parent containing the floats. The :before pseudo-element is used to
-prevent the top margin of child elements from collapsing by creating an
-anonymous table-cell element using the display: table; declaration. This
-also helps ensure consistency within Internet Explorer 6 and 7.
-The :after pseudo-element is used to prevent the bottom margin of child
-elements from collapsing, as well as to clear the nested floats.
-</p>
-<p>
-Adding the *zoom property to the parent element triggers
-the hasLayout mechanism specifically within Internet Explorer 6 and 7,
-which determines how elements should draw and bound their content, as
-well as how elements should interact with and relate to other elements.
-</p>
-<p>
-Taking the same example from above you can see how the floats are
-contained and the elements are able to live outside of the parent
-element.
-</p>
+compared to the overflow technique.</p>
+
+<p>The clearfix technique is based off using the :before and :after pseudo-elements on 
+the parent element. Using these pseudo-elements we can create hidden elements above and 
+below the parent containing the floats. The :before pseudo-element is used to prevent the 
+top margin of child elements from collapsing by creating an anonymous table-cell element 
+using the display: table; declaration. This also helps ensure consistency within Internet 
+Explorer 6 and 7. The :after pseudo-element is used to prevent the bottom margin of child
+elements from collapsing, as well as to clear the nested floats.</p>
+
+<p>Adding the *zoom property to the parent element triggers the hasLayout mechanism 
+specifically within Internet Explorer 6 and 7, which determines how elements should draw 
+and bound their content, as well as how elements should interact with and relate to other 
+elements.</p>
+
+<p>Taking the same example from above you can see how the floats are contained and the 
+elements are able to live outside of the parent element.</p>
+
 <details>
   <summary>CSS</summary>
 
@@ -1017,34 +1000,30 @@ element.
  8  }
  9  .box-set {
  10   *zoom: 1;
- 11 }
- 12  </pre>
+ 11 }</pre>
+ 
 </details>
 
 <h4>Clearfix Technique Demo</h4>
 
-<h4>
-Effectively Containing Floats
-</h4>
-<p>
-Which techniques to use boils down to the content at hand and your
+<h4>Effectively Containing Floats</h4>
+
+<p>Which techniques to use boils down to the content at hand and your
 personal preference. Some people prefer to stick strictly with the
 clearfix technique as it is consistent across the board. Others feel the
 clearfix technique is a bit too much code in some cases and prefer a mix
 of techniques based on the content. What you decide to use is up to you,
-just make sure it is well documented and easily identifiable either way.
-</p>
-<p>
-One common practice is to assign a class to the parent element which
+just make sure it is well documented and easily identifiable either way.</p>
+
+<p>One common practice is to assign a class to the parent element which
 includes the floats needing to be contained. Using the clearfix
 technique for example, Dan Cederholm helped coin the class name group.
 The group class name can then be applied to any parent element needing
-to contain floats.
-</p>
+to contain floats.</p>
+
 <details>
-<summary>
-CSS
-</summary>
+  <summary>CSS</summary>
+
 <pre> 1  .group:before,
  2  .group:after {
  3    content: &quot;&quot;;
@@ -1055,64 +1034,55 @@ CSS
  8  }
  9  .group {
  10   *zoom: 1;
- 11  }
- 12 </pre>
+ 11  }</pre>
+ 
 </details>
-<h4>
-Single Pseudo-Elements
-</h4>
-<p>
-It is worth noting only one :before and one :after pseudo-element are
+
+<h4>Single Pseudo-Elements</h4>
+
+<p>It is worth noting only one :before and one :after pseudo-element are
 allowed per element, for the time being. When trying to use the clearfix
 technique with other :before and :after pseudo-element content you may
-not achieve the desired outcome.
-</p>
-<p>
-In the examples above, the clearfix styles would not live under
+not achieve the desired outcome.</p>
+
+<p>In the examples above, the clearfix styles would not live under
 the box-set class. Instead, the class of group would need to be added to
-the parent element containing the floats.
-</p>
-<h4>
-Position Property
-</h4>
-<p>
-Occasionally you need more control over the position of an element, more
+the parent element containing the floats.</p>
+
+<h4>Position Property</h4>
+
+<p>Occasionally you need more control over the position of an element, more
 than a float can provide, in which case the position property comes into
 play. The position property accepts five different values, each of which
 provide different ways
 to <a href="http://www.alistapart.com/articles/css-positioning-101/" 
 rel="noopener noreferrer" target="_blank">uniquely position</a> an
-element.
-</p>
-<h4>
-Position Static
-</h4>
-<p>
-Elements by default have the position value of static, meaning they
+element.</p>
+
+<h4>Position Static</h4>
+
+<p>Elements by default have the position value of static, meaning they
 don’t have, nor will they accept, any specific 
 <a href="https://learn.shayhowe.com/html-css/opening-the-box-model/" 
 rel="noopener noreferrer" target="_blank">box offset properties</a>.
 Furthermore, elements will be positioned as intended, with their default
-behaviors.
-</p>
-<p>
-In the demonstration below, all the boxes are stacked one on top of the
+behaviors.</p>
+
+<p>In the demonstration below, all the boxes are stacked one on top of the
 other as they are block level elements and are not floated in any
-specific direction.
-</p>
-<h4>
-HTML
-</h4>
+specific direction.</p>
+
+<h4>HTML</h4>
+
 <pre> 1  &lt;div class=&quot;box-set&quot;&gt;
  2    &lt;figure class=&quot;box box-1&quot;&gt;Box 1&lt;/figure&gt;
  3    &lt;figure class=&quot;box box-2&quot;&gt;Box 2&lt;/figure&gt;
  4    &lt;figure class=&quot;box box-3&quot;&gt;Box 3&lt;/figure&gt;
  5    &lt;figure class=&quot;box box-4&quot;&gt;Box 4&lt;/figure&gt;
- 6  &lt;/div&gt;
- 7  </pre>
-<h4>
-CSS
-</h4>
+ 6  &lt;/div&gt;</pre>
+ 
+<h4>CSS</h4>
+
 <pre> 1  .box-set {
  2    background: #eaeaed;
  3  }
@@ -1120,57 +1090,48 @@ CSS
  5    background: #2db34a;
  6    height: 80px;
  7    width: 80px;
- 8  }
- 9  </pre>
-<h4>
-Position Static Demo
-</h4>
-<h4>
-Position Relative
-</h4>
-<p>
-The relative value for the position property is very similar to that of
+ 8  }</pre>
+
+<h4>Position Static Demo</h4>
+
+<h4>Position Relative</h4>
+
+<p>The relative value for the position property is very similar to that of
 the static value. The primary difference is that the relative value
 accepts the box offset properties top, right, bottom, and left. These
 box offset properties allow the element to be precisely positioned,
-shifting the element from its default position in any direction.
-</p>
-<h4>
-How Box Offset Properties Work
-</h4>
-<p>
-The box offset properties, top, right, bottom, and left, specify how
+shifting the element from its default position in any direction.</p>
+
+<h4>How Box Offset Properties Work</h4>
+
+<p>The box offset properties, top, right, bottom, and left, specify how
 elements may be positioned, and in which direction. These offset
 properties only work on elements with a relative, absolute,
-or fixed positioning value.
-</p>
-<p>
-For relatively positioned elements, these properties specify how an
+or fixed positioning value.</p>
+
+<p>For relatively positioned elements, these properties specify how an
 element should be moved from its default position. For example, using
 a top value of 20px on a relatively positioned element will push the
 element 20 pixels down from where it was originally placed. Switching
 the top value to -20px will instead pull the element 20 pixels up from
-where it was originally placed.
-</p>
-<p>
-For elements using absolute or fixed positioning these properties
+where it was originally placed.</p>
+
+<p>For elements using absolute or fixed positioning these properties
 specify the distance between the element and the edges of its parent
 element. For example, using a top value of 20px on an absolutely
 positioned element will push the element 20 pixels down from the top of
 its relatively positioned parent. Switching the top value to -20px will
 then pull the element 20 pixels up from the top of its relatively
-positioned parent.
-</p>
-<p>
-While the relative position does accept box offset properties the
+positioned parent.</p>
+
+<p>While the relative position does accept box offset properties the
 element still remains in the normal, or static, flow of the page. In
 this case other elements will not impede on where the relatively
 positioned element was originally placed. Additionally, the relatively
 positioned element may overlap, or underlap, other elements without
-moving them from their default position.
-</p>
-<p>
-In the demonstration below you will notice that the elements are still
+moving them from their default position.</p>
+
+<p>In the demonstration below you will notice that the elements are still
 stacked on top of one another, however they are shifted from their
 default positions according to their individual box offset property
 values. These values cause the boxes to overlap one another, yet do not
@@ -1210,51 +1171,45 @@ positioned elements default position.</p>
  16 .box-3 {
  17   bottom: -10px;
  18   right: 20px;
- 19 }
- 20 </pre>
+ 19 }</pre>
+ 
 </details>
-<h4>
-Position Relative Demo
-</h4>
-<p>
-In the event that the top and bottom box offset properties are both
+
+<h4>Position Relative Demo</h4>
+
+<p>In the event that the top and bottom box offset properties are both
 declared on a relatively positioned element, the top properties will
 take priority. Additionally, if both the left and right box offset
 properties are declared on a relatively positioned element, priority is
 given in the direction in which the language of the page is written. For
 example, in English pages the left offset property is given priority,
-and for Arabic pages the right offset property is given priority.
-</p>
-<h4>
-Position Absolute
-</h4>
-<p>
-Absolutely positioned elements accept box offset properties, however
+and for Arabic pages the right offset property is given priority.</p>
+
+<h4>Position Absolute</h4>
+
+<p>Absolutely positioned elements accept box offset properties, however
 they are removed from the normal flow of the document. Upon removing the
 element from the normal flow, elements are positioned directly in
 relation to their containing parent whom is relatively or absolutely
 positioned. Should a relatively or absolutely positioned parent not be
 present, the absolutely positioned element will be positioned in
-relation to the body of the page.
-</p>
-<p>
-Using absolutely positioned elements and specifying both vertical and
+relation to the body of the page.</p>
+
+<p>Using absolutely positioned elements and specifying both vertical and
 horizontal offset properties will move the element with those property
 values in relation to its relatively positioned parent. For example, an
 element with a top value of 50px and a right value of 100px will
 position the element 50 pixels down from the top of its relatively
 positioned parent and 100 pixels in from the right of its relatively
-positioned parent.
-</p>
-<p>
-Furthermore, using an absolutely positioned element and not specifying
+positioned parent.</p>
+
+<p>Furthermore, using an absolutely positioned element and not specifying
 any box offset property will position the element in the top left of its
 closest relatively positioned parent. Setting one box offset property,
 such as top, will absolutely position the element vertically but will
-leave the horizontal positioning to the default value of flush left.
-</p>
-<p>
-In the demonstration below you can see how each box is absolutely
+leave the horizontal positioning to the default value of flush left.</p>
+
+<p>In the demonstration below you can see how each box is absolutely
 positioned in relation to the parent division, of which is relatively
 positioned. Each individual box is moved in from a specific side with a
 positive value, or pulled out from a specific side with a negative
@@ -1268,8 +1223,7 @@ value.</p>
  3    &lt;figure class=&quot;box box-2&quot;&gt;Box 2&lt;/figure&gt;
  4    &lt;figure class=&quot;box box-3&quot;&gt;Box 3&lt;/figure&gt;
  5    &lt;figure class=&quot;box box-4&quot;&gt;Box 4&lt;/figure&gt;
- 6  &lt;/div&gt;
- 7  </pre>
+ 6  &lt;/div&gt;</pre>
 </details>
 
 <br><br>
@@ -1301,61 +1255,53 @@ value.</p>
  23 }
  24 .box-4 {
  25   bottom: 0;
- 26 }
- 27  </pre>
+ 26 }</pre>
+ 
 </details>
-<h4>
-Position Absolute Demo
-</h4>
-<p>
-When an element has a fixed height and width and is absolutely
+
+<h4>Position Absolute Demo</h4>
+
+<p>When an element has a fixed height and width and is absolutely
 positioned, the top property takes priority should both
 the top and bottom offset properties be declared. As with the relatively
 positioned elements, should an element with a fixed width have both
 the left and right box offset properties, priority is given to the
-direction of which the language of the page is written.
-</p>
-<p>
-If an element doesn’t have a specific height or width and is absolutely
+direction of which the language of the page is written.</p>
+
+<p>If an element doesn’t have a specific height or width and is absolutely
 positioned, using a combination of the top and bottom box offset
 properties displays an element with a height spanning the entire
 specified size. Same goes for using both the left and right box offset
 properties, resulting in an element with a full width based on both of
 the left and right box offset properties. Using all four box offset
 properties will display an element with a full specified height and
-width.
-</p>
-<h4>
-Position Fixed
-</h4>
-<p>
-Using the positioning value of fixed works just like that of absolute,
+width.</p>
+
+<h4>Position Fixed</h4>
+
+<p>Using the positioning value of fixed works just like that of absolute,
 however the positioning is relative to the browser viewport, and it does
 not scroll with the page. That said, elements will always be present no
 matter where a user stands on a page. The only caveat
 with fixed positioning is that it doesn’t work with Internet Explorer 6.
 Should you want to force fixed positioning within Internet Explorer 6
-there are suitable hacks.
-</p>
-<p>
-Using multiple box offset properties with fixed positioning will produce
-the same behaviors as an absolutely positioned element.
-</p>
-<p>
-Keeping the same box offset properties from the previous demonstration,
+there are suitable hacks.</p>
+
+<p>Using multiple box offset properties with fixed positioning will produce
+the same behaviors as an absolutely positioned element.</p>
+
+<p>Keeping the same box offset properties from the previous demonstration,
 watch how the boxes are positioned in relation to the browser’s viewport
-and not the containing, relatively positioned parent.
-</p>
-<h4>
-HTML
-</h4>
+and not the containing, relatively positioned parent.</p>
+
+<h4>HTML</h4>
+
 <pre> 1  &lt;div class=&quot;box-set&quot;&gt;
  2    &lt;figure class=&quot;box box-1&quot;&gt;Box 1&lt;/figure&gt;
  3    &lt;figure class=&quot;box box-2&quot;&gt;Box 2&lt;/figure&gt;
  4    &lt;figure class=&quot;box box-3&quot;&gt;Box 3&lt;/figure&gt;
  5    &lt;figure class=&quot;box box-4&quot;&gt;Box 4&lt;/figure&gt;
- 6  &lt;/div&gt;
- 7 </pre>
+ 6  &lt;/div&gt;</pre>
 
 <br><br>
 
@@ -1382,32 +1328,28 @@ HTML
  18 } 
  19 .box-4 {
  20   bottom: 0;
- 21 }
- 22  </pre>
+ 21 }</pre>
+
 </details>
 
 <h4>Position Fixed Demo</h4>
 
 <h4>Fixed Header or Footer</h4>
 
-<p>
-One of the most common uses of fixed positioning is to build a fixed
+<p>One of the most common uses of fixed positioning is to build a fixed
 header, or footer, anchored to one side of a page. As a user scrolls the
 element stays prevalent, always within the viewport for users to
-interact with.
-</p>
-<p>
-The code and demonstration below outline how this may be achieved.
+interact with.</p>
+
+<p>The code and demonstration below outline how this may be achieved.
 Notice how both left and right box offset properties are declared. This
 allows the footer  to span the entire width of the bottom of the page,
 and it does so without disrupting the box model, allowing margins,
-borders, and padding to be applied freely.
-</p>
-<h4>
-HTML
-</h4>
-<pre> 1  &lt;footer&gt;Fixed Footer&lt;/footer&gt;
- 2  </pre>
+borders, and padding to be applied freely.</p>
+
+<h4>HTML</h4>
+
+<pre>&lt;footer&gt;Fixed Footer&lt;/footer&gt;</pre>
 
 <br><br>
 
@@ -1423,33 +1365,30 @@ HTML
  7    left: 0;
  8    position: fixed;
  9    right: 0;
- 10 }
- 11 </pre>
+ 10 }</pre>
+
 </details>
-<h4>
-Fixed Footer Demo
-</h4>
-<h4>
-Z-Index Property
-</h4>
-<p>
-By nature web pages are often considered to be two dimensional,
+
+<h4>Fixed Footer Demo</h4>
+
+<h4>Z-Index Property</h4>
+
+<p>By nature web pages are often considered to be two dimensional,
 displaying elements upon a x and y axis. However when you begin to
 position elements they are occasionally placed on top of one another. To
 change the order of 
 <a href="http://www.impressivewebs.com/a-detailed-look-at-the-z-index-css-property/" 
 rel="noopener noreferrer" target="_blank">how these elements are
 stacked</a>, also known as the z-axis, the z-index property is to be
-used.
-</p>
-<p>
-Generally, elements are positioned upon the z-axis as they appear within
+used.</p>
+
+<p>Generally, elements are positioned upon the z-axis as they appear within
 the DOM. Elements coming at the top of the DOM are positioned behind
 elements coming after them. Changing this stacking using
 the z-index property is pretty straight forward. The element with the
 highest z-index value will appear on the top regardless of its placement
-in the DOM.
-</p>
+in the DOM.</p>
+
 <p>In order to apply the z-index property to an element, you must first
 apply a position value of relative, absolute, or fixed. The same as if
 you were to apply any box offset properties.</p>
@@ -1526,7 +1465,6 @@ box three.</p>
 Organization</a> <b>Lesson 3</b>
 <a href="https://learn.shayhowe.com/advanced-html-css/complex-selectors/" 
   rel="noopener noreferrer" target="_blank">Complex Selectors</a></p>
-
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 align="center">Lesson 3: Complex Selectors</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -1582,20 +1520,19 @@ attribute value, which may be reused on multiple elements as necessary
 to help share popular styles. Lastly, the <b>ID</b> selector identifies
 an element based on its ID attribute value, which is unique and should
 only be used once per page.</p>
+
 <h4>CSS</h4>
 
 <pre> 1  h1 {...}
  2  .tagline {...}
- 3  #intro {...}
- 4  </pre>
+ 3  #intro {...}</pre>
 
 <h4>HTML</h4>
 
 <pre>&lt;section id=&quot;intro&quot;&gt;
   &lt;h1&gt;...&lt;/h1&gt;
   &lt;h2 class=&quot;tagline&quot;&gt;...&lt;/h2&gt;
-&lt;/section&gt;
-</pre>
+&lt;/section&gt;</pre>
  
 <h4>Common Selectors Overview</h4>
 
@@ -1667,8 +1604,7 @@ any h2 element outside of the article element is not selected.</p>
 
 <h4>CSS</h4>
 
-<pre> 1  article h2 {...}  
- 2 </pre>
+<pre>article h2 {...}</pre>
  
 <h4>HTML</h4>
 
@@ -1678,8 +1614,7 @@ any h2 element outside of the article element is not selected.</p>
  4    &lt;div&gt; 
  5      &lt;h2&gt;This heading will be selected&lt;/h2&gt;
  6    &lt;/div&gt;
- 7  &lt;/article&gt; 
- 8 </pre>
+ 7  &lt;/article&gt;</pre>
  
 <h4>Direct Child Selector</h4>
 
@@ -1693,16 +1628,14 @@ within the selector.</p>
 For example, article &gt; p is a direct child selector only
 identifying p elements that fall directly within an article element.
 Any p element placed outside of an article element, or nested inside of
-another element other than the article element, will not be selected.
-</p>
-<p>
-Below, the paragraph on line 3 is the only direct child of its parent
-article, thus selected.
-</p>
+another element other than the article element, will not be selected.</p>
+
+<p>Below, the paragraph on line 3 is the only direct child of its parent
+article, thus selected.</p>
+
 <h4>CSS</h4>
 
-<pre> 1  article &gt; p {...}
- 2 </pre>
+<pre>article &gt; p {...}</pre>
  
 <h4>HTML</h4>
 
@@ -1777,8 +1710,7 @@ document tree and share the same parent as their sibling heading.</p>
 
 <h4>CSS</h4>
 
-<pre> 1  h2 ~ p {...}  
- 2 </pre>
+<pre>h2 ~ p {...}</pre>
  
 <br><br>
 
@@ -1819,8 +1751,7 @@ along with sharing the same parent element, thus selected.</p>
 
 <h4>CSS</h4>
 
-<pre> 1  h2 + p {...}
- 2 </pre>
+<pre>h2 + p {...}</pre>
 
 <br><br>
 
@@ -1836,8 +1767,7 @@ along with sharing the same parent element, thus selected.</p>
  7  &lt;p&gt;...&lt;/p&gt; 
  8  &lt;/div&gt;
  9  &lt;p&gt;...&lt;/p&gt; 
- 10 &lt;/section&gt; 
- 11 </pre>
+ 10 &lt;/section&gt;</pre>
  
 </details>
 
@@ -4738,183 +4668,160 @@ Should changes to a file be ongoing Sass can watch the file and
 recompile the CSS every time a change takes place. To watch a Sass file
 the following sass command may be run.
 </p>
-<pre> 1  sass --watch styles.sass:styles.css 
- 2 </pre>
-<p>
-Additionally, instead of compiling or watching individual files, Sass is
+
+<pre>sass --watch styles.sass:styles.css</pre>
+
+<p>Additionally, instead of compiling or watching individual files, Sass is
 capable of compiling and watching entire directories of files. For
 example, to watch an entire directory of Sass files and convert them to
-CSS the sass command below may be run.
-</p>
-<pre> 1  sass --watch assets/sass:public/css 
- 2 </pre>
-<h4>
-Converting Files from SCSS to Sass &amp; Vice Versa
-</h4>
-<p>
-On top of being able to convert SCSS and Sass files to CSS you can also
+CSS the sass command below may be run.</p>
+
+<pre>sass --watch assets/sass:public/css</pre>
+
+<h4>Converting Files from SCSS to Sass &amp; Vice Versa</h4>
+
+<p>On top of being able to convert SCSS and Sass files to CSS you can also
 convert files from SCSS to Sass and vice versa. To do so
 the sass commands below may be used to convert a SCSS file to Sass, and
-then a Sass file to SCSS respectively.
-</p>
+then a Sass file to SCSS respectively.</p>
+
 <pre> 1  # Convert Sass to SCSS
  2  sass-convert styles.sass styles.scss  
  3  # Convert SCSS to Sass
- 4  sass-convert styles.scss styles.sass  
- 5  </pre>
-<h4>
-Syntax
-</h4>
-<p>
-As previously mentioned the primary difference between SCSS and Sass is
+ 4  sass-convert styles.scss styles.sass</pre>
+
+<h4>Syntax</h4>
+
+<p>As previously mentioned the primary difference between SCSS and Sass is
 their syntax, and their difference in severity. The syntax of SCSS isn’t
 much different than that of regular CSS. In fact, standard CSS will run
 inside of SCSS. Sass on the other hand is fairly strict, and any
 indenting or character errors will prohibit the styles from compiling.
 Sass omits all curly brackets, {}, and semicolons, ;, relying on
-indentation and clear line breaks for formatting.
-</p>
-<h4>
-SCSS
-</h4>
+indentation and clear line breaks for formatting.</p>
+
+<h4>SCSS</h4>
+
 <pre> 1  .new {  
  2    color: #ff7b29; 
  3    font-weight: bold; 
  4    span {  
  5      text-transform: uppercase;  
  6    } 
- 7  } 
- 8 </pre>
-<h4>
-Sass
-</h4>
+ 7  }</pre>
+ 
+<h4>Sass</h4>
+
 <pre> 1  .new 
  2  color: #ff7b29  
  3  font-weight: bold  
  4  span 
- 5  text-transform: uppercase
- 6 </pre>
-<h4>
-Compiled CSS
-</h4>
+ 5  text-transform: uppercase</pre>
+
+<h4>Compiled CSS</h4>
+
 <pre> 1  .new {  
- 2  color: #ff7b29; 
- 3  font-weight: bold; 
+ 2    color: #ff7b29; 
+ 3    font-weight: bold; 
  4  } 
  5  .new span {
- 6  text-transform: uppercase;  
- 7  } 
- 8 </pre>
-<h4>
-Using SCSS vs. Sass
-</h4>
-<p>
-Deciding on whether to use SCSS or Sass boils down to personal
+ 6    text-transform: uppercase;  
+ 7  }</pre>
+
+<h4>Using SCSS vs. Sass</h4>
+
+<p>Deciding on whether to use SCSS or Sass boils down to personal
 preference, and is a decision to be made based on what is best for a
 specific team and project. There are pros and cons to each syntax, all
-of which are fair.
-</p>
-<p>
-Personally, I prefer the Sass syntax as it requires less characters and
+of which are fair.</p>
+
+<p>Personally, I prefer the Sass syntax as it requires less characters and
 provides, I believe, a cleaner syntax. Sass will not allow straight CSS
 input as SCSS does, and will not put up with any composition errors.
 Sass has a bit more of a learning curve, however a learning curve I see
-well worth the ease of manageable styles.
-</p>
-<p>
-Moving forward the examples in this lesson will use Sass, however they
-may also all be accomplished with SCSS.
-</p>
-<h4>
-Nesting
-</h4>
-<p>
-In the syntax example above you will notice how selectors may be nested
+well worth the ease of manageable styles.</p>
+
+<p>Moving forward the examples in this lesson will use Sass, however they
+may also all be accomplished with SCSS.</p>
+
+<h4>Nesting</h4>
+
+<p>In the syntax example above you will notice how selectors may be nested
 inside of one another to create compound selectors. The nesting quickly
 outlines identifiable selectors, however it is important not to go
 overboard. Do <strong>not</strong> nest selectors for unapparent reasons
 or go overboard nesting one selector under the prior one. Using specific
-selectors without raising specificity is important.
-</p>
-<h4>
-Sass
-</h4>
+selectors without raising specificity is important.</p>
+
+<h4>Sass</h4>
+
 <pre> 1  .portfolio 
  2  border: 1px solid #9799a7
  3  ul
  4  list-style: none
  5  li
- 6  float: left
- 7 </pre>
-<h4>
-Compiled CSS
-</h4>
+ 6  float: left</pre>
+ 
+<h4>Compiled CSS</h4>
+
 <pre> 1  .portfolio { 
- 2  border: 1px solid #9799a7;  
+ 2    border: 1px solid #9799a7;  
  3  } 
  4  .portfolio ul { 
- 5  list-style: none;  
+ 5    list-style: none;  
  6  } 
  7  .portfolio li { 
- 8  float: left; 
- 9  } 
- 10 </pre>
-<h4>
-Nesting Properties
-</h4>
-<p>
-On top of nesting selectors it is also possible to nest properties. Some
+ 8    float: left; 
+ 9  }</pre>
+
+<h4>Nesting Properties</h4>
+
+<p>On top of nesting selectors it is also possible to nest properties. Some
 of the most popular uses of this may be seen with font, margin, padding,
 and border properties. As with the decision of SCSS versus Sass, this is
 very much a personal decision. Many feel that shorthand values are fine
 and breaking out values in this longer format is unnecessary. Ultimately
-your decision is up to personal preference.
-</p>
-<h4>
-Sass
-</h4>
+your decision is up to personal preference.</p>
+
+<h4>Sass</h4>
+
 <pre> 1  div  
  2  font:
  3  family: Baskerville, Palatino, serif 
  4  style: italic
- 5  weight: normal  
- 6 </pre>
-<h4>
-Compiled CSS
-</h4>
+ 5  weight: normal</pre>
+
+<h4>Compiled CSS</h4>
+
 <pre> 1  div {
- 2  font-family: Baskerville, Palatino, serif;
- 3  font-style: italic;
- 4  font-weight: normal;  
- 5  } 
- 6 </pre>
-<h4>
-Nested Media Queries
-</h4>
-<p>
-Individual media queries may also be nested inside of a selector,
-changing property values based off a media condition.
-</p>
-<h4>
-Sass
-</h4>
+ 2    font-family: Baskerville, Palatino, serif;
+ 3    font-style: italic;
+ 4    font-weight: normal;  
+ 5  }</pre>
+
+<h4>Nested Media Queries</h4>
+
+<p>Individual media queries may also be nested inside of a selector,
+changing property values based off a media condition.</p>
+
+<h4>Sass</h4>
+
 <pre> 1  .container 
  2  width: 960px 
  3  @media screen and (max-width: 960px)
- 4  width: 100%
- 5 </pre>
-<h4>
-Compiled CSS
-</h4>
+ 4  width: 100%</pre>
+
+<h4>Compiled CSS</h4>
+
 <pre> 1  .container { 
- 2  width: 960px;
+ 2    width: 960px;
  3  } 
- 4  @media screen and (max-width: 960px) { 
- 5  .container { 
- 6  width: 100%; 
- 7  } 
- 8  } 
- 9 </pre>
+ 4    @media screen and (max-width: 960px) { 
+ 5      .container { 
+ 6        width: 100%; 
+ 7      } 
+ 8    }</pre>
+ 
 <h4>
 Parent Selector
 </h4>
@@ -4956,379 +4863,301 @@ of the most beneficial is inside of feature detection.
 <h4>
 Sass
 </h4>
+
 <pre> 1  .btn 
  2  background: linear-gradient(#fff, #9799a7)
  3  .no-cssgradients &amp; 
- 4  background: url(&quot;gradient.png&quot;) 0 0 repeat-x  
- 5 </pre>
-<h4>
-Compiled CSS
-</h4>
+ 4  background: url(&quot;gradient.png&quot;) 0 0 repeat-x</pre>
+
+<h4>Compiled CSS</h4>
+
 <pre> 1  .btn {  
  2  background: linear-gradient(#fff, #9799a7);  
  3  } 
  4  .no-cssgradients .btn {  
  5  background: url(&quot;gradient.png&quot;) 0 0 repeat-x; 
- 6  } 
- 7 </pre>
-<h4>
-Comments
-</h4>
-<p>
-Sass handles comments very similar to that of Haml. The standard CSS
+ 6  } </pre>
+ 
+<h4>Comments</h4>
+
+<p>Sass handles comments very similar to that of Haml. The standard CSS
 syntax, /* … */, for comments works as intended within Sass however
 there is also a syntax for silent comments to completely remove a
-comment or lines of code from being compiled.
-</p>
-<p>
-The syntax for silent comments is two forward slashes, //, and any
+comment or lines of code from being compiled.</p>
+
+<p>The syntax for silent comments is two forward slashes, //, and any
 content on that line or nested below it will be omitted from
 computation. Notice in the example below how the // Omitted comment line
-is not rendered in the compiled CSS.
-</p>
-<h4>
-Sass
-</h4>
+is not rendered in the compiled CSS.</p>
+
+<h4>Sass</h4>
+
 <pre> 1  /* Normal comment */
  2  div  
  3  background: #333
  4  // Omitted comment 
  5  strong  
- 6  display: block  
- 7 </pre>
-<h4>
-Compiled CSS
-</h4>
+ 6  display: block</pre>
+ 
+<h4>Compiled CSS</h4>
+
 <pre> 1  /* Normal comment */
  2  div {
  3  background: #333;  
  4  } 
  5  strong {
  6  display: block; 
- 7  } 
- 8 </pre>
-<h4>
-Variables
-</h4>
-<p>
-Variables are one of the more sought after features of CSS that Sass
+ 7  }</pre>
+ 
+<h4>Variables</h4>
+
+<p>Variables are one of the more sought after features of CSS that Sass
 provides. With Sass you can define variables and then reuse them as
-necessary.
-</p>
-<p>
-Variables are defined with a dollar sign, <span
+necessary.</p>
+
+<p>Variables are defined with a dollar sign, <span
 class="math inline">, <em>f</em><em>o</em><em>l</em><em>l</em><em>o</em><em>w</em><em>e</em><em>d</em><em>b</em><em>y</em><em>t</em><em>h</em><em>e</em><em>v</em><em>a</em><em>r</em><em>i</em><em>a</em><em>b</em><em>l</em><em>e</em><em>n</em><em>a</em><em>m</em><em>e</em>.<em>B</em><em>e</em><em>t</em><em>w</em><em>e</em><em>e</em><em>n</em><em>t</em><em>h</em><em>e</em><em>v</em><em>a</em><em>r</em><em>i</em><em>a</em><em>b</em><em>l</em><em>e</em><em>n</em><em>a</em><em>m</em><em>e</em><em>a</em><em>n</em><em>d</em><em>v</em><em>a</em><em>l</em><em>u</em><em>e</em><em>i</em><em>s</em><em>a</em><em>c</em><em>o</em><em>l</em><em>o</em><em>n</em><em>f</em><em>o</em><em>l</em><em>l</em><em>o</em><em>w</em><em>e</em><em>d</em><em>b</em><em>y</em><em>a</em><em>n</em><em>e</em><em>m</em><em>p</em><em>t</em><em>y</em><em>s</em><em>p</em><em>a</em><em>c</em><em>e</em>, <em>s</em><em>u</em><em>c</em><em>h</em><em>a</em><em>s</em></span>font-base:
 1em. As for the value of the variable, it may be a number, string,
-color, boolean, null, or a list of values separated by spaces or commas.
-</p>
-<h4>
-Sass
-</h4>
+color, boolean, null, or a list of values separated by spaces or commas.</p>
+
+<h4>Sass</h4>
+
 <pre> 1  $font-base: 1em
  2  $serif: &quot;Helvetica Neue&quot;, Arial, &quot;Lucida Grande&quot;, sans-serif 
  3  p 
- 4  font: $font-base $serif
- 5 </pre>
-<h4>
-Compiled CSS
-</h4>
+ 4  font: $font-base $serif</pre>
+ 
+<h4>Compiled CSS</h4>
+
 <pre> 1  p {  
- 2  font: 1em &quot;Helvetica Neue&quot;, Arial, &quot;Lucida Grande&quot;, sans-serif;  
- 3  } 
- 4 </pre>
-<h4>
-Variable Interpolation
-</h4>
-<p>
-For the most part variables may be used anywhere inside of a Sass
+ 2    font: 1em &quot;Helvetica Neue&quot;, Arial, &quot;Lucida Grande&quot;, sans-serif;  
+ 3  } </pre>
+ 
+<h4>Variable Interpolation</h4>
+
+<p>For the most part variables may be used anywhere inside of a Sass
 document. However, they may occasionally need to be interpolated using
 the syntax. A few instances of where variables need to be interpolated
 include when being used in a class name, property name, or inside a
-string of plain text.
-</p>
-<h4>
-Sass
-</h4>
+string of plain text.</p>
+
+<h4>Sass</h4>
+
 <pre> 1  $location: chicago
  2  $offset: left  
  3  .#{$location}  
- 4  #{$offset}: 20px  
- 5 </pre>
-<h4>
-Compiled CSS
-</h4>
+ 4  #{$offset}: 20px</pre>
+ 
+<h4>Compiled CSS</h4>
+
 <pre> 1  .chicago { 
  2  left: 20px;
- 3  } 
- 4 </pre>
-<h4>
-Calculations
-</h4>
-<p>
-Sass also has the ability to do calculations in a variety of different
+ 3  }</pre>
+ 
+<h4>Calculations</h4>
+
+<p>Sass also has the ability to do calculations in a variety of different
 manners. Calculations can handle most problems, such as addition,
-subtraction, division, multiplication, and rounding.
-</p>
-<p>
-Addition can be done by using the plus sign, +, and may be completed
+subtraction, division, multiplication, and rounding.</p>
+
+<p>Addition can be done by using the plus sign, +, and may be completed
 with or without units of measurement. When done with units, the unit
 tied to the first number in the equation is the unit that will be used
 in the computed value. For example, ten pixels plus one inch will equal
 106 pixels. Subtraction is handled the same way as addition but with the
-minus sign, -, instead.
-</p>
-<p>
-Multiplication is completed with the asterisk sign, *, however only one
+minus sign, -, instead.</p>
+
+<p>Multiplication is completed with the asterisk sign, *, however only one
 of the numbers, if any, may include a unit of measurement. Using the
 percent sign, %, will return the remainder of the two numbers upon being
 divided, and as with multiplication, only allows one number, if any, to
-have a unit.
-</p>
-<h4>
-Sass
-</h4>
+have a unit.</p>
+
+<h4>Sass</h4>
+
 <pre> 1  width: 40px + 6 
  2  width: 40px - 6 
  3  width: 40px * 6
- 4  width: 40px % 6 
- 5 </pre>
-<h4>
-Compiled CSS
-</h4>
+ 4  width: 40px % 6 </pre>
+ 
+<h4>Compiled CSS</h4>
+
 <pre> 1  width: 46px; 
  2  width: 34px; 
  3  width: 240px;
- 4  width: 4px;
- 5 </pre>
-<h4>
-Division
-</h4>
-<p>
-Division is a bit trickier in Sass as the forward slash, /, used to
+ 4  width: 4px;</pre>
+ 
+<h4>Division</h4>
+
+<p>Division is a bit trickier in Sass as the forward slash, /, used to
 perform division is already used in some CSS property values. Generally
 speaking, division will take place when any part of the value uses a
 variable, if the value is wrapped in parentheses, or if the value is
-used as part of another equation.
-</p>
-<p>
-When using one unit of measurement in division the value will reside in
+used as part of another equation.</p>
+
+<p>When using one unit of measurement in division the value will reside in
 that unit. When using two units of measurement, however, the resulting
-value will be unitless.
-</p>
-<h4>
-Sass
-</h4>
+value will be unitless.</p>
+
+<h4>Sass</h4>
+
 <pre> 1  width: 100px / 10  
  2  width: (100px / 10)
  3  width: (100px / 10px) 
  4  $width: 100px  
  5  width: $width / 10
- 6  width: 5px - 100px / 10  
- 7 </pre>
-<h4>
-Compiled CSS
-</h4>
+ 6  width: 5px - 100px / 10</pre>
+ 
+<h4>Compiled CSS</h4>
+
 <pre> 1  width: 100px/10;
  2  width: 10px; 
  3  width: 10; 
  4  width: 10px; 
- 5  width: -5px; 
- 6 </pre>
-<h4>
-Detailed Math
-</h4>
-<p>
-As one may expect, Sass is also capable of combining multiple math
+ 5  width: -5px; </pre>
+ 
+<h4>Detailed Math</h4>
+
+<p>As one may expect, Sass is also capable of combining multiple math
 operations. Sass also recognizes which operations to execute first based
-on the use of parentheses.
-</p>
-<h4>
-Sass
-</h4>
+on the use of parentheses.</p>
+
+<h4>Sass</h4>
+
 <pre> 1  $grid: 16 
  2  $column: 40px  
  3  $gutter: 20px  
  4  $container: ($column * $grid) + ($gutter * $grid) 
- 5  width: $container 
- 6 </pre>
-<h4>
-Compiled CSS
-</h4>
-<pre> 1  width: 960px;
- 2 </pre>
-<h4>
-Number Functions
-</h4>
-<p>
-By default Sass includes a handful of 
+ 5  width: $container </pre>
+
+<h4>Compiled CSS</h4>
+
+<pre> 1  width: 960px;</pre>
+ 
+<h4>Number Functions</h4>
+
+<p>By default Sass includes a handful of 
 <a href="https://sass-lang.com/documentation/modules/math" 
 rel="noopener noreferrer" target="_blank">built in functions</a>, many
-of which are used to manipulate number values as wished.
-</p>
-<p>
-The percentage() function turns a value into a percentage.
+of which are used to manipulate number values as wished.</p>
+
+<p>The percentage() function turns a value into a percentage.
 The round() function rounds a value to the closest whole number,
 defaulting to rounding up where necessary. The ceil() function rounds a
 value up to the closest whole number, and the floor()  function rounds a
 value down to the closest whole number. Lastly, the abs() function finds
-the absolute value of a given number.
-</p>
+the absolute value of a given number.</p>
+
 <ul>
-<li>
-percentage()
-</li>
-<li>
-round()
-</li>
-<li>
-ceil()
-</li>
-<li>
-floor()
-</li>
-<li>
-abs()
-</li>
+  <li>percentage()</li>
+  <li>round()</li>
+  <li>ceil()</li>
+  <li>floor()</li>
+  <li>abs()</li>
 </ul>
-<h4>
-Sass
-</h4>
+
+<h4>Sass</h4>
+
 <pre> 1  width: percentage(2.5)
  2  width: round(2.5px)
  3  width: ceil(2.5px) 
  4  width: floor(2.5px)
- 5  width: abs(-2.5px) 
- 6 </pre>
-<h4>
-Compiled CSS
-</h4>
+ 5  width: abs(-2.5px)</pre>
+ 
+<h4>Compiled CSS</h4>
+
 <pre> 1  width: 250%; 
  2  width: 3px;
  3  width: 3px;
  4  width: 2px;
- 5  width: 2.5px;
- 6 </pre>
-<h4>
-Color
-</h4>
-<p>
-Sass provides quite a bit of assistance in working with colors,
+ 5  width: 2.5px;</pre>
+ 
+<h4>Color</h4>
+
+<p>Sass provides quite a bit of assistance in working with colors,
 providing a handful of different features to alter and manipulate
 colors. One of the more popular color features in Sass is the ability to
 change a hexadecimal color, or variable, and convert it into an RGBa
-value.
-</p>
-<h4>
-Sass
-</h4>
+value.</p>
+
+<h4>Sass</h4>
+
 <pre> 1  color: rgba(#8ec63f, .25)
  2  $green: #8ec63f
- 3  color: rgba($green, .25)
- 4 </pre>
-<h4>
-Compiled CSS
-</h4>
-<pre> 1  color: rgba(142, 198, 63, .25);
- 2 </pre>
-<h4>
-Color Operations
-</h4>
-<p>
-On top of numbers, math may additionally be performed on colors using
+ 3  color: rgba($green, .25)</pre>
+ 
+<h4>Compiled CSS</h4>
+
+<pre> 1  color: rgba(142, 198, 63, .25);</pre>
+ 
+<h4>Color Operations</h4>
+
+<p>On top of numbers, math may additionally be performed on colors using
 addition, subtraction, multiplication, and division. These computations
 are performed on the red, green, and blue components, changing them as
-intended.
-</p>
-<h4>
-Sass
-</h4>
+intended.</p>
+
+<h4>Sass</h4>
+
 <pre> 1  color: #8ec63f + #666 
  2  color: #8ec63f * 2
- 3  color: rgba(142, 198, 63, .75) / rgba(255, 255, 255, .75)
- 4 </pre>
-<h4>
-Compiled CSS
-</h4>
+ 3  color: rgba(142, 198, 63, .75) / rgba(255, 255, 255, .75)</pre>
+ 
+<h4>Compiled CSS</h4>
+
 <pre> 1  color: #f4ffa5; 
  2  color: #ffff7e; 
- 3  color: rgba(0, 0, 0, .75);  
- 4 </pre>
-<h4>
-Color Alterations
-</h4>
-<p>
-Using color operators to perform calculations is helpful but can be a
+ 3  color: rgba(0, 0, 0, .75);</pre>
+
+<h4>Color Alterations</h4>
+
+<p>Using color operators to perform calculations is helpful but can be a
 bit challenging as well. In this case color alterations may be a better
 option. Color alterations provide the ability to inverse colors, find
 complementary colors, mix colors together, or find the grayscale value
-of a color.
-</p>
+of a color.</p>
+
 <ul>
-<li>
-invert()
-</li>
-<li>
-complement()
-</li>
-<li>
-mix()
-</li>
-<li>
-grayscale()
-</li>
+  <li>invert()</li>
+  <li>complement()</li>
+  <li>mix()</li>
+  <li>grayscale()</li>
 </ul>
-<h4>
-Sass
-</h4>
+
+<h4>Sass</h4>
+
 <pre> 1  color: invert(#8ec63f)
  2  color: complement(#8ec63f)  
  3  color: mix(#8ec63f, #fff)
  4  color: mix(#8ec63f, #fff, 10%) 
- 5  color: grayscale(#8ec63f)
- 6 </pre>
-<h4>
-Compiled CSS
-</h4>
+ 5  color: grayscale(#8ec63f)</pre>
+ 
+<h4>Compiled CSS</h4>
+
 <pre> 1  color: #7139c0; 
  2  color: #773fc6; 
  3  color: #c6e29f; 
  4  color: #f3f9eb; 
- 5  color: #838383; 
- 6 </pre>
-<h4>
-HSLa Color Alterations
-</h4>
-<p>
-HSLa color alterations take things a step further, adding in even more
+ 5  color: #838383;</pre>
+ 
+<h4>HSLa Color Alterations</h4>
+
+<p>HSLa color alterations take things a step further, adding in even more
 alterations. Some of the more popular HSLa color alterations
-include lighten(), darken(), saturate(), and desaturate().
-</p>
+include lighten(), darken(), saturate(), and desaturate().</p>
+
 <ul>
-<li>
-lighten()
-</li>
-<li>
-darken()
-</li>
-<li>
-saturate()
-</li>
-<li>
-desaturate()
-</li>
-<li>
-adjust-hue()
-</li>
-<li>
-fade-in()
-</li>
-<li>
-fade-out()
-</li>
+  <li>lighten()</li>
+  <li>darken()</li>
+  <li>saturate()</li>
+  <li>desaturate()</li>
+  <li>adjust-hue()</li>
+  <li>fade-in()</li>
+  <li>fade-out()</li>
 </ul>
-<h4>
-Sass
-</h4>
+
+<h4>Sass</h4>
+
 <pre> 1  color: lighten(#8ec63f, 50%)
  2  color: darken(#8ec63f, 30%) 
  3  color: saturate(#8ec63f, 75%)  
@@ -5336,11 +5165,10 @@ Sass
  5  color: adjust-hue(#8ec63f, 30) 
  6  color: adjust-hue(#8ec63f, -30)
  7  color: fade-in(rgba(142, 198, 63, 0), .4) 
- 8  color: fade-out(#8ec63f, .4)
- 9 </pre>
-<h4>
-Compiled CSS
-</h4>
+ 8  color: fade-out(#8ec63f, .4)</pre>
+ 
+<h4>Compiled CSS</h4>
+
 <pre> 1  color: white;
  2  color: #3b5319; 
  3  color: #98ff06; 
@@ -5348,18 +5176,15 @@ Compiled CSS
  5  color: #4ac63f; 
  6  color: #c6bb3f; 
  7  color: rgba(142, 198, 63, 0.4);
- 8  color: rgba(142, 198, 63, 0.6);
- 9 </pre>
-<h4>
-Color Manipulation
-</h4>
-<p>
-Outside of altering colors Sass can also directly manipulate colors.
+ 8  color: rgba(142, 198, 63, 0.6);</pre>
+ 
+<h4>Color Manipulation</h4>
+
+<p>Outside of altering colors Sass can also directly manipulate colors.
 Manipulating colors provides the most control over how to finely tune
 specific color properties. With this control also comes complexity,
 which is why color manipulations are a bit less common than color
-alterations.
-</p>
+alterations.</p>
 
 <pre>  - change-color() --- Set any property of a color
     $color, [$red], [$green], [$blue], [$hue],
@@ -5384,7 +5209,7 @@ alterations.
 
 <pre> 1  color: #3cff3f; 
  2  color: white;
- 3  color: #aad46f; </pre>
+ 3  color: #aad46f;</pre>
  
 <h4>Extends</h4>
 
@@ -5413,7 +5238,7 @@ code weight. Additionally, extends parley nicely with OOCSS and SMACSS.
  4  .alert-error 
  5  @extend .alert 
  6  background: #f2dede
- 7  color: #b94a48  </pre>
+ 7  color: #b94a48</pre>
 
 <h4>Compiled CSS</h4>
 
@@ -5870,26 +5695,22 @@ rel="noopener noreferrer" target="_blank"> over 63%</a> of them.
 Needless to say, they are fairly popular. You may even aspire
 to <a href="http://jsforcats.com/" 
 rel="noopener noreferrer" target="_blank">write</a> JavaScript or jQuery
-to build your own behaviors at one point or another.
-</p>
-<p>
-If you are asking what exactly are JavaScript and jQuery fear not, this
+to build your own behaviors at one point or another.</p>
+
+<p>If you are asking what exactly are JavaScript and jQuery fear not, this
 lesson gives a brief overview of JavaScript and then takes a look at
-jQuery.
-</p>
-<h3>
-JavaScript Intro
-</h3>
-<p>
-<a href="https://developer.mozilla.org/en-US/docs/JavaScript/A_re-introduction_to_JavaScript" 
+jQuery.</p>
+
+<h3>JavaScript Intro</h3>
+
+<p><a href="https://developer.mozilla.org/en-US/docs/JavaScript/A_re-introduction_to_JavaScript" 
 rel="noopener noreferrer" target="_blank">JavaScript (20xx)</a> provides
 the ability to add interactivity to a website, and help enrich the user
 experience. HTML provides a page with <b>structure</b> and CSS provides
 a page with <b>appearance</b>, JavaScript provide a page
-with <b>behavior</b>.
-</p>
-<p>
-Like CSS, JavaScript should be saved in an external file with
+with <b>behavior</b>.</p>
+
+<p>Like CSS, JavaScript should be saved in an external file with
 the .js file extension, and then referenced within an HTML document
 using the script element. Where the JavaScript reference is placed with
 HTML depends on when it should be executed. Generally speaking, the best
@@ -5897,117 +5718,96 @@ place to reference JavaScript files is right before the
 closing &lt;/body&gt; tag so that the JavaScript file is loaded after
 all of the HTML has been parsed. However, at times, JavaScript is needed
 to help render HTML and determine it’s behavior, thus may be referenced
-within a documents head.
-</p>
-<pre> 1  &lt;script src=&quot;script.js&quot;&gt;&lt;/script&gt; 
- 2 </pre>
-<h4>
-Values &amp; Variables
-</h4>
-<p>
-Part of the fundamentals of JavaScript include values and variables.
-Values, in general, are the different types of values that JavaScript
-will recognize, while variables are used to store and share these
-values.
-</p>
-<p>
-Values may include strings of text, true or false Booleans,
-numbers, undefined, null, or other values such as functions or objects.
-</p>
-<p>
-One popular way variables are defined is with the var keyword, followed
-by the variable name, an equal sign (=), then the value, ending with a
-semicolon (;). The variable name must begin with a letter, underscore
-(_) (_), or dollar sign ($). Variables cannot begin with numbers,
-although they may be used subsequently, and they cannot use hyphens
-whatsoever. Additionally, JavaScript is case sensitive so letters
-include a through z in both lower and uppercase.
-</p>
-<p>
-The common convention around naming variables is to
+within a documents head.</p>
+
+<pre>&lt;script src=&quot;script.js&quot;&gt;&lt;/script&gt;</pre>
+
+<h4>Values &amp; Variables</h4>
+
+<p>Part of the fundamentals of JavaScript include values and variables. Values, in 
+general, are the different types of values that JavaScript will recognize, while 
+variables are used to store and share these values.</p>
+
+<p>Values may include strings of text, true or false Booleans, numbers, undefined, null, 
+or other values such as functions or objects.</p>
+
+<p>One popular way variables are defined is with the var keyword, followed by the 
+variable name, an equal sign (=), then the value, ending with a semicolon (;). The 
+variable name must begin with a letter, underscore (_) (_), or dollar sign ($). 
+Variables cannot begin with numbers, although they may be used subsequently, and they 
+cannot use hyphens whatsoever. Additionally, JavaScript is case sensitive so letters
+include a through z in both lower and uppercase.</p>
+
+<p>The common convention around naming variables is to
 use <a href="https://en.wikipedia.org/wiki/CamelCase" 
 rel="noopener noreferrer" target="_blank">camelCase</a>, without the use
 of any dashes or underscores. camelCase consist of combining words while
 removing spaces, capitalizing the beginning of each new word except for
 the initial word. For example, shay_is_awesome would more commonly
-named  shayIsAwesome.
-</p>
+named  shayIsAwesome.</p>
+
 <pre> 1  var theStarterLeague = 125; 
  2  var food_truck = &#39;Coffee&#39;;
  3  var mixtape01 = true; 
- 4  var vinyl = ]&#39;Miles Davis&#39;, &#39;Frank Sinatra&#39;, &#39;Ray Charles&#39;[; 
- 5 </pre>
-<h4>
-Statements
-</h4>
-<p>
-As a whole, JavaScript is a set of statements, of which are executed by
+ 4  var vinyl = ]&#39;Miles Davis&#39;, &#39;Frank Sinatra&#39;, &#39;Ray Charles&#39;[; </pre>
+ 
+<h4>Statements</h4>
+
+<p>As a whole, JavaScript is a set of statements, of which are executed by
 the browser in the sequence they are written. These statements provide
 commands which determine the different behaviors to be taken. Statements
 come in all different shapes and sizes, with multiple statements
 separated with semicolons, ;. New statements should begin on a new line,
 and indentation should be used when nesting statements for better
-legibility, but is not required.
-</p>
+legibility, but is not required.</p>
+
 <pre> 1  log(polaroid);  
  2  return(&#39;bicycle lane&#39;);
- 3  alert(&#39;Congratulations, you &#39; + outcome);  
- 4 </pre>
-<h4>
-Functions
-</h4>
-<p>
-Adding to the fundamentals of JavaScript, it is important to take a look
+ 3  alert(&#39;Congratulations, you &#39; + outcome);</pre>
+
+<h4>Functions</h4>
+
+<p>Adding to the fundamentals of JavaScript, it is important to take a look
 at functions. Functions provide a way to perform a set of scripted
 behaviors now, or saved for later, and depending on the function they
-may even accept different arguments.
-</p>
-<p>
-A function is defined by using the function keyword followed by the
+may even accept different arguments.</p>
+
+<p>A function is defined by using the function keyword followed by the
 function name, a list of commas separated arguments wrapped in
 parentheses, if necessary, and then the JavaScript statement, or
-statements, that defines the function enclosed in curly braces, {}.
-</p>
+statements, that defines the function enclosed in curly braces, {}.</p>
+
 <pre> 1  function sayHello(name) {
- 2  return(&#39;Hello &#39; + name);  
- 3  } 
- 4 </pre>
-<h4>
-Arrays
-</h4>
-<p>
-As you may have recognized, some values may be returned as an array.
+ 2    return(&#39;Hello &#39; + name);  
+ 3  }</pre>
+ 
+<h4>Arrays</h4>
+
+<p>As you may have recognized, some values may be returned as an array.
 Arrays include a way to store a list of items, or values. Arrays are
 helpful for many reasons, one being the ability to be traversed with
 different methods and operators. Additionally, depending on the
-situation, arrays can be used to store, and return, a variety of
-different values.
-</p>
-<p>
-Generally speaking arrays are identified within square brackets, [],
-with comma separated items. The items start at 0 and increase from
-there. When identifying the third item in a list it is actually
-identified as [2].
-</p>
-<h4>
-Objects
-</h4>
-<p>
-JavaScript is also built on the foundation of objects, which are a
-collection of key and value pairs. For example, there may be an object
-named school which includes the keys, also known as
-properties, name, location, students, and  teachers, and their values.
-</p>
-<p>
-In the example below the variable school is set up as an object to hold
-multiple properties. Each property has a key and value. The entire
-object is wrapped inside of curly braces, {}, with comma separated
-properties, each having a key followed by a colon and value.
-</p>
+situation, arrays can be used to store, and return, a variety of different values.</p>
+
+<p>Generally speaking arrays are identified within square brackets, [], with comma 
+separated items. The items start at 0 and increase from there. When identifying the third 
+item in a list it is actually identified as [2].</p>
+
+<h4>Objects</h4>
+
+<p>JavaScript is also built on the foundation of objects, which are a collection of key 
+and value pairs. For example, there may be an object named school which includes the 
+keys, also known as properties, name, location, students, and  teachers, and their 
+values.</p>
+
+<p>In the example below the variable school is set up as an object to hold multiple 
+properties. Each property has a key and value. The entire object is wrapped inside of 
+curly braces, {}, with comma separated properties, each having a key followed by a colon 
+and value.</p>
+
 <details>
-<summary>
-Example, Object
-</summary>
+  <summary>Example, Object</summary>
+
 <pre> 1  // Object
  2  var school = {
  3    name: &#39;The Starter League&#39;,
@@ -6016,8 +5816,8 @@ Example, Object
  6    teachers: [&#39;Jeff&#39;, &#39;Raghu&#39;, &#39;Carolyn&#39;, &#39;Shay&#39;]
  7  };
  8  // Array
- 9  var school = [&#39;Austin&#39;, &#39;Chicago&#39;, &#39;Portland&#39;];
- 10 </pre>
+ 9  var school = [&#39;Austin&#39;, &#39;Chicago&#39;, &#39;Portland&#39;];</pre>
+
 </details>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 13. web inspector console (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -6034,111 +5834,96 @@ may be run from within the console.</p>
 
 <h4>jQuery Intro</h4>
 
-<p>
-With a basic understanding of JavaScript and some of it’s foundations,
+<p>With a basic understanding of JavaScript and some of it’s foundations,
 it is time to take a look at jQuery. jQuery is an open source JavaScript
 library written by John Resig that simplifies the interaction between
 HTML, CSS, and JavaScript. Since 2006, when jQuery was released, it has
-taken off, being used by websites and companies large and small.
-</p>
-<p>
-What has made jQuery so popular is it’s 
+taken off, being used by websites and companies large and small.</p>
+
+<p>What has made jQuery so popular is it’s 
 <a href="https://tutsplus.com/course/30-days-to-learn-jquery/" 
 rel="noopener noreferrer" target="_blank">ease of use</a>, with
 selections resembling CSS and a comprehensible separation of behavior.
 The benefits of jQuery are massive, however for our purpose we will only
 be considered about the ability to find elements and perform actions
-with them.
-</p>
-<h4>
-Getting Started with jQuery
-</h4>
-<p>
-The first step to using jQuery is to reference it from within a HTML
+with them.</p>
+
+<h4>Getting Started with jQuery</h4>
+
+<p>The first step to using jQuery is to reference it from within a HTML
 document. As previously mentioned with JavaScript, this is done using
 the script element just before the closing 
 </body>
  tag. Since jQuery is it’s own library it is best to keep it separate
-from all the other JavaScript being written.
-</p>
-<p>
-When referencing jQuery there are a few options, specifically as whether
+from all the other JavaScript being written.</p>
+
+<p>When referencing jQuery there are a few options, specifically as whether
 to use the minified or uncompressed version, and as whether to use a
 content delivery network, CDN, such
 as <a hre="https://developers.google.com/speed/libraries/devguide">
 Google hosted libraries</a>. If the code being written is for a live,
 production environment it is encouraged to use the minified version for
 better loading times. Additionally, using a CDN like Google also helps
-with loading time, and potential caching benefits.
-</p>
+with loading time, and potential caching benefits.</p>
+
 <pre> 1  &lt;script src=&quot;//aja
  2  x.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js&quot;&gt;&lt;/script&gt; 
  3  &lt;script src=&quot;script.js&quot;&gt;&lt;/script&gt; </pre>
-<p>
-In the code sample above, notice the second script element referencing a
+ 
+<p>In the code sample above, notice the second script element referencing a
 second JavaScript file. All of the custom, handwritten JavaScript and
 jQuery should be written in this file. Additionally, this file is
 specifically placed after the jQuery file so that it may reference
-jQuery functions already defined.
-</p>
-<h4>
-Where is the leading http?
-</h4>
-<p>
-You may have noticed that there isn’t a leading http within Google CDN
+jQuery functions already defined.</p>
+
+<h4>Where is the leading http?</h4>
+
+<p>You may have noticed that there isn’t a leading http within Google CDN
 reference example above. The http has been omitted intentionally to
 allow for both http and https connections. When working locally, without
 the benefit of a web server, the leading http will need to be included
 to prevent attempting to locate the file on the systems local disk
-drive.
-</p>
-<h4>
-jQuery Object
-</h4>
-<p>
-jQuery comes with it’s own object, the dollar sign, <span
+drive.</p>
+
+<h4>jQuery Object</h4>
+
+<p>jQuery comes with it’s own object, the dollar sign, <span
 class="math inline">, <em>a</em><em>l</em><em>s</em><em>o</em><em>k</em><em>n</em><em>o</em><em>w</em><em>n</em><em>a</em><em>s</em><em>j</em><em>Q</em><em>u</em><em>e</em><em>r</em><em>y</em>.<em>T</em><em>h</em><em>e</em></span> object
 is specifically made for selecting an element and then returning that
 element node to perform an action on it. These selections and actions
 should be written in a new file, referenced outside of the actual jQuery
-library.
-</p>
+library.</p>
+
 <pre> 1  $();
- 2  jQuery();  
- 3 </pre>
-<h4>
-Document Ready
-</h4>
-<p>
-Before trigging any jQuery to traverse and manipulate a page it is best
+ 2  jQuery();</pre>
+ 
+<h4>Document Ready</h4>
+
+<p>Before trigging any jQuery to traverse and manipulate a page it is best
 to wait until the DOM is finished loading. Fortunately jQuery has a
 ready event, .ready(), which can be called when the HTML document is
 ready to be altered. By placing all of our other custom written jQuery
 inside of this function we can guarantee that it will not be executed
-until the page has loaded and the DOM is ready.
-</p>
+until the page has loaded and the DOM is ready.</p>
+
 <pre> 1  $(document).ready(function(event){  
  2  // jQuery code  
- 3  });  
- 4 </pre>
-<h4>
-Selectors
-</h4>
-<p>
-As previously mentioned, one of the core concepts of jQuery is
+ 3  });</pre>
+ 
+<h4>Selectors</h4>
+
+<p>As previously mentioned, one of the core concepts of jQuery is
 to <a href="http://api.jquery.com/category/selectors/" 
 rel="noopener noreferrer" target="_blank">select elements</a> and
 perform an action. jQuery has done a great job of making the task of
 selecting an element, or elements, extremely easy by mimicking that of
 CSS. On top of the general CSS selectors, jQuery has support for all of
 the unique CSS3 selectors, which work regardless of which browser is
-being used.
-</p>
-<p>
-Invoking the jQuery object, $(), containing a selector will return that
+being used.</p>
+
+<p>Invoking the jQuery object, $(), containing a selector will return that
 DOM node to manipulate it. The selector falls within the
-parentheses, (‘…’), and may select elements just like that of CSS.
-</p>
+parentheses, (‘…’), and may select elements just like that of CSS.</p>
 
 <pre> 1  $(&#39;.feature&#39;); // Class selector  
  2  $(&#39;li strong&#39;); // Descendant selector 
@@ -6165,7 +5950,7 @@ rel="noopener noreferrer" target="_blank"> filters</a> built into jQuery
 to help out. These filters are an extension to CSS3 and provide more
 control over selecting an element or its relatives.</p>
 
-<pre> 1  $(&#39;div:has(strong)&#39;);</pre>
+<pre>$(&#39;div:has(strong)&#39;);</pre>
 
 <p>As they stand these filters may be used inside of the selector, however
 not being native to the DOM they are a bit slow. The best results with
@@ -6186,7 +5971,7 @@ the div elements in the DOM, which are then filtered using
 the .not() method. With this specific method all of the div elements
 without a class of type or collection will be selected.</p>
 
-<pre> 1  $(&#39;div&#39;).not(&#39;.type, .collection&#39;);</pre>
+<pre>$(&#39;div&#39;).not(&#39;.type, .collection&#39;);</pre>
  
 <h4>Chaining Methods</h4>
 
@@ -6198,7 +5983,7 @@ in-between them.</p>
 the .parent() method. Combined together this will only select the parent
 elements of div elements without a class of type or collection.</p>
 
-<pre> 1  $(&#39;div&#39;).not(&#39;.type, .collection&#39;).parent();</pre>
+<pre>$(&#39;div&#39;).not(&#39;.type, .collection&#39;).parent();</pre>
 
 <h4>Traversing Methods</h4>
 
@@ -7977,7 +7762,7 @@ transition values.</p>
 <h4>Transitional Button</h4>
 <h4>HTML</h4>
 
-<pre> 1  &lt;button&gt;Awesome Button&lt;/button&gt;</pre>
+<pre>&lt;button&gt;Awesome Button&lt;/button&gt;</pre>
 
 <br><br>
 <details>
@@ -9389,7 +9174,7 @@ need.</p>
 
 <pre> 1  &lt;section itemscope itemtype=&quot;http://schema.org/Person&quot;&gt; 
  2    ... 
- 3  &lt;/section&gt; </pre>
+ 3  &lt;/section&gt;</pre>
 
 <p>Once the scope and type of the item have been determined, properties
 may then be set. These properties are identified by different elements
@@ -9505,7 +9290,7 @@ as can some of the nested item types.</p>
  13       &lt;span itemprop=&quot;postalCode&quot;&gt;60601&lt;/span&gt;  
  14     &lt;/address&gt; 
  15   &lt;/div&gt;
- 16 &lt;/section&gt; </pre>
+ 16 &lt;/section&gt;</pre>
 
 </details>
 
