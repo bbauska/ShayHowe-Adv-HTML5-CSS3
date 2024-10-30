@@ -3632,57 +3632,49 @@ viewport sizes as determined by different device resolutions, such
 as 320px, 480px, 768px, 1024px, 1224px, and so forth. This is
 a <b>bad</b> idea.</p>
 
-<p>
-When building a responsive website it should adjust to an array of
+<p>When building a responsive website it should adjust to an array of
 different viewport sizes, regardless of the device. Breakpoints should
 only be introduced when a website starts to break, look weird, or the
-experience is being hampered.
-</p>
-<p>
-Additionally, new devices and resolutions are being released all of the
-time. Trying to keep up with these changes could be an endless process.
-</p>
-<h4>
-Mobile First
-</h4>
-<p>
-One popular technique with using media queries is called <i>mobile
+experience is being hampered.</p>
+
+<p>Additionally, new devices and resolutions are being released all of the
+time. Trying to keep up with these changes could be an endless process.</p>
+
+<h4>Mobile First</h4>
+
+<p>One popular technique with using media queries is called <i>mobile
 first</i>. The <a href="https://abookapart.com/products/mobile-first" 
 rel="noopener noreferrer" target="_blank">mobile first</a> approach
 includes using styles targeted at smaller viewports as the default
 styles for a website, then use media queries to add styles as the
-viewport grows.
-</p>
-<p>
-The operating belief behind mobile first design is that a user on a
+viewport grows.</p>
+
+<p>The operating belief behind mobile first design is that a user on a
 mobile device, commonly using a smaller viewport, shouldn’t have to load
 the styles for a desktop computer only to have them over written with
 mobile styles later. Doing so is a waste of bandwidth. Bandwidth that is
-precious to any users looking for a snappy website.
-</p>
-<p>
-The mobile first approach also advocates designing with the constraints
+precious to any users looking for a snappy website.</p>
+
+<p>The mobile first approach also advocates designing with the constraints
 of a mobile user in mind. Before too long, the majority of Internet
 consumption will be done on a mobile device. Plan for them accordingly
-and develop intrinsic mobile experiences.
-</p>
-<p>
-A breakout of mobile first media queries might look abit like the
-following.
-</p>
+and develop intrinsic mobile experiences.</p>
+
+<p>A breakout of mobile first media queries might look abit like the
+following.</p>
+
 <pre> 1  /* Default styles first then media queries */ 
  2  @media screen and (min-width: 400px) {...} 
  3  @media screen and (min-width: 600px) {...} 
  4  @media screen and (min-width: 1000px) {...}
- 5  @media screen and (min-width: 1400px) {...}
- 6 </pre>
-<p>
-Additionally, downloading unnecessary media assets can be stopped by
+ 5  @media screen and (min-width: 1400px) {...}</pre>
+
+<p>Additionally, downloading unnecessary media assets can be stopped by
 using media queries. Generally speaking, avoiding CSS3 shadows,
 gradients, transforms, and animations within mobile styles isn’t a bad
 idea either. When used excessively, they cause heavy loading and can
-even reduce a device’s battery life.
-</p>
+even reduce a device’s battery life.</p>
+
 <pre> 1  /* Default media */
  2  body {
  3    background: #ddd;
@@ -3692,62 +3684,54 @@ even reduce a device’s battery life.
  7    body {
  8      background-image: url(&quot;bg.png&quot;) 50% 50% no-repeat;  
  9    }
- 1  }
- 1 </pre>
-<h4>
-Mobile First Demo
-</h4>
-<p>
-Adding media queries to our previous example, we overwrote a handful of
+ 10 }</pre>
+
+<h4>Mobile First Demo</h4>
+
+<p>Adding media queries to our previous example, we overwrote a handful of
 styles in order to have a better layout on viewports under 420 pixels
 wide. Rewriting this code to use the mobile styles first by default then
 adding media queries to adjust for viewports over 420 pixels wide we
-build the following:
-</p>
+build the following:</p>
+
 <details>
-<summary>
-Mobile First Demo
-</summary>
+  <summary>Mobile First Demo</summary>
+
 <pre> 1  section,
  2  aside { 
- 3  margin: 1.858736059%; 
+ 3    margin: 1.858736059%; 
  4  } 
  5  @media all and (min-width: 420px) { 
- 6  .container { 
- 7  max-width: 538px;  
- 8  } 
- 9  section {  
- 10  float: left; 
- 11  width: 63.197026%; 
- 12  } 
- 13  aside { 
- 14 float: right;
- 15  width: 29.3680297%;
- 16  } 
- 17 } 
- 18 </pre>
+ 6    .container { 
+ 7      max-width: 538px;  
+ 8    }
+ 9    section {  
+ 10     float: left; 
+ 11     width: 63.197026%; 
+ 12   } 
+ 13   aside { 
+ 14     float: right;
+ 15     width: 29.3680297%;
+ 16   } 
+ 17 }</pre>
+
 </details>
-<h4>
-Mobile First Demo
-</h4>
-<p>
-Notice, this is the same amount of code as before. The only exception
+
+<h4>Mobile First Demo</h4>
+
+<p>Notice, this is the same amount of code as before. The only exception
 here is that mobile devices only have to render only <b>one</b> CSS
 declaration. All of the other styles are deferred, only loading on
-larger viewports and done so without overwriting any initial styles.
-</p>
-<h4>
-Viewport
-</h4>
-<p>
-Mobile devices generally do a pretty decent job of displaying websites
+larger viewports and done so without overwriting any initial styles.</p>
+
+<h4>Viewport</h4>
+
+<p>Mobile devices generally do a pretty decent job of displaying websites
 these days. Sometimes they could use a little assistance though,
 particularly around identifying
 the <a href="http://dev.opera.com/articles/view/an-introduction-to-meta-viewport-and-viewport/" 
 rel="noopener noreferrer" target="_blank">viewport</a> size, scale, and
-resolution of a website. To remedy this, Apple invented
-the viewport meta tag.
-</p>
+resolution of a website. To remedy this, Apple invented the viewport meta tag.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~ 10. website without viewport meta tag (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <img class="border displayed"
@@ -3763,21 +3747,17 @@ may not interrupt media queries.</h6>
 
 <h4>Viewport Height &amp; Width</h4>
 
-<p>
-Using the viewport meta tag with either the height or width values will
+<p>Using the viewport meta tag with either the height or width values will
 define the height or width of the viewport respectively. Each value
 accepts either a positive integer or keyword. For the height property
 the keyword device-height value is accepted, and for the width property
 the keyword device-width is accepted. Using these keywords will inherit
-the device’s default height and width value.
-</p>
-<p>
-For the best results, and the best looking website, it is recommend that
-you use the device defaults by applying
-the device-height and device-width values.
-</p>
-<pre> 1  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot;&gt;
- 2 </pre>
+the device’s default height and width value.</p>
+
+<p>For the best results, and the best looking website, it is recommend that
+you use the device defaults by applying the device-height and device-width values.</p>
+
+<pre>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot;&gt;</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~ 11. website with viewport meta tag (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <img class="border displayed"
@@ -3793,20 +3773,17 @@ properly and to pick up any qualifying media queries.</h6>
 
 <h4>Viewport Scale</h4>
 
-<p>To control how a website is scaled on a mobile device, and how users can
-continue to scale a website, use
-the minimum-scale, maximum-scale, initial-scale, and 
-user-scalable properties.
-</p>
-<p>
-The initial-scale of a website should be set to 1 as this defines the
-ratio between the device height, while in a portrait orientation, and
-the viewport size. Should a device be in landscape mode this would be
-the ratio between the device width and the viewport size. Values
-for initial-scale should always be a positive integer between 0 and 10.
-</p>
-<pre> 1  &lt;meta name=&quot;viewport&quot; content=&quot;initial-scale=2&quot;&gt;
- 2 </pre>
+<p>To control how a website is scaled on a mobile device, and how users can continue to 
+scale a website, use the minimum-scale, maximum-scale, initial-scale, and user-scalable 
+properties.</p>
+
+<p>The initial-scale of a website should be set to 1 as this defines the ratio between 
+the device height, while in a portrait orientation, and the viewport size. Should a 
+device be in landscape mode this would be the ratio between the device width and the 
+viewport size. Values for initial-scale should always be a positive integer between 0 
+and 10.</p>
+
+<pre>&lt;meta name=&quot;viewport&quot; content=&quot;initial-scale=2&quot;&gt;</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 12. viewport scale meta tag (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <img class="border displayed"
@@ -3818,61 +3795,51 @@ for initial-scale should always be a positive integer between 0 and 10.
 <h6 align="center" width="40%">
 Fig. 4. Using an integer above 1 will zoom the website to be larger than
 the default scale. Generally speaking, this value will most commonly be
-set to 1.
-</h6>
-<p>
-The minimum-scale and maximum-scale values determine how small and how
+set to 1.</h6>
+
+<p>The minimum-scale and maximum-scale values determine how small and how
 large a viewport may be scaled. When using minimum-scale the value
 should be a positive integer lower than or equal to the initial-scale.
 Using the same reasoning, the maximum-scale value should be a positive
 integer greater than or equal to the initial-scale. Values for both of
-these must also be between 0 and 10.
-</p>
-<pre> 1  &lt;meta name=&quot;viewport&quot; content=&quot;minimum-scale=0&quot;&gt;
- 2 </pre>
-<p>
-Generally speaking, these values should not be set to the same value as
+these must also be between 0 and 10.</p>
+
+<pre>&lt;meta name=&quot;viewport&quot; content=&quot;minimum-scale=0&quot;&gt;</pre>
+ 
+<p>Generally speaking, these values should not be set to the same value as
 the initial-scale. This would disable any zooming, which can be
 accomplished instead by using the user-scalable value. Setting
 the user-scalable value to no will disable any zooming. Alternatively,
-setting the user-scalable value to yes will turn on zooming.
-</p>
-<p>
-Turning off the ability to scale a website is a <b>bad idea</b>. It
+setting the user-scalable value to yes will turn on zooming.</p>
+
+<p>Turning off the ability to scale a website is a <b>bad idea</b>. It
 harms accessibility and usability, preventing those with disabilities
-from viewing a website as desired.
-</p>
-<pre> 1  &lt;meta name=&quot;viewport&quot; content=&quot;user-scalable=yes&quot;&gt; 
- 2 </pre>
-<h4>
-Viewport Resolution
-</h4>
-<p>
-Letting the browser decide how to scale a website based off any viewport
-scale values usually does the trick. When more control is needed,
-specifically over the resolution of a device,
-the target-densitydpi value may be used. The  target-densitydpi viewport
-accepts a handful of values including device-dpi, 
-high-dpi, medium-dpi, low-dpi, or an actual DPI number.
-</p>
-<p>
-Using the target-densitydpi viewport value is rare, but extremely
-helpful when pixel by pixel control is needed.
-</p>
-<pre> 1  &lt;meta name=&quot;viewport&quot; content=&quot;target-densitydpi=device-dpi&quot;&gt;  
- 2 </pre>
-<h4>
-Combining Viewport Values
-</h4>
-<p>
-The viewport meta tag will accept individual values as well as multiple
+from viewing a website as desired.</p>
+
+<pre>&lt;meta name=&quot;viewport&quot; content=&quot;user-scalable=yes&quot;&gt;</pre>
+
+<h4>Viewport Resolution</h4>
+
+<p>Letting the browser decide how to scale a website based off any viewport scale values 
+usually does the trick. When more control is needed, specifically over the resolution of 
+a device, the target-densitydpi value may be used. The  target-densitydpi viewport 
+accepts a handful of values including device-dpi, high-dpi, medium-dpi, low-dpi, or an 
+actual DPI number.</p>
+
+<p>Using the target-densitydpi viewport value is rare, but extremely helpful when 
+pixel by pixel control is needed.</p>
+
+<pre>&lt;meta name=&quot;viewport&quot; content=&quot;target-densitydpi=device-dpi&quot;&gt;</pre>
+
+<h4>Combining Viewport Values</h4>
+
+<p>The viewport meta tag will accept individual values as well as multiple
 values, allowing multiple viewport properties to be set at once. Setting
 multiple values requires comma separating them within
 the content attribute value. One of the recommended viewport values is
-outlined below, using both the width and initial-scale properties.
-</p>
-<pre> 1  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
- 2 </pre>
+outlined below, using both the width and initial-scale properties.</p>
+
+<pre>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~ 11. website with viewport meta tag (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <img class="border displayed"
@@ -3892,6 +3859,7 @@ styles of how a website should be rendered it has been recommend to move
 the viewport from a meta tag with HTML to an @ rule within CSS. This
 helps keep the style separated from content, providing a more semantic
 approach.</p>
+
 <p>Currently some browsers have already implemented the <span
 class="citation" data-cites="viewport">@viewport</span> rule, however
 support isn’t great across the board. The previously
@@ -3899,10 +3867,9 @@ recommended viewport meta tag would look like the following <span
 class="citation" data-cites="viewport">@viewport</span> rule in CSS.</p>
 
 <pre> 1  @viewport {  
- 2  width: device-width;
- 3  zoom: 1; 
- 4  }  
- 5  </pre>
+ 2    width: device-width;
+ 3    zoom: 1; 
+ 4  }</pre>
  
 <h4>Flexible Media</h4>
 
@@ -3915,9 +3882,8 @@ with a value of 100%. Doing so ensures that as the viewport gets smaller
 any media will scale down according to its containers width.</p>
 
 <pre> 1  img, video, canvas {  
- 2  max-width: 100%;
- 3  } 
- 4 </pre>
+ 2    max-width: 100%;
+ 3  }</pre>
  
 <h4>Flexible Media Demo</h4>
 
@@ -3930,30 +3896,26 @@ media this is a huge disappointment. Fortunately, there is a 
 <a href="http://www.alistapart.com/articles/creating-intrinsic-ratios-for-video/" 
 rel="noopener noreferrer" target="_blank">work around</a>.</p>
 
-<p>
-To get embedded media to be fully responsive, the embedded element needs
+<p>To get embedded media to be fully responsive, the embedded element needs
 to be absolutely positioned within a parent element. The parent element
 needs to have a width of 100% so that it may scale based on the width of
 the viewport. The parent element also needs to have a height of 0 to
-trigger the hasLayout mechanism within Internet Explorer.
-</p>
-<p>
-Padding is then given to the bottom of the parent element, the value of
+trigger the hasLayout mechanism within Internet Explorer.</p>
+
+<p>Padding is then given to the bottom of the parent element, the value of
 which is set in the same aspect ratio of the video. This allows the
 height of the parent element to be proportionate to that of it’s width.
 Remember the responsive design formula from before? If a video has an
 aspect ratio of 16:9, 9 divided by 16 equals .5625, thus requiring a
 bottom padding of 56.25%. Padding on the bottom and not the top is
 specifically used to prevent Internet Explorer 5.5 from breaking, and
-treating the parent element as an absolutely positioned element.
-</p>
+treating the parent element as an absolutely positioned element.</p>
 
 <h4>HTML</h4>
 
 <pre> 1  &lt;figure&gt; 
  2    &lt;iframe src=&quot;https://www.youtube.com/embed/Sv3xVOs7_No&quot;&gt;&lt;/iframe&gt; 
- 3  &lt;/figure&gt;
- 4 </pre>
+ 3  &lt;/figure&gt;</pre>
 
 <br><br>
 
@@ -3961,19 +3923,18 @@ treating the parent element as an absolutely positioned element.
   <summary>CSS</summary>
 
 <pre> 1  figure {
- 2  height: 0; 
- 3  padding-bottom: 56.25%; /* 16:9 */ 
- 4  position: relative;
- 5  width: 100%; 
+ 2    height: 0; 
+ 3    padding-bottom: 56.25%; /* 16:9 */ 
+ 4    position: relative;
+ 5    width: 100%; 
  6  } 
  7  iframe {
- 8  height: 100%;
- 9  left: 0;
- 10  position: absolute;
- 11  top: 0; 
- 13  width: 100%; 
- 14  } 
- 15 </pre>
+ 8    height: 100%;
+ 9    left: 0;
+ 10   position: absolute;
+ 11   top: 0; 
+ 13   width: 100%; 
+ 14 }</pre>
 
 </details>
 
@@ -3990,34 +3951,21 @@ rel="noopener noreferrer" target="_blank">review and edit this code</a> on thei
 <h4>
 Resources &amp; Links
 </h4>
+
 <ul>
-<li>
-<a href="http://www.alistapart.com/articles/responsive-web-design/"
-    rel="noopener noreferrer" target="_blank"> Responsive Web
-Design</a> via A List Apart
-</li>
-<li>
-<a href="http://dev.w3.org/csswg/css3-values/#viewport-relative-lengths"
-    rel="noopener noreferrer" target="_blank"> Viewport Percentage
-Lengths</a> via W3C
-</li>
-<li>
-<a href="https://css-tricks.com/css-media-queries/"
-    rel="noopener noreferrer" target="_blank"> CSS Media Queries</a> via
-CSS-Tricks
-</li>
-<li>
-<a href="https://abookapart.com/products/mobile-first"
-    rel="noopener noreferrer" target="_blank"> Mobile First</a> via Luke
-Wroblewski&gt;
-</li>
-<li>
-<a href="http://dev.opera.com/articles/view/an-introduction-to-meta-viewport-and-viewport/"
-    rel="noopener noreferrer" target="_blank"> An Introduction to Meta
-Viewport and <span class="citation"
-data-cites="viewport">@viewport</span></a> via Dev. Opera
-</li>
+  <li><a href="http://www.alistapart.com/articles/responsive-web-design/"
+    rel="noopener noreferrer" target="_blank"> Responsive Web Design</a> via A List Apart</li>
+  <li><a href="http://dev.w3.org/csswg/css3-values/#viewport-relative-lengths"
+    rel="noopener noreferrer" target="_blank"> Viewport Percentage Lengths</a> via W3C</li>
+  <li><a href="https://css-tricks.com/css-media-queries/"
+    rel="noopener noreferrer" target="_blank"> CSS Media Queries</a> via CSS-Tricks</li>
+  <li><a href="https://abookapart.com/products/mobile-first"
+    rel="noopener noreferrer" target="_blank"> Mobile First</a> via Luke Wroblewski&gt;</li>
+  <li><a href="http://dev.opera.com/articles/view/an-introduction-to-meta-viewport-and-viewport/"
+    rel="noopener noreferrer" target="_blank"> An Introduction to Meta Viewport and 
+	<span class="citation" data-cites="viewport">@viewport</span></a> via Dev. Opera</li>
 </ul>
+
 <p><b>Lesson 3</b>
 <a href="https://learn.shayhowe.com/advanced-html-css/complex-selectors/" 
   rel="noopener noreferrer" target="_blank">Complex Selectors</a>
@@ -4033,106 +3981,89 @@ data-cites="viewport">@viewport</span></a> via Dev. Opera
 <h4>HTML</h4>
 
 <ul>
-<li>
-<a href="https://learn.shayhowe.com/advanced-html-css/preprocessors/#haml"
-    rel="noopener noreferrer" target="_blank"> Haml</a>
-</li>
+  <li><a href="https://learn.shayhowe.com/advanced-html-css/preprocessors/#haml"
+    rel="noopener noreferrer" target="_blank"> Haml</a></li>
 </ul>
 
 <h4>CSS</h4>
 
 <ul>
-<li>
-<a href="https://learn.shayhowe.com/advanced-html-css/preprocessors/#scss-sass"
-    rel="noopener noreferrer" target="_blank"> SCSS &amp; Sass</a>
-</li>
-<li>
-<a href="https://learn.shayhowe.com/advanced-html-css/preprocessors/#other-preprocessors"
-    rel="noopener noreferrer" target="_blank"> Other Preprocessors</a>
-</li>
+  <li><a href="https://learn.shayhowe.com/advanced-html-css/preprocessors/#scss-sass"
+    rel="noopener noreferrer" target="_blank"> SCSS &amp; Sass</a></li>
+  <li><a href="https://learn.shayhowe.com/advanced-html-css/preprocessors/#other-preprocessors"
+    rel="noopener noreferrer" target="_blank"> Other Preprocessors</a></li>
 </ul>
 
 <h4>SHARE</h4>
 
-<p>
-In time writing HTML and CSS may feel a bit taxing, requiring a lot of
+<p>In time writing HTML and CSS may feel a bit taxing, requiring a lot of
 the same tasks to be completed over and over again. Tasks such as
 closing tags in HTML or repetitively having to looking up hexadecimal
-color values in CSS.
-</p>
-<p>
-These different tasks, while commonly small, do add up to quite a bit of
+color values in CSS.</p>
+
+<p>These different tasks, while commonly small, do add up to quite a bit of
 inefficiency. Fortunately these, and a handful of other inefficiencies,
 have been recognized and preprocessor solutions have risen to the
-challenge.
-</p>
-<p>
+challenge.</p>
+
 <p>A preprocessor is a program that takes one type of data and converts
 it to another type of data. In the case of HTML and CSS, some of the
 more popular preprocessor languages include <a href="http://haml.info/" 
 rel="noopener noreferrer" target="_blank">Haml</a> and <a href="http://sass-lang.com/" 
-rel="noopener noreferrer" target="_blank">Sass</a>.<br></p>
-Haml is processed into HTML and Sass is processed into CSS.
-</p>
-<p>
-Upon setting out to solve some of the more common problems, Haml and
+rel="noopener noreferrer" target="_blank">Sass</a>.</p>
+<br>
+
+<p>Haml is processed into HTML and Sass is processed into CSS.</p>
+
+<p>Upon setting out to solve some of the more common problems, Haml and
 Sass found many additional ways to empower HTML and CSS, not only by
 removing the inefficiencies but also in creating ways to make building
 websites easier and more logical. The popularity of preprocessors have
 also brought along different frameworks to support them, one of the more
-popular being Compass.
-</p>
-<h4>
-Haml
-</h4>
-<p>
-Haml, known as
+popular being Compass.</p>
+
+<h4>Haml</h4>
+
+<p>Haml, known as
 <a href="http://haml.info/docs/yardoc/file.REFERENCE.html"
 rel="noopener noreferrer" target="_blank">HTML abstraction markup
 language</a>, is a markup language with the single goal of providing the
 ability to write beautiful markup. Serving as its own markup language,
 code written in Haml is later processed to HTML. Haml promotes DRY and
 well structured markup, providing a pleasing experience for anyone
-having to write or read it.
-</p>
-<h4>
-Installation
-</h4>
-<p>
-Haml requires Ruby to be compiled to HTML, so the first step to using it
+having to write or read it.</p>
+
+<h4>Installation</h4>
+
+<p>Haml requires Ruby to be compiled to HTML, so the first step to using it
 is to ensure that Ruby is installed. Fortunately for those on Mac OS X
 Ruby comes preinstalled, and those on a Windows machine may
 visit <a href="http://rubyinstaller.org/" rel="noopener noreferrer" target="_blank">
 Windows Installer</a> for directions. Upon confirming Ruby is installed
 the gem install haml command needs to be run from the command line,
-using Terminal or the alike command line program, to install Haml.
-</p>
-<pre> 1  gem install haml
- 2 </pre>
-<p>
-Files written in the Haml markup should be saved with the file extension
+using Terminal or the alike command line program, to install Haml.</p>
+
+<pre>gem install haml</pre>
+ 
+<p>Files written in the Haml markup should be saved with the file extension
 of .haml. To then convert these files from Haml to HTML the haml command
-below needs to be run to compile each individual file.
-</p>
-<pre> 1  haml index.haml index.html  
- 2 </pre>
-<p>
-In the example above, the file index.haml is converted to HTML and saved
+below needs to be run to compile each individual file.</p>
+
+<pre>haml index.haml index.html</pre>
+
+<p>In the example above, the file index.haml is converted to HTML and saved
 as index.html within the same directory. This command has to be run
 within the same directory the files reside in. Should the command be run
 outside this directory the path where the files reside need to be
 included within the command. At any time the command haml –help may be
-run to see a list of different available options.
-</p>
-<h4>
-Watching a File or Directory
-</h4>
-<p>
-Unfortunately Haml doesn’t provide a way to watch a file, or directory,
-for changes without the use of another dependency.
-</p>
-<p>
-Inside of a Rails application a Haml dependency may be added in the
+run to see a list of different available options.</p>
+
+<h4>Watching a File or Directory</h4>
+
+<p>Unfortunately Haml doesn’t provide a way to watch a file, or directory,
+for changes without the use of another dependency.</p>
+
+<p>Inside of a Rails application a Haml dependency may be added in the
 Gemfile, thus automatically compiling Haml files to HTML upon any
 changes. There are a few desktop applications available for those not
 using Rails, one of the more popular
@@ -4146,33 +4077,28 @@ come in handy.
 <h4>
 Doctype
 </h4>
-<p>
-The first part to writing a document in Haml is knowing what type
+
+<p>The first part to writing a document in Haml is knowing what type
 of doctype is to be used. When working with HTML documents, the general
 document type is going to be the HTML5 doctype. In Haml document types
 are identified with three exclamation points, !!! followed by any
-specifics if necessary.
-</p>
-<p>
-The default doctype in Haml is the HTML 1.0 Transitional document type
+specifics if necessary.</p>
+
+<p>The default doctype in Haml is the HTML 1.0 Transitional document type
 so in order to make this the HTML5 doctype the number five has to be
-passed in after the exclamation points, !!! 5.
-</p>
-<h4>
-Haml
-</h4>
-<pre> 1  !!! 5
- 2 </pre>
-<h4>
-Compiled HTML
-</h4>
-<pre> 1  &lt;!DOCTYPE html&gt;  
- 2 </pre>
-<h4>
-Declaring Elements
-</h4>
-<p>
-One of the defining features of Haml is its syntax, and how to 
+passed in after the exclamation points, !!! 5.</p>
+
+<h4>Haml</h4>
+
+<pre>!!! 5</pre>
+
+<h4>Compiled HTML</h4>
+
+<pre>&lt;!DOCTYPE html&gt;</pre>
+
+<h4>Declaring Elements</h4>
+
+<p>One of the defining features of Haml is its syntax, and how to 
 <a href="https://coderwall.com/p/aivizg/introduction-to-haml--2" 
 rel="noopener noreferrer" target="_blank">declare and nest</a> elements.
 HTML elements generally have opening and closing tags, however within
@@ -4181,26 +4107,23 @@ with a percent sign, %, and then indented to identify nesting.
 Indentation with Haml can be accomplish with one or more spaces, however
 what is important is that the indentation remain consistent. Hard tabs
 or spaces cannot be mixes together, and the same number of tabs or
-spaces must be the same throughout an entire document.
-</p>
-<p>
-Removing the need for both opening and closing tags, as well as
+spaces must be the same throughout an entire document.</p>
+
+<p>Removing the need for both opening and closing tags, as well as
 mandating the structure with indentation creates an easy to follow
 outline. At any given time the markup can be scanned and changed without
-struggle.
-</p>
-<h4>
-Haml
-</h4>
+struggle.</p>
+
+<h4>Haml</h4>
+
 <pre> 1  %body
  2  %header 
  3  %h1 Hello World 
  4  %section
- 5  %p Lorem ipsum dolor sit amet. 
- 6 </pre>
-<h4>
-Compiled HTML
-</h4>
+ 5  %p Lorem ipsum dolor sit amet.</pre>
+
+<h4>Compiled HTML</h4>
+
 <pre> 1  &lt;body&gt;
  2  &lt;header&gt; 
  3  &lt;h1&gt;Hello World&lt;/h1&gt; 
@@ -4208,146 +4131,121 @@ Compiled HTML
  5  &lt;section&gt;
  6  &lt;p&gt;Lorem ipsum dolor sit amet.&lt;/p&gt;  
  7  &lt;/section&gt; 
- 8  &lt;/body&gt;  
- 9 </pre>
-<h4>
-Handling Text
-</h4>
-<p>
-Text within Haml can be placed on the same line as the declared element,
+ 8  &lt;/body&gt;</pre>
+
+<h4>Handling Text</h4>
+
+<p>Text within Haml can be placed on the same line as the declared element,
 or indented below the element. Text cannot be both on the same line as
 the declared element and nested below it, it has to be either or. The
-example from above could be rewritten as the following:
-</p>
+example from above could be rewritten as the following:</p>
+
 <pre> 1  %body 
  2  %header  
  3  %h1
  4  Hello World
  5  %section 
  6  %p 
- 7  Lorem ipsum dolor sit amet.  
- 8  </pre>
-<h4>
-Attributes
-</h4>
-<p>
-Attributes, as with elements, are declared a bit differently in Haml.
+ 7  Lorem ipsum dolor sit amet.</pre>
+
+<h4>Attributes</h4>
+
+<p>Attributes, as with elements, are declared a bit differently in Haml.
 Attributes are declared directly after the element in either {} or (),
 all depending if you wish to use Ruby or HTML syntax. Ruby style
 attributes will use the standard hash syntax inside of {}, while HTML
-style attributes will use standard HTML syntax inside of ().
-</p>
-<h4>
-Haml
-</h4>
+style attributes will use standard HTML syntax inside of ().</p>
+
+<h4>Haml</h4>
+
 <pre> 1  %img{:src =&gt; &quot;shay.jpg&quot;, :alt =&gt; &quot;Shay Howe&quot;}
  2  %img{src: &quot;shay.jpg&quot;, alt: &quot;Shay Howe&quot;}  
- 3  %img(src=&quot;shay.jpg&quot; alt=&quot;Shay Howe&quot;)
- 4 </pre>
-<h4>
-Compiled HTML
-</h4>
-<pre> 1  &lt;img src=&quot;shay.jpg&quot; alt=&quot;Shay Howe&quot;&gt;
- 2 </pre>
-<h4>
-Classes &amp; IDs
-</h4>
-<p>
-If you wish to, Class and ID attributes may be declared the same as all
+ 3  %img(src=&quot;shay.jpg&quot; alt=&quot;Shay Howe&quot;)</pre>
+
+<h4>Compiled HTML</h4>
+
+<pre>&lt;img src=&quot;shay.jpg&quot; alt=&quot;Shay Howe&quot;&gt;</pre>
+
+<h4>Classes &amp; IDs</h4>
+
+<p>If you wish to, Class and ID attributes may be declared the same as all
 other attributes, however they may also be treated a bit differently.
 Rather than listing out the class or ID attribute name and value
 inside {} or () the value can be identified directly after the element.
 Using either a . for classes or a # for an ID the value can be added
-directly after the element.
-</p>
-<p>
-Additionally, attributes may be mixed and matched, chaining them
+directly after the element.</p>
+
+<p>Additionally, attributes may be mixed and matched, chaining them
 together in the appropriate format. Classes are to be separated with
 a . and other attributes may be added using one of the previously
-outlined formats.
-</p>
-<h4>
-Haml
-</h4>
+outlined formats.</p>
+
+<h4>Haml</h4>
+
 <pre> 1  %section.feature
  2  %section.feature.special 
  3  %section#hello  
- 4  %section#hello.feature(role=&quot;region&quot;) 
- 5 </pre>
-<h4>
-Compiled HTML
-</h4>
+ 4  %section#hello.feature(role=&quot;region&quot;)</pre>
+
+<h4>Compiled HTML</h4>
+
 <pre> 1  &lt;section class=&quot;feature&quot;&gt;&lt;/section&gt; 
  2  &lt;section class=&quot;feature special&quot;&gt;&lt;/section&gt;  
  3  &lt;section id=&quot;hello&quot;&gt;&lt;/section&gt; 
- 4  &lt;section class=&quot;feature&quot; id=&quot;hello&quot; role=&quot;region&quot;&gt;&lt;/section&gt;  
- 5 </pre>
-<h4>
-Division Classes &amp; IDs
-</h4>
-<p>
-In the event a class or ID is used on a div the %div may be omitted, and
+ 4  &lt;section class=&quot;feature&quot; id=&quot;hello&quot; role=&quot;region&quot;&gt;&lt;/section&gt;</pre>
+
+<h4>Division Classes &amp; IDs</h4>
+
+<p>In the event a class or ID is used on a div the %div may be omitted, and
 the class or ID value can be used outright. Again, classes are to be
-identified with a . and IDs are to be identified with a #.
-</p>
-<h4>
-Haml
-</h4>
+identified with a . and IDs are to be identified with a #.</p>
+
+<h4>Haml</h4>
+
 <pre> 1  .awesome
  2  .awesome.lesson 
- 3  #getting-started.lesson  
- 4 </pre>
-<h4>
-Compiled HTML
-</h4>
+ 3  #getting-started.lesson</pre>
+ 
+<h4>Compiled HTML</h4>
+
 <pre> 1  &lt;div class=&quot;awesome&quot;&gt;&lt;/div&gt; 
  2  &lt;div class=&quot;awesome lesson&quot;&gt;&lt;/div&gt;
- 3  &lt;div class=&quot;lesson&quot; id=&quot;getting-started&quot;&gt;&lt;/div&gt;  
- 4 </pre>
-<h4>
-Boolean Attributes
-</h4>
-<p>
-Boolean attributes are handled just as they would be within Ruby or
-HTML, all depending on the syntax being used.
-</p>
-<h4>
-Haml
-</h4>
+ 3  &lt;div class=&quot;lesson&quot; id=&quot;getting-started&quot;&gt;&lt;/div&gt;</pre>
+
+<h4>Boolean Attributes</h4>
+
+<p>Boolean attributes are handled just as they would be within Ruby or
+HTML, all depending on the syntax being used.</p>
+
+<h4>Haml</h4>
+
 <pre> 1  %input{:type =&gt; &quot;checkbox&quot;, :checked =&gt; true}  
  2  %input(type=&quot;checkbox&quot; checked=true)  
- 3  %input(type=&quot;checkbox&quot; checked) 
- 4 </pre>
-<h4>
-Compiled HTML
-</h4>
-<pre> 1  &lt;input type=&quot;checkbox&quot; checked&gt;  
- 2 </pre>
-<h4>
-Escaping Text
-</h4>
-<p>
-One of the benefits of Haml is the ability to evaluate and run Ruby,
+ 3  %input(type=&quot;checkbox&quot; checked)</pre>
+
+<h4>Compiled HTML</h4>
+
+<pre>&lt;input type=&quot;checkbox&quot; checked&gt;</pre>
+
+<h4>Escaping Text</h4>
+
+<p>One of the benefits of Haml is the ability to evaluate and run Ruby,
 however this isn’t always the desired action. Text, and lines of code,
 can be escaped by using a backslash, &amp;#0044; allowing the text to be
-rendered explicitly without being executed.
-</p>
-<p>
-In the example below, the first instance of = <span class="citation"
+rendered explicitly without being executed.</p>
+
+<p>In the example below, the first instance of = <span class="citation"
 data-cites="author">@author</span> is executed Ruby, pulling the authors
 name from the application. The second instance, starting with the
-backslash, is escaped text, printing it as is, without execution.
-</p>
-<h4>
-Haml
-</h4>
+backslash, is escaped text, printing it as is, without execution.</p>
+
+<h4>Haml</h4>
+
 <pre> 1  .author 
  2  = @author 
- 3  \\= @author 
- 4 </pre>
-<h4>
-Compiled HTML
-</h4>
+ 3  \\= @author</pre>
+
+<h4>Compiled HTML</h4>
 
 <pre> 1  &lt;div class=&quot;author&quot;&gt; 
  2  Shay Howe  
@@ -6225,72 +6123,43 @@ methods include:</p>
 <h4>Mouse Events</h4>
 
 <ul>
-<li>
-.click()
-</li>
-<li>
-.dblclick()
-</li>
-<li>
-.focusin()
-</li>
-<li>
-.focusout()
-</li>
-<li>
-.hover()
-</li>
-<li>
-.mousedown()
-</li>
-<li>
-.mouseenter()
-</li>
-<li>
-.mouseleave()
-</li>
-<li>
-.mousemove()
-</li>
-<li>
-.mouseout()
-</li>
-<li>
-.mouseover()
-</li>
-<li>
-.mouseup()
-</li>
+  <li>.click()</li>
+  <li>.dblclick()</li>
+  <li>.focusin()</li>
+  <li>.focusout()</li>
+  <li>.hover()</li>
+  <li>.mousedown()</li>
+  <li>.mouseenter()</li>
+  <li>.mouseleave()</li>
+  <li>.mousemove()</li>
+  <li>.mouseout()</li>
+  <li>.mouseover()</li>
+  <li>.mouseup()</li>
 </ul>
-<h4>
-Effects
-</h4>
-<p>
-Next to events, jQuery also provides a handful of customizable effects.
+
+<h4>Effects</h4>
+
+<p>Next to events, jQuery also provides a handful of customizable effects.
 These effects come by the way of different methods, including event
 methods for showing and hiding content, fading content in and out, or
 sliding content up and down. All of these are ready to use methods and
-may be customized as best see fit.
-</p>
-<p>
-Each effect method has it’s own syntax so it is best to reference the
+may be customized as best see fit.</p>
+
+<p>Each effect method has it’s own syntax so it is best to reference the
 jQuery <a href="http://api.jquery.com/category/effects/" 
 rel="noopener noreferrer" target="_blank">effects documentation</a> for
 specific syntax around each method. Most commonly though, effects
 generally accept a duration, easing, and the ability to specify a
-callback function.
-</p>
-<h4>
-jQuery CSS Animations
-</h4>
-<p>
-Custom animations of different CSS properties can be accomplished in
+callback function.</p>
+
+<h4>jQuery CSS Animations</h4>
+
+<p>Custom animations of different CSS properties can be accomplished in
 jQuery, although this is a little less relevant as CSS can now handle
 animations itself. CSS animations offer better performance from a
 browser processing standpoint and are preferred where possible. jQuery
 animation effects, with the help of Modernizr, make for a perfect backup
-solution to any browser not supporting CSS animations.
-</p>
+solution to any browser not supporting CSS animations.</p>
 
 <h4>Effect Duration</h4>
 
