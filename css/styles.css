@@ -21,7 +21,6 @@ details {
   font: 12px "Bahnschrift", Calibri, Inter, sans-serif;
   width: 80%;
 }
-
 details > summary {
   padding: 2px 6px;
   width: 12em;  /* was: 8*/
@@ -31,7 +30,6 @@ details > summary {
   cursor: pointer;
   margin-left: 0px;  /* 10px; */
 }
-
 details > p {
   border-radius: 0 0 5px 5px;
   background-color: #ddd;
@@ -40,7 +38,6 @@ details > p {
   box-shadow: 3px 3px 4px #00008b;
   margin-left: 0px;  /* 10px; */
 }
-
 details[open] > summary {
   background-color: #ffff00;  /* yellow */
 }
@@ -172,7 +169,7 @@ div.columns{display: flex; gap: min(4vw, 1.5em);}
 div.column{flex: auto; overflow-x: auto;}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 /* The extra [class] is a hack that increases specificity enough to
-     override a similar rule in reveal.js */
+   override a similar rule in reveal.js */
 ul.task-list[class]{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   font-size: inherit;
@@ -203,29 +200,29 @@ ul.task-list li input[type="checkbox"] {
 
 .display.math{display: block; text-align: center; margin: 0.5rem auto;}
 
-    @media (max-width: 600px) {
-      body {
-        font-size: 0.9em;
-        padding: 12px;
-      }
-      h1 {
-        font-size: 1.8em;
-      }
+  @media (max-width: 600px) {
+    body {
+      font-size: 0.9em;
+      padding: 12px;
     }
-    @media print {
-      html {
-        background-color: white;
-      }
-      body {
-        background-color: transparent;
-        color: black;
-        font-size: 12pt;
-      }
-      p, h2, h3 {
-        orphans: 3;
-        widows: 3;
-      }
-      h2, h3, h4 {
-        page-break-after: avoid;
-      }
+    h1 {
+      font-size: 1.8em;
     }
+  }
+  @media print {
+    html {
+      background-color: white;
+    }
+    body {
+      background-color: transparent;
+      color: black;
+      font-size: 12pt;
+    }
+    p, h2, h3 {
+      orphans: 3;
+      widows: 3;
+    }
+    h2, h3, h4 {
+      page-break-after: avoid;
+    }
+  }
