@@ -303,7 +303,7 @@ render each individual selector type from right to left. They also put a
 burden on all other selectors to be more specific.</p>
 
 <details>
-  <summary>CSS</summary>
+  <summary><b>CSS</b></summary>
   
 <pre>/* Bad */
 header nav ul li a {...}
@@ -354,7 +354,7 @@ prohibits those styles from easily being applied to a different element
 and increases the overall specificity of the selector.</p>
 
 <details>
-  <summary>CSS</summary>
+  <summary><b>CSS</b></summary>
 
 <pre>/* Bad */
 #container header nav {...}
@@ -656,7 +656,7 @@ be shown accordingly.</p>
 <br><br>
 
 <details>
-  <summary>CSS</summary>
+  <summary><b>CSS</b></summary>
   
 <pre>ul {
   margin: 0;
@@ -985,7 +985,7 @@ elements.</p>
 elements are able to live outside of the parent element.</p>
 
 <details>
-  <summary>CSS</summary>
+  <summary><b>CSS</b></summary>
 
 <pre> 1  .box-set:before,
  2  .box-set:after {
@@ -1019,7 +1019,7 @@ The group class name can then be applied to any parent element needing
 to contain floats.</p>
 
 <details>
-  <summary>CSS</summary>
+  <summary><b>CSS</b></summary>
 
 <pre> 1  .group:before,
  2  .group:after {
@@ -1148,7 +1148,7 @@ positioned elements default position.</p>
 
 <br><br>
 <details>
-  <summary>CSS</summary>
+  <summary><b>CSS</b></summary>
   
 <pre> 1  .box-set {
  2    background: #eaeaed;
@@ -1213,7 +1213,7 @@ positive value, or pulled out from a specific side with a negative
 value.</p>
 
 <details>
-  <summary>HTML</summary>
+  <summary><b>HTML</b></summary>
   
 <pre> 1  &lt;div class=&quot;box-set&quot;&gt;
  2    &lt;figure class=&quot;box box-1&quot;&gt;Box 1&lt;/figure&gt;
@@ -1225,7 +1225,7 @@ value.</p>
 
 <br><br>
 <details>
-  <summary>CSS</summary>
+  <summary><b>CSS</b></summary>
   
 <pre> 1  .box-set {
  2    background: #eaeaed;
@@ -1303,7 +1303,7 @@ and not the containing, relatively positioned parent.</p>
 <br><br>
 
 <details>
-  <summary>CSS</summary>
+  <summary><b>CSS</b></summary>
   
 <pre> 1  .box {
  2    background: #2db34a;
@@ -1351,7 +1351,7 @@ borders, and padding to be applied freely.</p>
 <br><br>
 
 <details>
-  <summary>CSS</summary>
+  <summary><b>CSS</b></summary>
   
 <pre> 1  body {
  2    background: #eaeaed;
@@ -1407,7 +1407,7 @@ box three.</p>
 &lt;/div&gt;</pre>
 
 <details>
-  <summary>CSS</summary>
+  <summary><b>CSS</b></summary>
 
 <pre> 1  .box-set {
  2    background: #eaeaed;
@@ -1712,7 +1712,7 @@ document tree and share the same parent as their sibling heading.</p>
 <br><br>
 
 <details>
-<summary>HTML</summary>
+  <summary><b>HTML</b></summary>
 
 <pre> 1  &lt;p&gt;...&lt;/p&gt; 
  2  &lt;section&gt;
@@ -1753,7 +1753,7 @@ along with sharing the same parent element, thus selected.</p>
 <br><br>
 
 <details>
-  <summary>HTML</summary>
+  <summary><b>HTML</b></summary>
 
 <pre> 1  &lt;p&gt;...&lt;/p&gt;
  2  &lt;section&gt;
@@ -1771,7 +1771,7 @@ along with sharing the same parent element, thus selected.</p>
 <h4>Sibling Selectors Example</h4>
 
 <details>
-  <summary>HTML</summary>
+  <summary><b>HTML</b></summary>
 
 <pre> 1  &lt;input type=&quot;checkbox&quot; id=&quot;toggle&quot;&gt; 
  2  &lt;label for=&quot;toggle&quot;&gt;&amp;#9776;&lt;/label&gt; 
@@ -1789,60 +1789,60 @@ along with sharing the same parent element, thus selected.</p>
 <br><br>
 
 <details>
-  <summary>CSS</summary>
+  <summary><b>CSS</b></summary>
 
-<pre> 1   input { 
- 2     display: none;  
- 3   } 
- 4   label,  
- 5   ul { 
- 6     border: 1px solid #cecfd5;  
- 7     border-radius: 6px;
- 8   } 
- 9   label { 
- 10    color: #0087cc; 
- 11    cursor: pointer;
- 12    display: inline-block;
- 13    font-size: 18px; 
- 14    padding: 5px 9px;  
- 15    transition: all .15s ease;  
- 16  } 
- 17  label:hover {
- 18    color: #ff7b29; 
- 19  } 
- 20  input:checked + label {  
- 21    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15);
- 22    color: #9799a7; 
- 23  }
- 24  nav {
- 25    max-height: 0;  
- 26    overflow: hidden;  
- 27    transition: all .15s ease;  
- 28  } 
- 19    input:checked &amp;tilde; nav {
- 30    max-height: 500px; 
- 31  } 
- 32  ul { 
- 33    list-style: none;  
- 34    margin: 8px 0 0 0; 
- 35    padding: 0;  
- 36    width: 100px;
- 37  } 
- 38  li { 
- 39    border-bottom: 1px solid #cecfd5; 
- 40  } 
- 41  li:last-child { 
- 42    border-bottom: 0;  
- 43  } 
- 44  a {  
- 45    color: #0087cc; 
- 46    display: block; 
- 47    padding: 6px 12px; 
- 48    text-decoration: none;
- 49  } 
- 50  a:hover { 
- 51    color: #ff7b29; 
- 52  }</pre>
+<pre>1   input { 
+2     display: none;  
+3   } 
+4   label,  
+5   ul { 
+6     border: 1px solid #cecfd5;  
+7     border-radius: 6px;
+8   } 
+9   label { 
+10    color: #0087cc; 
+11    cursor: pointer;
+12    display: inline-block;
+13    font-size: 18px; 
+14    padding: 5px 9px;  
+15    transition: all .15s ease;  
+16  } 
+17  label:hover {
+18    color: #ff7b29; 
+19  } 
+20  input:checked + label {  
+21    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15);
+22    color: #9799a7; 
+23  }
+24  nav {
+25    max-height: 0;  
+26    overflow: hidden;  
+27    transition: all .15s ease;  
+28  } 
+19    input:checked &amp;tilde; nav {
+30    max-height: 500px; 
+31  } 
+32  ul { 
+33    list-style: none;  
+34    margin: 8px 0 0 0; 
+35    padding: 0;  
+36    width: 100px;
+37  } 
+38  li { 
+39    border-bottom: 1px solid #cecfd5; 
+40  } 
+41  li:last-child { 
+42    border-bottom: 0;  
+43  } 
+44  a {  
+45    color: #0087cc; 
+46    display: block; 
+47    padding: 6px 12px; 
+48    text-decoration: none;
+49  } 
+50  a:hover { 
+51    color: #ff7b29; 
+52  }</pre>
  
 </details>
 
@@ -2023,49 +2023,49 @@ stated value.</p>
 
 <h4>HTML</h4>
 
-<pre> 1  &lt;ul&gt;  
- 2    &lt;li&gt;&lt;a href=&quot;#.pdf&quot;&gt;PDF Document&lt;/a&gt;&lt;/li&gt;
- 3    &lt;li&gt;&lt;a href=&quot;#.doc&quot;&gt;Word Document&lt;/a&gt;&lt;/li&gt;  
- 4    &lt;li&gt;&lt;a href=&quot;#.jpg&quot;&gt;Image File&lt;/a&gt;&lt;/li&gt;  
- 5    &lt;li&gt;&lt;a href=&quot;#.mp3&quot;&gt;Audio File&lt;/a&gt;&lt;/li&gt;  
- 6    &lt;li&gt;&lt;a href=&quot;#.mp4&quot;&gt;Video File&lt;/a&gt;&lt;/li&gt;  
- 7  &lt;/ul&gt;</pre>
+<pre>1  &lt;ul&gt;
+2    &lt;li&gt;&lt;a href=&quot;#.pdf&quot;&gt;PDF Document&lt;/a&gt;&lt;/li&gt;
+3    &lt;li&gt;&lt;a href=&quot;#.doc&quot;&gt;Word Document&lt;/a&gt;&lt;/li&gt;
+4    &lt;li&gt;&lt;a href=&quot;#.jpg&quot;&gt;Image File&lt;/a&gt;&lt;/li&gt;
+5    &lt;li&gt;&lt;a href=&quot;#.mp3&quot;&gt;Audio File&lt;/a&gt;&lt;/li&gt;
+6    &lt;li&gt;&lt;a href=&quot;#.mp4&quot;&gt;Video File&lt;/a&gt;&lt;/li&gt;
+7  &lt;/ul&gt;</pre>
 
 <br><br>
 
 <details>
-  <summary>CSS</summary>
+  <summary><b>CSS</b></summary>
 
-<pre> 1  ul { 
- 2    list-style: none;  
- 3    margin: 0;
- 4    padding: 0;  
- 5  } 
- 6  a {  
- 7    background-position: 0 50%; 
- 8    background-repeat: no-repeat;  
- 9    color: #0087cc; 
- 10   padding-left: 22px;
- 11   text-decoration: none;
- 12 } 
- 13 a:hover { 
- 14   color: #ff7b29; 
- 15 } 
- 16 a[href&amp;$=&quot;.pdf&quot;] {
- 17   background-image: url(&quot;images/pdf.png&quot;);
- 18 } 
- 19 a[href$=&quot;.doc&quot;] {
- 20   background-image: url(&quot;images/doc.png&quot;);
- 21 } 
- 22 a[href$=&quot;.jpg&quot;] {
- 23   background-image: url(&quot;images/image.png&quot;); 
- 24 } 
- 25 a[href$=&quot;.mp3&quot;] {
- 26   background-image: url(&quot;images/audio.png&quot;); 
- 27 } 
- 28 a[href$=&quot;.mp4&quot;] {
- 29   background-image: url(&quot;images/video.png&quot;); 
- 30 }</pre>
+<pre>1  ul {
+2    list-style: none;
+3    margin: 0;
+4    padding: 0;
+5  }
+6  a {
+7    background-position: 0 50%;
+8    background-repeat: no-repeat;
+9    color: #0087cc;
+10   padding-left: 22px;
+11   text-decoration: none;
+12 }
+13 a:hover {
+14   color: #ff7b29;
+15 }
+16 a[href&amp;$=&quot;.pdf&quot;] {
+17   background-image: url(&quot;images/pdf.png&quot;);
+18 }
+19 a[href$=&quot;.doc&quot;] {
+20   background-image: url(&quot;images/doc.png&quot;);
+21 }
+22 a[href$=&quot;.jpg&quot;] {
+23   background-image: url(&quot;images/image.png&quot;); 
+24 } 
+25 a[href$=&quot;.mp3&quot;] {
+26   background-image: url(&quot;images/audio.png&quot;);
+27 }
+28 a[href$=&quot;.mp4&quot;] {
+29   background-image: url(&quot;images/video.png&quot;);
+30 }</pre>
 
 </details>
 
@@ -2200,29 +2200,26 @@ Lastly, the :focus pseudo-class is applied to an element when a user has
 made an element the focus point of the page, often by using the keyboard
 to tab from one element to another.</p>
 
-<pre> 1  a:hover {...}  
- 2  a:active {...} 
- 3  a:focus {...}</pre>
+<pre>1  a:hover {...}
+2  a:active {...}
+3  a:focus {...}</pre>
  
 <h4>User Interface State Pseudo-classes</h4>
 
-<p>
-As with the link pseudo-classes there are also some pseudo-classes
+<p>As with the link pseudo-classes there are also some pseudo-classes
 generated around the user interface state of elements, particularly
 within form elements. These user interface element state pseudo-classes
-include :enabled, :disabled, :checked, and :indeterminate.
-</p>
-<p>
-The :enabled pseudo-class selects an input that is in the default state
+include :enabled, :disabled, :checked, and :indeterminate.</p>
+
+<p>The :enabled pseudo-class selects an input that is in the default state
 of enabled and available for use, where the :disabled pseudo-class
 selects an input that has the disabled attribute tied to it. Many
 browsers by default will fade out disabled inputs to inform users that
 the input is not available for interaction, however those styles may be
-adjusted as wished with the :disabled pseudo-class.
-</p>
+adjusted as wished with the :disabled pseudo-class.</p>
 
-<pre> 1  input:enabled {...}
- 2  input:disabled {...}</pre>
+<pre>1  input:enabled {...}
+2  input:disabled {...}</pre>
 
 <p>The last two user interface element state pseudo-classes
 of :checked and :indeterminate revolve around checkbox and radio button
@@ -2230,28 +2227,24 @@ input elements. The :checked pseudo-class selects checkboxes or radio
 buttons that are, as you may expect, checked. When a checkbox or radio
 button has neither been selected nor unselected it lives in an
 indeterminate state, from which the :indeterminate pseudo-class can be
-used to target these elements.
-</p>
+used to target these elements.</p>
 
-<pre> 1  input:checked {...}
- 2  input:indeterminate {...}</pre>
+<pre>1  input:checked {...}
+2  input:indeterminate {...}</pre>
  
 <h4>Structural &amp; Position Pseudo-classes</h4>
 
-<p>
-A handful of pseudo-classes are structural and position based, in which
+<p>A handful of pseudo-classes are structural and position based, in which
 they are determined based off where elements reside in the document
 tree. These structural and position based pseudo-classes come in a few
 different shapes and sizes, each of which provides their own unique
 function. Some pseudo-classes have been around longer than others,
 however CSS3 brought way of an entire new set of pseudo-classes to
-supplement the existing ones.
-</p>
-<h3>
-:first-child, :last-child, &amp; :only-child
-</h3>
-<p>
-The first structural and position based pseudo-classes one is likely to
+supplement the existing ones.</p>
+
+<h3>:first-child, :last-child, &amp; :only-child</h3>
+
+<p>The first structural and position based pseudo-classes one is likely to
 come across are the :first-child, :last-child,
 and :only-child pseudo-classes. The :first-child pseudo-class will
 select an element if it’s the first child within its parent, while
@@ -2261,27 +2254,24 @@ selecting the first or last items in a list and so forth. Additionally,
 the :only-child will select an element if it is the only element within
 a parent. Alternately, the :only-child pseudo-class could be written
 as :first-child:last-child, however :only-child holds a lower
-specificity.
-</p>
-<p>
-Here the selector li:first-child identifies the first list item within a
-list, while the selector li:last-child identifies the last list item
-within a list, thus lines 2 and 10 are selected. The
-selector div:only-child is looking for a division which is the single
-child of a parent element, without any other other siblings. In this
-case line 4 is selected as it is the only division within the specific
-list item.</p>
+specificity.</p>
+
+<p>Here the selector li:first-child identifies the first list item within a list, while 
+the selector li:last-child identifies the last list item within a list, thus lines 2 and 
+10 are selected. The selector div:only-child is looking for a division which is the single
+child of a parent element, without any other other siblings. In this case line 4 is 
+selected as it is the only division within the specific list item.</p>
 
 <h4>CSS</h4>
 
-<pre> 1  li:first-child {...}
- 2  li:last-child {...}
- 3  div:only-child {...}</pre>
+<pre>1  li:first-child {...}
+2  li:last-child {...}
+3  div:only-child {...}</pre>
  
 <br><br>
 
 <details>
-  <summary>HTML</summary>
+  <summary><b>HTML</b></summary>
 
 <pre>1  &lt;ul&gt;
 2    &lt;li&gt;This list item will be selected&lt;/li&gt;
@@ -2299,63 +2289,54 @@ list item.</p>
 
 <h3>:first-of-type, :last-of-type, &amp; :only-of-type</h3>
 
-<p>
-Finding the first, last, and only children of a parent is pretty
+<p>Finding the first, last, and only children of a parent is pretty
 helpful, and often all that is needed. However sometimes you only want
 to select the first, last, or only child of a specific type of element.
 For example, should you only want to select the first or last paragraph
 within an article, or perhaps the only image within an article.
 Fortunately this is where the :first-of-type, :last-of-type,
-and :only-of-type pseudo-selectors come into place.
-</p>
-<p>
-The :first-of-type pseudo-class will select the first element of its
+and :only-of-type pseudo-selectors come into place.</p>
+
+<p>The :first-of-type pseudo-class will select the first element of its
 type within a parent, while the :last-of-type pseudo-class will select
 the last element of its type within a parent.
 The :only-of-type pseudo-class will select an element if it is the only
-of its type within a parent.
-</p>
-</p>
-In the example below
-the p:first-of-type and p:last-of-type pseudo-classes select the first
-and last paragraphs within the article respectively, regardless if they
-are actually the first or last children within the article. Lines 3 and
-6 are selected, reflecting these selectors.
-The img:only-of-type selector identifies the image on line 5 as it is
-the only image to appear within the article, thus also selected.
-</p>
+of its type within a parent.</p>
+
+</p>In the example below the p:first-of-type and p:last-of-type pseudo-classes select 
+the first and last paragraphs within the article respectively, regardless if they are 
+actually the first or last children within the article. Lines 3 and 6 are selected, 
+reflecting these selectors. The img:only-of-type selector identifies the image on line 
+5 as it is the only image to appear within the article, thus also selected.</p>
 
 <h4>CSS</h4>
 
-<pre> 1  p:first-of-type {...}
- 2  p:last-of-type {...}
- 3  img:only-of-type {...}</pre>
+<pre>1  p:first-of-type {...}
+2  p:last-of-type {...}
+3  img:only-of-type {...}</pre>
  
 <h4>HTML</h4>
 
-<pre> 1  &lt;article&gt;
- 2    &lt;h1&gt;...&lt;/h1&gt;
- 3    &lt;p&gt;This paragraph will be selected&lt;/p&gt;
- 4    &lt;p&gt;...&lt;/p&gt;
- 5    &lt;img src=&quot;#&quot;&gt;&lt;!-- This image will be selected --&gt;
- 6    &lt;p&gt;This paragraph will be selected&lt;/p&gt;
- 7    &lt;h6&gt;...&lt;/h6&gt;
- 8  &lt;/article&gt;</pre>
+<pre>1  &lt;article&gt;
+2    &lt;h1&gt;...&lt;/h1&gt;
+3    &lt;p&gt;This paragraph will be selected&lt;/p&gt;
+4    &lt;p&gt;...&lt;/p&gt;
+5    &lt;img src=&quot;#&quot;&gt;&lt;!-- This image will be selected --&gt;
+6    &lt;p&gt;This paragraph will be selected&lt;/p&gt;
+7    &lt;h6&gt;...&lt;/h6&gt;
+8  &lt;/article&gt;</pre>
  
-<p>Lastly, there are a few structural and position based pseudo-classes
-that select elements based on a number or an algebraic expression. These
-pseudo-classes
-include :nth-child(n), :nth-last-child(n), :nth-of-type(n),
-and :nth-last-of-type(n). All of these unique pseudo-classes are
-prefixed with nth and accept a number or expression inside of the
-parenthesis, indicated by the character n argument.</p>
+<p>Lastly, there are a few structural and position based pseudo-classes that select 
+elements based on a number or an algebraic expression. These pseudo-classes include 
+:nth-child(n), :nth-last-child(n), :nth-of-type(n), and :nth-last-of-type(n). All of 
+these unique pseudo-classes are prefixed with nth and accept a number or expression 
+inside of the parenthesis, indicated by the character n argument.</p>
 
-<p>The number or expression that falls within the parenthesis determines
-exactly what element, or elements, are to be selected. Using a number
-outright will count individual elements from the beginning or end of the
-document tree and then select one element, while using an expression
-will count numerous elements from the beginning or end of the document
-tree and select them in groups or multiples.</p>
+<p>The number or expression that falls within the parenthesis determines exactly what 
+element, or elements, are to be selected. Using a number outright will count individual 
+elements from the beginning or end of the document tree and then select one element, 
+while using an expression will count numerous elements from the beginning or end of the 
+document tree and select them in groups or multiples.</p>
 
 <h4>Using Pseudo-class Numbers &amp; Expressions</h4>
 
@@ -2399,8 +2380,8 @@ the li:nth-child(n+5) selector every list item will be selected starting
 with the fifth list item, leaving the first four list items unselected.
 Within the expression this breaks down as (1×0)+5, (1×1)+5, (1×2)+5, and
 so forth.</p>
-<p>
-To make things a bit more complicated negative numbers may also be used.
+
+<p>To make things a bit more complicated negative numbers may also be used.
 For example, the li:nth-child(6n-4) selector will start counting every
 sixth list item starting at negative four, selecting the second, eighth,
 and fourteenth list items and so forth. The same selector,
@@ -2439,14 +2420,14 @@ third list item, thus lines 4 and 7 are selected.</p>
 
 <h4>HTML</h4>
 
-<pre> 1  &lt;ul&gt;
- 2    &lt;li&gt;...&lt;/li&gt;
- 3    &lt;li&gt;...&lt;/li&gt;
- 4    &lt;li&gt;This list item will be selected&lt;/li&gt;
- 5    &lt;li&gt;...&lt;/li&gt;
- 6    &lt;li&gt;...&lt;/li&gt;
- 7    &lt;li&gt;This list item will be selected&lt;/li&gt;
- 8  &lt;/ul&gt;</pre>
+<pre>1  &lt;ul&gt;
+2    &lt;li&gt;...&lt;/li&gt;
+3    &lt;li&gt;...&lt;/li&gt;
+4    &lt;li&gt;This list item will be selected&lt;/li&gt;
+5    &lt;li&gt;...&lt;/li&gt;
+6    &lt;li&gt;...&lt;/li&gt;
+7    &lt;li&gt;This list item will be selected&lt;/li&gt;
+8  &lt;/ul&gt;</pre>
  
 <p>Using a different expression within the :nth-child(n) pseudo-class will
 yield a different selection. The li:nth-child(2n+3) selector, for
@@ -2459,14 +2440,14 @@ and then onward. As a result, the list items lines 4 and 6 are selected.</p>
 
 <h4>HTML</h4>
 
-<pre> 1  &lt;ul&gt;
- 2    &lt;li&gt;...&lt;/li&gt;
- 3    &lt;li&gt;...&lt;/li&gt;
- 4    &lt;li&gt;This list item will be selected&lt;/li&gt;
- 5    &lt;li&gt;...&lt;/li&gt;
- 6    &lt;li&gt;This list item will be selected&lt;/li&gt;
- 7    &lt;li&gt;...&lt;/li&gt;
- 8  &lt;/ul&gt;</pre>
+<pre>1  &lt;ul&gt;
+2    &lt;li&gt;...&lt;/li&gt;
+3    &lt;li&gt;...&lt;/li&gt;
+4    &lt;li&gt;This list item will be selected&lt;/li&gt;
+5    &lt;li&gt;...&lt;/li&gt;
+6    &lt;li&gt;This list item will be selected&lt;/li&gt;
+7    &lt;li&gt;...&lt;/li&gt;
+8  &lt;/ul&gt;</pre>
 
 <p>Changing the expression again, this time with a negative value, yields
 new selection. Here the li:nth-child(-n+4) selector is identifying the
@@ -2479,35 +2460,34 @@ lines 2 through 5 are selected.</p>
  
 <h4>HTML</h4>
 
-<pre> 1  &lt;ul&gt;
- 2    &lt;li&gt;This list item will be selected&lt;/li&gt;
- 3    &lt;li&gt;This list item will be selected&lt;/li&gt;
- 4    &lt;li&gt;This list item will be selected&lt;/li&gt;
- 5    &lt;li&gt;This list item will be selected&lt;/li&gt;
- 6    &lt;li&gt;...&lt;/li&gt;
- 7    &lt;li&gt;...&lt;/li&gt;
- 8  &lt;/ul&gt;</pre>
+<pre>1  &lt;ul&gt;
+2    &lt;li&gt;This list item will be selected&lt;/li&gt;
+3    &lt;li&gt;This list item will be selected&lt;/li&gt;
+4    &lt;li&gt;This list item will be selected&lt;/li&gt;
+5    &lt;li&gt;This list item will be selected&lt;/li&gt;
+6    &lt;li&gt;...&lt;/li&gt;
+7    &lt;li&gt;...&lt;/li&gt;
+8  &lt;/ul&gt;</pre>
  
-<p>
-Adding a negative integer before the n argument changes the selection
+<p>Adding a negative integer before the n argument changes the selection
 again. Here the li:nth-child(-2n+5) selector identifies every second
 list item within the first five list items starting with the first list
-item, thus the list items on lines 2, 4, and 6 are selected.
-</p>
+item, thus the list items on lines 2, 4, and 6 are selected.</p>
+
 <h4>CSS</h4>
 
 <pre>li:nth-child(-2n+5) {...}</pre>
 
 <h4>HTML</h4>
 
-<pre> 1  &lt;ul&gt;
- 2    &lt;li&gt;This list item will be selected&lt;/li&gt;
- 3    &lt;li&gt;...&lt;/li&gt;
- 4    &lt;li&gt;This list item will be selected&lt;/li&gt;
- 5    &lt;li&gt;...&lt;/li&gt;
- 6    &lt;li&gt;This list item will be selected&lt;/li&gt;
- 7    &lt;li&gt;...&lt;/li&gt;
- 8  &lt;/ul&gt;</pre>
+<pre>1  &lt;ul&gt;
+2    &lt;li&gt;This list item will be selected&lt;/li&gt;
+3    &lt;li&gt;...&lt;/li&gt;
+4    &lt;li&gt;This list item will be selected&lt;/li&gt;
+5    &lt;li&gt;...&lt;/li&gt;
+6    &lt;li&gt;This list item will be selected&lt;/li&gt;
+7    &lt;li&gt;...&lt;/li&gt;
+8  &lt;/ul&gt;</pre>
  
 <p>Changing from the :nth-child(n) pseudo-class to
 the :nth-last-child(n) pseudo-class switches the direction of counting,
@@ -2523,38 +2503,33 @@ list. Here the list items on lines 3 and 6 are selected.</p>
 
 <h4>HTML</h4>
 
-<pre> 1  &lt;ul&gt;
- 2    &lt;li&gt;...&lt;/li&gt;
- 3    &lt;li&gt;This list item will be selected&lt;/li&gt;
- 4    &lt;li&gt;...&lt;/li&gt;
- 5    &lt;li&gt;...&lt;/li&gt;
- 6    &lt;li&gt;This list item will be selected&lt;/li&gt;
- 7    &lt;li&gt;...&lt;/li&gt;
- 8  &lt;/ul&gt;</pre>
+<pre>1  &lt;ul&gt;
+2    &lt;li&gt;...&lt;/li&gt;
+3    &lt;li&gt;This list item will be selected&lt;/li&gt;
+4    &lt;li&gt;...&lt;/li&gt;
+5    &lt;li&gt;...&lt;/li&gt;
+6    &lt;li&gt;This list item will be selected&lt;/li&gt;
+7    &lt;li&gt;...&lt;/li&gt;
+8  &lt;/ul&gt;</pre>
  
 <h4>:nth-of-type(n) &amp; :nth-last-of-type(n)</h4>
-<
-p>
-The :nth-of-type(n) and :nth-last-of-type(n) pseudo-classes are very
-similar to that of
-the :nth-child(n) and :nth-last-child(n) pseudo-classes, however instead
-of counting every element within a parent the :nth-of-type(n) and 
-:nth-last-of-type(n) pseudo-classes only count elements of their own
-type. For example, when counting paragraphs within an article, the
-:nth-of-type(n) and :nth-last-of-type(n) pseudo-classes will skip any
-headings, divisions, or miscellaneous elements that are not paragraphs,
-while the :nth-child(n) and  :nth-last-child(n) would count every
-element, no matter its type, only selecting the ones that match the
-element within the stated selector.</p>
 
-<p>Additionally, all of the same expression possibilities used within the 
-:nth-child(n) and :nth-last-child(n) pseudo-classes are also available
-within the :nth-of-type(n) and :nth-last-of-type(n) pseudo-classes.</p>
+<p>The :nth-of-type(n) and :nth-last-of-type(n) pseudo-classes are very similar to that 
+of the :nth-child(n) and :nth-last-child(n) pseudo-classes, however instead of counting 
+every element within a parent the :nth-of-type(n) and :nth-last-of-type(n) pseudo-classes 
+only count elements of their own type. For example, when counting paragraphs within an 
+article, the :nth-of-type(n) and :nth-last-of-type(n) pseudo-classes will skip any 
+headings, divisions, or miscellaneous elements that are not paragraphs, while the 
+:nth-child(n) and  :nth-last-child(n) would count every element, no matter its type, 
+only selecting the ones that match the element within the stated selector.</p>
 
-<p>Using the :nth-of-type(n) pseudo-class within
-the p:nth-of-type(3n) selector we are able to identify every third
-paragraph within a parent, regardless of other sibling elements within
-the parent. Here the paragraphs on lines 5 and 9 are selected.</p>
+<p>Additionally, all of the same expression possibilities used within the :nth-child(n) 
+and :nth-last-child(n) pseudo-classes are also available within the :nth-of-type(n) and 
+:nth-last-of-type(n) pseudo-classes.</p>
+
+<p>Using the :nth-of-type(n) pseudo-class within the p:nth-of-type(3n) selector we are 
+able to identify every third paragraph within a parent, regardless of other sibling 
+elements within the parent. Here the paragraphs on lines 5 and 9 are selected.</p>
 
 <h4>CSS</h4>
 
@@ -2563,18 +2538,18 @@ the parent. Here the paragraphs on lines 5 and 9 are selected.</p>
 <br><br>
 
 <details>
-  <summary>HTML</summary>
+  <summary><b>HTML</b></summary>
   
-<pre> 1  &lt;article&gt;
- 2    &lt;h1&gt;...&lt;/h1&gt;
- 3    &lt;p&gt;...&lt;/p&gt;
- 4    &lt;p&gt;...&lt;/p&gt;
- 5    &lt;p&gt;This paragraph will be selected&lt;/p&gt;
- 6    &lt;h2&gt;...&lt;/h2&gt;
- 7    &lt;p&gt;...&lt;/p&gt;
- 8    &lt;p&gt;...&lt;/p&gt;
- 9    &lt;p&gt;This paragraph will be selected&lt;/p&gt;
- 10 &lt;/article&gt;</pre>
+<pre>1  &lt;article&gt;
+2    &lt;h1&gt;...&lt;/h1&gt;
+3    &lt;p&gt;...&lt;/p&gt;
+4    &lt;p&gt;...&lt;/p&gt;
+5    &lt;p&gt;This paragraph will be selected&lt;/p&gt;
+6    &lt;h2&gt;...&lt;/h2&gt;
+7    &lt;p&gt;...&lt;/p&gt;
+8    &lt;p&gt;...&lt;/p&gt;
+9    &lt;p&gt;This paragraph will be selected&lt;/p&gt;
+10 &lt;/article&gt;</pre>
 
 </details>
 
@@ -2595,18 +2570,18 @@ paragraph. Here the paragraphs on lines 4, 7, and 9 are selected.</p>
 <pre>p:nth-last-of-type(2n+1) {...}</pre>
 
 <details>
-  <summary>HTML</summary>
+  <summary><b>HTML</b></summary>
   
-<pre> 1  &lt;article&gt;
- 2    &lt;h1&gt;...&lt;/h1&gt;
- 3    &lt;p&gt;...&lt;/p&gt;
- 4    &lt;p&gt;This paragraph will be selected&lt;/p&gt;
- 5    &lt;p&gt;...&lt;/p&gt;
- 6    &lt;h2&gt;...&lt;/h2&gt;
- 7    &lt;p&gt;This paragraph will be selected&lt;/p&gt;
- 8    &lt;p&gt;...&lt;/p&gt;
- 9    &lt;p&gt;This paragraph will be selected&lt;/p&gt;
- 10 &lt;/article&gt;</pre>
+<pre>1  &lt;article&gt;
+2    &lt;h1&gt;...&lt;/h1&gt;
+3    &lt;p&gt;...&lt;/p&gt;
+4    &lt;p&gt;This paragraph will be selected&lt;/p&gt;
+5    &lt;p&gt;...&lt;/p&gt;
+6    &lt;h2&gt;...&lt;/h2&gt;
+7    &lt;p&gt;This paragraph will be selected&lt;/p&gt;
+8    &lt;p&gt;...&lt;/p&gt;
+9    &lt;p&gt;This paragraph will be selected&lt;/p&gt;
+10 &lt;/article&gt;</pre>
 
 </details>
 
@@ -2660,12 +2635,12 @@ a strong child element, thus they are all ruled out and are not selected.</p>
 
 <h4>HTML</h4>
 
-<pre> 1  &lt;div&gt;Hello&lt;/div&gt;
- 2  &lt;div&gt;&lt;!-- Coming soon --&gt;&lt;/div&gt;&lt;!-- This div will be 
- 3  selected --&gt;
- 4  &lt;div&gt;&lt;/div&gt;&lt;!-- This div will be selected --&gt;
- 5  &lt;div&gt; &lt;/div&gt;
- 6  &lt;div&gt;&lt;strong&gt;&lt;/strong&gt;&lt;/div&gt;</pre>
+<pre>1  &lt;div&gt;Hello&lt;/div&gt;
+2  &lt;div&gt;&lt;!-- Coming soon --&gt;&lt;/div&gt;&lt;!-- This div will be 
+3  selected --&gt;
+4  &lt;div&gt;&lt;/div&gt;&lt;!-- This div will be selected --&gt;
+5  &lt;div&gt; &lt;/div&gt;
+6  &lt;div&gt;&lt;strong&gt;&lt;/strong&gt;&lt;/div&gt;</pre>
 
 <h4>Negation Pseudo-class</h4>
 
@@ -2688,95 +2663,95 @@ pseudo-classes.</p>
 
 <h4>CSS</h4>
 
-<pre> 1  div:not(.awesome) {...}
- 2  :not(div) {...}</pre>
+<pre>1  div:not(.awesome) {...}
+2  :not(div) {...}</pre>
 
 <br><br>
 
 <h4>HTML</h4>
 
-<pre> 1  &lt;div&gt;This div will be selected&lt;/div&gt;
- 2  &lt;div class=&quot;awesome&quot;&gt;...&lt;/div&gt;
- 3  &lt;section&gt;This section will be selected&lt;/section&gt;
- 4  &lt;section class=&quot;awesome&quot;&gt;This section will be selected&lt;/section&gt;</pre>
+<pre>1  &lt;div&gt;This div will be selected&lt;/div&gt;
+2  &lt;div class=&quot;awesome&quot;&gt;...&lt;/div&gt;
+3  &lt;section&gt;This section will be selected&lt;/section&gt;
+4  &lt;section class=&quot;awesome&quot;&gt;This section will be selected&lt;/section&gt;</pre>
 
 <h4>Pseudo-classes Example</h4>
 
 <details>
-  <summary>HTML</summary>
+  <summary><b>HTML</b></summary>
   
-<pre> 1  &lt;table&gt;
- 2    &lt;thead&gt;
- 3      &lt;tr&gt;
- 4        &lt;th&gt;Number&lt;/th&gt;
- 5        &lt;th&gt;Player&lt;/th&gt;
- 6        &lt;th&gt;Position&lt;/th&gt;
- 7        &lt;th&gt;Height&lt;/th&gt;
- 8        &lt;th&gt;Weight&lt;/th&gt;
- 9      &lt;/tr&gt;
- 10   &lt;/thead&gt;
- 11   &lt;tbody&gt;
- 12     &lt;tr&gt;
- 13       &lt;td&gt;8&lt;/td&gt;
- 14       &lt;td&gt;Marco Belinelli&lt;/td&gt;
- 15       &lt;td&gt;G&lt;/td&gt;
- 16       &lt;td&gt;6-5&lt;/td&gt;
- 17       &lt;td&gt;195&lt;/td&gt;
- 18     &lt;/tr&gt;
- 19     &lt;tr&gt;
- 20       &lt;td&gt;5&lt;/td&gt;
- 21       &lt;td&gt;Carlos Boozer&lt;/td&gt;
- 22       &lt;td&gt;F&lt;/td&gt;
- 23       &lt;td&gt;6-9&lt;/td&gt;
- 24       &lt;td&gt;266&lt;/td&gt;
- 25     &lt;/tr&gt;
- 26     ...
- 27   &lt;/tbody&gt;
- 28 &lt;/table&gt;</pre>
+<pre>1  &lt;table&gt;
+2    &lt;thead&gt;
+3      &lt;tr&gt;
+4        &lt;th&gt;Number&lt;/th&gt;
+5        &lt;th&gt;Player&lt;/th&gt;
+6        &lt;th&gt;Position&lt;/th&gt;
+7        &lt;th&gt;Height&lt;/th&gt;
+8        &lt;th&gt;Weight&lt;/th&gt;
+9      &lt;/tr&gt;
+10   &lt;/thead&gt;
+11   &lt;tbody&gt;
+12     &lt;tr&gt;
+13       &lt;td&gt;8&lt;/td&gt;
+14       &lt;td&gt;Marco Belinelli&lt;/td&gt;
+15       &lt;td&gt;G&lt;/td&gt;
+16       &lt;td&gt;6-5&lt;/td&gt;
+17       &lt;td&gt;195&lt;/td&gt;
+18     &lt;/tr&gt;
+19     &lt;tr&gt;
+20       &lt;td&gt;5&lt;/td&gt;
+21       &lt;td&gt;Carlos Boozer&lt;/td&gt;
+22       &lt;td&gt;F&lt;/td&gt;
+23       &lt;td&gt;6-9&lt;/td&gt;
+24       &lt;td&gt;266&lt;/td&gt;
+25     &lt;/tr&gt;
+26     ...
+27   &lt;/tbody&gt;
+28 &lt;/table&gt;</pre>
 
 </details>
 
 <br><br>
 
 <details>
-  <summary>CSS</summary>
+  <summary><b>CSS</b></summary>
 
-<pre> 1   table {
- 2     border-collapse: separate;
- 3     border-spacing: 0;
- 4     width: 100%;
- 5   }
- 6   th,
- 7   td {
- 8     padding: 6px 15px;
- 9   }
- 10  th {
- 11    background: #42444e;
- 12    color: #fff;
- 13    text-align: left;
- 14  }
- 15  tr:first-child th:first-child {
- 16    border-top-left-radius: 6px;
- 17  }
- 18  tr:first-child th:last-child {
- 19    border-top-right-radius: 6px;
- 20  }
- 21  td {
- 22    border-right: 1px solid #c6c9cc;
- 23    border-bottom: 1px solid #c6c9cc;
- 24  }
- 25  td:first-child {
- 26    border-left: 1px solid #c6c9cc;
- 27  }
- 28  tr:nth-child(even) td {
- 29    background: #eaeaed;
- 30  }
- 31  tr:last-child td:first-child {
- 32    border-bottom-left-radius: 6px;
- 33  }
- 34  tr:last-child td:last-child {
- 35    border-bottom-right-radius: 6px;
- 36  }</pre>
+<pre>1   table {
+2     border-collapse: separate;
+3     border-spacing: 0;
+4     width: 100%;
+5   }
+6   th,
+7   td {
+8     padding: 6px 15px;
+9   }
+10  th {
+11    background: #42444e;
+12    color: #fff;
+13    text-align: left;
+14  }
+15  tr:first-child th:first-child {
+16    border-top-left-radius: 6px;
+17  }
+18  tr:first-child th:last-child {
+19    border-top-right-radius: 6px;
+20  }
+21  td {
+22    border-right: 1px solid #c6c9cc;
+23    border-bottom: 1px solid #c6c9cc;
+24  }
+25  td:first-child {
+26    border-left: 1px solid #c6c9cc;
+27  }
+28  tr:nth-child(even) td {
+29    background: #eaeaed;
+30  }
+31  tr:last-child td:first-child {
+32    border-bottom-left-radius: 6px;
+33  }
+34  tr:last-child td:last-child {
+35    border-bottom-right-radius: 6px;
+36  }</pre>
 
 </details>
 
@@ -2935,16 +2910,16 @@ pseudo-elements respectively.</p>
 
 <h4>CSS</h4>
 
-<pre> 1  .alpha:first-letter,
- 2  .bravo:first-line {
- 3    color: #ff7b29;
- 4    font-size: 18px;
- 5  }</pre>
+<pre>1  .alpha:first-letter,
+2  .bravo:first-line {
+3    color: #ff7b29;
+4    font-size: 18px;
+5  }</pre>
 
 <h4>HTML</h4>
 
-<pre> 1  &lt;p class=&quot;alpha&quot;&gt;Lorem ipsum dolor...&lt;/p&gt;
- 2  &lt;p class=&quot;bravo&quot;&gt;Integer eget enim...&lt;/p&gt;</pre>
+<pre>1  &lt;p class=&quot;alpha&quot;&gt;Lorem ipsum dolor...&lt;/p&gt;
+2  &lt;p class=&quot;bravo&quot;&gt;Integer eget enim...&lt;/p&gt;</pre>
  
 <h4>Textual Pseudo-elements Demo</h4>
 
@@ -2969,16 +2944,16 @@ necessary should a browser not support these pseudo-elements.</p>
 
 <h4>CSS</h4>
 
-<pre> 1  a:after {
- 2    color: #9799a7;
- 3    content: &quot; (&quot; attr(href) &quot;)&quot;;
- 4    font-size: 11px;
- 5  }</pre>
+<pre>1  a:after {
+2    color: #9799a7;
+3    content: &quot; (&quot; attr(href) &quot;)&quot;;
+4    font-size: 11px;
+5  }</pre>
  
 <h4>HTML</h4>
 
-<pre> 1  &lt;a href=&quot;http://google.com/&quot;&gt;Search the Web&lt;/a&gt;
- 2  &lt;a href=&quot;http://learn.shayhowe.com/&quot;&gt;Learn How to Build Websites&lt;/a&gt;</pre>
+<pre>1  &lt;a href=&quot;http://google.com/&quot;&gt;Search the Web&lt;/a&gt;
+2  &lt;a href=&quot;http://learn.shayhowe.com/&quot;&gt;Learn How to Build Websites&lt;/a&gt;</pre>
  
 <h4>Generated Content Pseudo-elements Demo</h4>
 
@@ -3006,12 +2981,12 @@ thanks to the ::selection  fragment pseudo-element. Also note,
 the ::-moz-selection Mozilla prefixed fragment pseudo-element has been
 added to ensure the best support for all browsers.</p>
 
-<pre> 1  ::-moz-selection {
- 2    background: #ff7b29;
- 3  }
- 4  ::selection {
- 5    background: #ff7b29;
- 6  }</pre>
+<pre>1  ::-moz-selection {
+2    background: #ff7b29;
+3  }
+4  ::selection {
+5    background: #ff7b29;
+6  }</pre>
 
 <h4>Fragment Pseudo-element Demo</h4>
 
@@ -3024,47 +2999,47 @@ added to ensure the best support for all browsers.</p>
 <br><br>
 
 <details>
-  <summary>CSS</summary>
+  <summary><b>CSS</b></summary>
   
-<pre> 1  .arrow {
- 2  background: #2db34a;
- 3  color: #fff;
- 4  display: inline-block;
- 5  height: 30px;
- 6  line-height: 30px;
- 7  padding: 0 12px;
- 8  position: relative;
- 9  text-decoration: none;
- 10  }
- 11  .arrow:before,  
- 12  .arrow:after {
- 13    content: &quot;&quot;;
- 14    height: 0;
- 15    position: absolute;
- 16    width: 0;
- 17  }
- 18  .arrow:before {
- 19    border-bottom: 15px solid #2db34a;
- 20    border-left: 15px solid transparent;
- 21    border-top: 15px solid #2db34a;
- 22    left: -15px;
- 23  }
- 24  .arrow:after {
- 25    border-bottom: 15px solid transparent;
- 26    border-left: 15px solid #2db34a;
- 27    border-top: 15px solid transparent;
- 28    right: -15px;
- 29  }
- 30  .arrow:hover {
- 31    background: #ff7b29;
- 32  }
- 33  .arrow:hover:before {
- 34    border-bottom: 15px solid #ff7b29;
- 35    border-top: 15px solid #ff7b29;
- 36  }
- 37  .arrow:hover:after {
- 39    border-left: 15px solid #ff7b29;
- 40  }</pre>
+<pre>1  .arrow {
+2  background: #2db34a;
+3  color: #fff;
+4  display: inline-block;
+5  height: 30px;
+6  line-height: 30px;
+7  padding: 0 12px;
+8  position: relative;
+9  text-decoration: none;
+10  }
+11  .arrow:before,  
+12  .arrow:after {
+13    content: &quot;&quot;;
+14    height: 0;
+15    position: absolute;
+16    width: 0;
+17  }
+18  .arrow:before {
+19    border-bottom: 15px solid #2db34a;
+20    border-left: 15px solid transparent;
+21    border-top: 15px solid #2db34a;
+22    left: -15px;
+23  }
+24  .arrow:after {
+25    border-bottom: 15px solid transparent;
+26    border-left: 15px solid #2db34a;
+27    border-top: 15px solid transparent;
+28    right: -15px;
+29  }
+30  .arrow:hover {
+31    background: #ff7b29;
+32  }
+33  .arrow:hover:before {
+34    border-bottom: 15px solid #ff7b29;
+35    border-top: 15px solid #ff7b29;
+36  }
+37  .arrow:hover:after {
+39    border-left: 15px solid #ff7b29;
+40  }</pre>
 
 </details>
 
@@ -3116,29 +3091,25 @@ added to ensure the best support for all browsers.</p>
 
 <h4>Selector Browser Support</h4>
 
-<p>
-While these selectors provide a variety of opportunity and the ability
-to do some truly amazing things with CSS, they are at times plagued by
-poor browser support. Before doing anything too critical check the
-selectors you are wishing to use across your visitor’s most common
-browsers, and then make the judgment call as to whether they are
-appropriate or not.
-</p>
-<p>
-CSS3.info provides a <a href="https://www.css3.info/selectors-test/" 
+<p>While these selectors provide a variety of opportunity and the ability to do some 
+truly amazing things with CSS, they are at times plagued by poor browser support. 
+Before doing anything too critical check the selectors you are wishing to use across 
+your visitor’s most common browsers, and then make the judgment call as to whether 
+they are appropriate or not.</p>
+
+<p>CSS3.info provides a <a href="https://www.css3.info/selectors-test/" 
 rel="noopener noreferrer" target="_blank"> CSS3 Selectors Test</a> tool
 which will inform you as to which selectors are supported by the browser
 in use. It’s also never a bad idea to check browser support directly
-from the vendor.
-</p>
-<p>
-Additionally, <a href="http://selectivizr.com/" 
+from the vendor.</p>
+
+<p>Additionally, <a href="http://selectivizr.com/" 
 rel="noopener noreferrer" target="_blank">Selectivizr</a>, a JavaScript
 utility, provides great support for these selectors in Internet Explorer
 6-8. More support, should it be necessary, can also be provided
 by <a href="http://api.jquery.com/category/selectors/" 
-rel="noopener noreferrer" target="_blank">jQuery selectors</a>.
-</p>
+rel="noopener noreferrer" target="_blank">jQuery selectors</a>.</p>
+
 <h4>Selector Speed &amp; Performance</h4>
 
 <p>It is important to pay attention the speed and performance of selectors,
@@ -3176,75 +3147,56 @@ think about revisiting it, and seeing if a better solution can be found.</p>
 <h4>HTML</h4>
 
 <ul>
-<li>
-<a href="https://learn.shayhowe.com/advanced-html-css/responsive-web-design/#responsive-web-design"
-    rel="noopener noreferrer" target="_blank">Responsive Overview</a>
-</li>
-<li>
-<a href="https://learn.shayhowe.com/advanced-html-css/responsive-web-design/#viewport"
-    rel="noopener noreferrer" target="_blank">Viewport</a>
-</li>
+  <li><a href="https://learn.shayhowe.com/advanced-html-css/responsive-web-design/#responsive-web-design"
+    rel="noopener noreferrer" target="_blank">Responsive Overview</a></li>
+  <li><a href="https://learn.shayhowe.com/advanced-html-css/responsive-web-design/#viewport"
+    rel="noopener noreferrer" target="_blank">Viewport</a></li>
 </ul>
-<h4>
-CSS
-</h4>
+
+<h4>CSS</h4>
+
 <ul>
-<p>-<a
-href="https://learn.shayhowe.com/advanced-html-css/responsive-web-design/#flexible-layouts">Flexible
-Layouts</a></p>
-<p>-<a
-href="https://learn.shayhowe.com/advanced-html-css/responsive-web-design/#media-queries">Media
-Queries</a></p>
-<p>-<a
-href="https://learn.shayhowe.com/advanced-html-css/responsive-web-design/#mobile-first">Mobile
-First</a></p>
-<p>-<a
-href="https://learn.shayhowe.com/advanced-html-css/responsive-web-design/#flexible-media">Flexible
-Media</a></p>
+  <li><a href="https://learn.shayhowe.com/advanced-html-css/responsive-web-design/#flexible-layouts">
+    Flexible Layouts</a></li>
+  <li><a href="https://learn.shayhowe.com/advanced-html-css/responsive-web-design/#media-queries">
+    Media Queries</a></li>
+  <li><a href="https://learn.shayhowe.com/advanced-html-css/responsive-web-design/#mobile-first">
+    Mobile First</a></li>
+  <li><a href="https://learn.shayhowe.com/advanced-html-css/responsive-web-design/#flexible-media">
+    Flexible Media</a></li>
+</ul>
 
 <h4>SHARE</h4>
 
-<p>
-The Internet took off quicker than anyone would have predicted, growing
+<p>The Internet took off quicker than anyone would have predicted, growing
 like crazy. Now, for the past few years, mobile growth has exploded onto
 the scene. The growth of mobile Internet usage is also far out pacing
-that of general Internet usage growth.
-</p>
-<p>
-These days it is hard to find someone who doesn’t own a mobile device,
+that of general Internet usage growth.</p>
+
+<p>These days it is hard to find someone who doesn’t own a mobile device,
 or multiple, connected to the Internet. In the UK there are more mobile
 phones than people, and should 
 <a href="http://www.digitalbuzzblog.com/2011-mobile-statistics-stats-facts-marketing-infographic/" 
 rel="noopener noreferrer" target="_blank">trends continue</a> mobile
-Internet usage will surpass that of desktop Internet usage within the
-year.
-</p>
-<p>
-With the growth in mobile Internet usage comes the question of how to
-build websites suitable for all users. The industry response to this
-question has become responsive web design, also known as RWD.
-</p>
-<h4>
-Responsive Overview
-</h4>
-<p>
-Responsive web design is the practice of building a website suitable to
-work on every device and every screen size, no matter how large or
-small, mobile or desktop. Responsive web design is focused around
-providing an intuitive and gratifying experience for everyone. Desktop
-computer and cell phone users alike all benefit from responsive
-websites.
-</p>
-<p>
-The <a href="http://www.alistapart.com/articles/responsive-web-design/" 
+Internet usage will surpass that of desktop Internet usage within the year.</p>
+
+<p>With the growth in mobile Internet usage comes the question of how to build websites 
+suitable for all users. The industry response to this question has become responsive web 
+design, also known as RWD.</p>
+
+<h4>Responsive Overview</h4>
+
+<p>Responsive web design is the practice of building a website suitable to work on every 
+device and every screen size, no matter how large or small, mobile or desktop. Responsive 
+web design is focused around providing an intuitive and gratifying experience for everyone. 
+Desktop computer and cell phone users alike all benefit from responsive websites.</p>
+
+<p>The <a href="http://www.alistapart.com/articles/responsive-web-design/" 
 rel="noopener noreferrer" target="_blank">responsive web design</a> term
 itself was coined, and largely developed, by Ethan Marcotte. A lot of
 what is covered in this lesson was first talked about by Ethan online
-and in his book 
-<i><a href="http://www.abookapart.com/products/responsive-web-design/" 
-rel="noopener noreferrer" target="_blank"></i>Responsive Web Design</a>,
-which is worth a read.
-</p>
+and in his book <a href="http://www.abookapart.com/products/responsive-web-design/" 
+rel="noopener noreferrer" target="_blank"></i>Responsive Web Design</a>, which is worth a read.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~ 07. food sense responsive layout (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <img class="border displayed"
@@ -3255,8 +3207,7 @@ which is worth a read.
 
 <h6 align="center">Fig. 4</h6>
 
-<p>
-<a href="http://foodsense.is/" 
+<p><a href="http://foodsense.is/" 
 rel="noopener noreferrer" target="_blank">Food Sense</a> has a beautiful
 website, responsive to all different viewport sizes. No matter how large
 or small the viewport may be the Food Sense website adjust, creating a
@@ -3284,8 +3235,7 @@ commonly on a new domain solely for mobile users. While this does
 occasionally have its place, it normally isn’t a great idea. Mobile
 websites can be extremely light but they do come with the dependencies
 of a new code base and browser sniffing, all of which can become an
-obstacle for both developers and users.
-</p>
+obstacle for both developers and users.</p>
 
 <p>Currently the most popular technique lies within responsive web design, favoring 
 design that dynamically adapts to different browser and device viewports, changing layout 
@@ -3312,7 +3262,7 @@ browser or device. These new units include vw, vh, vmin, and vmax.
 Overall support for these new units isn’t great, but it is growing. In
 time they look to play a large roll in building responsive websites.</p>
 
-<ul>
+<ul style="line-height=175%;">
   <li>vw<br> Viewports width</li>
   <li>vh<br> Viewports height</li>
   <li>vmin<br> Minimum of the viewport’s height and width</li>
@@ -3340,31 +3290,31 @@ the following.</p>
 
 <h4>HTML</h4>
 
-<pre> 1  &lt;div class=&quot;container&quot;&gt; 
- 2  &lt;section&gt;...&lt;/section&gt; 
- 3  &lt;aside&gt;...&lt;/aside&gt;  
- 4  &lt;/div&gt;</pre>
+<pre>1  &lt;div class=&quot;container&quot;&gt; 
+2  &lt;section&gt;...&lt;/section&gt; 
+3  &lt;aside&gt;...&lt;/aside&gt;  
+4  &lt;/div&gt;</pre>
  
 <br><br>
 
 <details>
-  <summary>CSS</summary>
+  <summary><b>CSS</b></summary>
 
-<pre> 1  .container { 
- 2    width: 538px;
- 3  }
- 4  section,
- 5  aside {
- 6    margin: 10px;
- 7  }
- 8  section {
- 9    float: left;
- 10   width: 340px;
- 11 }
- 12 aside {
- 13   float: right;
- 14   width: 158px;
- 15 }</pre>
+<pre>1  .container {
+2    width: 538px;
+3  }
+4  section,
+5  aside {
+6    margin: 10px;
+7  }
+8  section {
+9    float: left;
+10   width: 340px;
+11 }
+12 aside {
+13   float: right;
+14   width: 158px;
+15 }</pre>
 
 </details>
 
@@ -3377,20 +3327,20 @@ how wide the parent container becomes, the section and aside margins and
 widths scale proportionally.</p>
 
 <details>
-  <summary>Fixed Grid Demo</summary>
-  
-<pre> 1  section,
- 2  aside {
- 3    margin: 1.858736059%; /* 10px ÷ 538px = .018587361 */
- 4  }
- 5  section {
- 6    float: left;
- 7    width: 63.197026%; /* 340px ÷ 538px = .63197026 */
- 8  }
- 9  aside {
- 10   float: right;
- 11   width: 29.3680297%; /* 158px ÷ 538px = .293680297 */
- 12 }</pre>
+  <summary><b>Fixed Grid Demo</b></summary>
+
+<pre>1  section,
+2  aside {
+3    margin: 1.858736059%; /* 10px ÷ 538px = .018587361 */
+4  }
+5  section {
+6    float: left;
+7    width: 63.197026%; /* 340px ÷ 538px = .63197026 */
+8  }
+9  aside {
+10   float: right;
+11   width: 29.3680297%; /* 158px ÷ 538px = .293680297 */
+12 }</pre>
 
 </details>
 
@@ -3429,15 +3379,15 @@ to avoid any additional HTTP requests.</p>
 
 <h4>HTML</h4>
 
-<pre> 1  &lt;!-- Separate CSS File --&gt;
- 2  &lt;link href=&quot;styles.css&quot; rel=&quot;stylesheet&quot; media=&quot;all and (max-width: 1024px)&quot;&gt;</pre>
+<pre>1  &lt;!-- Separate CSS File --&gt;
+2  &lt;link href=&quot;styles.css&quot; rel=&quot;stylesheet&quot; media=&quot;all and (max-width: 1024px)&quot;&gt;</pre>
 
 <h4>CSS</h4>
 
-<pre> 1  /* @media Rule */  
- 2  @media all and (max-width: 1024px) {...}
- 3  /* @import Rule */ 
- 4  @import url(styles.css) all and (max-width: 1024px) {...}</pre>
+<pre>1  /* @media Rule */
+2  @media all and (max-width: 1024px) {...}
+3  /* @import Rule */
+4  @import url(styles.css) all and (max-width: 1024px) {...}</pre>
 
 <p>Each media query may include a media type followed by one or more
 expressions. Common media types include all, screen, print, tv,
@@ -3596,12 +3546,12 @@ media query for viewports under 420 pixels wide we can change the layout
 by turning off the floats and changing the widths of
 the section and aside.</p>
 
-<pre> 1  @media all and (max-width: 420px) { 
- 2    section, aside {
- 3      float: none; 
- 4      width: auto; 
- 5    } 
- 6  }</pre>
+<pre>1  @media all and (max-width: 420px) {
+2    section, aside {
+3      float: none;
+4      width: auto;
+5    }
+6  }</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~ 08. demo without media queries (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <img class="border displayed"
@@ -3663,11 +3613,11 @@ and develop intrinsic mobile experiences.</p>
 <p>A breakout of mobile first media queries might look abit like the
 following.</p>
 
-<pre> 1  /* Default styles first then media queries */ 
- 2  @media screen and (min-width: 400px) {...} 
- 3  @media screen and (min-width: 600px) {...} 
- 4  @media screen and (min-width: 1000px) {...}
- 5  @media screen and (min-width: 1400px) {...}</pre>
+<pre>1  /* Default styles first then media queries */
+2  @media screen and (min-width: 400px) {...}
+3  @media screen and (min-width: 600px) {...}
+4  @media screen and (min-width: 1000px) {...}
+5  @media screen and (min-width: 1400px) {...}</pre>
 
 <p>Additionally, downloading unnecessary media assets can be stopped by
 using media queries. Generally speaking, avoiding CSS3 shadows,
@@ -3675,16 +3625,16 @@ gradients, transforms, and animations within mobile styles isn’t a bad
 idea either. When used excessively, they cause heavy loading and can
 even reduce a device’s battery life.</p>
 
-<pre> 1  /* Default media */
- 2  body {
- 3    background: #ddd;
- 4  }
- 5  /* Media for larger devices */
- 6  @media screen and (min-width: 800px) {
- 7    body {
- 8      background-image: url(&quot;bg.png&quot;) 50% 50% no-repeat;  
- 9    }
- 10 }</pre>
+<pre>1  /* Default media */
+2  body {
+3    background: #ddd;
+4  }
+5  /* Media for larger devices */
+6  @media screen and (min-width: 800px) {
+7    body {
+8      background-image: url(&quot;bg.png&quot;) 50% 50% no-repeat;
+9    }
+10 }</pre>
 
 <h4>Mobile First Demo</h4>
 
@@ -3695,25 +3645,25 @@ adding media queries to adjust for viewports over 420 pixels wide we
 build the following:</p>
 
 <details>
-  <summary>Mobile First Demo</summary>
+  <summary><b>Mobile First Demo</b></summary>
 
-<pre> 1  section,
- 2  aside { 
- 3    margin: 1.858736059%; 
- 4  } 
- 5  @media all and (min-width: 420px) { 
- 6    .container { 
- 7      max-width: 538px;  
- 8    }
- 9    section {  
- 10     float: left; 
- 11     width: 63.197026%; 
- 12   } 
- 13   aside { 
- 14     float: right;
- 15     width: 29.3680297%;
- 16   } 
- 17 }</pre>
+<pre>1  section,
+2  aside { 
+3    margin: 1.858736059%; 
+4  } 
+5  @media all and (min-width: 420px) { 
+6    .container { 
+7      max-width: 538px;  
+8    }
+9    section {  
+10     float: left; 
+11     width: 63.197026%; 
+12   } 
+13   aside { 
+14     float: right;
+15     width: 29.3680297%;
+16   } 
+17 }</pre>
 
 </details>
 
@@ -3866,10 +3816,10 @@ support isn’t great across the board. The previously
 recommended viewport meta tag would look like the following <span
 class="citation" data-cites="viewport">@viewport</span> rule in CSS.</p>
 
-<pre> 1  @viewport {  
- 2    width: device-width;
- 3    zoom: 1; 
- 4  }</pre>
+<pre>1  @viewport {
+2    width: device-width;
+3    zoom: 1;
+4  }</pre>
  
 <h4>Flexible Media</h4>
 
@@ -3881,9 +3831,9 @@ changing their size as the size of the viewport changes.</p>
 with a value of 100%. Doing so ensures that as the viewport gets smaller
 any media will scale down according to its containers width.</p>
 
-<pre> 1  img, video, canvas {  
- 2    max-width: 100%;
- 3  }</pre>
+<pre>1  img, video, canvas {
+2    max-width: 100%;
+3  }</pre>
  
 <h4>Flexible Media Demo</h4>
 
@@ -3913,28 +3863,28 @@ treating the parent element as an absolutely positioned element.</p>
 
 <h4>HTML</h4>
 
-<pre> 1  &lt;figure&gt; 
- 2    &lt;iframe src=&quot;https://www.youtube.com/embed/Sv3xVOs7_No&quot;&gt;&lt;/iframe&gt; 
- 3  &lt;/figure&gt;</pre>
+<pre>1  &lt;figure&gt; 
+2    &lt;iframe src=&quot;https://www.youtube.com/embed/Sv3xVOs7_No&quot;&gt;&lt;/iframe&gt; 
+3  &lt;/figure&gt;</pre>
 
 <br><br>
 
 <details>
-  <summary>CSS</summary>
+  <summary><b>CSS</b></summary>
 
-<pre> 1  figure {
- 2    height: 0; 
- 3    padding-bottom: 56.25%; /* 16:9 */ 
- 4    position: relative;
- 5    width: 100%; 
- 6  } 
- 7  iframe {
- 8    height: 100%;
- 9    left: 0;
- 10   position: absolute;
- 11   top: 0; 
- 13   width: 100%; 
- 14 }</pre>
+<pre>1  figure {
+2    height: 0; 
+3    padding-bottom: 56.25%; /* 16:9 */ 
+4    position: relative;
+5    width: 100%; 
+6  } 
+7  iframe {
+8    height: 100%;
+9    left: 0;
+10   position: absolute;
+11   top: 0; 
+13   width: 100%; 
+14 }</pre>
 
 </details>
 
@@ -3948,9 +3898,8 @@ rel="noopener noreferrer" target="_blank">review and edit this code</a> on thei
 <p>100% Wide Container</p>
 <p>75% Wide Container</p>
 <p>50% Wide Container</p>
-<h4>
-Resources &amp; Links
-</h4>
+
+<h4>Resources &amp; Links</h4>
 
 <ul>
   <li><a href="http://www.alistapart.com/articles/responsive-web-design/"
@@ -4063,30 +4012,23 @@ run to see a list of different available options.</p>
 <p>Unfortunately Haml doesn’t provide a way to watch a file, or directory,
 for changes without the use of another dependency.</p>
 
-<p>Inside of a Rails application a Haml dependency may be added in the
-Gemfile, thus automatically compiling Haml files to HTML upon any
-changes. There are a few desktop applications available for those not
-using Rails, one of the more popular
-being <a href="https://codekitapp.com/" 
-rel="noopener noreferrer" target="_blank">CodeKit</a>.
-</p>
-<p>
-On top of Haml CodeKit also supports other preprocessors, which may also
-come in handy.
-</p>
-<h4>
-Doctype
-</h4>
+<p>Inside of a Rails application a Haml dependency may be added in the Gemfile, thus 
+automatically compiling Haml files to HTML upon any changes. There are a few desktop 
+applications available for those not using Rails, one of the more popular being 
+<a href="https://codekitapp.com/" rel="noopener noreferrer" target="_blank">CodeKit</a>.</p>
 
-<p>The first part to writing a document in Haml is knowing what type
-of doctype is to be used. When working with HTML documents, the general
-document type is going to be the HTML5 doctype. In Haml document types
-are identified with three exclamation points, !!! followed by any
-specifics if necessary.</p>
+<p>On top of Haml CodeKit also supports other preprocessors, which may also come in handy.</p>
 
-<p>The default doctype in Haml is the HTML 1.0 Transitional document type
-so in order to make this the HTML5 doctype the number five has to be
-passed in after the exclamation points, !!! 5.</p>
+<h4>Doctype</h4>
+
+<p>The first part to writing a document in Haml is knowing what type of doctype is to 
+be used. When working with HTML documents, the general document type is going to be the 
+HTML5 doctype. In Haml document types are identified with three exclamation points, !!! 
+followed by any specifics if necessary.</p>
+
+<p>The default doctype in Haml is the HTML 1.0 Transitional document type so in order to 
+make this the HTML5 doctype the number five has to be passed in after the exclamation 
+points, !!! 5.</p>
 
 <h4>Haml</h4>
 
@@ -4116,22 +4058,22 @@ struggle.</p>
 
 <h4>Haml</h4>
 
-<pre> 1  %body
- 2  %header 
- 3  %h1 Hello World 
- 4  %section
- 5  %p Lorem ipsum dolor sit amet.</pre>
+<pre>1  %body
+2  %header
+3  %h1 Hello World
+4  %section
+5  %p Lorem ipsum dolor sit amet.</pre>
 
 <h4>Compiled HTML</h4>
 
-<pre> 1  &lt;body&gt;
- 2  &lt;header&gt; 
- 3  &lt;h1&gt;Hello World&lt;/h1&gt; 
- 4  &lt;/header&gt;
- 5  &lt;section&gt;
- 6  &lt;p&gt;Lorem ipsum dolor sit amet.&lt;/p&gt;  
- 7  &lt;/section&gt; 
- 8  &lt;/body&gt;</pre>
+<pre>1  &lt;body&gt;
+2  &lt;header&gt; 
+3  &lt;h1&gt;Hello World&lt;/h1&gt; 
+4  &lt;/header&gt;
+5  &lt;section&gt;
+6  &lt;p&gt;Lorem ipsum dolor sit amet.&lt;/p&gt;  
+7  &lt;/section&gt; 
+8  &lt;/body&gt;</pre>
 
 <h4>Handling Text</h4>
 
@@ -4140,13 +4082,13 @@ or indented below the element. Text cannot be both on the same line as
 the declared element and nested below it, it has to be either or. The
 example from above could be rewritten as the following:</p>
 
-<pre> 1  %body 
- 2  %header  
- 3  %h1
- 4  Hello World
- 5  %section 
- 6  %p 
- 7  Lorem ipsum dolor sit amet.</pre>
+<pre>1  %body
+2  %header
+3  %h1
+4  Hello World
+5  %section
+6  %p
+7  Lorem ipsum dolor sit amet.</pre>
 
 <h4>Attributes</h4>
 
@@ -4158,9 +4100,9 @@ style attributes will use standard HTML syntax inside of ().</p>
 
 <h4>Haml</h4>
 
-<pre> 1  %img{:src =&gt; &quot;shay.jpg&quot;, :alt =&gt; &quot;Shay Howe&quot;}
- 2  %img{src: &quot;shay.jpg&quot;, alt: &quot;Shay Howe&quot;}  
- 3  %img(src=&quot;shay.jpg&quot; alt=&quot;Shay Howe&quot;)</pre>
+<pre>1  %img{:src =&gt; &quot;shay.jpg&quot;, :alt =&gt; &quot;Shay Howe&quot;}
+2  %img{src: &quot;shay.jpg&quot;, alt: &quot;Shay Howe&quot;}
+3  %img(src=&quot;shay.jpg&quot; alt=&quot;Shay Howe&quot;)</pre>
 
 <h4>Compiled HTML</h4>
 
@@ -4182,17 +4124,17 @@ outlined formats.</p>
 
 <h4>Haml</h4>
 
-<pre> 1  %section.feature
- 2  %section.feature.special 
- 3  %section#hello  
- 4  %section#hello.feature(role=&quot;region&quot;)</pre>
+<pre>1  %section.feature
+2  %section.feature.special
+3  %section#hello
+4  %section#hello.feature(role=&quot;region&quot;)</pre>
 
 <h4>Compiled HTML</h4>
 
-<pre> 1  &lt;section class=&quot;feature&quot;&gt;&lt;/section&gt; 
- 2  &lt;section class=&quot;feature special&quot;&gt;&lt;/section&gt;  
- 3  &lt;section id=&quot;hello&quot;&gt;&lt;/section&gt; 
- 4  &lt;section class=&quot;feature&quot; id=&quot;hello&quot; role=&quot;region&quot;&gt;&lt;/section&gt;</pre>
+<pre>1  &lt;section class=&quot;feature&quot;&gt;&lt;/section&gt;
+2  &lt;section class=&quot;feature special&quot;&gt;&lt;/section&gt;
+3  &lt;section id=&quot;hello&quot;&gt;&lt;/section&gt;
+4  &lt;section class=&quot;feature&quot; id=&quot;hello&quot; role=&quot;region&quot;&gt;&lt;/section&gt;</pre>
 
 <h4>Division Classes &amp; IDs</h4>
 
@@ -4202,26 +4144,26 @@ identified with a . and IDs are to be identified with a #.</p>
 
 <h4>Haml</h4>
 
-<pre> 1  .awesome
- 2  .awesome.lesson 
- 3  #getting-started.lesson</pre>
+<pre>1  .awesome
+2  .awesome.lesson
+3  #getting-started.lesson</pre>
  
 <h4>Compiled HTML</h4>
 
-<pre> 1  &lt;div class=&quot;awesome&quot;&gt;&lt;/div&gt; 
- 2  &lt;div class=&quot;awesome lesson&quot;&gt;&lt;/div&gt;
- 3  &lt;div class=&quot;lesson&quot; id=&quot;getting-started&quot;&gt;&lt;/div&gt;</pre>
+<pre>1  &lt;div class=&quot;awesome&quot;&gt;&lt;/div&gt;
+2  &lt;div class=&quot;awesome lesson&quot;&gt;&lt;/div&gt;
+3  &lt;div class=&quot;lesson&quot; id=&quot;getting-started&quot;&gt;&lt;/div&gt;</pre>
 
 <h4>Boolean Attributes</h4>
 
-<p>Boolean attributes are handled just as they would be within Ruby or
-HTML, all depending on the syntax being used.</p>
+<p>Boolean attributes are handled just as they would be within Ruby or HTML, all 
+depending on the syntax being used.</p>
 
 <h4>Haml</h4>
 
-<pre> 1  %input{:type =&gt; &quot;checkbox&quot;, :checked =&gt; true}  
- 2  %input(type=&quot;checkbox&quot; checked=true)  
- 3  %input(type=&quot;checkbox&quot; checked)</pre>
+<pre>1  %input{:type =&gt; &quot;checkbox&quot;, :checked =&gt; true}
+2  %input(type=&quot;checkbox&quot; checked=true)
+3  %input(type=&quot;checkbox&quot; checked)</pre>
 
 <h4>Compiled HTML</h4>
 
@@ -4241,16 +4183,16 @@ backslash, is escaped text, printing it as is, without execution.</p>
 
 <h4>Haml</h4>
 
-<pre> 1  .author 
- 2  = @author 
- 3  \\= @author</pre>
+<pre>1  .author
+2  = @author
+3  \\= @author</pre>
 
 <h4>Compiled HTML</h4>
 
-<pre> 1  &lt;div class=&quot;author&quot;&gt; 
- 2  Shay Howe  
- 3  = @author 
- 4  &lt;/div&gt;</pre>
+<pre>1  &lt;div class=&quot;author&quot;&gt;
+2  Shay Howe
+3  = @author
+4  &lt;/div&gt;</pre>
 
 <h4>Text Escaping Alternatives</h4>
 
@@ -4269,10 +4211,10 @@ outside of the anchor text.</p>
 
 <h4>Haml</h4>
 
-<pre> 1  %p
- 2  Shay is 
- 3  = succeed &quot;.&quot; do 
- 4  %a{:href =&gt; &quot;#&quot;} awesome</pre>
+<pre>1  %p
+2  Shay is
+3  = succeed &quot;.&quot; do
+4  %a{:href =&gt; &quot;#&quot;} awesome</pre>
 
 <h4>Compiled HTML</h4>
 
@@ -4288,24 +4230,24 @@ code can be commented out by being nested underneath a forward slash.</p>
 
 <h4>Haml</h4>
 
-<pre> 1  %div 
- 2  / Commented line
- 3  Actual line
- 4  / 
- 5  %div 
- 6  Commented block</pre>
+<pre>1  %div
+2  / Commented line
+3  Actual line
+4  /
+5  %div
+6  Commented block</pre>
 
 <h4>Compiled HTML</h4>
 
-<pre> 1  &lt;div&gt; 
- 2    &lt;!-- Commented line --&gt; 
- 3    Actual line
- 4  &lt;/div&gt;
- 5    &lt;!--  
- 6  &lt;div&gt; 
- 7    Commented block 
- 8  &lt;/div&gt;
- 9  --&gt;</pre>
+<pre>1  &lt;div&gt;
+2    &lt;!-- Commented line --&gt;
+3    Actual line
+4  &lt;/div&gt;
+5    &lt;!--
+6  &lt;div&gt;
+7    Commented block
+8  &lt;/div&gt;
+9  --&gt;</pre>
  
 <h4>Conditional Comments</h4>
 
@@ -4315,14 +4257,14 @@ square brackets need to be placed directly after the forward slash.</p>
 
 <h4>Haml</h4>
 
-<pre> 1  [if lt IE 9] 
- 2  %script{:src =&gt; &quot;html5shiv.js&quot;}</pre>
+<pre>1  [if lt IE 9]
+2  %script{:src =&gt; &quot;html5shiv.js&quot;}</pre>
 
 <h4>Compiled HTML</h4>
 
-<pre> 1  &lt;!--[if lt IE 9]&gt;
- 2  &lt;script src=&quot;html5shiv.js&quot;&gt;&lt;/script&gt;
- 3  &lt;![endif]--&gt; </pre>
+<pre>1  &lt;!--[if lt IE 9]&gt;
+2  &lt;script src=&quot;html5shiv.js&quot;&gt;&lt;/script&gt;
+3  &lt;![endif]--&gt; </pre>
  
 <h4>Silent Comments</h4>
 
@@ -4342,9 +4284,9 @@ multiple lines with the use of nesting.</p>
 
 <h4>Compiled HTML</h4>
 
-<pre> 1  &lt;div&gt; 
- 2    Actual line
- 3  &lt;/div&gt;</pre>
+<pre>1  &lt;div&gt;
+2    Actual line
+3  &lt;/div&gt;</pre>
 
 <h4>Filters</h4>
 
@@ -4380,41 +4322,41 @@ the group being :css and :javascript.</p>
 
 <h4>Haml</h4>
 
-<pre> 1  :javascript
- 2  $(&#39;button&#39;).on(&#39;click&#39;, function(event) {  
- 3    $(&#39;p&#39;).hide(&#39;slow&#39;);
- 4  });</pre>
+<pre>1  :javascript
+2  $(&#39;button&#39;).on(&#39;click&#39;, function(event) {
+3    $(&#39;p&#39;).hide(&#39;slow&#39;);
+4  });</pre>
 
 <h4>Compiled HTML</h4>
 
-<pre> 1  &lt;script&gt; 
- 2    $(&#39;button&#39;).on(&#39;click&#39;, function(event) {  
- 3      $(&#39;p&#39;).hide(&#39;slow&#39;);
- 4    });  
- 5  &lt;/script&gt;</pre>
+<pre>1  &lt;script&gt;
+2    $(&#39;button&#39;).on(&#39;click&#39;, function(event) {
+3      $(&#39;p&#39;).hide(&#39;slow&#39;);
+4    });
+5  &lt;/script&gt;</pre>
 
 <h4>CSS &amp; Sass Filters</h4>
 
 <h4>Haml</h4>
 
-<pre> 1  :css 
- 2  .container { 
- 3    margin: 0 auto; 
- 4    width: 960px;
- 5  } 
- 6  :sass
- 7  .container 
- 8  margin: 0 auto  
- 9  width: 960px</pre>
+<pre>1  :css
+2  .container {
+3    margin: 0 auto;
+4    width: 960px;
+5  }
+6  :sass
+7  .container
+8  margin: 0 auto
+9  width: 960px</pre>
 
 <h4>Compiled HTML</h4>
 
-<pre> 1  &lt;style&gt;  
- 2  .container { 
- 3    margin: 0 auto; 
- 4    width: 960px;
- 5  } 
- 6  &lt;/style&gt; </pre>
+<pre>1  &lt;style&gt;
+2  .container {
+3    margin: 0 auto;
+4    width: 960px;
+5  }
+6  &lt;/style&gt; </pre>
 
 <h4>Ruby Interpolation</h4>
 
@@ -4491,10 +4433,10 @@ convert files from SCSS to Sass and vice versa. To do so
 the sass commands below may be used to convert a SCSS file to Sass, and
 then a Sass file to SCSS respectively.</p>
 
-<pre> 1  # Convert Sass to SCSS
- 2  sass-convert styles.sass styles.scss  
- 3  # Convert SCSS to Sass
- 4  sass-convert styles.scss styles.sass</pre>
+<pre>1  # Convert Sass to SCSS
+2  sass-convert styles.sass styles.scss
+3  # Convert SCSS to Sass
+4  sass-convert styles.scss styles.sass</pre>
 
 <h4>Syntax</h4>
 
@@ -4508,31 +4450,31 @@ indentation and clear line breaks for formatting.</p>
 
 <h4>SCSS</h4>
 
-<pre> 1  .new {  
- 2    color: #ff7b29; 
- 3    font-weight: bold; 
- 4    span {  
- 5      text-transform: uppercase;  
- 6    } 
- 7  }</pre>
+<pre>1  .new {
+2    color: #ff7b29;
+3    font-weight: bold;
+4    span {
+5      text-transform: uppercase;
+6    }
+7  }</pre>
  
 <h4>Sass</h4>
 
-<pre> 1  .new 
- 2  color: #ff7b29  
- 3  font-weight: bold  
- 4  span 
- 5  text-transform: uppercase</pre>
+<pre>1  .new
+2  color: #ff7b29
+3  font-weight: bold
+4  span
+5  text-transform: uppercase</pre>
 
 <h4>Compiled CSS</h4>
 
-<pre> 1  .new {  
- 2    color: #ff7b29; 
- 3    font-weight: bold; 
- 4  } 
- 5  .new span {
- 6    text-transform: uppercase;  
- 7  }</pre>
+<pre>1  .new {
+2    color: #ff7b29;
+3    font-weight: bold;
+4  }
+5  .new span {
+6    text-transform: uppercase;
+7  }</pre>
 
 <h4>Using SCSS vs. Sass</h4>
 
@@ -4561,24 +4503,24 @@ selectors without raising specificity is important.</p>
 
 <h4>Sass</h4>
 
-<pre> 1  .portfolio 
- 2  border: 1px solid #9799a7
- 3  ul
- 4  list-style: none
- 5  li
- 6  float: left</pre>
+<pre>1  .portfolio
+2  border: 1px solid #9799a7
+3  ul
+4  list-style: none
+5  li
+6  float: left</pre>
  
 <h4>Compiled CSS</h4>
 
-<pre> 1  .portfolio { 
- 2    border: 1px solid #9799a7;  
- 3  } 
- 4  .portfolio ul { 
- 5    list-style: none;  
- 6  } 
- 7  .portfolio li { 
- 8    float: left; 
- 9  }</pre>
+<pre>1  .portfolio {
+2    border: 1px solid #9799a7;
+3  }
+4  .portfolio ul {
+5    list-style: none;
+6  }
+7  .portfolio li {
+8    float: left;
+9  }</pre>
 
 <h4>Nesting Properties</h4>
 
@@ -4591,19 +4533,19 @@ your decision is up to personal preference.</p>
 
 <h4>Sass</h4>
 
-<pre> 1  div  
- 2  font:
- 3  family: Baskerville, Palatino, serif 
- 4  style: italic
- 5  weight: normal</pre>
+<pre>1  div
+2  font:
+3  family: Baskerville, Palatino, serif
+4  style: italic
+5  weight: normal</pre>
 
 <h4>Compiled CSS</h4>
 
-<pre> 1  div {
- 2    font-family: Baskerville, Palatino, serif;
- 3    font-style: italic;
- 4    font-weight: normal;  
- 5  }</pre>
+<pre>1  div {
+2    font-family: Baskerville, Palatino, serif;
+3    font-style: italic;
+4    font-weight: normal;
+5  }</pre>
 
 <h4>Nested Media Queries</h4>
 
@@ -4612,21 +4554,21 @@ changing property values based off a media condition.</p>
 
 <h4>Sass</h4>
 
-<pre> 1  .container 
- 2  width: 960px 
- 3  @media screen and (max-width: 960px)
- 4  width: 100%</pre>
+<pre>1  .container
+2  width: 960px
+3  @media screen and (max-width: 960px)
+4  width: 100%</pre>
 
 <h4>Compiled CSS</h4>
 
-<pre>  1  .container { 
- 2    width: 960px;
- 3  } 
- 4  @media screen and (max-width: 960px) { 
- 5    .container { 
- 6      width: 100%; 
- 7    }
- 8  }</pre>
+<pre>1  .container {
+2    width: 960px;
+3  }
+4  @media screen and (max-width: 960px) {
+5    .container {
+6      width: 100%;
+7    }
+8  }</pre>
  
 <h4>Parent Selector</h4>
 
@@ -4639,19 +4581,19 @@ as &amp;.featured.</p>
 
 <h4>Sass</h4>
 
-<pre> 1  a 
- 2  color: #0087cc  
- 3  &amp;:hover 
- 4  color: #ff7b29</pre>
+<pre>1  a 
+2  color: #0087cc  
+3  &amp;:hover 
+4  color: #ff7b29</pre>
 
 <h4>Compiled CSS</h4>
 
-<pre> 1  a {  
- 2    color: #0087cc; 
- 3  } 
- 4    a:hover {  
- 5    color: #ff7b29; 
- 6  }</pre>
+<pre>1  a {
+2    color: #0087cc;
+3  }
+4    a:hover {
+5    color: #ff7b29;
+6  }</pre>
 
 <h4>Parent Key Selector</h4>
 
@@ -4662,19 +4604,19 @@ of the most beneficial is inside of feature detection.</p>
 
 <h4>Sass</h4>
 
-<pre> 1  .btn 
- 2  background: linear-gradient(#fff, #9799a7)
- 3  .no-cssgradients &amp; 
- 4  background: url(&quot;gradient.png&quot;) 0 0 repeat-x</pre>
+<pre>1  .btn
+2  background: linear-gradient(#fff, #9799a7)
+3  .no-cssgradients &amp;
+4  background: url(&quot;gradient.png&quot;) 0 0 repeat-x</pre>
 
 <h4>Compiled CSS</h4>
 
-<pre> 1  .btn {  
- 2    background: linear-gradient(#fff, #9799a7);  
- 3  } 
- 4  .no-cssgradients .btn {  
- 5    background: url(&quot;gradient.png&quot;) 0 0 repeat-x; 
- 6  }</pre>
+<pre>1  .btn {
+2    background: linear-gradient(#fff, #9799a7);
+3  }
+4  .no-cssgradients .btn {
+5    background: url(&quot;gradient.png&quot;) 0 0 repeat-x;
+6  }</pre>
  
 <h4>Comments</h4>
 
@@ -4690,22 +4632,22 @@ is not rendered in the compiled CSS.</p>
 
 <h4>Sass</h4>
 
-<pre> 1  /* Normal comment */
- 2  div  
- 3  background: #333
- 4  // Omitted comment 
- 5  strong  
- 6  display: block</pre>
+<pre>1  /* Normal comment */
+2  div
+3  background: #333
+4  // Omitted comment
+5  strong
+6  display: block</pre>
  
 <h4>Compiled CSS</h4>
 
-<pre> 1  /* Normal comment */
- 2  div {
- 3    background: #333;  
- 4  } 
- 5  strong {
- 6    display: block; 
- 7  }</pre>
+<pre>1  /* Normal comment */
+2  div {
+3    background: #333;
+4  }
+5  strong {
+6    display: block;
+7  }</pre>
  
 <h4>Variables</h4>
 
@@ -5299,7 +5241,7 @@ through 3, will output styles up to, and including, 3.</p>
 <br><br>
 
 <details>
-  <summary>Compiled CSS</summary>
+  <summary><b>Compiled CSS</b></summary>
 
 <pre>
  1  .col-1 {
@@ -5335,7 +5277,7 @@ list. List may include multiple comma separated items.</p>
 <br><br>
 
 <details>
-  <summary>Compiled CSS</summary>
+  <summary><b>Compiled CSS</b></summary>
 
 <pre> 1  .uxd-logo {
  2    background: url(&quot;/img/uxd.jpg&quot;);
@@ -5370,7 +5312,7 @@ variable can be finely controlled allowing for precise looping.</p>
 <br><br>
 
 <details>
-  <summary>Compiled CSS</summary>
+  <summary><b>Compiled CSS</b></summary>
 
 <pre> 1  h1 {
  2    font-size: 1.75em;
@@ -5604,7 +5546,7 @@ curly braces, {}, with comma separated properties, each having a key followed b
 and value.</p>
 
 <details>
-  <summary>Example, Object</summary>
+  <summary><b>Example, Object</b></summary>
 
 <pre> 1  // Object
  2  var school = {
@@ -6295,7 +6237,7 @@ animation is complete.</p>
 <br><br>
 
 <details>
-  <summary>JavaScript</summary>
+  <summary><b>JavaScript</b></summary>
   
 <pre> 1  $(&#39;.panel-tab&#39;).on(&#39;click&#39;, function(event){  
  2    event.preventDefault();  
@@ -6328,7 +6270,7 @@ animation is complete.</p>
 <br><br>
 
 <details>
-  <summary>JavaScript</summary>
+  <summary><b>JavaScript</b></summary>
 
 <pre> 1  // Show the first tab by default
  2  $(&#39;.tabs-stage div&#39;).hide(); 
@@ -6661,7 +6603,7 @@ transforms, try your hand at using the matrix property.</p>
 <br><br>
 
 <details>
-  <summary>CSS</summary>
+  <summary><b>CSS</b></summary>
 
 <pre> 1  .cube {
  2    position: relative;
@@ -6716,7 +6658,7 @@ the origin to 20 pixels across and 50 pixels down the element.</p>
 <br><br>
 
 <details>
-  <summary>CSS</summary>
+  <summary><b>CSS</b></summary>
 
 <pre> 1  .box-1 {
  2    transform: rotate(15deg);
@@ -6850,7 +6792,7 @@ transform, while the origin of a perspective identifies the coordinates
 of the vanishing point of a transform.</p>
 
 <details>
-  <summary>HTML</summary>
+  <summary><b>HTML</b></summary>
   
 <pre> 1  &lt;div class=&quot;original original-1&quot;&gt;
  2    &lt;figure class=&quot;box&quot;&gt;Box 1&lt;/figure&gt;
@@ -6867,7 +6809,7 @@ of the vanishing point of a transform.</p>
 <br><br>
 
 <details>
-  <summary>CSS</summary>
+  <summary><b><b>CSS</b></summary>
   
 <pre> 1  .original {
  2    perspective: 200px;
@@ -6923,7 +6865,7 @@ rotate the element counterclockwise.</p>
  3  &lt;figure class=&quot;box-3&quot;&gt;Box 3&lt;/figure&gt;</pre>
  
 <details>
-  <summary>CSS</summary>
+  <summary><b>CSS</b></summary>
   
 <pre> 1  .box-1 {
  2    transform: perspective(200px) rotateX(45deg);
@@ -7040,7 +6982,7 @@ lie flat on the two-dimensional plane.</p>
 
 <br><br>
 <details>
-  <summary>CSS</summary>
+  <summary><b>CSS</b></summary>
   
 <pre> 1  .rotate {
  2    transform: perspective(200px) rotateY(45deg);
@@ -7103,7 +7045,7 @@ rel="noopener noreferrer" target="_blank">animations</a>.</p>
 <h4>3D Cube Demo</h4>
 
 <details>
-  <summary>HTML</summary>
+  <summary><b>HTML</b></summary>
 
 <pre> 1  &lt;div class=&quot;cube-container&quot;&gt;
  2    &lt;div class=&quot;cube&quot;&gt; 
@@ -7121,7 +7063,7 @@ rel="noopener noreferrer" target="_blank">animations</a>.</p>
 <br><br>
 
 <details>
-  <summary>CSS</summary>
+  <summary><b>CSS</b></summary>
 
 <pre> 1  .cube-container {
  2    height: 200px;
@@ -7247,7 +7189,7 @@ transition, with the first three are the most popular.</p>
 course of 1 second in a linear fashion.</p>
 
 <details>
-  <summary>CSS</summary>
+  <summary><b>CSS</b></summary>
 
 <pre> 1  .box {
  2    background: #2db34a;
@@ -7274,7 +7216,7 @@ support across all browsers, use vendor prefixes.</p>
 the following.</p>
 
 <details>
-  <summary>CSS</summary>
+  <summary><b>CSS</b></summary>
   
 <pre> 1  .box {
  2    background: #2db34a;
@@ -7319,7 +7261,7 @@ keyword value all may be used to transition all properties of an
 element.</p>
 
 <details>
-  <summary>CSS</summary>
+  <summary><b>CSS</b></summary>
 
 <pre> 1  .box {
  2    background: #2db34a;
@@ -7405,7 +7347,7 @@ value declared, that one value will be the duration of all the
 transitioned properties.</p>
 
 <details>
-  <summary>CSS</summary>
+  <summary><b>CSS</b></summary>
   
 <pre> 1  .box {
  2    background: #2db34a;
@@ -7450,7 +7392,7 @@ functions. These timing function values, as with other transition
 property values, may be declared as comma separated values.</p>
 
 <details>
-  <summary>CSS</summary>
+  <summary><b>CSS</b></summary>
   
 <pre> 1  .box {
  2    background: #2db34a;
@@ -7478,7 +7420,7 @@ other transition properties, to delay numerous transitions, each delay
 can be declared as comma separated values.</p>
 
 <details>
-  <summary>CSS</summary>
+  <summary><b>CSS</b></summary>
   
 <pre> 1  .box {
  2    background: #2db34a;
@@ -7512,7 +7454,7 @@ transition values, then use a comma to separate each additional group of
 transition values.</p>
 
 <details>
-  <summary>CSS</summary>
+  <summary><b>CSS</b></summary>
   
 <pre> 1  .box {
  2    background: #2db34a;
@@ -7535,7 +7477,7 @@ transition values.</p>
 
 <br><br>
 <details>
-  <summary>CSS</summary>
+  <summary><b>CSS</b></summary>
 
 <pre> 1  button { 
  2    border: 0; 
@@ -7572,7 +7514,7 @@ transition values.</p>
 
 <br><br>
 <details>
-  <summary>CSS</summary>
+  <summary><b>CSS</b></summary>
 
 <pre> 1  .card-container {
  2    height: 150px;
@@ -7624,7 +7566,7 @@ the animation name, any animation breakpoints, and the properties
 intended to be animated.</p>
 
 <details>
-  <summary>CSS</summary>
+  <summary><b>CSS</b></summary>
 
 <pre> 1  @keyframes slide {
  2    0% {
@@ -7730,7 +7672,7 @@ the left, however only when hovering over the stage.</p>
  3  &lt;/div&gt;</pre>
 
 <details>
-  <summary>CSS</summary>
+  <summary><b>CSS</b></summary>
 
 <pre> 1   @keyframes slide {
  2     0% {
@@ -7786,7 +7728,7 @@ times as specified, while the infinite keyword will repeat the animation
 indefinitely in a never ending fashion.</p>
 
 <details>
-  <summary>Example, Animation Iteration</summary>
+  <summary><b>Example, Animation Iteration</b></summary>
 
 <pre> 1  .stage:hover .ball {
  2    animation-name: slide;
@@ -7833,7 +7775,7 @@ forwards. The alternate-reverse value starts at 100% running to 0% and
 then back to 100% again.</p>
 
 <details>
-  <summary>Example, Alternate Reverse</summary>
+  <summary><b>Example, Alternate Reverse</b></summary>
 
 <pre> 1  .stage:hover .ball {
  2    animation-name: slide;
@@ -7862,7 +7804,7 @@ to paused when making the stage active by clicking on it. Notice how the
 animation will temporarily pause until you let up on the mouse.</p>
 
 <details>
-  <summary>Example, Animation Play State</summary>
+  <summary><b>Example, Animation Play State</b></summary>
 
 <pre> 1  .stage:hover .ball {
  2    animation-name: slide;
@@ -7908,7 +7850,7 @@ the animation-direction property value.</p>
 the forwards and backwards values.</p>
 
 <details>
-  <summary>Example, Animation</summary>
+  <summary><b>Example, Animation</b></summary>
 
 <pre> 1  .stage:hover .ball {
  2    animation-name: slide;
@@ -8059,7 +8001,7 @@ any block level elements need to be identified and updated using
 the display: block; declaration.</p>
 
 <details>
-  <summary>display: block</summary>
+  <summary><b>display: block</b></summary>
 
 <pre> 1  article,
  2  aside,
@@ -8135,7 +8077,7 @@ organized and performance in mind. Avoid duplicating any code or making
 additional HTTP requests when possible.</p>
 
 <details>
-  <summary>Conditionally Applying CSS Styles</summary>
+  <summary><b>Conditionally Applying CSS Styles</b></summary>
 
 <pre> 1   button { 2     border: 0;
  3     color: #fff;
@@ -8212,7 +8154,7 @@ not supported jQuery is used the storage-polyfill.js file using
 the getScript method.</p>
 
 <details>
-  <summary>jQuery Conditional Load</summary>
+  <summary><b>jQuery Conditional Load</b></summary>
   
 <pre> 1  $(document).ready(function() {
  2    if (Modernizr.localstorage) {
@@ -8574,7 +8516,7 @@ not a hyperlink can confuse users and cause quite a bit of frustration.
 Use underlines with caution.</p>
 
 <details>
-  <summary>Example, Underline</summary>
+  <summary><b>Example, Underline</b></summary>
 
 <pre> 1  &lt;!-- Added to the document --&gt;
  2  &lt;ins cite=&quot;http://learn.shayhowe.com&quot; datetime=&quot;2012-07-01&quot;&gt;
@@ -8604,14 +8546,14 @@ document.</p>
 <p>The s element identifies text that is no longer accurate or relevant.</p>
 
 <details>
-  <summary>Example, Striking Text</summary>
+  <summary><b>Example, Striking Text</b></summary>
 
-<pre> 1  &lt;!-- Deleted from the document --&gt;  
- 2  I am an avid cyclist, &lt;del cite=&quot;http://shayhowe.com&quot; 
- 3  datetime=&quot;2012-07-01&quot;&gt;
- 4  skateboarder&lt;/del&gt; and designer.
- 5  &lt;!-- No longer accurate or relevant --&gt;  
- 6  &lt;s&gt;$24.99&lt;/s&gt; $19.99</pre>
+<pre>1  &lt;!-- Deleted from the document --&gt;
+2  I am an avid cyclist, &lt;del cite=&quot;http://shayhowe.com&quot;
+3  datetime=&quot;2012-07-01&quot;&gt;
+4  skateboarder&lt;/del&gt; and designer.
+5  &lt;!-- No longer accurate or relevant --&gt;
+6  &lt;s&gt;$24.99&lt;/s&gt; $19.99</pre>
 
 </details>
 
@@ -8624,8 +8566,8 @@ used. Added in HTML5, the mark element provides a clean, semantic way to
 identify text, specifically for reference purposes without having to use
 an un-semantic text level element.</p>
 
-<pre> 1  &lt;!-- Highlighted for reference purposes --&gt; 
- 2  Search results for &lt;mark&gt;&#39;chicago&#39;&lt;/mark&gt;.</pre>
+<pre>1  &lt;!-- Highlighted for reference purposes --&gt;
+2  Search results for &lt;mark&gt;&#39;chicago&#39;&lt;/mark&gt;.</pre>
 
 <h4>Highlighting Text Demo</h4>
 
@@ -8638,22 +8580,21 @@ the phrase being abbreviated. The acronym element was originally used to
 distinguish acronyms from abbreviations but has since been deprecated,
 and shouldn’t be used.</p>
 
-<pre> 1  &lt;abbr title=&quot;HyperText Markup Language&quot;&gt;HTML&lt;/abbr&gt;
- 2  &lt;abbr title=&quot;Cascading Style Sheets&quot;&gt;CSS&lt;/abbr&gt;</pre>
+<pre>1  &lt;abbr title=&quot;HyperText Markup Language&quot;&gt;HTML&lt;/abbr&gt;
+2  &lt;abbr title=&quot;Cascading Style Sheets&quot;&gt;CSS&lt;/abbr&gt;</pre>
  
 <h4>Abbreviations Demo</h4>
 
 <h4>Sub &amp; Superscripts</h4>
 
-<p>Subscripts and superscripts may be marked up accordingly using
-the sub and sup elements respectively. It is important to note that
-these elements should be reserved for typographical conventions, not for
-presentational purposes.</p>
+<p>Subscripts and superscripts may be marked up accordingly using the sub and sup 
+elements respectively. It is important to note that these elements should be reserved 
+for typographical conventions, not for presentational purposes.</p>
 
-<pre> 1  &lt;!-- Subscript --&gt;
- 2  H&lt;sub&gt;2&lt;/sub&gt;O 
- 3  &lt;!-- Superscripts --&gt;
- 4  1&lt;sup&gt;st&lt;/sup&gt; Place</pre>
+<pre>1  &lt;!-- Subscript --&gt;
+2  H&lt;sub&gt;2&lt;/sub&gt;O
+3  &lt;!-- Superscripts --&gt;
+4  1&lt;sup&gt;st&lt;/sup&gt; Place</pre>
  
 <h4>Sub &amp; Superscripts Demo</h4>
 
@@ -8681,16 +8622,16 @@ where the progress currently stands and the max attribute indicates what
 progress needs to be reached.</p>
 
 <details>
-  <summary>Example, Meter &amp; Progress</summary>
-  
-<pre> 1  &lt;!-- Meter --&gt; 
- 2  &lt;meter value=&quot;7&quot; max=&quot;10&quot;&gt;7 stars&lt;/meter&gt;  
- 3  &lt;meter value=&quot;47&quot; min=&quot;0&quot; max=&quot;105&quot; low=&quot;5&quot; high=&quot;65&quot;  optimum=&quot;45&quot;&gt;The car  
- 4    is moving at a decent average mile per hour.&lt;/meter&gt;
- 5  &lt;!-- Progress --&gt; 
- 6  You are &lt;progress value=&quot;50&quot; max=&quot;100&quot;&gt;50%&lt;/progress&gt;  
- 7  complete.  
- 8  &lt;progress value=&quot;50&quot; min=&quot;0&quot; max=&quot;100&quot;&gt;Hold tight, you&quot;re getting there.&lt;/progress&gt;</pre>
+  <summary><b>Example, Meter &amp; Progress</b></b></summary>
+
+<pre>1  &lt;!-- Meter --&gt;
+2  &lt;meter value=&quot;7&quot; max=&quot;10&quot;&gt;7 stars&lt;/meter&gt;
+3  &lt;meter value=&quot;47&quot; min=&quot;0&quot; max=&quot;105&quot; low=&quot;5&quot; high=&quot;65&quot; optimum=&quot;45&quot;&gt;The car
+4    is moving at a decent average mile per hour.&lt;/meter&gt;
+5  &lt;!-- Progress --&gt;
+6  You are &lt;progress value=&quot;50&quot; max=&quot;100&quot;&gt;50%&lt;/progress&gt;
+7  complete.
+8  &lt;progress value=&quot;50&quot; min=&quot;0&quot; max=&quot;100&quot;&gt;Hold tight, you&quot;re getting there.&lt;/progress&gt;</pre>
 
 </details>
 
@@ -8712,21 +8653,21 @@ should not include any further information than the contact information,
 and other content needs to be placed outside of the address element.</p>
 
 <details>
-  <summary>Example, Time &amp; Address</summary>
-  
-<pre> 1  &lt;!-- Time --&gt;  
- 2  &lt;time&gt;2011-08-24&lt;/time&gt; 
- 3  &lt;time datetime=&quot;2011-08-24&quot; pubdate&gt;August 24th, 2011&lt;/time&gt;
- 4  &lt;time datetime=&quot;15:00&quot;&gt;3pm&lt;/time&gt; 
- 5  &lt;time datetime=&quot;2011-08-24T15:00&quot;&gt;August 24th, 2011 at 3pm&lt;/time&gt; 
- 6  &lt;!-- Address --&gt;
- 7  &lt;address&gt; &lt;strong&gt;Shay Howe&lt;/strong&gt;&lt;br&gt;
- 8    &lt;a href=&quot;http://learn.shayhowe.com&quot;&gt;http://learn.shayhowe.com&lt;/a&gt;&lt;br&gt; 
- 9    &lt;a href=&quot;mailto:hello@awesome.com&quot;&gt;hello@awesome.com&lt;/a&gt;&lt;br&gt; 
- 10    600 W. Chicago Ave.&lt;br&gt;
- 11   Suite 620&lt;br&gt; 
- 12   Chicago, IL 60654&lt;br&gt; USA  
- 13 &lt;/address&gt; </pre>
+  <summary><b>Example, Time &amp; Address</b></summary>
+
+<pre>1  &lt;!-- Time --&gt;
+2  &lt;time&gt;2011-08-24&lt;/time&gt;
+3  &lt;time datetime=&quot;2011-08-24&quot; pubdate&gt;August 24th, 2011&lt;/time&gt;
+4  &lt;time datetime=&quot;15:00&quot;&gt;3pm&lt;/time&gt;
+5  &lt;time datetime=&quot;2011-08-24T15:00&quot;&gt;August 24th, 2011 at 3pm&lt;/time&gt;
+6  &lt;!-- Address --&gt;
+7  &lt;address&gt; &lt;strong&gt;Shay Howe&lt;/strong&gt;&lt;br&gt;
+8    &lt;a href=&quot;http://learn.shayhowe.com&quot;&gt;http://learn.shayhowe.com&lt;/a&gt;&lt;br&gt;
+9    &lt;a href=&quot;mailto:hello@awesome.com&quot;&gt;hello@awesome.com&lt;/a&gt;&lt;br&gt;
+10    600 W. Chicago Ave.&lt;br&gt;
+11   Suite 620&lt;br&gt;
+12   Chicago, IL 60654&lt;br&gt; USA
+13 &lt;/address&gt;</pre>
 
 </details>
 
@@ -9006,32 +8947,30 @@ postal address item type within it. Also, please notice the different
 item properties and their corresponding values.</p>
 
 <details>
-  <summary>Example, Person Microdata</summary>
+  <summary><b>Example, Person Microdata</b></summary>
 
-<pre> 1  &lt;section itemscope itemtype=&quot;http://schema.org/Person&quot;&gt; 
- 2    &lt;strong itemprop=&quot;name&quot;&gt;Shay Howe&lt;/strong&gt;
- 3    &lt;img src=&quot;shay.jpg&quot; itemprop=&quot;image&quot; alt=&quot;Shay Howe&quot;&gt;  
- 4    &lt;div itemprop=&quot;jobTitle&quot;&gt;Designer and Front-end Developer&lt;/div&gt;  
- 5    &lt;a href=&quot;http://www.shayhowe.com&quot; itemprop=&quot;url&quot;&gt;shayhowe.com&lt;/a&gt; 
- 6    &lt;div itemprop=&quot;telephone&quot;&gt;(555) 123-4567&lt;/div&gt;  
- 7    &lt;a href=&quot;mailto:shay@awesome.com&quot; itemprop=&quot;email&quot;&gt;shay@awesome.com&lt;/a&gt;
- 8    &lt;address itemprop=&quot;address&quot; itemscope itemtype=&quot;http://schema.org/PostalAddress&quot;&gt;  
- 9      &lt;span itemprop=&quot;streetAddress&quot;&gt;600 W. Chicago Ave.&lt;/span&gt;
- 10     &lt;span itemprop=&quot;addressLocality&quot;&gt;Chicago&lt;/span&gt;,
- 11     &lt;abbr itemprop=&quot;addressRegion&quot; title=&quot;Illinois&quot;&gt;IL&lt;/abbr&gt; 
- 12     &lt;span itemprop=&quot;postalCode&quot;&gt;60654&lt;/span&gt;  
- 13   &lt;/address&gt; 
- 14 &lt;/section&gt; </pre>
+<pre>1  &lt;section itemscope itemtype=&quot;http://schema.org/Person&quot;&gt;
+2    &lt;strong itemprop=&quot;name&quot;&gt;Shay Howe&lt;/strong&gt;
+3    &lt;img src=&quot;shay.jpg&quot; itemprop=&quot;image&quot; alt=&quot;Shay Howe&quot;&gt;
+4    &lt;div itemprop=&quot;jobTitle&quot;&gt;Designer and Front-end Developer&lt;/div&gt;
+5    &lt;a href=&quot;http://www.shayhowe.com&quot; itemprop=&quot;url&quot;&gt;shayhowe.com&lt;/a&gt;
+6    &lt;div itemprop=&quot;telephone&quot;&gt;(555) 123-4567&lt;/div&gt;
+7    &lt;a href=&quot;mailto:shay@awesome.com&quot; itemprop=&quot;email&quot;&gt;shay@awesome.com&lt;/a&gt;
+8    &lt;address itemprop=&quot;address&quot; itemscope itemtype=&quot;http://schema.org/PostalAddress&quot;&gt;
+9      &lt;span itemprop=&quot;streetAddress&quot;&gt;600 W. Chicago Ave.&lt;/span&gt;
+10     &lt;span itemprop=&quot;addressLocality&quot;&gt;Chicago&lt;/span&gt;,
+11     &lt;abbr itemprop=&quot;addressRegion&quot; title=&quot;Illinois&quot;&gt;IL&lt;/abbr&gt;
+12     &lt;span itemprop=&quot;postalCode&quot;&gt;60654&lt;/span&gt;
+13   &lt;/address&gt;
+14 &lt;/section&gt;</pre>
 
 </details>
 
 <h4>Person Microdata Demo</h4>
 
-<p>Please keep in mind, this code is for an individual person. Should
-you wish to refer to an organization, a more specific 
-<a href="http://schema.org/Organization" 
-rel="noopener noreferrer" target="_blank">organization</a> microdata
-library should be followed.</p>
+<p>Please keep in mind, this code is for an individual person. Should you wish to refer to 
+an organization, a more specific <a href="http://schema.org/Organization" rel="noopener noreferrer" 
+target="_blank">organization</a> microdata library should be followed.</p>
 
 <h4>Event Microdata</h4>
 
@@ -9042,7 +8981,7 @@ instead. Common property similarities between the two can be identified,
 as can some of the nested item types.</p>
 
 <details>
-  <summary>Example, Event Microdata</summary>
+  <summary><b>Example, Event Microdata</b></summary>
 
 <pre> 1  &lt;section itemscope itemtype=&quot;http://schema.org/Event&quot;&gt;  
  2    &lt;a itemprop=&quot;url&quot; href=&quot;#&quot;&gt; 
@@ -9052,7 +8991,7 @@ as can some of the nested item types.</p>
  6      2014 at 9:00 a.m.&lt;/time&gt;  
  7    &lt;div itemprop=&quot;location&quot; itemscope itemtype=&quot;http://schema.org/Place&quot;&gt;  
  8      &lt;a itemprop=&quot;url&quot; href=&quot;http://www.thechicagotheatre.com/&quot;&gt;Chicago Theatre&lt;/a&gt; 
- 9      &lt;address itemprop=&quot;address&quot; itemscope itemtype=&quot;http://schema.org/PostalAddress&quot;&gt;  
+ 9      &lt;address itemprop=&quot;address&quot; itemscope itemtype=&quot;http://schema.org/PostalAddress&quot;&gt;
  10       &lt;div itemprop=&quot;streetAddress&quot;&gt;175 N. State St.&lt;/div&gt;  
  11       &lt;span itemprop=&quot;addressLocality&quot;&gt;Chicago&lt;/span&gt;,
  12       &lt;abbr itemprop=&quot;addressRegion&quot; title=&quot;Illinois&quot;&gt;IL&lt;/abbr&gt; 
@@ -9233,7 +9172,7 @@ Lastly, <b>relationship attributes</b> outline the relationship between elemen
 document structure cannot be determined.</p>
 
 <details>
-  <summary>Resources</summary>
+  <summary><b>Resources</b></summary>
 
 <h3>Resources &amp; Links</h3>
 
