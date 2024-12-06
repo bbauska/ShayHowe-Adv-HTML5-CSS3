@@ -1,5 +1,5 @@
 ---
-title: "Advanced HTML and CSS"
+title: "2015-Advanced HTML and CSS"
 author: "Brian Bauska (bbauska)"
 date created: "3/31/2024 6+pm"
 date last editted: "8/16/2024 3+pm"
@@ -8,13 +8,13 @@ output:
   markdown:
 ---
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!---~~~~~~~~~~~~~~~~~~~~~~~~~~ readme.md of shayhowe-Adv-HTML-CSS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!---~~~~~~~~~~~~~~~~~~~~~~~~ readme.md of 2015-shayhowe-Adv-HTML-CSS ~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h1 align="center" width="100%">Advanced HTML &amp; CSS</h1>
-<h6 align="center">by Shay-Howe</h6>
+<p align="center"><small><small>by Shay-Howe</small></small></p>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 align="center" id="performance-organization">Lesson 1: Performance &amp; Organization</h2>
+<h2 align="center" id="1-performance-organization">Lesson 1: Performance &amp; Organization</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>In this Lesson 1:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -437,7 +437,7 @@ compression is enabled.</p>
   alt="gzip Overview Screenshot." />
 </p>
 
-<h6 align="center">Fig. 1</h6>
+<p align="center"><small><small>Fig. 1</small></small></p>
 
 <p>The Network tab identifies each file loaded within the browser and displays the 
 file size and load time. Notice how gzipping has reduced the file sizes by around 60%.</p>
@@ -449,7 +449,7 @@ file size and load time. Notice how gzipping has reduced the file sizes by aroun
   title="gzip Detail Screenshot"
   alt="gzip Detail Screenshot." />
 </p>
-<h6 align="center">Fig. 1</h6>
+<p align="center"><small><small>Fig. 1</small></small></p>
 
 <p>Looking at a file specifically identifies what type of compression encoding the 
 browser supports. In this case gzip, deflate, and sdch are all supported as noted 
@@ -508,7 +508,7 @@ and PNG files.</p>
   title="ImageOptim Screenshot"
   alt="ImageOptim Screenshot." />
 </p>
-<h6 align="center">Fig. 4</h6>
+<p align="center"><small><small>Fig. 4</small></small></p>
 
 <p>Using ImageOptim the above image was reduced over 14% without any reduction 
 or loss in quality.</p>
@@ -587,7 +587,7 @@ background image being hidden.</p>
   alt="Menu Sprite." />
 </p>
 
-<h6 align="center">Fig. 1</h6>
+<p align="center"><small><small>Fig. 1</small></small></p>
 
 <p>Here is a sprite for a text editor menu, outlined with guides for
 reference of how the images background position will change.</p>
@@ -796,7 +796,7 @@ rel="noopener noreferrer" target="_blank">syntax</a>.</p>
 </div>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 align="center" id="detailed-positioning">Lesson 2: Detailed Positioning</h2>
+<h2 align="center" id="2-detailed-positioning">Lesson 2: Detailed Positioning</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>In this Lesson 2:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -1480,7 +1480,7 @@ box three.</p>
     <b>Lesson 4 </b><a href="#responsive-web-design/">Responsive Web Design</a>
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 align="center" id="complex-selectors">Lesson 3: Complex Selectors</h2>
+<h2 align="center" id="3-complex-selectors">Lesson 3: Complex Selectors</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>In this Lesson 3:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -3007,7 +3007,7 @@ think about revisiting it, and seeing if a better solution can be found.</p>
     <b>Lesson 5 </b> <a href="#preprocessors/">Preprocessors</a>
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 align="center" id="responsive-web-design">Lesson 4: Responsive Web Design</h2>
+<h2 align="center" id="4-responsive-web-design">Lesson 4: Responsive Web Design</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>In this Lesson 4:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -3071,7 +3071,7 @@ which is worth a read.</p>
    alt="Food Sense Responsive Layout." />
 </p>
 
-<h6 align="center">Fig. 4</h6>
+<p align="center"><small><small>Fig. 4</small></small></p>
 
 <p><a href="http://foodsense.is/" 
 rel="noopener noreferrer" target="_blank">Food Sense</a> has a beautiful
@@ -3467,8 +3467,8 @@ the section and aside.</p>
   title="Demo Without Media Queries"
   alt="Demo Without Media Queries." />
 </p>
-<h6 align="center" width="40%">Fig. 4. Without any media queries the section and aside become quite
-small. Perhaps too small to even contain any real content.</h6>
+<p align="center" width="40%"><small><small>Fig. 4. Without any media queries the section and aside become quite
+small. Perhaps too small to even contain any real content.</small></small></p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 09. demo with media queries (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="center" width="100%">
@@ -3477,9 +3477,9 @@ small. Perhaps too small to even contain any real content.</h6>
   title="Demo with Media Queries"
   alt="Demo with Media Queries." />
 </p>
-<h6 align="center" width="40%">Fig. 4. Using media queries to remove the floats and change their
+<p align="center" width="40%"><small><small>Fig. 4. Using media queries to remove the floats and change their
 widths, the section and aside are now able to span the full width of the
-viewport, allowing breathing room for any existing content.</h6>
+viewport, allowing breathing room for any existing content.</small></small></p>
 
 <h4>Identifying Breakpoints</h4>
 
@@ -3601,9 +3601,9 @@ of a website. To remedy this, Apple invented the viewport meta tag.</p>
   title="Website without Viewport Meta Tag"
   alt="Website without Viewport Meta Tag." />
 </p>
-<h6 align="center" width="40%">Fig. 4. Although this demo has media queries, many mobile devices
+<p align="center" width="40%"><small><small>Fig. 4. Although this demo has media queries, many mobile devices
 still do not know the initial width or scale of the website. Therefore,
-they may not interrupt media queries.</h6>
+they may not interrupt media queries.</small></small></p>
 
 <h4>Viewport Height & Width</h4>
 
@@ -3629,9 +3629,9 @@ the device defaults by applying the device-height and device-width values.</
   title="Website with Viewport Meta Tag"
   alt="Website with Viewport Meta Tag." />
 </p>
-<h6 align="center" width="40%">Fig. 4. Letting devices know the intended width of the
+<p align="center" width="40%"><small><small>Fig. 3. Letting devices know the intended width of the
 website, device-width in this case, allows the website to be sized
-properly and to pick up any qualifying media queries.</h6>
+properly and to pick up any qualifying media queries.</small></small></p>
 
 <h4>Viewport Scale</h4>
 
@@ -3657,8 +3657,8 @@ for initial-scale should always be a positive integer between 0 and 10.</p>
   title="Viewport Scale Meta Tag"
   alt="Viewport Scale Meta Tag." />
 </p>
-<h6 align="center" width="40%">Fig. 4. Using an integer above 1 will zoom the website to be larger
-than the default scale. Generally speaking, this value will most commonly be set to 1.</h6>
+<p align="center" width="40%"><small><small>Fig. 4. Using an integer above 1 will zoom the website to be larger
+than the default scale. Generally speaking, this value will most commonly be set to 1.</small></small></p>
 
 <p>The minimum-scale and maximum-scale values determine how small and how
 large a viewport may be scaled. When using minimum-scale the value
@@ -3720,8 +3720,8 @@ outlined below, using both the width and initial-scale properties.</p>
   title="Website with Viewport Meta Tag"
   alt="Website with Viewport Meta Tag." />
 </p>
-<h6 align="center" width="40%">Fig. 4. A combination of width=device-width and initial-scale=1 
-provide the initial size and zoom commonly required.</h6>
+<p align="center" width="40%"><small><small>Fig. 5. A combination of width=device-width and initial-scale=1 
+provide the initial size and zoom commonly required.</small></small></p>
 
 <h4>CSS Viewport Rule</h4>
 
@@ -3862,7 +3862,7 @@ website.</p>
     <b>Lesson 6 </b><a href="#jquery/">jQuery</a>
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 align="center" id="preprocessors">Lesson 5: Preprocessors</h2>
+<h2 align="center" id="5-preprocessors">Lesson 5: Preprocessors</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>In this Lesson 5:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -5505,7 +5505,7 @@ your research for each project and make the most educated decision.</p>
   <b>Lesson 7 </b> <a href="#transforms">Transforms</a>
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 align="center" id="jquery">Lesson 6: jQuery</h2>
+<h2 align="center" id="6-jquery">Lesson 6: jQuery</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>In this Lesson 6:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -5677,7 +5677,7 @@ properties, each having a key followed by a colon and value.</p>
   title="Web Inspector Console"
   alt="Web Inspector Console." />
 
-<h6 align="center">Fig. 6</h6>
+<p align="center"><small><small>Fig. 6</small></small></p>
 
 <p>Using the developer tools built into the Chrome web browser, JavaScript may be 
 run from within the console.</p>
@@ -6482,7 +6482,7 @@ animation is complete.</p>
 </p>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 align="center" id="transforms">Lesson 7: Transforms</h2>
+<h2 align="center" id="7-transforms">Lesson 7: Transforms</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>In this Lesson 7:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -7365,7 +7365,7 @@ rel="noopener noreferrer" target="_blank">animations</a>.</p>
   <b>Lesson 9 </b> <a href="feature-support-polyfills/">Feature Support &amp; Polyfills</a>
 </p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 align="center" id="transitions-animations">Lesson 8: Transitions &amp; Animations</h2>
+<h2 align="center" id="8-transitions-animations">Lesson 8: Transitions &amp; Animations</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>In this Lesson 8:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -8188,7 +8188,7 @@ the animation.</p>
 </p>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 align="center" id="feature-support-polyfills">Lesson 9: Feature Support &amp; Polyfills</h2>
+<h2 align="center" id="9-feature-support-polyfills">Lesson 9: Feature Support &amp; Polyfills</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>In this Lesson 9:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -8568,8 +8568,8 @@ within Internet Explorer 7 and below.</p>
   title="VirtualBox"
   alt="VirtualBox" />
 </p>
-<h6 align="center" width="40%">Fig. 9. Internet Explorer 7 running inside of a virtual machine with the Firebug Lite
-bookmarklet open for debugging.</h6>
+<p align="center" width="40%"><small><small>Fig. 9. Internet Explorer 7 running inside of a virtual machine with the Firebug Lite
+bookmarklet open for debugging.</small></small></p>
 
 <h4>Resources & Links</h4>
 
@@ -8601,7 +8601,7 @@ bookmarklet open for debugging.</h6>
 </div>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 align="center" id="semantics-accessibility">Lesson 10: Extending Semantics & Accessibility</h2>
+<h2 align="center" id="10-semantics-accessibility">Lesson 10: Extending Semantics & Accessibility</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>In this Lesson 10:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -9159,8 +9159,8 @@ an existing website.</p>
    title="Google Microdata"
    alt="Google Microdata." />
 </p>
-<h6 align="center" width="40%">Fig. 10. Google uses microdata to identify business locations, contact
-information, hours, pricing, ratings, and more.</h6>
+<p align="center" width="40%"><small><small>Fig. 10. Google uses microdata to identify business locations, contact
+information, hours, pricing, ratings, and more.</small></small></p>
 
 <h4>Microdata vs. Microformats vs. RDFa</h4>
 
@@ -9463,7 +9463,7 @@ and <b>relationship attributes</b>.</p>
 
 </details>
 
-<h3><b>Lesson 9</b> <a href="feature-support-polyfills">Feature Support &amp; Polyfills</a></h3>
+<h3><b>Lesson 9</b> <a href="9-feature-support-polyfills">Feature Support &amp; Polyfills</a></h3>
 
 ...the end.
 <h6>5/14/2024 4:58pm<br>
@@ -9472,3 +9472,4 @@ and <b>relationship attributes</b>.</p>
 8/16/2024 Fri 3:55pm<br>
 10/21/2024 Mon 11:33pm<br/>
 10/23/2024 Wed 12:33pm</h6>
+12/06/2024 Fri 9:50am</h6>
