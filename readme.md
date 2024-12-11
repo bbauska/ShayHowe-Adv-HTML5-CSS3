@@ -1,9 +1,10 @@
 ---
-title: "2015-Advanced HTML and CSS"
+title: "Shay-Howe's Advanced HTML and CSS"
 author: "Brian Bauska (bbauska)"
 date created: "3/31/2024 6+pm"
 date last editted: "8/16/2024 3+pm"
 date last editted: "10/21/2024 11+pm"
+date last editted: "12/11/2024 1+pm"
 output:
   markdown:
 ---
@@ -12,13 +13,11 @@ output:
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h1 align="center" width="100%">Advanced HTML &amp; CSS</h1>
 <p align="center"><small><small>by Shay-Howe</small></small></p>
-
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 align="center" id="1-performance-organization">Lesson 1: Performance &amp; Organization</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>In this Lesson 1:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
 <h4>HTML</h4>
 
 <ul>
@@ -98,8 +97,9 @@ groups of styles. The goal here is to <b>start thinking of websites as systems<
 rather than individual pages, and the code architecture should reflect this mindset. 
 Notice how there aren't any page specific styles here.</p>
 
-<p>The base directory includes common styles and variables to be used across the 
-entire website, layout and typography styles for example. The components directory 
+<p>The <span class="hl-red">base</span> directory includes common styles and variables 
+to be used across the entire website, layout and typography styles for example. The 
+<span class="hl-green">components</span> directory 
 includes styles for specific user interface elements which are broken down into 
 different component files such as alerts and buttons. Lastly, the modules directory 
 includes styles for different sections of a page, which are determined by business 
@@ -171,9 +171,10 @@ website.</p>
 
 </p>Along the same line of Object Oriented CSS is the <a href="http://smacss.com/" 
 rel="noopener noreferrer" target="_blank">Scalable and Modular Architecture for 
-CSS (2011)</a> methodology developed by Jonathan Snook. The Scalable and Modular 
-Architecture for CSS promotes breaking up styles into <b>five</b> core categories, 
-including:</p>
+CSS (2011)</a> methodology developed by Jonathan Snook. Also worth a look is 
+<a href="https://www.lambdatest.com/blog/smacss-scalable-modular-architecture-for-css/">
+Implementing SMACSS</a>. The Scalable and Modular Architecture for CSS promotes breaking 
+up styles into <b>five</b> core categories, including:</p>
 
 <ul>
   <li>Base</li>
@@ -192,6 +193,336 @@ other styles in the event that a module includes an alternate state, an active
 tab for example. Lastly, the <b>theme</b> category may be added which could
 include styles based around the skin, or look and feel, of different modules.</p>
 
+<!--   -->
+The Categorization Of CSS Rules Under SMACSS
+Besides organizing our complete CSS code separately for better readability, Jonathan Snooks categorizes CSS rules into five categories. Before categorizing, he mentions, “By categorizing CSS rules, we begin to see patterns and can define better practices around each of these patterns.” This line summarizes quite well why we aim for categorisation in CSS rules.
+
+The five categories in which CSS rules are divided are:
+
+Base
+Layout
+Module
+State
+Theme
+Let’s explore them one by one.
+
+Base Rules
+As the name suggests, the base rules need to be applied to the base elements of a web page. The below SMACSS example can be considered a part of base rules in SMACSS:
+
+body {
+  margin-left : 20px;
+}
+
+p {
+font-family: xyz;
+}
+1
+2
+3
+4
+5
+6
+7
+body {
+  margin-left : 20px;
+}
+ 
+p {
+font-family: xyz;
+}
+We apply base rules to the elements that will remain consistent throughout the web page. In the above SMACSS example, we want the content to be displayed 20px from the left, and the paragraph element should have a certain “font family”.
+
+You can also go for a descendent selector, child selector, and pseudo-classes, apart from the direct elements. However, while creating the base rules, Jonathan strictly restricts “! important” in any rules. This could be due to unwanted behavior displayed when our style starts overriding from different sections or specificity issues (discussed later).
+
+You also need to avoid using CSS-resets, a popular approach, to reset the CSS before laying down your own. This increases the amount of code sent to the client from the server. Therefore, if there is any default setting that you want to create, the base rules are a great place to note them down.
+
+Also read – Getting Started With CSS Flexbox [Tutorial]
+
+Layout Rules
+The second rule talks about designing the CSS for the layout of the web app. The major part of the web page is considered under the category of layouts. Designing CSS for them often poses challenges as there are a lot of elements involved, and defining each layout with multiple IDs makes things a bit complex.
+
+A simple example of a naive CSS design is as follows:
+
+#header , #features, #sidebar {
+
+//STYLES
+}
+1
+2
+3
+4
+#header , #features, #sidebar {
+ 
+//STYLES
+}
+But the above naive CSS design will fail when we need multiple layouts based on multiple preferences. In such a case, a naming convention with the prefix ‘l’ can determine that this class selector is based on a layout element.
+
+#header {
+
+//style
+}
+
+#sidebar {
+
+//styles
+
+}
+
+.l-mobile #sidebar {
+
+//mobile-specific styling such as width
+
+}
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+#header {
+ 
+//style
+}
+ 
+#sidebar {
+ 
+//styles
+ 
+}
+ 
+.l-mobile #sidebar {
+ 
+//mobile-specific styling such as width
+ 
+}
+In the above SMACSS example, the l-mobile class determines that it has been constructed to change the “layout” of an element related to mobile. Therefore, the name “l” is not necessary to use in the layout rules of SMACSS. However, the author does recommend using it as a standard for better readability.
+
+Also read – How To Use CSS Breakpoints For Responsive Design
+
+Module Rules
+Modules are the smaller parts of the layout elements such as navigation, widgets, dialogues etc. Considering modules as part of the layout creates unnecessary complexity because modules are used at several places than large layouts. You can think of layouts as major layouts and modules as minor ones (referring to the book convention). Keeping them separate helps us achieve simplicity in the code.
+
+Modules need to have a reusable code because of its high involvement on a web page. If we keep tagging IDs to different elements, again and again, we will be in a trap before we realize. The better method is to use class selectors and child elements or any other inheritance in the code.
+
+.module > h2 
+{
+//style code
+}
+
+.module span {
+
+//styling code
+
+}
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+.module > h2 
+{
+//style code
+}
+ 
+.module span {
+ 
+//styling code
+ 
+}
+The above-given approach is good only in two cases. First, when the relationships are extremely clear, the developer is confident that newer relations won’t arise. Second, the child selector you have used will not be confused and modified with other children of the same parent. This approach is a simplified example and can easily get confusing as our project grows. For SMACSS example, one more relation can be added as follows:
+
+.module h2 #heading-top {
+
+//style
+
+}
+1
+2
+3
+4
+5
+.module h2 #heading-top {
+ 
+//style
+ 
+}
+Such arrangements collide with each other and lead to specificity issues. To abstain from letting the browser decide, we often go for the !important approach, which is extremely dangerous, especially for larger projects. The better solution to this is using subclasses.
+
+CSS subclasses can divide styling among each other, simplifying the relationships between children and their parent(s). For example, if the parent element always has to be red, but children will have different fonts, we can create subclasses.
+
+.heading {
+
+//style
+
+}
+
+.heading-email {
+//style
+}
+
+.heading-news {
+
+//style
+
+}
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+.heading {
+ 
+//style
+ 
+}
+ 
+.heading-email {
+//style
+}
+ 
+.heading-news {
+ 
+//style
+ 
+}
+Using this approach mixed with subclasses, we can define one standard styling for the header and change the email and news header fonts or any other style specifically. In the HTML, we just have to use both the classes:
+
+<h3 class = “heading heading-email>This is email header</h3>
+1
+<h3 class = “heading heading-email>This is email header</h3>
+Now we can create a sorted document without any coupling between the elements.
+
+State Rules
+After we have carefully crafted the layout and module rules, we need to take care of the design of the state of the element. A state rule is applied when an element has multiple states. For example, a module can be in an error state (depending on the error received) or a success state. For both of the states, the module needs to render different styles. This is where state rules come in.
+
+In this complete document, the focus has been increasing the readability of CSS and simplifying the style sheet as much as possible. On the same thoughts, consider the following code:
+
+<div>
+    <div> This is an error </div>
+    <div> This is a success </div>
+<div>
+1
+2
+3
+4
+<div>
+    <div> This is an error </div>
+    <div> This is a success </div>
+<div>
+I have excluded every selector from the above code as this code changes state from error to success depending on the user action. Can you take a moment and think about what classes can be attached to this code that satisfies SMACSS guidelines?
+
+Taking notes from the module rules, it is always better to separate things when we know some style will stay stationary after the CSS has first loaded. So that becomes our parent element.
+
+.application-form {
+
+//style
+
+}
+1
+2
+3
+4
+5
+.application-form {
+ 
+//style
+ 
+}
+For the state classes, it is always better to use names that define state even if the reader has no idea about it. For the SMACSS example, we have two states in the above code – error and success. Hence, the following classes can be attached:
+
+.is-error {
+
+//style
+
+}
+
+.is-success {
+
+//style
+
+}
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+.is-error {
+ 
+//style
+ 
+}
+ 
+.is-success {
+ 
+//style
+ 
+}
+We can combine them with other modules or layout classes to give a meaningful design to the client machine.
+
+<div class = “application-form“>
+    <div class = “msg is-error”> This is an error </div>
+    <div class = “msg is-success”> This is a success </div>
+<div>
+1
+2
+3
+4
+<div class = “application-form“>
+    <div class = “msg is-error”> This is an error </div>
+    <div class = “msg is-success”> This is a success </div>
+<div>
+Note: The msg class can be a message styling class that generates some message design.
+
+So, what is the difference between module rules and state rules? They do look similar, don’t they?
+
+For two very important reasons, module and state rules are similar in working and styling. The lesser important reason is that they are “states” of a module or layout. Hence they are defined within these elements and prefer a different naming as seen above. They are attached within these modules and layouts and increase readability and simplicity.
+
+The more important reason for using the state rules is the JavaScript-based changes that run on the client-side based on the user’s response (hence we cannot lay down the rules from the server). The JavaScript code can catch the elements and apply appropriate classes to them by their current state.
+
+Jonathan has repeatedly shown his disinterest towards using the !important attribute as it hinders the specificity of the code. But while stating state rules, Jonathan finds it important to make use of !important as we know that one element can be in only one state during execution. Hence, it becomes necessary that the state rules we are trying to apply do not override other rules.
+
+Also read – A Complete Guide To CSS Variables [With Examples]
+
+Theme Rules
+As the name suggests, theme rules are defined for the theme of the web application. For example, every website has a theme reflecting business or based on other strategies. The theme design remains consistent throughout the web app, no matter what module you are in. A classic example of theme design is typography. CSS Typography often helps connect with the user, and if you are using a unique font style, users generally remember it well after they have closed the browser.
+
+Theme rules are not considered core rules as the author considered the previous four. The reason is that they are not required for every web-based project. Theme layout has no special guidelines except to keep them in separate files for simplicity. Since class names can sometimes be similar, it provides a clear distinction between layout classes, module classes or theme classes.
+
+As a web developer, keep the bigger design things in the theme classes to remain consistent. For example, the background color of each module may be different, so keeping them in the module CSS makes more sense. At the same time, the borders of each module might remain consistent with showcasing the website’s theme. Therefore, it should be kept in the theme rules file.
+
+Also read – The Complete CSS Animations Tutorial [With Examples]
+<!--   -->
 <h4>HTML</h4>
 
 <pre>
@@ -397,17 +728,17 @@ matching strings identified, the smaller the file can be compressed,
 thus sending a smaller file from the server to the browser.</p>
 
 <p>Setting up gzip is fairly painless, and the <a href="http://html5boilerplate.com/" 
-rel="noopener noreferrer" target="_blank">HTML5 Boilerplate (Jan, 2010)</a> team has done a 
-great job of getting this going. To gzip files an .htaccess file needs to be added 
+rel="noopener noreferrer" target="_blank">HTML5 Boilerplate (Jan, 2010)</a> team has done
+a great job of getting this going. To gzip files an .htaccess file needs to be added 
 to the root directory of the web server, labeling the specific files to be gzipped. 
 The dot at the beginning of the file name is correct, as the .htaccess file is a 
 hidden file.</p>
 
-<p>Within the HTML5 Boilerplate Apache Server Configs, they instruct which files 
-gzip compression should be applied to. Keep in mind, the code for this compression 
-should live within a .htaccess file in the root directory of the web server. 
-Additionally, it is worth noting that .htaccess files only work on Apache web 
-servers, which need to have the following modules enabled.</p>
+<p>Within the HTML5 Boilerplate Apache Server Configs, they instruct which files gzip 
+compression should be applied to. Keep in mind, the code for this compression should live 
+within a .htaccess file in the root directory of the web server. Additionally, it is 
+worth noting that .htaccess files only work on Apache web servers, which need to have 
+the following modules enabled.</p>
 
 <ul>
   <li>mod_setenvif.c</li>
@@ -419,15 +750,14 @@ servers, which need to have the following modules enabled.</p>
 </ul>
 
 <p>Generally speaking this isn't an issue, and some web servers may even set up 
-compression for you. After all, it is in the web server's best interest to compress 
-files too.</p>
+compression for you. After all, it is in the web server's best interest to compress files 
+too.</p>
 
 <h4>Measuring Compression</h4>
 
-<p>Within the Google Chrome web browser the web inspector gives a plethora
-of data around performance, particularly within the Network tab.
-Additionally, there are a few websites that help identify if gzip
-compression is enabled.</p>
+<p>Within the Google Chrome web browser the web inspector gives a plethora of data 
+around performance, particularly within the Network tab. Additionally, there are a few 
+websites that help identify if gzip compression is enabled.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 01. gzip overview screenshot ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="center" width="100%">
@@ -439,8 +769,8 @@ compression is enabled.</p>
 
 <p align="center"><small><small>Fig. 1</small></small></p>
 
-<p>The Network tab identifies each file loaded within the browser and displays the 
-file size and load time. Notice how gzipping has reduced the file sizes by around 60%.</p>
+<p>The Network tab identifies each file loaded within the browser and displays the file 
+size and load time. Notice how gzipping has reduced the file sizes by around 60%.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 02. gzip detail screenshot ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="center" width="100%">
@@ -452,8 +782,8 @@ file size and load time. Notice how gzipping has reduced the file sizes by aroun
 <p align="center"><small><small>Fig. 1</small></small></p>
 
 <p>Looking at a file specifically identifies what type of compression encoding the 
-browser supports. In this case gzip, deflate, and sdch are all supported as noted 
-within the request headers.</p>
+browser supports. In this case gzip, deflate, and sdch are all supported as noted within 
+the request headers.</p>
 
 <p>Looking at the response headers identifies that the file was sent using the gzip 
 compression encoding.</p>
@@ -461,22 +791,20 @@ compression encoding.</p>
 <h4>Image Compression</h4>
 
 <p>Cutting down the size of a text file helps, but you get even better results by 
-compressing the file size of images. The total file size of all the images across 
-a website can quickly add up, and compressing images will greatly help keep the 
-file size under control.</p>
+compressing the file size of images. The total file size of all the images across a 
+website can quickly add up, and compressing images will greatly help keep the file size 
+under control.</p>
 
 <p>Many people steer away from compressing images in fear that compression involves 
-reducing the quality of the image itself. For the most part this is incorrect, 
-and images can be compressed in a lossless fashion, allowing unnecessary color 
-profiles and comments to be removed from the image without changing the quality 
-of the image at all.</p>
+reducing the quality of the image itself. For the most part this is incorrect, and images 
+can be compressed in a lossless fashion, allowing unnecessary color profiles and comments 
+to be removed from the image without changing the quality of the image at all.</p>
 
-<p>There are a handful of tools to help compress images, two of the best
-are <a href="http://imageoptim.com/" rel="noopener noreferrer" target="_blank">
-ImageOptim</a> for Mac and <a href="http://pnggauntlet.com/" 
-rel="noopener noreferrer" target="_blank">PNGGauntlet</a> for Windows. Both of 
-these services compress the most commonly used image formats, specifically JPG 
-and PNG files.</p>
+<p>There are a handful of tools to help compress images, two of the best are 
+<a href="http://imageoptim.com/" rel="noopener noreferrer" target="_blank">ImageOptim</a> 
+for Mac and <a href="http://pnggauntlet.com/" rel="noopener noreferrer" target="_blank">
+PNGGauntlet</a> for Windows. Both of these services compress the most commonly used image 
+formats, specifically JPG and PNG files.</p>
 
 <h4>Image Compression Demo</h4>
 
@@ -499,7 +827,6 @@ and PNG files.</p>
   title="Compressed Ocean Picture"
   alt="Compressed Ocean Picture." />
 </p>
-
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 05. imageOptim screenshot (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="center" width="100%">
@@ -510,16 +837,15 @@ and PNG files.</p>
 </p>
 <p align="center"><small><small>Fig. 4</small></small></p>
 
-<p>Using ImageOptim the above image was reduced over 14% without any reduction 
-or loss in quality.</p>
+<p>Using ImageOptim the above image was reduced over 14% without any reduction or loss in 
+quality.</p>
 
-<p>It should also be noted, setting an image's dimensions in HTML by way of
-the height and width attributes <b>does help</b> render the page quicker,
-setting aside the appropriate space for the image. Understand, these
-attributes are to only be used to identify the exact image dimensions
-and not to shrink an image. Using a larger image, then scaling it down
-with the height and width attributes is bad practice as it loads more
-data than necessary.</p>
+<p>It should also be noted, setting an image's dimensions in HTML by way of the height 
+and width attributes <b>does help</b> render the page quicker, setting aside the 
+appropriate space for the image. Understand, these attributes are to only be used to 
+identify the exact image dimensions and not to shrink an image. Using a larger image, 
+then scaling it down with the height and width attributes is bad practice as it loads 
+more data than necessary.</p>
 
 <pre>
  1  &lt;img src="ocean.jpg" height="440" width="660" alt="Oceanview"&gt;
@@ -527,17 +853,17 @@ data than necessary.</p>
 
 <h4 id="reduce-http-requests">Reduce HTTP Requests</h4>
 
-<p>Next to file size, the number of HTTP requests a website makes is one of
-the largest performance pitfalls. Each time a request is made to the
-server the page load time increases. Some request have to finish before
-others can start, and too many requests can bloat the server.</p>
+<p>Next to file size, the number of HTTP requests a website makes is one of the largest 
+performance pitfalls. Each time a request is made to the server the page load time 
+increases. Some request have to finish before others can start, and too many requests can 
+bloat the server.</p>
 
 <h4>Combine Like Files</h4>
 
-<p>One way, and perhaps the easiest way, to reduce the number of HTTP
-requests is to combine like files. Specifically, combine all of the CSS
-files into one and all of the JavaScript files into one. Combining these
-files then compressing them creating one, hopefully small, HTTP request.</p>
+<p>One way, and perhaps the easiest way, to reduce the number of HTTP requests is to 
+combine like files. Specifically, combine all of the CSS files into one and all of the 
+JavaScript files into one. Combining these files then compressing them creating one, 
+hopefully small, HTTP request.</p>
 
 <pre>
  1  &lt;!-- Bad --&gt;
@@ -549,35 +875,31 @@ files then compressing them creating one, hopefully small, HTTP request.</p>
  7  &lt;link href="css/styles.css" rel="stylesheet"&gt;
 </pre>
 
-<p>In general, the CSS for a web page should be loaded at
-the <b>beginning</b> of the document within the head, while the JavaScript
-for a web page should be loaded at the <b>end</b>, just before the
-closing body tag. The reason for these unique placements is because CSS
-can be loaded while the rest of the website is being loaded as well.</p>
+<p>In general, the CSS for a web page should be loaded at the <b>beginning</b> of the 
+document within the head, while the JavaScript for a web page should be loaded at the 
+<b>end</b>, just before the closing body tag. The reason for these unique placements is 
+because CSS can be loaded while the rest of the website is being loaded as well.</p>
 
-<p>JavaScript, on the other hand, can only render one file at a time, thus
-prohibiting anything else from loading. One caveat here is when
-JavaScript files are asynchronously loaded after the page itself is done
-rendering. Another caveat is when JavaScript is needed in helping render
-the page, as such the case with the HTML5 shiv.</p>
+<p>JavaScript, on the other hand, can only render one file at a time, thus prohibiting 
+anything else from loading. One caveat here is when JavaScript files are asynchronously 
+loaded after the page itself is done rendering. Another caveat is when JavaScript is 
+needed in helping render the page, as such the case with the HTML5 shiv.</p>
 
 <h4>Image Sprites</h4>
 
-<p>The practice of <i>spriting</i> images within CSS includes using one
-background image across multiple elements. The goal here is to cut down
-the number of HTTP requests made by using multiple background images.</p>
+<p>The practice of <i>spriting</i> images within CSS includes using one background image 
+across multiple elements. The goal here is to cut down the number of HTTP requests made 
+by using multiple background images.</p>
 
-<p>To create a sprite take a handful of background images, ones that are
-commonly used, and arrange them into one single image. Then using CSS
-add the sprite as a background image to an element, and use
-the background-position property to display the correct background
-image.</p>
+<p>To create a sprite take a handful of background images, ones that are commonly used, 
+and arrange them into one single image. Then using CSS add the sprite as a background 
+image to an element, and use the background-position property to display the correct 
+background image.</p>
 
-<p>Think of the background image sliding around behind elements, only to
-expose the proper background image on a given element. For example, if
-an element is 16 pixels wide by 16 pixels tall it can only expose a
-background image of 16 pixels by 16 pixels, with the rest of the
-background image being hidden.</p>
+<p>Think of the background image sliding around behind elements, only to expose the 
+proper background image on a given element. For example, if an element is 16 pixels wide 
+by 16 pixels tall it can only expose a background image of 16 pixels by 16 pixels, with 
+the rest of the background image being hidden.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 06. menu sprite (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="center" width="100%">
@@ -3866,7 +4188,6 @@ website.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>In this Lesson 5:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
 <h4>HTML</h4>
 
 <ul>
@@ -9471,5 +9792,6 @@ and <b>relationship attributes</b>.</p>
 6/21/2024 Fri 1:25am<br>
 8/16/2024 Fri 3:55pm<br>
 10/21/2024 Mon 11:33pm<br/>
-10/23/2024 Wed 12:33pm</h6>
-12/06/2024 Fri 9:50am</h6>
+10/23/2024 Wed 12:33pm<br/>
+12/06/2024 Fri 9:50am<br/>
+12/11/2024 Wed 12:53pm</h6>
