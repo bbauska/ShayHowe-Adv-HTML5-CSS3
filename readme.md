@@ -9,6 +9,12 @@ output:
   markdown:
 ---
 
+<code style="color : yellowgreen">yellowgreen</code>
+<code style="color : aqua">aqua</code>
+<code style="color : blue">blue</code>
+<code style="color : red">red</code>
+<code style="color : orange">orange</code>
+
 - text in red
 + text in green
 ! text in orange
