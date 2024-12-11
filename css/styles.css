@@ -200,6 +200,23 @@ ul.task-list li input[type="checkbox"] {
 
 .display.math{display: block; text-align: center; margin: 0.5rem auto;}
 
+.hl-red {
+  background-color: #ffcccb;  /* very pale red (pink tone) */
+  padding: 0 6px;
+}
+.hl-green {
+  background-color: #a2e665;  /* soft green */
+  padding: 0 6px;
+}
+.hl-blue {
+  background-color: #add8e6;  /* very soft cyan (light blue) */
+  padding: 0 6px;
+}
+.hl-yellow {
+  background-color: #ffff9d;  /* pale yellow */
+  padding: 0 6px;
+}
+
   @media (max-width: 600px) {
     body {
       font-size: 0.9em;
