@@ -393,10 +393,10 @@ We can combine them with other modules or layout classes to give a meaningful de
 the client machine.
 
 <pre>
-<div class = “application-form“>
-    <div class = “msg is-error”> This is an error </div>
-    <div class = “msg is-success”> This is a success </div>
-<div>
+&lt;div class = “application-form“&gt;
+  &lt;div class = “msg is-error”&gt; This is an error &lt;/div&gt;
+  &lt;div class = “msg is-success”&gt; This is a success &lt;/div&gt;
+&lt;div&gt;
 </pre>
 
 Note: The msg class can be a message styling class that generates some message design.
@@ -1793,7 +1793,7 @@ be used once per page.</p>
 <h4>Common Selectors Overview</h4>
 
   | <b>Example</b>|<b>Classification</b> | <b>Explanation</b> |
-  -----------|-----------------------------|-----------------------------------------------------|
+  |-----------|-----------------------------|-----------------------------------------------------|
   | h1       | Type Selector | Selects an element by its type.  |
   | .tagline | Class         | Selects an element by the class attribute value, which may be reused |
   |          | Selector      | multiple times per page. |
