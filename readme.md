@@ -235,7 +235,7 @@ body {
   margin-left : 20px;
 }
 p {
-font-family: xyz;
+  font-family: xyz;
 }
 </pre>
 
@@ -320,180 +320,141 @@ the child selector you have used will not be confused and modified with other ch
 of the same parent. This approach is a simplified example and can easily get confusing 
 as our project grows. For SMACSS example, one more relation can be added as follows:
 
+<pre>
 .module h2 #heading-top {
-
-//style
-
+  //style
 }
-1
-2
-3
-4
-5
-.module h2 #heading-top {
- 
-//style
- 
-}
-Such arrangements collide with each other and lead to specificity issues. To abstain from letting the browser decide, we often go for the !important approach, which is extremely dangerous, especially for larger projects. The better solution to this is using subclasses.
+</pre>
 
-CSS subclasses can divide styling among each other, simplifying the relationships between children and their parent(s). For example, if the parent element always has to be red, but children will have different fonts, we can create subclasses.
+Such arrangements collide with each other and lead to specificity issues. To abstain from 
+letting the browser decide, we often go for the !important approach, which is extremely 
+dangerous, especially for larger projects. The better solution to this is using subclasses.
 
+CSS subclasses can divide styling among each other, simplifying the relationships between 
+children and their parent(s). For example, if the parent element always has to be red, but 
+children will have different fonts, we can create subclasses.
+
+<pre>
 .heading {
-
-//style
-
+  //style
 }
-
 .heading-email {
-//style
+  //style
 }
-
 .heading-news {
+  //style
+}
+</pre>
 
-//style
-
-}
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-.heading {
- 
-//style
- 
-}
- 
-.heading-email {
-//style
-}
- 
-.heading-news {
- 
-//style
- 
-}
-Using this approach mixed with subclasses, we can define one standard styling for the header and change the email and news header fonts or any other style specifically. In the HTML, we just have to use both the classes:
+Using this approach mixed with subclasses, we can define one standard styling for the 
+header and change the email and news header fonts or any other style specifically. In 
+the HTML, we just have to use both the classes:
 
 <h3 class = “heading heading-email>This is email header</h3>
 1
+
 <h3 class = “heading heading-email>This is email header</h3>
+
 Now we can create a sorted document without any coupling between the elements.
 
 State Rules
-After we have carefully crafted the layout and module rules, we need to take care of the design of the state of the element. A state rule is applied when an element has multiple states. For example, a module can be in an error state (depending on the error received) or a success state. For both of the states, the module needs to render different styles. This is where state rules come in.
+After we have carefully crafted the layout and module rules, we need to take care of the 
+design of the state of the element. A state rule is applied when an element has multiple 
+states. For example, a module can be in an error state (depending on the error received) 
+or a success state. For both of the states, the module needs to render different styles. 
+This is where state rules come in.
 
-In this complete document, the focus has been increasing the readability of CSS and simplifying the style sheet as much as possible. On the same thoughts, consider the following code:
+In this complete document, the focus has been increasing the readability of CSS and 
+simplifying the style sheet as much as possible. On the same thoughts, consider the 
+following code:
 
-<div>
-    <div> This is an error </div>
-    <div> This is a success </div>
-<div>
-1
-2
-3
-4
-<div>
-    <div> This is an error </div>
-    <div> This is a success </div>
-<div>
-I have excluded every selector from the above code as this code changes state from error to success depending on the user action. Can you take a moment and think about what classes can be attached to this code that satisfies SMACSS guidelines?
+<pre>
+&lt;div&gt;
+    &lt;div&gt; This is an error &lt;/div&gt;
+    &lt;div&gt; This is a success &lt;/div&gt;
+&lt;div&gt;
+</pre>
 
-Taking notes from the module rules, it is always better to separate things when we know some style will stay stationary after the CSS has first loaded. So that becomes our parent element.
+I have excluded every selector from the above code as this code changes state from error 
+to success depending on the user action. Can you take a moment and think about what 
+classes can be attached to this code that satisfies SMACSS guidelines?
 
+Taking notes from the module rules, it is always better to separate things when we know 
+some style will stay stationary after the CSS has first loaded. So that becomes our 
+parent element.
+
+<pre>
 .application-form {
-
-//style
-
+  //style
 }
-1
-2
-3
-4
-5
-.application-form {
- 
-//style
- 
-}
-For the state classes, it is always better to use names that define state even if the reader has no idea about it. For the SMACSS example, we have two states in the above code – error and success. Hence, the following classes can be attached:
+</pre>
 
+For the state classes, it is always better to use names that define state even if the 
+reader has no idea about it. For the SMACSS example, we have two states in the above 
+code – error and success. Hence, the following classes can be attached:
+
+<pre>
 .is-error {
-
-//style
-
+  //style
 }
-
 .is-success {
-
-//style
-
+  //style
 }
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-.is-error {
- 
-//style
- 
-}
- 
-.is-success {
- 
-//style
- 
-}
-We can combine them with other modules or layout classes to give a meaningful design to the client machine.
+</pre>
 
+We can combine them with other modules or layout classes to give a meaningful design to 
+the client machine.
+
+<pre>
 <div class = “application-form“>
     <div class = “msg is-error”> This is an error </div>
     <div class = “msg is-success”> This is a success </div>
 <div>
-1
-2
-3
-4
-<div class = “application-form“>
-    <div class = “msg is-error”> This is an error </div>
-    <div class = “msg is-success”> This is a success </div>
-<div>
+</pre>
+
 Note: The msg class can be a message styling class that generates some message design.
 
-So, what is the difference between module rules and state rules? They do look similar, don’t they?
+So, what is the difference between module rules and state rules? They do look similar, 
+don’t they?
 
-For two very important reasons, module and state rules are similar in working and styling. The lesser important reason is that they are “states” of a module or layout. Hence they are defined within these elements and prefer a different naming as seen above. They are attached within these modules and layouts and increase readability and simplicity.
+For two very important reasons, module and state rules are similar in working and 
+styling. The lesser important reason is that they are “states” of a module or layout. 
+Hence they are defined within these elements and prefer a different naming as seen above. 
+They are attached within these modules and layouts and increase readability and 
+simplicity.
 
-The more important reason for using the state rules is the JavaScript-based changes that run on the client-side based on the user’s response (hence we cannot lay down the rules from the server). The JavaScript code can catch the elements and apply appropriate classes to them by their current state.
+The more important reason for using the state rules is the JavaScript-based changes that 
+run on the client-side based on the user’s response (hence we cannot lay down the rules 
+from the server). The JavaScript code can catch the elements and apply appropriate 
+classes to them by their current state.
 
-Jonathan has repeatedly shown his disinterest towards using the !important attribute as it hinders the specificity of the code. But while stating state rules, Jonathan finds it important to make use of !important as we know that one element can be in only one state during execution. Hence, it becomes necessary that the state rules we are trying to apply do not override other rules.
+Jonathan has repeatedly shown his disinterest towards using the !important attribute as 
+it hinders the specificity of the code. But while stating state rules, Jonathan finds 
+it important to make use of !important as we know that one element can be in only one 
+state during execution. Hence, it becomes necessary that the state rules we are trying 
+to apply do not override other rules.
 
 Also read – A Complete Guide To CSS Variables [With Examples]
 
 Theme Rules
-As the name suggests, theme rules are defined for the theme of the web application. For example, every website has a theme reflecting business or based on other strategies. The theme design remains consistent throughout the web app, no matter what module you are in. A classic example of theme design is typography. CSS Typography often helps connect with the user, and if you are using a unique font style, users generally remember it well after they have closed the browser.
+As the name suggests, theme rules are defined for the theme of the web application. For 
+example, every website has a theme reflecting business or based on other strategies. The 
+theme design remains consistent throughout the web app, no matter what module you are 
+in. A classic example of theme design is typography. CSS Typography often helps connect 
+with the user, and if you are using a unique font style, users generally remember it well 
+after they have closed the browser.
 
-Theme rules are not considered core rules as the author considered the previous four. The reason is that they are not required for every web-based project. Theme layout has no special guidelines except to keep them in separate files for simplicity. Since class names can sometimes be similar, it provides a clear distinction between layout classes, module classes or theme classes.
+Theme rules are not considered core rules as the author considered the previous four. The 
+reason is that they are not required for every web-based project. Theme layout has no 
+special guidelines except to keep them in separate files for simplicity. Since class 
+names can sometimes be similar, it provides a clear distinction between layout classes, 
+module classes or theme classes.
 
-As a web developer, keep the bigger design things in the theme classes to remain consistent. For example, the background color of each module may be different, so keeping them in the module CSS makes more sense. At the same time, the borders of each module might remain consistent with showcasing the website’s theme. Therefore, it should be kept in the theme rules file.
+As a web developer, keep the bigger design things in the theme classes to remain 
+consistent. For example, the background color of each module may be different, so keeping 
+them in the module CSS makes more sense. At the same time, the borders of each module 
+might remain consistent with showcasing the website’s theme. Therefore, it should be 
+kept in the theme rules file.
 
 Also read – The Complete CSS Animations Tutorial [With Examples]
 <!--   -->
