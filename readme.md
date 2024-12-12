@@ -9,18 +9,19 @@ output:
   markdown:
 ---
 
-<code style="color : yellowgreen">yellowgreen</code>
-<code style="color : aqua">aqua</code>
-<code style="color : blue">blue</code>
-<code style="color : red">red</code>
-<code style="color : orange">orange</code>
+<pre>
+&lt;code style="color : yellowgreen"&gt;yellowgreen&lt;/code&gt;
+&lt;code style="color : aqua"&gt;aqua&lt;/code&gt;
+&lt;code style="color : blue"&gt;blue&lt;/code&gt;
+&lt;code style="color : red"&gt;red&lt;/code&gt;
+&lt;code style="color : orange"&gt;orange&lt;/code&gt;
 
 - text in red
 + text in green
 ! text in orange
 # text in gray
 @@ text in purple (and bold)@@
-
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!---~~~~~~~~~~~~~~~~~~~~~~~~ readme.md of 2015-shayhowe-Adv-HTML-CSS ~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -183,11 +184,12 @@ website.</p>
 <h4>Scalable & Modular Architecture for CSS</h4>
 
 </p>Along the same line of Object Oriented CSS is the <a href="http://smacss.com/" 
-rel="noopener noreferrer" target="_blank">Scalable and Modular Architecture for 
-CSS (2011)</a> methodology developed by Jonathan Snook. Also worth a look is 
-<a href="https://www.lambdatest.com/blog/smacss-scalable-modular-architecture-for-css/">
-Implementing SMACSS</a>. The Scalable and Modular Architecture for CSS promotes breaking 
-up styles into <b>five</b> core categories, including:</p>
+rel="noopener noreferrer" target="_blank">Scalable and Modular Architecture for CSS 
+(2011)</a> methodology developed by Jonathan Snook. Also worth a look is 
+<a href="https://www.lambdatest.com/blog/smacss-scalable-modular-architecture-for-css/" 
+rel="noopener noreferrer" target="_blank">Implementing SMACSS</a>. The Scalable and 
+Modular Architecture for CSS promotes breaking up styles into <b>five</b> core categories, 
+including:</p>
 
 <ul>
   <li>Base</li>
@@ -197,18 +199,22 @@ up styles into <b>five</b> core categories, including:</p>
   <li>Theme</li>
 </ul>
 
-<p>The <b>base</b> category includes core element styles, covering the general
-defaults. The <b>layout</b> category then identifies the sizing and grid styles 
-of different elements, determining their layout. <b>Module</b> styles are more 
-specific styles targeting individual parts of the page, such as navigation or 
-feature styles. The <b>state</b> styles are then used to augment or override 
-other styles in the event that a module includes an alternate state, an active 
-tab for example. Lastly, the <b>theme</b> category may be added which could
-include styles based around the skin, or look and feel, of different modules.</p>
+<p>The <b>base</b> category includes core element styles, covering the general defaults. 
+The <b>layout</b> category then identifies the sizing and grid styles of different 
+elements, determining their layout. <b>Module</b> styles are more specific styles 
+targeting individual parts of the page, such as navigation or feature styles. The 
+<b>state</b> styles are then used to augment or override other styles in the event that a 
+module includes an alternate state, an active tab for example. Lastly, the <b>theme</b> 
+category may be added which could include styles based around the skin, or look and feel, 
+of different modules.</p>
 
 <!--   -->
 The Categorization Of CSS Rules Under SMACSS
-Besides organizing our complete CSS code separately for better readability, Jonathan Snooks categorizes CSS rules into five categories. Before categorizing, he mentions, “By categorizing CSS rules, we begin to see patterns and can define better practices around each of these patterns.” This line summarizes quite well why we aim for categorisation in CSS rules.
+Besides organizing our complete CSS code separately for better readability, Jonathan 
+Snooks categorizes CSS rules into five categories. Before categorizing, he mentions, 
+“By categorizing CSS rules, we begin to see patterns and can define better practices 
+around each of these patterns.” This line summarizes quite well why we aim for 
+categorization in CSS rules.
 
 The five categories in which CSS rules are divided are:
 
@@ -217,147 +223,102 @@ Layout
 Module
 State
 Theme
+
 Let’s explore them one by one.
 
 Base Rules
-As the name suggests, the base rules need to be applied to the base elements of a web page. The below SMACSS example can be considered a part of base rules in SMACSS:
+As the name suggests, the base rules need to be applied to the base elements of a web 
+page. The below SMACSS example can be considered a part of base rules in SMACSS:
 
+<pre>
 body {
   margin-left : 20px;
 }
-
 p {
 font-family: xyz;
 }
-1
-2
-3
-4
-5
-6
-7
-body {
-  margin-left : 20px;
-}
- 
-p {
-font-family: xyz;
-}
-We apply base rules to the elements that will remain consistent throughout the web page. In the above SMACSS example, we want the content to be displayed 20px from the left, and the paragraph element should have a certain “font family”.
+</pre>
 
-You can also go for a descendent selector, child selector, and pseudo-classes, apart from the direct elements. However, while creating the base rules, Jonathan strictly restricts “! important” in any rules. This could be due to unwanted behavior displayed when our style starts overriding from different sections or specificity issues (discussed later).
+We apply base rules to the elements that will remain consistent throughout the web page. 
+In the above SMACSS example, we want the content to be displayed 20px from the left, and 
+the paragraph element should have a certain “font family”.
 
-You also need to avoid using CSS-resets, a popular approach, to reset the CSS before laying down your own. This increases the amount of code sent to the client from the server. Therefore, if there is any default setting that you want to create, the base rules are a great place to note them down.
+You can also go for a descendent selector, child selector, and pseudo-classes, apart 
+from the direct elements. However, while creating the base rules, Jonathan strictly 
+restricts “! important” in any rules. This could be due to unwanted behavior displayed 
+when our style starts overriding from different sections or specificity issues (discussed 
+later).
+
+You also need to avoid using CSS-resets, a popular approach, to reset the CSS before 
+laying down your own. This increases the amount of code sent to the client from the 
+server. Therefore, if there is any default setting that you want to create, the base 
+rules are a great place to note them down.
 
 Also read – Getting Started With CSS Flexbox [Tutorial]
 
 Layout Rules
-The second rule talks about designing the CSS for the layout of the web app. The major part of the web page is considered under the category of layouts. Designing CSS for them often poses challenges as there are a lot of elements involved, and defining each layout with multiple IDs makes things a bit complex.
+The second rule talks about designing the CSS for the layout of the web app. The major 
+part of the web page is considered under the category of layouts. Designing CSS for 
+them often poses challenges as there are a lot of elements involved, and defining each 
+layout with multiple IDs makes things a bit complex.
 
 A simple example of a naive CSS design is as follows:
 
+<pre>
 #header , #features, #sidebar {
-
 //STYLES
 }
-1
-2
-3
-4
 #header , #features, #sidebar {
+</pre>
  
-//STYLES
-}
-But the above naive CSS design will fail when we need multiple layouts based on multiple preferences. In such a case, a naming convention with the prefix ‘l’ can determine that this class selector is based on a layout element.
+But the above naive CSS design will fail when we need multiple layouts based on multiple 
+preferences. In such a case, a naming convention with the prefix ‘l’ can determine that 
+this class selector is based on a layout element.
 
+<pre>
 #header {
-
-//style
+  //style
 }
-
 #sidebar {
-
-//styles
-
+  //styles
 }
-
 .l-mobile #sidebar {
-
-//mobile-specific styling such as width
-
+  //mobile-specific styling such as width
 }
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-#header {
- 
-//style
-}
- 
-#sidebar {
- 
-//styles
- 
-}
- 
-.l-mobile #sidebar {
- 
-//mobile-specific styling such as width
- 
-}
-In the above SMACSS example, the l-mobile class determines that it has been constructed to change the “layout” of an element related to mobile. Therefore, the name “l” is not necessary to use in the layout rules of SMACSS. However, the author does recommend using it as a standard for better readability.
+</pre>
+In the above SMACSS example, the l-mobile class determines that it has been constructed 
+to change the “layout” of an element related to mobile. Therefore, the name “l” is not 
+necessary to use in the layout rules of SMACSS. However, the author does recommend using 
+it as a standard for better readability.
 
 Also read – How To Use CSS Breakpoints For Responsive Design
 
 Module Rules
-Modules are the smaller parts of the layout elements such as navigation, widgets, dialogues etc. Considering modules as part of the layout creates unnecessary complexity because modules are used at several places than large layouts. You can think of layouts as major layouts and modules as minor ones (referring to the book convention). Keeping them separate helps us achieve simplicity in the code.
+Modules are the smaller parts of the layout elements such as navigation, widgets, 
+dialogues etc. Considering modules as part of the layout creates unnecessary complexity 
+because modules are used at several places than large layouts. You can think of layouts 
+as major layouts and modules as minor ones (referring to the book convention). Keeping 
+them separate helps us achieve simplicity in the code.
 
-Modules need to have a reusable code because of its high involvement on a web page. If we keep tagging IDs to different elements, again and again, we will be in a trap before we realize. The better method is to use class selectors and child elements or any other inheritance in the code.
+Modules need to have a reusable code because of its high involvement on a web page. If we 
+keep tagging IDs to different elements, again and again, we will be in a trap before we 
+realize. The better method is to use class selectors and child elements or any other 
+inheritance in the code.
 
-.module > h2 
-{
-//style code
+<pre>
+.module > h2 {
+  //style code
 }
-
 .module span {
+  //styling code
+}
+</pre>
 
-//styling code
-
-}
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-.module > h2 
-{
-//style code
-}
- 
-.module span {
- 
-//styling code
- 
-}
-The above-given approach is good only in two cases. First, when the relationships are extremely clear, the developer is confident that newer relations won’t arise. Second, the child selector you have used will not be confused and modified with other children of the same parent. This approach is a simplified example and can easily get confusing as our project grows. For SMACSS example, one more relation can be added as follows:
+The above-given approach is good only in two cases. First, when the relationships are 
+extremely clear, the developer is confident that newer relations won’t arise. Second, 
+the child selector you have used will not be confused and modified with other children 
+of the same parent. This approach is a simplified example and can easily get confusing 
+as our project grows. For SMACSS example, one more relation can be added as follows:
 
 .module h2 #heading-top {
 
