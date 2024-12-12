@@ -734,7 +734,7 @@ formats, specifically JPG and PNG files.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~ 03. uncompressed ocean picture (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="center" width="100%">
-  <img src="./images/image003.jpg"
+  <img src="./images/image003.jpeg"
   style="width:40%"
   title="Uncompressed Ocean Picture"
   alt="Uncompressed Ocean Picture." />
@@ -744,7 +744,7 @@ formats, specifically JPG and PNG files.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~ 04. compressed ocean picture (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="center" width="100%">
-  <img src="./images/image004.jpg"
+  <img src="./images/image004.jpeg"
   style="width:40%"
   title="Compressed Ocean Picture"
   alt="Compressed Ocean Picture." />
@@ -752,7 +752,7 @@ formats, specifically JPG and PNG files.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 05. imageOptim screenshot (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="center" width="100%">
-  <img src="./images/image005.jpg"
+  <img src="./images/image005.png"
   style="width:40%"
   title="ImageOptim Screenshot"
   alt="ImageOptim Screenshot." />
@@ -825,7 +825,7 @@ the rest of the background image being hidden.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 06. menu sprite (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="center" width="100%">
-  <img src="./images/image006.jpg"
+  <img src="./images/image006.png"
   style="width:40%"
   title="Menu Sprite"
   alt="Menu Sprite." />
@@ -3308,7 +3308,7 @@ which is worth a read.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~ 07. food sense responsive layout (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="center" width="100%">
-  <img src="./images/image007.jpg"
+  <img src="./images/image007.png"
    style="width:40%"
    title="Food Sense Responsive Layout"
    alt="Food Sense Responsive Layout." />
@@ -3705,7 +3705,7 @@ the section and aside.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~ 08. demo without media queries (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="center" width="100%">
-  <img src="./images/image008.webp"
+  <img src="./images/image008.png"
   style="width:40%"
   title="Demo Without Media Queries"
   alt="Demo Without Media Queries." />
