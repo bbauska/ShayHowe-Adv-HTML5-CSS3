@@ -9,19 +9,6 @@ output:
   markdown:
 ---
 
-<pre>
-&lt;code style="color : yellowgreen"&gt;yellowgreen&lt;/code&gt;
-&lt;code style="color : aqua"&gt;aqua&lt;/code&gt;
-&lt;code style="color : blue"&gt;blue&lt;/code&gt;
-&lt;code style="color : red"&gt;red&lt;/code&gt;
-&lt;code style="color : orange"&gt;orange&lt;/code&gt;
-
-- text in red
-+ text in green
-! text in orange
-# text in gray
-@@ text in purple (and bold)@@
-</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!---~~~~~~~~~~~~~~~~~~~~~~~~ readme.md of 2015-shayhowe-Adv-HTML-CSS ~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
