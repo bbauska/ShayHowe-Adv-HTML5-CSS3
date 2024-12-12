@@ -7593,7 +7593,7 @@ rel="noopener noreferrer" target="_blank">animations</a>.</p>
 
 <!-- 94 perfect + 10 + 17 = 121 -->
 <p>
-  <b>Lesson 7: </b><a href="#7-css-transforms">Transforms</a>
+  <b>Lesson 7: </b><a href="#7-transforms">Transforms</a>
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -8415,7 +8415,7 @@ the animation.</p>
 
 <!-- 94 perfect + 10 + 17 = 121 -->
 <p>
-  <b>Lesson 7: </b><a href="#7-css-transforms">Transforms</a>
+  <b>Lesson 7: </b><a href="#7-transforms">Transforms</a>
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
