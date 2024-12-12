@@ -3250,7 +3250,7 @@ think about revisiting it, and seeing if a better solution can be found.</p>
 
 <!-- 103 spaces = perfect w/30 chars 17 left + 13 right -->
 <div>
-    <b>Lesson 3: </b> <a href="3-complex-selectors">Complex Selectors</a>
+    <b>Lesson 3: </b><a href="3-complex-selectors">Complex Selectors</a>
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -3260,7 +3260,7 @@ think about revisiting it, and seeing if a better solution can be found.</p>
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <b>Lesson 5: </b> <a href="5-preprocessors">Preprocessors</a>
+    <b>Lesson 5: </b><a href="5-preprocessors">Preprocessors</a>
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 align="center" id="#4-responsive-web-design">Lesson 4: Responsive Web Design</h2>
@@ -5746,7 +5746,7 @@ your research for each project and make the most educated decision.</p>
 
 <!-- 114, 13 left + 10 right -->
 <div>
-  <b>Lesson 5: </b> <a href="5-preprocessors">Preprocessors</a>
+  <b>Lesson 5: </b><a href="5-preprocessors">Preprocessors</a>
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -5757,7 +5757,7 @@ your research for each project and make the most educated decision.</p>
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <b>Lesson 7: </b> <a href="7-transforms">Transforms</a>
+  <b>Lesson 7: </b><a href="7-transforms">Transforms</a>
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 align="center" id="#6-jquery">Lesson 6: jQuery</h2>
@@ -6722,7 +6722,7 @@ animation is complete.</p>
 
 
 <!-- 104 -->
-<p><b>Lesson 6: </b> <a href="6-jquery">jQuery</a>
+<p><b>Lesson 6: </b><a href="6-jquery">jQuery</a>
     &nbsp;&nbsp;&nbsp;&nbsp;
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -6733,15 +6733,13 @@ animation is complete.</p>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<b>Lesson 8: </b> <a href="8-transitions-animations">Transitions &amp; Animations</a>
+<b>Lesson 8: </b><a href="8-transitions-animations">Transitions &amp; Animations</a>
 </p>
-
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 align="center" id="#7-transforms">Lesson 7: Transforms</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>In this Lesson 7:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
 <p>GitlabGitLab is the most comprehensive AI-powered DevSecOps Platform.
 Software. Faster.</p>
 
@@ -7608,7 +7606,7 @@ rel="noopener noreferrer" target="_blank">animations</a>.</p>
 
 <!-- 94 perfect + 10 + 17 = 121 -->
 <p>
-  <b>Lesson 7: </b> <a href="7-css-transforms">Transforms</a>
+  <b>Lesson 7: </b><a href="7-css-transforms">Transforms</a>
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -7617,7 +7615,7 @@ rel="noopener noreferrer" target="_blank">animations</a>.</p>
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <b>Lesson 9: </b> <a href="9-feature-support-polyfills/">Feature Support &amp; Polyfills</a>
+  <b>Lesson 9: </b><a href="9-feature-support-polyfills/">Feature Support &amp; Polyfills</a>
 </p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 align="center" id="#8-transitions-animations">Lesson 8: Transitions &amp; Animations</h2>
@@ -8860,7 +8858,6 @@ bookmarklet open for debugging.</small></small></p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>In this Lesson 10:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
 <h5>HTML</h5>
 
 <ul>
