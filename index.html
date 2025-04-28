@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~ index.html of Adv-HTML-CSS (Shay & Howe) ~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ shay.bauska.org ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
   <meta charset="utf-8" />
@@ -43,6 +43,8 @@
     Additionally, taking a few small steps to improve the performance of a website 
     can pay off in dividends. Website performance greatly resembles the 80/20 rule, 
     where 20% of the optimizations will speed up roughly 80% of the website." >
+  <meta name="keywords" content="Silus,Silus Gaming World,Silus Gaming,Advanced,
+    Advanced HTML &amp; CSS,HTML,CSS,DOM,Improved Performance,Shay,Shay &amp; Howe">
   <title>Advanced HTML &amp; CSS</title>
   <link rel="stylesheet" type="text/css" href="./css/styles.css">
 </head>
@@ -1280,12 +1282,12 @@ and not the containing, relatively positioned parent.</p>
 
 <h4>HTML</h4>
 
-<pre>1  &lt;div class=&quot;box-set&quot;&gt;
-2    &lt;figure class=&quot;box box-1&quot;&gt;Box 1&lt;/figure&gt;
-3    &lt;figure class=&quot;box box-2&quot;&gt;Box 2&lt;/figure&gt;
-4    &lt;figure class=&quot;box box-3&quot;&gt;Box 3&lt;/figure&gt;
-5    &lt;figure class=&quot;box box-4&quot;&gt;Box 4&lt;/figure&gt;
-6  &lt;/div&gt;</pre>
+<pre>&lt;div class=&quot;box-set&quot;&gt;
+  &lt;figure class=&quot;box box-1&quot;&gt;Box 1&lt;/figure&gt;
+  &lt;figure class=&quot;box box-2&quot;&gt;Box 2&lt;/figure&gt;
+  &lt;figure class=&quot;box box-3&quot;&gt;Box 3&lt;/figure&gt;
+  &lt;figure class=&quot;box box-4&quot;&gt;Box 4&lt;/figure&gt;
+&lt;/div&gt;</pre>
 
 <br><br>
 
@@ -1507,9 +1509,9 @@ only be used once per page.</p>
 
 <h4>CSS</h4>
 
-<pre>1  h1 {...}
-2  .tagline {...}
-3  #intro {...}</pre>
+<pre>h1 {...}
+.tagline {...}
+#intro {...}</pre>
 
 <h4>HTML</h4>
 
@@ -1592,13 +1594,13 @@ any h2 element outside of the article element is not selected.</p>
  
 <h4>HTML</h4>
 
-<pre>1  &lt;h2&gt;...&lt;/h2&gt;
-2  &lt;article&gt;
-3    &lt;h2&gt;This heading will be selected&lt;/h2&gt;
-4    &lt;div&gt;
-5      &lt;h2&gt;This heading will be selected&lt;/h2&gt;
-6    &lt;/div&gt;
-7  &lt;/article&gt;</pre>
+<pre>&lt;h2&gt;...&lt;/h2&gt;
+&lt;article&gt;
+  &lt;h2&gt;This heading will be selected&lt;/h2&gt;
+  &lt;div&gt;
+    &lt;h2&gt;This heading will be selected&lt;/h2&gt;
+  &lt;/div&gt;
+&lt;/article&gt;</pre>
  
 <h4>Direct Child Selector</h4>
 
@@ -1701,16 +1703,16 @@ document tree and share the same parent as their sibling heading.</p>
 <details>
   <summary><b>HTML</b></summary>
 
-<pre>1  &lt;p&gt;...&lt;/p&gt;
-2  &lt;section&gt;
-3    &lt;p&gt;...&lt;/p&gt;
-4    &lt;h2&gt;...&lt;/h2&gt;
-5    &lt;p&gt;This paragraph will be selected&lt;/p&gt;
-6    &lt;div&gt;
-7      &lt;p&gt;...&lt;/p&gt;
-8    &lt;/div&gt;
-9    &lt;p&gt;This paragraph will be selected&lt;/p&gt;
-10 &lt;/section&gt;</pre>
+<pre>&lt;p&gt;...&lt;/p&gt;
+&lt;section&gt;
+  &lt;p&gt;...&lt;/p&gt;
+  &lt;h2&gt;...&lt;/h2&gt;
+  &lt;p&gt;This paragraph will be selected&lt;/p&gt;
+  &lt;div&gt;
+    &lt;p&gt;...&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;p&gt;This paragraph will be selected&lt;/p&gt;
+&lt;/section&gt;</pre>
 
 </details>
 
@@ -1742,16 +1744,16 @@ along with sharing the same parent element, thus selected.</p>
 <details>
   <summary><b>HTML</b></summary>
 
-<pre>1  &lt;p&gt;...&lt;/p&gt;
-2  &lt;section&gt;
-3  &lt;p&gt;...&lt;/p&gt;
-4  &lt;h2&gt;...&lt;/h2&gt;
-5  &lt;p&gt;This paragraph will be selected&lt;/p&gt;
-6  &lt;div&gt;
-7  &lt;p&gt;...&lt;/p&gt;
-8  &lt;/div&gt;
-9  &lt;p&gt;...&lt;/p&gt;
-10 &lt;/section&gt;</pre>
+<pre>&lt;p&gt;...&lt;/p&gt;
+&lt;section&gt;
+  &lt;p&gt;...&lt;/p&gt;
+  &lt;h2&gt;...&lt;/h2&gt;
+  &lt;p&gt;This paragraph will be selected&lt;/p&gt;
+  &lt;div&gt;
+    &lt;p&gt;...&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;p&gt;...&lt;/p&gt;
+&lt;/section&gt;</pre>
  
 </details>
 
@@ -1760,16 +1762,16 @@ along with sharing the same parent element, thus selected.</p>
 <details>
   <summary><b>HTML</b></summary>
 
-<pre>1  &lt;input type=&quot;checkbox&quot; id=&quot;toggle&quot;&gt;
-2  &lt;label for=&quot;toggle&quot;&gt;&amp;#9776;&lt;/label&gt;
-3  &lt;nav&gt;
-4    &lt;ul&gt;
-5      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
-6      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;About&lt;/a&gt;&lt;/li&gt;
-7      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Services&lt;/a&gt;&lt;/li&gt;  
-8      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;
-9    &lt;/ul&gt;
-10 &lt;/nav&gt;</pre>
+<pre>&lt;input type=&quot;checkbox&quot; id=&quot;toggle&quot;&gt;
+&lt;label for=&quot;toggle&quot;&gt;&amp;#9776;&lt;/label&gt;
+&lt;nav&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;About&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Services&lt;/a&gt;&lt;/li&gt;  
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;</pre>
  
 </details>
 
@@ -1778,58 +1780,58 @@ along with sharing the same parent element, thus selected.</p>
 <details>
   <summary><b>CSS</b></summary>
 
-<pre>1   input { 
-2     display: none;  
-3   } 
-4   label,  
-5   ul { 
-6     border: 1px solid #cecfd5;  
-7     border-radius: 6px;
-8   } 
-9   label { 
-10    color: #0087cc; 
-11    cursor: pointer;
-12    display: inline-block;
-13    font-size: 18px; 
-14    padding: 5px 9px;  
-15    transition: all .15s ease;  
-16  } 
-17  label:hover {
-18    color: #ff7b29; 
-19  } 
-20  input:checked + label {  
-21    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15);
-22    color: #9799a7; 
-23  }
-24  nav {
-25    max-height: 0;  
-26    overflow: hidden;  
-27    transition: all .15s ease;  
-28  } 
-19    input:checked &amp;tilde; nav {
-30    max-height: 500px; 
-31  } 
-32  ul { 
-33    list-style: none;  
-34    margin: 8px 0 0 0; 
-35    padding: 0;  
-36    width: 100px;
-37  } 
-38  li { 
-39    border-bottom: 1px solid #cecfd5; 
-40  } 
-41  li:last-child { 
-42    border-bottom: 0;  
-43  } 
-44  a {  
-45    color: #0087cc; 
-46    display: block; 
-47    padding: 6px 12px; 
-48    text-decoration: none;
-49  } 
-50  a:hover { 
-51    color: #ff7b29; 
-52  }</pre>
+<pre>input {
+  display: none;
+}
+label,
+ul {
+  border: 1px solid #cecfd5;
+  border-radius: 6px;
+}
+label {
+  color: #0087cc;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 18px;
+  padding: 5px 9px;
+  transition: all .15s ease;
+}
+label:hover {
+  color: #ff7b29;
+}
+input:checked + label {
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15);
+  color: #9799a7;
+}
+nav {
+  max-height: 0;
+  overflow: hidden;
+  transition: all .15s ease;
+}
+  input:checked &amp;tilde; nav {
+  max-height: 500px;
+}
+ul {
+  list-style: none;
+  margin: 8px 0 0 0;
+  padding: 0;
+  width: 100px;
+}
+li {
+  border-bottom: 1px solid #cecfd5;
+}
+li:last-child {
+  border-bottom: 0;
+}
+a {
+  color: #0087cc;
+  display: block;
+  padding: 6px 12px;
+  text-decoration: none;
+}
+a:hover {
+  color: #ff7b29;
+}</pre>
  
 </details>
 
@@ -2010,49 +2012,49 @@ stated value.</p>
 
 <h4>HTML</h4>
 
-<pre>1  &lt;ul&gt;
-2    &lt;li&gt;&lt;a href=&quot;#.pdf&quot;&gt;PDF Document&lt;/a&gt;&lt;/li&gt;
-3    &lt;li&gt;&lt;a href=&quot;#.doc&quot;&gt;Word Document&lt;/a&gt;&lt;/li&gt;
-4    &lt;li&gt;&lt;a href=&quot;#.jpg&quot;&gt;Image File&lt;/a&gt;&lt;/li&gt;
-5    &lt;li&gt;&lt;a href=&quot;#.mp3&quot;&gt;Audio File&lt;/a&gt;&lt;/li&gt;
-6    &lt;li&gt;&lt;a href=&quot;#.mp4&quot;&gt;Video File&lt;/a&gt;&lt;/li&gt;
-7  &lt;/ul&gt;</pre>
+<pre>&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;#.pdf&quot;&gt;PDF Document&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#.doc&quot;&gt;Word Document&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#.jpg&quot;&gt;Image File&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#.mp3&quot;&gt;Audio File&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#.mp4&quot;&gt;Video File&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</pre>
 
 <br><br>
 
 <details>
   <summary><b>CSS</b></summary>
 
-<pre>1  ul {
-2    list-style: none;
-3    margin: 0;
-4    padding: 0;
-5  }
-6  a {
-7    background-position: 0 50%;
-8    background-repeat: no-repeat;
-9    color: #0087cc;
-10   padding-left: 22px;
-11   text-decoration: none;
-12 }
-13 a:hover {
-14   color: #ff7b29;
-15 }
-16 a[href&amp;$=&quot;.pdf&quot;] {
-17   background-image: url(&quot;images/pdf.png&quot;);
-18 }
-19 a[href$=&quot;.doc&quot;] {
-20   background-image: url(&quot;images/doc.png&quot;);
-21 }
-22 a[href$=&quot;.jpg&quot;] {
-23   background-image: url(&quot;images/image.png&quot;); 
-24 } 
-25 a[href$=&quot;.mp3&quot;] {
-26   background-image: url(&quot;images/audio.png&quot;);
-27 }
-28 a[href$=&quot;.mp4&quot;] {
-29   background-image: url(&quot;images/video.png&quot;);
-30 }</pre>
+<pre>ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+a {
+  background-position: 0 50%;
+  background-repeat: no-repeat;
+  color: #0087cc;
+  padding-left: 22px;
+  text-decoration: none;
+}
+a:hover {
+  color: #ff7b29;
+}
+a[href&amp;$=&quot;.pdf&quot;] {
+  background-image: url(&quot;images/pdf.png&quot;);
+}
+a[href$=&quot;.doc&quot;] {
+  background-image: url(&quot;images/doc.png&quot;);
+}
+a[href$=&quot;.jpg&quot;] {
+  background-image: url(&quot;images/image.png&quot;); 
+} 
+a[href$=&quot;.mp3&quot;] {
+  background-image: url(&quot;images/audio.png&quot;);
+}
+a[href$=&quot;.mp4&quot;] {
+  background-image: url(&quot;images/video.png&quot;);
+}</pre>
 
 </details>
 
@@ -2172,8 +2174,8 @@ the :link pseudo-class comes into play, where the :visited pseudo-class
 styles links that a user has already visited based on their browsing
 history.</p>
 
-<pre>1  a:link {...}
-2  a:visited {...}</pre>
+<pre>a:link {...}
+a:visited {...}</pre>
 
 <h4>User Action Pseudo-classes</h4>
 
@@ -2187,9 +2189,9 @@ Lastly, the :focus pseudo-class is applied to an element when a user has
 made an element the focus point of the page, often by using the keyboard
 to tab from one element to another.</p>
 
-<pre>1  a:hover {...}
-2  a:active {...}
-3  a:focus {...}</pre>
+<pre>a:hover {...}
+a:active {...}
+a:focus {...}</pre>
  
 <h4>User Interface State Pseudo-classes</h4>
 
@@ -2205,8 +2207,8 @@ browsers by default will fade out disabled inputs to inform users that
 the input is not available for interaction, however those styles may be
 adjusted as wished with the :disabled pseudo-class.</p>
 
-<pre>1  input:enabled {...}
-2  input:disabled {...}</pre>
+<pre>input:enabled {...}
+input:disabled {...}</pre>
 
 <p>The last two user interface element state pseudo-classes
 of :checked and :indeterminate revolve around checkbox and radio button
@@ -2216,8 +2218,8 @@ button has neither been selected nor unselected it lives in an
 indeterminate state, from which the :indeterminate pseudo-class can be
 used to target these elements.</p>
 
-<pre>1  input:checked {...}
-2  input:indeterminate {...}</pre>
+<pre>input:checked {...}
+input:indeterminate {...}</pre>
  
 <h4>Structural &amp; Position Pseudo-classes</h4>
 
@@ -2251,26 +2253,26 @@ selected as it is the only division within the specific list item.</p>
 
 <h4>CSS</h4>
 
-<pre>1  li:first-child {...}
-2  li:last-child {...}
-3  div:only-child {...}</pre>
+<pre>li:first-child {...}
+li:last-child {...}
+div:only-child {...}</pre>
  
 <br><br>
 
 <details>
   <summary><b>HTML</b></summary>
 
-<pre>1  &lt;ul&gt;
-2    &lt;li&gt;This list item will be selected&lt;/li&gt;
-3    &lt;li&gt;
-4      &lt;div&gt;This div will be selected&lt;/div&gt;
-5    &lt;/li&gt;
-6    &lt;li&gt;
-7      &lt;div&gt;...&lt;/div&gt;
-8      &lt;div&gt;...&lt;/div&gt;
-9    &lt;/li&gt;
-10   &lt;li&gt;This list item will be selected&lt;/li&gt;
-11 &lt;/ul&gt;</pre>
+<pre>&lt;ul&gt;
+  &lt;li&gt;This list item will be selected&lt;/li&gt;
+  &lt;li&gt;
+    &lt;div&gt;This div will be selected&lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;div&gt;...&lt;/div&gt;
+    &lt;div&gt;...&lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;This list item will be selected&lt;/li&gt;
+&lt;/ul&gt;</pre>
  
 </details>
 
@@ -2298,20 +2300,20 @@ reflecting these selectors. The img:only-of-type selector identifies the image
 
 <h4>CSS</h4>
 
-<pre>1  p:first-of-type {...}
-2  p:last-of-type {...}
-3  img:only-of-type {...}</pre>
+<pre>p:first-of-type {...}
+p:last-of-type {...}
+img:only-of-type {...}</pre>
  
 <h4>HTML</h4>
 
-<pre>1  &lt;article&gt;
-2    &lt;h1&gt;...&lt;/h1&gt;
-3    &lt;p&gt;This paragraph will be selected&lt;/p&gt;
-4    &lt;p&gt;...&lt;/p&gt;
-5    &lt;img src=&quot;#&quot;&gt;&lt;!-- This image will be selected --&gt;
-6    &lt;p&gt;This paragraph will be selected&lt;/p&gt;
-7    &lt;h6&gt;...&lt;/h6&gt;
-8  &lt;/article&gt;</pre>
+<pre>&lt;article&gt;
+  &lt;h1&gt;...&lt;/h1&gt;
+  &lt;p&gt;This paragraph will be selected&lt;/p&gt;
+  &lt;p&gt;...&lt;/p&gt;
+  &lt;img src=&quot;#&quot;&gt;&lt;!-- This image will be selected --&gt;
+  &lt;p&gt;This paragraph will be selected&lt;/p&gt;
+  &lt;h6&gt;...&lt;/h6&gt;
+&lt;/article&gt;</pre>
  
 <p>Lastly, there are a few structural and position based pseudo-classes that select 
 elements based on a number or an algebraic expression. These pseudo-classes include 
@@ -2407,14 +2409,14 @@ third list item, thus lines 4 and 7 are selected.</p>
 
 <h4>HTML</h4>
 
-<pre>1  &lt;ul&gt;
-2    &lt;li&gt;...&lt;/li&gt;
-3    &lt;li&gt;...&lt;/li&gt;
-4    &lt;li&gt;This list item will be selected&lt;/li&gt;
-5    &lt;li&gt;...&lt;/li&gt;
-6    &lt;li&gt;...&lt;/li&gt;
-7    &lt;li&gt;This list item will be selected&lt;/li&gt;
-8  &lt;/ul&gt;</pre>
+<pre>&lt;ul&gt;
+  &lt;li&gt;...&lt;/li&gt;
+  &lt;li&gt;...&lt;/li&gt;
+  &lt;li&gt;This list item will be selected&lt;/li&gt;
+  &lt;li&gt;...&lt;/li&gt;
+  &lt;li&gt;...&lt;/li&gt;
+  &lt;li&gt;This list item will be selected&lt;/li&gt;
+&lt;/ul&gt;</pre>
  
 <p>Using a different expression within the :nth-child(n) pseudo-class will
 yield a different selection. The li:nth-child(2n+3) selector, for
@@ -2427,14 +2429,14 @@ and then onward. As a result, the list items lines 4 and 6 are selected.</p>
 
 <h4>HTML</h4>
 
-<pre>1  &lt;ul&gt;
-2    &lt;li&gt;...&lt;/li&gt;
-3    &lt;li&gt;...&lt;/li&gt;
-4    &lt;li&gt;This list item will be selected&lt;/li&gt;
-5    &lt;li&gt;...&lt;/li&gt;
-6    &lt;li&gt;This list item will be selected&lt;/li&gt;
-7    &lt;li&gt;...&lt;/li&gt;
-8  &lt;/ul&gt;</pre>
+<pre>&lt;ul&gt;
+  &lt;li&gt;...&lt;/li&gt;
+  &lt;li&gt;...&lt;/li&gt;
+  &lt;li&gt;This list item will be selected&lt;/li&gt;
+  &lt;li&gt;...&lt;/li&gt;
+  &lt;li&gt;This list item will be selected&lt;/li&gt;
+  &lt;li&gt;...&lt;/li&gt;
+&lt;/ul&gt;</pre>
 
 <p>Changing the expression again, this time with a negative value, yields
 new selection. Here the li:nth-child(-n+4) selector is identifying the
@@ -2447,14 +2449,14 @@ lines 2 through 5 are selected.</p>
  
 <h4>HTML</h4>
 
-<pre>1  &lt;ul&gt;
-2    &lt;li&gt;This list item will be selected&lt;/li&gt;
-3    &lt;li&gt;This list item will be selected&lt;/li&gt;
-4    &lt;li&gt;This list item will be selected&lt;/li&gt;
-5    &lt;li&gt;This list item will be selected&lt;/li&gt;
-6    &lt;li&gt;...&lt;/li&gt;
-7    &lt;li&gt;...&lt;/li&gt;
-8  &lt;/ul&gt;</pre>
+<pre>&lt;ul&gt;
+  &lt;li&gt;This list item will be selected&lt;/li&gt;
+  &lt;li&gt;This list item will be selected&lt;/li&gt;
+  &lt;li&gt;This list item will be selected&lt;/li&gt;
+  &lt;li&gt;This list item will be selected&lt;/li&gt;
+  &lt;li&gt;...&lt;/li&gt;
+  &lt;li&gt;...&lt;/li&gt;
+&lt;/ul&gt;</pre>
  
 <p>Adding a negative integer before the n argument changes the selection
 again. Here the li:nth-child(-2n+5) selector identifies every second
@@ -2467,14 +2469,14 @@ item, thus the list items on lines 2, 4, and 6 are selected.</p>
 
 <h4>HTML</h4>
 
-<pre>1  &lt;ul&gt;
-2    &lt;li&gt;This list item will be selected&lt;/li&gt;
-3    &lt;li&gt;...&lt;/li&gt;
-4    &lt;li&gt;This list item will be selected&lt;/li&gt;
-5    &lt;li&gt;...&lt;/li&gt;
-6    &lt;li&gt;This list item will be selected&lt;/li&gt;
-7    &lt;li&gt;...&lt;/li&gt;
-8  &lt;/ul&gt;</pre>
+<pre>&lt;ul&gt;
+  &lt;li&gt;This list item will be selected&lt;/li&gt;
+  &lt;li&gt;...&lt;/li&gt;
+  &lt;li&gt;This list item will be selected&lt;/li&gt;
+  &lt;li&gt;...&lt;/li&gt;
+  &lt;li&gt;This list item will be selected&lt;/li&gt;
+  &lt;li&gt;...&lt;/li&gt;
+&lt;/ul&gt;</pre>
  
 <p>Changing from the :nth-child(n) pseudo-class to
 the :nth-last-child(n) pseudo-class switches the direction of counting,
@@ -2490,14 +2492,14 @@ list. Here the list items on lines 3 and 6 are selected.</p>
 
 <h4>HTML</h4>
 
-<pre>1  &lt;ul&gt;
-2    &lt;li&gt;...&lt;/li&gt;
-3    &lt;li&gt;This list item will be selected&lt;/li&gt;
-4    &lt;li&gt;...&lt;/li&gt;
-5    &lt;li&gt;...&lt;/li&gt;
-6    &lt;li&gt;This list item will be selected&lt;/li&gt;
-7    &lt;li&gt;...&lt;/li&gt;
-8  &lt;/ul&gt;</pre>
+<pre>&lt;ul&gt;
+  &lt;li&gt;...&lt;/li&gt;
+  &lt;li&gt;This list item will be selected&lt;/li&gt;
+  &lt;li&gt;...&lt;/li&gt;
+  &lt;li&gt;...&lt;/li&gt;
+  &lt;li&gt;This list item will be selected&lt;/li&gt;
+  &lt;li&gt;...&lt;/li&gt;
+&lt;/ul&gt;</pre>
  
 <h4>:nth-of-type(n) &amp; :nth-last-of-type(n)</h4>
 
@@ -2527,16 +2529,16 @@ elements within the parent. Here the paragraphs on lines 5 and 9 are selected.</
 <details>
   <summary><b>HTML</b></summary>
   
-<pre>1  &lt;article&gt;
-2    &lt;h1&gt;...&lt;/h1&gt;
-3    &lt;p&gt;...&lt;/p&gt;
-4    &lt;p&gt;...&lt;/p&gt;
-5    &lt;p&gt;This paragraph will be selected&lt;/p&gt;
-6    &lt;h2&gt;...&lt;/h2&gt;
-7    &lt;p&gt;...&lt;/p&gt;
-8    &lt;p&gt;...&lt;/p&gt;
-9    &lt;p&gt;This paragraph will be selected&lt;/p&gt;
-10 &lt;/article&gt;</pre>
+<pre>&lt;article&gt;
+  &lt;h1&gt;...&lt;/h1&gt;
+  &lt;p&gt;...&lt;/p&gt;
+  &lt;p&gt;...&lt;/p&gt;
+  &lt;p&gt;This paragraph will be selected&lt;/p&gt;
+  &lt;h2&gt;...&lt;/h2&gt;
+  &lt;p&gt;...&lt;/p&gt;
+  &lt;p&gt;...&lt;/p&gt;
+  &lt;p&gt;This paragraph will be selected&lt;/p&gt;
+&lt;/article&gt;</pre>
 
 </details>
 
@@ -2559,16 +2561,16 @@ paragraph. Here the paragraphs on lines 4, 7, and 9 are selected.</p>
 <details>
   <summary><b>HTML</b></summary>
   
-<pre>1  &lt;article&gt;
-2    &lt;h1&gt;...&lt;/h1&gt;
-3    &lt;p&gt;...&lt;/p&gt;
-4    &lt;p&gt;This paragraph will be selected&lt;/p&gt;
-5    &lt;p&gt;...&lt;/p&gt;
-6    &lt;h2&gt;...&lt;/h2&gt;
-7    &lt;p&gt;This paragraph will be selected&lt;/p&gt;
-8    &lt;p&gt;...&lt;/p&gt;
-9    &lt;p&gt;This paragraph will be selected&lt;/p&gt;
-10 &lt;/article&gt;</pre>
+<pre>&lt;article&gt;
+  &lt;h1&gt;...&lt;/h1&gt;
+  &lt;p&gt;...&lt;/p&gt;
+  &lt;p&gt;This paragraph will be selected&lt;/p&gt;
+  &lt;p&gt;...&lt;/p&gt;
+  &lt;h2&gt;...&lt;/h2&gt;
+  &lt;p&gt;This paragraph will be selected&lt;/p&gt;
+  &lt;p&gt;...&lt;/p&gt;
+  &lt;p&gt;This paragraph will be selected&lt;/p&gt;
+&lt;/article&gt;</pre>
 
 </details>
 
@@ -2622,12 +2624,12 @@ a strong child element, thus they are all ruled out and are not selected.</p>
 
 <h4>HTML</h4>
 
-<pre>1  &lt;div&gt;Hello&lt;/div&gt;
-2  &lt;div&gt;&lt;!-- Coming soon --&gt;&lt;/div&gt;&lt;!-- This div will be 
-3  selected --&gt;
-4  &lt;div&gt;&lt;/div&gt;&lt;!-- This div will be selected --&gt;
-5  &lt;div&gt; &lt;/div&gt;
-6  &lt;div&gt;&lt;strong&gt;&lt;/strong&gt;&lt;/div&gt;</pre>
+<pre>&lt;div&gt;Hello&lt;/div&gt;
+&lt;div&gt;&lt;!-- Coming soon --&gt;&lt;/div&gt;&lt;!-- This div will be 
+selected --&gt;
+&lt;div&gt;&lt;/div&gt;&lt;!-- This div will be selected --&gt;
+&lt;div&gt; &lt;/div&gt;
+&lt;div&gt;&lt;strong&gt;&lt;/strong&gt;&lt;/div&gt;</pre>
 
 <h4>Negation Pseudo-class</h4>
 
@@ -2650,51 +2652,51 @@ pseudo-classes.</p>
 
 <h4>CSS</h4>
 
-<pre>1  div:not(.awesome) {...}
-2  :not(div) {...}</pre>
+<pre>div:not(.awesome) {...}
+:not(div) {...}</pre>
 
 <br><br>
 
 <h4>HTML</h4>
 
-<pre>1  &lt;div&gt;This div will be selected&lt;/div&gt;
-2  &lt;div class=&quot;awesome&quot;&gt;...&lt;/div&gt;
-3  &lt;section&gt;This section will be selected&lt;/section&gt;
-4  &lt;section class=&quot;awesome&quot;&gt;This section will be selected&lt;/section&gt;</pre>
+<pre>&lt;div&gt;This div will be selected&lt;/div&gt;
+&lt;div class=&quot;awesome&quot;&gt;...&lt;/div&gt;
+&lt;section&gt;This section will be selected&lt;/section&gt;
+&lt;section class=&quot;awesome&quot;&gt;This section will be selected&lt;/section&gt;</pre>
 
 <h4>Pseudo-classes Example</h4>
 
 <details>
   <summary><b>HTML</b></summary>
   
-<pre>1  &lt;table&gt;
-2    &lt;thead&gt;
-3      &lt;tr&gt;
-4        &lt;th&gt;Number&lt;/th&gt;
-5        &lt;th&gt;Player&lt;/th&gt;
-6        &lt;th&gt;Position&lt;/th&gt;
-7        &lt;th&gt;Height&lt;/th&gt;
-8        &lt;th&gt;Weight&lt;/th&gt;
-9      &lt;/tr&gt;
-10   &lt;/thead&gt;
-11   &lt;tbody&gt;
-12     &lt;tr&gt;
-13       &lt;td&gt;8&lt;/td&gt;
-14       &lt;td&gt;Marco Belinelli&lt;/td&gt;
-15       &lt;td&gt;G&lt;/td&gt;
-16       &lt;td&gt;6-5&lt;/td&gt;
-17       &lt;td&gt;195&lt;/td&gt;
-18     &lt;/tr&gt;
-19     &lt;tr&gt;
-20       &lt;td&gt;5&lt;/td&gt;
-21       &lt;td&gt;Carlos Boozer&lt;/td&gt;
-22       &lt;td&gt;F&lt;/td&gt;
-23       &lt;td&gt;6-9&lt;/td&gt;
-24       &lt;td&gt;266&lt;/td&gt;
-25     &lt;/tr&gt;
-26     ...
-27   &lt;/tbody&gt;
-28 &lt;/table&gt;</pre>
+<pre>&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Number&lt;/th&gt;
+      &lt;th&gt;Player&lt;/th&gt;
+      &lt;th&gt;Position&lt;/th&gt;
+      &lt;th&gt;Height&lt;/th&gt;
+      &lt;th&gt;Weight&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;8&lt;/td&gt;
+      &lt;td&gt;Marco Belinelli&lt;/td&gt;
+      &lt;td&gt;G&lt;/td&gt;
+      &lt;td&gt;6-5&lt;/td&gt;
+      &lt;td&gt;195&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;5&lt;/td&gt;
+      &lt;td&gt;Carlos Boozer&lt;/td&gt;
+      &lt;td&gt;F&lt;/td&gt;
+      &lt;td&gt;6-9&lt;/td&gt;
+      &lt;td&gt;266&lt;/td&gt;
+    &lt;/tr&gt;
+    ...
+  &lt;/tbody&gt;
+&lt;/table&gt;</pre>
 
 </details>
 
@@ -2703,42 +2705,42 @@ pseudo-classes.</p>
 <details>
   <summary><b>CSS</b></summary>
 
-<pre>1   table {
-2     border-collapse: separate;
-3     border-spacing: 0;
-4     width: 100%;
-5   }
-6   th,
-7   td {
-8     padding: 6px 15px;
-9   }
-10  th {
-11    background: #42444e;
-12    color: #fff;
-13    text-align: left;
-14  }
-15  tr:first-child th:first-child {
-16    border-top-left-radius: 6px;
-17  }
-18  tr:first-child th:last-child {
-19    border-top-right-radius: 6px;
-20  }
-21  td {
-22    border-right: 1px solid #c6c9cc;
-23    border-bottom: 1px solid #c6c9cc;
-24  }
-25  td:first-child {
-26    border-left: 1px solid #c6c9cc;
-27  }
-28  tr:nth-child(even) td {
-29    background: #eaeaed;
-30  }
-31  tr:last-child td:first-child {
-32    border-bottom-left-radius: 6px;
-33  }
-34  tr:last-child td:last-child {
-35    border-bottom-right-radius: 6px;
-36  }</pre>
+<pre>table {
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+}
+th,
+td {
+  padding: 6px 15px;
+}
+th {
+  background: #42444e;
+  color: #fff;
+  text-align: left;
+}
+tr:first-child th:first-child {
+  border-top-left-radius: 6px;
+}
+tr:first-child th:last-child {
+  border-top-right-radius: 6px;
+}
+td {
+  border-right: 1px solid #c6c9cc;
+  border-bottom: 1px solid #c6c9cc;
+}
+td:first-child {
+  border-left: 1px solid #c6c9cc;
+}
+tr:nth-child(even) td {
+  background: #eaeaed;
+}
+tr:last-child td:first-child {
+  border-bottom-left-radius: 6px;
+}
+tr:last-child td:last-child {
+  border-bottom-right-radius: 6px;
+}</pre>
 
 </details>
 
@@ -2897,16 +2899,16 @@ pseudo-elements respectively.</p>
 
 <h4>CSS</h4>
 
-<pre>1  .alpha:first-letter,
-2  .bravo:first-line {
-3    color: #ff7b29;
-4    font-size: 18px;
-5  }</pre>
+<pre>.alpha:first-letter,
+.bravo:first-line {
+  color: #ff7b29;
+  font-size: 18px;
+}</pre>
 
 <h4>HTML</h4>
 
-<pre>1  &lt;p class=&quot;alpha&quot;&gt;Lorem ipsum dolor...&lt;/p&gt;
-2  &lt;p class=&quot;bravo&quot;&gt;Integer eget enim...&lt;/p&gt;</pre>
+<pre>&lt;p class=&quot;alpha&quot;&gt;Lorem ipsum dolor...&lt;/p&gt;
+&lt;p class=&quot;bravo&quot;&gt;Integer eget enim...&lt;/p&gt;</pre>
  
 <h4>Textual Pseudo-elements Demo</h4>
 
@@ -2931,16 +2933,16 @@ necessary should a browser not support these pseudo-elements.</p>
 
 <h4>CSS</h4>
 
-<pre>1  a:after {
-2    color: #9799a7;
-3    content: &quot; (&quot; attr(href) &quot;)&quot;;
-4    font-size: 11px;
-5  }</pre>
+<pre>a:after {
+  color: #9799a7;
+  content: &quot; (&quot; attr(href) &quot;)&quot;;
+  font-size: 11px;
+}</pre>
  
 <h4>HTML</h4>
 
-<pre>1  &lt;a href=&quot;http://google.com/&quot;&gt;Search the Web&lt;/a&gt;
-2  &lt;a href=&quot;http://learn.shayhowe.com/&quot;&gt;Learn How to Build Websites&lt;/a&gt;</pre>
+<pre>&lt;a href=&quot;http://google.com/&quot;&gt;Search the Web&lt;/a&gt;
+&lt;a href=&quot;http://learn.shayhowe.com/&quot;&gt;Learn How to Build Websites&lt;/a&gt;</pre>
  
 <h4>Generated Content Pseudo-elements Demo</h4>
 
@@ -2968,12 +2970,12 @@ thanks to the ::selection  fragment pseudo-element. Also note,
 the ::-moz-selection Mozilla prefixed fragment pseudo-element has been
 added to ensure the best support for all browsers.</p>
 
-<pre>1  ::-moz-selection {
-2    background: #ff7b29;
-3  }
-4  ::selection {
-5    background: #ff7b29;
-6  }</pre>
+<pre>::-moz-selection {
+  background: #ff7b29;
+}
+::selection {
+  background: #ff7b29;
+}</pre>
 
 <h4>Fragment Pseudo-element Demo</h4>
 
@@ -2988,45 +2990,45 @@ added to ensure the best support for all browsers.</p>
 <details>
   <summary><b>CSS</b></summary>
   
-<pre>1  .arrow {
-2  background: #2db34a;
-3  color: #fff;
-4  display: inline-block;
-5  height: 30px;
-6  line-height: 30px;
-7  padding: 0 12px;
-8  position: relative;
-9  text-decoration: none;
-10  }
-11  .arrow:before,  
-12  .arrow:after {
-13    content: &quot;&quot;;
-14    height: 0;
-15    position: absolute;
-16    width: 0;
-17  }
-18  .arrow:before {
-19    border-bottom: 15px solid #2db34a;
-20    border-left: 15px solid transparent;
-21    border-top: 15px solid #2db34a;
-22    left: -15px;
-23  }
-24  .arrow:after {
-25    border-bottom: 15px solid transparent;
-26    border-left: 15px solid #2db34a;
-27    border-top: 15px solid transparent;
-28    right: -15px;
-29  }
-30  .arrow:hover {
-31    background: #ff7b29;
-32  }
-33  .arrow:hover:before {
-34    border-bottom: 15px solid #ff7b29;
-35    border-top: 15px solid #ff7b29;
-36  }
-37  .arrow:hover:after {
-39    border-left: 15px solid #ff7b29;
-40  }</pre>
+<pre>.arrow {
+  background: #2db34a;
+  color: #fff;
+  display: inline-block;
+  height: 30px;
+  line-height: 30px;
+  padding: 0 12px;
+  position: relative;
+  text-decoration: none;
+}
+.arrow:before,  
+.arrow:after {
+  content: &quot;&quot;;
+  height: 0;
+  position: absolute;
+  width: 0;
+}
+.arrow:before {
+  border-bottom: 15px solid #2db34a;
+  border-left: 15px solid transparent;
+  border-top: 15px solid #2db34a;
+  left: -15px;
+}
+.arrow:after {
+  border-bottom: 15px solid transparent;
+  border-left: 15px solid #2db34a;
+  border-top: 15px solid transparent;
+  right: -15px;
+}
+.arrow:hover {
+  background: #ff7b29;
+}
+.arrow:hover:before {
+  border-bottom: 15px solid #ff7b29;
+  border-top: 15px solid #ff7b29;
+}
+.arrow:hover:after {
+  border-left: 15px solid #ff7b29;
+}</pre>
 
 </details>
 
@@ -3277,31 +3279,31 @@ the following.</p>
 
 <h4>HTML</h4>
 
-<pre>1  &lt;div class=&quot;container&quot;&gt; 
-2  &lt;section&gt;...&lt;/section&gt; 
-3  &lt;aside&gt;...&lt;/aside&gt;  
-4  &lt;/div&gt;</pre>
+<pre>&lt;div class=&quot;container&quot;&gt;
+  &lt;section&gt;...&lt;/section&gt;
+  &lt;aside&gt;...&lt;/aside&gt;
+&lt;/div&gt;</pre>
  
 <br><br>
 
 <details>
   <summary><b>CSS</b></summary>
 
-<pre>1  .container {
-2    width: 538px;
-3  }
-4  section,
-5  aside {
-6    margin: 10px;
-7  }
-8  section {
-9    float: left;
-10   width: 340px;
-11 }
-12 aside {
-13   float: right;
-14   width: 158px;
-15 }</pre>
+<pre>.container {
+  width: 538px;
+}
+section,
+aside {
+  margin: 10px;
+}
+section {
+  float: left;
+  width: 340px;
+}
+aside {
+  float: right;
+  width: 158px;
+}</pre>
 
 </details>
 
@@ -3316,18 +3318,18 @@ widths scale proportionally.</p>
 <details>
   <summary><b>Fixed Grid Demo</b></summary>
 
-<pre>1  section,
-2  aside {
-3    margin: 1.858736059%; /* 10px ÷ 538px = .018587361 */
-4  }
-5  section {
-6    float: left;
-7    width: 63.197026%; /* 340px ÷ 538px = .63197026 */
-8  }
-9  aside {
-10   float: right;
-11   width: 29.3680297%; /* 158px ÷ 538px = .293680297 */
-12 }</pre>
+<pre>section,
+aside {
+  margin: 1.858736059%; /* 10px ÷ 538px = .018587361 */
+}
+section {
+  float: left;
+  width: 63.197026%; /* 340px ÷ 538px = .63197026 */
+}
+aside {
+  float: right;
+  width: 29.3680297%; /* 158px ÷ 538px = .293680297 */
+}</pre>
 
 </details>
 
@@ -3366,15 +3368,15 @@ to avoid any additional HTTP requests.</p>
 
 <h4>HTML</h4>
 
-<pre>1  &lt;!-- Separate CSS File --&gt;
-2  &lt;link href=&quot;styles.css&quot; rel=&quot;stylesheet&quot; media=&quot;all and (max-width: 1024px)&quot;&gt;</pre>
+<pre>&lt;!-- Separate CSS File --&gt;
+&lt;link href=&quot;styles.css&quot; rel=&quot;stylesheet&quot; media=&quot;all and (max-width: 1024px)&quot;&gt;</pre>
 
 <h4>CSS</h4>
 
-<pre>1  /* @media Rule */
-2  @media all and (max-width: 1024px) {...}
-3  /* @import Rule */
-4  @import url(styles.css) all and (max-width: 1024px) {...}</pre>
+<pre>/* @media Rule */
+@media all and (max-width: 1024px) {...}
+/* @import Rule */
+@import url(styles.css) all and (max-width: 1024px) {...}</pre>
 
 <p>Each media query may include a media type followed by one or more
 expressions. Common media types include all, screen, print, tv,
@@ -3533,12 +3535,12 @@ media query for viewports under 420 pixels wide we can change the layout
 by turning off the floats and changing the widths of
 the section and aside.</p>
 
-<pre>1  @media all and (max-width: 420px) {
-2    section, aside {
-3      float: none;
-4      width: auto;
-5    }
-6  }</pre>
+<pre>@media all and (max-width: 420px) {
+  section, aside {
+    float: none;
+    width: auto;
+  }
+}</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~ 08. demo without media queries (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <img class="border displayed"
@@ -3600,11 +3602,11 @@ and develop intrinsic mobile experiences.</p>
 <p>A breakout of mobile first media queries might look abit like the
 following.</p>
 
-<pre>1  /* Default styles first then media queries */
-2  @media screen and (min-width: 400px) {...}
-3  @media screen and (min-width: 600px) {...}
-4  @media screen and (min-width: 1000px) {...}
-5  @media screen and (min-width: 1400px) {...}</pre>
+<pre>/* Default styles first then media queries */
+@media screen and (min-width: 400px) {...}
+@media screen and (min-width: 600px) {...}
+@media screen and (min-width: 1000px) {...}
+@media screen and (min-width: 1400px) {...}</pre>
 
 <p>Additionally, downloading unnecessary media assets can be stopped by
 using media queries. Generally speaking, avoiding CSS3 shadows,
@@ -3612,16 +3614,16 @@ gradients, transforms, and animations within mobile styles isn’t a bad
 idea either. When used excessively, they cause heavy loading and can
 even reduce a device’s battery life.</p>
 
-<pre>1  /* Default media */
-2  body {
-3    background: #ddd;
-4  }
-5  /* Media for larger devices */
-6  @media screen and (min-width: 800px) {
-7    body {
-8      background-image: url(&quot;bg.png&quot;) 50% 50% no-repeat;
-9    }
-10 }</pre>
+<pre>/* Default media */
+body {
+  background: #ddd;
+}
+/* Media for larger devices */
+@media screen and (min-width: 800px) {
+  body {
+    background-image: url(&quot;bg.png&quot;) 50% 50% no-repeat;
+  }
+}</pre>
 
 <h4>Mobile First Demo</h4>
 
@@ -3634,23 +3636,23 @@ build the following:</p>
 <details>
   <summary><b>Mobile First Demo</b></summary>
 
-<pre>1  section,
-2  aside { 
-3    margin: 1.858736059%; 
-4  } 
-5  @media all and (min-width: 420px) { 
-6    .container { 
-7      max-width: 538px;  
-8    }
-9    section {  
-10     float: left; 
-11     width: 63.197026%; 
-12   } 
-13   aside { 
-14     float: right;
-15     width: 29.3680297%;
-16   } 
-17 }</pre>
+<pre>section,
+aside {
+  margin: 1.858736059%;
+} 
+@media all and (min-width: 420px) { 
+  .container { 
+    max-width: 538px;  
+  }
+  section {  
+    float: left; 
+    width: 63.197026%; 
+  } 
+  aside { 
+    float: right;
+    width: 29.3680297%;
+  } 
+}</pre>
 
 </details>
 
@@ -3803,10 +3805,10 @@ support isn’t great across the board. The previously
 recommended viewport meta tag would look like the following <span
 class="citation" data-cites="viewport">@viewport</span> rule in CSS.</p>
 
-<pre>1  @viewport {
-2    width: device-width;
-3    zoom: 1;
-4  }</pre>
+<pre>@viewport {
+  width: device-width;
+  zoom: 1;
+}</pre>
  
 <h4>Flexible Media</h4>
 
@@ -3818,9 +3820,9 @@ changing their size as the size of the viewport changes.</p>
 with a value of 100%. Doing so ensures that as the viewport gets smaller
 any media will scale down according to its containers width.</p>
 
-<pre>1  img, video, canvas {
-2    max-width: 100%;
-3  }</pre>
+<pre>img, video, canvas {
+  max-width: 100%;
+}</pre>
  
 <h4>Flexible Media Demo</h4>
 
@@ -3850,28 +3852,28 @@ treating the parent element as an absolutely positioned element.</p>
 
 <h4>HTML</h4>
 
-<pre>1  &lt;figure&gt;
-2    &lt;iframe src=&quot;https://www.youtube.com/embed/Sv3xVOs7_No&quot;&gt;&lt;/iframe&gt;
-3  &lt;/figure&gt;</pre>
+<pre>&lt;figure&gt;
+  &lt;iframe src=&quot;https://www.youtube.com/embed/Sv3xVOs7_No&quot;&gt;&lt;/iframe&gt;
+&lt;/figure&gt;</pre>
 
 <br><br>
 
 <details>
   <summary><b>CSS</b></summary>
 
-<pre>1  figure {
-2    height: 0;
-3    padding-bottom: 56.25%; /* 16:9 */
-4    position: relative;
-5    width: 100%;
-6  }
-7  iframe {
-8    height: 100%;
-9    left: 0;
-10   position: absolute;
-11   top: 0;
-13   width: 100%;
-14 }</pre>
+<pre>figure {
+  height: 0;
+  padding-bottom: 56.25%; /* 16:9 */
+  position: relative;
+  width: 100%;
+}
+iframe {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}</pre>
 
 </details>
 
@@ -4045,22 +4047,22 @@ struggle.</p>
 
 <h4>Haml</h4>
 
-<pre>1  %body
-2  %header
-3  %h1 Hello World
-4  %section
-5  %p Lorem ipsum dolor sit amet.</pre>
+<pre>%body
+%header
+%h1 Hello World
+%section
+%p Lorem ipsum dolor sit amet.</pre>
 
 <h4>Compiled HTML</h4>
 
-<pre>1  &lt;body&gt;
-2  &lt;header&gt; 
-3  &lt;h1&gt;Hello World&lt;/h1&gt; 
-4  &lt;/header&gt;
-5  &lt;section&gt;
-6  &lt;p&gt;Lorem ipsum dolor sit amet.&lt;/p&gt;  
-7  &lt;/section&gt; 
-8  &lt;/body&gt;</pre>
+<pre>&lt;body&gt;
+  &lt;header&gt; 
+    &lt;h1&gt;Hello World&lt;/h1&gt; 
+  &lt;/header&gt;
+  &lt;section&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet.&lt;/p&gt;  
+  &lt;/section&gt; 
+&lt;/body&gt;</pre>
 
 <h4>Handling Text</h4>
 
@@ -4069,13 +4071,13 @@ or indented below the element. Text cannot be both on the same line as
 the declared element and nested below it, it has to be either or. The
 example from above could be rewritten as the following:</p>
 
-<pre>1  %body
-2  %header
-3  %h1
-4  Hello World
-5  %section
-6  %p
-7  Lorem ipsum dolor sit amet.</pre>
+<pre>%body
+%header
+%h1
+Hello World
+%section
+%p
+Lorem ipsum dolor sit amet.</pre>
 
 <h4>Attributes</h4>
 
@@ -4087,9 +4089,9 @@ style attributes will use standard HTML syntax inside of ().</p>
 
 <h4>Haml</h4>
 
-<pre>1  %img{:src =&gt; &quot;shay.jpg&quot;, :alt =&gt; &quot;Shay Howe&quot;}
-2  %img{src: &quot;shay.jpg&quot;, alt: &quot;Shay Howe&quot;}
-3  %img(src=&quot;shay.jpg&quot; alt=&quot;Shay Howe&quot;)</pre>
+<pre>%img{:src =&gt; &quot;shay.jpg&quot;, :alt =&gt; &quot;Shay Howe&quot;}
+%img{src: &quot;shay.jpg&quot;, alt: &quot;Shay Howe&quot;}
+%img(src=&quot;shay.jpg&quot; alt=&quot;Shay Howe&quot;)</pre>
 
 <h4>Compiled HTML</h4>
 
@@ -4111,17 +4113,17 @@ outlined formats.</p>
 
 <h4>Haml</h4>
 
-<pre>1  %section.feature
-2  %section.feature.special
-3  %section#hello
-4  %section#hello.feature(role=&quot;region&quot;)</pre>
+<pre>%section.feature
+%section.feature.special
+%section#hello
+%section#hello.feature(role=&quot;region&quot;)</pre>
 
 <h4>Compiled HTML</h4>
 
-<pre>1  &lt;section class=&quot;feature&quot;&gt;&lt;/section&gt;
-2  &lt;section class=&quot;feature special&quot;&gt;&lt;/section&gt;
-3  &lt;section id=&quot;hello&quot;&gt;&lt;/section&gt;
-4  &lt;section class=&quot;feature&quot; id=&quot;hello&quot; role=&quot;region&quot;&gt;&lt;/section&gt;</pre>
+<pre>&lt;section class=&quot;feature&quot;&gt;&lt;/section&gt;
+&lt;section class=&quot;feature special&quot;&gt;&lt;/section&gt;
+&lt;section id=&quot;hello&quot;&gt;&lt;/section&gt;
+&lt;section class=&quot;feature&quot; id=&quot;hello&quot; role=&quot;region&quot;&gt;&lt;/section&gt;</pre>
 
 <h4>Division Classes &amp; IDs</h4>
 
@@ -4131,15 +4133,15 @@ identified with a . and IDs are to be identified with a #.</p>
 
 <h4>Haml</h4>
 
-<pre>1  .awesome
-2  .awesome.lesson
-3  #getting-started.lesson</pre>
+<pre>.awesome
+.awesome.lesson
+#getting-started.lesson</pre>
  
 <h4>Compiled HTML</h4>
 
-<pre>1  &lt;div class=&quot;awesome&quot;&gt;&lt;/div&gt;
-2  &lt;div class=&quot;awesome lesson&quot;&gt;&lt;/div&gt;
-3  &lt;div class=&quot;lesson&quot; id=&quot;getting-started&quot;&gt;&lt;/div&gt;</pre>
+<pre>&lt;div class=&quot;awesome&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;awesome lesson&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;lesson&quot; id=&quot;getting-started&quot;&gt;&lt;/div&gt;</pre>
 
 <h4>Boolean Attributes</h4>
 
@@ -4148,9 +4150,9 @@ depending on the syntax being used.</p>
 
 <h4>Haml</h4>
 
-<pre>1  %input{:type =&gt; &quot;checkbox&quot;, :checked =&gt; true}
-2  %input(type=&quot;checkbox&quot; checked=true)
-3  %input(type=&quot;checkbox&quot; checked)</pre>
+<pre>%input{:type =&gt; &quot;checkbox&quot;, :checked =&gt; true}
+%input(type=&quot;checkbox&quot; checked=true)
+%input(type=&quot;checkbox&quot; checked)</pre>
 
 <h4>Compiled HTML</h4>
 
@@ -4170,16 +4172,16 @@ backslash, is escaped text, printing it as is, without execution.</p>
 
 <h4>Haml</h4>
 
-<pre>1  .author
-2  = @author
-3  \\= @author</pre>
+<pre>.author
+= @author
+\\= @author</pre>
 
 <h4>Compiled HTML</h4>
 
-<pre>1  &lt;div class=&quot;author&quot;&gt;
-2  Shay Howe
-3  = @author
-4  &lt;/div&gt;</pre>
+<pre>&lt;div class=&quot;author&quot;&gt;
+Shay Howe
+= @author
+&lt;/div&gt;</pre>
 
 <h4>Text Escaping Alternatives</h4>
 
@@ -4198,10 +4200,10 @@ outside of the anchor text.</p>
 
 <h4>Haml</h4>
 
-<pre>1  %p
-2  Shay is
-3  = succeed &quot;.&quot; do
-4  %a{:href =&gt; &quot;#&quot;} awesome</pre>
+<pre>%p
+Shay is
+= succeed &quot;.&quot; do
+%a{:href =&gt; &quot;#&quot;} awesome</pre>
 
 <h4>Compiled HTML</h4>
 
@@ -4217,24 +4219,24 @@ code can be commented out by being nested underneath a forward slash.</p>
 
 <h4>Haml</h4>
 
-<pre>1  %div
-2  / Commented line
-3  Actual line
-4  /
-5  %div
-6  Commented block</pre>
+<pre>%div
+/ Commented line
+Actual line
+/
+%div
+Commented block</pre>
 
 <h4>Compiled HTML</h4>
 
-<pre>1  &lt;div&gt;
-2    &lt;!-- Commented line --&gt;
-3    Actual line
-4  &lt;/div&gt;
-5    &lt;!--
-6  &lt;div&gt;
-7    Commented block
-8  &lt;/div&gt;
-9  --&gt;</pre>
+<pre>&lt;div&gt;
+  &lt;!-- Commented line --&gt;
+  Actual line
+&lt;/div&gt;
+&lt;!--
+  &lt;div&gt;
+    Commented block
+  &lt;/div&gt;
+--&gt;</pre>
  
 <h4>Conditional Comments</h4>
 
@@ -4244,14 +4246,14 @@ square brackets need to be placed directly after the forward slash.</p>
 
 <h4>Haml</h4>
 
-<pre>1  [if lt IE 9]
-2  %script{:src =&gt; &quot;html5shiv.js&quot;}</pre>
+<pre>[if lt IE 9]
+%script{:src =&gt; &quot;html5shiv.js&quot;}</pre>
 
 <h4>Compiled HTML</h4>
 
-<pre>1  &lt;!--[if lt IE 9]&gt;
-2  &lt;script src=&quot;html5shiv.js&quot;&gt;&lt;/script&gt;
-3  &lt;![endif]--&gt; </pre>
+<pre>&lt;!--[if lt IE 9]&gt;
+&lt;script src=&quot;html5shiv.js&quot;&gt;&lt;/script&gt;
+&lt;![endif]--&gt; </pre>
  
 <h4>Silent Comments</h4>
 
@@ -4265,15 +4267,15 @@ multiple lines with the use of nesting.</p>
 
 <h4>Haml</h4>
 
-<pre>1  %div
-2  -# Removed line
-3  Actual line</pre>
+<pre>%div
+-# Removed line
+Actual line</pre>
 
 <h4>Compiled HTML</h4>
 
-<pre>1  &lt;div&gt;
-2    Actual line
-3  &lt;/div&gt;</pre>
+<pre>&lt;div&gt;
+  Actual line
+&lt;/div&gt;</pre>
 
 <h4>Filters</h4>
 
@@ -4309,41 +4311,41 @@ the group being :css and :javascript.</p>
 
 <h4>Haml</h4>
 
-<pre>1  :javascript
-2  $(&#39;button&#39;).on(&#39;click&#39;, function(event) {
-3    $(&#39;p&#39;).hide(&#39;slow&#39;);
-4  });</pre>
+<pre>:javascript
+$(&#39;button&#39;).on(&#39;click&#39;, function(event) {
+  $(&#39;p&#39;).hide(&#39;slow&#39;);
+});</pre>
 
 <h4>Compiled HTML</h4>
 
-<pre>1  &lt;script&gt;
-2    $(&#39;button&#39;).on(&#39;click&#39;, function(event) {
-3      $(&#39;p&#39;).hide(&#39;slow&#39;);
-4    });
-5  &lt;/script&gt;</pre>
+<pre>&lt;script&gt;
+  $(&#39;button&#39;).on(&#39;click&#39;, function(event) {
+    $(&#39;p&#39;).hide(&#39;slow&#39;);
+  });
+&lt;/script&gt;</pre>
 
 <h4>CSS &amp; Sass Filters</h4>
 
 <h4>Haml</h4>
 
-<pre>1  :css
-2  .container {
-3    margin: 0 auto;
-4    width: 960px;
-5  }
-6  :sass
-7  .container
-8  margin: 0 auto
-9  width: 960px</pre>
+<pre>:css
+.container {
+  margin: 0 auto;
+  width: 960px;
+}
+:sass
+.container
+margin: 0 auto
+width: 960px</pre>
 
 <h4>Compiled HTML</h4>
 
-<pre>1  &lt;style&gt;
-2  .container {
-3    margin: 0 auto;
-4    width: 960px;
-5  }
-6  &lt;/style&gt; </pre>
+<pre>&lt;style&gt;
+.container {
+  margin: 0 auto;
+  width: 960px;
+}
+&lt;/style&gt; </pre>
 
 <h4>Ruby Interpolation</h4>
 
@@ -4420,10 +4422,10 @@ convert files from SCSS to Sass and vice versa. To do so
 the sass commands below may be used to convert a SCSS file to Sass, and
 then a Sass file to SCSS respectively.</p>
 
-<pre>1  # Convert Sass to SCSS
-2  sass-convert styles.sass styles.scss
-3  # Convert SCSS to Sass
-4  sass-convert styles.scss styles.sass</pre>
+<pre># Convert Sass to SCSS
+sass-convert styles.sass styles.scss
+# Convert SCSS to Sass
+sass-convert styles.scss styles.sass</pre>
 
 <h4>Syntax</h4>
 
@@ -4437,31 +4439,31 @@ indentation and clear line breaks for formatting.</p>
 
 <h4>SCSS</h4>
 
-<pre>1  .new {
-2    color: #ff7b29;
-3    font-weight: bold;
-4    span {
-5      text-transform: uppercase;
-6    }
-7  }</pre>
+<pre>.new {
+  color: #ff7b29;
+  font-weight: bold;
+  span {
+    text-transform: uppercase;
+  }
+}</pre>
  
 <h4>Sass</h4>
 
-<pre>1  .new
-2  color: #ff7b29
-3  font-weight: bold
-4  span
-5  text-transform: uppercase</pre>
+<pre>.new
+color: #ff7b29
+font-weight: bold
+span
+text-transform: uppercase</pre>
 
 <h4>Compiled CSS</h4>
 
-<pre>1  .new {
-2    color: #ff7b29;
-3    font-weight: bold;
-4  }
-5  .new span {
-6    text-transform: uppercase;
-7  }</pre>
+<pre>.new {
+  color: #ff7b29;
+  font-weight: bold;
+}
+.new span {
+  text-transform: uppercase;
+}</pre>
 
 <h4>Using SCSS vs. Sass</h4>
 
@@ -4490,24 +4492,24 @@ selectors without raising specificity is important.</p>
 
 <h4>Sass</h4>
 
-<pre>1  .portfolio
-2  border: 1px solid #9799a7
-3  ul
-4  list-style: none
-5  li
-6  float: left</pre>
+<pre>.portfolio
+border: 1px solid #9799a7
+ul
+list-style: none
+li
+float: left</pre>
  
 <h4>Compiled CSS</h4>
 
-<pre>1  .portfolio {
-2    border: 1px solid #9799a7;
-3  }
-4  .portfolio ul {
-5    list-style: none;
-6  }
-7  .portfolio li {
-8    float: left;
-9  }</pre>
+<pre>.portfolio {
+  border: 1px solid #9799a7;
+}
+.portfolio ul {
+  list-style: none;
+}
+.portfolio li {
+  float: left;
+}</pre>
 
 <h4>Nesting Properties</h4>
 
@@ -4520,19 +4522,19 @@ your decision is up to personal preference.</p>
 
 <h4>Sass</h4>
 
-<pre>1  div
-2  font:
-3  family: Baskerville, Palatino, serif
-4  style: italic
-5  weight: normal</pre>
+<pre>div
+font:
+family: Baskerville, Palatino, serif
+style: italic
+weight: normal</pre>
 
 <h4>Compiled CSS</h4>
 
-<pre>1  div {
-2    font-family: Baskerville, Palatino, serif;
-3    font-style: italic;
-4    font-weight: normal;
-5  }</pre>
+<pre>div {
+  font-family: Baskerville, Palatino, serif;
+  font-style: italic;
+  font-weight: normal;
+}</pre>
 
 <h4>Nested Media Queries</h4>
 
@@ -4541,21 +4543,21 @@ changing property values based off a media condition.</p>
 
 <h4>Sass</h4>
 
-<pre>1  .container
-2  width: 960px
-3  @media screen and (max-width: 960px)
-4  width: 100%</pre>
+<pre>.container
+width: 960px
+@media screen and (max-width: 960px)
+width: 100%</pre>
 
 <h4>Compiled CSS</h4>
 
-<pre>1  .container {
-2    width: 960px;
-3  }
-4  @media screen and (max-width: 960px) {
-5    .container {
-6      width: 100%;
-7    }
-8  }</pre>
+<pre>.container {
+  width: 960px;
+}
+@media screen and (max-width: 960px) {
+  .container {
+    width: 100%;
+  }
+}</pre>
  
 <h4>Parent Selector</h4>
 
@@ -4568,19 +4570,19 @@ as &amp;.featured.</p>
 
 <h4>Sass</h4>
 
-<pre>1  a 
-2  color: #0087cc  
-3  &amp;:hover 
-4  color: #ff7b29</pre>
+<pre>a
+color: #0087cc  
+&amp;:hover 
+color: #ff7b29</pre>
 
 <h4>Compiled CSS</h4>
 
-<pre>1  a {
-2    color: #0087cc;
-3  }
-4    a:hover {
-5    color: #ff7b29;
-6  }</pre>
+<pre>a {
+  color: #0087cc;
+}
+a:hover {
+  color: #ff7b29;
+}</pre>
 
 <h4>Parent Key Selector</h4>
 
@@ -4591,19 +4593,19 @@ of the most beneficial is inside of feature detection.</p>
 
 <h4>Sass</h4>
 
-<pre>1  .btn
-2  background: linear-gradient(#fff, #9799a7)
-3  .no-cssgradients &amp;
-4  background: url(&quot;gradient.png&quot;) 0 0 repeat-x</pre>
+<pre>.btn
+  background: linear-gradient(#fff, #9799a7)
+.no-cssgradients &amp;
+  background: url(&quot;gradient.png&quot;) 0 0 repeat-x</pre>
 
 <h4>Compiled CSS</h4>
 
-<pre>1  .btn {
-2    background: linear-gradient(#fff, #9799a7);
-3  }
-4  .no-cssgradients .btn {
-5    background: url(&quot;gradient.png&quot;) 0 0 repeat-x;
-6  }</pre>
+<pre>.btn {
+  background: linear-gradient(#fff, #9799a7);
+}
+.no-cssgradients .btn {
+  background: url(&quot;gradient.png&quot;) 0 0 repeat-x;
+}</pre>
  
 <h4>Comments</h4>
 
@@ -4619,22 +4621,22 @@ is not rendered in the compiled CSS.</p>
 
 <h4>Sass</h4>
 
-<pre>1  /* Normal comment */
-2  div
-3  background: #333
-4  // Omitted comment
-5  strong
-6  display: block</pre>
+<pre>/* Normal comment */
+div
+background: #333
+// Omitted comment
+strong
+display: block</pre>
  
 <h4>Compiled CSS</h4>
 
-<pre>1  /* Normal comment */
-2  div {
-3    background: #333;
-4  }
-5  strong {
-6    display: block;
-7  }</pre>
+<pre>/* Normal comment */
+div {
+  background: #333;
+}
+strong {
+  display: block;
+}</pre>
  
 <h4>Variables</h4>
 
@@ -4649,16 +4651,16 @@ color, boolean, null, or a list of values separated by spaces or commas.</p>
 
 <h4>Sass</h4>
 
-<pre>1  $font-base: 1em
-2  $serif: &quot;Helvetica Neue&quot;, Arial, &quot;Lucida Grande&quot;, sans-serif 
-3  p 
-4  font: $font-base $serif</pre>
+<pre>$font-base: 1em
+$serif: &quot;Helvetica Neue&quot;, Arial, &quot;Lucida Grande&quot;, sans-serif 
+p 
+font: $font-base $serif</pre>
  
 <h4>Compiled CSS</h4>
 
-<pre>1  p {
-2    font: 1em &quot;Helvetica Neue&quot;, Arial, &quot;Lucida Grande&quot;, sans-serif;  
-3  } </pre>
+<pre>p {
+  font: 1em &quot;Helvetica Neue&quot;, Arial, &quot;Lucida Grande&quot;, sans-serif;  
+} </pre>
  
 <h4>Variable Interpolation</h4>
 
@@ -4670,16 +4672,16 @@ string of plain text.</p>
 
 <h4>Sass</h4>
 
-<pre>1  $location: chicago
-2  $offset: left  
-3  .#{$location}  
-4  #{$offset}: 20px</pre>
+<pre>$location: chicago
+$offset: left  
+.#{$location}  
+#{$offset}: 20px</pre>
  
 <h4>Compiled CSS</h4>
 
-<pre>1  .chicago { 
-2    left: 20px;
-3  }</pre>
+<pre>.chicago { 
+  left: 20px;
+}</pre>
  
 <h4>Calculations</h4>
 
@@ -4702,17 +4704,17 @@ have a unit.</p>
 
 <h4>Sass</h4>
 
-<pre>1  width: 40px + 6 
-2  width: 40px - 6 
-3  width: 40px * 6
-4  width: 40px % 6 </pre>
+<pre>width: 40px + 6 
+width: 40px - 6 
+width: 40px * 6
+width: 40px % 6 </pre>
  
 <h4>Compiled CSS</h4>
 
-<pre>1  width: 46px; 
-2  width: 34px; 
-3  width: 240px;
-4  width: 4px;</pre>
+<pre>width: 46px; 
+width: 34px; 
+width: 240px;
+width: 4px;</pre>
  
 <h4>Division</h4>
 
@@ -4728,20 +4730,20 @@ value will be unitless.</p>
 
 <h4>Sass</h4>
 
-<pre>1  width: 100px / 10
-2  width: (100px / 10)
-3  width: (100px / 10px) 
-4  $width: 100px  
-5  width: $width / 10
-6  width: 5px - 100px / 10</pre>
+<pre>width: 100px / 10
+width: (100px / 10)
+width: (100px / 10px) 
+$width: 100px  
+width: $width / 10
+width: 5px - 100px / 10</pre>
  
 <h4>Compiled CSS</h4>
 
-<pre>1  width: 100px/10;
-2  width: 10px; 
-3  width: 10; 
-4  width: 10px; 
-5  width: -5px; </pre>
+<pre>width: 100px/10;
+width: 10px; 
+width: 10; 
+width: 10px; 
+width: -5px; </pre>
  
 <h4>Detailed Math</h4>
 
@@ -4751,11 +4753,11 @@ on the use of parentheses.</p>
 
 <h4>Sass</h4>
 
-<pre>1  $grid: 16
-2  $column: 40px
-3  $gutter: 20px
-4  $container: ($column * $grid) + ($gutter * $grid)
-5  width: $container </pre>
+<pre>$grid: 16
+$column: 40px
+$gutter: 20px
+$container: ($column * $grid) + ($gutter * $grid)
+width: $container </pre>
 
 <h4>Compiled CSS</h4>
 
@@ -4785,19 +4787,19 @@ the absolute value of a given number.</p>
 
 <h4>Sass</h4>
 
-<pre>1  width: percentage(2.5)
-2  width: round(2.5px)
-3  width: ceil(2.5px) 
-4  width: floor(2.5px)
-5  width: abs(-2.5px)</pre>
+<pre>width: percentage(2.5)
+width: round(2.5px)
+width: ceil(2.5px) 
+width: floor(2.5px)
+width: abs(-2.5px)</pre>
  
 <h4>Compiled CSS</h4>
 
-<pre>1  width: 250%;
-2  width: 3px;
-3  width: 3px;
-4  width: 2px;
-5  width: 2.5px;</pre>
+<pre>width: 250%;
+width: 3px;
+width: 3px;
+width: 2px;
+width: 2.5px;</pre>
  
 <h4>Color</h4>
 
@@ -4809,9 +4811,9 @@ value.</p>
 
 <h4>Sass</h4>
 
-<pre>1  color: rgba(#8ec63f, .25)
-2  $green: #8ec63f
-3  color: rgba($green, .25)</pre>
+<pre>color: rgba(#8ec63f, .25)
+$green: #8ec63f
+color: rgba($green, .25)</pre>
  
 <h4>Compiled CSS</h4>
 
@@ -4826,15 +4828,15 @@ intended.</p>
 
 <h4>Sass</h4>
 
-<pre>1  color: #8ec63f + #666
-2  color: #8ec63f * 2
-3  color: rgba(142, 198, 63, .75) / rgba(255, 255, 255, .75)</pre>
+<pre>color: #8ec63f + #666
+color: #8ec63f * 2
+color: rgba(142, 198, 63, .75) / rgba(255, 255, 255, .75)</pre>
  
 <h4>Compiled CSS</h4>
 
-<pre>1  color: #f4ffa5;
-2  color: #ffff7e;
-3  color: rgba(0, 0, 0, .75);</pre>
+<pre>color: #f4ffa5;
+color: #ffff7e;
+color: rgba(0, 0, 0, .75);</pre>
 
 <h4>Color Alterations</h4>
 
@@ -4853,19 +4855,19 @@ of a color.</p>
 
 <h4>Sass</h4>
 
-<pre>1  color: invert(#8ec63f)
-2  color: complement(#8ec63f) 
-3  color: mix(#8ec63f, #fff)
-4  color: mix(#8ec63f, #fff, 10%)
-5  color: grayscale(#8ec63f)</pre>
+<pre>color: invert(#8ec63f)
+color: complement(#8ec63f) 
+color: mix(#8ec63f, #fff)
+color: mix(#8ec63f, #fff, 10%)
+color: grayscale(#8ec63f)</pre>
 
 <h4>Compiled CSS</h4>
 
-<pre>1  color: #7139c0;
-2  color: #773fc6;
-3  color: #c6e29f;
-4  color: #f3f9eb;
-5  color: #838383;</pre>
+<pre>color: #7139c0;
+color: #773fc6;
+color: #c6e29f;
+color: #f3f9eb;
+color: #838383;</pre>
 
 <h4>HSLa Color Alterations</h4>
 
@@ -4885,25 +4887,25 @@ include lighten(), darken(), saturate(), and desaturate().</p>
 
 <h4>Sass</h4>
 
-<pre>1  color: lighten(#8ec63f, 50%)
-2  color: darken(#8ec63f, 30%)
-3  color: saturate(#8ec63f, 75%)
-4  color: desaturate(#8ec63f, 25%)
-5  color: adjust-hue(#8ec63f, 30)
-6  color: adjust-hue(#8ec63f, -30)
-7  color: fade-in(rgba(142, 198, 63, 0), .4)
-8  color: fade-out(#8ec63f, .4)</pre>
+<pre>color: lighten(#8ec63f, 50%)
+color: darken(#8ec63f, 30%)
+color: saturate(#8ec63f, 75%)
+color: desaturate(#8ec63f, 25%)
+color: adjust-hue(#8ec63f, 30)
+color: adjust-hue(#8ec63f, -30)
+color: fade-in(rgba(142, 198, 63, 0), .4)
+color: fade-out(#8ec63f, .4)</pre>
  
 <h4>Compiled CSS</h4>
 
-<pre>1  color: white;
-2  color: #3b5319; 
-3  color: #98ff06; 
-4  color: #89a75e; 
-5  color: #4ac63f; 
-6  color: #c6bb3f; 
-7  color: rgba(142, 198, 63, 0.4);
-8  color: rgba(142, 198, 63, 0.6);</pre>
+<pre>color: white;
+color: #3b5319; 
+color: #98ff06; 
+color: #89a75e; 
+color: #4ac63f; 
+color: #c6bb3f; 
+color: rgba(142, 198, 63, 0.4);
+color: rgba(142, 198, 63, 0.6);</pre>
  
 <h4>Color Manipulation</h4>
 
@@ -4928,15 +4930,15 @@ alterations.</p>
 
 <h4>Sass</h4>
 
-<pre>1  color: change-color(#8ec63f, $red: 60, $green: 255)
-2  color: adjust-color(#8ec63f, $hue: 300, $lightness: 50%)
-3  color: scale-color(#8ec63f, $lightness: 25%, $alpha: 30%)</pre>
+<pre>color: change-color(#8ec63f, $red: 60, $green: 255)
+color: adjust-color(#8ec63f, $hue: 300, $lightness: 50%)
+color: scale-color(#8ec63f, $lightness: 25%, $alpha: 30%)</pre>
  
 <h4>Compiled CSS</h4>
 
-<pre>1  color: #3cff3f;
-2  color: white;
-3  color: #aad46f;</pre>
+<pre>color: #3cff3f;
+color: white;
+color: #aad46f;</pre>
  
 <h4>Extends</h4>
 
@@ -4957,25 +4959,25 @@ code weight. Additionally, extends parley nicely with OOCSS and SMACSS.</p>
 
 <h4>Sass</h4>
 
-<pre>1  .alert
-2  border-radius: 10px
-3  padding: 10px 20px
-4  .alert-error
-5  @extend .alert
-6  background: #f2dede
-7  color: #b94a48</pre>
+<pre>.alert
+  border-radius: 10px
+  padding: 10px 20px
+.alert-error
+  @extend .alert
+  background: #f2dede
+  color: #b94a48</pre>
 
 <h4>Compiled CSS</h4>
 
-<pre>1  .alert,
-2  .alert-error {
-3  border-radius: 10px;
-4  padding: 10px 20px;
-5  }
-6  .alert-error {
-7  background: #f2dede;
-8  color: #b94a48;
-9  } </pre>
+<pre>.alert,
+.alert-error {
+  border-radius: 10px;
+  padding: 10px 20px;
+}
+.alert-error {
+  background: #f2dede;
+  color: #b94a48;
+} </pre>
 
 <h4>Placeholder Selector Extend</h4>
 <p>To avoid building a bunch of unused classes purely for extends we can
@@ -4987,24 +4989,24 @@ the .alert selector never makes its way into the CSS.</p>
 
 <h4>Sass</h4>
 
-<pre>1  %alert
-2  border-radius: 10px
-3  padding: 10px 20px
-4  .alert-error
-5  @extend %alert
-6  background: #f2dede
-7  color: #b94a48</pre>
+<pre>%alert
+  border-radius: 10px
+  padding: 10px 20px
+.alert-error
+  @extend %alert
+  background: #f2dede
+  color: #b94a48</pre>
 
 <h4>Compiled CSS</h4>
 
-<pre>1  .alert-error {
-2    border-radius: 10px;
-3    padding: 10px 20px;
-4  }
-5  .alert-error {
-6    background: #f2dede;
-7    color: #b94a48;
-8  }</pre>
+<pre>.alert-error {
+  border-radius: 10px;
+  padding: 10px 20px;
+}
+.alert-error {
+  background: #f2dede;
+  color: #b94a48;
+}</pre>
 
 <h4>Element Selector Extend</h4>
 
@@ -5012,21 +5014,21 @@ the .alert selector never makes its way into the CSS.</p>
 
 <h4>Sass</h4>
 
-<pre>1  h2
-2  color: #9c6
-3  span
-4  text-decoration: underline
-5  .sub-heading
-6  @extend h2</pre>
+<pre>h2
+color: #9c6
+span
+text-decoration: underline
+.sub-heading
+@extend h2</pre>
  
 <h4>Compiled CSS</h4>
 
-<pre>1  h2, .sub-heading {
-2    color: #9c6;
-3  }
-4  h2 span, .sub-heading span {
-5    text-decoration: underline;
-6  }</pre>
+<pre>h2, .sub-heading {
+  color: #9c6;
+}
+h2 span, .sub-heading span {
+  text-decoration: underline;
+}</pre>
 
 <h4>Mixins</h4>
 
@@ -5046,21 +5048,21 @@ data-cites="include">@include</span> rule.</p>
 
 <h4>Sass</h4>
 
-<pre>1  @mixin btn($color, $color-hover)
-2  color: $color
-3  &amp;:hover
-4  color: $color-hover
-5  .btn
-6  +btn($color: #fff, $color-hover: #9799a7)</pre>
+<pre>@mixin btn($color, $color-hover)
+color: $color
+&amp;:hover
+color: $color-hover
+.btn
++btn($color: #fff, $color-hover: #9799a7)</pre>
 
 <h4>Compiled CSS</h4>
 
-<pre>1  .btn {
-2    color: #fff;
-3  }
-4  .btn:hover {
-5    color: #9799a7;
-6  }</pre>
+<pre>.btn {
+  color: #fff;
+}
+.btn:hover {
+  color: #9799a7;
+}</pre>
 
 <h4>Default Arguments</h4>
 
@@ -5069,21 +5071,21 @@ values, which may be over written if wished.</p>
 
 <h4>Sass</h4>
 
-<pre>1  @mixin btn($color: #fff, $color-hover: #9799a7)
-2  color: $color
-3  &amp;:hover
-4  color: $color-hover
-5  .btn
-6  +btn($color-hover: #9799a7)</pre>
+<pre>@mixin btn($color: #fff, $color-hover: #9799a7)
+color: $color
+&amp;:hover
+color: $color-hover
+.btn
++btn($color-hover: #9799a7)</pre>
  
 <h4>Compiled CSS</h4>
 
-<pre>1  .btn {
-2    color: #fff;
-3  }
-4  .btn:hover {
-5    color: #9799a7;
-6  } </pre>
+<pre>.btn {
+  color: #fff;
+}
+.btn:hover {
+  color: #9799a7;
+} </pre>
  
 <h4>Variable Arguments</h4>
 
@@ -5091,20 +5093,20 @@ values, which may be over written if wished.</p>
 name may end with … inside of the mixin. In the example below with box
 shadows we can pass in comma separated values to the mixin.</p>
 
-<pre>1  @mixin box-shadow($shadow...)
-2  -webkit-box-shadow: $shadow
-3  -moz-box-shadow: $shadow
-4  box-shadow: $shadow
-5  .shadows
-6  +box-shadow(0 1px 2px #cecfd5, inset 0 0 5px #cecfd5)</pre>
+<pre>@mixin box-shadow($shadow...)
+-webkit-box-shadow: $shadow
+-moz-box-shadow: $shadow
+box-shadow: $shadow
+.shadows
++box-shadow(0 1px 2px #cecfd5, inset 0 0 5px #cecfd5)</pre>
  
 <h4>Compiled CSS</h4>
 
-<pre>1  .shadows {
-2  -moz-box-shadow: 0 1px 2px #cecfd5, inset 0 0 5px #cecfd5;
-3  -webkit-box-shadow: 0 1px 2px #cecfd5, inset 0 0 5px #cecfd5;
-4  box-shadow: 0 1px 2px #cecfd5, inset 0 0 5px #cecfd5;
-5  }</pre>
+<pre>.shadows {
+  -moz-box-shadow: 0 1px 2px #cecfd5, inset 0 0 5px #cecfd5;
+  -webkit-box-shadow: 0 1px 2px #cecfd5, inset 0 0 5px #cecfd5;
+  box-shadow: 0 1px 2px #cecfd5, inset 0 0 5px #cecfd5;
+}</pre>
 
 <h4>Imports</h4>
 
@@ -5126,8 +5128,8 @@ within the HTML document.</p>
 
 <h4>Sass</h4>
 
-<pre>1  @import &quot;normalize&quot;
-2  @import &quot;grid&quot;, &quot;typography&quot; </pre>
+<pre>@import &quot;normalize&quot;
+@import &quot;grid&quot;, &quot;typography&quot; </pre>
 
 <h4>Compiled HTML</h4>
 
@@ -5167,15 +5169,15 @@ between to entities.</p>
     - !=
     Not equal to</pre>
 
-<pre>1  // Relational Operators
-2  6 &lt; 10 // true
-3  4 &lt;= 60 // true
-4  8 &gt; 2 // true
-5  10 &gt;= 10 // true
-6  // Comparison Operators
-7  #fff == white // true
-8  10 + 30 == 40 // true
-9  normal != bold // true</pre>
+<pre>// Relational Operators
+6 &lt; 10 // true
+4 &lt;= 60 // true
+8 &gt; 2 // true
+10 &gt;= 10 // true
+// Comparison Operators
+#fff == white // true
+10 + 30 == 40 // true
+normal != bold // true</pre>
 
 <h4>If Function</h4>
 
@@ -5188,20 +5190,20 @@ be applied.</p>
 
 <h4>Sass</h4>
 
-<pre>1  $shay: awesome
-2  .shay
-3  @if $shay == awesome
-4    background: #ff7b29
-5  @else if $shay == cool 
-6    background: #0087cc
-7  @else
-8    background: #333</pre>
+<pre>$shay: awesome
+.shay
+@if $shay == awesome
+  background: #ff7b29
+@else if $shay == cool 
+  background: #0087cc
+@else
+  background: #333</pre>
 
 <h4>Compiled CSS</h4>
 
-<pre>1  .shay {
-2    background: #ff7b29;
-3  } </pre>
+<pre>.shay {
+  background: #ff7b29;
+} </pre>
 
 <h4>For Loop</h4>
 
@@ -5215,30 +5217,30 @@ through 3, will output styles up to, and including, 3.</p>
 
 <h4>Sass</h4>
 
-<pre>1  @for $col from 1 to 6
-2  .col-#{$col}
-3  width: 40px * $col</pre>
+<pre>@for $col from 1 to 6
+.col-#{$col}
+width: 40px * $col</pre>
  
 <br><br>
 
 <details>
   <summary><b>Compiled CSS</b></summary>
 
-<pre>1  .col-1 {
-2    width: 40px;
-3  }
-4  .col-2 {
-5    width: 80px;
-6  }
-7  .col-3 {
-8    width: 120px;
-9  }
-10 .col-4 {
-11   width: 160px;
-12 }
-13 .col-5 {
-14   width: 200px;
-15 } </pre>
+<pre>.col-1 {
+  width: 40px;
+}
+.col-2 {
+  width: 80px;
+}
+.col-3 {
+  width: 120px;
+}
+.col-4 {
+  width: 160px;
+}
+.col-5 {
+  width: 200px;
+} </pre>
  
 </details>
 
@@ -5250,27 +5252,27 @@ list. List may include multiple comma separated items.</p>
 
 <h4>Sass</h4>
 
-<pre>1  @each $class in uxd, rails, html, css
-2  .#{$class}-logo
-3  background: url(&quot;/img/#{$class}.jpg&quot;)</pre>
+<pre>@each $class in uxd, rails, html, css
+.#{$class}-logo
+background: url(&quot;/img/#{$class}.jpg&quot;)</pre>
  
 <br><br>
 
 <details>
   <summary><b>Compiled CSS</b></summary>
 
-<pre>1  .uxd-logo {
-2    background: url(&quot;/img/uxd.jpg&quot;);
-3  }
-4  .rails-logo {
-5    background: url(&quot;/img/rails.jpg&quot;);
-6  }
-7  .html-logo {
-8    background: url(&quot;/img/html.jpg&quot;);
-9  }
-10 .css-logo {
-11   background: url(&quot;/img/css.jpg&quot;);
-12 }</pre>
+<pre>.uxd-logo {
+  background: url(&quot;/img/uxd.jpg&quot;);
+}
+.rails-logo {
+  background: url(&quot;/img/rails.jpg&quot;);
+}
+.html-logo {
+  background: url(&quot;/img/html.jpg&quot;);
+}
+.css-logo {
+  background: url(&quot;/img/css.jpg&quot;);
+}</pre>
 
 </details>
 
@@ -5283,34 +5285,34 @@ variable can be finely controlled allowing for precise looping.</p>
 
 <h4>Sass</h4>
 
-<pre>1  $heading: 1
-2  @while $heading &lt;= 6
-3  h#{$heading}
-4  font-size: 2em - ($heading * .25em)
-5  $heading: $heading + 1 </pre>
+<pre>$heading: 1
+@while $heading &lt;= 6
+h#{$heading}
+font-size: 2em - ($heading * .25em)
+$heading: $heading + 1 </pre>
 
 <br><br>
 
 <details>
   <summary><b>Compiled CSS</b></summary>
 
-<pre>1  h1 {
-2    font-size: 1.75em;
-3  }
-4  h2 {
-5    font-size: 1.5em;
-6  }
-7  h3 {
-8    font-size: 1.25em;
-9  }
-10 h4 {
-11   font-size: 1em;
-12 }
-13 h5 {
-14   font-size: 0.75em;
-15 }
-16 h6 { 16 font-size: 0.5em;
-17 }</pre>
+<pre>h1 {
+  font-size: 1.75em;
+}
+h2 {
+  font-size: 1.5em;
+}
+h3 {
+  font-size: 1.25em;
+}
+h4 {
+  font-size: 1em;
+}
+h5 {
+  font-size: 0.75em;
+}
+h6 { 16 font-size: 0.5em;
+}</pre>
 
 </details>
 
@@ -5439,10 +5441,10 @@ removing spaces, capitalizing the beginning of each new word except for
 the initial word. For example, shay_is_awesome would more commonly
 named  shayIsAwesome.</p>
 
-<pre>1  var theStarterLeague = 125;
-2  var food_truck = &#39;Coffee&#39;;
-3  var mixtape01 = true;
-4  var vinyl = ]&#39;Miles Davis&#39;, &#39;Frank Sinatra&#39;, &#39;Ray Charles&#39;[; </pre>
+<pre>var theStarterLeague = 125;
+var food_truck = &#39;Coffee&#39;;
+var mixtape01 = true;
+var vinyl = ]&#39;Miles Davis&#39;, &#39;Frank Sinatra&#39;, &#39;Ray Charles&#39;[; </pre>
  
 <h4>Statements</h4>
 
@@ -5454,9 +5456,9 @@ separated with semicolons, ;. New statements should begin on a new line,
 and indentation should be used when nesting statements for better
 legibility, but is not required.</p>
 
-<pre>1  log(polaroid);
-2  return(&#39;bicycle lane&#39;);
-3  alert(&#39;Congratulations, you &#39; + outcome);</pre>
+<pre>log(polaroid);
+return(&#39;bicycle lane&#39;);
+alert(&#39;Congratulations, you &#39; + outcome);</pre>
 
 <h4>Functions</h4>
 
@@ -5470,9 +5472,9 @@ function name, a list of commas separated arguments wrapped in
 parentheses, if necessary, and then the JavaScript statement, or
 statements, that defines the function enclosed in curly braces, {}.</p>
 
-<pre>1  function sayHello(name) {
-2    return(&#39;Hello &#39; + name);
-3  }</pre>
+<pre>function sayHello(name) {
+  return(&#39;Hello &#39; + name);
+}</pre>
  
 <h4>Arrays</h4>
 
@@ -5499,17 +5501,17 @@ curly braces, {}, with comma separated properties, each having a key followed b
 and value.</p>
 
 <details>
-  <summary><b>Example, Object</b></summary>
+  <summary><b>Example: Object</b></summary>
 
-<pre>1  // Object
-2  var school = {
-3    name: &#39;The Starter League&#39;,
-4    location: &#39;Merchandise Mart&#39;,
-5    students: 120,
-6    teachers: [&#39;Jeff&#39;, &#39;Raghu&#39;, &#39;Carolyn&#39;, &#39;Shay&#39;]
-7  };
-8  // Array
-9  var school = [&#39;Austin&#39;, &#39;Chicago&#39;, &#39;Portland&#39;];</pre>
+<pre>// Object
+var school = {
+  name: &#39;The Starter League&#39;,
+  location: &#39;Merchandise Mart&#39;,
+  students: 120,
+  teachers: [&#39;Jeff&#39;, &#39;Raghu&#39;, &#39;Carolyn&#39;, &#39;Shay&#39;]
+};
+// Array
+var school = [&#39;Austin&#39;, &#39;Chicago&#39;, &#39;Portland&#39;];</pre>
 
 </details>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -5559,9 +5561,9 @@ production environment it is encouraged to use the minified version for
 better loading times. Additionally, using a CDN like Google also helps
 with loading time, and potential caching benefits.</p>
 
-<pre>1  &lt;script src=&quot;//aja
-2  x.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js&quot;&gt;&lt;/script&gt;
-3  &lt;script src=&quot;script.js&quot;&gt;&lt;/script&gt; </pre>
+<pre>&lt;script src=&quot;//aja
+x.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;script.js&quot;&gt;&lt;/script&gt; </pre>
  
 <p>In the code sample above, notice the second script element referencing a
 second JavaScript file. All of the custom, handwritten JavaScript and
@@ -5587,8 +5589,8 @@ element node to perform an action on it. These selections and actions
 should be written in a new file, referenced outside of the actual jQuery
 library.</p>
 
-<pre>1  $();
-2  jQuery();</pre>
+<pre>$();
+jQuery();</pre>
  
 <h4>Document Ready</h4>
 
@@ -5599,9 +5601,9 @@ ready to be altered. By placing all of our other custom written jQuery
 inside of this function we can guarantee that it will not be executed
 until the page has loaded and the DOM is ready.</p>
 
-<pre>1  $(document).ready(function(event){
-2  // jQuery code
-3  });</pre>
+<pre>$(document).ready(function(event){
+// jQuery code
+});</pre>
  
 <h4>Selectors</h4>
 
@@ -5618,11 +5620,11 @@ being used.</p>
 DOM node to manipulate it. The selector falls within the
 parentheses, (‘…’), and may select elements just like that of CSS.</p>
 
-<pre>1  $(&#39;.feature&#39;); // Class selector
-2  $(&#39;li strong&#39;); // Descendant selector
-3  $(&#39;em, i&#39;); // Multiple selector
-4  $(&#39;a[target=&quot;_blank&quot;]&#39;); // Attribute selector
-5  $(&#39;p:nth-child(2)&#39;); // Pseudo-class selector</pre>
+<pre>$(&#39;.feature&#39;); // Class selector
+$(&#39;li strong&#39;); // Descendant selector
+$(&#39;em, i&#39;); // Multiple selector
+$(&#39;a[target=&quot;_blank&quot;]&#39;); // Attribute selector
+$(&#39;p:nth-child(2)&#39;); // Pseudo-class selector</pre>
  
 <h4>This Selection Keyword</h4>
 
@@ -5631,9 +5633,9 @@ element in which was referenced inside of the original selector. In this
 event the this keyword may be used to refer to the element selected in
 the current handler.</p>
 
-<pre>1  $(&#39;div&#39;).click(function(event){
-2    $(this);
-3  });</pre>
+<pre>$(&#39;div&#39;).click(function(event){
+  $(this);
+});</pre>
  
 <h4>jQuery Selection Filters</h4>
 
@@ -6754,7 +6756,7 @@ of the vanishing point of a transform.</p>
 <br><br>
 
 <details>
-  <summary><b><b>CSS</b></summary>
+  <summary><b>CSS</b></summary>
   
 <pre>.original {
   perspective: 200px;
@@ -6805,9 +6807,9 @@ rotate the element counterclockwise.</p>
 
 <h4>HTML</h4>
 
-<pre>1  &lt;figure class=&quot;box-1&quot;&gt;Box 1&lt;/figure&gt;
-2  &lt;figure class=&quot;box-2&quot;&gt;Box 2&lt;/figure&gt;
-3  &lt;figure class=&quot;box-3&quot;&gt;Box 3&lt;/figure&gt;</pre>
+<pre>&lt;figure class=&quot;box-1&quot;&gt;Box 1&lt;/figure&gt;
+&lt;figure class=&quot;box-2&quot;&gt;Box 2&lt;/figure&gt;
+&lt;figure class=&quot;box-3&quot;&gt;Box 3&lt;/figure&gt;</pre>
  
 <details>
   <summary><b>CSS</b></summary>
@@ -6839,8 +6841,8 @@ the elements will appear to be unchanged.</p>
 
 <h4>HTML</h4>
 
-<pre>1  &lt;figure class=&quot;box-1&quot;&gt;Box 1&lt;/figure&gt;
-2  &lt;figure class=&quot;box-2&quot;&gt;Box 2&lt;/figure&gt;</pre>
+<pre>&lt;figure class=&quot;box-1&quot;&gt;Box 1&lt;/figure&gt;
+&lt;figure class=&quot;box-2&quot;&gt;Box 2&lt;/figure&gt;</pre>
 
 <h4>CSS</h4>
 
@@ -6970,8 +6972,8 @@ rel="noopener noreferrer" target="_blank">animations</a>.</p>
 
 <h4>HTML</h4>
 
-<pre>1  &lt;figure class=&quot;box-1&quot;&gt;Box 1&lt;/figure&gt;
-2  &lt;figure class=&quot;box-2&quot;&gt;Box 2&lt;/figure&gt;</pre>
+<pre>&lt;figure class=&quot;box-1&quot;&gt;Box 1&lt;/figure&gt;
+&lt;figure class=&quot;box-2&quot;&gt;Box 2&lt;/figure&gt;</pre>
 
 <br><br>
 
@@ -7010,44 +7012,44 @@ rel="noopener noreferrer" target="_blank">animations</a>.</p>
 <details>
   <summary><b>CSS</b></summary>
 
-<pre>1  .cube-container {
-2    height: 200px;
-3    perspective: 300;
-4    position: relative;
-5    width: 200px;
-6  }
-7  .cube {
-8    height: 100%;
-9    position: absolute;
-10   transform: translateZ(-100px);
-11   transform-style: preserve-3d;
-12   width: 100%;
-13 }
-14 .side {
-15   background: rgba(45, 179, 74, .3);
-16   border: 2px solid #2db34a;
-17   height: 196px;
-18   position: absolute;
-19   width: 196px;
-20 }
-21 .front {
-22   transform: translateZ(100px);
-23 }
-24 .back {
-25   transform: rotateX(180deg) translateZ(100px);
-26 }
-27 .left {
-28   transform: rotateY(-90deg) translateZ(100px);
-29 }
-30 .right {
-31   transform: rotateY(90deg) translateZ(100px); 
-32 } 
-33 .top {  
-34   transform: rotateX(90deg) translateZ(100px); 
-35 } 
-36 .bottom { 
-37   transform: rotateX(-90deg) translateZ(100px);
-38 }</pre>
+<pre>.cube-container {
+  height: 200px;
+  perspective: 300;
+  position: relative;
+  width: 200px;
+}
+.cube {
+  height: 100%;
+  position: absolute;
+  transform: translateZ(-100px);
+  transform-style: preserve-3d;
+  width: 100%;
+}
+.side {
+  background: rgba(45, 179, 74, .3);
+  border: 2px solid #2db34a;
+  height: 196px;
+  position: absolute;
+  width: 196px;
+}
+.front {
+  transform: translateZ(100px);
+}
+.back {
+  transform: rotateX(180deg) translateZ(100px);
+}
+.left {
+  transform: rotateY(-90deg) translateZ(100px);
+}
+.right {
+  transform: rotateY(90deg) translateZ(100px); 
+} 
+.top {  
+  transform: rotateX(90deg) translateZ(100px); 
+} 
+.bottom { 
+  transform: rotateX(-90deg) translateZ(100px);
+}</pre>
  
 </details>
 
@@ -7613,15 +7615,14 @@ the left, however only when hovering over the stage.</p>
 
 <h4>HTML</h4>
 
-<pre>1  &lt;div class=&quot;stage&quot;&gt;
-2    &lt;figure class=&quot;ball&quot;&gt;&lt;/figure&gt;
-3  &lt;/div&gt;</pre>
+<pre>&lt;div class=&quot;stage&quot;&gt;
+  &lt;figure class=&quot;ball&quot;&gt;&lt;/figure&gt;
+&lt;/div&gt;</pre>
 
 <details>
   <summary><b>CSS</b></summary>
 
-<pre>
-@keyframes slide {
+<pre>@keyframes slide {
   0% {
     left: 0;
     top: 0;
@@ -7675,7 +7676,7 @@ times as specified, while the infinite keyword will repeat the animation
 indefinitely in a never ending fashion.</p>
 
 <details>
-  <summary><b>Example, Animation Iteration</b></summary>
+  <summary><b>Ex: Animation Iteration</b></summary>
 
 <pre>.stage:hover .ball {
   animation-name: slide;
@@ -7722,7 +7723,7 @@ forwards. The alternate-reverse value starts at 100% running to 0% and
 then back to 100% again.</p>
 
 <details>
-  <summary><b>Example, Alternate Reverse</b></summary>
+  <summary><b>Ex: Alternate Reverse</b></summary>
 
 <pre>.stage:hover .ball {
   animation-name: slide;
@@ -7751,7 +7752,7 @@ to paused when making the stage active by clicking on it. Notice how the
 animation will temporarily pause until you let up on the mouse.</p>
 
 <details>
-  <summary><b>Example, Animation Play State</b></summary>
+  <summary><b>Ex: Animation Play State</b></summary>
 
 <pre>.stage:hover .ball {
   animation-name: slide;
@@ -7797,7 +7798,7 @@ the animation-direction property value.</p>
 the forwards and backwards values.</p>
 
 <details>
-  <summary><b>Example, Animation</b></summary>
+  <summary><b>Example: Animation</b></summary>
 
 <pre>.stage:hover .ball {
   animation-name: slide;
@@ -8023,8 +8024,9 @@ When deciding to use feature detection, it is important to keep styles
 organized and performance in mind. Avoid duplicating any code or making
 additional HTTP requests when possible.</p>
 
+<!-- was Conditionally Applying CSS Styles -->
 <details>
-  <summary><b>Conditionally Applying CSS Styles</b></summary>
+  <summary><b>Conditional CSS Styles</b></summary>
 
 <pre>button { 2     border: 0;
   color: #fff;
@@ -8463,7 +8465,7 @@ not a hyperlink can confuse users and cause quite a bit of frustration.
 Use underlines with caution.</p>
 
 <details>
-  <summary><b>Example, Underline</b></summary>
+  <summary><b>Ex: Underline</b></summary>
 
 <pre>&lt;!-- Added to the document --&gt;
 &lt;ins cite=&quot;http://learn.shayhowe.com&quot; datetime=&quot;2012-07-01&quot;&gt;
@@ -8493,7 +8495,7 @@ document.</p>
 <p>The s element identifies text that is no longer accurate or relevant.</p>
 
 <details>
-  <summary><b>Example, Striking Text</b></summary>
+  <summary><b>Ex: Striking Text</b></summary>
 
 <pre>&lt;!-- Deleted from the document --&gt;
 I am an avid cyclist, &lt;del cite=&quot;http://shayhowe.com&quot;
@@ -8569,7 +8571,7 @@ where the progress currently stands and the max attribute indicates what
 progress needs to be reached.</p>
 
 <details>
-  <summary><b>Example, Meter &amp; Progress</b></b></summary>
+  <summary><b>Ex: Meter &amp; Progress</b></b></summary>
 
 <pre>&lt;!-- Meter --&gt;
 &lt;meter value=&quot;7&quot; max=&quot;10&quot;&gt;7 stars&lt;/meter&gt;
@@ -8600,7 +8602,7 @@ should not include any further information than the contact information,
 and other content needs to be placed outside of the address element.</p>
 
 <details>
-  <summary><b>Example, Time &amp; Address</b></summary>
+  <summary><b>Ex: Time &amp; Address</b></summary>
 
 <pre>&lt;!-- Time --&gt;
 &lt;time&gt;2011-08-24&lt;/time&gt;
