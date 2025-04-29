@@ -780,10 +780,10 @@ rel="noopener noreferrer" target="_blank">syntax</a>.</p>
 <ul>
   <li><a href="http://developer.yahoo.com/performance/rules.html" 
     rel="noopener noreferrer" target="_blank">Best Practices for Speeding Up Your Web Site</a> 
-	via Yahoo! Developer Network</li>
+    via Yahoo! Developer Network</li>
   <li><a href="https://www.stevesouders.com/blog/2012/02/10/the-performance-golden-rule/"
     rel="noopener noreferrer" target="_blank">Rules for Faster-Loading Web Sites</a> 
-	via Steve Sounders</li>
+    via Steve Sounders</li>
   <li><a href="http://viget.com/inspire/css-squareoff" 
     rel="noopener noreferrer" target="_blank"> CSS Strategy Square-off</a> via Viget Labs</li>
   <li><a href="http://csswizardry.com/2011/09/writing-efficient-css-selectors/"
@@ -1525,41 +1525,33 @@ only be used once per page.</p>
 <table>
   <colgroup>
     <col style="width: 11%" />
-    <col style="width: 31%" />
-    <col style="width: 56%" />
+    <col style="width: 25%" />
+    <col style="width: 45%" />
   </colgroup>
   <thead>
     <tr class="header">
-      <th><b>Example</b></th>
-      <th><b>Classification</b></th>
-      <th><b>Explanation</b></th>
+      <th>Example</th>
+      <th>Classification</th>
+      <th>Explanation</th>
     </tr>
   </thead>
   <tbody>
     <tr class="odd">
-      <td>h1</td>
+      <td><b>h1</b></td>
       <td>Type Selector</td>
       <td>Selects an element by its type.</td>
     </tr>
     <tr class="even">
-      <td>.tagline</td>
-      <td>Class</td>
-      <td>Selects an element by the class attribute value, which may be reused</td>
+      <td><b>.tagline</b></td>
+      <td>Class Selector</td>
+      <td>Selects an element by the class attribute value, which may be reused
+        multiple times per page.</td>
     </tr>
     <tr class="odd">
-      <td></td>
-      <td>Selector</td>
-      <td>multiple times per page.</td>
-    </tr>
-    <tr class="even">
       <td><b>#intro</b></td>
       <td>ID Selector</td>
-      <td>Selects an element by the ID attribute value, which is unique and to</td>
-    </tr>
-    <tr class="odd">
-      <td></td>
-      <td></td>
-      <td>only be used once per page.</td>
+      <td>Selects an element by the ID attribute value, which is unique and to
+        only be used once per page.</td>
     </tr>
   </tbody>
 </table>
@@ -1638,36 +1630,28 @@ article, thus selected.</p>
 <table>
   <colgroup>
     <col style="width: 14%" />
-    <col style="width: 30%" />
-    <col style="width: 55%" />
+    <col style="width: 25%" />
+    <col style="width: 45%" />
   </colgroup>
   <thead>
     <tr class="header">
-      <th><b>Example</b></th>
-      <th><b>Classification</b></th>
-      <th><b>Explanation</b></th>
+      <th>Example</th>
+      <th>Classification</th>
+      <th>Explanation</th>
     </tr>
   </thead>
   <tbody>
     <tr class="odd">
-      <td>article h2</td>
-      <td>Descendant</td>
-      <td>Selects an element that resides anywhere within an</td>
+      <td><b>article h2</b></td>
+      <td>Descendant Selector</td>
+      <td>Selects an element that resides anywhere within an
+        identified ancestor element.</td>
     </tr>
     <tr class="even">
-      <td></td>
-      <td>Selector</td>
-      <td>identified ancestor element.</td>
-    </tr>
-    <tr class="odd">
-      <td>article &gt; p</td>
-      <td>Direct Child</td>
+      <td><b>article &gt; p</b></td>
+      <td>Direct Child Selector</td>
       <td>Selects an element that resides immediately inside an</td>
-    </tr>
-    <tr class="even">
-      <td></td>
-      <td>Selector</td>
-      <td>identified parent element.</td>
+        identified parent element.</td>
     </tr>
   </tbody>
 </table>
@@ -1841,36 +1825,28 @@ a:hover {
 <table>
   <colgroup>
     <col style="width: 14%" />
-    <col style="width: 30%" />
-    <col style="width: 55%" />
+    <col style="width: 25%" />
+    <col style="width: 45%" />
   </colgroup>
   <thead>
     <tr class="header">
-      <th><b>Example</b></th>
-      <th><b>Classification</b></th>
-      <th><b>Explanation</b></th>
+      <th>Example</th>
+      <th>Classification</th>
+      <th>Explanation</th>
     </tr>
   </thead>
   <tbody>
     <tr class="odd">
-      <td>h2 ~ p</td>
-      <td>General Sibling</td>
-      <td>Selects an element that follows anywhere after the prior</td>
+      <td><b>h2 ~ p</b></td>
+      <td>General Sibling Selector</td>
+      <td>Selects an element that follows <i>anywhere</i> after the prior
+        element, in which both elements share the same parent.</td>
     </tr>
     <tr class="even">
-      <td></td>
-      <td>Selector</td>
-      <td>element, in which both elements share the same parent.</td>
-    </tr>
-    <tr class="odd">
-      <td>h2 + p</td>
-      <td>Adjacent Sibling</td>
-      <td>Selects an element that follows directly after the prior element,</td>
-    </tr>
-    <tr class="even">
-      <td></td>
-      <td>Selector</td>
-      <td>in which both elements share the same parent.</td>
+      <td><b>h2 + p</b></td>
+      <td>Adjacent Sibling Selector</td>
+      <td>Selects an element that follows <i>directly</i> after the prior
+        element, in which both elements share the same parent.</td>
     </tr>
   </tbody>
 </table>
@@ -2066,90 +2042,56 @@ a[href$=&quot;.mp4&quot;] {
   <colgroup>
     <col style="width: 18%" />
     <col style="width: 26%" />
-    <col style="width: 55%" />
+    <col style="width: 50%" />
   </colgroup>
   <thead>
     <tr class="header">
-      <th><strong>Example</strong></th>
-      <th><strong>Classification</strong></th>
-      <th><strong>Explanation</strong></th>
+      <th>Example</th>
+      <th>Classification</th>
+      <th>Explanation</th>
     </tr>
   </thead>
   <tbody>
     <tr class="odd">
-      <td>a[target]</td>
-      <td>Attribute Present</td>
-      <td>Selects an element if the given attribute is</td>
+      <td><b>a[target]</b></td>
+      <td>Attribute Present Selector</td>
+      <td>Selects an element if the given attribute is present.</td>
     </tr>
     <tr class="even">
-      <td></td>
-      <td>Selector</td>
-      <td>present.</td>
+      <td><b>a[href=“http://google.com/”]</b></td>
+      <td>Attribute Equals Selector</td>
+      <td>Selects an element if the given attribute value exactly
+	    matches the values stated.</td>
     </tr>
     <tr class="odd">
-      <td>a[href=“http://google.com/”]</td>
-      <td>Attribute Equals</td>
-      <td>Selects an element if the given attribute value</td>
+      <td><b>a[href*=“login”]</b></td>
+      <td>Attribute Contains Selector</td>
+      <td>Selects an element if the given attribute value contains 
+	    at least one instance of the value stated</td>
     </tr>
     <tr class="even">
-      <td></td>
-      <td>Selector</td>
-      <td>exactly matches the value stated.</td>
+      <td><b>a[href^=“https://”]</b></td>
+      <td>Attribute Begins with Selector</td>
+      <td>Selects an element if the given attribute value begins 
+	    with the value stated.</td>
     </tr>
     <tr class="odd">
-      <td>a[href*=“login”]</td>
-      <td>Attribute Contains</td>
-      <td>Selects an element if the given attribute value</td>
+      <td><b>a[href$=“.pdf”]</b></td>
+      <td>Attribute Ends with Selector</td>
+      <td>Selects an element if the given attribute value ends
+	    with the value stated.</td>
     </tr>
     <tr class="even">
-      <td></td>
-      <td>Selector</td>
-      <td>contains at least one instance of the value stated</td>
+      <td><b>a[rel˜=“tag”]</b></td>
+      <td>Attribute Spaced Selector</td>
+      <td>Selects an element if the given attribute value is 
+	    whitespace-separated with one word being exactly as stated.</td>
     </tr>
     <tr class="odd">
-      <td>a[href^=“https://”]</td>
-      <td>Attribute Begins</td>
-      <td>Selects an element if the given attribute value</td>
-    </tr>
-    <tr class="even">
-      <td></td>
-      <td>with Selector</td>
-      <td>begins with the value stated.</td>
-    </tr>
-    <tr class="odd">
-      <td>a[href$=“.pdf”]</td>
-      <td>Attribute Ends</td>
-      <td>Selects an element if the given attribute value</td>
-    </tr>
-    <tr class="even">
-      <td></td>
-      <td>With Selector</td>
-      <td>ends with the value stated.</td>
-    </tr>
-    <tr class="odd">
-      <td>a[rel˜=“tag”]</td>
-      <td>Attribute Spaced</td>
-      <td>Selects an element if the given attribute value</td>
-    </tr>
-    <tr class="even">
-      <td></td>
-      <td>Selector</td>
-      <td>is whitespace-separated with one word being</td>
-    </tr>
-    <tr class="odd">
-      <td></td>
-      <td></td>
-      <td>exactly as stated.</td>
-    </tr>
-    <tr class="even">
-      <td>a[lang|=“en”]</td>
-      <td>Attribute</td>
-      <td>Selects an element if the given attribute value</td>
-    </tr>
-    <tr class="odd">
-      <td></td>
-      <td>Hyphenated</td>
-      <td>is hyphen-separated and begins with the word stated.</td>
+      <td><b>a[lang|=“en”]</b></td>
+      <td>Attribute Hyphenated</td>
+      <td>Selects an element if the given attribute value is hyphen-
+	    separated and begins with the word stated.</td>
     </tr>
   </tbody>
 </table>
@@ -2756,119 +2698,119 @@ tr:last-child td:last-child {
   </colgroup>
   <thead>
     <tr class="header">
-      <th><strong>Example</strong></th>
-      <th><strong>Classification</strong></th>
-      <th><strong>Explanation</strong></th>
+      <th>Example</th>
+      <th>Classification</th>
+      <th>Explanation</th>
     </tr>
   </thead>
   <tbody>
     <tr class="odd">
-      <td>a:link</td>
+      <td><b>a:link</b></td>
       <td>Link Pseudo-class</td>
       <td>Selects a link that has not been visited by a user.</td>
     </tr>
     <tr class="even">
-      <td>a:visited</td>
+      <td><b>a:visited</b></td>
       <td>Link Pseudo-class</td>
       <td>Selects a link that has been visited by a user.</td>
     </tr>
     <tr class="odd">
-      <td>a:hover</td>
+      <td><b>a:hover</b></td>
       <td>Action Pseudo-class</td>
       <td>Selects an element when a user has hovered their cursor over it.</td>
     </tr>
     <tr class="even">
-      <td>a:active</td>
+      <td><b>a:active</b></td>
       <td>Action Pseudo-class</td>
       <td>Selects an element when a user has engaged it.</td>
     </tr>
     <tr class="odd">
-      <td>a:focus</td>
+      <td><b>a:focus</b></td>
       <td>Action Pseudo-class</td>
       <td>Selects an element when a user has made it their focus point.</td>
     </tr>
     <tr class="even">
-      <td>input:enabled</td>
+      <td><b>input:enabled</b></td>
       <td>State Pseudo-class</td>
       <td>Selects an element in the default enabled state.</td>
     </tr>
     <tr class="odd">
-      <td>input:disabled</td>
+      <td><b>input:disabled</b></td>
       <td>State Pseudo-class</td>
       <td>Selects an element in the disabled state, by way of the disabled attribute.</td>
     </tr>
     <tr class="even">
-      <td>input:checked</td>
+      <td><b>input:checked</b></td>
       <td>State Pseudo-class</td>
       <td>Selects a checkbox or radio button that has been checked.</td>
     </tr>
     <tr class="odd">
-      <td>input:indeterminate</td>
+      <td><b>input:indeterminate</b></td>
       <td>State Pseudo-class</td>
       <td>Selects a checkbox or radio button thats neither been checked or unchecked, leaving it in an indeterminate state.</td>
     </tr>
     <tr class="even">
-      <td>li:first-child</td>
+      <td><b>li:first-child</b></td>
       <td>Structural Pseudo-class</td>
       <td>Selects an element that is the first within a parent.</td>
     </tr>
     <tr class="odd">
-      <td>li:last-child</td>
+      <td><b>li:last-child</b></td>
       <td>Structural Pseudo-class</td>
       <td>Selects an element that is the last within a parent.</td>
     </tr>
     <tr class="even">
-      <td>div:only-child</td>
+      <td><b>div:only-child</b></td>
       <td>Structural Pseudo-class</td>
       <td>Selects an element that is the only element within a parent.</td>
     </tr>
     <tr class="odd">
-      <td>p:first-of-type</td>
+      <td><b>p:first-of-type</b></td>
       <td>Structural Pseudo-class</td>
       <td>Selects an element that is the first of its type within a parent.</td>
     </tr>
     <tr class="even">
-      <td>p:last-of-type</td>
+      <td><b>p:last-of-type</b></td>
       <td>Structural Pseudo-class</td>
       <td>Selects an element that is the last of its type within a parent.</td>
     </tr>
     <tr class="odd">
-      <td>img:only-of-type</td>
+      <td><b>img:only-of-type</b></td>
       <td>Structural Pseudo-class</td>
       <td>Selects an element that is the only one of its type within a parent.</td>
     </tr>
     <tr class="even">
-      <td>li:nth-child(2n+3)</td>
+      <td><b>li:nth-child(2n+3)</b></td>
       <td>Structural Pseudo-class</td>
       <td>Selects an element that matches the given number orexpression, counting all elements from the beginning of the document tree.</td>
     </tr>
     <tr class="odd">
-      <td>li:nth-last-type(3n+2)</td>
+      <td><b>li:nth-last-type(3n+2)</b></td>
       <td>Structural Pseudo-class</td>
       <td>Selects an element that matches the given number or expression, counting all elements from the end of the document tree.</td>
     </tr>
     <tr class="even">
-      <td>p:nth-of-type(3n)</td>
+      <td><b>p:nth-of-type(3n)</b></td>
       <td>Structural Pseudo-class</td>
       <td>Selects an element that matches the given number or expression, counting all elements of its type from the beginning of the document tree.</td>
     </tr>
     <tr class="odd">
-      <td>p:nth-last-of-type(2n+1)</td>
+      <td><b>p:nth-last-of-type(2n+1)</b></td>
       <td>Structural Pseudo-class</td>
       <td>Selects an element that matches the given number or expression, counting all elements of its type from the end of the document tree.</td>
     </tr>
     <tr class="even">
-      <td>section:target</td>
+      <td><b>section:target</b></td>
       <td>Target Pseudo-class</td>
       <td>Selects an element whose ID attribute value matches that of the URI fragment identifier.</td>
     </tr>
     <tr class="odd">
-      <td>div:empty</td>
+      <td><b>div:empty</b></td>
       <td>Empty Pseudo-class</td>
       <td>Selects an element that does not contain any children or text nodes.</td>
     </tr>
     <tr class="even">
-      <td>div:not(.awesome)</td>
+      <td><b>div:not(.awesome)</b></td>
       <td>Negation Pseudo-class</td>
       <td>Selects an element not represented by the stated argument.</td>
     </tr>
@@ -3044,34 +2986,34 @@ added to ensure the best support for all browsers.</p>
   </colgroup>
   <thead>
     <tr class="header">
-      <th><b>Example</b></th>
-      <th><b>Classification</b></th>
-      <th><b>Explanation</b></th>
+      <th>Example</th>
+      <th>Classification</th>
+      <th>Explanation</th>
     </tr>
   </thead>
   <tbody>
     <tr class="odd">
-      <td>.alpha:first-letter</td>
+      <td><b>.alpha:first-letter</b></td>
       <td>Textual Pseudo-elements</td>
       <td>Selects the first letter of text within an element.</td>
     </tr>
     <tr class="even">
-      <td>.bravo:first-line</td>
+      <td><b>.bravo:first-line</b></td>
       <td>Textual Pseudo-elements</td>
       <td>Selects the first line of text within an element.</td>
     </tr>
     <tr class="odd">
-      <td>div:before</td>
+      <td><b>div:before</b></td>
       <td>Generated Content</td>
       <td>Creates a pseudo-element inside the selected element at the beginning.</td>
     </tr>
     <tr class="even">
-      <td>a:after</td>
+      <td><b>a:after</b></td>
       <td>Generated Content</td>
       <td>Creates a pseudo-element inside the selected element at the end.</td>
     </tr>
     <tr class="odd">
-      <td>::selection</td>
+      <td><b>::selection</b></td>
       <td>Fragment Pseudo-element</td>
       <td>Selects the part of a document which has been selected, or highlighted, by a users' action.</td>
     </tr>
@@ -3901,7 +3843,7 @@ rel="noopener noreferrer" target="_blank">review and edit this code</a> on thei
     rel="noopener noreferrer" target="_blank"> Mobile First</a> via Luke Wroblewski&gt;</li>
   <li><a href="http://dev.opera.com/articles/view/an-introduction-to-meta-viewport-and-viewport/"
     rel="noopener noreferrer" target="_blank"> An Introduction to Meta Viewport and 
-	<span class="citation" data-cites="viewport">@viewport</span></a> via Dev. Opera</li>
+    <span class="citation" data-cites="viewport">@viewport</span></a> via Dev. Opera</li>
 </ul>
 
 <p><b>Lesson 3</b>
@@ -8857,30 +8799,30 @@ their property value.</p>
   </colgroup>
   <thead>
     <tr class="header">
-      <th><b>Element</b></th>
-      <th><b>Value</b></th>
+      <th>Element</th>
+      <th>Value</th>
     </tr>
   </thead>
   <tbody>
     <tr class="odd">
-      <td>&lt;meta&gt;</td>
+      <td><b>&lt;meta&gt;</b></td>
       <td>content attribute</td>
     </tr>
     <tr class="even">
-      <td>&lt;audio&gt;, &lt;embed&gt;, &lt;iframe&gt;, &lt;img&gt;, &lt;source&gt;, 
-	    &lt;video&gt;</td>
+      <td><b>&lt;audio&gt;, &lt;embed&gt;, &lt;iframe&gt;, &lt;img&gt;, &lt;source&gt;, 
+        &lt;video&gt;</b></td>
       <td>src attribute</td>
     </tr>
     <tr class="odd">
-      <td>&lt;a&gt;, &lt;area&gt;, &lt;link&gt;</td>
+      <td><b>&lt;a&gt;, &lt;area&gt;, &lt;link&gt;</b></td>
       <td>href attribute</td>
     </tr>
     <tr class="even">
-      <td>&lt;object&gt;</td>
+      <td><b>&lt;object&gt;</b></td>
       <td>data attribute</td>
     </tr>
     <tr class="odd">
-      <td>&lt;time&gt;</td>
+      <td><b>&lt;time&gt;</b></td>
       <td>datetime attribute</td>
     </tr>
   </tbody>
@@ -8896,7 +8838,7 @@ postal address item type within it. Also, please notice the different
 item properties and their corresponding values.</p>
 
 <details>
-  <summary><b>Ex, Person Microdata</b></summary>
+  <summary><b>Ex: Person Microdata</b></summary>
 
 <pre>&lt;section itemscope itemtype=&quot;http://schema.org/Person&quot;&gt;
   &lt;strong itemprop=&quot;name&quot;&gt;Shay Howe&lt;/strong&gt;
@@ -8930,7 +8872,7 @@ instead. Common property similarities between the two can be identified,
 as can some of the nested item types.</p>
 
 <details>
-  <summary><b>Ex, Event Microdata</b></summary>
+  <summary><b>Ex: Event Microdata</b></summary>
 
 <pre>&lt;section itemscope itemtype=&quot;http://schema.org/Event&quot;&gt;
   &lt;a itemprop=&quot;url&quot; href=&quot;#&quot;&gt;
@@ -9042,7 +8984,7 @@ nested within other regions of the document structure.</p>
   <colgroup>
     <col style="width: 13%" />
     <col style="width: 23%" />
-    <col style="width: 60%" />
+    <col style="width: 55%" />
   </colgroup>
   <thead>
     <tr class="header">
@@ -9053,40 +8995,35 @@ nested within other regions of the document structure.</p>
   </thead>
   <tbody>
     <tr class="odd">
+      <td><b>article</b></td>
       <td>article</td>
-      <td>article</td>
-      <td>application, article, document, or main</td>
+      <td>application, article, document, or main.</td>
     </tr>
     <tr class="even">
-      <td>aside</td>
+      <td><b>aside</b></td>
       <td>complementary</td>
-      <td>complementary, note, or search</td>
+      <td>complementary, note, or search.</td>
     </tr>
     <tr class="odd">
-      <td>footer</td>
+      <td><b>footer</b></td>
       <td>—</td>
-      <td>contentinfo (Only once per page)</td>
+      <td>contentinfo (Only once per page).</td>
     </tr>
     <tr class="even">
-      <td>header</td>
+      <td><b>header</b></td>
       <td>—</td>
-      <td>banner (Only once per page)</td>
+      <td>banner (Only once per page).</td>
     </tr>
     <tr class="odd">
-      <td>nav</td>
+      <td><b>nav</b></td>
       <td>navigation</td>
       <td>navigation</td>
     </tr>
     <tr class="even">
-      <td>section</td>
+      <td><b>section</b></td>
       <td>region</td>
-      <td>alert, alertdialog, application, contentinfo, dialog, document, log, main, 
-	    marquee, region, search, or status.</td>
-    </tr>
-    <tr class="odd">
-      <td></td>
-      <td></td>
-      <td>main, marquee, region, search, or status.</td>
+      <td>alert, alertdialog, application, contentinfo, dialog, 
+	    document, log, main, marquee, region, search, or status.</td>
     </tr>
   </tbody>
 </table>
