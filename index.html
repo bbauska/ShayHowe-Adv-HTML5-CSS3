@@ -91,11 +91,9 @@
       }
     }
 
-    <!-- when the user clicks on the button, scroll to the top of the document. 0,0 or -->
-    <!-- to table of contents (approx ###), if applicable was; 315 -->
+    // When the user clicks the 'top' button, scroll to the first chapter.
     function topFunction() {
-      document.body.scrollTop = 0;
-      document.documentElement.scrollTop = 0;
+      document.getElementById('Lesson-1"').scrollIntoView();
     }
   </script>
 
@@ -104,7 +102,9 @@
     <p class="author">Shay-Howe &amp; Brian Bauska (bbauska)</p>
   </header>
   
+<!--
   <h3 id="table-of-contents">Table of Contents: Advanced HTML &amp; CSS</h3>
+-->
   <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
   <nav class="nav-trigger">
     <ul>
@@ -124,7 +124,7 @@
     <li><a href="#Lesson-1">1. Performance &amp; Organization</a></li>
     <li><a href="#Lesson-2">2. Detailed Positioning</a></li>
     <li><a href="#Lesson-3">3. Complex Selectors</a></li>
-    <li><a href="#Lesson-4">4. Responnsive Web Design</a></li>
+    <li><a href="#Lesson-4">4. Responsive Web Design</a></li>
     <li><a href="#Lesson-5">5. Preprocessors</a></li>
     <li><a href="#Lesson-6">6. jQuery</a></li>
     <li><a href="#Lesson-7">7. Transforms</a></li>
@@ -133,7 +133,7 @@
     <li><a href="#Lesson-10">10. Extending Semantics & Accessibility</a></li>
     </ul>
   </aside>
-    <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
   <section class="intro"></section>
   <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
   <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 01. Performance & Organization ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -5528,7 +5528,7 @@ curly braces, {}, with comma separated properties, each having a key followed b
 and value.</p>
 
 <details>
-  <summary><b>Example: Object</b></summary>
+  <summary><b>Ex: Object</b></summary>
 <br><br>
 <pre>// Object
 var school = {
@@ -7723,7 +7723,7 @@ times as specified, while the infinite keyword will repeat the animation
 indefinitely in a never ending fashion.</p>
 
 <details>
-  <summary><b>Ex: Animation Iteration</b></summary>
+  <summary><b>Ex: Animat'n Iterat'n</b></summary>
 
 <pre>.stage:hover .ball {
   animation-name: slide;
@@ -7799,7 +7799,7 @@ to paused when making the stage active by clicking on it. Notice how the
 animation will temporarily pause until you let up on the mouse.</p>
 
 <details>
-  <summary><b>Animation Play State</b></summary>
+  <summary><b>Animat'n Play State</b></summary>
 
 <pre>.stage:hover .ball {
   animation-name: slide;
@@ -7845,7 +7845,7 @@ the animation-direction property value.</p>
 the forwards and backwards values.</p>
 
 <details>
-  <summary><b>Example: Animation</b></summary>
+  <summary><b>Ex: Animation</b></summary>
 
 <pre>.stage:hover .ball {
   animation-name: slide;
@@ -8078,7 +8078,7 @@ additional HTTP requests when possible.</p>
 
 <!-- was Conditionally Applying CSS Styles -->
 <details>
-  <summary><b>Conditional CSS Styles</b></summary>
+  <summary><b>Cond'l CSS Styles</b></summary>
 
 <pre>button { 2     border: 0;
   color: #fff;
@@ -8155,7 +8155,7 @@ not supported jQuery is used the storage-polyfill.js file using
 the getScript method.</p>
 
 <details>
-  <summary><b>jQuery Conditional Load</b></summary>
+  <summary><b>jQuery Cond'l Load</b></summary>
   
 <pre>$(document).ready(function() {
   if (Modernizr.localstorage) {
@@ -8302,7 +8302,7 @@ Firebug Lite bookmarklet open for debugging.</h6>
 </section>
 </article>
   <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 10.  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~ 10. Extending Semantics & Accessibility ~~~~~~~~~~~~~~~~~~~~~~~~~-->
   <section class="chapter" id="chapter-10">
     <header class="chapter-masthead">
       <h3 class="chapter-heading">Lesson 10</h3>
@@ -8318,7 +8318,7 @@ Firebug Lite bookmarklet open for debugging.</h6>
 <!-- href="https://learn.shayhowe.com/advanced-html-css/semantics-accessibility/" rel="noopener noreferrer" target="_blank"> -->
 <!-- Extending Semantics &amp; Accessibility</a></p>  -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 align="center" id="lesson-10">Lesson 10 Extending Semantics &amp; Accessibility</h2>
+<h2 align="center" id="Lesson-10">Lesson 10 Extending Semantics &amp; Accessibility</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>In this Lesson 10</h3>
 
