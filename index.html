@@ -43,15 +43,10 @@
     Additionally, taking a few small steps to improve the performance of a website 
     can pay off in dividends. Website performance greatly resembles the 80/20 rule, 
     where 20% of the optimizations will speed up roughly 80% of the website." >
-  <meta name="keywords" content="Silus,Silus Gaming World,Silus Gaming,Advanced,
-    Advanced HTML &amp; CSS,HTML,CSS,DOM,Improved Performance,Shay,Shay&Howe,
-    website,web,site,zombie,Politics,culture,casino,capitalism,over290videos,#videos,#291,#et,
-    capitalize,political,disposability,death,America,culture,power,society,greed,avarice,excess,
-    MIC,Military,Industrial,Complex,corruption,Dulles,Bush,Reagan,justice,youth,democracy,psychology,
-    ideology,governance,spectacle,casinocapitalism,zombie,steak,Steak,YouTube,Sonic,sonic,SONIC,
-    Silus,Gaming,World,SilusGamingWorldLuccasNeto,T-Series,SETIndia,Cocomelon,Mr,Beast,MrBeast,
-    Beast,CE1,C-E-1,MRBEAST,BEAST,SilusGamingWorld,Silus,SilusSpider,NickAR,Nick,NY,NYNick,
-    NewYorkNick,NYNick,URCristiano,UR,Cristiano,KidsDimaShow,VladandNiki,LuisitoComunica,
+  <meta name="keywords" content="Silus,Silus Gaming World,Silus Gaming,Advanced,SilusGW,SilusGamingWorld,
+    Advanced HTML &amp; CSS,HTML,CSS,DOM,Improved Performance,Shay,Shay&Howe,Silus,Gaming,World,LuccasNeto,
+    T-Series,SETIndia,Cocomelon,Mr,Beast,MrBeast,Beast,CE1,C-E-1,MRBEAST,Silus,SilusSpider,NickAR,Nick,NY
+    NYNick,NewYorkNick,NYNick,URCristiano,UR,Cristiano,KidsDimaShow,VladandNiki,LuisitoComunica,
     BrightSide,ZeeTV,DudePerfect,TipsOfficial,TipsOfficial,FNAF,FiveNightsatFreddies,
     TheMusicCompany,PewDiePie,5minutecrafts,A4,Sambucha,Sam&Colby,Sam&ColbyReacts,JuiceWorld,
     RayWilliamJohnson,FGTV,KaicenatLive,IShowSpeed,Jelly,DanTDM,KSI,LoganPaul,JackSucksAtLife,
@@ -63,58 +58,104 @@
     RyanTrhan,Stellar,DJCook,AnthonyMadia,AnthonyIlla,SmoshGaming,SmoshPit,SmoshCast,Fred,cellardoor,
     BriansBlog,CellarDoor,Silus,GW,Gaming,World,SilusGamingWorld,SilusGW,#Silus-GW,#cellardoor,bbauska,
     #SilusGamingWorld,#SilusGW,gluttony,selfishness,#bbauska,#silas,#silys,#sylus,#sylas,#sylusgw,
-    #silasGW,#silasgamingworld" />
+    #silasGW,#silasgamingworld,minecraft," />
   <title>Advanced HTML &amp; CSS</title>
   <link rel="stylesheet" type="text/css" href="./css/styles.css">
+
+
+  <!-- more stylesheets -->
+  <link href="https://fonts.googleapis.com/css?family=IM+Fell+DW+Pica" rel="stylesheet">
+  <link rel='stylesheet' 
+    href='https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css'>
+  <link rel="stylesheet" href="./css/style.css">
 </head>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <body>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ script function: scrollFunction() ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<script>
-  <!-- get the button -->
-  var mybutton = document.getElementById("myBtn");
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <button aria-label="Go to table of contents at top of website" onclick="topFunction()" id="myBtn" 
+  title="Go to top">Top</button>
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ script function: scrollFunction() ~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <script>
+    <!-- get the button -->
+    var mybutton = document.getElementById("myBtn");
 
-  <!-- when the user scrolls down 10px from the top of the document, show the button -->
-  window.onscroll = function() {scrollFunction()};
+    <!-- when the user scrolls down 10px from the top of the document, show the button -->
+    window.onscroll = function() {scrollFunction()};
 
-  function scrollFunction() {
-    if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
-      mybutton.style.display = "block";
-    } else {
-      mybutton.style.display = "none";
+    function scrollFunction() {
+      if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
     }
-  }
 
-  <!-- when the user clicks on the button, scroll to the top of the document. 0,0 or -->
-  <!-- to table of contents (approx ###), if applicable was; 315 -->
-  function topFunction() {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-  }
-</script>
-</head>
-<body>
+    <!-- when the user clicks on the button, scroll to the top of the document. 0,0 or -->
+    <!-- to table of contents (approx ###), if applicable was; 315 -->
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+  </script>
 
-<header id="title-block-header">
-  <h1 class="title">Advanced HTML &amp; CSS</h1>
-  <p class="author">Shay-Howe &amp; Brian Bauska (bbauska)</p>
-</header>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 align="center" id="Lesson-1">Lesson 1: Performance &amp; Organization</h2>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3>In this Lesson 1</h3>
+  <header id="title-block-header">
+    <h1 class="title">Advanced HTML &amp; CSS</h1>
+    <p class="author">Shay-Howe &amp; Brian Bauska (bbauska)</p>
+  </header>
+  
+  <h3 id="table-of-contents">Table of Contents: Advanced HTML &amp; CSS</h3>
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <nav class="nav-trigger">
+    <ul>
+      <li>
+        <a class="menu-open" href="#">
+          <i class="zmdi zmdi-view-list"></i>
+        </a>
+        <a class="menu-close" href="#">
+          <i class="zmdi zmdi-close"></i>
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <aside id="main-menu">
+    <h3 class="menu-heading">Chapter List</h3>
+    <ul>
+    <li><a href="#Lesson-1">1. Performance &amp; Organization</a></li>
+    <li><a href="#Lesson-2">2. Detailed Positioning</a></li>
+    <li><a href="#Lesson-3">3. Complex Selectors</a></li>
+    <li><a href="#Lesson-4">4. Responnsive Web Design</a></li>
+    <li><a href="#Lesson-5">5. Preprocessors</a></li>
+    <li><a href="#Lesson-6">6. jQuery</a></li>
+    <li><a href="#Lesson-7">7. Transforms</a></li>
+    <li><a href="#Lesson-8">8. Transitions &amp; Animations</a></li>
+    <li><a href="#Lesson-9">9. Feature Support &amp; Polyfills</a></li>
+    <li><a href="#Lesson-10">10. Extending Semantics & Accessibility</a></li>
+    </ul>
+  </aside>
+    <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <section class="intro"></section>
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 01. Performance & Organization ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <section class="chapter" id="chapter-01">
+    <header class="chapter-masthead">
+      <h3 class="chapter-heading">Lesson 01</h3>
+      <h4 class="chapter-sub">Performance &amp; Organization</h4>
+    </header>
+    <article>
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <h2 align="center" id="Lesson-1">Lesson 1: Performance &amp; Organization</h2>
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <h3>In this Lesson 1</h3>
 
-<h4>HTML</h4>
+  <h4>HTML</h4>
 
-<ul>
-  <li><a href="https://learn.shayhowe.com/advanced-html-css/performance-organization/#minify-compress-files"
-    rel="noopener noreferrer" target="_blank">Minify &amp; Compress Files</a></li>
-  <li><a href="https://learn.shayhowe.com/advanced-html-css/performance-organization/#cache-common-files"
-    rel="noopener noreferrer" target="_blank">Cache Common Files</a></li>
-</ul>
+  <ul>
+    <li><a href="https://learn.shayhowe.com/advanced-html-css/performance-organization/#minify-compress-files"
+      rel="noopener noreferrer" target="_blank">Minify &amp; Compress Files</a></li>
+    <li><a href="https://learn.shayhowe.com/advanced-html-css/performance-organization/#cache-common-files"
+      rel="noopener noreferrer" target="_blank">Cache Common Files</a></li>
+  </ul>
 
 <h4>CSS</h4>
 
@@ -179,59 +220,49 @@ common base styles, user interface components, and business logic modules.</p>
   -- footer.css
   -- header.css</pre>
 
-<p>The architecture outlined above includes three directories, all with individual groups 
-of styles. The goal here is to <b>start thinking of websites as systems</b> rather than 
-individual pages, and the code architecture should reflect this mindset. Notice how there 
-aren’t any page specific styles here.</p>
+<p>The architecture outlined above includes three directories, all with individual groups of styles. 
+The goal here is to <b>start thinking of websites as systems</b> rather than individual pages, and 
+the code architecture should reflect this mindset. Notice how there aren’t any page specific styles 
+here.</p>
 
-<p>The base directory includes common styles and variables to be used
-across the entire website, layout and typography styles for example.
-The components directory includes styles for specific user interface
-elements which are broken down into different component files such as
-alerts and buttons. Lastly, the modules directory includes styles for
-different sections of a page, which are determined by business needs.</p>
+<p>The base directory includes common styles and variables to be used across the entire website, layout 
+and typography styles for example. The components directory includes styles for specific user interface 
+elements which are broken down into different component files such as alerts and buttons. Lastly, the 
+modules directory includes styles for different sections of a page, which are determined by business 
+needs.</p>
 
-<p>The component styles are purely interface driven and have nothing to do
-with the core business logic of the website. Modules then include styles
-specific to the business logic. When marking up a module in HTML it is
-common to use different user interface components within it. For
-example, the sidebar of a page may have list and button styles that are
-defined within component styles while other styles needed for the
-sidebar are inherited from the module style. The separation of style
-encourages well thought out presets and the ability for styles to be
-widely shared and reused.</p>
+<p>The component styles are purely interface driven and have nothing to do with the core business logic 
+of the website. Modules then include styles specific to the business logic. When marking up a module in 
+HTML it is common to use different user interface components within it. For example, the sidebar of a page 
+may have list and button styles that are defined within component styles while other styles needed for the 
+sidebar are inherited from the module style. The separation of style encourages well thought out presets 
+and the ability for styles to be widely shared and reused.</p>
 
-<p>The strategy of organizing styles this way isn’t exactly new, and has
-been previously mentioned in different CSS methodologies including
-Object Oriented CSS, OOCSS, and the Scalable and Modular Architecture
-for CSS, SMACSS. These methodologies have their own opinions on
-structure, as well as on how to use styles.</p>
+<p>The strategy of organizing styles this way isn’t exactly new, and has been previously mentioned in 
+different CSS methodologies including Object Oriented CSS, OOCSS, and the Scalable and Modular Architecture 
+for CSS, SMACSS. These methodologies have their own opinions on structure, as well as on how to use styles.</p>
 
 <h4>Object Oriented CSS</h4>
 
-<p>The <a href="http://oocss.org/" rel="noopener noreferrer" target="_blank">
-Object Oriented CSS (2014)</a> methodology was pioneered by Nicole
-Sullivan in her work with writing styles for larger websites. Object
-Oriented CSS identifies two principles that will help build scalable
-websites with a strong architecture and a reasonable amount of code.
-These two principles include:</p>
+<p>The <a href="http://oocss.org/" rel="noopener noreferrer" target="_blank">Object Oriented CSS 
+(2014)</a> methodology was pioneered by Nicole Sullivan in her work with writing styles for larger 
+websites. Object Oriented CSS identifies two principles that will help build scalable websites with 
+a strong architecture and a reasonable amount of code. These two principles include:</p>
 
 <ul>
   <li>Separate structure from skin</li>
   <li>Separate content from container</li>
 </ul>
 
-<p>Overall <b>separating structure from skin</b> includes abstracting the
-layout of an element away from the theme of a website. The structure of
-a module should be transparent, allowing other styles to be inherited
-and displayed without conflict. Most commonly this requires a solid grid
-and layout structure, along with well crafted modules.</p>
+<p>Overall <b>separating structure from skin</b> includes abstracting the layout of an element away 
+from the theme of a website. The structure of a module should be transparent, allowing other styles 
+to be inherited and displayed without conflict. Most commonly this requires a solid grid and layout 
+structure, along with well crafted modules.</p>
 
-<p><b>Separating content from the container</b> involves removing the
-dependency of a parent element nesting children elements. A heading
-should look the same regardless of its parent container. To accomplish
-this, elements need to inherit default styles, then be extended with
-multiple classes as necessary.</p>
+<p><b>Separating content from the container</b> involves removing the dependency of a parent element 
+nesting children elements. A heading should look the same regardless of its parent container. To 
+accomplish this, elements need to inherit default styles, then be extended with multiple classes as 
+necessary.</p>
 
 <h4>HTML</h4>
 
@@ -245,17 +276,16 @@ multiple classes as necessary.</p>
 .alert-error {...}
 .msg {...}</pre>
 
-<p>Object Oriented CSS advocates building a component library, staying
-flexible, and utilizing a grid. These are good ground rules, and they
-can help you avoid the need to add additional styles every time you add
-a new page or feature to a website.</p>
+<p>Object Oriented CSS advocates building a component library, staying flexible, and utilizing a grid. 
+These are good ground rules, and they can help you avoid the need to add additional styles every time 
+you add a new page or feature to a website.</p>
 
 <h4>Scalable &amp; Modular Architecture for CSS</h4>
 
-<p>Along the same line of Object Oriented CSS is the <a href="http://smacss.com/" 
-rel="noopener noreferrer" target="_blank">Scalable and Modular Architecture for CSS (2011)</a> 
-methodology developed by Jonathan Snook. The Scalable and Modular Architecture for CSS 
-promotes breaking up styles into <b>five</b> core categories, including:</p>
+<p>Along the same line of Object Oriented CSS is the <a href="http://smacss.com/" rel="noopener noreferrer" 
+target="_blank">Scalable and Modular Architecture for CSS (2011)</a> methodology developed by Jonathan Snook. 
+The Scalable and Modular Architecture for CSS promotes breaking up styles into <b>five</b> core categories, 
+including:</p>
 
 <ul>
   <li>Base</li>
@@ -265,13 +295,13 @@ promotes breaking up styles into <b>five</b> core categories, including:</p>
   <li>Theme</li>
 </ul>
 
-<p>The <b>base</b> category includes core element styles, covering the general defaults. 
-The <b>layout</b> category then identifies the sizing and grid styles of different elements, 
-determining their layout. <b>Module</b> styles are more specific styles targeting individual 
-parts of the page, such as navigation or feature styles. The <b>state</b> styles are then 
-used to augment or override other styles in the event that a module includes an alternate 
-state, an active tab for example. Lastly, the <b>theme</b> category may be added which
-could include styles based around the skin, or look and feel, of different modules.</p>
+<p>The <b>base</b> category includes core element styles, covering the general defaults. The 
+<b>layout</b> category then identifies the sizing and grid styles of different elements, determining 
+their layout. <b>Module</b> styles are more specific styles targeting individual parts of the page, 
+such as navigation or feature styles. The <b>state</b> styles are then used to augment or override 
+other styles in the event that a module includes an alternate state, an active tab for example. 
+Lastly, the <b>theme</b> category may be added which could include styles based around the skin, or 
+look and feel, of different modules.</p>
 
 <h4>HTML</h4>
 
@@ -302,20 +332,17 @@ methodology as you prefer.</p>
 
 <p>One functionality of CSS often abused without awareness are 
 <a href="http://csswizardry.com/2011/09/writing-efficient-css-selectors/" 
-rel="noopener noreferrer" target="_blank">selectors (2011)</a>. Much of the attention 
-within CSS is given to properties and values. So long as these styles are applied to the 
-correct element, everything looks to be fine. This is a very poor assumption. How elements 
-are selected within CSS affects performance, including how fast a page renders as well as
-how practical and modular the styles are in the overall site architecture.</p>
+rel="noopener noreferrer" target="_blank">selectors (2011)</a>. Much of the attention  within CSS is given 
+to properties and values. So long as these styles are applied to the correct element, everything looks to 
+be fine. This is a very poor assumption. How elements are selected within CSS affects performance, including 
+how fast a page renders as well as how practical and modular the styles are in the overall site architecture.</p>
 
 <h4>Keep Selectors Short</h4>
 
-<p>There are a handful of benefits to keeping CSS selectors as short as
-possible. These include minimizing specificity, allowing for better
-inheritance and portability, and improving efficiency. Long, over
-qualified selectors reduce performance because they force the browser to
-render each individual selector type from right to left. They also put a
-burden on all other selectors to be more specific.</p>
+<p>There are a handful of benefits to keeping CSS selectors as short as possible. These include minimizing 
+specificity, allowing for better inheritance and portability, and improving efficiency. Long, over qualified 
+selectors reduce performance because they force the browser to render each individual selector type from 
+right to left. They also put a burden on all other selectors to be more specific.</p>
 
 <details>
   <summary><b>CSS</b></summary>
@@ -814,7 +841,17 @@ rel="noopener noreferrer" target="_blank">syntax</a>.</p>
   <li><a href="https://css-tricks.com/data-uris/" rel="noopener noreferrer" target="_blank">
     Data URIs</a> via CSS-Tricks</li>
 </ul>
-
+</section>
+</article>
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 02. Detailed Positioning ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <section class="chapter" id="chapter-02">
+    <header class="chapter-masthead">
+      <h3 class="chapter-heading">Lesson 02</h3>
+      <h4 class="chapter-sub">Detailed Positioning</h4>
+    </header>
+    <article>
+	
 <p><b>Lesson 1</b>&nbsp;&nbsp;<a href="#Lesson-1">Performance &amp; Organization</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <b>Lesson 3</b>&nbsp;&nbsp;<a href="#Lesson-3">Complex Selectors</a></p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -1459,7 +1496,17 @@ box three.</p>
   <li><a href="http://www.impressivewebs.com/a-detailed-look-at-the-z-index-css-property/"
     rel="noopener noreferrer" target="_blank">A Detailed Look at the z-index CSS Property</a> via Impressive Webs</li>
 </ul>
-
+</section>
+</article>
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 03. Complex Selectors ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <section class="chapter" id="chapter-03">
+    <header class="chapter-masthead">
+      <h3 class="chapter-heading">Lesson 03</h3>
+      <h4 class="chapter-sub">Complex Selectors</h4>
+    </header>
+    <article>
+	
 <p><b>Lesson 1</b>&nbsp;&nbsp;<a href="#Lesson-1">Performance &amp; Organization</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <b>Lesson 3</b>&nbsp;&nbsp;<a href="#Lesson-3">Complex Selectors</a></p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -3075,6 +3122,18 @@ think about revisiting it, and seeing if a better solution can be found.</p>
   <li><a href="http://coding.smashingmagazine.com/2009/08/17/taming-advanced-css-selectors/"
     rel="noopener noreferrer" target="_blank">Taming Advanced CSS Selectors</a> via Smashing Magazine.</li>
 </ul>
+</section>
+</article>
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 04. Responsive Web Design ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <section class="chapter" id="chapter-04">
+    <header class="chapter-masthead">
+      <h3 class="chapter-heading">Lesson 04</h3>
+      <h4 class="chapter-sub">Responsive Web Design</h4>
+    </header>
+    <article>
+
+
 
 <p><b>Lesson 2</b>&nbsp;&nbsp;<a href="#Lesson-2">Detailed Positioning</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <b>Lesson 4</b>&nbsp;&nbsp;<a href="#Lesson-4">Responsive Web Design</a></p>
@@ -3858,6 +3917,16 @@ rel="noopener noreferrer" target="_blank">review and edit this code</a> on thei
     rel="noopener noreferrer" target="_blank"> An Introduction to Meta Viewport and 
     <span class="citation" data-cites="viewport">@viewport</span></a> via Dev. Opera</li>
 </ul>
+</section>
+</article>
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 05.  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <section class="chapter" id="chapter-05">
+    <header class="chapter-masthead">
+      <h3 class="chapter-heading">Lesson 05</h3>
+      <h4 class="chapter-sub">Preprocessors</h4>
+    </header>
+    <article>
 
 <p><b>Lesson 3</b>&nbsp;&nbsp;<a href="#Lesson-3">Complex Selectors</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <b>Lesson 5</b>&nbsp;&nbsp;<a href="#Lesson-5">Preprocessors</a></p>
@@ -5304,6 +5373,17 @@ your research for each project and make the most educated decision.</p>
   <li><a href="https://sass-lang.com/documentation/modules" rel="noopener noreferrer" 
     target="_blank"> SassScript Function</a> via Sass Documentation</li>
 </ul>
+</section>
+</article>
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 06.  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <section class="chapter" id="chapter-06">
+    <header class="chapter-masthead">
+      <h3 class="chapter-heading">Lesson 06</h3>
+      <h4 class="chapter-sub">jQuery</h4>
+    </header>
+    <article>
+	
 <p><b>Lesson 4</b>&nbsp;&nbsp;<a href="#Lesson-4">Responsive Web Design</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <b>Lesson 6</b>&nbsp;&nbsp;<a href="#Lesson-6">jQuery</a></p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -6205,6 +6285,17 @@ Google Hosted Libraries</a></p>
 Bocoup</p>
 <p>-<a href="http://jqueryui.com/" rel="noopener noreferrer" target="_blank">jQuery UI</a></p>
 
+</section>
+</article>
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 07.  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <section class="chapter" id="chapter-07">
+    <header class="chapter-masthead">
+      <h3 class="chapter-heading">Lesson 07</h3>
+      <h4 class="chapter-sub">Transforms</h4>
+    </header>
+    <article>
+	
 <p><b>Lesson 5</b>&nbsp;&nbsp;<a href="#Lesson-5">Preprocessors</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <b>Lesson 7</b>&nbsp;&nbsp;<a href="#Lesson-7">Transforms</a></p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -7015,7 +7106,17 @@ rel="noopener noreferrer" target="_blank">animations</a>.</p>
   <li><a href="https://css-tricks.com/almanac/properties/b/backface-visibility/"
     rel="noopener noreferrer" target="_blank"> Backface Visibility</a> via CSS-Tricks</li>
 </ul>
-
+</section>
+</article>
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 08.  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <section class="chapter" id="chapter-08">
+    <header class="chapter-masthead">
+      <h3 class="chapter-heading">Lesson 08</h3>
+      <h4 class="chapter-sub">Transitions &amp; Animations</h4>
+    </header>
+    <article>
+	
 <p><b>Lesson 6</b>&nbsp;&nbsp;<a href="#Lesson-6">jQuery</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <b>Lesson 8</b>&nbsp;&nbsp;<a href="#Lesson-8">Transitions &amp; Animations</a></p>
 
@@ -7798,6 +7899,17 @@ the animation.</p>
   <li><a href="https://developer.mozilla.org/en-US/docs/CSS/Using_CSS_animations" 
     rel="noopener noreferrer" target="_blank"> Using CSS Animations</a> via Mozilla Developer Network.</li>
 </ul>
+</section>
+</article>
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 09.  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <section class="chapter" id="chapter-09">
+    <header class="chapter-masthead">
+      <h3 class="chapter-heading">Lesson 09</h3>
+      <h4 class="chapter-sub">Feature Support &amp; Polyfills</h4>
+    </header>
+    <article>
+
 <p><b>Lesson 7</b>&nbsp;&nbsp;<a href="#Lesson-7">Transforms</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Lesson 9</b>&nbsp;&nbsp;<a href="#Lesson-9">Feature Support &amp; Polyfills</a></p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -8187,7 +8299,17 @@ Firebug Lite bookmarklet open for debugging.</h6>
   <li><a href="https://github.com/xdissent/ievms" rel="noopener noreferrer" target="_blank">Microsoft IE Virtual Machines</a> 
     via Greg Thornton</li>
 </ul>
-
+</section>
+</article>
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 10.  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <section class="chapter" id="chapter-10">
+    <header class="chapter-masthead">
+      <h3 class="chapter-heading">Lesson 10</h3>
+      <h4 class="chapter-sub">Extending Semantics &amp; Accessibility</h4>
+    </header>
+    <article>
+	
 <p><b>Lesson 8</b>&nbsp;&nbsp;<a href="#Lesson-8">Transitions &amp; Animations</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <b>Lesson 10</b>&nbsp;&nbsp;<a href="#Lesson-10">Extending Semantics &amp; Accessibility</a></p>
 
@@ -8917,7 +9039,7 @@ technologies.</p>
 <h4>Roles</h4>
 <!-- https://www.smashingmagazine.com/2022/09/wai-aria-guide/ -->
 
-<p>Setting <a href="https://www.w3.org/TR/wai-aria/#roles" 
+<p>Setting <a href="https://www.w3.org/TR/wai-aria/#roles" aria-label="WAI-ARIA roles model characteristics and properties." 
 rel="noopener noreferrer" target="_blank">WAI-ARIA roles</a> is
 accomplished using the role attribute. These roles then specify what
 certain elements and blocks of content do on a page.</p>
@@ -8968,16 +9090,13 @@ broken out below.</p>
   <li>search</li>
 </ul>
 
-<p>HTML5 introduced a handful of new structural elements which commonly
-match up against the document structure and landmark roles. Exactly how
-these roles match up against specific elements may be seen below. Please
-notice, the header and footer elements do not have an implied role, and
-the acceptable roles for these elements may only be used <b>once</b> per
-page.</p>
+<p>HTML5 introduced a handful of new structural elements which commonly match up against the document 
+structure and landmark roles. Exactly how these roles match up against specific elements may be seen 
+below. Please notice, the header and footer elements do not have an implied role, and the acceptable 
+roles for these elements may only be used <b>once</b> per page.</p>
 
-<p>That said, if you have multiple header and footer elements on a
-page the banner and contentinfo roles should be applied on the elements
-directly tied to the document from a top level perspective, not elements
+<p>That said, if you have multiple header and footer elements on a page the banner and contentinfo roles 
+should be applied on the elements directly tied to the document from a top level perspective, not elements 
 nested within other regions of the document structure.</p>
 
 <table>
@@ -9079,12 +9198,19 @@ document structure cannot be determined.</p>
 
 </details>
 
+</section>
+</article>
+
 <p><b>Lesson 9</b>&nbsp;&nbsp;<a href="#Lesson-9">Feature Support &amp; Polyfilles</a></p>
 
 <!-- https://learn.shayhowe.com/advanced-html-css/feature-support-polyfills/"  -->
 <!--  rel="noopener noreferrer" target="_blank">Feature Support &amp; Polyfills</a></p>  -->
 
-<p>…the end. <!-- 5/14/2024 4:58pm --> <!-- 5/19/2024 6:53pm --></p>
+<p>…the end. 
+<!-- 5/14/2024 4:58pm --> 
+<!-- 5/19/2024 6:53pm --> 
+<!-- 5/28-2026 12:26pm --> 
+</p>
 </body>
 </html>
 <!--
